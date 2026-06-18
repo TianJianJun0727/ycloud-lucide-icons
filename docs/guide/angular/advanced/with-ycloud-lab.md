@@ -1,15 +1,15 @@
 ---
-title: YCloud Lab - Angular
-description: Learn how to use icons from YCloud Lab in your Angular application.
+title: YCloud Icons Lab - Angular
+description: Learn how to use icons from YCloud Icons Lab in your Angular application.
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# With YCloud Lab or custom icons
+# With YCloud Icons Lab or custom icons
 
-[YCloud Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
 
 While they aren't provided as standalone components, they can be still be passed to the `YCloudIcon` component the same way as official icons:
 

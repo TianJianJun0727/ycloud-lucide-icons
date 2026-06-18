@@ -8,7 +8,7 @@ export default defineExportTemplate(
 
     return `
 import Icon from '../Icon';
-import type { IconNode, YCloudProps } from '../types';
+import type { IconNode, YCloudIconsProps } from '../types';
 
 const iconNode: IconNode = ${JSON.stringify(children)};
 
@@ -23,7 +23,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = (props: YCloudProps) => (
+const ${componentName} = (props: YCloudIconsProps) => (
   <Icon {...props} iconNode={iconNode} name="${iconName}" />
 )
 

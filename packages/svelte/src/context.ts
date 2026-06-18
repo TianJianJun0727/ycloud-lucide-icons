@@ -10,7 +10,7 @@ export interface YCloudGlobalContext {
   class?: string;
 }
 
-export const setYCloudProps = (globalProps: YCloudGlobalContext) =>
+export const setYCloudIconsProps = (globalProps: YCloudGlobalContext) =>
   setContext(YCloudContext, globalProps);
 
 export const getYCloudContext = () => getContext<YCloudGlobalContext>(YCloudContext);

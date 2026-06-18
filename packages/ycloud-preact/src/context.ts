@@ -15,7 +15,7 @@ const YCloudContext = createContext<{
   class: '',
 });
 
-interface YCloudProviderProps {
+interface YCloudIconsProviderProps {
   children: ComponentChildren;
   size?: number;
   color?: string;
@@ -24,14 +24,14 @@ interface YCloudProviderProps {
   class?: string;
 }
 
-export function YCloudProvider({
+export function YCloudIconsProvider({
   children,
   size,
   color,
   strokeWidth,
   absoluteStrokeWidth,
   class: className,
-}: YCloudProviderProps) {
+}: YCloudIconsProviderProps) {
   const value = useMemo(
     () => ({
       size,

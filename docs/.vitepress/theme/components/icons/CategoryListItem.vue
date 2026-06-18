@@ -53,7 +53,7 @@ function onClick(categoryName: string) {
         </span>
         <span
           class="icon-count"
-          :aria-label="`Count of icons in ${title}`"
+          :aria-label="`${title} 分类下的图标数量`"
         >
           {{ iconCount }}
         </span>

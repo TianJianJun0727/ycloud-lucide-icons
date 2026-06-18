@@ -48,12 +48,10 @@ watch(absoluteStrokeWidth, (enabled) => {
     <div class="card">
       <div class="card-column">
         <h2 class="title">
-          Style as you please
+          按需调整样式
           <ResetButton @click="resetStyle"></ResetButton>
         </h2>
-        <p class="copy">
-          YCloud has a lot of customization options to match the icons with your UI.
-        </p>
+        <p class="copy">YCloud 提供丰富的自定义选项，方便让图标与你的界面风格保持一致。</p>
 
         <div
           class="customizer"
@@ -61,7 +59,7 @@ watch(absoluteStrokeWidth, (enabled) => {
         >
           <InputField
             id="icon-color"
-            label="Color"
+            label="颜色"
             class="color-picker-field"
           >
             <template #display>
@@ -74,7 +72,7 @@ watch(absoluteStrokeWidth, (enabled) => {
 
           <InputField
             id="stroke-width"
-            label="Stroke width"
+            label="描边宽度"
           >
             <template #display>
               <span class="customize-label">{{ strokeWidth }}px</span>
@@ -91,7 +89,7 @@ watch(absoluteStrokeWidth, (enabled) => {
 
           <InputField
             id="size"
-            label="Size"
+            label="尺寸"
           >
             <template #display>
               <span class="customize-label">{{ size }}px</span>
@@ -108,7 +106,7 @@ watch(absoluteStrokeWidth, (enabled) => {
 
           <InputField
             id="absolute-stroke-width"
-            label="Absolute Stroke width"
+            label="绝对描边宽度"
           >
             <template #display>
               <Switch
@@ -184,7 +182,16 @@ watch(absoluteStrokeWidth, (enabled) => {
   }
 }
 
+.color-picker-field:deep(.input-label) {
+  display: block;
+}
+
 .color-picker-field:deep(.display-value) {
-  width: 138px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.color-picker-field:deep(.color-picker) {
+  width: 100%;
 }
 </style>

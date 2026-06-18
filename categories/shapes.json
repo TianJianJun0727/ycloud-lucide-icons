@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Shapes",
-  "icon": "triangle"
+  "icon": "triangle",
+  "i18n": {
+    "zh": {
+      "title": "形状"
+    }
+  }
 }

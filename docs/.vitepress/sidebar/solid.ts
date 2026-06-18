@@ -53,7 +53,7 @@ export const solidSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With YCloud Lab',
+        text: 'With YCloud Icons Lab',
         link: '/guide/solid/advanced/with-ycloud-lab',
         desc: 'Using ycloud-lab with @ycloud-web/icons-solid',
       },

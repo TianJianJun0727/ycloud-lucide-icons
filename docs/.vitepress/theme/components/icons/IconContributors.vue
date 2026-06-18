@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import {IconEntity} from "../../types";
-import Label from "../base/Label.vue";
+import { IconEntity } from '../../types';
+import Label from '../base/Label.vue';
 
 const props = defineProps<{
-  icon: IconEntity
-}>()
-
+  icon: IconEntity;
+}>();
 </script>
 
 <template>
-  <div class="contributors" v-if="props.icon.contributors?.length>0">
-    <Label>Contributors:</Label>
+  <div
+    class="contributors"
+    v-if="props.icon.contributors?.length > 0"
+  >
+    <Label>贡献者：</Label>
     <div class="avatar-group">
-      <a class="avatar"
+      <a
+        class="avatar"
         v-for="contributor in props.icon.contributors"
         :key="contributor"
         :href="`https://github.com/${contributor}`"
@@ -20,7 +23,11 @@ const props = defineProps<{
         :data-name="contributor"
         rel="noreferrer noopener"
       >
-        <img class="avatar-image" :alt="contributor" :src="`https://github.com/${contributor}.png?size=128`" />
+        <img
+          class="avatar-image"
+          :alt="contributor"
+          :src="`https://github.com/${contributor}.png?size=128`"
+        />
       </a>
     </div>
   </div>
@@ -61,7 +68,7 @@ const props = defineProps<{
   box-shadow: var(--vp-shadow-1);
   opacity: 0;
   pointer-events: none;
-  transition: cubic-bezier(0.19, 1, 0.22, 1) .2s;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
   transition-property: opacity, transform;
   overflow: hidden;
   white-space: nowrap;

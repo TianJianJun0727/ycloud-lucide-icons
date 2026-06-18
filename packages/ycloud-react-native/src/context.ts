@@ -12,7 +12,7 @@ const YCloudContext = createContext<{
   absoluteStrokeWidth: false,
 });
 
-interface YCloudProviderProps {
+interface YCloudIconsProviderProps {
   children: ReactNode;
   size?: number;
   color?: string;
@@ -20,13 +20,13 @@ interface YCloudProviderProps {
   absoluteStrokeWidth?: boolean;
 }
 
-export function YCloudProvider({
+export function YCloudIconsProvider({
   children,
   size,
   color,
   strokeWidth,
   absoluteStrokeWidth,
-}: YCloudProviderProps) {
+}: YCloudIconsProviderProps) {
   const value = useMemo(
     () => ({
       size,

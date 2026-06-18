@@ -18,10 +18,10 @@ type SVGElementType =
 
 export type IconNode = [elementName: SVGElementType, attrs: Record<string, string>][];
 
-export interface YCloudProps extends SvgProps {
+export interface YCloudIconsProps extends SvgProps {
   size?: string | number;
   absoluteStrokeWidth?: boolean;
   'data-testid'?: string;
 }
 
-export type YCloudIcon = ForwardRefExoticComponent<YCloudProps>;
+export type YCloudIcon = ForwardRefExoticComponent<YCloudIconsProps>;

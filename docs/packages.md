@@ -1,9 +1,9 @@
 ---
-title: Packages
-description: Discover the various packages available in the YCloud Icons ecosystem.
+title: 包
+description: 查看 YCloud Icons 生态中可用的多框架包。
 layout: page
 outline: 2
-outlineTitle: Packages
+outlineTitle: 包
 ---
 
 <script setup>

@@ -1,10 +1,10 @@
 // https://github.com/FormidableLabs/react-native-svg-mock
 import React from 'react';
-import type { YCloudProps } from '../../src/createReactComponent';
+import type { YCloudIconsProps } from '../../src/createReactComponent';
 export type { SvgProps } from 'react-native-svg';
 
 const createComponent = function (name: string) {
-  const component = (props: YCloudProps) => {
+  const component = (props: YCloudIconsProps) => {
     return React.createElement(name, props, props.children);
   };
 

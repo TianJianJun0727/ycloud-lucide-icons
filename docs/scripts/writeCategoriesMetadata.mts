@@ -18,6 +18,7 @@ async function getAllCategoryFiles() {
     return {
       name,
       title: parsedFileContent.title,
+      displayTitle: parsedFileContent.i18n?.zh?.title,
     };
   });
 

@@ -49,12 +49,12 @@ const props = defineProps<{
       <footer class="package-footer">
         <VPButton
           :href="packageData.documentation"
-          text="Guide"
+          text="指南"
           theme="brand"
         />
         <VPButton
           :href="packageData.source"
-          text="Source"
+          text="源码"
           theme="alt"
         />
       </footer>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { withBase } from 'vitepress';
+
 const { item } = defineProps<{
   item: {
     name: string;
@@ -12,14 +14,14 @@ const { item } = defineProps<{
   <div v-if="item.icon || item.iconDark">
     <img
       v-if="item.icon"
-      :src="item.icon"
+      :src="withBase(item.icon)"
       :class="{ 'select-item-icon': true, light: item.iconDark }"
       :alt="`${item.name} logo`"
       loading="lazy"
     />
     <img
       v-if="item.iconDark"
-      :src="item.iconDark"
+      :src="withBase(item.iconDark)"
       :alt="`${item.name} logo`"
       class="select-item-icon dark"
     />

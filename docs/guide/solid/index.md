@@ -1,6 +1,6 @@
 ---
-title: YCloud for Solid
-description: YCloud provides a Solid icon component library that makes it easy to integrate icons into your Solid applications. Each icon is available as a standalone Solid component, allowing for seamless integration and customization.
+title: Solid 版 YCloud Icons
+description: YCloud Icons 提供 Solid 图标组件库，方便你将图标集成到 Solid 应用中。每个图标都是独立 Solid 组件，便于集成和自定义。
 nextPage:
   - getting-started
 ---
@@ -13,25 +13,24 @@ import { solidSidebar } from '../../.vitepress/sidebar/solid'
 
 <!--@include: ../../../docs/images/package-logos/ycloud-solid.svg -->
 
-# YCloud for Solid
+# Solid 版 YCloud Icons
 
-YCloud provides a Solid icon component library that makes it easy to integrate icons into your Solid applications.
-Each icon is available as a standalone Solid component, allowing for seamless integration and customization.
+在 Solid 应用中使用 YCloud Icons 时，每个图标都是一个独立 Solid 组件，方便按需引入、渲染和定制。
 
-List of features:
+功能列表：
 
-- **Easy to Use**: Import icons as Solid components and use them directly in your Solid components with JSX.
-- **Customizable**: Adjust size, color, and other properties via props.
-- **Tree-shakable**: Only the icons you use are included in your final bundle
-- **TypeScript Support**: Fully typed components for better developer experience.
+- **易于使用**：按需导入图标组件，并直接在 Solid 组件中使用。
+- **可定制**：通过 props 控制尺寸、颜色等属性。
+- **支持 Tree-shaking**：最终产物只包含你实际使用的图标。
+- **TypeScript 支持**：完整类型定义带来更好的开发体验。
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in solidSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 
 {{''}}
 
@@ -39,7 +38,7 @@ List of features:
   <OverviewLink v-for="item in solidSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 进阶
 
 {{''}}
 

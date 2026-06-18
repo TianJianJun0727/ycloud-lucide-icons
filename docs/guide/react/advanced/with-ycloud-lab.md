@@ -1,18 +1,18 @@
 ---
-title: With YCloud Lab or custom icons - React
-description: Learn how to use YCloud Lab or custom icons in your React applications using the Icon component.
+title: 使用 YCloud Icons Lab 或自定义图标 - React
+description: 了解如何在 React 应用中通过 Icon 组件使用 YCloud Icons Lab 或自定义图标。
 ---
 
-# With YCloud Lab or custom icons
+# 使用 YCloud Icons Lab 或自定义图标
 
-[YCloud Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
 
-They can be used by using the `Icon` component.
-All props like regular ycloud icons can be passed to adjust the icon appearance.
+这些图标可以通过 `Icon` 组件使用。
+和普通 YCloud 图标一样，你也可以传入各种 props 来调整图标外观。
 
-## Using the `Icon` component
+## 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a YCloud icon component.
+下面会根据传入的 `iconNode` 创建并渲染一个 YCloud 图标组件。
 
 ```jsx
 import { Icon } from '@ycloud-web/icons-react';

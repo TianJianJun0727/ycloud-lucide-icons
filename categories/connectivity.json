@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Connectivity",
-  "icon": "wifi"
+  "icon": "wifi",
+  "i18n": {
+    "zh": {
+      "title": "连接"
+    }
+  }
 }

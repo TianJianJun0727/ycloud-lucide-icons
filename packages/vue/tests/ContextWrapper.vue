@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { setYCloudProps } from '../src/context';
+import { setYCloudIconsProps } from '../src/context';
 import { House } from '../src/ycloud-vue';
 
 const props = defineProps<{
@@ -8,7 +8,7 @@ const props = defineProps<{
   strokeWidth?: number;
 }>();
 
-setYCloudProps({
+setYCloudIconsProps({
   size: 48,
   color: 'red',
   strokeWidth: 4,

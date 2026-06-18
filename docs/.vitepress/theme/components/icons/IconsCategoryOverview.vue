@@ -15,6 +15,8 @@ import useScrollToCategory from '../../composables/useScrollToCategory';
 import { useCategoryView } from '../../composables/useCategoryView';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import { withBase } from 'vitepress';
+import { localizeCategoryTitle } from '../../utils/categoryLabels';
+import { localizeIconCategories, localizeIconName, localizeIconTags } from '../../utils/iconI18n';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -55,15 +57,15 @@ const columnSize = computed(() => {
 });
 
 const mappedIcons = computed(() => {
-  if (tags.value == null) {
-    return props.icons;
-  }
   return props.icons.map((icon) => {
-    const iconTags = tags.value[icon.name];
+    const iconTags = tags.value?.[icon.name] ?? icon.tags ?? [];
     const iconCategories = categoriesMap.value?.[icon.name] ?? [];
 
     return {
       ...icon,
+      displayName: icon.displayName ?? localizeIconName(icon.name, icon.i18n?.zh?.name),
+      displayTags: icon.displayTags ?? localizeIconTags(iconTags, icon.i18n?.zh?.tags),
+      displayCategories: icon.displayCategories ?? localizeIconCategories(iconCategories, icon.i18n?.zh?.categories),
       tags: iconTags,
       categories: iconCategories,
     };
@@ -73,13 +75,16 @@ const mappedIcons = computed(() => {
 const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'name', weight: 3 },
   { name: 'aliases', weight: 3 },
+  { name: 'displayName', weight: 3 },
+  { name: 'displayTags', weight: 2 },
+  { name: 'displayCategories', weight: 1 },
   { name: 'tags', weight: 2 },
 ]);
 
 const categories = computed(() => {
   if (!props.categories?.length || !props.icons?.length) return [];
 
-  return props.categories.map(({ name, title }) => {
+  return props.categories.map(({ name, title, displayTitle }) => {
     const categoryIcons = props.icons.filter((icon) => {
       const iconCategories = icon?.externalLibrary
         ? icon.categories
@@ -96,6 +101,7 @@ const categories = computed(() => {
 
     return {
       title,
+      displayTitle,
       name,
       icons: searchedCategoryIcons,
     };
@@ -106,7 +112,11 @@ const categoriesList = computed(() => {
   return categories.value
     .filter(({ icons }) => icons.length)
     .reduce<CategoryRow[]>((acc, category) => {
-      acc.push({ type: 'category', title: category.title, name: category.name });
+      acc.push({
+        type: 'category',
+        title: category.displayTitle ?? localizeCategoryTitle(category.title),
+        name: category.name,
+      });
 
       const categoryIcons = chunkArray(category.icons, columnSize.value);
       categoryIcons.forEach((icons) => {
@@ -173,7 +183,7 @@ function handleCloseDrawer() {
   >
     <StickyBar class="category-search">
       <InputSearch
-        :placeholder="`Search ${icons.length} icons…`"
+        :placeholder="`搜索 ${icons.length} 个图标…`"
         v-model="searchQuery"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"

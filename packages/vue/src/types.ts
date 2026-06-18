@@ -1,6 +1,6 @@
 import type { FunctionalComponent, SVGAttributes } from 'vue';
 
-export interface YCloudProps extends Partial<SVGAttributes> {
+export interface YCloudIconsProps extends Partial<SVGAttributes> {
   size?: 24 | number;
   strokeWidth?: number | string;
   absoluteStrokeWidth?: boolean;
@@ -8,4 +8,4 @@ export interface YCloudProps extends Partial<SVGAttributes> {
 }
 
 export type IconNode = [elementName: string, attrs: Record<string, string | number>][];
-export type YCloudIcon = FunctionalComponent<YCloudProps>;
+export type YCloudIcon = FunctionalComponent<YCloudIconsProps>;

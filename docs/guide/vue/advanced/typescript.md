@@ -8,12 +8,12 @@ description: Learn about the different types exported by the `@ycloud-web/icons-
 List of exported types from the `@ycloud-web/icons-vue` package.
 These can be used to type your components when using YCloud icons in a TypeScript Vue project.
 
-## `YCloudProps`
+## `YCloudIconsProps`
 
 Exports all props that can be passed to an icon component and any other SVG attributes, see: [SVG Presentation Attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```ts
-interface YCloudProps {
+interface YCloudIconsProps {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
@@ -22,18 +22,18 @@ interface YCloudProps {
 }
 ```
 
-### Using `YCloudProps`
+### Using `YCloudIconsProps`
 
-You can use the `YCloudProps` interface to type props for your custom icon components.
+You can use the `YCloudIconsProps` interface to type props for your custom icon components.
 
 ::: code-group
 
 ```vue [IconWrapper.vue]
 <script lang="ts" setup>
-import { type YCloudProps } from '@ycloud-web/icons-vue';
+import { type YCloudIconsProps } from '@ycloud-web/icons-vue';
 import { Camera } from '@ycloud-web/icons-vue';
 
-defineProps<YCloudProps>();
+defineProps<YCloudIconsProps>();
 </script>
 
 <template>
@@ -50,7 +50,7 @@ defineProps<YCloudProps>();
 Type for individual icon components, this is use full when you want to type a variable or prop that holds an icon component.
 
 ```ts
-type YCloudIcon = React.FC<YCloudProps>;
+type YCloudIcon = React.FC<YCloudIconsProps>;
 ```
 
 ### Using `YCloudIcon`
@@ -61,7 +61,7 @@ You can use the `YCloudIcon` type when you need to work with icon components dir
 
 ```vue [IconButton.vue]
 <script lang="ts" setup>
-import { type YCloudProps } from '@ycloud-web/icons-vue';
+import { type YCloudIconsProps } from '@ycloud-web/icons-vue';
 import { Camera } from '@ycloud-web/icons-vue';
 
 defineProps<{
@@ -85,7 +85,7 @@ defineProps<{
 ## `IconNode`
 
 Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Lab.
+Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Icons Lab.
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];

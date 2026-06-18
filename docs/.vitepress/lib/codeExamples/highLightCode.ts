@@ -23,7 +23,7 @@ const highLightCode = async (code: string, lang: string, active?: boolean) => {
     .replace('shiki-themes', 'shiki-themes vp-code');
 
   return `<div class="language-${lang} ${active ? 'active' : ''}">
-  <button title="Copy Code" class="copy"></button>
+  <button title="复制代码" class="copy"></button>
   <span class="lang">${lang}</span>
   ${highlightedCode}
   </div>`;

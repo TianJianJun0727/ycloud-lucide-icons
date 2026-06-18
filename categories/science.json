@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Science",
-  "icon": "flask-conical"
+  "icon": "flask-conical",
+  "i18n": {
+    "zh": {
+      "title": "科学"
+    }
+  }
 }

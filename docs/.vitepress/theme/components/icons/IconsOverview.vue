@@ -2,7 +2,7 @@
 import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
-import { useRoute } from 'vitepress';
+import { useRoute, withBase } from 'vitepress';
 import IconGrid from './IconGrid.vue';
 import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
@@ -16,24 +16,24 @@ import chunkArray from '../../utils/chunkArray';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@ycloud-web/icons-vue/src/Icon';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
+import { localizeIconCategories, localizeIconName, localizeIconTags } from '../../utils/iconI18n';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
 const SORTING = [
   {
-    name: 'Popularity',
+    name: '热度',
     value: 'popularity',
   },
   {
-    name: 'Release date',
+    name: '发布日期',
     value: 'release-date',
   },
   {
-    name: 'Name',
+    name: '名称',
     value: 'name',
   },
-]
-
+];
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -49,7 +49,7 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
-const selectedSort = ref(SORTING[0])
+const selectedSort = ref(SORTING[0]);
 
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
@@ -79,16 +79,15 @@ const sortedIcons = computed(() => {
 });
 
 const mappedIcons = computed(() => {
-  if (tags.value == null) {
-    return sortedIcons.value;
-  }
-
   return sortedIcons.value.map((icon) => {
-    const iconTags = tags.value[icon.name];
+    const iconTags = tags.value?.[icon.name] ?? icon.tags ?? [];
     const iconCategories = categories.value?.[icon.name] ?? [];
 
     return {
       ...icon,
+      displayName: icon.displayName ?? localizeIconName(icon.name, icon.i18n?.zh?.name),
+      displayTags: icon.displayTags ?? localizeIconTags(iconTags, icon.i18n?.zh?.tags),
+      displayCategories: icon.displayCategories ?? localizeIconCategories(iconCategories, icon.i18n?.zh?.categories),
       tags: iconTags,
       categories: iconCategories,
     };
@@ -104,6 +103,9 @@ const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
 const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'name', weight: 3 },
   { name: 'aliases', weight: 8 },
+  { name: 'displayName', weight: 3 },
+  { name: 'displayTags', weight: 2 },
+  { name: 'displayCategories', weight: 1 },
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
 ]);
@@ -155,7 +157,7 @@ function handleCloseDrawer() {
   setActiveIconName('');
 
   const url = new URL(window.location);
-  url.pathname = '/icons/';
+  url.pathname = withBase('/icons/');
 
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
@@ -173,7 +175,7 @@ function handleCloseDrawer() {
   >
     <StickyBar>
       <InputSearch
-        :placeholder="`Search ${icons.length} icons…`"
+        :placeholder="`搜索 ${icons.length} 个图标…`"
         v-model="searchQuery"
         ref="searchInput"
         :shortcut="kbdSearchShortcut"

@@ -14,7 +14,7 @@ type IconNodeElements =
 
 export type IconNode = [elementName: IconNodeElements, attrs: Attrs][];
 
-export interface YCloudProps extends Attrs {
+export interface YCloudIconsProps extends Attrs {
   name?: string;
   color?: string;
   size?: number | string;
@@ -25,9 +25,9 @@ export interface YCloudProps extends Attrs {
   title?: string;
 }
 
-export type IconProps = YCloudProps;
+export type IconProps = YCloudIconsProps;
 
-export type YCloudIcon = Component<YCloudProps>;
+export type YCloudIcon = Component<YCloudIconsProps>;
 
 export type IconEvents = {
   [evt: string]: CustomEvent<any>;

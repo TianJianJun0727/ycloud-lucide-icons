@@ -1,6 +1,6 @@
 import { createElement, forwardRef } from 'react';
 import { mergeClasses, toKebabCase, toPascalCase } from '@ycloud-web/shared';
-import { IconNode, YCloudProps } from './types';
+import { IconNode, YCloudIconsProps } from './types';
 import Icon from './Icon';
 
 /**
@@ -10,7 +10,7 @@ import Icon from './Icon';
  * @returns {ForwardRefExoticComponent} YCloudIcon
  */
 const createYCloudIcon = (iconName: string, iconNode: IconNode) => {
-  const Component = forwardRef<SVGSVGElement, YCloudProps>(({ className, ...props }, ref) =>
+  const Component = forwardRef<SVGSVGElement, YCloudIconsProps>(({ className, ...props }, ref) =>
     createElement(Icon, {
       ref,
       iconNode,

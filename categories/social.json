@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Social",
-  "icon": "thumbs-up"
+  "icon": "thumbs-up",
+  "i18n": {
+    "zh": {
+      "title": "社交"
+    }
+  }
 }

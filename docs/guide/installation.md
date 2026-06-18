@@ -1,15 +1,15 @@
 ---
-title: Installation
-description: Install YCloud Icons packages for supported frameworks and static asset usage.
+title: 安装
+description: 安装 YCloud Icons 支持的框架包和静态资源包。
 ---
 
-# Installation
+# 安装
 
-YCloud Icons follows the same package coverage model as Lucide and currently documents 10 package types.
+YCloud Icons 当前覆盖 10 种包类型，可以按项目所用框架选择安装。
 
 ## Core JavaScript
 
-Framework-agnostic icon data and helpers.
+与框架无关的图标数据和辅助方法。
 
 ::: code-group
 
@@ -31,11 +31,11 @@ bun add @ycloud-web/icons
 
 :::
 
-See the [Core JavaScript guide](./ycloud/index.md).
+查看 [Core JavaScript 指南](./ycloud/index.md)。
 
 ## React
 
-Typed React SVG components with named imports.
+支持命名导入的强类型 React SVG 组件。
 
 ::: code-group
 
@@ -57,11 +57,11 @@ bun add @ycloud-web/icons-react
 
 :::
 
-See the [React guide](./react/index.md).
+查看 [React 指南](./react/index.md)。
 
 ## Vue
 
-Vue components generated from the same icon source.
+从同一份图标源生成的 Vue 组件。
 
 ::: code-group
 
@@ -83,11 +83,11 @@ bun add @ycloud-web/icons-vue
 
 :::
 
-See the [Vue guide](./vue/index.md).
+查看 [Vue 指南](./vue/index.md)。
 
 ## Svelte
 
-Svelte components for application projects.
+面向应用项目的 Svelte 组件。
 
 ::: code-group
 
@@ -109,11 +109,11 @@ bun add @ycloud-web/icons-svelte
 
 :::
 
-See the [Svelte guide](./svelte/index.md).
+查看 [Svelte 指南](./svelte/index.md)。
 
 ## Solid
 
-Solid components generated from the shared icon source.
+从共享图标源生成的 Solid 组件。
 
 ::: code-group
 
@@ -135,11 +135,11 @@ bun add @ycloud-web/icons-solid
 
 :::
 
-See the [Solid guide](./solid/index.md).
+查看 [Solid 指南](./solid/index.md)。
 
 ## Preact
 
-Preact components for small React-compatible applications.
+面向轻量 React 兼容应用的 Preact 组件。
 
 ::: code-group
 
@@ -161,11 +161,11 @@ bun add @ycloud-web/icons-preact
 
 :::
 
-See the [Preact guide](./preact/index.md).
+查看 [Preact 指南](./preact/index.md)。
 
 ## React Native
 
-React Native components for mobile applications.
+面向移动应用的 React Native 组件。
 
 ::: code-group
 
@@ -187,11 +187,11 @@ bun add @ycloud-web/icons-react-native
 
 :::
 
-See the [React Native guide](./react-native/index.md).
+查看 [React Native 指南](./react-native/index.md)。
 
 ## Angular
 
-Angular components and provider APIs.
+Angular 组件和 provider API。
 
 ::: code-group
 
@@ -213,11 +213,11 @@ bun add @ycloud-web/icons-angular
 
 :::
 
-See the [Angular guide](./angular/index.md).
+查看 [Angular 指南](./angular/index.md)。
 
 ## Astro
 
-Astro components for content and application sites.
+面向内容站点和应用站点的 Astro 组件。
 
 ::: code-group
 
@@ -239,11 +239,11 @@ bun add @ycloud-web/icons-astro
 
 :::
 
-See the [Astro guide](./astro/index.md).
+查看 [Astro 指南](./astro/index.md)。
 
-## Static Assets
+## 静态资源
 
-Static SVG files, SVG sprites, icon fonts, and SVG string modules.
+静态 SVG 文件、SVG Sprite、图标字体和 SVG 字符串模块。
 
 ::: code-group
 
@@ -265,4 +265,4 @@ bun add @ycloud-web/icons-static
 
 :::
 
-See the [Static assets guide](./static/index.md).
+查看 [静态资源指南](./static/index.md)。

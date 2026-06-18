@@ -17,23 +17,23 @@ But using CSS prevents you from using props like `size`, `color` and `strokeWidt
 
 ## Context Provider
 
-For global styling using a context provider, you can use the `YCloudProvider` component that is provided by the `@ycloud-web/icons-preact` package.
+For global styling using a context provider, you can use the `YCloudIconsProvider` component that is provided by the `@ycloud-web/icons-preact` package.
 
 ```tsx
-import { YCloudProvider, Home } from '@ycloud-web/icons-preact';
+import { YCloudIconsProvider, Home } from '@ycloud-web/icons-preact';
 
 const App = () => (
-  <YCloudProvider
+  <YCloudIconsProvider
     color="red"
     size={48}
     strokeWidth={2}
   >
     <Home />
-  </YCloudProvider>
+  </YCloudIconsProvider>
 );
 ```
 
-This will apply the `color`, `size` and `strokeWidth` props to all icons that are children of the `YCloudProvider`.
+This will apply the `color`, `size` and `strokeWidth` props to all icons that are children of the `YCloudIconsProvider`.
 
 ## Style by using CSS
 

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "pnpm run /^prebuild:.*/ && vitepress dev",
+    "docs:dev": "DOCS_BASE=${DOCS_BASE:-/ycloud-icons/} DOCS_SKIP_OG=1 pnpm run /^prebuild:.*/ && DOCS_BASE=${DOCS_BASE:-/ycloud-icons/} DOCS_SKIP_OG=1 vitepress dev",
     "docs:build": "pnpm run /^prebuild:.*/ && vitepress build",
     "docs:preview": "vitepress preview",
     "build:docs": "vitepress build",

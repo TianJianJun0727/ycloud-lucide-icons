@@ -114,6 +114,35 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "i18n": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "zh": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "categories": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
     "use-cases": {
       "type": "array",
       "items": {

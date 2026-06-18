@@ -8,12 +8,12 @@ description: Learn about the TypeScript types exported by the @ycloud-web/icons-
 List of exported types from the `@ycloud-web/icons-astro` package.
 These can be used to type your components when using YCloud icons in a TypeScript Astro project.
 
-## `YCloudProps`
+## `YCloudIconsProps`
 
 Exports all props that can be passed to an icon component and any other SVG attributes, see: [SVG Presentation Attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```ts
-interface YCloudProps extends SVGAttributes<SVGSVGElement> {
+interface YCloudIconsProps extends SVGAttributes<SVGSVGElement> {
   name?: string;
   color?: string;
   size?: number | string;
@@ -25,7 +25,7 @@ interface YCloudProps extends SVGAttributes<SVGSVGElement> {
 
 ### Using `IconProps`
 
-<!-- Rename this to YCloudProps -->
+<!-- Rename this to YCloudIconsProps -->
 
 You can use the `IconProps` interface to type props for your custom icon components.
 
@@ -101,7 +101,7 @@ const menuItems: MenuItem[] = [
 ## `IconNode`
 
 Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Lab.
+Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Icons Lab.
 
 ```ts
 type IconNode = [

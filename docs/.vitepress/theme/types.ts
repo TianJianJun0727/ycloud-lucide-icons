@@ -5,6 +5,13 @@ export interface IconMetaData {
   tags: string[];
   categories: string[];
   contributors: string[];
+  i18n?: {
+    zh?: {
+      name?: string;
+      tags?: string[];
+      categories?: string[];
+    };
+  };
   aliases?: string[];
   deprecated?: boolean;
   deprecationReason?: string;
@@ -14,6 +21,9 @@ export interface IconMetaData {
 export type ExternalLibs = 'lab';
 export interface IconEntity extends IconMetaData {
   name: string;
+  displayName?: string;
+  displayTags?: string[];
+  displayCategories?: string[];
   iconNode: IconNode;
   externalLibrary?: ExternalLibs;
   createdRelease?: Release;
@@ -24,6 +34,7 @@ export interface IconEntity extends IconMetaData {
 export interface Category {
   name: string;
   title: string;
+  displayTitle?: string;
   icon?: string;
   iconCount: number;
   icons?: IconEntity[];

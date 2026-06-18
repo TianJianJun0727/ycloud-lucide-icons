@@ -21,9 +21,11 @@ import Files from '../../../data/iconDetails/files.ts';
 import Plus from '../../../data/iconDetails/plus.ts';
 import File from '../../../data/iconDetails/file.ts';
 import FileText from '../../../data/iconDetails/file-text.ts';
+import { localizeIconName } from '../../utils/iconI18n';
 
 const props = defineProps<{
   name: IconEntity['name'];
+  displayName?: IconEntity['displayName'];
   iconNode: IconEntity['iconNode'];
 }>();
 
@@ -57,12 +59,7 @@ const PlusIcon = createYCloudIcon('plus.ts', Plus.iconNode);
 const FileIcon = createYCloudIcon('file.ts', File.iconNode);
 const FileTextIcon = createYCloudIcon('file-text.ts', FileText.iconNode);
 
-const prettyName = props.name
-  .split('-')
-  .at(0)
-  .split('')
-  .map((character, index) => (index === 0 ? character.toUpperCase() : character))
-  .join('');
+const prettyName = computed(() => localizeIconName(props.name, props.displayName));
 </script>
 
 <template>
@@ -70,7 +67,7 @@ const prettyName = props.name
     class="showcase"
     v-if="iconComponent"
   >
-    <h2 class="title">See this icon in action</h2>
+    <h2 class="title">图标使用示例</h2>
     <div class="showcase-grid">
       <div class="showcase-item column">
         <div class="placeholder"></div>
@@ -83,7 +80,7 @@ const prettyName = props.name
             <iconComponent />
             {{ prettyName }}
           </button>
-          <button class="button button-alt">Cancel</button>
+          <button class="button button-alt">取消</button>
         </div>
       </div>
       <div class="showcase-item column">
@@ -94,12 +91,12 @@ const prettyName = props.name
           <input
             type="text"
             v-if="name !== 'calendar'"
-            placeholder="Enter a date..."
+            placeholder="输入日期..."
           />
           <input
             type="text"
             v-if="name == 'calendar'"
-            placeholder="Enter a time..."
+            placeholder="输入时间..."
           />
         </div>
         <div class="spacer"></div>
@@ -108,7 +105,7 @@ const prettyName = props.name
           <iconComponent />
           <input
             type="text"
-            placeholder="Enter a value..."
+            placeholder="输入内容..."
           />
         </div>
       </div>
@@ -120,7 +117,7 @@ const prettyName = props.name
           <div class="placeholder"></div>
           <div class="badge badge-red">
             <BugIcon :size="20" />
-            Bug
+            缺陷
           </div>
         </div>
         <div
@@ -130,7 +127,7 @@ const prettyName = props.name
           <div class="placeholder"></div>
           <div class="badge badge-red">
             <AlertTriangleIcon :size="20" />
-            Alert
+            告警
           </div>
         </div>
         <div class="row">
@@ -144,7 +141,7 @@ const prettyName = props.name
               :size="20"
               v-else
             />
-            Feature
+            功能
           </div>
         </div>
         <div class="row">
@@ -159,13 +156,13 @@ const prettyName = props.name
         <button class="button button-alt button-square">
           <FolderIcon v-if="name !== 'folder'" />
           <FilesIcon v-else />
-          Documents
+          文档
           <PlusIcon class="ms-auto" />
         </button>
         <button class="button button-alt button-square">
           <FileIcon v-if="name !== 'file'" />
           <FileTextIcon v-else />
-          Readme
+          自述文件
         </button>
         <button class="button button-alt button-square">
           <iconComponent />

@@ -1,11 +1,11 @@
 import { h, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
-import type { IconNode, YCloudProps } from './types';
+import type { IconNode, YCloudIconsProps } from './types';
 import { useYCloudContext } from './context';
 import { mergeClasses } from '@ycloud-web/shared';
 import { hasA11yProp } from '@ycloud-web/shared';
 
-interface IconComponentProps extends YCloudProps {
+interface IconComponentProps extends YCloudIconsProps {
   iconNode: IconNode;
 }
 

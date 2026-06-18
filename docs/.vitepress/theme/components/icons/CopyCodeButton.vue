@@ -103,14 +103,14 @@ function copyAngular() {
     callOptionOnClick
     @click="confetti"
     @optionClick="confetti"
-    data-confetti-text="Copied!"
+    data-confetti-text="已复制"
     :popoverPosition="popoverPosition"
     :options="[
-      { text: 'Copy JSX', onClick: copyJSX },
-      { text: 'Copy Component Name', onClick: copyComponentName },
-      { text: 'Copy Vue', onClick: copyVue },
-      { text: 'Copy Svelte', onClick: copyJSX },
-      { text: 'Copy Angular', onClick: copyAngular },
+      { text: '复制 JSX', onClick: copyJSX },
+      { text: '复制组件名', onClick: copyComponentName },
+      { text: '复制 Vue', onClick: copyVue },
+      { text: '复制 Svelte', onClick: copyJSX },
+      { text: '复制 Angular', onClick: copyAngular },
     ]"
   />
 </template>

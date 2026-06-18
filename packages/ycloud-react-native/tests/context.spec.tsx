@@ -1,32 +1,32 @@
 import { cleanup, render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { House, YCloudProvider } from '../src/ycloud-react-native';
+import { House, YCloudIconsProvider } from '../src/ycloud-react-native';
 
 vi.mock('react-native-svg');
 
-describe('Using YCloudProvider', () => {
-  it('should render the icon with YCloudProvider', () => {
+describe('Using YCloudIconsProvider', () => {
+  it('should render the icon with YCloudIconsProvider', () => {
     cleanup();
     const { container } = render(
-      <YCloudProvider>
+      <YCloudIconsProvider>
         <House />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render the icon with YCloudProvider and custom strokeWidth', () => {
+  it('should render the icon with YCloudIconsProvider and custom strokeWidth', () => {
     cleanup();
     const testId = 'house-icon';
     const { getByTestId } = render(
-      <YCloudProvider
+      <YCloudIconsProvider
         size={48}
         color="red"
         strokeWidth={4}
       >
         <House testID={testId} />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     const IconComponent = getByTestId(testId);
@@ -37,16 +37,16 @@ describe('Using YCloudProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
 
-  it('should render the icon with YCloudProvider and custom absoluteStrokeWidth', () => {
+  it('should render the icon with YCloudIconsProvider and custom absoluteStrokeWidth', () => {
     cleanup();
     const { container } = render(
-      <YCloudProvider
+      <YCloudIconsProvider
         size={48}
         color="red"
         absoluteStrokeWidth
       >
         <House />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     const IconComponent = container.firstElementChild;
@@ -57,7 +57,7 @@ describe('Using YCloudProvider', () => {
   it("should override the provider's global props when passing props to the icon", () => {
     cleanup();
     const { container } = render(
-      <YCloudProvider
+      <YCloudIconsProvider
         size={48}
         color="red"
         strokeWidth={4}
@@ -67,7 +67,7 @@ describe('Using YCloudProvider', () => {
           color="blue"
           strokeWidth={3}
         />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     const IconComponent = container.firstElementChild;

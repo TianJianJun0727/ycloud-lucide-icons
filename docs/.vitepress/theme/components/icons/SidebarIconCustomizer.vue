@@ -66,12 +66,13 @@ const customizingActive = computed(() => {
     :class="{ customized: customizingActive }"
   >
     <div class="card-header">
-      <h2 class="card-title">Customizer</h2>
+      <h2 class="card-title">自定义</h2>
       <ResetButton @click="resetStyle"></ResetButton>
     </div>
     <InputField
       id="icon-color"
-      label="Color"
+      label="颜色"
+      class="color-picker-field"
     >
       <template #display>
         <ColorPicker
@@ -84,7 +85,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="stroke-width"
-      label="Stroke width"
+      label="描边宽度"
     >
       <template #display>
         <span class="customize-label">{{ strokeWidth }}px</span>
@@ -101,7 +102,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="size"
-      label="Size"
+      label="尺寸"
     >
       <template #display>
         <span class="customize-label">{{ size }}px</span>
@@ -118,7 +119,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="absolute-stroke-width"
-      label="Absolute stroke width"
+      label="固定描边宽度"
     >
       <Switch
         id="absolute-stroke-width"
@@ -160,7 +161,16 @@ const customizingActive = computed(() => {
   border-color: var(--vp-c-brand);
 }
 
-.color-picker {
-  margin-left: auto;
+.color-picker-field:deep(.input-label) {
+  display: block;
+}
+
+.color-picker-field:deep(.display-value) {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.color-picker-field:deep(.color-picker) {
+  width: 100%;
 }
 </style>

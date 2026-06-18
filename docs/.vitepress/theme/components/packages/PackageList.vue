@@ -6,7 +6,7 @@ import PackageListItem from "./PackageListItem.vue";
 
 <template>
   <GridSection
-    title="Packages"
+    title="包"
     :headingLevel="1"
     class="package-group"
   >

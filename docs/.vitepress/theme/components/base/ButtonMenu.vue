@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
-import { computed, ref } from 'vue';
+import { computed, ref, watchEffect } from 'vue';
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue';
 import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
 import { chevronUp } from '../../../data/iconNodes';
@@ -27,12 +27,18 @@ const emit = defineEmits(['click', 'optionClick']);
 const buttonRef = ref(null);
 
 const selectedOption = useStorage(props.id, props.options[0].text);
+watchEffect(() => {
+  if (!props.options.some((option) => option.text === selectedOption.value)) {
+    selectedOption.value = props.options[0].text;
+  }
+});
+
 const selectionOptionAction = computed(
-  () => props.options.find((option) => option.text === selectedOption.value).onClick,
+  () => props.options.find((option) => option.text === selectedOption.value)?.onClick,
 );
 
 function onClick(event) {
-  selectionOptionAction.value();
+  selectionOptionAction.value?.();
 
   emit('click', event);
 }

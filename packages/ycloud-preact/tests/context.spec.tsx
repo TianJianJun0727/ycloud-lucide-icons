@@ -1,30 +1,30 @@
 import { render } from '@testing-library/preact';
 import { describe, expect, it } from 'vitest';
-import { House, YCloudProvider } from '../src/ycloud-preact';
+import { House, YCloudIconsProvider } from '../src/ycloud-preact';
 
-describe('Using YCloudProvider', () => {
-  it('should render the icon with YCloudProvider', () => {
+describe('Using YCloudIconsProvider', () => {
+  it('should render the icon with YCloudIconsProvider', () => {
     const { container } = render(
-      <YCloudProvider
+      <YCloudIconsProvider
         size={48}
         color="red"
       >
         <House />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render the icon with YCloudProvider and custom strokeWidth', () => {
+  it('should render the icon with YCloudIconsProvider and custom strokeWidth', () => {
     const { container } = render(
-      <YCloudProvider
+      <YCloudIconsProvider
         size={48}
         color="red"
         strokeWidth={4}
       >
         <House />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     const IconComponent = container.firstElementChild;
@@ -35,15 +35,15 @@ describe('Using YCloudProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
 
-  it('should render the icon with YCloudProvider and custom absoluteStrokeWidth', () => {
+  it('should render the icon with YCloudIconsProvider and custom absoluteStrokeWidth', () => {
     const { container } = render(
-      <YCloudProvider
+      <YCloudIconsProvider
         size={48}
         color="red"
         absoluteStrokeWidth
       >
         <House />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     const IconComponent = container.firstElementChild;
@@ -53,7 +53,7 @@ describe('Using YCloudProvider', () => {
 
   it("should override the provider's global props when passing props to the icon", () => {
     const { container } = render(
-      <YCloudProvider
+      <YCloudIconsProvider
         size={48}
         color="red"
         strokeWidth={4}
@@ -63,7 +63,7 @@ describe('Using YCloudProvider', () => {
           color="blue"
           strokeWidth={2}
         />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     const IconComponent = container.firstElementChild;
@@ -74,11 +74,11 @@ describe('Using YCloudProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '2');
   });
 
-  it('should merge class names from YCloudProvider and icon props', () => {
+  it('should merge class names from YCloudIconsProvider and icon props', () => {
     const { container } = render(
-      <YCloudProvider class="provider-class">
+      <YCloudIconsProvider class="provider-class">
         <House class="icon-class" />
-      </YCloudProvider>,
+      </YCloudIconsProvider>,
     );
 
     const IconComponent = container.firstElementChild;

@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Mathematics",
-  "icon": "divide"
+  "icon": "divide",
+  "i18n": {
+    "zh": {
+      "title": "数学"
+    }
+  }
 }

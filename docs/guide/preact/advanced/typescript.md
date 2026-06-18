@@ -8,12 +8,12 @@ description: Learn about the different types exported by the `@ycloud-web/icons-
 List of exported types from the `@ycloud-web/icons-preact` package.
 These can be used to type your components when using YCloud icons in a TypeScript React project
 
-## `YCloudProps`
+## `YCloudIconsProps`
 
 Exports all props that can be passed to an icon component and any other SVG attributes, see: [SVG Presentation Attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```ts
-interface YCloudProps {
+interface YCloudIconsProps {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
@@ -22,15 +22,15 @@ interface YCloudProps {
 }
 ```
 
-### Using `YCloudProps`
+### Using `YCloudIconsProps`
 
-You can use the `YCloudProps` interface to type your custom icon components or when you need to work with icon props.
+You can use the `YCloudIconsProps` interface to type your custom icon components or when you need to work with icon props.
 
 ```tsx
-import { type YCloudProps } from '@ycloud-web/icons-preact';
+import { type YCloudIconsProps } from '@ycloud-web/icons-preact';
 import { Camera } from '@ycloud-web/icons-preact';
 
-const WrapIcon = (props: YCloudProps) => {
+const WrapIcon = (props: YCloudIconsProps) => {
   return <Camera {...props} />;
 };
 
@@ -42,7 +42,7 @@ export default WrapIcon;
 Type for individual icon components.
 
 ```ts
-type YCloudIcon = React.FC<YCloudProps>;
+type YCloudIcon = React.FC<YCloudIconsProps>;
 ```
 
 ### Using `YCloudIcon`
@@ -71,7 +71,7 @@ export default IconButton;
 ## `IconNode`
 
 Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Lab.
+Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Icons Lab.
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];

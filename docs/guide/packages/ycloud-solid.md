@@ -101,9 +101,9 @@ const App = () => {
 };
 ```
 
-## With YCloud Lab or custom icons
+## With YCloud Icons Lab or custom icons
 
-[YCloud Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
 
 They can be used by using the `Icon` component.
 All props like the regular YCloud icons can be passed to adjust the icon appearance.
@@ -135,11 +135,11 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ### Icon Component Example
 
 ```tsx
-import { icons, type YCloudProps } from '@ycloud-web/icons-solid';
+import { icons, type YCloudIconsProps } from '@ycloud-web/icons-solid';
 import { splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 
-interface IconProps extends YCloudProps {
+interface IconProps extends YCloudIconsProps {
   name: keyof typeof icons;
 }
 

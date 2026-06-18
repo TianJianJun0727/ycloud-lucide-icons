@@ -58,7 +58,7 @@ export const ycloudSidebar = [
         desc: 'Making your icons accessible',
       },
       {
-        text: 'With YCloud Lab',
+        text: 'With YCloud Icons Lab',
         link: '/guide/ycloud/advanced/with-ycloud-lab',
         desc: 'Using ycloud-lab with ycloud',
       },

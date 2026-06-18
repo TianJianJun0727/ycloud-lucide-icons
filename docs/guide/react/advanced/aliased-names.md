@@ -1,26 +1,26 @@
 ---
-title: Aliased Names - React
-description: Learn about the different import name styles available for YCloud icons in your React project and how to choose the one that best fits your needs.
+title: 别名 - React
+description: 了解 React 项目中 YCloud 图标支持的不同导入命名方式，以及如何选择适合你的命名风格。
 ---
 
-# Aliased Names
+# 别名
 
-Some icons have multiple names. This is because we sometimes choose to rename them to make them more consistent with the rest of the icon set, or the name was not generic. For example, the `edit-2` icon is renamed to `pen` to make the name more generic, since it is just a pen icon.
+有些图标会有多个名称。这通常是因为我们会对图标重命名，让它和整套图标的命名更一致，或者让名称更通用。例如，`edit-2` 被重命名为 `pen`，因为它本质上只是一个更通用的笔形图标。
 
-Beside these aliases, YCloud also includes prefixed and suffixed names to use within your project. This is to prevent import name collisions with other libraries or your own code.
+除了这些别名外，YCloud 还提供带前缀和后缀的名称，方便你在项目中使用。这可以避免和其他库或你自己的代码发生导入命名冲突。
 
 ```tsx
-// These are all the same icon
+// 这些都是同一个图标
 import { House, HouseIcon, YCloudHouse } from '@ycloud-web/icons-react';
 ```
 
-## Choosing import name style
+## 选择导入命名风格
 
-If you want consistent imports across your project, or if you want to change the autocompletion of YCloud icons in your IDE, there an option to choose the import name style you prefer.
+如果你希望项目里的导入方式保持一致，或者想调整 IDE 中 YCloud 图标的自动补全结果，可以选择你偏好的导入命名风格。
 
-This can be done by creating a custom module declaration file to override YCloud imports and turning off the autocomplete in your IDE.
+具体做法是创建一个自定义模块声明文件来覆盖 YCloud 的导入，同时关闭 IDE 中默认包路径的自动补全。
 
-### Turn off autocomplete in your IDE
+### 关闭 IDE 中的自动补全
 
 ```json [.vscode/settings.json]
 {
@@ -28,27 +28,27 @@ This can be done by creating a custom module declaration file to override YCloud
 }
 ```
 
-### Create a custom module declaration file
+### 创建自定义模块声明文件
 
-Create a custom TypeScript declaration file that re-exports the preferred naming style:
+创建一个自定义 TypeScript 声明文件，重新导出你偏好的命名风格：
 
 ```ts [ycloud-react.d.ts]
 declare module '@ycloud-web/icons-react' {
-  // Prefixed import names
+  // 前缀命名
   export * from '@ycloud-web/icons-react/dist/ycloud-react.prefixed';
   // or
-  // Suffixed import names
+  // 后缀命名
   export * from '@ycloud-web/icons-react/dist/ycloud-react.suffixed';
 }
 ```
 
-Place this file in your project root or in a directory included in your TypeScript configuration.
-A common approach is to create a `@types` folder and name the file `ycloud-react.d.ts`.
+把这个文件放在项目根目录，或放在 TypeScript 配置会包含的目录中。
+常见做法是创建一个 `@types` 文件夹，并把文件命名为 `ycloud-react.d.ts`。
 
-### Import name styles
+### 导入命名风格
 
-| Import Style | Available imports          | Declaration file import |
-| ------------ | -------------------------- | ----------------------- |
-| Default      | Home, HomeIcon, YCloudHome |                         |
-| Prefixed     | YCloudHome                 | ycloud-react.prefixed   |
-| Suffixed     | HomeIcon                   | ycloud-react.suffixed   |
+| 导入风格 | 可用导入名                 | 声明文件导入路径      |
+| -------- | -------------------------- | --------------------- |
+| 默认     | Home, HomeIcon, YCloudHome |                       |
+| 前缀     | YCloudHome                 | ycloud-react.prefixed |
+| 后缀     | HomeIcon                   | ycloud-react.suffixed |

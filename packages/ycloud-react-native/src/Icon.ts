@@ -1,10 +1,10 @@
 import { createElement, forwardRef, type FunctionComponent } from 'react';
 import * as NativeSvg from 'react-native-svg';
 import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
-import { IconNode, YCloudProps } from './types';
+import { IconNode, YCloudIconsProps } from './types';
 import { useYCloudContext } from './context';
 
-interface IconComponentProps extends YCloudProps {
+interface IconComponentProps extends YCloudIconsProps {
   iconNode: IconNode;
   testID?: string;
   className?: string;
@@ -75,8 +75,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
             tag.slice(1)) as keyof typeof NativeSvg;
           // duplicating the attributes here because generating the OTA update bundles don't inherit the SVG properties from parent (codepush, expo-updates)
           return createElement(
-            NativeSvg[upperCasedTag] as FunctionComponent<YCloudProps>,
-            { ...childDefaultAttributes, ...customAttrs, ...attrs } as YCloudProps,
+            NativeSvg[upperCasedTag] as FunctionComponent<YCloudIconsProps>,
+            { ...childDefaultAttributes, ...customAttrs, ...attrs } as YCloudIconsProps,
           );
         }),
         ...((Array.isArray(children) ? children : [children]) || []),

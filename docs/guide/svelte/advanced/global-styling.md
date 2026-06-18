@@ -17,17 +17,17 @@ But using CSS prevents you from using props like `size`, `color` and `strokeWidt
 
 ## Context Provider
 
-YCloud Svelte provides a context API called `setYCloudProps` that allows you to set global default properties for all YCloud icons in your application.
+YCloud Svelte provides a context API called `setYCloudIconsProps` that allows you to set global default properties for all YCloud icons in your application.
 This is useful if you want all icons to share the same size, color, or stroke width by default.
 
 ### Setting global defaults
 
-You can call `setYCloudProps` in your main entry file or in a top-level component to set the default properties for all icons.
+You can call `setYCloudIconsProps` in your main entry file or in a top-level component to set the default properties for all icons.
 
 ```js
-import { setYCloudProps } from '@ycloud-web/icons-svelte';
+import { setYCloudIconsProps } from '@ycloud-web/icons-svelte';
 
-setYCloudProps({
+setYCloudIconsProps({
   size: 32,
   color: '#4f46e5',
   strokeWidth: 1.5,

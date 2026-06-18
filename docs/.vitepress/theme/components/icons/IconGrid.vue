@@ -27,6 +27,7 @@ function setActiveIcon(name: string) {
       <IconItem
         :iconNode="icon.iconNode"
         :name="icon.name"
+        :displayName="icon.displayName"
         :externalLibrary="icon.externalLibrary"
         @setActiveIcon="setActiveIcon"
         :active="activeIcon === icon.name"

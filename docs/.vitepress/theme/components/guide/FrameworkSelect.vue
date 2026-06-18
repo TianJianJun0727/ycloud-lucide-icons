@@ -1,16 +1,23 @@
 <script setup lang="tsx">
 import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSidebarGroup.vue';
 import sidebar, { guideSidebarTop } from '../../../sidebar';
-import { useData, useRouter } from 'vitepress';
+import { useData, useRoute, useRouter, withBase } from 'vitepress';
 import Select from '../base/Select.vue';
-import { computed, ref, watch, watchEffect } from 'vue';
-import { link, route } from '~/.vitepress/data/iconNodes';
+import { computed } from 'vue';
 import { useLocalStorage } from '@vueuse/core';
 
-const { page } = useData();
+type FrameworkItem = {
+  name: string;
+  icon: string;
+  iconDark?: string;
+  value: string;
+};
+
+const { page, site } = useData();
+const route = useRoute();
 const router = useRouter();
 
-const frameworks = [
+const frameworks: FrameworkItem[] = [
   { name: 'Vanilla', icon: '/framework-logos/js.svg', value: '/guide/ycloud/' },
   { name: 'React', icon: '/framework-logos/react.svg', value: '/guide/react/' },
   { name: 'Vue', icon: '/framework-logos/vue.svg', value: '/guide/vue/' },
@@ -34,35 +41,58 @@ const frameworks = [
 
 const fallbackFramework = useLocalStorage('ycloud-docs-fallback-framework', frameworks[1]);
 
-const selected = computed(() => {
-  const current = frameworks.find(({ value }) => {
-    if (router.route.path?.startsWith?.('/guide')) {
-      const [, , framework] = router.route.path.split('/');
-      const [, frameWorkRoute] = value.split('/').filter(Boolean);
+function normalizeRelativePath(relativePath: string) {
+  return `/${relativePath.replace(/\/index\.md$/, '/').replace(/\.md$/, '')}`;
+}
 
-      return framework === frameWorkRoute;
-    }
-    return router.route.path.split('/').slice(0, 3).join('/') === value;
-  });
+const normalizedPath = computed(() => {
+  if (page.value.relativePath?.startsWith?.('guide/')) {
+    return normalizeRelativePath(page.value.relativePath);
+  }
 
-  return current || (fallbackFramework.value?.value ? fallbackFramework.value : frameworks[0]);
+  const path = route.path ?? '/';
+  const base = site.value.base ?? '/';
+
+  if (base !== '/' && path.startsWith(base)) {
+    return `/${path.slice(base.length).replace(/^\/+/, '')}`;
+  }
+
+  return path;
 });
 
-function onSelectFramework(item: { name: string; icon: string; iconDark?: string; value: string }) {
-  fallbackFramework.value = item;
-  if (item.value !== router.route.path) {
-    const likeRoute = router.route.path.replace(selected.value.value, item.value);
+function findSidebarLink(items: unknown[] | undefined, link: string): boolean {
+  return Boolean(
+    items?.some((item) => {
+      const sidebarItem = item as { link?: string; items?: unknown[] };
+      return sidebarItem.link === link || findSidebarLink(sidebarItem.items, link);
+    }),
+  );
+}
 
-    const hasRoute = sidebar[item.value]?.some((section) =>
-      section?.items?.some(({ link }) => link === likeRoute),
-    );
+const selected = computed<FrameworkItem>({
+  get() {
+    const current = frameworks.find(({ value }) => normalizedPath.value.startsWith(value));
+
+    return current || (fallbackFramework.value?.value ? fallbackFramework.value : frameworks[0]);
+  },
+  set(item) {
+    onSelectFramework(item);
+  },
+});
+
+function onSelectFramework(item: FrameworkItem) {
+  fallbackFramework.value = item;
+  if (item.value !== normalizedPath.value) {
+    const likeRoute = normalizedPath.value.replace(selected.value.value, item.value);
+
+    const hasRoute = findSidebarLink(sidebar[item.value] as unknown[] | undefined, likeRoute);
 
     if (hasRoute) {
-      router.go(likeRoute);
+      router.go(withBase(likeRoute));
       return;
     }
 
-    router.go(item.value);
+    router.go(withBase(item.value));
   }
 }
 </script>
@@ -76,9 +106,10 @@ function onSelectFramework(item: { name: string; icon: string; iconDark?: string
     class="framework-select"
     v-if="page?.relativePath?.startsWith?.('guide')"
   >
-    <label for="framework-select">Framework</label>
+    <label for="framework-select">框架</label>
     <Select
       id="framework-select"
+      :key="selected.value"
       :items="frameworks"
       @update:model-value="onSelectFramework"
       v-model="selected"

@@ -14,7 +14,7 @@ export const YCloudContext = createContext<{
   class: '',
 });
 
-interface YCloudProviderProps {
+interface YCloudIconsProviderProps {
   children: JSXElement;
   size?: number;
   color?: string;
@@ -23,7 +23,7 @@ interface YCloudProviderProps {
   class?: string;
 }
 
-export function YCloudProvider(props: YCloudProviderProps) {
+export function YCloudIconsProvider(props: YCloudIconsProviderProps) {
   const [value, rest] = splitProps(props, [
     'size',
     'color',

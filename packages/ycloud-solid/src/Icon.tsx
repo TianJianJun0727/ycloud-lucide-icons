@@ -1,7 +1,7 @@
 import { For, splitProps, useContext } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import defaultAttributes from './defaultAttributes';
-import { IconNode, YCloudProps } from './types';
+import { IconNode, YCloudIconsProps } from './types';
 import { YCloudContext } from './context';
 import { hasA11yProp, mergeClasses, toKebabCase, toPascalCase } from '@ycloud-web/shared';
 
@@ -10,7 +10,7 @@ interface IconProps {
   iconNode: IconNode;
 }
 
-const Icon = (props: YCloudProps & IconProps) => {
+const Icon = (props: YCloudIconsProps & IconProps) => {
   const [localProps, rest] = splitProps(props, [
     'color',
     'size',

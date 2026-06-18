@@ -72,7 +72,7 @@ function releaseTagLink(version) {
           v-if="params.createdRelease?.version"
           :class="$style.version"
         >
-          <Label>Created:</Label>
+          <Label>创建于：</Label>
           <Badge
             :href="releaseTagLink(params.createdRelease.version)"
           >
@@ -83,7 +83,7 @@ function releaseTagLink(version) {
           v-if="params.changedRelease?.version"
           :class="$style.version"
         >
-          <Label>Last changed:</Label>
+          <Label>最后变更：</Label>
           <Badge
             :href="releaseTagLink(params.changedRelease.version)"
           >
@@ -109,6 +109,7 @@ function releaseTagLink(version) {
 <div class="icon-page-sections">
   <IconShowcase
   :name="params.name"
+  :displayName="params.displayName"
   :iconNode="params.iconNode"
   />
 

@@ -37,6 +37,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build docs
+        env:
+          NODE_OPTIONS: --max-old-space-size=8192
         run: pnpm --dir docs build
 
       - name: Setup Pages

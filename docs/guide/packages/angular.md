@@ -236,7 +236,7 @@ svg.my-icon {
 
 ## With YCloud lab or custom icons
 
-[YCloud lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud main library.
+[YCloud lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
 
 While they aren't provided as standalone components, they can be still be passed to the `YCloudIcon` component the same way as official icons:
 

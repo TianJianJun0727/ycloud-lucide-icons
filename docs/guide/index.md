@@ -1,32 +1,32 @@
 ---
-title: What is YCloud Icons?
-description: An introduction to YCloud Icons, a multi-framework SVG icon toolkit for React, Vue, and other frontend stacks.
+title: 什么是 YCloud Icons？
+description: 了解 YCloud Icons：面向 React、Vue 以及其他前端技术栈的多框架 SVG 图标工具集。
 nextPage:
   - installation
 ---
 
-# What is YCloud Icons?
+# 什么是 YCloud Icons？
 
-YCloud Icons is a multi-framework SVG icon toolkit. It provides tree-shakable icon data, strongly typed React components, Vue components, and packages for common frontend runtimes from one shared icon source.
+YCloud Icons 是一个多框架 SVG 图标工具集。它基于同一份图标源，提供可 Tree-shaking 的图标数据、强类型 React 组件、Vue 组件，以及面向常见前端运行时的包。
 
-## Available Icons
+## 可用图标
 
-YCloud Icons currently ships the base outline icon set and package infrastructure. Style variants such as filled icons are part of the roadmap and should be generated from normalized SVG sources when the conversion is reliable.
+YCloud Icons 当前提供基础 outline 图标集和多框架包基础设施。filled 等风格变体属于后续路线，应在转换足够可靠后从标准化 SVG 源自动生成。
 
-### Complete Set of Icons
+### 完整图标集
 
-The icon source is kept in the repository and normalized by the build pipeline. Packages consume generated data and components so framework packages stay consistent.
+图标源保存在仓库中，并由构建流水线进行标准化处理。各框架包消费生成后的图标数据和组件，从而保持一致。
 
-## Code Optimization
+## 代码优化
 
-In addition to design, code is also important. Assets like icons can significantly increase bandwidth usage in web projects. YCloud Icons uses SVG optimization and ES module package entrypoints. After tree-shaking, applications only ship the icons they import.
+除了设计，代码体积同样重要。图标这类资源可能显著增加 Web 项目的带宽和包体积。YCloud Icons 使用 SVG 优化和 ES Module 入口；经过 Tree-shaking 后，应用只会携带实际导入的图标。
 
-## Accessibility
+## 无障碍
 
-Icons are pictures that show what something means without using words. They can be very helpful because they can quickly give information.
+图标可以在不依赖文字的情况下传达含义，帮助用户快速理解界面信息。
 
-However, not everyone can understand them easily. Read more about [how to use YCloud in an accessible way](./accessibility.md).
+但并不是所有用户都能轻松理解图标。更多说明请阅读[如何以无障碍方式使用 YCloud Icons](./accessibility.md)。
 
-## Official Packages
+## 官方包
 
-YCloud Icons follows Lucide's official package coverage and documents 10 package types: [Core JavaScript](./ycloud/index.md), [React](./react/index.md), [Vue](./vue/index.md), [Svelte](./svelte/index.md), [Solid](./solid/index.md), [Preact](./preact/index.md), [React Native](./react-native/index.md), [Angular](./angular/index.md), [Astro](./astro/index.md), and [Static assets](./static/index.md).
+YCloud Icons 覆盖 10 种包类型：[Core JavaScript](./ycloud/index.md)、[React](./react/index.md)、[Vue](./vue/index.md)、[Svelte](./svelte/index.md)、[Solid](./solid/index.md)、[Preact](./preact/index.md)、[React Native](./react-native/index.md)、[Angular](./angular/index.md)、[Astro](./astro/index.md) 和 [Static assets](./static/index.md)。

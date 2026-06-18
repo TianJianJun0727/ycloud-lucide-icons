@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Notification",
-  "icon": "triangle-alert"
+  "icon": "triangle-alert",
+  "i18n": {
+    "zh": {
+      "title": "通知"
+    }
+  }
 }

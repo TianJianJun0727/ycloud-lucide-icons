@@ -1,6 +1,6 @@
 ---
-title: YCloud for Astro
-description: Learn how to use YCloud icons in your Astro applications with our comprehensive guide.
+title: Astro 版 YCloud Icons
+description: 了解如何在 Astro 应用中使用 YCloud Icons。
 nextPage:
   - getting-started
 ---
@@ -13,24 +13,24 @@ import { astroSidebar } from '../../.vitepress/sidebar/astro'
 
 <!--@include: ../../../docs/images/package-logos/ycloud-astro.svg -->
 
-# YCloud for Astro
+# Astro 版 YCloud Icons
 
-Astro components for YCloud icons that work perfectly with Astro's island architecture and multi-framework support. Each icon is an Astro component that renders as an inline SVG, providing excellent performance for static sites and server-side rendering scenarios.
+YCloud Icons 的 Astro 包可以配合 Astro 的岛屿架构和多框架能力使用。每个图标都是 Astro 组件，并渲染为内联 SVG，适合静态站点和服务端渲染场景。
 
-List of features:
+功能列表：
 
-- **Easy to Use**: Import icons as Astro components and use them directly in your Astro application.
-- **Customizable**: Adjust size, color, and other properties via props.
-- **Tree-shakable**: Integrate seamlessly with Astro's component islands and partial hydration
-- **TypeScript Support**: Fully typed components for better developer experience.
+- **易于使用**：按需导入图标组件，并直接在 Astro 应用中使用。
+- **可定制**：通过 props 控制尺寸、颜色等属性。
+- **支持 Tree-shaking**：可与 Astro 的组件岛和部分水合机制自然集成。
+- **TypeScript 支持**：完整类型定义带来更好的开发体验。
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in astroSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 
 {{''}}
 
@@ -38,7 +38,7 @@ List of features:
   <OverviewLink v-for="item in astroSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 进阶
 
 {{''}}
 

@@ -271,9 +271,9 @@ The package includes type definitions for all icons. This is useful if you want 
 
 For more details about typing the `svelte:component` directive, see the [Svelte documentation](https://svelte.dev/docs/typescript#types-componenttype).
 
-## With YCloud Lab or custom icons
+## With YCloud Icons Lab or custom icons
 
-[YCloud Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
 
 They can be used by using the `Icon` component.
 All props like the regular YCloud icons can be passed to adjust the icon appearance.

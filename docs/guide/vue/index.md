@@ -1,6 +1,6 @@
 ---
-title: YCloud Icons for Vue
-description: YCloud Icons provides a Vue icon component library. Each icon is available as a standalone Vue component for tree-shaking and TypeScript autocomplete.
+title: Vue 版 YCloud Icons
+description: YCloud Icons 提供 Vue 图标组件库。每个图标都是独立 Vue 组件，支持 Tree-shaking 和 TypeScript 自动补全。
 nextPage:
   - getting-started
 ---
@@ -13,26 +13,25 @@ import { vueSidebar } from '../../.vitepress/sidebar/vue'
 
 <!--@include: ../../../docs/images/package-logos/ycloud-vue.svg -->
 
-# YCloud Icons for Vue
+# Vue 版 YCloud Icons
 
-YCloud Icons provides a Vue icon component library that makes it easy to integrate icons into your applications.
-Each icon is available as a standalone Vue component, allowing for seamless integration and customization.
+在 Vue 应用中使用 YCloud Icons 时，每个图标都是一个独立 Vue 组件，方便按需引入、渲染和定制。
 
-List of features:
+功能列表：
 
-- **Easy to Use**: Import icons as Vue components and use them directly in your Vue components with JSX.
-- **Customizable**: Adjust size, color, and other properties via props.
-- **Tree-shakable**: Only the icons you use are included in your final bundle
-- **TypeScript Support**: Fully typed components for better developer experience.
-- **Style entrypoints**: Component names stay stable, while style variants can be separated by package entrypoints.
+- **易于使用**：按需导入图标组件，并直接在 Vue 模板或 JSX 中使用。
+- **可定制**：通过 props 控制尺寸、颜色等属性。
+- **支持 Tree-shaking**：最终产物只包含你实际使用的图标。
+- **TypeScript 支持**：完整类型定义带来更好的开发体验。
+- **样式入口**：组件名保持稳定，样式变体通过不同包入口区分。
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in vueSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 
 {{''}}
 
@@ -40,7 +39,7 @@ List of features:
   <OverviewLink v-for="item in vueSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 进阶
 
 {{''}}
 

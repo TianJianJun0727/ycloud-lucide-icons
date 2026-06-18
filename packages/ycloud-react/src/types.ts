@@ -20,11 +20,11 @@ export type IconNode = [elementName: SVGElementType, attrs: Record<string, strin
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
 type ElementAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
 
-export interface YCloudProps extends ElementAttributes {
+export interface YCloudIconsProps extends ElementAttributes {
   size?: string | number;
   absoluteStrokeWidth?: boolean;
 }
 
 export type YCloudIcon = ForwardRefExoticComponent<
-  Omit<YCloudProps, 'ref'> & RefAttributes<SVGSVGElement>
+  Omit<YCloudIconsProps, 'ref'> & RefAttributes<SVGSVGElement>
 >;

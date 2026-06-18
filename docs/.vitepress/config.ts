@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url';
-import { defineConfig, UserConfig } from 'vitepress';
+import { DefaultTheme, defineConfig, UserConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import sidebar from './sidebar';
 import snackPlayer from './markdown/snackPlayer';
@@ -16,28 +16,92 @@ const defaultSandpackCSS = await readFile(
 
 const title = 'YCloud Icons';
 const socialTitle = 'YCloud Icons';
-const description = 'A multi-framework icon toolkit based on the YCloud Icons ecosystem.';
+const description = '面向多框架项目的企业级 SVG 图标基础设施。';
 const base = process.env.DOCS_BASE ?? (process.env.GITHUB_ACTIONS ? '/ycloud-icons/' : '/');
 
-const nav = (prefix = '') => [
-  { text: 'Icons', link: '/icons/' },
-  { text: 'Guide', link: `${prefix}/guide/` },
-  { text: 'Architecture', link: `${prefix}/architecture` },
-  { text: 'Packages', link: `${prefix}/packages` },
-  { text: 'GitHub', link: 'https://github.com/TianJianJun0727/ycloud-icons' },
+const nav = [
+  { text: '图标', link: '/icons/' },
+  { text: '指南', link: '/guide/' },
+  { text: '架构', link: '/architecture' },
+  { text: '包', link: '/packages' },
+  { text: '更新日志', link: 'https://github.com/TianJianJun0727/ycloud-icons/releases' },
 ];
 
-const zhNav = [
-  { text: '图标', link: '/icons/' },
-  { text: '指南', link: '/zh/guide/' },
-  { text: '架构', link: '/zh/architecture' },
-  { text: '包', link: '/zh/packages' },
-  { text: 'GitHub', link: 'https://github.com/TianJianJun0727/ycloud-icons' },
-];
+const sidebarText: Record<string, string> = {
+  Introduction: '介绍',
+  'What is YCloud?': '什么是 YCloud Icons？',
+  Installation: '安装',
+  Framework: '框架',
+  Overview: '概览',
+  'Getting started': '快速开始',
+  Basics: '基础',
+  Color: '颜色',
+  Sizing: '尺寸',
+  'Stroke width': '描边宽度',
+  Advanced: '进阶',
+  Typescript: 'TypeScript',
+  Accessibility: '无障碍',
+  'Global styling': '全局样式',
+  'With YCloud Icons Lab': '使用 YCloud Icons Lab',
+  'Filled icons': '填充图标',
+  'Aliased Names': '别名',
+  'Combining icons': '组合图标',
+  'Dynamic icon component': '动态图标组件',
+  'Shadow DOM': 'Shadow DOM',
+  'Template element': '模板元素',
+  'SVG Sprite': 'SVG Sprite',
+  'Link as image': '作为图片链接',
+  'Icon font': '图标字体',
+};
+
+const sidebarDesc: Record<string, string> = {
+  'Learn how to get started with YCloud.': '了解如何开始使用 YCloud Icons。',
+  'Learn how to get started with YCloud for React.': '了解如何在 React 中使用 YCloud Icons。',
+  'Learn how to get started with YCloud for Vue.': '了解如何在 Vue 中使用 YCloud Icons。',
+  'Adjust the color of your icons': '调整图标颜色。',
+  'Adjust the size of your icons': '调整图标尺寸。',
+  'Adjust the stroke width of your icons': '调整图标描边宽度。',
+  'All exported types and how to use them': '导出的类型以及使用方式。',
+  'Making your icons accessible': '让图标更易访问。',
+  'Apply global styles to all icons': '为所有图标应用全局样式。',
+  'Using ycloud-lab with @ycloud-web/icons-react':
+    '在 @ycloud-web/icons-react 中使用 YCloud Icons Lab。',
+  'Using ycloud-lab with @ycloud-web/icons-vue':
+    '在 @ycloud-web/icons-vue 中使用 YCloud Icons Lab。',
+  'Using ycloud-lab with ycloud': '在 ycloud 中使用 YCloud Icons Lab。',
+  'Using filled icons in @ycloud-web/icons-react': '在 @ycloud-web/icons-react 中使用填充图标。',
+  'Using filled icons in @ycloud-web/icons-vue': '在 @ycloud-web/icons-vue 中使用填充图标。',
+  'Using filled icons in ycloud': '在 ycloud 中使用填充图标。',
+  'Using aliased icon names': '使用图标别名。',
+  'Combine multiple icons into one': '将多个图标组合为一个图标。',
+  'Dynamically import icons as needed': '按需动态导入图标。',
+};
+
+function localizeSidebarItems(
+  items: DefaultTheme.SidebarItem[] | undefined,
+): DefaultTheme.SidebarItem[] | undefined {
+  return items?.map((item) => ({
+    ...item,
+    text: item.text ? sidebarText[item.text] ?? item.text : item.text,
+    desc:
+      sidebarDesc[(item as DefaultTheme.SidebarItem & { desc?: string }).desc ?? ''] ??
+      (item as DefaultTheme.SidebarItem & { desc?: string }).desc,
+    items: localizeSidebarItems(item.items),
+  }));
+}
+
+function localizeSidebar(source: DefaultTheme.Sidebar): DefaultTheme.Sidebar {
+  return Object.fromEntries(
+    Object.entries(source).map(([key, value]) => [
+      key,
+      localizeSidebarItems(value as DefaultTheme.SidebarItem[]),
+    ]),
+  );
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  lang: 'en-US',
+  lang: 'zh-CN',
   title,
   titleTemplate: ':title - YCloud Icons',
   description,
@@ -95,75 +159,28 @@ export default defineConfig({
   transformPageData,
   themeConfig: {
     logo: '/favicon.ico',
-    nav: nav(),
-    sidebar,
+    nav,
+    sidebar: localizeSidebar(sidebar),
     socialLinks: [{ icon: 'github', link: 'https://github.com/TianJianJun0727/ycloud-icons' }],
     footer: {
-      message: 'Released under the ISC License.',
-      copyright: `Copyright © ${new Date().getFullYear()} YCloud Icons`,
+      message: '基于 ISC 许可证发布。',
+      copyright: `版权所有 © ${new Date().getFullYear()} YCloud Icons`,
     },
     editLink: {
       pattern: 'https://github.com/TianJianJun0727/ycloud-icons/edit/main/docs/:path',
+      text: '编辑此页',
     },
-  },
-  locales: {
-    root: {
-      label: 'English',
-      lang: 'en-US',
-      title,
-      description,
-      themeConfig: {
-        nav: nav(),
-        sidebar,
-      },
+    outline: {
+      label: '本页目录',
     },
-    zh: {
-      label: '简体中文',
-      lang: 'zh-CN',
-      title: 'YCloud Icons',
-      description: '面向多框架项目的企业级 SVG 图标基础设施。',
-      themeConfig: {
-        nav: zhNav,
-        sidebar: {
-          '/zh/guide': [
-            {
-              text: '指南',
-              items: [
-                { text: '介绍', link: '/zh/guide/' },
-                { text: '安装', link: '/zh/guide/installation' },
-              ],
-            },
-          ],
-          '/zh/architecture': [
-            {
-              text: '架构',
-              items: [{ text: '架构', link: '/zh/architecture' }],
-            },
-          ],
-          '/zh/packages': [
-            {
-              text: '包',
-              items: [{ text: '包', link: '/zh/packages' }],
-            },
-          ],
-        },
-        outline: {
-          label: '本页目录',
-        },
-        docFooter: {
-          prev: '上一页',
-          next: '下一页',
-        },
-        darkModeSwitchLabel: '外观',
-        sidebarMenuLabel: '菜单',
-        returnToTopLabel: '返回顶部',
-        langMenuLabel: '切换语言',
-        footer: {
-          message: '基于 ISC 协议发布。',
-          copyright: `Copyright © ${new Date().getFullYear()} YCloud Icons`,
-        },
-      },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
     },
+    skipToContentLabel: '跳到内容',
+    darkModeSwitchLabel: '外观',
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '返回顶部',
   },
   sitemap: {
     hostname: 'https://tianjianjun0727.github.io/ycloud-icons/',

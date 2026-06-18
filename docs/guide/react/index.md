@@ -1,6 +1,6 @@
 ---
-title: YCloud Icons for React
-description: YCloud Icons provides a React icon component library. Each icon is available as a standalone React component for tree-shaking and TypeScript autocomplete.
+title: React 版 YCloud Icons
+description: YCloud Icons 提供 React 图标组件库。每个图标都是独立 React 组件，支持 Tree-shaking 和 TypeScript 自动补全。
 nextPage:
   - getting-started
 ---
@@ -13,25 +13,25 @@ import { reactSidebar } from '../../.vitepress/sidebar/react'
 
 <!--@include: ../../../docs/images/package-logos/ycloud-react.svg -->
 
-# YCloud Icons for React
+# React 版 YCloud Icons
 
-YCloud Icons provides a React component library for using icons in your applications. Each icon is available as a standalone component that renders an optimized inline SVG.
+在 React 应用中使用 YCloud Icons 时，每个图标都是一个独立组件，并会渲染为优化后的内联 SVG。
 
-List of features:
+功能列表：
 
-- **Easy to use** – Import icons and use them directly in JSX.
-- **Customizable** – Adjust size, color, stroke width, and other properties via props.
-- **Tree-shakable** – Only the icons you import are included in your final bundle.
-- **TypeScript support** – Fully typed components for a better developer experience.
-- **Style entrypoints** – Component names stay stable, while style variants can be separated by package entrypoints.
+- **易于使用**：按需导入图标，并直接在 JSX 中渲染。
+- **可定制**：通过 props 控制尺寸、颜色、描边宽度等属性。
+- **支持 Tree-shaking**：最终产物只包含你实际导入的图标。
+- **TypeScript 支持**：完整类型定义带来更好的开发体验。
+- **样式入口**：组件名保持稳定，样式变体通过不同包入口区分。
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 
 {{''}}
 
@@ -39,7 +39,7 @@ List of features:
   <OverviewLink v-for="item in reactSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 进阶
 
 {{''}}
 

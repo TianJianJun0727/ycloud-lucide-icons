@@ -6,8 +6,8 @@ import useConfetti from '../../composables/useConfetti';
 import getSVGIcon from '../../utils/getSVGIcon';
 import downloadData from '../../utils/downloadData';
 
-const downloadText = 'Download!';
-const copiedText = 'Copied!';
+const downloadText = '已下载';
+const copiedText = '已复制';
 const confettiText = ref(copiedText);
 const props = defineProps<{
   name: string;
@@ -73,10 +73,10 @@ function downloadPNG() {
     :data-confetti-text="confettiText"
     :popoverPosition="popoverPosition"
     :options="[
-      { text: 'Copy SVG', onClick: copySVG },
-      { text: 'Copy Data URL', onClick: copyDataUrl },
-      { text: 'Download SVG', onClick: downloadSVG },
-      { text: 'Download PNG', onClick: downloadPNG },
+      { text: '复制 SVG', onClick: copySVG },
+      { text: '复制 Data URL', onClick: copyDataUrl },
+      { text: '下载 SVG', onClick: downloadSVG },
+      { text: '下载 PNG', onClick: downloadPNG },
     ]"
   />
 </template>

@@ -1,15 +1,15 @@
 import { computed, type FunctionalComponent, h } from 'vue';
 import { isEmptyString, mergeClasses, toKebabCase, toPascalCase } from '@ycloud-web/shared';
 import defaultAttributes from './defaultAttributes';
-import { IconNode, YCloudProps } from './types';
-import { useYCloudProps } from './context';
+import { IconNode, YCloudIconsProps } from './types';
+import { useYCloudIconsProps } from './context';
 
 interface IconProps {
   iconNode: IconNode;
   name: string;
 }
 
-const Icon: FunctionalComponent<YCloudProps & IconProps> = (
+const Icon: FunctionalComponent<YCloudIconsProps & IconProps> = (
   {
     name,
     iconNode,
@@ -29,7 +29,7 @@ const Icon: FunctionalComponent<YCloudProps & IconProps> = (
     strokeWidth: contextStrokeWidth = 2,
     absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
     class: contextClass = '',
-  } = useYCloudProps();
+  } = useYCloudIconsProps();
 
   const calculatedStrokeWidth = computed(() => {
     const isAbsoluteStrokeWidth =

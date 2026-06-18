@@ -6,7 +6,7 @@ import IconButton from '../base/IconButton.vue';
 import IconContributors from './IconContributors.vue';
 import IconPreview from './IconPreview.vue';
 import { x, expand } from '../../../data/iconNodes';
-import { useRouter } from 'vitepress';
+import { useRouter, withBase } from 'vitepress';
 import IconInfo from './IconInfo.vue';
 import Badge from '../base/Badge.vue';
 import { computedAsync } from '@vueuse/core';
@@ -34,7 +34,7 @@ const icon = computedAsync<IconEntity | null>(async () => {
       }
     } catch (err) {
       if (!props.iconName.includes(':')) {
-        go(`/icons/${props.iconName}`);
+        go(withBase(`/icons/${props.iconName}`));
       }
     }
   }
@@ -78,9 +78,11 @@ const Expand = createYCloudIcon('Expand', expand);
           <IconButton
             @click="
               go(
-                icon.externalLibrary
-                  ? `/icons/${icon.externalLibrary}/${icon.name}`
-                  : `/icons/${icon.name}`,
+                withBase(
+                  icon.externalLibrary
+                    ? `/icons/${icon.externalLibrary}/${icon.name}`
+                    : `/icons/${icon.name}`,
+                ),
               )
             "
           >

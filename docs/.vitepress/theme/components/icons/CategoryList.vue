@@ -8,6 +8,7 @@ import { data } from './CategoryList.data';
 import CategoryListItem from './CategoryListItem.vue';
 import SidebarTitle from './SidebarTitle.vue';
 import { useCategoryViewSync } from '../../composables/useCategoryView';
+import { localizeCategoryTitle } from '../../utils/categoryLabels';
 
 const { page } = useData();
 const { categoryCounts, selectedCategory } = useCategoryViewSync();
@@ -29,10 +30,10 @@ const headers = computed(() => {
     ? ''
     : withBase('/icons/categories');
 
-  return data.categories.map(({ name, title, iconCount }) => ({
+  return data.categories.map(({ name, title, displayTitle, iconCount }) => ({
     level: 2,
     link: `${linkPrefix}#${name}`,
-    title,
+    title: displayTitle ?? localizeCategoryTitle(title),
     iconCount: categoryCounts.value[name] ?? iconCount,
     name,
   }));
@@ -55,21 +56,21 @@ watch(headers, () => {
     class="category-list"
     ref="container"
   >
-    <SidebarTitle> View </SidebarTitle>
+    <SidebarTitle>视图</SidebarTitle>
     <VPLink
       class="sidebar-link sidebar-text"
-      :href="withBase('/icons/')"
+      href="/icons/"
       :class="{ active: overviewIsActive }"
     >
-      All
+      全部
     </VPLink>
     <VPLink
       class="sidebar-link sidebar-text"
-      :href="withBase('/icons/categories')"
+      href="/icons/categories"
       :class="{ active: categoriesIsActive }"
       @click="onCategoriesClick"
     >
-      Categories
+      分类
     </VPLink>
     <div class="content">
       <div

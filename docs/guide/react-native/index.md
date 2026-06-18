@@ -1,6 +1,6 @@
 ---
-title: YCloud for React Native
-description: YCloud provides a React Native icon component library that makes it easy to integrate icons into your React Native applications. Each icon is available as a standalone React Native component, allowing for seamless integration and customization.
+title: React Native 版 YCloud Icons
+description: YCloud Icons 提供 React Native 图标组件库，方便你将图标集成到 React Native 应用中。每个图标都是独立 React Native 组件，便于集成和自定义。
 nextPage:
   - getting-started
 ---
@@ -13,25 +13,24 @@ import { reactNativeSidebar } from '../../.vitepress/sidebar/react-native'
 
 <!--@include: ../../../docs/images/package-logos/ycloud-react-native.svg -->
 
-# YCloud for React Native
+# React Native 版 YCloud Icons
 
-YCloud provides a React Native icon component library that makes it easy to integrate icons into your React Native applications.
-Each icon is available as a standalone React component, allowing for seamless integration and customization.
+在 React Native 应用中使用 YCloud Icons 时，每个图标都是一个独立 React Native 组件，方便按需引入、渲染和定制。
 
-List of features:
+功能列表：
 
-- **Easy to use** – Import icons and use them directly in JSX.
-- **Customizable** – Adjust size, color, stroke width, and other properties via props.
-- **Tree-shakable** – Only the icons you import are included in your final bundle.
-- **TypeScript support** – Fully typed components for a better developer experience.
+- **易于使用**：按需导入图标，并直接在 JSX 中渲染。
+- **可定制**：通过 props 控制尺寸、颜色、描边宽度等属性。
+- **支持 Tree-shaking**：最终产物只包含你实际导入的图标。
+- **TypeScript 支持**：完整类型定义带来更好的开发体验。
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactNativeSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 
 {{''}}
 
@@ -45,7 +44,7 @@ List of features:
   />
 </OverviewLinkGrid>
 
-### Advanced
+### 进阶
 
 {{''}}
 

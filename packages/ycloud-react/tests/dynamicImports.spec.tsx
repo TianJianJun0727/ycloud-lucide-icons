@@ -3,11 +3,11 @@ import { Suspense, lazy } from 'react';
 import { render, waitFor } from '@testing-library/react';
 
 import dynamicIconImports from '../src/dynamicIconImports';
-import { YCloudProps } from '../src/types';
+import { YCloudIconsProps } from '../src/types';
 
 describe('Using dynamicImports', () => {
   it('should render icons dynamically by using the dynamicIconImports module', async () => {
-    interface IconProps extends Omit<YCloudProps, 'ref'> {
+    interface IconProps extends Omit<YCloudIconsProps, 'ref'> {
       name: keyof typeof dynamicIconImports;
     }
 

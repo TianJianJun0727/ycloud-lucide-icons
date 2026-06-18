@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Checkbox from '../base/Checkbox.vue'
-import SidebarTitle from './SidebarTitle.vue'
+import Checkbox from '../base/Checkbox.vue';
+import SidebarTitle from './SidebarTitle.vue';
 import { useExternalLibs } from '../../composables/useExternalLibs';
 import { ExternalLibs } from '../../types';
 
@@ -12,7 +12,7 @@ interface ExternalLibrary {
 const externalLibraries: ExternalLibrary[] = [
   {
     name: 'Lab',
-    value: 'lab'
+    value: 'lab',
   },
 ];
 
@@ -21,9 +21,7 @@ const { selectedLibs } = useExternalLibs();
 
 <template>
   <div class="external-library-select">
-    <SidebarTitle>
-      Include external libs
-    </SidebarTitle>
+    <SidebarTitle>外部图标库</SidebarTitle>
     <ul>
       <li
         v-for="library in externalLibraries"

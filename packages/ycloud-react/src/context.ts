@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, createElement, type ReactNode, useContext, useMemo } from 'react';
-import { YCloudProps } from './types';
+import { YCloudIconsProps } from './types';
 
 type YCloudConfig = {
   size: number;
@@ -11,20 +11,20 @@ type YCloudConfig = {
   className: string;
 };
 
-const YCloudContext = createContext<YCloudProps>({});
+const YCloudContext = createContext<YCloudIconsProps>({});
 
-type YCloudProviderProps = {
+type YCloudIconsProviderProps = {
   children: ReactNode;
 } & Partial<YCloudConfig>;
 
-export function YCloudProvider({
+export function YCloudIconsProvider({
   children,
   size,
   color,
   strokeWidth,
   absoluteStrokeWidth,
   className,
-}: YCloudProviderProps) {
+}: YCloudIconsProviderProps) {
   const value = useMemo(
     () => ({
       size,

@@ -2,19 +2,19 @@
 import { computed } from 'vue';
 import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
 import { useMediaQuery } from '@vueuse/core';
-import { useRouter } from 'vitepress';
+import { useRouter, withBase } from 'vitepress';
 import getSVGIcon from '../../utils/getSVGIcon';
 import useConfetti from '../../composables/useConfetti';
 import Tooltip from '../base/Tooltip.vue';
 import { diamond } from '../../../data/iconNodes';
 
-const downloadText = 'Download!';
-const copiedText = 'Copied!';
+const copiedText = '已复制';
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][];
 
 const props = defineProps<{
   name: string;
+  displayName?: string;
   iconNode: IconNode;
   active: boolean;
   externalLibrary?: string;
@@ -38,6 +38,13 @@ const href = computed(() =>
   props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`,
 );
 
+const resolvedHref = computed(() => withBase(href.value));
+const displayTitle = computed(() =>
+  props.displayName && props.displayName !== props.name
+    ? `${props.displayName}（${props.name}）`
+    : props.name,
+);
+
 async function navigateToIcon(event) {
   if (event.shiftKey) {
     event.preventDefault();
@@ -55,24 +62,14 @@ async function navigateToIcon(event) {
   if (props.overlayMode && showOverlay.value) {
     event.preventDefault();
 
-    window.history.pushState(
-      {},
-      '',
-      props.externalLibrary
-        ? `/icons/${props.externalLibrary}/${props.name}`
-        : `/icons/${props.name}`,
-    );
+    window.history.pushState({}, '', resolvedHref.value);
     emit(
       'setActiveIcon',
       props.externalLibrary ? `${props.externalLibrary}:${props.name}` : props.name,
     );
   } else {
     event.preventDefault();
-    go(
-      props.externalLibrary
-        ? `/icons/${props.externalLibrary}/${props.name}`
-        : `/icons/${props.name}`,
-    );
+    go(resolvedHref.value);
   }
 }
 
@@ -80,12 +77,13 @@ const DiamondIcon = createYCloudIcon('Diamond', diamond);
 </script>
 
 <template>
-  <Tooltip :title="name">
+  <Tooltip :title="displayTitle">
     <a
       class="icon-button confetti-button vp-raw"
+      :href="resolvedHref"
       @click="navigateToIcon"
       :class="{ active, animate }"
-      :aria-label="name"
+      :aria-label="displayTitle"
       :data-confetti-text="confettiText"
       ref="ref"
     >

@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <section class="related-icons">
-    <h2 class="title">More icons like this</h2>
+    <h2 class="title">相关图标</h2>
     <IconGrid :icons="icons" />
   </section>
 </template>

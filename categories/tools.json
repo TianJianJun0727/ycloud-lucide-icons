@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Tools",
-  "icon": "hammer"
+  "icon": "hammer",
+  "i18n": {
+    "zh": {
+      "title": "工具"
+    }
+  }
 }

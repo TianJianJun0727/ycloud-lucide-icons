@@ -1,7 +1,7 @@
 import { h, type JSX } from 'preact';
 import { mergeClasses, toKebabCase, toPascalCase } from '@ycloud-web/shared';
 import Icon from './Icon';
-import type { IconNode, YCloudIcon, YCloudProps } from './types';
+import type { IconNode, YCloudIcon, YCloudIconsProps } from './types';
 
 /**
  * Create a YCloud icon component
@@ -10,7 +10,7 @@ import type { IconNode, YCloudIcon, YCloudProps } from './types';
  * @returns {FunctionComponent} YCloudIcon
  */
 const createYCloudIcon = (iconName: string, iconNode: IconNode): YCloudIcon => {
-  const Component = ({ class: classes = '', className = '', children, ...props }: YCloudProps) =>
+  const Component = ({ class: classes = '', className = '', children, ...props }: YCloudIconsProps) =>
     h(
       Icon,
       {

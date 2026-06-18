@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Navigation & Places",
-  "icon": "compass"
+  "icon": "compass",
+  "i18n": {
+    "zh": {
+      "title": "导航与地点"
+    }
+  }
 }

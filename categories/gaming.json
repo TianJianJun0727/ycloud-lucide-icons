@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Gaming",
-  "icon": "gamepad-2"
+  "icon": "gamepad-2",
+  "i18n": {
+    "zh": {
+      "title": "游戏"
+    }
+  }
 }

@@ -1,6 +1,6 @@
 ---
-title: YCloud for Angular
-description: A standalone, signal-based, zoneless implementation that makes it easy to integrate icons into your Angular projects.
+title: Angular 版 YCloud Icons
+description: 一个独立的、基于 signal、无需 zone 的实现，方便你将图标集成到 Angular 项目中。
 nextPage:
   - getting-started
 ---
@@ -13,24 +13,24 @@ import { angularSidebar } from '../../.vitepress/sidebar/angular'
 
 <!--@include: ../../../docs/images/package-logos/ycloud-angular.svg -->
 
-# YCloud for Angular
+# Angular 版 YCloud Icons
 
-A standalone, signal-based, zoneless implementation that makes it easy to integrate icons into your Angular projects.
+YCloud Icons 的 Angular 包采用独立组件形态，基于 signal 且不依赖 zone，适合直接集成到 Angular 项目中。
 
-List of features:
+功能列表：
 
-- **Easy to Use**: Use icons as standalone Angular components with full dependency injection support.
-- **Customizable**: Adjust size, color, and other properties via inputs or globally with an Angular provider.
-- **Tree-shakable**: Only the icons you use are included in your final bundle
-- **TypeScript Support**: Fully typed components for better developer experience.
+- **易于使用**：以独立 Angular 组件的方式使用图标，并支持依赖注入。
+- **可定制**：通过 inputs 或 Angular provider 全局控制尺寸、颜色等属性。
+- **支持 Tree-shaking**：最终产物只包含你实际使用的图标。
+- **TypeScript 支持**：完整类型定义带来更好的开发体验。
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in angularSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 
 {{''}}
 
@@ -38,7 +38,7 @@ List of features:
   <OverviewLink v-for="item in angularSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 进阶
 
 {{''}}
 

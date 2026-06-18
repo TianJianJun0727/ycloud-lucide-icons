@@ -19,7 +19,7 @@ function copyText() {
   <h1
     class="icon-name confetti-button"
     :class="{ animate }"
-    data-confetti-text="Copied!"
+    data-confetti-text="已复制"
     @click="copyText"
   >
     <slot />

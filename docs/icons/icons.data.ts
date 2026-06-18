@@ -4,8 +4,24 @@ export default {
   async load() {
     return {
       icons: Object.entries(iconDetails).map(
-        ([, { name, iconNode, popularity, createdRelease, aliases = [] }]) => ({
+        ([, {
           name,
+          displayName,
+          tags,
+          displayTags,
+          categories,
+          displayCategories,
+          iconNode,
+          popularity,
+          createdRelease,
+          aliases = [],
+        }]) => ({
+          name,
+          displayName,
+          tags,
+          displayTags,
+          categories,
+          displayCategories,
           iconNode,
           popularity: popularity?.count ?? 0,
           aliases: aliases

@@ -53,7 +53,7 @@ export const reactSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With YCloud Lab',
+        text: 'With YCloud Icons Lab',
         link: '/guide/react/advanced/with-ycloud-lab',
         desc: 'Using ycloud-lab with @ycloud-web/icons-react',
       },

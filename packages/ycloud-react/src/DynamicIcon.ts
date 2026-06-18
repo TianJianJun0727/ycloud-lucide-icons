@@ -1,7 +1,7 @@
 'use client';
 
 import { createElement, forwardRef, useEffect, useState } from 'react';
-import { IconNode, YCloudIcon, YCloudProps } from './types';
+import { IconNode, YCloudIcon, YCloudIconsProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
 import Icon from './Icon';
 
@@ -11,7 +11,7 @@ export type IconName = keyof typeof dynamicIconImports;
 
 export const iconNames = Object.keys(dynamicIconImports) as Array<IconName>;
 
-interface DynamicIconComponentProps extends YCloudProps {
+interface DynamicIconComponentProps extends YCloudIconsProps {
   name: IconName;
   fallback?: () => JSX.Element | null;
 }

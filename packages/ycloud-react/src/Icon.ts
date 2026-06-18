@@ -2,11 +2,11 @@
 
 import { createElement, forwardRef } from 'react';
 import defaultAttributes from './defaultAttributes';
-import { IconNode, YCloudProps } from './types';
+import { IconNode, YCloudIconsProps } from './types';
 import { mergeClasses, hasA11yProp } from '@ycloud-web/shared';
 import { useYCloudContext } from './context';
 
-interface IconComponentProps extends YCloudProps {
+interface IconComponentProps extends YCloudIconsProps {
   iconNode: IconNode;
 }
 

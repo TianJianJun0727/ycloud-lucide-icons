@@ -10,6 +10,7 @@ import { computed } from 'vue';
 import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
 import { diamond } from '../../../data/iconNodes';
 import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
+import { localizeIconCategories, localizeIconName, localizeIconTags } from '../../utils/iconI18n';
 
 const props = defineProps<{
   icon: IconEntity;
@@ -20,9 +21,20 @@ const { go } = useRouter();
 const { page } = useData();
 
 const tags = computed(() => {
-  if (!props.icon || !props?.icon?.tags) return [];
-  return props.icon.tags.join(' • ');
+  if (!props.icon) return '';
+  const displayTags = props.icon.displayTags?.length
+    ? props.icon.displayTags
+    : localizeIconTags(props.icon.tags, props.icon.i18n?.zh?.tags);
+  return displayTags?.join(' • ') ?? '';
 });
+
+const displayName = computed(() =>
+  localizeIconName(props.icon.name, props.icon.displayName ?? props.icon.i18n?.zh?.name),
+);
+
+const displayCategories = computed(() =>
+  localizeIconCategories(props.icon.categories, props.icon.displayCategories ?? props.icon.i18n?.zh?.categories),
+);
 
 const DiamondIcon = createYCloudIcon('Diamond', diamond);
 
@@ -40,7 +52,7 @@ const deprecatedTitle = computed(() => {
   <div class="icon-info">
     <div class="icon-name-wrapper">
       <IconDetailName class="icon-name">
-        {{ icon.name }}
+        {{ displayName }}
       </IconDetailName>
       <div
         v-if="icon.externalLibrary"
@@ -74,7 +86,7 @@ const deprecatedTitle = computed(() => {
         class="category"
         :href="withBase(`/icons/categories#${category}`)"
       >
-        {{ category }}
+        {{ displayCategories[icon.categories.indexOf(category)] || category }}
       </Badge>
     </div>
 
@@ -88,16 +100,20 @@ const deprecatedTitle = computed(() => {
           )
         "
         :href="
-          icon.externalLibrary
-            ? `/icons/${icon.externalLibrary}/${icon.name}`
-            : `/icons/${icon.name}`
-        "
-        text="See in action"
-        @click="
-          go(
+          withBase(
             icon.externalLibrary
               ? `/icons/${icon.externalLibrary}/${icon.name}`
               : `/icons/${icon.name}`,
+          )
+        "
+        text="查看详情"
+        @click="
+          go(
+            withBase(
+              icon.externalLibrary
+                ? `/icons/${icon.externalLibrary}/${icon.name}`
+                : `/icons/${icon.name}`,
+            ),
           )
         "
       />

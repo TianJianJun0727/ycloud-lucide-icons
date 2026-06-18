@@ -72,7 +72,6 @@ const pickIcons = [
 export default {
   async load() {
     const icons = Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode }));
-
     const selectedIcons = icons.filter(({ name }) => pickIcons.includes(name)).reverse();
 
     const hasDuplicates =

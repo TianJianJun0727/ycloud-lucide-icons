@@ -41,91 +41,90 @@ interface Placeholder {
 
 const brandPlaceholders: Placeholder[] = shallowReadonly([
   {
-    title: 'Boooo! What a scary brand logo!',
-    message:
-      '[name] and its friends often haunt this search box, but you won’t ever find them here.',
+    title: '暂不收录品牌图标',
+    message: '你正在搜索 [name]，但 YCloud Icons 不收录品牌 Logo。',
     icon: markRaw(ghost),
   },
   {
-    title: 'Thank You Mario!',
-    message: 'But [name] is in another castle!',
+    title: '这里没有 [name]',
+    message: 'YCloud Icons 只维护通用图标，不维护品牌图标。',
     icon: markRaw(castle),
   },
   {
-    title: '[name] did audition for our icon set',
-    message: '...but didn’t make the callback.',
+    title: '[name] 不在图标集中',
+    message: '如果你需要品牌图标，可以考虑使用专门的品牌图标库。',
     icon: markRaw(drama),
   },
   {
-    title: 'Such Search. Very [name].',
-    message: 'Much not here. So Wow.',
+    title: '未找到 [name]',
+    message: '当前图标库没有收录这个品牌图标。',
     icon: markRaw(dog),
   },
   {
-    title: 'I Can Has [name]?',
-    message: 'No [name] for you in here.',
+    title: '没有 [name] 图标',
+    message: '可以尝试搜索更通用的概念图标。',
     icon: markRaw(cat),
   },
   {
-    title: 'Loading [name]...',
-    message: 'Fatal error: our cartridge contains only open-source pixels.',
+    title: '无法加载 [name]',
+    message: 'YCloud Icons 当前只维护通用开源图标。',
     icon: markRaw(save),
   },
   {
-    title: '[name] Shall Not Pass',
-    message: 'Do not look to its coming at first light of any day.',
+    title: '[name] 不适合加入这里',
+    message: '品牌 Logo 通常涉及授权和一致性问题，因此不会加入主库。',
     icon: markRaw(wandSparkles),
   },
   {
-    title: 'Winter is coming',
-    message: 'But [name] sure isn’t.',
+    title: '未收录 [name]',
+    message: '可以换一个关键词，搜索功能含义更通用的图标。',
     icon: markRaw(snowflake),
   },
   {
-    title: 'The cake is a lie',
-    message: 'And so is the promise of an icon for [name] at YCloud.',
+    title: '没有找到 [name]',
+    message: 'YCloud Icons 不计划添加品牌 Logo。',
     icon: markRaw(cake),
   },
   {
-    title: 'It’s not a bug',
-    message: 'Having no [name] icon around is a feature.',
+    title: '这不是缺陷',
+    message: '不收录 [name] 是为了保持图标库的通用性和可维护性。',
     icon: markRaw(worm),
   },
   {
-    title: 'The lab exploded',
-    message: 'We tried mixing [name] with open-source icons.',
+    title: '实验没有通过',
+    message: '[name] 这类品牌图标不适合放入通用图标库。',
     icon: markRaw(testTubeDiagonal),
   },
   {
-    title: 'It’s Dangerous to Go Alone',
-    message: 'Take this icon instead — it’s not [name], but it might help.',
+    title: '换个关键词试试',
+    message: '搜索更通用的含义，可能能找到替代图标。',
     icon: markRaw(sword),
   },
 ]);
 
 const notFoundPlaceholders: Omit<Placeholder, 'title'>[] = shallowReadonly([
   {
-    message: 'We’ve looked for this icon for a bird’s eye view, but could not find it.',
+    message: '没有找到匹配的图标。',
     icon: markRaw(bird),
   },
   {
-    message: 'We checked every tree. Only acorns, no results.',
+    message: '当前关键词没有匹配结果。',
     icon: markRaw(squirrel),
   },
   {
-    message: 'You’ve gone too deep into the rabbit hole — this icon doesn’t exist.',
+    message: '这个图标暂时不存在。',
     icon: markRaw(rabbit),
   },
   {
-    message: 'This icon seems to have slipped through the net.',
+    message: '没有找到符合条件的图标。',
     icon: markRaw(fish),
   },
   {
-    message: 'This icon might exist in the future… but it hasn’t arrived yet.',
+    message: '这个图标未来可能会加入，但现在还没有。',
     icon: markRaw(turtle),
   },
   {
-    message: 'Rats! This icon seems to have slipped through the cracks.',
+    message: '当前图标库没有这个图标。',
     icon: markRaw(rat),
   },
 ]);
@@ -144,12 +143,12 @@ watch(
       ? {
           ...randomItem(brandPlaceholders),
           finePrint:
-            'YCloud does not accept brand logos, and we do not plan to add them in the future. This is due to a combination of legal restrictions, design consistency concerns, and practical maintenance reasons.',
+            'YCloud Icons 不接收品牌 Logo，也不计划在未来添加。这主要出于授权限制、设计一致性和长期维护成本的考虑。',
         }
       : {
-          title: `No results for “[name]”`,
+          title: `没有找到“[name]”`,
           finePrint:
-            'This icon doesn’t seem to exist… yet. Try searching similar terms, browsing existing requests, or opening a new one.',
+            '这个图标目前还不存在。你可以尝试搜索相近关键词，查看已有请求，或提交一个新的请求。',
           ...randomItem(notFoundPlaceholders),
         };
   },
@@ -191,28 +190,28 @@ onMounted(() => {
     </p>
     <VPButton
       v-if="isBrandSearch"
-      text="Head over to Simple Icons"
+      text="前往 Simple Icons"
       theme="brand"
       :href="`https://simpleicons.org/?q=${searchQuery}`"
       target="_blank"
     />
     <VPButton
       v-else
-      text="Clear search & try again"
+      text="清空搜索并重试"
       theme="brand"
       @click="$emit('clear')"
     />
     <span class="text-divider">or</span>
     <VPButton
       v-if="isBrandSearch"
-      text="Read our statement on brand logos"
+      text="阅读品牌 Logo 说明"
       theme="alt"
       href="https://github.com/ycloud-icons/@ycloud-web/icons/blob/main/BRAND_LOGOS_STATEMENT.md"
       target="_blank"
     />
     <VPButton
       v-else
-      text="Search GitHub issues"
+      text="搜索 GitHub Issues"
       theme="alt"
       :href="`https://github.com/ycloud-icons/@ycloud-web/icons/issues?q=is%3Aopen+${searchQuery}`"
       target="_blank"

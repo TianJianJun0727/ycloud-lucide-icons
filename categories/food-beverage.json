@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Food & beverage",
-  "icon": "coffee"
+  "icon": "coffee",
+  "i18n": {
+    "zh": {
+      "title": "餐饮"
+    }
+  }
 }

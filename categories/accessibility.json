@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Accessibility",
-  "icon": "accessibility"
+  "icon": "accessibility",
+  "i18n": {
+    "zh": {
+      "title": "无障碍"
+    }
+  }
 }

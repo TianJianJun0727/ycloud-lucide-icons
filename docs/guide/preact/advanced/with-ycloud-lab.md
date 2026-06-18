@@ -1,11 +1,11 @@
 ---
-title: With YCloud Lab or custom icons - Preact
-description: Learn how to use YCloud Lab or custom icons in your Preact applications using the Icon component.
+title: With YCloud Icons Lab or custom icons - Preact
+description: Learn how to use YCloud Icons Lab or custom icons in your Preact applications using the Icon component.
 ---
 
-# With YCloud Lab or custom icons
+# With YCloud Icons Lab or custom icons
 
-[YCloud Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
 
 They can be used by using the `Icon` component.
 All props like regular ycloud icons can be passed to adjust the icon appearance.

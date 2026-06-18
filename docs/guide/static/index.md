@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: 静态资源概览
 nextPage:
   - getting-started
 ---
@@ -12,32 +12,32 @@ import { ycloudStaticSidebar } from '../../.vitepress/sidebar/static'
 
 <!--@include: ../../../docs/images/package-logos/ycloud.svg -->
 
-# YCloud Static Assets
+# YCloud Icons 静态资源
 
-Static assets and utilities for YCloud icons that work without JavaScript frameworks. This package provides multiple formats including individual SVG files, SVG sprites, icon fonts, and Node.js utilities for server-side rendering and static site generation.
+YCloud Icons 的静态资源和工具不依赖 JavaScript 框架即可使用。这个包提供多种格式，包括独立 SVG 文件、SVG Sprite、图标字体，以及用于服务端渲染和静态站点生成的 Node.js 工具。
 
-**What you can accomplish:**
+**你可以完成：**
 
-- Use individual SVG files as images or CSS background images
-- Implement icon fonts for CSS-based icon systems
-- Create SVG sprites for efficient icon loading in static sites
-- Import SVG strings in Node.js applications and server-side rendering
-- Build static websites and applications without JavaScript framework dependencies
+- 将独立 SVG 文件作为图片或 CSS 背景图使用。
+- 为基于 CSS 的图标系统实现图标字体。
+- 创建 SVG Sprite，在静态站点中高效加载图标。
+- 在 Node.js 应用和服务端渲染中导入 SVG 字符串。
+- 构建不依赖 JavaScript 框架的静态网站和应用。
 
-This package includes the following implementations of YCloud icons:
+这个包包含以下 YCloud Icons 实现：
 
-- Individual SVG files
-- SVG sprite
-- Icon font files
-- A JavaScript library exporting SVG strings
+- 独立 SVG 文件
+- SVG Sprite
+- 图标字体文件
+- 导出 SVG 字符串的 JavaScript 库
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in ycloudStaticSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### SVG Files & Sprite
+### SVG 文件和 Sprite
 
 {{''}}
 
@@ -45,7 +45,7 @@ This package includes the following implementations of YCloud icons:
   <OverviewLink v-for="item in ycloudStaticSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >
 
-### Icon Font
+### 图标字体
 
 {{''}}
 
@@ -53,7 +53,7 @@ This package includes the following implementations of YCloud icons:
   <OverviewLink v-for="item in ycloudStaticSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >
 
-### Javascript modules
+### JavaScript 模块
 
 {{''}}
 

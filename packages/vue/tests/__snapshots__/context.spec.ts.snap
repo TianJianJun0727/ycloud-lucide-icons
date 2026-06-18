@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Using ycloud icon context > should render the icon with YCloudProvider 1`] = `
+exports[`Using ycloud icon context > should render the icon with YCloudIconsProvider 1`] = `
 <svg
   class="ycloud provider-class ycloud-house-icon ycloud-house"
   fill="none"

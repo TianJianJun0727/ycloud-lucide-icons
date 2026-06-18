@@ -4,13 +4,13 @@ import { describe, expect, it } from 'vitest';
 import ContextWrapper from './ContextWrapper.vue';
 
 describe('Using ycloud icon context', () => {
-  it('should render the icon with YCloudProvider', () => {
+  it('should render the icon with YCloudIconsProvider', () => {
     const { container } = render(ContextWrapper);
 
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render the icon with YCloudProvider and custom strokeWidth', () => {
+  it('should render the icon with YCloudIconsProvider and custom strokeWidth', () => {
     const { container } = render(ContextWrapper);
 
     const IconComponent = container.firstElementChild;
@@ -21,7 +21,7 @@ describe('Using ycloud icon context', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
 
-  it('should render the icon with YCloudProvider and custom absoluteStrokeWidth', () => {
+  it('should render the icon with YCloudIconsProvider and custom absoluteStrokeWidth', () => {
     const { container } = render(ContextWrapper);
 
     const IconComponent = container.firstElementChild;

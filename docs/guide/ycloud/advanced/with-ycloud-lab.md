@@ -1,20 +1,20 @@
 ---
-title: With YCloud Lab or custom icons - YCloud
-description: Learn how to use YCloud Lab or custom icons in your Vanilla JavaScript applications.
+title: With YCloud Icons Lab or custom icons - YCloud
+description: Learn how to use YCloud Icons Lab or custom icons in your Vanilla JavaScript applications.
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# With YCloud Lab or custom icons
+# With YCloud Icons Lab or custom icons
 
-[YCloud Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
 
 They can be used by adding the `@ycloud-web/icons-lab` package to your project.
 All props like regular ycloud icons can be passed to adjust the icon appearance.
 
-## Using YCloud Lab icons
+## Using YCloud Icons Lab icons
 
 This creates a single icon based on the iconNode passed and renders a YCloud icon component.
 

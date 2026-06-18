@@ -1,20 +1,20 @@
 ---
-title: Stroke width - React
-description: Learn how to adjust the stroke width of icons in your React application using the `strokeWidth` prop or adjust the strokeWidth appearance using the `absoluteStrokeWidth` prop.
+title: 描边宽度 - React
+description: 了解如何在 React 应用中通过 `strokeWidth` prop 调整图标描边宽度，或通过 `absoluteStrokeWidth` prop 调整描边宽度的显示方式。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Stroke width
+# 描边宽度
 
-All icons are designed with SVG elements using strokes.
-These have a default stroke width of `2px`.
+所有图标都基于 SVG 描边元素设计。
+默认描边宽度为 `2px`。
 
-The `strokeWidth` can be adjusted to create a different look of the icons.
+可以通过 `strokeWidth` 调整描边宽度，从而改变图标的视觉效果。
 
-## Adjusting stroke width with `strokeWidth` prop
+## 使用 `strokeWidth` prop 调整描边宽度
 
 ::: sandpack {template=react showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="@ycloud-web/icons-react"}
 
@@ -34,19 +34,19 @@ export default App;
 
 :::
 
-## Absolute stroke width
+## 固定描边宽度
 
-When adjusting the `size` prop the size of the stroke width will be relative to the size of the icon, this is the default SVG behavior. The `absoluteStrokeWidth` prop is introduced to adjust this behavior to make the stroke width constant no matter the size of the icon.
+调整 `size` prop 时，描边宽度会随图标尺寸一起缩放，这是 SVG 的默认行为。`absoluteStrokeWidth` prop 用来改变这种行为，让描边宽度在不同图标尺寸下保持恒定。
 
-This means that when `absoluteStrokeWidth` is enabled and the `size` of the icons is set to `48px` the `strokeWidth` will still be `2px` on the screen.
+也就是说，当启用 `absoluteStrokeWidth` 且图标 `size` 设置为 `48px` 时，屏幕上的 `strokeWidth` 仍然会保持 `2px`。
 
-Note `2px` is the default stroke width for a YCloud icon, this can be adjusted to all sizes.
+注意，`2px` 是 YCloud 图标的默认描边宽度，你也可以根据需要调整为其他值。
 
-![Absolute stroke width comparison](../../../images/absolute-stroke-width-compare.png?raw=true 'Absolute stroke width comparison')
+![固定描边宽度对比](../../../images/absolute-stroke-width-compare.png?raw=true '固定描边宽度对比')
 
-### Adjusting stroke width with `absoluteStrokeWidth` prop
+### 使用 `absoluteStrokeWidth` prop 调整描边显示方式
 
-Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
+将 `absoluteStrokeWidth` 设置为 `true` 后，描边宽度会保持固定。
 
 ::: sandpack {template=react showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="@ycloud-web/icons-react"}
 

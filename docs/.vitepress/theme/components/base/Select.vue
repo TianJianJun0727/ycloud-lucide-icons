@@ -20,7 +20,10 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
         :id="id"
       >
         <slot name="start-icon">
-          <SelectIcon  v-if="selected.icon" :item="selected" />
+          <SelectIcon
+            v-if="selected.icon"
+            :item="selected"
+          />
         </slot>
         <span class="select-text">{{ selected.name }}</span>
         <span class="select-icon">
@@ -47,9 +50,11 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
             :value="item"
             as="template"
           >
-
             <li :class="['select-option', { active, selected }]">
-              <SelectIcon v-if="item.icon" :item="item" />
+              <SelectIcon
+                v-if="item.icon"
+                :item="item"
+              />
               <span :class="['option-text', { selected }]">{{ item.name }}</span>
               <span
                 v-if="selected"

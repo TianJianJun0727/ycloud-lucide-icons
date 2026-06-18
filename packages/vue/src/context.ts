@@ -10,10 +10,10 @@ interface YCloudIconsContext {
   class?: string;
 }
 
-export function setYCloudProps(props: YCloudIconsContext) {
+export function setYCloudIconsProps(props: YCloudIconsContext) {
   return provide(YCLOUD_CONTEXT, props);
 }
 
-export function useYCloudProps() {
+export function useYCloudIconsProps() {
   return inject<YCloudIconsContext>(YCLOUD_CONTEXT, {});
 }

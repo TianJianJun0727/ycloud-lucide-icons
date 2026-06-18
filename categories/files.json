@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "File icons",
-  "icon": "panels-top-left"
+  "icon": "panels-top-left",
+  "i18n": {
+    "zh": {
+      "title": "文件"
+    }
+  }
 }

@@ -1,5 +1,10 @@
 {
   "$schema": "../category.schema.json",
   "title": "Time & calendar",
-  "icon": "calendar"
+  "icon": "calendar",
+  "i18n": {
+    "zh": {
+      "title": "时间与日历"
+    }
+  }
 }
