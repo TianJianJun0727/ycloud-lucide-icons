@@ -1,14 +1,13 @@
-# YCloud Vue
+# `@ycloud-web/icons-vue`
 
-Vue 2 components for YCloud icons that integrate with Vue's Options API and template system. Each icon is a Vue component that renders as an inline SVG, providing familiar Vue development patterns for legacy applications still using Vue 2.
+Vue components for YCloud icons. Each icon is available as a standalone Vue component that renders an optimized inline SVG.
 
 **What you can accomplish:**
 
-- Use icons as Vue 2 components with Options API integration
-- Maintain legacy Vue 2 applications with modern icon components
-- Integrate with Vue 2's template system and component lifecycle
-- Build applications using Vue 2's familiar syntax and patterns
-- Bridge the gap while planning migration to Vue 3
+- Use icons as Vue components with `<script setup>` or standard component registration
+- Keep imports tree-shakable so unused icons stay out of your bundle
+- Customize size, color, stroke width, and SVG attributes through props
+- Keep component names typed and searchable in editors
 
 ## Installation
 

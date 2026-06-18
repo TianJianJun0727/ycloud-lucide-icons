@@ -1,26 +1,25 @@
 ---
-title: What is YCloud?
-description: An introduction to YCloud, an open-source icon library that provides 1600+ vector (svg) files for displaying icons and symbols in digital and non-digital projects.
+title: What is YCloud Icons?
+description: An introduction to YCloud Icons, a multi-framework SVG icon toolkit for React, Vue, and other frontend stacks.
 nextPage:
-  - comparison
   - installation
 ---
 
-# What is YCloud?
+# What is YCloud Icons?
 
-YCloud is an open-source icon library that provides 1600+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. The library aims to make it easier for designers and developers to incorporate icons into their projects by providing several official [packages](/packages).
+YCloud Icons is a multi-framework SVG icon toolkit. It provides tree-shakable icon data, strongly typed React components, Vue components, and packages for common frontend runtimes from one shared icon source.
 
 ## Available Icons
 
-YCloud contains icons with different variants and states, allowing users to choose the most suitable icon for their needs. And if a desired icon isn't available yet, users can open a design request, and the YCloud community contributors will help provide new icons. With more icons to choose from, users have more options to work with in their projects.
+YCloud Icons currently ships the base outline icon set and package infrastructure. Style variants such as filled icons are part of the roadmap and should be generated from normalized SVG sources when the conversion is reliable.
 
 ### Complete Set of Icons
 
-As new applications with specific features arise, YCloud aims to provide a complete set of icons for every project. The community follows a set of design rules when designing new icons. These rules maintain standards for the icons, such as recognizability, consistency in style, and readability at all sizes. While creativity is valued in new icons, recognizable design conventions are important to ensure that the icons are easily identifiable by users.
+The icon source is kept in the repository and normalized by the build pipeline. Packages consume generated data and components so framework packages stay consistent.
 
 ## Code Optimization
 
-In addition to design, code is also important. Assets like icons can significantly increase bandwidth usage in web projects. With the growing internet, YCloud has a responsibility to keep their assets as small as possible. To achieve this, YCloud uses SVG compression and specific code architecture for tree-shaking abilities. After tree-shaking, you only ship the icons you used, which helps to keep software distribution size to a minimum.
+In addition to design, code is also important. Assets like icons can significantly increase bandwidth usage in web projects. YCloud Icons uses SVG optimization and ES module package entrypoints. After tree-shaking, applications only ship the icons they import.
 
 ## Accessibility
 
@@ -30,8 +29,4 @@ However, not everyone can understand them easily. Read more about [how to use YC
 
 ## Official Packages
 
-YCloud's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](./ycloud/index.md), [React](./react/index.md), [React Native](./react-native/index.md), [Vue](./vue/index.md), [Svelte](./svelte/index.md), [Preact](./preact/index.md), [Solid](./solid/index.md), [Angular](./angular/index.md), [Astro](./astro/index.md), and [Static](./static/index.md).
-
-## Community
-
-If you have any questions about YCloud, feel free to reach out to the community. You can find them on [GitHub](https://github.com/TianJianJun0727/ycloud-icons) and [Discord](https://discord.gg/EH6nSts).
+YCloud Icons follows Lucide's official package coverage and documents 10 package types: [Core JavaScript](./ycloud/index.md), [React](./react/index.md), [Vue](./vue/index.md), [Svelte](./svelte/index.md), [Solid](./solid/index.md), [Preact](./preact/index.md), [React Native](./react-native/index.md), [Angular](./angular/index.md), [Astro](./astro/index.md), and [Static assets](./static/index.md).

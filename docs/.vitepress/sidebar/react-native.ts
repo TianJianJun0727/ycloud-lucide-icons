@@ -12,11 +12,6 @@ export const reactNativeSidebar = [
         link: '/guide/react-native/getting-started',
         desc: 'Learn how to get started with YCloud React Native',
       },
-      {
-        text: 'Migration from v0',
-        link: '/guide/react-native/migration',
-        desc: 'Learn how to migrate from v0 to v1 of YCloud.',
-      },
     ],
   },
   {
@@ -73,15 +68,5 @@ export const reactNativeSidebar = [
         desc: 'Combine multiple icons into one',
       },
     ],
-  },
-  {
-    text: 'Resources',
-    items: [
-      {
-        text: 'VSCode',
-        link: '/guide/vscode',
-        desc: 'VSCode and YCloud',
-      },
-    ],
-  },
+  }
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

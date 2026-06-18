@@ -1,11 +1,11 @@
 ---
 title: Typescript - React
-description: Learn about the different types exported by the `ycloud-react` package and how to use them in your React application.
+description: Learn about the different types exported by the `@ycloud-web/icons-react` package and how to use them in your React application.
 ---
 
 # TypeScript Support
 
-List of exported types from the `ycloud-react` package.
+List of exported types from the `@ycloud-web/icons-react` package.
 These can be used to type your components when using YCloud icons in a TypeScript React project.
 
 ## `YCloudProps`

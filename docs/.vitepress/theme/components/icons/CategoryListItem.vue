@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useCategoryView } from '../../composables/useCategoryView';
+import { withBase } from 'vitepress';
 
 interface Header {
   level: number;
@@ -25,11 +26,11 @@ const { selectedCategory } = useCategoryView();
 function onClick(categoryName: string) {
   selectedCategory.value = categoryName;
 
-  const heading = document.querySelector<HTMLAnchorElement>(categoryName);
+  const heading = document.querySelector<HTMLAnchorElement>(`#${CSS.escape(categoryName)}`);
   heading?.focus();
 
   const url = new URL(window.location.href);
-  url.pathname = '/icons/categories';
+  url.pathname = withBase('/icons/categories');
   url.hash = categoryName;
   window.history.pushState({}, '', url);
 }
@@ -50,7 +51,10 @@ function onClick(categoryName: string) {
         <span>
           {{ title }}
         </span>
-        <span class="icon-count" :aria-label="`Count of icons in ${title}`">
+        <span
+          class="icon-count"
+          :aria-label="`Count of icons in ${title}`"
+        >
           {{ iconCount }}
         </span>
       </a>

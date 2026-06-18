@@ -5,7 +5,7 @@ import Badge from '../base/Badge.vue';
 import CopySVGButton from './CopySVGButton.vue';
 import CopyCodeButton from './CopyCodeButton.vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
-import { useData, useRouter } from 'vitepress';
+import { useData, useRouter, withBase } from 'vitepress';
 import { computed } from 'vue';
 import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
 import { diamond } from '../../../data/iconNodes';
@@ -72,7 +72,7 @@ const deprecatedTitle = computed(() => {
       <Badge
         v-for="category in icon.categories"
         class="category"
-        :href="`/icons/categories#${category}`"
+        :href="withBase(`/icons/categories#${category}`)"
       >
         {{ category }}
       </Badge>

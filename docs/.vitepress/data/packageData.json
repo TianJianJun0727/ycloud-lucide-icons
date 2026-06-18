@@ -1,34 +1,37 @@
 {
-  "ycloud": {
+  "@ycloud-web/icons": {
     "order": 0,
     "icon": "js",
+    "docsAlias": "ycloud",
+    "packageDirname": "ycloud",
     "shields": [
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/v/ycloud",
-        "href": "https://www.npmjs.com/package/ycloud"
+        "src": "https://img.shields.io/npm/v/@ycloud-web/icons",
+        "href": "https://www.npmjs.com/package/@ycloud-web/icons"
       },
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/ycloud",
-        "href": "https://www.npmjs.com/package/ycloud"
+        "src": "https://img.shields.io/npm/dw/@ycloud-web/icons",
+        "href": "https://www.npmjs.com/package/@ycloud-web/icons"
       }
     ]
   },
-  "ycloud-react": {
+  "@ycloud-web/icons-react": {
     "order": 1,
     "icon": "react",
     "docsAlias": "react",
+    "packageDirname": "ycloud-react",
     "shields": [
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/v/ycloud-react",
-        "href": "https://www.npmjs.com/package/ycloud-react"
+        "src": "https://img.shields.io/npm/v/@ycloud-web/icons-react",
+        "href": "https://www.npmjs.com/package/@ycloud-web/icons-react"
       },
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/ycloud-react",
-        "href": "https://www.npmjs.com/package/ycloud-react"
+        "src": "https://img.shields.io/npm/dw/@ycloud-web/icons-react",
+        "href": "https://www.npmjs.com/package/@ycloud-web/icons-react"
       }
     ]
   },
@@ -72,6 +75,7 @@
     "order": 4,
     "icon": "solid",
     "docsAlias": "solid",
+    "packageDirname": "ycloud-solid",
     "shields": [
       {
         "alt": "npm",
@@ -89,6 +93,7 @@
     "order": 5,
     "icon": "react-native",
     "docsAlias": "react-native",
+    "packageDirname": "ycloud-react-native",
     "shields": [
       {
         "alt": "npm",
@@ -121,9 +126,10 @@
     ]
   },
   "@ycloud-web/icons-preact": {
-    "order": 8,
+    "order": 7,
     "icon": "preact",
     "docsAlias": "preact",
+    "packageDirname": "ycloud-preact",
     "shields": [
       {
         "alt": "npm",
@@ -140,7 +146,7 @@
   "@ycloud-web/icons-astro": {
     "docsAlias": "astro",
     "packageDirname": "astro",
-    "order": 9,
+    "order": 8,
     "icon": "astro",
     "iconDark": "astro-dark",
     "shields": [
@@ -157,9 +163,10 @@
     ]
   },
   "@ycloud-web/icons-static": {
-    "order": 10,
+    "order": 9,
     "icon": "svg",
     "docsAlias": "static",
+    "packageDirname": "ycloud-static",
     "shields": [
       {
         "alt": "npm",

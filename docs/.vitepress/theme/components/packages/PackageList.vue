@@ -15,17 +15,6 @@ import PackageListItem from "./PackageListItem.vue";
       :packageData="packageData"
     />
   </GridSection>
-
-  <GridSection
-    title="Third-party packages"
-    :headingLevel="2"
-    class="package-group"
-  >
-    <PackageListItem
-      v-for="packageData in data.thirdPartyPackages"
-      :packageData="packageData"
-    />
-  </GridSection>
 </template>
 
 <style scoped>

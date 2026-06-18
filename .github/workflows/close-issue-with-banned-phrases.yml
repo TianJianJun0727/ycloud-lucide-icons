@@ -37,7 +37,7 @@ jobs:
 
           You can [search for similar issues.](https://github.com/TianJianJun0727/ycloud-icons/issues?q=is%3Aissue+${VALUE})
 
-          We’re always happy to help on [Discord](https://discord.gg/EH6nSts)."
+          We’re always happy to help through GitHub Discussions or Issues."
 
               gh issue lock ${{ github.event.issue.number }} --reason spam
               exit 0

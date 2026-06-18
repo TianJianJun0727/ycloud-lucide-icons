@@ -13,7 +13,6 @@ import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
-import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@ycloud-web/icons-vue/src/Icon';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
@@ -229,8 +228,6 @@ function handleCloseDrawer() {
     :iconName="activeIconName"
     @close="handleCloseDrawer"
   />
-
-  <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
 
 <style>

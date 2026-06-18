@@ -51,3 +51,48 @@ vercelRouteConfig.routes.push({
 const output = JSON.stringify(vercelRouteConfig, null, 2);
 
 await fs.promises.writeFile(vercelOutputJSON, output, 'utf-8');
+
+const staticOutputDir = path.resolve(currentDir, '.vercel/output/static');
+
+async function getHtmlFiles(directory: string): Promise<string[]> {
+  const entries = await fs.promises.readdir(directory, { withFileTypes: true });
+  const files = await Promise.all(
+    entries.map(async (entry) => {
+      const entryPath = path.join(directory, entry.name);
+
+      if (entry.isDirectory()) {
+        return getHtmlFiles(entryPath);
+      }
+
+      if (entry.isFile() && entry.name.endsWith('.html')) {
+        return [entryPath];
+      }
+
+      return [];
+    }),
+  );
+
+  return files.flat();
+}
+
+async function writeDirectoryIndexes() {
+  const htmlFiles = await getHtmlFiles(staticOutputDir);
+
+  await Promise.all(
+    htmlFiles.map(async (file) => {
+      const filename = path.basename(file);
+
+      if (filename === 'index.html' || filename === '404.html') {
+        return;
+      }
+
+      const cleanPathDirectory = path.join(path.dirname(file), path.basename(file, '.html'));
+      const cleanPathIndex = path.join(cleanPathDirectory, 'index.html');
+
+      await fs.promises.mkdir(cleanPathDirectory, { recursive: true });
+      await fs.promises.copyFile(file, cleanPathIndex);
+    }),
+  );
+}
+
+await writeDirectoryIndexes();

@@ -3,7 +3,6 @@ import { useData } from 'vitepress';
 import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar';
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 import { computed } from 'vue';
-import SurveyAskOverlay from '../SurveyAskOverlay.vue';
 
 const { theme } = useData();
 const { hasSidebar } = useSidebar();
@@ -16,10 +15,6 @@ const links = computed(() => [
   {
     text: 'License',
     href: '/license',
-  },
-  {
-    text: 'Contribute',
-    href: '/contribute/',
   },
   {
     text: 'Changelog',
@@ -43,29 +38,10 @@ const links = computed(() => [
     :class="{ 'has-sidebar': hasSidebar }"
   >
     <div class="container">
-      <div class="sponsors">
-        <a
-          href="https://vercel.com?utm_source=ycloud&utm_campaign=oss"
-          rel="noreferrer noopener"
-        >
-          <img
-            src="/vercel.svg"
-            alt="Powered by Vercel"
-            width="200"
-          />
-        </a>
-        <a
-          href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
-          rel="noreferrer noopener"
-        >
-          <img
-            src="/digitalocean.svg"
-            alt="Digital Ocean"
-            width="200"
-          />
-        </a>
-      </div>
-      <div class="links">
+      <nav
+        class="links"
+        aria-label="Footer"
+      >
         <VPLink
           v-for="link in links"
           :href="link.href"
@@ -74,8 +50,8 @@ const links = computed(() => [
         >
           {{ link.text }}
         </VPLink>
-      </div>
-      <div>
+      </nav>
+      <div class="meta">
         <p
           v-if="theme.footer.message"
           class="message"
@@ -110,7 +86,8 @@ const links = computed(() => [
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 12px;
+  text-align: center;
 }
 
 .message,
@@ -122,16 +99,15 @@ const links = computed(() => [
 }
 
 .message {
-  order: 2;
+  margin: 0;
 }
 .copyright {
-  order: 1;
+  margin: 0;
 }
 
-.links,
-.sponsors {
+.links {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -143,10 +119,15 @@ const links = computed(() => [
   }
 
   .container {
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
   }
-  .links {
-    margin-right: auto;
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 }
 </style>

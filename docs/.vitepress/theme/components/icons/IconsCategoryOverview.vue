@@ -13,8 +13,8 @@ import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
 import useScrollToCategory from '../../composables/useScrollToCategory';
 import { useCategoryView } from '../../composables/useCategoryView';
-import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
+import { withBase } from 'vitepress';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -151,7 +151,7 @@ function handleCloseDrawer() {
   setActiveIconName('');
 
   const url = new URL(window.location);
-  url.pathname = '/icons/categories';
+  url.pathname = withBase('/icons/categories');
 
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
@@ -202,8 +202,6 @@ function handleCloseDrawer() {
     :iconName="activeIconName"
     @close="handleCloseDrawer"
   />
-
-  <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
 
 <style scoped>

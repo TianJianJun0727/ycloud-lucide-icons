@@ -17,7 +17,7 @@ But using CSS prevents you from using props like `size`, `color` and `strokeWidt
 
 ## Context Provider
 
-For global styling using a context provider, you can use the `YCloudProvider` component that is provided by the `ycloud-react` package.
+For global styling using a context provider, you can use the `YCloudProvider` component that is provided by the `@ycloud-web/icons-react` package.
 
 <!-- TODO: Add codesandbox example -->
 

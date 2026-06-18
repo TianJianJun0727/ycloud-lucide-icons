@@ -93,7 +93,7 @@ export default App;
       language: 'tsx',
       title: 'Angular',
       code: `// app.module.ts
-import { YCloudAngularModule, $PascalCase } from 'ycloud-angular';
+import { YCloudAngularModule, $PascalCase } from '@ycloud-web/icons-angular';
 
 @NgModule({
   imports: [

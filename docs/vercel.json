@@ -101,11 +101,6 @@
       "source": "/guide/packages/@ycloud-web/icons-static",
       "destination": "/guide/static",
       "permanent": true
-    },
-    {
-      "source": "/contributing",
-      "destination": "/contribute",
-      "permanent": true
     }
   ],
   "headers": [

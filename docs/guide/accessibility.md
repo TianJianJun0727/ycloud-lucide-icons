@@ -179,7 +179,7 @@ visually hidden" utility whenever possible. You can
 Use [Radix UI's built-in accessible icon utility component](https://www.radix-ui.com/primitives/docs/utilities/accessible-icon).
 
 ```tsx
-import { ArrowRightIcon } from 'ycloud-react';
+import { ArrowRightIcon } from '@ycloud-web/icons-react';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 
 <AccessibleIcon label="Next item">

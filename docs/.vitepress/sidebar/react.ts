@@ -12,16 +12,6 @@ export const reactSidebar = [
         link: '/guide/react/getting-started',
         desc: 'Learn how to get started with YCloud for React.',
       },
-      {
-        text: 'Migration from v0',
-        link: '/guide/react/migration',
-        desc: 'Learn how to migrate from v0 to v1 of YCloud.',
-      },
-      {
-        text: 'Migration from React Feather',
-        link: '/guide/react/migration-from-feather',
-        desc: 'Learn how to migrate from `react-feather` to `ycloud-react`',
-      },
     ],
   },
   {
@@ -65,7 +55,7 @@ export const reactSidebar = [
       {
         text: 'With YCloud Lab',
         link: '/guide/react/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with ycloud-react',
+        desc: 'Using ycloud-lab with @ycloud-web/icons-react',
       },
       // {
       //   text: 'Animations',
@@ -75,7 +65,7 @@ export const reactSidebar = [
       {
         text: 'Filled icons',
         link: '/guide/react/advanced/filled-icons',
-        desc: 'Using filled icons in ycloud-react',
+        desc: 'Using filled icons in @ycloud-web/icons-react',
       },
       {
         text: 'Aliased Names',
@@ -94,20 +84,5 @@ export const reactSidebar = [
         desc: 'Dynamically import icons as needed',
       },
     ],
-  },
-  {
-    text: 'Resources',
-    items: [
-      {
-        text: 'Accessibility in depth',
-        link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
-      },
-      {
-        text: 'VSCode',
-        link: '/guide/vscode',
-        desc: 'VSCode and YCloud',
-      },
-    ],
-  },
+  }
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

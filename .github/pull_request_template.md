@@ -51,7 +51,7 @@ Common scopes: icons, docs, studio, site, dev
 
 <!-- All of these requirements must be fulfilled. -->
 
-- [ ] I've read and followed the [naming conventions](https://tianjianjun0727.github.io/ycloud-icons/contribute/icon-design-guide#naming-conventions)
+- [ ] I've named icons using concise, generic, kebab-case names.
 - [ ] I've named icons by what they are rather than their use case.
 - [ ] I've provided meta JSON files in `icons/[iconName].json`.
 
@@ -59,7 +59,7 @@ Common scopes: icons, docs, studio, site, dev
 
 <!-- All of these requirements must be fulfilled. -->
 
-- [ ] I've read and followed the [icon design guidelines](https://tianjianjun0727.github.io/ycloud-icons/contribute/icon-design-guide)
+- [ ] I've followed the project icon design rules: 24x24 viewBox, consistent stroke width, optical balance, and no embedded branding unless explicitly approved.
 - [ ] I've made sure that the icons look sharp on low DPI displays.
 - [ ] I've made sure that the icons look consistent with the icon set in size, optical volume and density.
 - [ ] I've made sure that the icons are visually centered.

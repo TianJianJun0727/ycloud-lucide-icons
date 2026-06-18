@@ -23,10 +23,6 @@ body:
         - label: '@ycloud-web/icons-solid'
         - label: '@ycloud-web/icons-static'
         - label: '@ycloud-web/icons-data'
-        - label: '@ycloud-web/icons-vue (deprecated)'
-        - label: '@ycloud-web/icons-svelte (deprecated)'
-        - label: '@ycloud-web/icons-angular (deprecated)'
-        - label: Figma plugin
         - label: source/main
         - label: other/not relevant
     validations:

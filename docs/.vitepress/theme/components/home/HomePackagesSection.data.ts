@@ -15,7 +15,7 @@ export default {
           path: '/guide/react/',
         },
         {
-          name: 'ycloud-vue',
+          name: '@ycloud-web/icons-vue',
           logo: '/framework-logos/vue.svg',
           label: 'YCloud documentation for Vue',
           path: '/guide/vue/',
@@ -39,13 +39,13 @@ export default {
           path: '/guide/preact/',
         },
         {
-          name: 'angular',
+          name: '@ycloud-web/icons-angular',
           logo: '/framework-logos/angular.svg',
           label: 'YCloud documentation for Angular',
           path: '/guide/angular/',
         },
         {
-          name: 'ycloud-astro',
+          name: '@ycloud-web/icons-astro',
           logo: '/framework-logos/astro.svg',
           logoDark: '/framework-logos/astro-dark.svg',
           label: 'YCloud documentation for Astro',

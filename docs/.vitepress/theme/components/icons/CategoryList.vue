@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
-import { useData } from 'vitepress'
-import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
-import { isActive } from 'vitepress/dist/client/shared'
-import { useActiveAnchor } from '../../composables/useActiveAnchor'
-import { data } from './CategoryList.data'
-import CategoryListItem from './CategoryListItem.vue'
-import SidebarTitle from './SidebarTitle.vue'
-import { useCategoryViewSync } from '../../composables/useCategoryView'
+import { ref, computed, watch } from 'vue';
+import { useData, withBase } from 'vitepress';
+import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
+import { isActive } from 'vitepress/dist/client/shared';
+import { useActiveAnchor } from '../../composables/useActiveAnchor';
+import { data } from './CategoryList.data';
+import CategoryListItem from './CategoryListItem.vue';
+import SidebarTitle from './SidebarTitle.vue';
+import { useCategoryViewSync } from '../../composables/useCategoryView';
 
-const { page } = useData()
+const { page } = useData();
 const { categoryCounts, selectedCategory } = useCategoryViewSync();
 
 function onCategoriesClick() {
@@ -26,44 +26,61 @@ const overviewIsActive = computed(() => {
 
 const headers = computed(() => {
   const linkPrefix = page.value.relativePath.startsWith('icons/categories')
-    ? '' : '/icons/categories'
+    ? ''
+    : withBase('/icons/categories');
 
   return data.categories.map(({ name, title, iconCount }) => ({
     level: 2,
     link: `${linkPrefix}#${name}`,
     title,
     iconCount: categoryCounts.value[name] ?? iconCount,
-    name
-  }))
-})
+    name,
+  }));
+});
 
-const container = ref()
-const marker = ref()
+const container = ref();
+const marker = ref();
 
-const { setActiveLinkDebounced } = useActiveAnchor(container, marker)
+const { setActiveLinkDebounced } = useActiveAnchor(container, marker);
 
 watch(headers, () => {
   setTimeout(() => {
-    setActiveLinkDebounced()
-  }, 200)
-})
+    setActiveLinkDebounced();
+  }, 200);
+});
 </script>
 
 <template>
-  <div class="category-list" ref="container">
-    <SidebarTitle>
-      View
-    </SidebarTitle>
-    <VPLink class="sidebar-link sidebar-text" href="/icons/" :class="{ 'active': overviewIsActive } ">
+  <div
+    class="category-list"
+    ref="container"
+  >
+    <SidebarTitle> View </SidebarTitle>
+    <VPLink
+      class="sidebar-link sidebar-text"
+      :href="withBase('/icons/')"
+      :class="{ active: overviewIsActive }"
+    >
       All
     </VPLink>
-    <VPLink class="sidebar-link sidebar-text" href="/icons/categories" :class="{ 'active': categoriesIsActive }" @click="onCategoriesClick">
+    <VPLink
+      class="sidebar-link sidebar-text"
+      :href="withBase('/icons/categories')"
+      :class="{ active: categoriesIsActive }"
+      @click="onCategoriesClick"
+    >
       Categories
     </VPLink>
     <div class="content">
-      <div class="outline-marker" ref="marker" />
+      <div
+        class="outline-marker"
+        ref="marker"
+      />
       <nav aria-labelledby="doc-outline-aria-label">
-        <CategoryListItem  :headers="headers" :root="true" />
+        <CategoryListItem
+          :headers="headers"
+          :root="true"
+        />
       </nav>
     </div>
   </div>
@@ -83,7 +100,8 @@ watch(headers, () => {
   color: var(--vp-c-text-2);
 }
 
-.sidebar-link:hover, .sidebar-link.active {
+.sidebar-link:hover,
+.sidebar-link.active {
   color: var(--vp-c-brand);
 }
 .content {
@@ -104,7 +122,10 @@ watch(headers, () => {
   width: 1px;
   height: 18px;
   background-color: var(--vp-c-brand);
-  transition: top 0.25s cubic-bezier(0, 1, 0.5, 1), background-color 0.5s, opacity 0.25s;
+  transition:
+    top 0.25s cubic-bezier(0, 1, 0.5, 1),
+    background-color 0.5s,
+    opacity 0.25s;
 }
 
 .outline-title {

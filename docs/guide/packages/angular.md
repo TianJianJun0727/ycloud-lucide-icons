@@ -1,11 +1,5 @@
 # `@ycloud-web/icons-angular`
 
-::: warning
-This documentation is for `@ycloud-web/icons-angular`.
-
-To learn about our legacy package for Angular, please refer to [`ycloud-angular`](https://v0.tianjianjun0727.github.io/ycloud-icons/guide/packages/ycloud-angular).
-:::
-
 A standalone, signal-based, zoneless implementation of YCloud icons for Angular.
 
 **What you can accomplish:**
@@ -282,16 +276,12 @@ If using per-icon-components:
 If using the dynamic component:
 
 1. Ensure the icon is provided via `provideYCloudIcons()` if using string names
-2. Verify the icon is imported from `@ycloud-web/icons-angular` and not the legacy package
+2. Verify the icon is imported from `@ycloud-web/icons-angular`.
 
 ### TypeScript errors?
 
-Make sure you're importing from `@ycloud-web/icons-angular` and not `ycloud-angular`.
+Make sure you're importing from `@ycloud-web/icons-angular`.
 
 ### Icons render with wrong defaults
 
 Ensure `provideYCloudConfig()` is used at the right level.
-
-## Migration guide
-
-Migrating from `ycloud-angular`? Read our [comprehensive migration guide](https://github.com/TianJianJun0727/ycloud-icons/blob/main/packages/angular/MIGRATION.md).

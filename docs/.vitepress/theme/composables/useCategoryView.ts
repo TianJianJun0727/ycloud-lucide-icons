@@ -1,4 +1,4 @@
-import { useRoute } from 'vitepress';
+import { useRoute, withBase } from 'vitepress';
 import { ref, inject, Ref, onMounted, onUnmounted, watch } from 'vue';
 
 export const CATEGORY_VIEW_CONTEXT = Symbol('categoryView');
@@ -30,7 +30,7 @@ export function useCategoryViewSync(): CategoryViewContext {
   const route = useRoute();
 
   function syncCategoryFromLocation() {
-    if (!window.location.pathname.startsWith(CATEGORIES_PATH)) {
+    if (!window.location.pathname.startsWith(withBase(CATEGORIES_PATH))) {
       context.selectedCategory.value = '';
       context.categoryCounts.value = {};
       return;

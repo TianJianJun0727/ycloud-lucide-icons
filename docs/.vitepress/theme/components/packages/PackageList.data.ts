@@ -1,5 +1,4 @@
 import packageDataList from '../../../data/packageData.json';
-import thirdPartyPackages from '../../../data/packageData.thirdParty.json';
 import fetchPackages from '../../../lib/fetchPackages';
 
 export default {
@@ -25,7 +24,6 @@ export default {
         })
         .filter((pData) => !pData.hide)
         .sort((a, b) => a.order - b.order),
-      thirdPartyPackages,
     };
   },
 };

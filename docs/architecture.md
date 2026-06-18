@@ -5,7 +5,7 @@ description: Package naming, component naming, and style entrypoint decisions fo
 
 # Architecture
 
-YCloud Icons is a fork of YCloud. The repository keeps the upstream monorepo shape so upstream fixes can still be merged with limited friction.
+YCloud Icons is maintained as a multi-package icon monorepo. The current repository keeps a Lucide-compatible package shape so upstream fixes can be reviewed and merged with limited friction while public names, docs, and branding stay under YCloud.
 
 ## Package Naming
 
@@ -15,6 +15,7 @@ Public packages use the `@ycloud-web` scope:
 - `@ycloud-web/icons-react` for React.
 - `@ycloud-web/icons-vue` for Vue.
 - `@ycloud-web/icons-data` for normalized icon data.
+- `@ycloud-web/icons-svelte`, `@ycloud-web/icons-solid`, `@ycloud-web/icons-preact`, `@ycloud-web/icons-react-native`, `@ycloud-web/icons-angular`, `@ycloud-web/icons-astro`, and `@ycloud-web/icons-static` for the remaining supported package types.
 
 Private build tools can continue using upstream internal names until the public packages are stable.
 

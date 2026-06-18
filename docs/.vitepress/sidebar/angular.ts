@@ -12,11 +12,6 @@ export const angularSidebar = [
         link: '/guide/angular/getting-started',
         desc: 'Learn how to get started with YCloud for Angular.',
       },
-      {
-        text: 'Migration from v0',
-        link: '/guide/angular/migration',
-        desc: 'Learn how to migrate from v0 to v1 of YCloud.',
-      },
     ],
   },
   {
@@ -88,20 +83,5 @@ export const angularSidebar = [
         desc: 'Provide icons at app level and use them by name',
       },
     ],
-  },
-  {
-    text: 'Resources',
-    items: [
-      {
-        text: 'Accessibility in depth',
-        link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
-      },
-      {
-        text: 'VSCode',
-        link: '/guide/vscode',
-        desc: 'VSCode and YCloud',
-      },
-    ],
-  },
+  }
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

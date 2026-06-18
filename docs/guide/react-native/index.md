@@ -58,17 +58,3 @@ List of features:
     :desc="item.desc"
   />
 </OverviewLinkGrid>
-
-### Resources
-
-{{''}}
-
-<OverviewLinkGrid>
-  <OverviewLink
-    v-for="item in reactNativeSidebar[3].items"
-    :key="item.link"
-    :href="item.link"
-    :title="item.text"
-    :desc="item.desc"
-  />
-</OverviewLinkGrid>

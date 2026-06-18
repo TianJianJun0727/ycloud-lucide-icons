@@ -12,11 +12,6 @@ export const ycloudSidebar = [
         link: '/guide/ycloud/getting-started',
         desc: 'Learn how to get started with YCloud.',
       },
-      {
-        text: 'Migration from v0',
-        link: '/guide/ycloud/migration',
-        desc: 'Learn how to migrate from v0 to v1 of YCloud.',
-      },
     ],
   },
   {
@@ -73,15 +68,5 @@ export const ycloudSidebar = [
         desc: 'Using filled icons in ycloud',
       },
     ],
-  },
-  {
-    text: 'Resources',
-    items: [
-      {
-        text: 'Accessibility in depth',
-        link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
-      },
-    ],
-  },
+  }
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

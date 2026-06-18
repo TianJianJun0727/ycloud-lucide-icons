@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { useRouter } from 'vitepress';
-import {PackageItem} from "../../types";
+import { withBase } from 'vitepress';
+import { PackageItem } from '../../types';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
-import Card from '../base/Card.vue'
+import Card from '../base/Card.vue';
 
-const { go } = useRouter()
 const props = defineProps<{
-  packageData: PackageItem,
-}>()
+  packageData: PackageItem;
+}>();
 </script>
 
 <template>
@@ -15,13 +14,32 @@ const props = defineProps<{
     <Card class="package">
       <header class="package-header">
         <div class="package-icon-well">
-          <img :src="packageData.icon" alt="" class="package-icon" :class="{[packageData.iconClass]: true, light: packageData.iconDark}" />
-          <img v-if="packageData.iconDark" :src="packageData.iconDark" alt="" class="package-icon dark" :class="packageData.iconClass" />
+          <img
+            :src="withBase(packageData.icon)"
+            alt=""
+            class="package-icon"
+            :class="{ [packageData.iconClass]: true, light: packageData.iconDark }"
+          />
+          <img
+            v-if="packageData.iconDark"
+            :src="withBase(packageData.iconDark)"
+            alt=""
+            class="package-icon dark"
+            :class="packageData.iconClass"
+          />
         </div>
         <div class="package-title">
           <h2 class="title">{{ props.packageData?.name }}</h2>
-          <a v-for="shield in props.packageData.shields" :href="shield.href" class="package-shield" rel="noreferrer noopener">
-            <img :src="shield.src" :alt="shield.href" />
+          <a
+            v-for="shield in props.packageData.shields"
+            :href="shield.href"
+            class="package-shield"
+            rel="noreferrer noopener"
+          >
+            <img
+              :src="shield.src"
+              :alt="shield.href"
+            />
           </a>
         </div>
       </header>

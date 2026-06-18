@@ -12,11 +12,6 @@ export const preactSidebar = [
         link: '/guide/preact/getting-started',
         desc: 'Learn how to get started with YCloud for PReact.',
       },
-      {
-        text: 'Migration from v0',
-        link: '/guide/preact/migration',
-        desc: 'Learn how to migrate from v0 to v1 of YCloud.',
-      },
     ],
   },
   {
@@ -83,20 +78,5 @@ export const preactSidebar = [
         desc: 'Combine multiple icons into one',
       },
     ],
-  },
-  {
-    text: 'Resources',
-    items: [
-      {
-        text: 'Accessibility in depth',
-        link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
-      },
-      {
-        text: 'VSCode',
-        link: '/guide/vscode',
-        desc: 'VSCode and YCloud',
-      },
-    ],
-  },
+  }
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

@@ -1,66 +1,67 @@
 ---
 title: Installation
-description: A guide on how to install YCloud, an open-source icon library, for various platforms and frameworks.
+description: Install YCloud Icons packages for supported frameworks and static asset usage.
 ---
 
 # Installation
 
-## Web
+YCloud Icons follows the same package coverage model as Lucide and currently documents 10 package types.
 
-Implementation of the YCloud icon library for web applications.
+## Core JavaScript
+
+Framework-agnostic icon data and helpers.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add ycloud@next
-```
-
-```sh [yarn]
-yarn add ycloud@next
+pnpm add @ycloud-web/icons
 ```
 
 ```sh [npm]
-npm install ycloud@next
+npm install @ycloud-web/icons
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons
 ```
 
 ```sh [bun]
-bun add ycloud@next
+bun add @ycloud-web/icons
 ```
 
 :::
 
-For more details, see the [documentation](./ycloud/index.md).
+See the [Core JavaScript guide](./ycloud/index.md).
 
 ## React
 
-Implementation of the YCloud icon library for React applications.
+Typed React SVG components with named imports.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add ycloud-react@next
-```
-
-```sh [yarn]
-yarn add ycloud-react@next
+pnpm add @ycloud-web/icons-react
 ```
 
 ```sh [npm]
-npm install ycloud-react@next
+npm install @ycloud-web/icons-react
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-react
 ```
 
 ```sh [bun]
-bun add ycloud-react@next
+bun add @ycloud-web/icons-react
 ```
 
 :::
 
-For more details, see the [documentation](./react/index.md).
-For React Native use the `@ycloud-web/icons-react-native` package.
+See the [React guide](./react/index.md).
 
 ## Vue
 
-Implementation of the YCloud icon library for Vue applications.
+Vue components generated from the same icon source.
 
 ::: code-group
 
@@ -68,12 +69,12 @@ Implementation of the YCloud icon library for Vue applications.
 pnpm add @ycloud-web/icons-vue
 ```
 
-```sh [yarn]
-yarn add @ycloud-web/icons-vue
-```
-
 ```sh [npm]
 npm install @ycloud-web/icons-vue
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-vue
 ```
 
 ```sh [bun]
@@ -82,65 +83,115 @@ bun add @ycloud-web/icons-vue
 
 :::
 
-For more details, see the [documentation](./vue/index.md).
+See the [Vue guide](./vue/index.md).
 
 ## Svelte
 
-Implementation of the YCloud icon library for Svelte applications.
+Svelte components for application projects.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-svelte@next
-```
-
-```sh [yarn]
-yarn add @ycloud-web/icons-svelte@next
+pnpm add @ycloud-web/icons-svelte
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-svelte@next
+npm install @ycloud-web/icons-svelte
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-svelte
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-svelte@next
+bun add @ycloud-web/icons-svelte
 ```
 
 :::
 
-> `@ycloud-web/icons-svelte` is only for Svelte 5, for Svelte 4 use the `@ycloud-web/icons-svelte` package.
-
-For more details, see the [documentation](./svelte/index.md).
+See the [Svelte guide](./svelte/index.md).
 
 ## Solid
 
-Implementation of the YCloud icon library for Solid applications.
+Solid components generated from the shared icon source.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-solid@next
-```
-
-```sh [yarn]
-yarn add @ycloud-web/icons-solid@next
+pnpm add @ycloud-web/icons-solid
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-solid@next
+npm install @ycloud-web/icons-solid
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-solid
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-solid@next
+bun add @ycloud-web/icons-solid
 ```
 
 :::
 
-For more details, see the [documentation](./solid/index.md).
+See the [Solid guide](./solid/index.md).
+
+## Preact
+
+Preact components for small React-compatible applications.
+
+::: code-group
+
+```sh [pnpm]
+pnpm add @ycloud-web/icons-preact
+```
+
+```sh [npm]
+npm install @ycloud-web/icons-preact
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-preact
+```
+
+```sh [bun]
+bun add @ycloud-web/icons-preact
+```
+
+:::
+
+See the [Preact guide](./preact/index.md).
+
+## React Native
+
+React Native components for mobile applications.
+
+::: code-group
+
+```sh [pnpm]
+pnpm add @ycloud-web/icons-react-native
+```
+
+```sh [npm]
+npm install @ycloud-web/icons-react-native
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-react-native
+```
+
+```sh [bun]
+bun add @ycloud-web/icons-react-native
+```
+
+:::
+
+See the [React Native guide](./react-native/index.md).
 
 ## Angular
 
-Implementation of the YCloud icon library for Angular applications.
+Angular components and provider APIs.
 
 ::: code-group
 
@@ -148,12 +199,12 @@ Implementation of the YCloud icon library for Angular applications.
 pnpm add @ycloud-web/icons-angular
 ```
 
-```sh [yarn]
-yarn add @ycloud-web/icons-angular
-```
-
 ```sh [npm]
 npm install @ycloud-web/icons-angular
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-angular
 ```
 
 ```sh [bun]
@@ -162,90 +213,56 @@ bun add @ycloud-web/icons-angular
 
 :::
 
-For more details, see the [documentation](./angular/index.md).
-
-## Preact
-
-Implementation of the YCloud icon library for preact applications.
-
-::: code-group
-
-```sh [pnpm]
-pnpm add @ycloud-web/icons-preact@next
-```
-
-```sh [yarn]
-yarn add @ycloud-web/icons-preact@next
-```
-
-```sh [npm]
-npm install @ycloud-web/icons-preact@next
-```
-
-```sh [bun]
-bun add @ycloud-web/icons-preact@next
-```
-
-:::
-
-For more details, see the [documentation](./preact/index.md).
+See the [Angular guide](./angular/index.md).
 
 ## Astro
 
-Implementation of the YCloud icon library for Astro applications.
+Astro components for content and application sites.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-astro@next
-```
-
-```sh [yarn]
-yarn add @ycloud-web/icons-astro@next
+pnpm add @ycloud-web/icons-astro
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-astro@next
+npm install @ycloud-web/icons-astro
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-astro
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-astro@next
+bun add @ycloud-web/icons-astro
 ```
 
 :::
 
-For more details, see the [documentation](./astro/index.md).
+See the [Astro guide](./astro/index.md).
 
-## Static usage
+## Static Assets
 
-Implementation of the YCloud icon library for multiple usages that like to use: SVG files icons, SVG Sprite, Icon Fonts and static SVG strings export in Common JS modules (for NodeJS).
+Static SVG files, SVG sprites, icon fonts, and SVG string modules.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-static@next
-```
-
-```sh [yarn]
-yarn add @ycloud-web/icons-static@next
+pnpm add @ycloud-web/icons-static
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-static@next
+npm install @ycloud-web/icons-static
+```
+
+```sh [yarn]
+yarn add @ycloud-web/icons-static
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-static@next
+bun add @ycloud-web/icons-static
 ```
 
 :::
 
-For more details, see the [documentation](./static/index.md).
-
-## Figma
-
-The YCloud Figma plugin.
-
-Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/YCloud-Icons) to install the plugin.
-
-![Setting Page Size](https://www.figma.com/community/plugin/939567362549682242/thumbnail 'Figma YCloud Cover')
+See the [Static assets guide](./static/index.md).

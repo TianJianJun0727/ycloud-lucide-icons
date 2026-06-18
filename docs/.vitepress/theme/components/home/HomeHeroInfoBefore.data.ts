@@ -1,20 +1,15 @@
+import { readFile } from 'node:fs/promises';
+import { fileURLToPath, URL } from 'node:url';
+
 export default {
   async load() {
-    const version = await fetch(
-      'https://api.github.com/repos/TianJianJun0727/ycloud-icons/releases/latest',
-    )
-      .then((res) => {
-        if (res.ok) {
-          const releaseData = res.json() as Promise<{ tag_name: string }>;
-
-          return releaseData;
-        }
-        return null;
-      })
-      .then((res) => res?.tag_name);
+    const packageJsonPath = fileURLToPath(
+      new URL('../../../../../packages/ycloud-react/package.json', import.meta.url),
+    );
+    const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf-8')) as { version: string };
 
     return {
-      version,
+      version: packageJson.version,
     };
   },
 };

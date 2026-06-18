@@ -8,15 +8,15 @@ import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
 
 <template>
   <div class="info">
-    <Badge :href="`https://github.com/ycloud-icons/@ycloud-web/icons/releases/tag/${data.version}`">
-      v{{ data.version }}
+    <Badge href="https://www.npmjs.com/package/@ycloud-web/icons-react">
+      {{ data.version }}
     </Badge>
     <Badge
       class="badge-special confetti-button animate"
-      href="/guide/version-1"
+      href="/guide/installation"
     >
       <Icon :iconNode="RocketDuotoneIcon" />
-      Version 1
+      Beta
       <Icon
         :iconNode="moveRight"
         class=""

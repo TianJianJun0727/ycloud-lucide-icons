@@ -71,7 +71,7 @@ export default App;
   :files="absoluteStrokeWidth"
   :customSetup='{
     dependencies: {
-      "ycloud-react": "latest"
+      "@ycloud-web/icons-react-native": "latest"
     }
   }'
   :options="{

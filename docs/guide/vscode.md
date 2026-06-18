@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Code
-description: Learn how to use YCloud icons in Visual Studio Code, including tips on turning off autocomplete, viewing JS docs and icon previews, and exploring third-party plugins for enhanced functionality.
+description: Learn how to use YCloud icons in Visual Studio Code, including tips on tuning autocomplete and viewing JS docs or icon previews.
 ---
 
 # Visual Studio Code
@@ -15,7 +15,7 @@ You can turn this off by adding the following setting to your VS Code settings.
 ```json [.vscode/settings.json]
 {
   "js/ts.preferences.autoImportFileExcludePatterns": [
-    "ycloud-react", // or
+    "@ycloud-web/icons-react", // or
     "@ycloud-web/icons-preact", // or
     "@ycloud-web/icons-react-native", // or
     "@ycloud-web/icons-vue"
@@ -31,8 +31,6 @@ Also a little preview of the icon is shown.
 
 ![VS Code JS Docs](./images/vscode-hover.png)
 
-## Third party plugins
+## Extensions
 
-There are several third party plugins available for VS Code that provide additional features for working with YCloud icons.
-
-See the [VSCode Marketplace](https://marketplace.visualstudio.com/search?term=ycloud&target=VSCode&category=All%20categories&sortBy=Relevance) for available extensions.
+YCloud Icons does not currently ship an official VS Code extension. Use TypeScript auto-import and package exports for component-name completion and rename support.

@@ -60,11 +60,3 @@ This package includes the following implementations of YCloud icons:
 <OverviewLinkGrid>
   <OverviewLink v-for="item in ycloudStaticSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >
-
-### Resources
-
-{{''}}
-
-<OverviewLinkGrid>
-  <OverviewLink v-for="item in ycloudStaticSidebar[4].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >

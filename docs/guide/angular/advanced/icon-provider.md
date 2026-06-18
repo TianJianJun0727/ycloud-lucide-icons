@@ -71,14 +71,13 @@ export const appConfig: ApplicationConfig = {
 <svg ycloudIcon="my-custom-icon"></svg>
 ```
 
-## Using legacy icon nodes
+## Using custom icon nodes
 
-If you have icons in the legacy node format, such as custom icons matching `ycloud-angular` or `@ycloud-web/icons-lab`, you can convert them using `ycloudLegacyIcon`.
+If you have custom icon nodes from a local source or `@ycloud-web/icons-lab`, you can convert them using `ycloudLegacyIcon`.
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
-import { provideYCloudIcons, ycloudLegacyIcon } from '@ycloud-web/icons-angular';
-import { CirclePlayIcon } from 'ycloud-angular';
+import { CirclePlayIcon, provideYCloudIcons, ycloudLegacyIcon } from '@ycloud-web/icons-angular';
 import { burger } from '@ycloud-web/icons-lab';
 
 export const appConfig: ApplicationConfig = {
@@ -100,14 +99,18 @@ You can then use both the primary name and any aliases:
 <svg ycloudIcon="hamburger"></svg>
 ```
 
-## Converting a map of legacy icons
+## Converting a map of custom icons
 
-If you already have a map of legacy icon nodes, use `ycloudLegacyIconMap` to convert them into icon data objects.
+If you already have a map of custom icon nodes, use `ycloudLegacyIconMap` to convert them into icon data objects.
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
-import { provideYCloudIcons, ycloudLegacyIconMap, Circle } from '@ycloud-web/icons-angular';
-import { UserRoundX } from 'ycloud-angular';
+import {
+  Circle,
+  provideYCloudIcons,
+  UserRoundX,
+  ycloudLegacyIconMap,
+} from '@ycloud-web/icons-angular';
 import { burger } from '@ycloud-web/icons-lab';
 
 export const appConfig: ApplicationConfig = {

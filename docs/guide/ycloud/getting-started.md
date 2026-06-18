@@ -21,34 +21,22 @@ Make sure you have a your environment set up. If you don't have one yet, you can
 ::: code-group
 
 ```sh [pnpm]
-pnpm add ycloud
+pnpm add @ycloud-web/icons
 ```
 
 ```sh [yarn]
-yarn add ycloud
+yarn add @ycloud-web/icons
 ```
 
 ```sh [npm]
-npm install ycloud
+npm install @ycloud-web/icons
 ```
 
 ```sh [bun]
-bun add ycloud
+bun add @ycloud-web/icons
 ```
 
 :::
-
-### CDN
-
-```html
-<!-- Development version -->
-<script src="https://unpkg.com/ycloud@latest/dist/umd/ycloud.js"></script>
-
-<!-- Production version -->
-<script src="https://unpkg.com/ycloud@latest"></script>
-```
-
-We strongly suggest you anchor to a specific version, such as `https://unpkg.com/ycloud@x.xxx.x/dist/umd/ycloud.min.js`, rather than using `@latest`. This is because the latest version may introduce breaking changes that could potentially break your application. By anchoring to a specific version, you can ensure that your application remains stable and functional, even if there are updates to the library in the future.
 
 ## Importing your first icon
 
@@ -64,13 +52,13 @@ The `createIcons` function will search for HTMLElements with the attribute `data
 ```
 
 ```js
-import { createIcons, icons } from 'ycloud';
+import { createIcons, icons } from '@ycloud-web/icons';
 
 // Caution, this will import all the icons and bundle them.
 createIcons({ icons });
 
 // Recommended way, to include only the icons you need.
-import { createIcons, Menu, ArrowRight, Globe } from 'ycloud';
+import { createIcons, Menu, ArrowRight, Globe } from '@ycloud-web/icons';
 
 createIcons({
   icons: {
@@ -95,7 +83,7 @@ In the `createIcons` function you can pass some extra parameters:
 Here is a full example:
 
 ```js
-import { createIcons } from 'ycloud';
+import { createIcons } from '@ycloud-web/icons';
 
 createIcons({
   attrs: {
@@ -107,23 +95,4 @@ createIcons({
   root: element, // DOM element to replace icons in.
   inTemplates: true, // Also replace icons inside <template> tags.
 });
-```
-
-### Example using a CDN
-
-```html
-<!doctype html>
-<body>
-  <i
-    data-ycloud="volume-2"
-    class="my-class"
-  ></i>
-  <i data-ycloud="x"></i>
-  <i data-ycloud="menu"></i>
-
-  <script src="https://unpkg.com/ycloud@latest"></script>
-  <script>
-    ycloud.createIcons();
-  </script>
-</body>
 ```

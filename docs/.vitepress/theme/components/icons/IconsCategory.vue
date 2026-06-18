@@ -16,29 +16,35 @@ export type CategoryRow = CategoryNameRow | CategoryIconsRow;
 </script>
 
 <script setup lang="ts">
-import IconGrid from './IconGrid.vue'
+import IconGrid from './IconGrid.vue';
 
 defineProps<{
-  activeIconName: string | null
-  categoryRow: CategoryRow
-}>()
+  activeIconName: string | null;
+  categoryRow: CategoryRow;
+}>();
 
-const emit = defineEmits(['setActiveIcon'])
+const emit = defineEmits(['setActiveIcon']);
 </script>
 
 <template>
   <h2
     v-if="categoryRow.type === 'category'"
     class="title"
+    :id="categoryRow.name"
   >
-    <a class="header-anchor" :href="`#${categoryRow.name}`" :aria-label="`Permalink to &quot;${categoryRow.title}&quot;`">&ZeroWidthSpace;</a>
+    <a
+      class="header-anchor"
+      :href="`#${categoryRow.name}`"
+      :aria-label="`Permalink to &quot;${categoryRow.title}&quot;`"
+      >&ZeroWidthSpace;</a
+    >
     {{ categoryRow.title }}
   </h2>
   <IconGrid
     v-else-if="categoryRow.type === 'icons'"
     :activeIcon="activeIconName"
     :icons="categoryRow.icons"
-    @setActiveIcon="$event => $emit('setActiveIcon', $event)"
+    @setActiveIcon="($event) => $emit('setActiveIcon', $event)"
     overlayMode
   />
 </template>
