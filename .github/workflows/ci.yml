@@ -68,7 +68,7 @@ jobs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
     steps:
       - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
