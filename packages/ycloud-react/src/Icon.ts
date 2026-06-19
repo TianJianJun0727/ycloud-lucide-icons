@@ -1,5 +1,3 @@
-'use client';
-
 import { createElement, forwardRef } from 'react';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, YCloudIconsProps } from './types';

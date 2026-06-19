@@ -39,12 +39,12 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.30",
-    "prettier": "^2.3.2",
-    "svgson": "^5.2.1",
-    "rollup": "^4.59.0",
-    "rollup-plugin-dts": "^6.2.1",
     "@ycloud-web/build-icons": "workspace:*",
     "@ycloud-web/helpers": "workspace:*",
-    "@ycloud-web/rollup-plugins": "workspace:*"
+    "@ycloud-web/rollup-plugins": "workspace:*",
+    "prettier": "^2.3.2",
+    "rollup": "^4.62.0",
+    "rollup-plugin-dts": "^6.4.1",
+    "svgson": "^5.2.1"
   }
 }

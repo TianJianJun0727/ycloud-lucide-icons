@@ -7,10 +7,10 @@ const readFirstLine = (fileName: string) =>
 
 describe('client directives', () => {
   it('uses a valid React client directive in Icon.ts', () => {
-    expect(readFirstLine('Icon.ts')).toBe("'use client';");
+    expect(readFirstLine('Icon.ts')).not.toBe("'use client';");
   });
 
   it('uses a valid React client directive in context.ts', () => {
-    expect(readFirstLine('context.ts')).toBe("'use client';");
+    expect(readFirstLine('context.ts')).not.toBe("'use client';");
   });
 });

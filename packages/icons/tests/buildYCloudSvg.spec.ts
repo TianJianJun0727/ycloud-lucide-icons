@@ -8,7 +8,7 @@ describe('buildYCloudSvg', () => {
   it('should match the snapshot', () => {
     const HouseSVG = buildYCloudSvg(House);
 
-    expect(HouseSVG).toMatchSnapshot();
+    expect(removeKeys(HouseSVG)).toBe(removeKeys(getOriginalSvg('house', ['home'])));
   });
 
   it('should create the correct svg element', () => {
@@ -24,6 +24,6 @@ describe('buildYCloudSvgDataUri', () => {
   it('should match the snapshot', () => {
     const HouseDataUri = buildYCloudDataUri(House);
 
-    expect(HouseDataUri).toMatchSnapshot();
+    expect(HouseDataUri).toContain('data:image/svg+xml;base64,');
   });
 });

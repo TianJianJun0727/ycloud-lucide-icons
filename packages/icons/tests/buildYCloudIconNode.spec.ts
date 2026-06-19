@@ -12,7 +12,20 @@ describe('buildYCloudIconNode', () => {
   it('should match the snapshot', () => {
     const HouseSVG = buildYCloudIconNode(House);
 
-    expect(JSON.stringify(HouseSVG.at(1))).toMatchSnapshot();
+    expect(HouseSVG.at(0)).toBe('svg');
+    expect(HouseSVG.at(1)).toEqual(
+      expect.objectContaining({
+        width: '24',
+        height: '24',
+        viewBox: '0 0 24 24',
+        fill: 'none',
+        stroke: 'currentColor',
+        'stroke-width': '2',
+        'stroke-linecap': 'round',
+        'stroke-linejoin': 'round',
+        class: 'ycloud ycloud-house ycloud-home',
+      }),
+    );
   });
 
   it('should override dimensions, but not viewBox', () => {

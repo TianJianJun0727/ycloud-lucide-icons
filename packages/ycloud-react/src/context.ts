@@ -1,5 +1,3 @@
-'use client';
-
 import { createContext, createElement, type ReactNode, useContext, useMemo } from 'react';
 import { YCloudIconsProps } from './types';
 

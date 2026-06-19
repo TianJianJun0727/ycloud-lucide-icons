@@ -1,5 +1,3 @@
-'use client';
-
 import { createElement, forwardRef, useEffect, useState } from 'react';
 import { IconNode, YCloudIcon, YCloudIconsProps } from './types';
 import dynamicIconImports from './dynamicIconImports';

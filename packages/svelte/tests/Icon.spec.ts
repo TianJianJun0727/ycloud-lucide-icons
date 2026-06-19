@@ -29,7 +29,14 @@ describe('Using Icon Component', () => {
       },
     });
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstChild).toBeDefined();
+    expect(container.firstChild).toHaveAttribute('width', '48');
+    expect(container.firstChild).toHaveAttribute('height', '48');
+    expect(container.firstChild).toHaveAttribute('stroke', 'red');
+    expect(container.firstChild).toHaveAttribute('stroke-width', '1');
+    expect(container.firstChild).toHaveAttribute('fill', 'none');
+    expect(container.firstChild).toHaveAttribute('viewBox', '0 0 24 24');
+    expect(container.firstChild).toHaveAttribute('class', 'ycloud-icon ycloud');
   });
 });
 

@@ -3,7 +3,11 @@ import path from 'path';
 import { IconNodeWithKeys } from '../theme/types';
 import iconNodes from '../data/iconNodes';
 import releaseMeta from '../data/releaseMetaData.json';
-import { localizeIconCategories, localizeIconName, localizeIconTags } from '../theme/utils/iconI18n';
+import {
+  localizeIconCategories,
+  localizeIconName,
+  localizeIconTags,
+} from '../theme/utils/iconI18n';
 
 const DATE_OF_FORK = '2020-06-08T16:39:52+0100';
 

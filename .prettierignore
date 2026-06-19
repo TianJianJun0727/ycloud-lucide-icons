@@ -17,6 +17,14 @@ packages/lucide-static/sprite.svg
 packages/lucide-static/tags.json
 packages/lucide-static/icon-nodes.json
 packages/lucide-static/font
+
+# ycloud-static
+packages/ycloud-static/icons
+packages/ycloud-static/lib
+packages/ycloud-static/sprite.svg
+packages/ycloud-static/tags.json
+packages/ycloud-static/icon-nodes.json
+packages/ycloud-static/font
 packages/svelte/.svelte-kit
 
 # lucide-svelte

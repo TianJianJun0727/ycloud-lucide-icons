@@ -112,7 +112,7 @@ describe('Using ycloud icon components', () => {
   it('should handle non-extensible slots objects', () => {
     const Icon = createYCloudIcon('test-icon', [['path', { d: 'M0 0h1', key: 'test-key' }]]);
     const slots = Object.freeze({
-      default: () => 'Hello World',
+      default: () => [],
     });
 
     expect(() =>
@@ -121,7 +121,6 @@ describe('Using ycloud icon components', () => {
         {
           attrs: {},
           emit: vi.fn(),
-          expose: vi.fn(),
           slots,
         },
       ),

@@ -3,13 +3,12 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts'],
-      extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@angular-eslint/recommended',
-        'plugin:@angular-eslint/template/process-inline-templates',
-        'prettier',
-      ],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: ['tsconfig.json'],
+      },
+      plugins: ['@angular-eslint', '@typescript-eslint', '@angular-eslint/template'],
+      extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
       rules: {
         '@angular-eslint/directive-selector': [
           'error',
@@ -31,7 +30,8 @@ module.exports = {
     },
     {
       files: ['*.html'],
-      extends: ['plugin:@angular-eslint/template/recommended'],
+      plugins: ['@angular-eslint/template'],
+      extends: ['prettier'],
       rules: {},
     },
   ],

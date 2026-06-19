@@ -1,6 +1,6 @@
 import { createElement, forwardRef, type FunctionComponent } from 'react';
 import * as NativeSvg from 'react-native-svg';
-import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
+import { defaultAttributes, childDefaultAttributes } from './defaultAttributes';
 import { IconNode, YCloudIconsProps } from './types';
 import { useYCloudContext } from './context';
 

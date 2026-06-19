@@ -46,15 +46,15 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "@rollup/plugin-replace": "^6.0.2",
-    "@testing-library/jest-dom": "^6.8.0",
-    "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.59.0",
-    "rollup-plugin-dts": "^6.2.3",
-    "typescript": "^5.8.3",
-    "vite": "^7.2.4",
+    "@rollup/plugin-replace": "^6.0.3",
+    "@testing-library/jest-dom": "^6.9.1",
     "@ycloud-web/build-icons": "workspace:*",
     "@ycloud-web/rollup-plugins": "workspace:*",
-    "@ycloud-web/shared": "workspace:*"
+    "@ycloud-web/shared": "workspace:*",
+    "jest-serializer-html": "^7.1.0",
+    "rollup": "^4.62.0",
+    "rollup-plugin-dts": "^6.4.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
   }
 }

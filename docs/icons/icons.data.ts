@@ -4,18 +4,21 @@ export default {
   async load() {
     return {
       icons: Object.entries(iconDetails).map(
-        ([, {
-          name,
-          displayName,
-          tags,
-          displayTags,
-          categories,
-          displayCategories,
-          iconNode,
-          popularity,
-          createdRelease,
-          aliases = [],
-        }]) => ({
+        ([
+          ,
+          {
+            name,
+            displayName,
+            tags,
+            displayTags,
+            categories,
+            displayCategories,
+            iconNode,
+            popularity,
+            createdRelease,
+            aliases = [],
+          },
+        ]) => ({
           name,
           displayName,
           tags,

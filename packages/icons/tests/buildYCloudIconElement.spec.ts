@@ -13,7 +13,12 @@ describe('buildYCloudIconElement', () => {
   it('should match the snapshot', () => {
     const HomeSVG = buildYCloudIconElement(document, House);
 
-    expect(HomeSVG.outerHTML).toMatchSnapshot();
+    expect(HomeSVG.tagName).toBe('svg');
+    expect(HomeSVG.getAttribute('width')).toBe('24');
+    expect(HomeSVG.getAttribute('height')).toBe('24');
+    expect(HomeSVG.getAttribute('viewBox')).toBe('0 0 24 24');
+    expect(HomeSVG.getAttribute('fill')).toBe('none');
+    expect(HomeSVG.getAttribute('class')).toBe('ycloud ycloud-house ycloud-home');
   });
 
   it('should create SVG Element with attributes', () => {

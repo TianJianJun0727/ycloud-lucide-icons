@@ -10,7 +10,12 @@ import type { IconNode, YCloudIcon, YCloudIconsProps } from './types';
  * @returns {FunctionComponent} YCloudIcon
  */
 const createYCloudIcon = (iconName: string, iconNode: IconNode): YCloudIcon => {
-  const Component = ({ class: classes = '', className = '', children, ...props }: YCloudIconsProps) =>
+  const Component = ({
+    class: classes = '',
+    className = '',
+    children,
+    ...props
+  }: YCloudIconsProps) =>
     h(
       Icon,
       {

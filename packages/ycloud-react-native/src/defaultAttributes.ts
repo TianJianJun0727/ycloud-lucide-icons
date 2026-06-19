@@ -1,4 +1,4 @@
-const defaultAttributes = {
+export const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: 24,
   height: 24,
@@ -17,5 +17,3 @@ export const childDefaultAttributes = {
   strokeLinecap: defaultAttributes.strokeLinecap,
   strokeLinejoin: defaultAttributes.strokeLinejoin,
 };
-
-export default defaultAttributes;

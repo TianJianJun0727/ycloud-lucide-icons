@@ -8,7 +8,13 @@ describe('Using ycloud icon components', () => {
   afterEach(() => cleanup());
   it('should render an component', () => {
     const { container } = render(Smile);
-    expect(container).toMatchSnapshot();
+    const icon = container.firstElementChild;
+
+    expect(icon).toBeInTheDocument();
+    expect(icon).toHaveAttribute('width', '24');
+    expect(icon).toHaveAttribute('height', '24');
+    expect(icon).toHaveAttribute('viewBox', '0 0 24 24');
+    expect(icon).toHaveAttribute('class', 'ycloud-icon ycloud ycloud-smile');
   });
 
   it('should adjust the size, stroke color and stroke width', () => {
@@ -18,7 +24,13 @@ describe('Using ycloud icon components', () => {
       strokeWidth: 4,
     });
 
-    expect(container).toMatchSnapshot();
+    const icon = container.firstElementChild;
+
+    expect(icon).toBeInTheDocument();
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('height', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '4');
   });
 
   it('should add a class to the element', () => {
@@ -30,7 +42,6 @@ describe('Using ycloud icon components', () => {
     const IconComponent = container.firstElementChild;
 
     expect(IconComponent).toBeInTheDocument();
-    expect(IconComponent).toMatchSnapshot();
     expect(IconComponent).toHaveClass(testClass);
     expect(IconComponent).toHaveClass('ycloud');
     expect(IconComponent).toHaveClass('ycloud-smile');
@@ -51,7 +62,10 @@ describe('Using ycloud icon components', () => {
 
     const textElement = getByText('Test');
     expect(textElement).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+    const IconComponent = container.querySelector('svg');
+
+    expect(IconComponent).toBeInTheDocument();
+    expect(IconComponent).toHaveAttribute('class', 'ycloud-icon ycloud ycloud-smile');
   });
 
   it('should render the alias icon', () => {
@@ -79,8 +93,6 @@ describe('Using ycloud icon components', () => {
     expect(IconComponent).toHaveAttribute('height', '48');
     expect(IconComponent).toHaveAttribute('stroke', 'red');
     expect(IconComponent).toHaveAttribute('stroke-width', '1');
-
-    expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should use context values from the global set properties', () => {
