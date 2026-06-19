@@ -56,4 +56,6 @@ bun add @ycloud-web/icons-svelte@latest
 
 ## 许可证
 
+YCloud Icons 基于 [Lucide](https://github.com/lucide-icons/lucide) 二次开发，保留上游 ISC 许可证与必要的第三方授权说明。本包在此基础上提供适用于 Svelte 应用的图标组件。
+
 YCloud Icons 使用 ISC 许可证发布。详见 [LICENSE](https://tianjianjun0727.github.io/ycloud-icons/license)。

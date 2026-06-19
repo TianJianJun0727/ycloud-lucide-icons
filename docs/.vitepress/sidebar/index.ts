@@ -49,7 +49,7 @@ const sidebarText: Record<string, string> = {
   'SVG Files & Sprite': 'SVG 文件和 Sprite',
   'Import SVG files as images': '以图片方式导入 SVG',
   'SVG Sprite': 'SVG Sprite',
-  'Icon Font': '图标字体',
+  'Icon Font': 'Icon Font',
   'Import as font': '以字体方式导入',
   'SVG String JS modules': 'SVG 字符串 JS 模块',
   'Use in Node.js': '在 Node.js 中使用',

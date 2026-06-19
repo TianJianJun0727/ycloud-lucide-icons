@@ -28,7 +28,7 @@
 
 # YCloud Angular
 
-A standalone, signal based, zoneless implementation of the 适用于 Angular 应用的 YCloud Icons 图标库。
+适用于 Angular 应用的 YCloud Icons 图标库，支持独立组件、Signal 和 zoneless 使用方式。
 
 ## 安装
 
@@ -53,5 +53,7 @@ bun add @ycloud-web/icons-angular@latest
 完整文档请访问 [YCloud Icons 文档](https://tianjianjun0727.github.io/ycloud-icons/guide/angular)。
 
 ## 许可证
+
+YCloud Icons 基于 [Lucide](https://github.com/lucide-icons/lucide) 二次开发，保留上游 ISC 许可证与必要的第三方授权说明。本包在此基础上提供适用于 Angular 应用的图标组件。
 
 YCloud Icons 使用 ISC 许可证发布。详见 [LICENSE](https://tianjianjun0727.github.io/ycloud-icons/license)。

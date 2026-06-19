@@ -64,4 +64,6 @@ const houseSvg = buildYCloudSvg(House, {
 
 ## 许可证
 
+YCloud Icons 基于 [Lucide](https://github.com/lucide-icons/lucide) 二次开发，保留上游 ISC 许可证与必要的第三方授权说明。本包在此基础上提供图标数据和动态图标导入相关工具函数。
+
 YCloud Icons 使用 ISC 许可证发布。详见 [LICENSE](https://tianjianjun0727.github.io/ycloud-icons/license)。

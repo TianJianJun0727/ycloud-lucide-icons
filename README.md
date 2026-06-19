@@ -2,23 +2,25 @@
 
 YCloud Icons 是 YCloud 的多框架 SVG 图标组件库，面向产品前端、后台系统和设计工程化场景。
 
+本项目基于 [Lucide](https://github.com/lucide-icons/lucide) 二次开发，保留上游 ISC 许可证与必要的第三方授权说明，并在此基础上调整了 YCloud 品牌、中文文档、包命名、多框架发布和图标维护流程。
+
 它提供一致的图标源数据、可 tree-shaking 的组件包、静态资源包和图标数据包。业务项目只需要安装对应框架包，即可按需引入图标组件，并获得 TypeScript 自动补全、重构和类型检查体验。
 
 ## 包
 
-| 目标            | 包名                             | 源码目录                       |
-| --------------- | -------------------------------- | ------------------------------ |
-| Core JavaScript | `@ycloud-web/icons`              | `packages/icons`               |
-| React           | `@ycloud-web/icons-react`        | `packages/icons-react`         |
-| Vue             | `@ycloud-web/icons-vue`          | `packages/icons-vue`           |
-| Svelte          | `@ycloud-web/icons-svelte`       | `packages/icons-svelte`        |
-| Solid           | `@ycloud-web/icons-solid`        | `packages/icons-solid`         |
-| Preact          | `@ycloud-web/icons-preact`       | `packages/icons-preact`        |
-| React Native    | `@ycloud-web/icons-react-native` | `packages/icons-react-native`  |
-| Angular         | `@ycloud-web/icons-angular`      | `packages/icons-angular`       |
-| Astro           | `@ycloud-web/icons-astro`        | `packages/icons-astro`         |
-| 静态资源        | `@ycloud-web/icons-static`       | `packages/icons-static`        |
-| 图标数据        | `@ycloud-web/icons-data`         | `packages/icons-data`          |
+| 目标            | 包名                             | 源码目录                      |
+| --------------- | -------------------------------- | ----------------------------- |
+| Core JavaScript | `@ycloud-web/icons`              | `packages/icons`              |
+| React           | `@ycloud-web/icons-react`        | `packages/icons-react`        |
+| Vue             | `@ycloud-web/icons-vue`          | `packages/icons-vue`          |
+| Svelte          | `@ycloud-web/icons-svelte`       | `packages/icons-svelte`       |
+| Solid           | `@ycloud-web/icons-solid`        | `packages/icons-solid`        |
+| Preact          | `@ycloud-web/icons-preact`       | `packages/icons-preact`       |
+| React Native    | `@ycloud-web/icons-react-native` | `packages/icons-react-native` |
+| Angular         | `@ycloud-web/icons-angular`      | `packages/icons-angular`      |
+| Astro           | `@ycloud-web/icons-astro`        | `packages/icons-astro`        |
+| 静态资源        | `@ycloud-web/icons-static`       | `packages/icons-static`       |
+| 图标数据        | `@ycloud-web/icons-data`         | `packages/icons-data`         |
 
 ## 使用示例
 

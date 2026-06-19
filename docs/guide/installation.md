@@ -243,7 +243,7 @@ bun add @ycloud-web/icons-astro@latest
 
 ## 静态资源
 
-静态 SVG 文件、SVG Sprite、图标字体和 SVG 字符串模块。
+静态 SVG 文件、SVG Sprite、Icon Font 和 SVG 字符串模块。
 
 ::: code-group
 

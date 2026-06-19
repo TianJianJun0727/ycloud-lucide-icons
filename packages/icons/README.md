@@ -74,4 +74,6 @@ CDN 方式会暴露全局变量 `ycloud`：
 
 ## 许可证
 
+YCloud Icons 基于 [Lucide](https://github.com/lucide-icons/lucide) 二次开发，保留上游 ISC 许可证与必要的第三方授权说明。本包在此基础上提供面向 Web 和 JavaScript 应用的核心运行时。
+
 YCloud Icons 基于 ISC 许可证发布。详见 [LICENSE](https://tianjianjun0727.github.io/ycloud-icons/license)。
