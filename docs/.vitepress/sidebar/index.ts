@@ -91,7 +91,7 @@ const sidebarDesc: Record<string, string> = {
   'Use icons as a web font in your project': '在项目中以 Web Font 方式使用图标。',
   'Use YCloud in your Node.js projects': '在 Node.js 项目中使用 YCloud Icons。',
   'Use YCloud in your JavaScript projects': '在 JavaScript 项目中使用 YCloud Icons。',
-  'Using content template element with ycloud': '在 ycloud 中使用 content template element。',
+  'Using content template element with ycloud': '在 YCloud Icons 中使用内容模板元素。',
   'Design rules and SVG conventions for YCloud Icons': 'YCloud Icons 的设计规则与 SVG 代码约定。',
 };
 

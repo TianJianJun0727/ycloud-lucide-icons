@@ -48,9 +48,9 @@ export const ycloudSidebar = [
         desc: 'All exported types and how to use them',
       },
       {
-        text: 'Template element',
+        text: '模板元素',
         link: '/guide/ycloud/advanced/content-template-element',
-        desc: 'Using content template element with ycloud',
+        desc: '在 YCloud Icons 中使用内容模板元素。',
       },
       {
         text: 'Accessibility',

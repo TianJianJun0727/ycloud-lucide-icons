@@ -5,13 +5,26 @@ import { IconEntity } from '../.vitepress/theme/types';
 
 export default {
   paths: async () => {
+    const iconDetailsByName = Object.fromEntries(
+      (Object.values(iconDetails) as unknown as IconEntity[]).map((iconEntity) => [
+        iconEntity.name,
+        iconEntity,
+      ]),
+    );
+
     return (Object.values(iconDetails) as unknown as IconEntity[]).map((iconEntity) => {
       const params = {
         ...iconEntity,
-        relatedIcons: relatedIcons[iconEntity.name].map((name: string) => ({
-          name,
-          iconNode: iconNodes[name],
-        })),
+        relatedIcons: relatedIcons[iconEntity.name].map((name: string) => {
+          const relatedIcon = iconDetailsByName[name];
+
+          return {
+            name,
+            displayName: relatedIcon?.displayName,
+            i18n: relatedIcon?.i18n,
+            iconNode: iconNodes[name],
+          };
+        }),
       };
 
       return {

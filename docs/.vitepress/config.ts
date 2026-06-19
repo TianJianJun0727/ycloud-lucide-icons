@@ -65,6 +65,7 @@ const sidebarDesc: Record<string, string> = {
   'Using filled icons in @ycloud-web/icons-react': '在 @ycloud-web/icons-react 中使用填充图标。',
   'Using filled icons in @ycloud-web/icons-vue': '在 @ycloud-web/icons-vue 中使用填充图标。',
   'Using filled icons in ycloud': '在 ycloud 中使用填充图标。',
+  'Using content template element with ycloud': '在 YCloud Icons 中使用内容模板元素。',
   'Using aliased icon names': '使用图标别名。',
   'Combine multiple icons into one': '将多个图标组合为一个图标。',
   'Dynamically import icons as needed': '按需动态导入图标。',
@@ -151,7 +152,7 @@ export default defineConfig({
   head: getHeadConfig({ title, description, socialTitle, base }),
   transformPageData,
   themeConfig: {
-    logo: '/favicon.ico',
+    logo: '/logo-icon.svg',
     nav,
     sidebar: localizeSidebar(sidebar),
     socialLinks: [{ icon: 'github', link: 'https://github.com/TianJianJun0727/ycloud-icons' }],
