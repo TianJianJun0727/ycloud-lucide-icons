@@ -234,36 +234,6 @@ svg.my-icon {
 }
 ```
 
-## 使用 YCloud Icons Lab 或自定义图标
-
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
-
-这些图标不会以独立组件形式提供，但仍可以像官方图标一样传给 `YCloudIcon` 组件：
-
-```html
-<!-- 直接作为 YCloudIconData 传入： -->
-<svg [ycloudIcon]="CoconutIcon"></svg>
-
-<!-- 通过 provider 按名称使用： -->
-<svg ycloudIcon="coconut"></svg>
-```
-
-```ts{2,6-7,11-12}
-import { provideYCloudIcons } from '@ycloud-web/icons-angular';
-import { coconut } from '@ycloud-web/icons-lab';
-
-@Component({
-  templateUrl: './foobar.html',
-  // 通过 provider 按名称使用：
-  providers: [provideYCloudIcons({ coconut })],
-  imports: [YCloudIcon]
-})
-export class Foobar {
-  // 直接作为 YCloudIconData 传入：
-  readonly CoconutIcon = coconut;
-}
-```
-
 ## 故障排查
 
 ### 图标未显示

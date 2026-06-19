@@ -53,11 +53,6 @@ export const svelteSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/svelte/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-svelte',
-      },
-      {
         text: 'Filled icons',
         link: '/guide/svelte/advanced/filled-icons',
         desc: 'Using filled icons in @ycloud-web/icons-svelte',
@@ -68,5 +63,5 @@ export const svelteSidebar = [
         desc: 'Combine multiple icons into one',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

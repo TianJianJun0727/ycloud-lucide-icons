@@ -41,7 +41,6 @@ const sidebarText: Record<string, string> = {
   Typescript: 'TypeScript',
   Accessibility: '无障碍',
   'Global styling': '全局样式',
-  'With YCloud Icons Lab': '使用 YCloud Icons Lab',
   'Filled icons': '填充图标',
   'Aliased Names': '别名',
   'Combining icons': '组合图标',
@@ -63,11 +62,6 @@ const sidebarDesc: Record<string, string> = {
   'All exported types and how to use them': '导出的类型以及使用方式。',
   'Making your icons accessible': '让图标更易访问。',
   'Apply global styles to all icons': '为所有图标应用全局样式。',
-  'Using ycloud-lab with @ycloud-web/icons-react':
-    '在 @ycloud-web/icons-react 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-vue':
-    '在 @ycloud-web/icons-vue 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with ycloud': '在 ycloud 中使用 YCloud Icons Lab。',
   'Using filled icons in @ycloud-web/icons-react': '在 @ycloud-web/icons-react 中使用填充图标。',
   'Using filled icons in @ycloud-web/icons-vue': '在 @ycloud-web/icons-vue 中使用填充图标。',
   'Using filled icons in ycloud': '在 ycloud 中使用填充图标。',

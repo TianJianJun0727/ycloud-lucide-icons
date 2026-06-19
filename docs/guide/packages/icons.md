@@ -37,11 +37,11 @@ export type YCloudIconData = {
 } & ({ size: number } | { width: number; height: number });
 ```
 
-| name                         | type               | description                                                        |
-| ---------------------------- | ------------------ | ------------------------------------------------------------------ |
-| `name`                       | `string`           | 图标名称。                                                         |
-| `node`                       | `YCloudIconNode[]` | SVG 子节点，格式为 `[tagName, attributes]` 元组。                  |
-| `size` or `width` & `height` | `number`           | 图标尺寸（`size` 是正方形图标的简写）。                            |
+| name                         | type               | description                                       |
+| ---------------------------- | ------------------ | ------------------------------------------------- |
+| `name`                       | `string`           | 图标名称。                                        |
+| `node`                       | `YCloudIconNode[]` | SVG 子节点，格式为 `[tagName, attributes]` 元组。 |
+| `size` or `width` & `height` | `number`           | 图标尺寸（`size` 是正方形图标的简写）。           |
 
 ## 使用方式
 
@@ -61,16 +61,16 @@ import { House } from '@ycloud-web/icons-data';
 
 当前支持以下参数（名称与当前实现保持一致）：
 
-| param                 | type                     | effect                                                                                                                                             |
-| --------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`               | `string`                 | 设置 `stroke`，默认值为 `currentColor`。                                                                                                           |
-| `size`                | `number`                 | 同时设置 `width` 和 `height`，默认值为 24。                                                                                                        |
-| `width`               | `number`                 | 只设置 `width`。                                                                                                                                   |
-| `height`              | `number`                 | 只设置 `height`。                                                                                                                                  |
-| `strokeWidth`         | `number`                 | 设置 `stroke-width`，默认值为 2。                                                                                                                  |
-| `absoluteStrokeWidth` | `boolean`                | 向子元素添加 [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect)。          |
-| `className`           | `string`                 | 追加到生成的 `class` 属性中。                                                                                                                      |
-| `attributes`          | `Record<string, string>` | 添加或覆盖任意生成的 SVG 属性，包括 `class`、`viewBox` 等。                                                                                        |
+| param                 | type                     | effect                                                                                                                                    |
+| --------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `color`               | `string`                 | 设置 `stroke`，默认值为 `currentColor`。                                                                                                  |
+| `size`                | `number`                 | 同时设置 `width` 和 `height`，默认值为 24。                                                                                               |
+| `width`               | `number`                 | 只设置 `width`。                                                                                                                          |
+| `height`              | `number`                 | 只设置 `height`。                                                                                                                         |
+| `strokeWidth`         | `number`                 | 设置 `stroke-width`，默认值为 2。                                                                                                         |
+| `absoluteStrokeWidth` | `boolean`                | 向子元素添加 [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect)。 |
+| `className`           | `string`                 | 追加到生成的 `class` 属性中。                                                                                                             |
+| `attributes`          | `Record<string, string>` | 添加或覆盖任意生成的 SVG 属性，包括 `class`、`viewBox` 等。                                                                               |
 
 ::: info
 builder 生成的 SVG 属性包含默认的 YCloud 配置（`xmlns`、`viewBox`、`fill="none"`、`stroke="currentColor"`、`stroke-width="2"`、`stroke-linecap="round"`、`stroke-linejoin="round"`），以及形如 `ycloud ycloud-{iconName}` 的 class 字符串。

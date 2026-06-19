@@ -58,15 +58,10 @@ export const ycloudSidebar = [
         desc: 'Making your icons accessible',
       },
       {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/ycloud/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with ycloud',
-      },
-      {
         text: 'Filled icons',
         link: '/guide/ycloud/advanced/filled-icons',
         desc: 'Using filled icons in ycloud',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

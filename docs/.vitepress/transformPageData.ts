@@ -6,11 +6,7 @@ const shouldSkipOG = process.env.DOCS_SKIP_OG === '1';
 
 export async function transformPageData(pageData: PageData) {
   pageData.frontmatter.head ??= [];
-  if (
-    pageData.relativePath.startsWith('icons/') &&
-    !pageData.relativePath.startsWith('icons/lab/') &&
-    pageData.params?.name
-  ) {
+  if (pageData.relativePath.startsWith('icons/') && pageData.params?.name) {
     const iconName = pageData.params.name;
     pageData.title = `${iconName} icon details`;
 
@@ -26,7 +22,9 @@ export async function transformPageData(pageData: PageData) {
 
     const structuredData = await getStructuredData(iconName, pageData);
 
-    const ogPath = shouldSkipOG ? undefined : await createIconOGImage(iconName, pageData.params?.tags || []);
+    const ogPath = shouldSkipOG
+      ? undefined
+      : await createIconOGImage(iconName, pageData.params?.tags || []);
 
     if (ogPath) {
       const content = `https://tianjianjun0727.github.io/ycloud-icons${ogPath}`;

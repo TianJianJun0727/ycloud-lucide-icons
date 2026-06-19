@@ -71,7 +71,7 @@ export default IconButton;
 ## `IconNode`
 
 图标原始 SVG 结构的类型。它是一个由 SVG 元素及其属性组成的数组，用于渲染图标。
-应用代码通常不会直接使用它，但在自定义图标或 YCloud Icons Lab 等进阶场景中会很有用。
+应用代码通常不会直接使用它，但在自定义图标等进阶场景中会很有用。
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];

@@ -73,18 +73,18 @@ export const appConfig: ApplicationConfig = {
 
 ## 使用自定义图标节点
 
-如果你有来自本地来源或 `@ycloud-web/icons-lab` 的自定义图标节点，可以使用 `ycloudLegacyIcon` 将它们转换为图标数据对象。
+如果你有来自本地来源的自定义图标节点，可以使用 `ycloudLegacyIcon` 将它们转换为图标数据对象。
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
 import { CirclePlayIcon, provideYCloudIcons, ycloudLegacyIcon } from '@ycloud-web/icons-angular';
-import { burger } from '@ycloud-web/icons-lab';
+import { customIconNode } from './custom-icon';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideYCloudIcons(
       ycloudLegacyIcon('circle-play', CirclePlayIcon, ['play-circle']),
-      ycloudLegacyIcon('burger', burger, ['hamburger']),
+      ycloudLegacyIcon('custom-icon', customIconNode, ['custom']),
     ),
   ],
 };
@@ -95,8 +95,8 @@ export const appConfig: ApplicationConfig = {
 ```html [app.html]
 <svg ycloudIcon="circle-play"></svg>
 <svg ycloudIcon="play-circle"></svg>
-<svg ycloudIcon="burger"></svg>
-<svg ycloudIcon="hamburger"></svg>
+<svg ycloudIcon="custom-icon"></svg>
+<svg ycloudIcon="custom"></svg>
 ```
 
 ## 转换自定义图标映射
@@ -111,17 +111,17 @@ import {
   UserRoundX,
   ycloudLegacyIconMap,
 } from '@ycloud-web/icons-angular';
-import { burger } from '@ycloud-web/icons-lab';
+import { customIconNode } from './custom-icon';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideYCloudIcons(Circle, ...ycloudLegacyIconMap({ UserRoundX, burger }))],
+  providers: [provideYCloudIcons(Circle, ...ycloudLegacyIconMap({ UserRoundX, customIconNode }))],
 };
 ```
 
 它会把对象 key 转换为 kebab-case 格式的图标名称：
 
 - `UserRoundX` → `user-round-x`
-- `burger` → `burger`
+- `customIconNode` → `custom-icon-node`
 
 原始对象 key 也会作为别名添加，因此下面两种写法都可以使用：
 

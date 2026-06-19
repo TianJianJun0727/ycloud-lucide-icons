@@ -53,11 +53,6 @@ export const vueSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/vue/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-vue',
-      },
-      {
         text: 'Filled icons',
         link: '/guide/vue/advanced/filled-icons',
         desc: 'Using filled icons in @ycloud-web/icons-vue',
@@ -74,5 +69,5 @@ export const vueSidebar = [
         desc: 'Combine multiple icons into one',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

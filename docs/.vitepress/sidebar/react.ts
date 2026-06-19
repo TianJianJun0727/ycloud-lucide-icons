@@ -52,11 +52,6 @@ export const reactSidebar = [
         link: '/guide/react/advanced/global-styling',
         desc: 'Apply global styles to all icons',
       },
-      {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/react/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-react',
-      },
       // {
       //   text: 'Animations',
       //   link: '/guide/react/advanced/animations',
@@ -84,5 +79,5 @@ export const reactSidebar = [
         desc: 'Dynamically import icons as needed',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

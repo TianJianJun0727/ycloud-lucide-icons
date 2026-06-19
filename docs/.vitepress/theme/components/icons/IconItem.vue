@@ -6,7 +6,6 @@ import { useRouter, withBase } from 'vitepress';
 import getSVGIcon from '../../utils/getSVGIcon';
 import useConfetti from '../../composables/useConfetti';
 import Tooltip from '../base/Tooltip.vue';
-import { diamond } from '../../../data/iconNodes';
 
 const copiedText = '已复制';
 
@@ -17,7 +16,6 @@ const props = defineProps<{
   displayName?: string;
   iconNode: IconNode;
   active: boolean;
-  externalLibrary?: string;
   customizable?: boolean;
   overlayMode?: boolean;
   hideIcon?: boolean;
@@ -34,9 +32,7 @@ const icon = computed(() => {
   return createYCloudIcon(props.name, props.iconNode);
 });
 
-const href = computed(() =>
-  props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`,
-);
+const href = computed(() => `/icons/${props.name}`);
 
 const resolvedHref = computed(() => withBase(href.value));
 const displayTitle = computed(() =>
@@ -63,17 +59,12 @@ async function navigateToIcon(event) {
     event.preventDefault();
 
     window.history.pushState({}, '', resolvedHref.value);
-    emit(
-      'setActiveIcon',
-      props.externalLibrary ? `${props.externalLibrary}:${props.name}` : props.name,
-    );
+    emit('setActiveIcon', props.name);
   } else {
     event.preventDefault();
     go(resolvedHref.value);
   }
 }
-
-const DiamondIcon = createYCloudIcon('Diamond', diamond);
 </script>
 
 <template>
@@ -97,16 +88,6 @@ const DiamondIcon = createYCloudIcon('Diamond', diamond);
           }"
         />
       </KeepAlive>
-      <div
-        v-if="externalLibrary"
-        class="floating-diamond"
-        aria-hidden="true"
-      >
-        <DiamondIcon
-          fill="currentColor"
-          :size="8"
-        />
-      </div>
     </a>
   </Tooltip>
 </template>

@@ -65,7 +65,8 @@ const mappedIcons = computed(() => {
       ...icon,
       displayName: icon.displayName ?? localizeIconName(icon.name, icon.i18n?.zh?.name),
       displayTags: icon.displayTags ?? localizeIconTags(iconTags, icon.i18n?.zh?.tags),
-      displayCategories: icon.displayCategories ?? localizeIconCategories(iconCategories, icon.i18n?.zh?.categories),
+      displayCategories:
+        icon.displayCategories ?? localizeIconCategories(iconCategories, icon.i18n?.zh?.categories),
       tags: iconTags,
       categories: iconCategories,
     };
@@ -86,9 +87,7 @@ const categories = computed(() => {
 
   return props.categories.map(({ name, title, displayTitle }) => {
     const categoryIcons = props.icons.filter((icon) => {
-      const iconCategories = icon?.externalLibrary
-        ? icon.categories
-        : props.iconCategories[icon.name];
+      const iconCategories = props.iconCategories[icon.name];
 
       return iconCategories?.includes(name);
     });

@@ -52,11 +52,6 @@ export const astroSidebar = [
         link: '/guide/astro/advanced/global-styling',
         desc: 'Apply global styles to all icons',
       },
-      {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/astro/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-astro',
-      },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

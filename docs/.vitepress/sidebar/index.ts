@@ -34,7 +34,6 @@ const sidebarText: Record<string, string> = {
   Typescript: 'TypeScript',
   Accessibility: '无障碍',
   'Global styling': '全局样式',
-  'With YCloud Icons Lab': '使用 YCloud Icons Lab',
   'Filled icons': '填充图标',
   'Aliased Names': '别名',
   'Combining icons': '组合图标',
@@ -71,23 +70,6 @@ const sidebarDesc: Record<string, string> = {
   'Making your icons accessible': '让图标更易访问。',
   'Apply global styles to all icons': '为所有图标应用全局样式。',
   'Apply options and styles globally': '全局应用选项和样式。',
-  'Using ycloud-lab with @ycloud-web/icons-angular':
-    '在 @ycloud-web/icons-angular 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-astro':
-    '在 @ycloud-web/icons-astro 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-preact':
-    '在 @ycloud-web/icons-preact 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-react-native':
-    '在 @ycloud-web/icons-react-native 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-react':
-    '在 @ycloud-web/icons-react 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-solid':
-    '在 @ycloud-web/icons-solid 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-svelte':
-    '在 @ycloud-web/icons-svelte 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with @ycloud-web/icons-vue':
-    '在 @ycloud-web/icons-vue 中使用 YCloud Icons Lab。',
-  'Using ycloud-lab with ycloud': '在 ycloud 中使用 YCloud Icons Lab。',
   'Using filled icons in @ycloud-web/icons-angular':
     '在 @ycloud-web/icons-angular 中使用填充图标。',
   'Using filled icons in @ycloud-web/icons-preact': '在 @ycloud-web/icons-preact 中使用填充图标。',
@@ -163,20 +145,22 @@ function localizeSidebar(source: Sidebar): Sidebar {
   );
 }
 
-const sidebar: Sidebar = localizeSidebar(withIconDesignGuide({
-  '/guide': [{ text: '', link: '/' }],
-  '/guide/ycloud/': ycloudSidebar,
-  '/guide/react/': reactSidebar,
-  '/guide/vue/': vueSidebar,
-  '/guide/svelte/': svelteSidebar,
-  '/guide/solid/': solidSidebar,
-  '/guide/astro/': astroSidebar,
-  '/guide/preact/': preactSidebar,
-  '/guide/react-native/': reactNativeSidebar,
-  '/guide/angular/': angularSidebar,
-  '/guide/static/': ycloudStaticSidebar,
-  // This should be here to keep the sidebar shown on the icons page
-  icons: [{ text: '', link: '/' }],
-}));
+const sidebar: Sidebar = localizeSidebar(
+  withIconDesignGuide({
+    '/guide': [{ text: '', link: '/' }],
+    '/guide/ycloud/': ycloudSidebar,
+    '/guide/react/': reactSidebar,
+    '/guide/vue/': vueSidebar,
+    '/guide/svelte/': svelteSidebar,
+    '/guide/solid/': solidSidebar,
+    '/guide/astro/': astroSidebar,
+    '/guide/preact/': preactSidebar,
+    '/guide/react-native/': reactNativeSidebar,
+    '/guide/angular/': angularSidebar,
+    '/guide/static/': ycloudStaticSidebar,
+    // This should be here to keep the sidebar shown on the icons page
+    icons: [{ text: '', link: '/' }],
+  }),
+);
 
 export default sidebar;

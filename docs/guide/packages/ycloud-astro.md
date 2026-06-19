@@ -138,27 +138,6 @@ const menuItems: MenuItem[] = [
 }
 ```
 
-## 使用 YCloud Icons Lab 或自定义图标
-
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
-
-可以通过 `Icon` 组件使用它们。
-普通 YCloud Icons 支持的所有 props 都可以传入，用于调整图标外观。
-
-### 使用 `Icon` 组件
-
-下面会根据传入的 iconNode 创建并渲染一个 YCloud 图标组件。
-
-```astro
----
-import { Icon } from '@ycloud-web/icons-astro';
-import { burger, sausage } from '@ycloud-web/icons-lab';
----
-
-<Icon iconNode={burger} />
-<Icon iconNode={sausage} color="red"/>
-```
-
 ## 一个通用图标组件
 
 可以创建一个通用图标组件来加载图标，但不推荐这样做。

@@ -52,11 +52,6 @@ export const preactSidebar = [
         link: '/guide/preact/advanced/global-styling',
         desc: 'Apply global styles to all icons',
       },
-      {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/preact/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-preact',
-      },
       // {
       //   text: 'Animations',
       //   link: '/guide/preact/advanced/animations',
@@ -78,5 +73,5 @@ export const preactSidebar = [
         desc: 'Combine multiple icons into one',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

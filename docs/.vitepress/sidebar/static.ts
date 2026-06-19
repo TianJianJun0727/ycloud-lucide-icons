@@ -64,5 +64,5 @@ export const ycloudStaticSidebar = [
         link: '/guide/static/js-modules/web',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

@@ -18,14 +18,12 @@ export interface IconMetaData {
   toBeRemovedInVersion?: string;
 }
 
-export type ExternalLibs = 'lab';
 export interface IconEntity extends IconMetaData {
   name: string;
   displayName?: string;
   displayTags?: string[];
   displayCategories?: string[];
   iconNode: IconNode;
-  externalLibrary?: ExternalLibs;
   createdRelease?: Release;
   changedRelease?: Release;
   popularity?: number;

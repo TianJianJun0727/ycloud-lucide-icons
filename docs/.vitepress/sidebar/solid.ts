@@ -52,11 +52,6 @@ export const solidSidebar = [
         link: '/guide/solid/advanced/global-styling',
         desc: 'Apply global styles to all icons',
       },
-      {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/solid/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-solid',
-      },
       // {
       //   text: 'Animations',
       //   link: '/guide/solid/advanced/animations',
@@ -79,5 +74,5 @@ export const solidSidebar = [
       //   desc: 'Combine multiple icons into one',
       // },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

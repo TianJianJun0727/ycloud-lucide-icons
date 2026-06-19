@@ -52,11 +52,6 @@ export const angularSidebar = [
         link: '/guide/angular/advanced/global-styling',
         desc: 'Apply global styles to all icons',
       },
-      {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/angular/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-angular',
-      },
       // {
       //   text: 'Animations',
       //   link: '/guide/angular/advanced/animations',
@@ -83,5 +78,5 @@ export const angularSidebar = [
         desc: 'Provide icons at app level and use them by name',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

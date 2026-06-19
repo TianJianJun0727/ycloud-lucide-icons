@@ -19,7 +19,7 @@
 
 ## 适用场景
 
-`@ycloud-web/icons-static` 适合一些_非常具体的场景_：你希望使用 YCloud Icons，但不想依赖 JavaScript 框架或组件系统。它适合：
+`@ycloud-web/icons-static` 适合一些*非常具体的场景*：你希望使用 YCloud Icons，但不想依赖 JavaScript 框架或组件系统。它适合：
 
 - 使用纯 CSS 或 utility-first 框架消费 Icon font 的项目。
 - 直接在 HTML 中嵌入原始 SVG 文件或 sprites。

@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import type { IconEntity } from '../../types'
-import IconItem from './IconItem.vue'
+import type { IconEntity } from '../../types';
+import IconItem from './IconItem.vue';
 
-const emit = defineEmits(['setActiveIcon'])
+const emit = defineEmits(['setActiveIcon']);
 
 defineProps<{
-  icons: IconEntity[]
-  activeIcon?: string
-  overlayMode?: boolean
-  hideIcons?: boolean
-}>()
+  icons: IconEntity[];
+  activeIcon?: string;
+  overlayMode?: boolean;
+  hideIcons?: boolean;
+}>();
 
 function setActiveIcon(name: string) {
-  emit('setActiveIcon', name)
+  emit('setActiveIcon', name);
 }
-
 </script>
 
 <template>
@@ -28,7 +27,6 @@ function setActiveIcon(name: string) {
         :iconNode="icon.iconNode"
         :name="icon.name"
         :displayName="icon.displayName"
-        :externalLibrary="icon.externalLibrary"
         @setActiveIcon="setActiveIcon"
         :active="activeIcon === icon.name"
         customizable

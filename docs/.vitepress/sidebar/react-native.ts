@@ -48,11 +48,6 @@ export const reactNativeSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With YCloud Icons Lab',
-        link: '/guide/react-native/advanced/with-ycloud-lab',
-        desc: 'Using ycloud-lab with @ycloud-web/icons-react-native',
-      },
-      {
         text: 'Filled icons',
         link: '/guide/react-native/advanced/filled-icons',
         desc: 'Using filled icons in @ycloud-web/icons-react-native',
@@ -68,5 +63,5 @@ export const reactNativeSidebar = [
         desc: 'Combine multiple icons into one',
       },
     ],
-  }
+  },
 ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

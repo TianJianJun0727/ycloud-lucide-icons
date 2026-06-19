@@ -56,11 +56,11 @@ export function provideYCloudIcons(...icons: Array<YCloudIcon | YCloudIconData>)
  * ```ts
  * import { provideYCloudIcons, ycloudLegacyIcon } from '@ycloud-web/icons-angular';
  * import { UserRoundX } from 'ycloud-angular';
- * import { burger } from '@ycloud-web/icons-lab';
+ * import { customIconNode } from './custom-icon';
  *
  * provideYCloudIcons(
  *   ycloudLegacyIcon('user-round-x', UserRoundX, ['user-circle-x']),
- *   ycloudLegacyIcon('burger', burger, ['hamburger']),
+ *   ycloudLegacyIcon('custom-icon', customIconNode, ['custom']),
  * ),
  * ```
  */
@@ -83,11 +83,11 @@ export function ycloudLegacyIcon(
  * ```ts
  * import { provideYCloudIcons, ycloudLegacyIconMap, YCloudCircle } from '@ycloud-web/icons-angular';
  * import { UserRoundX } from 'ycloud-angular';
- * import { burger } from '@ycloud-web/icons-lab';
+ * import { customIconNode } from './custom-icon';
  *
  * provideYCloudIcons(
  *   YCloudCircle,
- *   ...ycloudLegacyIconMap({ UserRoundX, burger }),
+ *   ...ycloudLegacyIconMap({ UserRoundX, customIconNode }),
  * ),
  * ```
  */

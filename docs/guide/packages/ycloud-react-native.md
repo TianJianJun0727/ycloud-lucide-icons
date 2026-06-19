@@ -78,24 +78,6 @@ const App = () => {
 };
 ```
 
-## 使用 YCloud Icons Lab 或自定义图标
-
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
-
-可以通过 `Icon` 组件使用它们。
-和普通 YCloud Icons 一样，也可以传入各类 props 调整图标外观。
-
-### 使用 `Icon` 组件
-
-下面会根据传入的 iconNode 创建并渲染一个 YCloud 图标组件。
-
-```jsx
-import { Icon } from '@ycloud-web/icons-react-native';
-import { coconut } from '@ycloud-web/icons-lab';
-
-const App = () => <Icon iconNode={coconut} />;
-```
-
 ## 一个通用图标组件
 
 可以创建一个通用图标组件来加载图标，但不推荐这样做。

@@ -7,8 +7,6 @@ import CopyCodeButton from './CopyCodeButton.vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { useData, useRouter, withBase } from 'vitepress';
 import { computed } from 'vue';
-import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
-import { diamond } from '../../../data/iconNodes';
 import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
 import { localizeIconCategories, localizeIconName, localizeIconTags } from '../../utils/iconI18n';
 
@@ -33,10 +31,11 @@ const displayName = computed(() =>
 );
 
 const displayCategories = computed(() =>
-  localizeIconCategories(props.icon.categories, props.icon.displayCategories ?? props.icon.i18n?.zh?.categories),
+  localizeIconCategories(
+    props.icon.categories,
+    props.icon.displayCategories ?? props.icon.i18n?.zh?.categories,
+  ),
 );
-
-const DiamondIcon = createYCloudIcon('Diamond', diamond);
 
 const deprecatedTitle = computed(() => {
   if (!props.icon.deprecationReason) return '';
@@ -54,16 +53,6 @@ const deprecatedTitle = computed(() => {
       <IconDetailName class="icon-name">
         {{ displayName }}
       </IconDetailName>
-      <div
-        v-if="icon.externalLibrary"
-        class="icon-external-lib"
-      >
-        <DiamondIcon
-          fill="currentColor"
-          :size="12"
-        />
-        {{ icon.externalLibrary }}
-      </div>
       <Badge
         v-if="icon.deprecated"
         class="deprecated-badge"
@@ -92,30 +81,10 @@ const deprecatedTitle = computed(() => {
 
     <div class="group buttons">
       <VPButton
-        v-if="
-          !page?.relativePath?.startsWith?.(
-            icon.externalLibrary
-              ? `icons/${icon.externalLibrary}/${icon.name}`
-              : `icons/${icon.name}`,
-          )
-        "
-        :href="
-          withBase(
-            icon.externalLibrary
-              ? `/icons/${icon.externalLibrary}/${icon.name}`
-              : `/icons/${icon.name}`,
-          )
-        "
+        v-if="!page?.relativePath?.startsWith?.(`icons/${icon.name}`)"
+        :href="withBase(`/icons/${icon.name}`)"
         text="查看详情"
-        @click="
-          go(
-            withBase(
-              icon.externalLibrary
-                ? `/icons/${icon.externalLibrary}/${icon.name}`
-                : `/icons/${icon.name}`,
-            ),
-          )
-        "
+        @click="go(withBase(`/icons/${icon.name}`))"
       />
       <CopySVGButton
         :name="icon.name"

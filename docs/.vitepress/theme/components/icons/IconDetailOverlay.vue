@@ -11,31 +11,19 @@ import IconInfo from './IconInfo.vue';
 import Badge from '../base/Badge.vue';
 import { computedAsync } from '@vueuse/core';
 import { satisfies } from 'semver';
-import { useExternalLibs } from '../../composables/useExternalLibs';
 
 const props = defineProps<{
   iconName: string | null;
 }>();
-
-const { externalIconNodes } = useExternalLibs();
 
 const { go } = useRouter();
 
 const icon = computedAsync<IconEntity | null>(async () => {
   if (props.iconName) {
     try {
-      if (props.iconName.includes(':')) {
-        const [library, name] = props.iconName.split(':');
-
-        return externalIconNodes.value[library].find((icon) => icon.name === name);
-      } else {
-        return (await import(`../../../data/iconDetails/${props.iconName}.ts`))
-          .default as IconEntity;
-      }
+      return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity;
     } catch (err) {
-      if (!props.iconName.includes(':')) {
-        go(withBase(`/icons/${props.iconName}`));
-      }
+      go(withBase(`/icons/${props.iconName}`));
     }
   }
   return null;
@@ -75,17 +63,7 @@ const Expand = createYCloudIcon('Expand', expand);
             :href="releaseTagLink(icon.createdRelease.version)"
             >v{{ icon.createdRelease.version }}</Badge
           >
-          <IconButton
-            @click="
-              go(
-                withBase(
-                  icon.externalLibrary
-                    ? `/icons/${icon.externalLibrary}/${icon.name}`
-                    : `/icons/${icon.name}`,
-                ),
-              )
-            "
-          >
+          <IconButton @click="go(withBase(`/icons/${icon.name}`))">
             <component :is="Expand" />
           </IconButton>
           <IconButton @click="onClose">
