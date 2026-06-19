@@ -58,11 +58,29 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package:
-          - '@ycloud-web/icons'
-          - '@ycloud-web/icons-react'
-          - '@ycloud-web/icons-vue'
-          - '@ycloud-web/icons-data'
+        include:
+          - package: '@ycloud-web/icons'
+            hasTest: true
+          - package: '@ycloud-web/icons-react'
+            hasTest: true
+          - package: '@ycloud-web/icons-vue'
+            hasTest: true
+          - package: '@ycloud-web/icons-data'
+            hasTest: true
+          - package: '@ycloud-web/icons-angular'
+            hasTest: true
+          - package: '@ycloud-web/icons-astro'
+            hasTest: true
+          - package: '@ycloud-web/icons-svelte'
+            hasTest: true
+          - package: '@ycloud-web/icons-solid'
+            hasTest: true
+          - package: '@ycloud-web/icons-preact'
+            hasTest: true
+          - package: '@ycloud-web/icons-react-native'
+            hasTest: true
+          - package: '@ycloud-web/icons-static'
+            hasTest: false
 
     steps:
       - uses: actions/checkout@v6
@@ -72,6 +90,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           cache: pnpm
+          registry-url: https://registry.npmjs.org
           node-version-file: package.json
 
       - name: Verify pnpm version
@@ -87,10 +106,11 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} build
 
       - name: Test
+        if: ${{ matrix.hasTest == true }}
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --tag ${{ needs.prepare.outputs.npm-tag }} --no-git-checks
+        run: pnpm --filter ${{ matrix.package }} publish --tag ${{ needs.prepare.outputs.npm-tag }} --access public --provenance --no-git-checks
         env:
           NPM_CONFIG_PROVENANCE: true
 
