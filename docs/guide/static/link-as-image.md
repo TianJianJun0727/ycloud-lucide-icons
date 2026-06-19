@@ -1,18 +1,18 @@
 ---
-description: Learn how to use YCloud icons as images in your project.
+description: 了解如何在项目中把 YCloud Icons 作为图片使用。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Link as Image
+# 作为图片链接
 
-In some cases, you might want to use YCloud icons as images instead of inline SVGs. This can be useful for performance reasons or when you want to use the icons in contexts where inline SVGs are not supported.
+某些情况下，你可能希望把 YCloud Icons 作为图片使用，而不是内联 SVG。出于性能原因，或在不支持内联 SVG 的场景中，这会很有用。
 
-## In HTML
+## 在 HTML 中使用
 
-You can link to the SVG files directly in your HTML using the `<img>` tag. The path to the SVG files will depend on how you have set up your project.
+可以在 HTML 中使用 `<img>` 标签直接链接 SVG 文件。SVG 文件路径取决于你的项目配置方式。
 
 ::: code-group
 
@@ -51,14 +51,14 @@ You can link to the SVG files directly in your HTML using the `<img>` tag. The p
 
 :::
 
-::: warning For CDN users
-Names of icons can change in future releases. Make sure you set an explicit version in the URL to avoid breaking changes.\
+::: warning CDN 用户注意
+图标名称可能会在后续版本中变化。请确保在 URL 中指定明确版本，避免破坏性变更。\
 `https://cdn.jsdelivr.net/npm/@ycloud-web/icons-static@{version}/icons/smile.svg`
 :::
 
-## In CSS
+## 在 CSS 中使用
 
-You can also use the icons as background images in your CSS. This is useful for adding icons to buttons, links, or other elements.
+也可以在 CSS 中把图标作为背景图片使用，适合给按钮、链接或其他元素添加图标。
 
 ::: code-group
 
@@ -82,8 +82,8 @@ You can also use the icons as background images in your CSS. This is useful for 
 
 :::
 
-::: warning For CDN users
-Names of icons can change in future releases. Make sure you set an explicit version in the URL to avoid breaking changes.\
+::: warning CDN 用户注意
+图标名称可能会在后续版本中变化。请确保在 URL 中指定明确版本，避免破坏性变更。\
 `https://cdn.jsdelivr.net/npm/@ycloud-web/icons-static@{version}/icons/smile.svg`
 :::
 

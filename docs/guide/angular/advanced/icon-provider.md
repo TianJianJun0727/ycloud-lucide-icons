@@ -1,17 +1,17 @@
 ---
 title: Icon provider - Angular
-description: Learn how to register icons globally using provideYCloudIcons, including custom and legacy icons.
+description: 了解如何使用 provideYCloudIcons 全局注册图标，包括自定义图标和兼容旧数据的图标。
 ---
 
 # Icon provider
 
-You can use the `YCloudDynamicIcon` component to render icons by name. To use an icon by name, you must first register it with `provideYCloudIcons`.
+可以使用 `YCloudDynamicIcon` 组件按名称渲染图标。按名称使用图标前，需要先通过 `provideYCloudIcons` 注册它。
 
-Make sure you are well acquainted with [how dependency injection in Angular works](https://angular.dev/guide/di).
+建议先了解 [Angular 依赖注入的工作方式](https://angular.dev/guide/di)。
 
-## Registering icons
+## 注册图标
 
-Use `provideYCloudIcons` in your application providers to register icons.
+在应用的 providers 中使用 `provideYCloudIcons` 注册图标。
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
@@ -26,27 +26,27 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-You can then reference the registered icons by name:
+之后就可以通过名称引用已注册的图标：
 
 ```html [app.html]
 <svg ycloudIcon="square-check"></svg> <svg ycloudIcon="circle-alert"></svg>
 ```
 
-## How names are resolved
+## 名称如何解析
 
-Each registered icon is stored by its icon name. For built-in YCloud icons, this is typically the kebab-case icon name.
+每个注册图标都会按图标名称保存。对于内置 YCloud Icons，通常是 kebab-case 格式的图标名称。
 
-For example, registering `YCloudSquareCheck` makes it available as:
+例如，注册 `YCloudSquareCheck` 后，可以这样使用：
 
 ```html
 <svg ycloudIcon="square-check"></svg>
 ```
 
-If an icon defines aliases, those aliases are also registered automatically.
+如果图标定义了别名，这些别名也会自动注册。
 
-## Registering custom icons
+## 注册自定义图标
 
-`provideYCloudIcons` can also register custom icon data objects.
+`provideYCloudIcons` 也可以注册自定义图标数据对象。
 
 ```ts [custom-icon.ts]
 import { YCloudIconData } from '@ycloud-web/icons-angular';
@@ -71,9 +71,9 @@ export const appConfig: ApplicationConfig = {
 <svg ycloudIcon="my-custom-icon"></svg>
 ```
 
-## Using custom icon nodes
+## 使用自定义图标节点
 
-If you have custom icon nodes from a local source or `@ycloud-web/icons-lab`, you can convert them using `ycloudLegacyIcon`.
+如果你有来自本地来源或 `@ycloud-web/icons-lab` 的自定义图标节点，可以使用 `ycloudLegacyIcon` 将它们转换为图标数据对象。
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
@@ -90,7 +90,7 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-You can then use both the primary name and any aliases:
+之后可以同时使用主名称和任意别名：
 
 ```html [app.html]
 <svg ycloudIcon="circle-play"></svg>
@@ -99,9 +99,9 @@ You can then use both the primary name and any aliases:
 <svg ycloudIcon="hamburger"></svg>
 ```
 
-## Converting a map of custom icons
+## 转换自定义图标映射
 
-If you already have a map of custom icon nodes, use `ycloudLegacyIconMap` to convert them into icon data objects.
+如果已经有一组自定义图标节点映射，可以使用 `ycloudLegacyIconMap` 将其转换为图标数据对象。
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
@@ -118,12 +118,12 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-This converts the object keys to kebab-case icon names:
+它会把对象 key 转换为 kebab-case 格式的图标名称：
 
 - `UserRoundX` → `user-round-x`
 - `burger` → `burger`
 
-The original object key is also added as an alias, so both of these will work:
+原始对象 key 也会作为别名添加，因此下面两种写法都可以使用：
 
 ```html
 <svg ycloudIcon="UserRoundX"></svg> <svg ycloudIcon="user-round-x"></svg>

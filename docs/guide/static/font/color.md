@@ -1,15 +1,15 @@
 ---
-title: Color the YCloud icon font
-description: Learn how to customize the color of YCloud icons in your static projects using CSS. This guide covers how to change icon colors with CSS classes and inline styles for web font implementations.
+title: 设置 YCloud Icon font 的颜色
+description: 了解如何在静态项目中通过 CSS 调整 YCloud Icon font 的颜色。
 ---
 
-# Color the font
+# 设置 Icon font 颜色
 
-Styling the YCloud icon font with CSS is straightforward. You can change the color of the icons using the `color` property in your CSS. This allows you to easily customize the appearance of the icons to match your design.
+使用 CSS 设置 YCloud Icon font 样式很直接。你可以通过 CSS 的 `color` 属性修改图标颜色，让图标更容易匹配你的设计。
 
-## Changing Icon Color
+## 修改图标颜色
 
-To change the color of the icons, simply apply the `color` property to the element that contains the icon. For example, if you want to change the color of an icon to red, you can use the following CSS:
+要修改图标颜色，只需要把 `color` 属性应用到包含图标的元素上。例如，如果想把图标改成红色，可以使用下面的 CSS：
 
 ```css
 .icon-house {
@@ -17,8 +17,8 @@ To change the color of the icons, simply apply the `color` property to the eleme
 }
 ```
 
-This will change the color of the icon with the class `icon-house` to red. You can use any valid CSS color value, such as hex codes, RGB, or named colors.
+这会把 `icon-house` 类对应的图标颜色改为红色。你可以使用任意合法的 CSS 颜色值，例如十六进制、RGB 或命名颜色。
 
-## Inheriting Color from Parent Elements
+## 继承父元素颜色
 
-By default, the icons will inherit the color from their parent elements. This means that if you set a color on a parent element, all child icons will automatically take on that color unless you override it with a specific color for the icon. The same as text elements in HTML, the icon font will use the `color` property to determine its color, allowing for easy styling and consistency across your project.
+默认情况下，图标会继承父元素颜色。也就是说，如果你在父元素上设置了颜色，子图标会自动使用这个颜色，除非你为图标单独覆盖。和 HTML 文本元素一样，Icon font 使用 `color` 属性决定颜色，方便在项目中保持一致的样式。

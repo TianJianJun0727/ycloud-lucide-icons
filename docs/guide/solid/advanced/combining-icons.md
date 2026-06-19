@@ -1,6 +1,6 @@
 ---
-title: Combining icons - Solid
-description: Learn how to combine multiple icons into a single icon nested SVG elements in your Solid application.
+title: 组合图标 - Solid
+description: 了解如何在 Solid 应用中通过嵌套 SVG 元素把多个图标组合成一个图标。
 ---
 
 <!-- Not working yet -->
@@ -8,10 +8,10 @@ description: Learn how to combine multiple icons into a single icon nested SVG e
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Combining icons
+# 组合图标
 
-You can combine multiple icons into a single icon by nesting SVG elements.
-This is useful if you want to create custom icons by combining existing ones.
+你可以通过嵌套 SVG 元素，把多个图标组合成一个图标。
+当你希望基于现有图标创建自定义图标时，这种方式会很有用。
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-solid"}
 
@@ -39,20 +39,20 @@ export default App;
 
 :::
 
-This is valid, since [SVGs can be nested](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg#nested_svg_element), and all SVG properties are supported on the icons.
-The `x` and `y` coordinates can be adjusted to position the icons as you like.
+这是合法用法，因为 [SVG 可以嵌套](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg#nested_svg_element)，并且图标支持所有 SVG 属性。
+你可以通过调整 `x` 和 `y` 坐标，把内部图标放到需要的位置。
 
-::: info Limitation
-When combining icons, you need to make sure that the `x` and `y` coordinates are within the `viewBox` of the outer icon (24x24).
+::: info 限制
+组合图标时，需要确保 `x` 和 `y` 坐标位于外层图标的 `viewBox` 范围内（24x24）。
 :::
 
-## With native SVG elements
+## 与原生 SVG 元素组合
 
-You can also combine YCloud icons with native SVG elements to build custom icon variations.
+你也可以把 YCloud Icons 和原生 SVG 元素组合起来，构建自定义图标变体。
 
-### Example with notification badge
+### 通知徽标示例
 
-For example, you can add a notification badge to an icon by using the `circle` SVG element.
+例如，可以通过 `circle` SVG 元素给图标添加一个通知徽标。
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=580 editorWidthPercentage=60 dependencies="@ycloud-web/icons-solid"}
 
@@ -84,9 +84,9 @@ export default App;
 
 :::
 
-### Example with text element
+### 文本元素示例
 
-You can also use the `text` SVG element to add text to your icon.
+也可以使用 `text` SVG 元素给图标添加文本。
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-solid"}
 

@@ -1,16 +1,16 @@
 ---
 title: Visual Studio Code
-description: Learn how to use YCloud icons in Visual Studio Code, including tips on tuning autocomplete and viewing JS docs or icon previews.
+description: 了解如何在 Visual Studio Code 中使用 YCloud Icons，包括调整自动补全、查看 JS docs 和图标预览。
 ---
 
 # Visual Studio Code
 
-Visual Studio Code (VS Code) is a popular code editor that provides a wide range of features and extensions to enhance your development experience.
+Visual Studio Code（VS Code）是常用代码编辑器，提供了丰富功能和扩展来提升开发体验。
 
-## Turn off autocomplete in your IDE
+## 关闭 IDE 自动补全
 
-All icons are exported from the main module. This can create a lot of noise in the autocomplete suggestions of your IDE.
-You can turn this off by adding the following setting to your VS Code settings.
+所有图标都会从主模块导出，这可能会让 IDE 自动补全建议变得很嘈杂。
+可以在 VS Code 设置中添加下面的配置关闭它。
 
 ```json [.vscode/settings.json]
 {
@@ -23,14 +23,14 @@ You can turn this off by adding the following setting to your VS Code settings.
 }
 ```
 
-## JS Docs and icon preview
+## JS Docs 和图标预览
 
-Each icon is provided with JS docs. In VS Code, you can hover over the icon component to see the JSdocs.
+每个图标都带有 JS docs。在 VS Code 中，把鼠标悬停到图标组件上即可查看 JS docs。
 
-Also a little preview of the icon is shown.
+同时也会显示一个小的图标预览。
 
 ![VS Code JS Docs](./images/vscode-hover.png)
 
-## Extensions
+## 扩展
 
-YCloud Icons does not currently ship an official VS Code extension. Use TypeScript auto-import and package exports for component-name completion and rename support.
+YCloud Icons 目前没有官方 VS Code 扩展。可以使用 TypeScript 自动导入和 package exports 来获得组件名补全与重命名支持。

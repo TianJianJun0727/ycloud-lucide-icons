@@ -1,6 +1,6 @@
 ---
-title: Getting started - Svelte
-description: This guide will help you get started with YCloud in your Svelte project.
+title: 快速开始 - Svelte
+description: 本指南会帮助你在 Svelte 项目中开始使用 YCloud Icons。
 ---
 
 <script setup>
@@ -9,12 +9,12 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { svelteSidebar } from '../../.vitepress/sidebar/svelte'
 </script>
 
-# Getting started
+# 快速开始
 
-This guide will help you get started with YCloud in your Svelte project.
-Make sure you have a Svelte environment set up. If you don't have one yet, you can create a new Svelte project using Vite, or any other Svelte boilerplate of your choice.
+本指南会帮助你在 Svelte 项目中开始使用 YCloud Icons。
+请先确保你已经准备好 Svelte 开发环境。如果还没有，可以使用 Vite 或其他你熟悉的 Svelte 脚手架创建一个新项目。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -36,11 +36,11 @@ bun add @ycloud-web/icons-svelte
 
 :::
 
-## Importing your first icon
+## 导入第一个图标
 
-YCloud is built with ES Modules, so it's completely tree-shakable.
+YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
-Each icon can be imported as a Svelte component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Svelte component 导入，并渲染为内联 SVG 元素。这样最终产物只会包含你实际导入的图标，其余未使用的图标会被构建工具移除。
 
 ```svelte
 <script>
@@ -52,9 +52,9 @@ Each icon can be imported as a Svelte component, which renders an inline SVG ele
 
 ## Props
 
-To customize the appearance of an icon, you can use the following props:
+你可以通过以下 props 调整图标外观：
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
@@ -62,7 +62,7 @@ To customize the appearance of an icon, you can use the following props:
 | `absoluteStrokeWidth` | _boolean_ | false        |
 | `default-class`       | _string_  | ycloud-icon  |
 
-Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+由于图标最终会渲染为 SVG 元素，所有标准 SVG 属性也可以作为 props 传入。可参考 [MDN 上的 SVG Presentation Attributes 列表](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)。
 
 ```svelte
 <script>
@@ -72,7 +72,7 @@ Because icons render as SVG elements, all standard SVG attributes can also be ap
 <Camera size={48} color="red" strokeWidth={1} />
 ```
 
-More examples and details how to use props, continue the guide:
+继续阅读下面的内容，了解更多 props 用法和示例：
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in svelteSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>

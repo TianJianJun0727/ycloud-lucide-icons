@@ -1,6 +1,6 @@
 ---
-title: Getting started - Angular
-description: This guide will help you get started with YCloud in your Angular project.
+title: 快速开始 - Angular
+description: 本指南会帮助你在 Angular 项目中开始使用 YCloud Icons。
 ---
 
 <script setup>
@@ -9,16 +9,16 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { angularSidebar } from '../../.vitepress/sidebar/angular'
 </script>
 
-# Getting started
+# 快速开始
 
-This guide will help you get started with YCloud in your Angular project.
-Make sure you have an Angular environment set up. If you don't have one yet, you can [create a new Angular project](https://angular.dev/installation#create-a-new-project) using `@angular/cli`.
+本指南会帮助你在 Angular 项目中开始使用 YCloud Icons。
+请先确保你已经准备好 Angular 开发环境。如果还没有，可以使用 `@angular/cli` [创建一个新的 Angular 项目](https://angular.dev/installation#create-a-new-project)。
 
-## Prerequisites
+## 前置要求
 
-This package requires Angular 17+ and uses standalone components, signals, and zoneless change detection.
+该包要求 Angular 17+，并使用 standalone components、signals 和 zoneless change detection。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -40,13 +40,13 @@ bun add @ycloud-web/icons-angular
 
 :::
 
-## Importing your first icon
+## 导入第一个图标
 
-This library is built with standalone components, so it's completely tree-shakable.
+这个库基于 standalone components 构建，因此可以完整支持 tree-shaking。
 
-Every icon can be imported as a ready-to-use standalone component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为可直接使用的 standalone component 导入，并渲染为内联 SVG 元素。这样最终产物只会包含你实际导入的图标，其余未使用的图标会被构建工具移除。
 
-### Standalone icons
+### 独立图标
 
 ```ts
 import { Component } from '@angular/core';
@@ -60,9 +60,9 @@ import { YCloudFileText } from '@ycloud-web/icons-angular';
 export class App {}
 ```
 
-### Dynamic icon component
+### 动态图标组件
 
-When you need to render icons dynamically (for example in a list of menu items or based on a boolean signal), you can use the `YCloudDynamicIcon` component:
+当你需要动态渲染图标时（例如菜单列表或基于 boolean signal 切换图标），可以使用 `YCloudDynamicIcon` 组件：
 
 ```ts
 import { Component, computed, signal } from '@angular/core';
@@ -79,11 +79,11 @@ export class App {
 }
 ```
 
-## Component inputs
+## 组件输入
 
-To customize the appearance of an icon, you can use the following inputs:
+你可以通过以下 inputs 调整图标外观：
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
@@ -91,7 +91,7 @@ To customize the appearance of an icon, you can use the following inputs:
 | `absoluteStrokeWidth` | _boolean_ | false        |
 | `title`               | _string_  | null         |
 
-Because icons render as SVG elements, all standard SVG attributes can also be applied. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+由于图标最终会渲染为 SVG 元素，所有标准 SVG 属性也可以传入。可参考 [MDN 上的 SVG Presentation Attributes 列表](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)。
 
 ```html
 <svg
@@ -103,7 +103,7 @@ Because icons render as SVG elements, all standard SVG attributes can also be ap
 ></svg>
 ```
 
-For more examples and details on how to use these inputs, continue the guide:
+继续阅读下面的内容，了解更多 inputs 用法和示例：
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in angularSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>

@@ -1,16 +1,16 @@
 ---
-title: Typescript - React Native
-description: Learn about the different types exported by the `@ycloud-web/icons-react-native` package and how to use them in your React Native application.
+title: TypeScript - React Native
+description: 了解 `@ycloud-web/icons-react-native` 包导出的类型，以及如何在 React Native 应用中使用它们。
 ---
 
-# TypeScript Support
+# TypeScript 支持
 
-List of exported types from the `@ycloud-web/icons-react-native` package.
-These can be used to type your components when using YCloud icons in a TypeScript React project
+下面是 `@ycloud-web/icons-react-native` 包导出的类型。
+在 TypeScript React 项目中使用 YCloud Icons 时，可以用这些类型为组件补充类型约束。
 
 ## `YCloudIconsProps`
 
-Exports all props that can be passed to an icon component and SVG props supported by [react-native-svg](https://github.com/software-mansion/react-native-svg).
+导出图标组件支持的全部 props，以及 [react-native-svg](https://github.com/software-mansion/react-native-svg) 支持的 SVG props。
 
 ```ts
 interface YCloudIconsProps {
@@ -18,13 +18,13 @@ interface YCloudIconsProps {
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
-  [key: string]: any; // Any other SVG props, supported by react-native-svg
+  [key: string]: any; // 其他 react-native-svg 支持的 SVG props
 }
 ```
 
-### Using `YCloudIconsProps`
+### 使用 `YCloudIconsProps`
 
-You can use the `YCloudIconsProps` interface to type your custom icon components or when you need to work with icon props.
+当你封装自定义图标组件，或需要处理图标 props 时，可以使用 `YCloudIconsProps` 接口。
 
 ```tsx
 import { Camera, type YCloudIconsProps } from '@ycloud-web/icons-react-native';
@@ -38,15 +38,15 @@ export default WrapIcon;
 
 ## `YCloudIcon`
 
-Type for individual icon components.
+单个图标组件的类型。
 
 ```ts
 type YCloudIcon = React.FC<YCloudIconsProps>;
 ```
 
-### Using `YCloudIcon`
+### 使用 `YCloudIcon`
 
-You can use the `YCloudIcon` type when you need to work with icon components directly.
+当你需要直接接收或传递图标组件时，可以使用 `YCloudIcon` 类型。
 
 ```tsx
 import { type YCloudIcon } from '@ycloud-web/icons-react-native';
@@ -69,16 +69,16 @@ export default IconButton;
 
 ## `IconNode`
 
-Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Icons Lab.
+图标原始 SVG 结构的类型。它是一个由 SVG 元素及其属性组成的数组，用于渲染图标。
+应用代码通常不会直接使用它，但在自定义图标或 YCloud Icons Lab 等进阶场景中会很有用。
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
-### Using `IconNode`
+### 使用 `IconNode`
 
-You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
+当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```tsx
 import { type IconNode, Icon } from '@ycloud-web/icons-react-native';

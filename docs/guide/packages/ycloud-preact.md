@@ -1,8 +1,8 @@
 ---
-title: YCloud Preact
+title: YCloud Icons for Preact
 ---
 
-# YCloud Preact
+# YCloud Icons for Preact
 
 Preact components for YCloud icons that provide React-like development experience with a smaller footprint. Each icon is a lightweight Preact component that renders as an inline SVG, perfect for applications that need React compatibility with minimal bundle size.
 
@@ -14,7 +14,7 @@ Preact components for YCloud icons that provide React-like development experienc
 - Maintain React compatibility while reducing bundle size
 - Integrate with existing Preact applications and component libraries
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -36,20 +36,20 @@ bun add @ycloud-web/icons-preact
 
 :::
 
-## How to use
+## 使用方式
 
-YCloud is built with ES Modules, so it's completely tree-shakable.
+YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
-Each icon can be imported as a Preact component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Preact component 导入，并渲染为内联 SVG 元素。这样最终产物只会包含你实际导入的图标，其余未使用的图标会被构建工具移除。
 
-### Example
+### 示例
 
 Additional props can be passed to adjust the icon:
 
 ```jsx
 import { Camera } from '@ycloud-web/icons-preact';
 
-// Usage
+// 使用
 const App = () => {
   return (
     <Camera
@@ -64,19 +64,19 @@ export default App;
 
 ## Props
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
 | `strokeWidth`         | _number_  | 2            |
 | `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用 props
 
 To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```jsx
-// Usage
+// 使用
 const App = () => {
   return (
     <Camera
@@ -89,16 +89,16 @@ const App = () => {
 
 > SVG attributes in Preact aren't transformed, so if you want to change for example the `stroke-linejoin` you need to pass it in kebabcase. Basically how the SVG spec want you to write it. See this topic in the [Preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
 
-## With YCloud Icons Lab or custom icons
+## 使用 YCloud Icons Lab 或自定义图标
 
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
 
-They can be used by using the `Icon` component.
-All props like regular YCloud icons can be passed to adjust the icon appearance.
+可以通过 `Icon` 组件使用它们。
+和普通 YCloud Icons 一样，也可以传入各类 props 调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a YCloud icon component.
+下面会根据传入的 iconNode 创建并渲染一个 YCloud 图标组件。
 
 ```jsx
 import { Icon } from '@ycloud-web/icons-preact';
@@ -107,15 +107,15 @@ import { coconut } from '@ycloud-web/icons-lab';
 const App = () => <Icon iconNode={coconut} />;
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用图标组件来加载图标，但不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例会导入所有 ES Modules，使用时需要谨慎。导入全部图标会显著增加应用构建体积，并影响性能。使用 `Webpack`、`Rollup` 或 `Vite` 等构建工具时尤其需要注意。
 :::
 
-### Icon Component Example
+### Icon 组件示例
 
 ```jsx
 import { icons } from '@ycloud-web/icons-preact';
@@ -134,7 +134,7 @@ const Icon = ({ name, color, size }) => {
 export default Icon;
 ```
 
-#### Using the Icon Component
+#### 使用 Icon 组件
 
 ```jsx
 import Icon from './Icon';
@@ -146,11 +146,11 @@ const App = () => {
 export default App;
 ```
 
-## Accessibility
+## 无障碍
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们会通过 `aria-hidden="true"` 对屏幕阅读器隐藏图标。
 
-You can add accessibility attributes using aria-labels.
+可以通过 aria-label 添加无障碍属性。
 
 ```jsx
 import { Check } from '@ycloud-web/icons-preact';

@@ -1,20 +1,19 @@
 ---
-title: Stroke width - Angular
-description: Learn how to adjust the stroke width of icons in your Angular application using the `strokeWidth` input or adjust the strokeWidth appearance using the `absoluteStrokeWidth` input.
+title: 描边宽度 - Angular
+description: 了解如何在 Angular 应用中通过 `strokeWidth` input 调整图标描边宽度，或通过 `absoluteStrokeWidth` input 保持描边宽度恒定。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# Stroke width
+# 描边宽度
 
-All icons are designed with SVG elements using strokes.
-These have a default stroke width of `2px`.
+所有图标都由使用描边的 SVG 元素绘制，默认描边宽度为 `2px`。
 
-The `strokeWidth` can be adjusted to create a different look of the icons.
+可以调整 `strokeWidth`，让图标呈现不同的视觉效果。
 
-## Adjusting stroke width with the `strokeWidth` input
+## 使用 `strokeWidth` input 调整描边宽度
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular"}
 
@@ -37,19 +36,19 @@ export class App {}
 
 :::
 
-## Absolute stroke width
+## 固定描边宽度
 
-When binding the `size` input, the icon's stroke width will be relative to its size, this is the default SVG behavior. The `absoluteStrokeWidth` input is introduced to adjust this behavior to make the stroke width constant no matter the size of the icon.
+绑定 `size` input 时，图标的描边宽度会随尺寸一起缩放，这是 SVG 的默认行为。`absoluteStrokeWidth` input 用来调整这一行为，让图标无论尺寸如何变化，描边宽度都保持固定。
 
-This means that when `absoluteStrokeWidth` is enabled and the `size` of the icons is set to `48px` the `strokeWidth` will still be `2px` on the screen.
+也就是说，当启用 `absoluteStrokeWidth` 且图标 `size` 设置为 `48px` 时，屏幕上的 `strokeWidth` 仍然会保持 `2px`。
 
-Note `2px` is the default stroke width for a YCloud icon, this can be adjusted to all sizes.
+`2px` 是 YCloud Icons 的默认描边宽度，你可以根据需要调整。
 
-![Absolute stroke width comparison](../../../images/absolute-stroke-width-compare.png?raw=true 'Absolute stroke width comparison')
+![固定描边宽度对比](../../../images/absolute-stroke-width-compare.png?raw=true "固定描边宽度对比")
 
-### Adjusting stroke width with `absoluteStrokeWidth` input
+### 使用 `absoluteStrokeWidth` input 调整描边宽度
 
-Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
+将 `absoluteStrokeWidth` 设置为 `true` 后，描边宽度会保持固定。
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular"}
 

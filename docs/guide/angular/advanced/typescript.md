@@ -1,18 +1,18 @@
 ---
-title: Typescript - Angular
-description: All exported types from the `@ycloud-web/icons-angular` package and how to use them in your Angular project.
+title: TypeScript - Angular
+description: 了解 `@ycloud-web/icons-angular` 包导出的全部类型，以及如何在 Angular 项目中使用它们。
 ---
 
-# TypeScript
+# TypeScript 支持
 
-List of exported types from the `@ycloud-web/icons-angular` package.
-These can be used to type your components when using YCloud icons in a TypeScript Angular project
+下面是 `@ycloud-web/icons-angular` 包导出的类型。
+在 TypeScript Angular 项目中使用 YCloud Icons 时，可以用这些类型为组件补充类型约束。
 
-## Types
+## 类型
 
 ### `YCloudIcon`
 
-Represents a self-containing YCloud icon component type that has a static `icon` property. You can use this type in schemas that declare an icon property.
+表示一个自包含的 YCloud Icons 组件类型，并带有静态 `icon` 属性。声明包含图标属性的 schema 时可以使用这个类型。
 
 ```ts
 export interface YCloudIcon extends Type<YCloudIconProps> {
@@ -22,7 +22,7 @@ export interface YCloudIcon extends Type<YCloudIconProps> {
 
 ### `YCloudIconData`
 
-A YCloud icon object that fully describes an icon to be displayed.
+完整描述待显示图标的 YCloud Icons 数据对象。
 
 ```ts
 export type YCloudIconData = {
@@ -32,7 +32,7 @@ export type YCloudIconData = {
 };
 ```
 
-## Type guards
+## 类型守卫
 
 ### `isYCloudIconData`
 

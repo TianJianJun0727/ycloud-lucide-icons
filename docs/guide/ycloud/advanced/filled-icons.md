@@ -1,19 +1,19 @@
 ---
-title: Filled Icons - YCloud
-description: Fills are not officially supported in YCloud, but you can still use the fill attribute on certain icons to create filled versions.
+title: 填充图标 - YCloud
+description: YCloud Icons 目前并不正式支持填充图标，但你仍可以在部分图标上使用 fill 属性创建填充效果。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Filled Icons
+# 填充图标
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+YCloud Icons 目前并不正式支持填充图标。
+不过，所有图标都可以接收 SVG 属性。
+因此在某些图标上仍然可以使用 `fill`，并且效果正常。
 
-Example with stars:
+下面是星级评分的示例：
 
 ::: sandpack {template=vanilla editorHeight=480 editorWidthPercentage=60 dependencies="ycloud"}
 

@@ -1,21 +1,21 @@
 ---
-title: Color - Preact
-description: Learn how to adjust the color of icons in your Preact application using the `color` prop or by using parent elements text color value.
+title: 颜色 - Preact
+description: 了解如何在 Preact 应用中通过 `color` prop 或父元素文本颜色调整图标颜色。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
 
-# Color
+# 颜色
 
-By default, all icons have the color value: `currentColor`. This keyword uses the element's computed text `color` value to represent the icon color.
+默认情况下，所有图标的颜色值都是 `currentColor`。这个关键字会使用元素计算后的文本 `color` 值作为图标颜色。
 
-Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword).
+可以在 [MDN 的 `currentColor` 文档](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword)中了解更多。
 
-## Adjust the color using the `color` prop
+## 使用 `color` prop 调整颜色
 
-The color can be adjusted by passing the color prop to the element.
+可以直接向图标组件传入 color prop 来调整颜色。
 
 ::: sandpack {showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="@ycloud-web/icons-preact"}
 
@@ -36,11 +36,11 @@ export default App;
 
 :::
 
-## Using parent elements text color value
+## 使用父元素文本颜色
 
-Because the color of ycloud icons uses `currentColor`, the color of the icon depends on the computed `color` of the element, or it inherits it from its parent.
+因为 YCloud Icons 使用 `currentColor`，所以图标颜色取决于当前元素计算后的 `color`，也可以从父元素继承。
 
-For example, if a parent element's color value is `#fff` and one of the children is a ycloud icon, the color of the icon will be rendered as `#fff`. This is browser native behavior.
+例如，如果父元素的颜色值是 `#fff`，其中一个子元素是 YCloud Icons 图标，那么图标会渲染为 `#fff`。这是浏览器原生行为。
 
 ::: sandpack {showTabs=false editorHeight=340 editorWidthPercentage=60 dependencies="@ycloud-web/icons-preact"}
 
@@ -52,7 +52,7 @@ function LikeButton() {
   return (
     <button style={{ color: '#fff' }}>
       <ThumbsUp />
-      Like
+      赞
     </button>
   );
 }

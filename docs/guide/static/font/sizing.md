@@ -1,15 +1,15 @@
 ---
-title: Size the YCloud icon font
-description: Learn how to customize the color of YCloud icons in your static projects using CSS. This guide covers how to change icon colors with CSS classes and inline styles for web font implementations.
+title: 设置 YCloud Icon font 的尺寸
+description: 了解如何在静态项目中通过 CSS 调整 YCloud Icon font 的颜色。
 ---
 
-# Size the font
+# 设置 Icon font 尺寸
 
-Styling the YCloud icon font with CSS is straightforward. You can change the color of the icons using the `font-size` property in your CSS. This allows you to easily customize the appearance of the icons to match your design.
+使用 CSS 设置 YCloud Icon font 样式很直接。你可以通过 CSS 的 `font-size` 属性修改图标尺寸，让图标更容易匹配你的设计。
 
-## Changing the size
+## 修改尺寸
 
-To change the size of the icons, simply apply the `font-size` property to the element that contains the icon. For example, if you want to change the size of an icon to 24px, you can use the following CSS:
+要修改图标尺寸，只需要把 `font-size` 属性应用到包含图标的元素上。例如，如果想把图标尺寸改为 24px，可以使用下面的 CSS：
 
 ```css
 .icon-house {
@@ -17,4 +17,4 @@ To change the size of the icons, simply apply the `font-size` property to the el
 }
 ```
 
-This will change the size of the icon with the class `icon-house` to 24px. You can use any valid CSS size value, such as em, rem, or percentage.
+这会把 `icon-house` 类对应的图标尺寸改为 24px。你可以使用任意合法的 CSS 尺寸值，例如 em、rem 或百分比。

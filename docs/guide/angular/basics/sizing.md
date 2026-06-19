@@ -1,17 +1,17 @@
 ---
-title: Sizing - Angular
-description: Learn how to adjust the size of icons in your Angular application using the `size` input or by using CSS.
+title: 尺寸 - Angular
+description: 了解如何在 Angular 应用中通过 `size` input 或 CSS 调整图标尺寸。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# Sizing
+# 尺寸
 
-By default, the size of all icons is `24px` by `24px`. The size is adjustable either by binding the `size` input and CSS.
+默认情况下，所有图标的尺寸都是 `24px` × `24px`。可以通过绑定 `size` input 或使用 CSS 调整尺寸。
 
-## Adjusting the icon size using the `size` input
+## 使用 `size` input 调整图标尺寸
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular"}
 
@@ -34,15 +34,15 @@ export class App {}
 
 :::
 
-## Adjusting the icon size via CSS
+## 通过 CSS 调整图标尺寸
 
-The CSS properties `width` and `height` can be used to adjust the icon size.
+可以使用 CSS 的 `width` 和 `height` 属性调整图标尺寸。
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@ycloud-web/icons-angular"}
 
 ```css /src/app/icon.css [active]
 .my-beer-icon {
-  /* Change this! */
+  /* 修改这里 */
   width: 64px;
   height: 64px;
 }
@@ -67,24 +67,24 @@ export class App {}
 
 :::
 
-### Dynamically change the icon size based on the font size
+### 根据字体大小动态调整图标尺寸
 
-It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
+图标也可以根据字体大小自动缩放，通常可以通过 `em` 单位实现。关于 `em` 的更多信息，可以参考这篇 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems)。
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@ycloud-web/icons-angular"}
 
 ```css /src/app/icon.css [active]
 .my-icon {
-  /* Icon size will relative to font-size of .text-wrapper */
+  /* 图标尺寸会相对于 .text-wrapper 的 font-size */
   width: 1em;
   height: 1em;
 }
 
 .text-wrapper {
-  /* Change this! */
+  /* 修改这里 */
   font-size: 96px;
 
-  /* layout stuff */
+  /* 布局相关 */
   display: flex;
   gap: 0.25em;
   align-items: center;
@@ -103,7 +103,7 @@ import { YCloudStar } from '@ycloud-web/icons-angular';
       ycloudStar
       class="my-icon"
     ></svg>
-    <div>Yes</div>
+    <div>是</div>
   </div>`,
   styleUrls: ['./app.component.css', './icon.css'],
   encapsulation: ViewEncapsulation.None,
@@ -113,9 +113,9 @@ export class App {}
 
 :::
 
-### Resizing with Tailwind
+### 使用 Tailwind 调整尺寸
 
-`size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
+可以使用 `size-*` 工具类调整图标尺寸。关于 `size-*` 工具类的更多信息，可以参考 [Tailwind 文档](https://tailwindcss.com/docs/width#setting-both-width-and-height)。
 
 ```html [app.html]
 <div>

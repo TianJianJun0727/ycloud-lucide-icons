@@ -1,52 +1,52 @@
 ---
-title: Accessibility - Vue
-description: Best practices for accessible icons in your Vue application.
+title: 无障碍 - Vue
+description: Vue 应用中图标无障碍使用的最佳实践。
 ---
 
 <script setup>
 import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>
 
-# Accessibility
+# 无障碍
 
-YCloud icons ship with `aria-hidden="true"` by default. In almost all cases this is exactly what you want.
+YCloud Icons 默认带有 `aria-hidden="true"`。在绝大多数情况下，这正是你需要的行为。
 
-## Should icons be accessible?
+## 图标是否应该被辅助技术读取？
 
-Most of the time, icons are used purely for decoration or visual reinforcement. Exposing decorative icons to assistive technologies can create unnecessary noise for screen reader users.
+大多数时候，图标只是装饰或视觉强化。把装饰性图标暴露给辅助技术，可能会给屏幕阅读器用户带来不必要的干扰。
 
-For a broader explanation of this, and other best practices on how to use icons accessibly in your application, please refer to our detailed guide on accessibility:
+关于这一点的更完整说明，以及在应用中无障碍使用图标的更多最佳实践，请参考无障碍指南：
 
-<OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
+<OverviewLink href="/guide/accessibility" title="无障碍图标" desc="应用中图标无障碍使用的最佳实践。"/>
 
-Only if an icon **conveys essential meaning on its own** should it be made accessible. The sections below explain how to do that in Vue.
+只有当图标本身**承载了必要含义**时，才应该让它被辅助技术读取。下面会说明在 Vue 中如何做到这一点。
 
-## Making an icon accessible
+## 让图标可被辅助技术读取
 
-To expose an icon to assistive technologies, provide an accessible name by passing a `title` element as a child or passing the `aria-label` prop to the icon component.
+如果需要把图标暴露给辅助技术，可以通过子元素传入 `title`，或给图标组件传入 `aria-label` prop，为图标提供可访问名称。
 
-This removes the `aria-hidden` attribute and makes the icon visible to screen readers.
+这样会移除 `aria-hidden` 属性，让屏幕阅读器可以读取这个图标。
 
 ```vue
 <House>
-  <title>This is my house</title>
+  <title>这是我的房子</title>
 </House>
 
 // or
 
-<House aria-label="This is my house" />
+<House aria-label="这是我的房子" />
 ```
 
-Choose a label that clearly describes the meaning of the icon or the action it represents in the context of your application.
+请根据应用上下文选择清晰的标签，描述图标含义或它代表的操作。
 
-## Accessible icon buttons
+## 可访问的图标按钮
 
-When an icon is used inside a button, the accessible label should usually be applied to the button itself, and not the icon.
+当图标用于按钮内部时，通常应该把可访问标签放在按钮上，而不是放在图标上。
 
 ```vue
-<button aria-label="Go to home">
+<button aria-label="返回首页">
   <House />
 </button>
 ```
 
-This ensures assistive technologies describe the interactive element, rather than the decorative graphic inside it.
+这样可以确保辅助技术描述的是可交互元素本身，而不是按钮里的装饰性图形。

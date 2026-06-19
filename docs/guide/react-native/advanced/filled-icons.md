@@ -1,15 +1,15 @@
 ---
-title: Filled Icons - React Native
-description: Learn how to use fills with YCloud icons in your React Native application, and the limitations of using fills with YCloud icons.
+title: 填充图标 - React Native
+description: 了解如何在 React Native 应用中为 YCloud Icons 使用填充，以及这种用法的限制。
 ---
 
-# Filled Icons
+# 填充图标
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+YCloud Icons 目前并不正式支持填充图标。
+不过，所有图标都可以接收 SVG 属性。
+因此在某些图标上仍然可以使用 `fill`，并且效果正常。
 
-Example with stars:
+下面是星级评分的示例：
 
 ```SnackPlayer name=State&ext=js&dependencies=react-native-svg,@ycloud-web/icons-react-native
 import React, {useState, useEffect} from 'react';

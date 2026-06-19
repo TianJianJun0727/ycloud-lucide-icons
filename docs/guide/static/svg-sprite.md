@@ -1,33 +1,33 @@
 ---
-description: Learn how to use SVG sprites with YCloud icons in your project, including basic usage and inline options.
+description: 了解如何在项目中使用 YCloud Icons 的 SVG sprite，包括基础用法和内联用法。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Using the SVG sprite
+# 使用 SVG sprite
 
-Learn how to use SVG sprites with YCloud icons in your project, including basic usage and inline options.
+了解如何在项目中使用 YCloud Icons 的 SVG sprite，包括基础用法和内联用法。
 
-:::warning Not recommended for high traffic production use
-The SVG sprite includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
+:::warning 不建议在高流量生产环境中使用
+SVG sprite 包含全部图标，会显著增加应用包体积和加载时间。生产环境建议使用支持 tree-shaking 的构建工具，只包含实际使用的图标。也可以考虑使用某个框架对应的 [package](../../packages.md)。
 :::
 
-SVG sprites can be loaded as individual image, or used inline with the `<use>` element.
-You may also need an additional SVG loader to handle node_modules imports in your project. Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprite-lz1kk) for a working example.
+SVG sprite 可以作为单独图片加载，也可以通过 `<use>` 元素内联使用。
+项目中可能还需要额外的 SVG loader 来处理 node_modules 导入。可参考这个 [codesandbox 示例](https://codesandbox.io/s/using-the-svg-sprite-lz1kk)。
 
-## Basic sprite usage
+## 基础 sprite 用法
 
-SVG sprites can be imported directory in img tags, and select the icon with <br>the `#{icon-name}` syntax:
+可以直接在 img 标签中导入 SVG sprite，并通过 <br>`#{icon-name}` 语法选择图标：
 
 ```html
 <img src="@ycloud-web/icons-static/sprite.svg#house" />
 ```
 
-## Inline usage
+## 内联用法
 
-You can also use the sprite inline with the `<use>` element. This allows you to apply CSS styles directly to the SVG elements.
+也可以通过 `<use>` 元素内联使用 sprite，这样可以直接给 SVG 元素应用 CSS 样式。
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="@ycloud-web/icons-static"}
 
@@ -66,9 +66,9 @@ document.getElementById('sprite').innerHTML = sprite;
 
 :::
 
-## Inline with CSS helper class
+## 使用 CSS 辅助 class 内联
 
-If you'd prefer, you can use CSS to hold your base SVG properties:
+如果更偏好统一管理，也可以用 CSS 保存基础 SVG 属性：
 
 ::: sandpack {template=vanilla editorHeight=320 editorWidthPercentage=60 dependencies="@ycloud-web/icons-static"}
 

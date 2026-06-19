@@ -1,19 +1,19 @@
 ---
 title: YCloud Icons Lab - Angular
-description: Learn how to use icons from YCloud Icons Lab in your Angular application.
+description: 了解如何在 Angular 应用中使用 YCloud Icons Lab 的图标。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# With YCloud Icons Lab or custom icons
+# 使用 YCloud Icons Lab 或自定义图标
 
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
 
-While they aren't provided as standalone components, they can be still be passed to the `YCloudIcon` component the same way as official icons:
+这些图标不会以独立组件形式提供，但仍可以像官方图标一样传给 `YCloudIcon` 组件：
 
-### Directly as YCloudIconData
+### 直接作为 YCloudIconData 使用
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular,@ycloud-web/icons-lab"}
 
@@ -36,7 +36,7 @@ export class App {
 
 :::
 
-### As a provided icon by name
+### 作为已注册图标按名称使用
 
 ::: sandpack {template=angular editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular,@ycloud-web/icons-lab"}
 
@@ -66,11 +66,11 @@ export const appConfig: ApplicationConfig = {
 
 :::
 
-### Creating custom icon components
+### 创建自定义图标组件
 
-You can also create your own standalone icon components using `YCloudIconBase`.
+你也可以使用 `YCloudIconBase` 创建自己的独立图标组件。
 
-Be sure to use an SVG element selector, e.g. `svg[ycloud{IconName}]`
+请确保使用 SVG 元素选择器，例如 `svg[ycloud{IconName}]`。
 
 ::: sandpack {template=angular editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular,@ycloud-web/icons-lab"}
 

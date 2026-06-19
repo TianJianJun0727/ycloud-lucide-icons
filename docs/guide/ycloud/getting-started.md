@@ -1,6 +1,6 @@
 ---
-title: Getting started - YCloud
-description: This guide will help you get started with YCloud in your Vanilla JavaScript project.
+title: 快速开始 - YCloud
+description: 本指南会帮助你在 Vanilla JavaScript 项目中开始使用 YCloud Icons。
 ---
 
 <script setup>
@@ -9,14 +9,14 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { reactSidebar } from '../../.vitepress/sidebar/react'
 </script>
 
-# Getting started
+# 快速开始
 
-This guide will help you get started with YCloud in your Vanilla JavaScript project.
-Make sure you have a your environment set up. If you don't have one yet, you can create a new project using Vite, Parcel or any other boilerplate of your choice.
+本指南会帮助你在 Vanilla JavaScript 项目中开始使用 YCloud Icons。
+请先确保你已经准备好项目环境。如果还没有，可以使用 Vite、Parcel 或其他你熟悉的脚手架创建一个新项目。
 
-## Installation
+## 安装
 
-### Package Managers
+### 包管理器
 
 ::: code-group
 
@@ -38,13 +38,13 @@ bun add @ycloud-web/icons
 
 :::
 
-## Importing your first icon
+## 导入第一个图标
 
-YCloud is built with ES Modules, so it's completely tree-shakable.
+YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
 The `createIcons` function will search for HTMLElements with the attribute `data-ycloud` and replace it with the svg from the given icon name.
 
-### Example
+### 示例
 
 ```html
 <!-- Your HTML file -->

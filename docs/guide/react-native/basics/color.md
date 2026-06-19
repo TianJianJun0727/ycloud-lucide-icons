@@ -1,17 +1,17 @@
 ---
-title: Color - React Native
-description: Learn how to adjust the color of icons in your React Native application using the `color` prop or by using parent elements text color value.
+title: 颜色 - React Native
+description: 了解如何在 React Native 应用中通过 `color` prop 或父元素文本颜色调整图标颜色。
 ---
 
-# Color
+# 颜色
 
-By default, all icons have the color value: `currentColor`. This keyword uses the element's computed text `color` value to represent the icon color.
+默认情况下，所有图标的颜色值都是 `currentColor`。这个关键字会使用元素计算后的文本 `color` 值作为图标颜色。
 
-Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword).
+可以在 [MDN 的 `currentColor` 文档](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword)中了解更多。
 
-## Adjust the color using the `color` prop
+## 使用 `color` prop 调整颜色
 
-The color can be adjusted by passing the color prop to the element.
+可以直接向图标组件传入 color prop 来调整颜色。
 
 ```SnackPlayer name=State&ext=js&dependencies=react-native-svg,@ycloud-web/icons-react-native
 import React, {useState, useEffect} from 'react';

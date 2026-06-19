@@ -1,19 +1,19 @@
 ---
-title: Filled Icons - Preact
-description: Learn how to use fills with YCloud icons in your Preact application, and the limitations of using fills with YCloud icons.
+title: 填充图标 - Preact
+description: 了解如何在 Preact 应用中为 YCloud Icons 使用填充，以及这种用法的限制。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
 
-# Filled Icons
+# 填充图标
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+YCloud Icons 目前并不正式支持填充图标。
+不过，所有图标都可以接收 SVG 属性。
+因此在某些图标上仍然可以使用 `fill`，并且效果正常。
 
-Example with stars:
+下面是星级评分的示例：
 
 ::: sandpack { editorHeight=580 editorWidthPercentage=60 dependencies="@ycloud-web/icons-preact"}
 

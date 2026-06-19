@@ -4,7 +4,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 # Use YCloud in Node.js
 
-You can also import YCloud icons in Node.js projects, with the @ycloud-web/icons-static package.
+也可以通过 @ycloud-web/icons-static 包在 Node.js 项目中导入 YCloud Icons。
 Each icon is exported as a string containing the SVG markup, which can be used in server-side rendering or static site generation.
 
 ::: code-group
@@ -19,9 +19,9 @@ const { MessageSquare } = require('@ycloud-web/icons-static');
 
 :::
 
-> Note: Each icon name is in PascalCase. You can find the icon names in the [YCloud Icons page](https://tianjianjun0727.github.io/ycloud-icons/icons).
+> 注意：每个图标名称都是 PascalCase。可以在 [YCloud Icons 页面](https://tianjianjun0727.github.io/ycloud-icons/icons)查看图标名称。
 
-## Example with Node.js
+## Node.js 示例
 
 ::: sandpack {template=node showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="@ycloud-web/icons-static"}
 
@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
     <html>
       <body>
         <h1>YCloud Icons</h1>
-        <p>This is a YCloud icon ${MessageSquare}</p>
+        <p>这是一个 YCloud Icons 图标 ${MessageSquare}</p>
 
       </body>
     </html>

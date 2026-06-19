@@ -1,5 +1,5 @@
 ---
-description: Using the web font version of YCloud icons in your project. Learn how to include the stylesheet and use the icons with CSS classes.
+description: 在项目中使用 YCloud Icons 的 Web Font 版本，了解如何引入样式表并通过 CSS class 使用图标。
 nextPage:
   - getting-started
 ---
@@ -10,13 +10,13 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 # Icon Font
 
-YCloud icons are also available as a web font. The font includes all icons as glyphs, allowing you to use them in your project with CSS classes. This can be a convenient option for projects that prefer using icon fonts.
+YCloud Icons 也提供 Web Font 版本。字体会把所有图标作为 glyph 提供，便于通过 CSS class 在项目中使用。对于偏好 Icon Font 的项目，这是一种方便的选择。
 
-:::warning Not recommended for high traffic production use
-The Icon font includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../../packages.md).
+:::warning 不建议在高流量生产环境中使用
+Icon Font 包含全部图标，会显著增加应用包体积和加载时间。生产环境建议使用支持 tree-shaking 的构建工具，只包含实际使用的图标。也可以考虑使用某个框架对应的 [package](../../../packages.md)。
 :::
 
-## Using the CSS Stylesheet
+## 使用 CSS 样式表
 
 ::: code-group
 
@@ -44,17 +44,17 @@ The Icon font includes all icons, which can significantly increase your app's bu
 
 :::
 
-## Using the Icon Font
+## 使用 Icon Font
 
-Once you have included the stylesheet, you can use the icons in your HTML by applying the appropriate CSS classes. Each icon has a corresponding class name that you can use to display it.
+引入样式表后，就可以在 HTML 中通过对应的 CSS class 使用图标。每个图标都有对应的 class 名称用于显示。
 
-For example, to display the "home" icon, you would use the following HTML:
+例如，要显示 “home” 图标，可以使用下面的 HTML：
 
 ```html
 <div class="icon-house"></div>
 ```
 
-## Example with JavaScript
+## JavaScript 示例
 
 <!-- TODO: Fix this example -->
 

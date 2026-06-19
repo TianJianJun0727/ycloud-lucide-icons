@@ -1,121 +1,102 @@
 ---
-title: Accessibility
-description: Learn how to make your icons accessible to all users, including those with disabilities.
+title: 无障碍
+description: 了解如何让图标对所有用户可访问，包括有障碍的用户。
 ---
 
-# Accessibility in depth
+# 深入理解无障碍
 
-Icons are pictures that show what something means without using words. They can be very helpful
-because they can quickly give information.
+图标是在不使用文字的情况下表达含义的图形。它们可以快速传递信息，因此很有帮助。
 
-However, not everyone can understand them easily. When using icons it is very important to consider
-the following aspects of accessibility.
+但并不是每个人都能轻松理解图标。使用图标时，需要重点考虑以下无障碍因素。
 
 ::: info
-By default, we hide icons from screen readers using `aria-hidden="true"`.
-You can make them accessible yourself by following the guidelines below.
+默认情况下，我们会通过 `aria-hidden="true"` 对屏幕阅读器隐藏图标。
+你可以按照下面的指南自行为图标补充无障碍能力。
 :::
 
-## Provide visible labels
+## 提供可见标签
 
-Icons are a helpful tool to improve perception, but they aren't a replacement for text.
+图标有助于提升识别效率，但不能替代文字。
 
-In most cases, it is probably a good idea to also provide a textual representation of your icon's
-function.
+大多数情况下，最好同时提供能说明图标功能的文字。
 
 <!--@include: ../../docs/images/a11y/visible-labels.svg -->
 
-## Contrast
+## 对比度
 
-Ensure there's enough contrast between the icon and its background so that it's visible to people
-with low vision or color vision deficiencies.
+确保图标与背景之间有足够的对比度，让低视力或色觉障碍用户也能看清。
 
-We recommend
-following [WCAG 2.1 SC 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
+建议遵循 [WCAG 2.1 SC 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)。
 
 <!--@include: ../../docs/images/a11y/contrast.svg -->
 
-## Use of color
+## 颜色使用
 
-Avoid relying solely on color to convey meaning in icons, as some users may have color blindness.
-Instead, use additional visual cues like shape, shading or text.
+不要只依赖颜色传达图标含义，因为部分用户可能存在色觉障碍。可以结合形状、阴影或文字等额外视觉线索。
 
 <!--@include: ../../docs/images/a11y/use-of-color.svg -->
 
-## Interactivity
+## 交互性
 
-Ensure that interactive icons are accessible via keyboard navigation and provide clear feedback when
-activated.
+确保可交互图标能通过键盘访问，并在触发时提供清晰反馈。
 
 <!--@include: ../../docs/images/a11y/interactivity.svg -->
 
-In most cases this is easily done by wrapping them in icon buttons.
+大多数情况下，将图标包在图标按钮中即可做到这一点。
 
-## Minimum target size
+## 最小点击区域
 
-Small targets can be difficult to click or touch, if your icon is interactive, we recommend that it
-should have a minimum target size of 44×44 pixels.
+过小的目标很难点击或触摸。如果图标可交互，建议最小目标区域为 44×44 像素。
 
 <!--@include: ../../docs/images/a11y/target-size.svg -->
 
-In practice, this doesn't necessarily mean that the icon itself should be this large, only its
-interactive wrapper element.
+实际使用中，这并不意味着图标本身必须这么大，只要交互容器达到这个尺寸即可。
 
-## Meaningfulness
+## 表意清晰
 
-Icons should represent concepts or actions in a universally understandable way. Avoid using abstract
-or ambiguous, or culture-specific symbols that might confuse some users.
+图标应该以普遍易懂的方式表示概念或动作。避免使用抽象、含糊或强文化语境的符号，以免让部分用户困惑。
 
 <!--@include: ../../docs/images/a11y/meaningfulness.svg -->
 
-## Consistency
+## 一致性
 
-Maintain consistency in icon design and usage across your interface to help users learn and
-understand their meanings more easily.
+在界面中保持图标设计和使用方式一致，可以帮助用户更快学习并理解图标含义。
 
 <!--@include: ../../docs/images/a11y/consistency.svg -->
 
-## Text Alternatives
+## 文本替代
 
-You may have to provide text labels or alternative text descriptions for icons, especially for
-screen readers used by people with visual impairments.
+你可能需要为图标提供文本标签或替代文本说明，尤其是面向视障用户使用的屏幕阅读器时。
 
-However: descriptions should only be provided to standalone icons that aren't purely decorative, as
-providing accessible names to non-functional elements only increases clutter when using screen
-readers.
+不过，说明应只提供给非纯装饰性的独立图标。给非功能性元素提供无障碍名称，只会增加屏幕阅读器中的噪音。
 
-### On standalone icons
+### 独立图标
 
-Icons are usually very unlikely to stand on their own with no semantically meaningful wrapper
-element. In most cases they will be part of a badge, button (including icon buttons), navigation
-item or other interactive UI element.
+图标通常不会在没有语义容器的情况下单独出现。大多数情况下，它们会作为徽标、按钮（包括图标按钮）、导航项或其他交互式 UI 元素的一部分。
 
 ::: warning
-In case some of your icons stand alone, and they serve a non-decorative function, make sure to
-provide the appropriate accessible label for them.
+如果某些图标确实是独立出现，并且承担非装饰性功能，请确保为它们提供合适的无障碍标签。
 :::
 
 <!--@include: ../../docs/images/a11y/alttext-standalone.svg -->
 
-In general try to avoid using functional icons with no interactivity, we recommend that:
+一般来说，应尽量避免使用没有交互能力的功能性图标。建议：
 
-1. you either add a visible description next to them, or
-2. place them in badges, labels or on buttons, and at least add a tooltip to them.
+1. 在图标旁边添加可见说明；或
+2. 将图标放在徽标、标签或按钮中，并至少提供 tooltip。
 
-In any such case, it is preferred that the accessible name be provided for these interactive
-elements (badges, buttons, nav items etc.) only, _not_ the icons themselves.
+在这些情况下，最好只为交互元素（徽标、按钮、导航项等）提供无障碍名称，而不是为图标本身提供。
 
-### On buttons
+### 按钮中的图标
 
-Do not provide an accessible label to icons when used on a button, as this label will be read out by
-screen readers, leading to nonsensical text.
+图标用于按钮中时，不要给图标本身提供无障碍标签，因为屏幕阅读器会读出这个标签，导致文本语义混乱。
 
 <!--@include: ../../docs/images/a11y/alttext-buttons.svg -->
 
-::: details Code examples
+::: details 代码示例
 
 ```tsx
-// Don't do this
+// 不推荐
 <button>
   <Plus aria-label="Plus icon"/>
   Add document
@@ -130,7 +111,7 @@ screen readers, leading to nonsensical text.
 
 :::
 
-### On icon buttons
+### 图标按钮
 
 Icon buttons are buttons that do not contain any visible text apart from the icon itself (think of
 the close button of a dialog for example).
@@ -140,25 +121,25 @@ contained icon.
 
 <!--@include: ../../docs/images/a11y/alttext-iconbuttons.svg -->
 
-::: details Code examples
+::: details 代码示例
 
 ```tsx
-// Don't do this
+// 不推荐
 <button class="btn-icon">
   <House/>
 </button>
 
-// Don't do this either
+// 不推荐 either
 <button class="btn-icon">
   <House aria-label="Home icon"/>
 </button>
 
 // This works but might not be the best solution, see below
-<button aria-label="Go to home" class="btn-icon">
+<button aria-label="返回首页" class="btn-icon">
   <House/>
 </button>
 
-// Do this instead
+// 推荐
 <button class="btn-icon">
   <House/>
   <span class="visually-hidden">Go to home</span>
@@ -167,16 +148,15 @@ contained icon.
 
 :::
 
-## A note on `aria-label`
+## 关于 `aria-label`
 
-Although you could provide accessible labels to your elements via the `aria-label` attribute, we
-generally recommend avoiding this and instead suggest that you use your chosen CSS framework's "
-visually hidden" utility whenever possible. You can
-[read more about why `aria-label` might not be the best solution](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/).
+虽然可以通过 `aria-label` 属性为元素提供无障碍标签，但一般建议避免这样做。
+更推荐尽可能使用所选 CSS 框架提供的 “visually hidden” 工具类。
+可以[进一步了解为什么 `aria-label` 可能不是最佳方案](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/)。
 
-### Example - Radix UI
+### 示例 - Radix UI
 
-Use [Radix UI's built-in accessible icon utility component](https://www.radix-ui.com/primitives/docs/utilities/accessible-icon).
+使用 [Radix UI 内置的 Accessible Icon 工具组件](https://www.radix-ui.com/primitives/docs/utilities/accessible-icon)。
 
 ```tsx
 import { ArrowRightIcon } from '@ycloud-web/icons-react';
@@ -187,7 +167,7 @@ import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 </AccessibleIcon>;
 ```
 
-### Example - Bootstrap
+### 示例 - Bootstrap
 
 ```html
 <div>
@@ -199,7 +179,7 @@ import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 </div>
 ```
 
-### Example - Tailwind CSS
+### 示例 - Tailwind CSS
 
 ```html
 <div>
@@ -211,10 +191,10 @@ import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 </div>
 ```
 
-If you're not sure, you may consider learning more
+如果不确定，可以进一步了解
 about [how to hide content.](https://www.a11yproject.com/posts/how-to-hide-content/)
 
-## Further resources
+## 更多资源
 
 We also recommend checking out the following resources about accessibility:
 

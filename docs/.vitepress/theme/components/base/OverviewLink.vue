@@ -33,9 +33,9 @@ const textMap: Record<string, string> = {
 
 const descMap: Record<string, string> = {
   'Learn how to get started with YCloud.': '了解如何开始使用 YCloud Icons。',
-  'Learn how to get started with YCloud for Angular.': '了解如何在 Angular 中使用 YCloud。',
-  'Learn how to get started with YCloud for Astro.': '了解如何在 Astro 中使用 YCloud。',
-  'Learn how to get started with YCloud for PReact.': '了解如何在 Preact 中使用 YCloud。',
+  'Learn how to get started with YCloud for Angular.': '了解如何在 Angular 中使用 YCloud Icons。',
+  'Learn how to get started with YCloud for Astro.': '了解如何在 Astro 中使用 YCloud Icons。',
+  'Learn how to get started with YCloud for PReact.': '了解如何在 Preact 中使用 YCloud Icons。',
   'Learn how to get started with YCloud React Native':
     '了解如何在 React Native 中使用 YCloud Icons。',
   'Learn how to get started with YCloud for React.': '了解如何在 React 中使用 YCloud Icons。',

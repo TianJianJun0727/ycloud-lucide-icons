@@ -1,19 +1,19 @@
 ---
-title: Filled Icons - Angular
-description: Fills are not officially supported, but can still be applied using standard SVG attributes. This may in some cases produce acceptable results.
+title: 填充图标 - Angular
+description: 目前并不正式支持填充图标，但仍可以通过标准 SVG 属性应用 fill，部分场景下可以得到可接受的效果。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# Filled Icons
+# 填充图标
 
 Fills are not officially supported by YCloud.
 
 However, since the icons are standard SVG elements, SVG attributes such as `fill` can still be applied. Depending on the icon, this may produce acceptable results.
 
-## Example with stars:
+## 星级评分示例
 
 ::: sandpack {template=angular editorHeight=580 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular"}
 

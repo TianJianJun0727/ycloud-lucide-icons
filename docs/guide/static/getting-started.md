@@ -3,10 +3,10 @@ import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vu
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
 </script>
 
-# Getting started
+# 快速开始
 
-This guide will help you get started with YCloud Static in your project.
-Make sure you have a your environment set up. If you don't have one yet, you can create a new project using Vite, Parcel or any other boilerplate of your choice.
+本指南会帮助你在项目中开始使用 YCloud Icons 静态资源。
+请先确保你已经准备好项目环境。如果还没有，可以使用 Vite、Parcel 或其他你熟悉的脚手架创建一个新项目。
 
 ## For what use cases is `@ycloud-web/icons-static` suitable?
 
@@ -23,9 +23,9 @@ SVG sprites and icon fonts include **all icons**, which can significantly increa
 For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
 :::
 
-## Installation
+## 安装
 
-### Package Managers
+### 包管理器
 
 ::: code-group
 

@@ -1,16 +1,16 @@
 ---
-title: Typescript - Vue
-description: Learn about the different types exported by the `@ycloud-web/icons-vue` package and how to use them in your Vue application.
+title: TypeScript - Vue
+description: 了解 `@ycloud-web/icons-vue` 包导出的类型，以及如何在 Vue 应用中使用它们。
 ---
 
-# TypeScript Support
+# TypeScript 支持
 
-List of exported types from the `@ycloud-web/icons-vue` package.
-These can be used to type your components when using YCloud icons in a TypeScript Vue project.
+下面是 `@ycloud-web/icons-vue` 包导出的类型。
+在 TypeScript Vue 项目中使用 YCloud Icons 时，可以用这些类型为组件补充类型约束。
 
 ## `YCloudIconsProps`
 
-Exports all props that can be passed to an icon component and any other SVG attributes, see: [SVG Presentation Attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+导出图标组件支持的全部 props，以及其他 SVG 属性。可参考 [MDN 上的 SVG Presentation Attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)。
 
 ```ts
 interface YCloudIconsProps {
@@ -22,9 +22,9 @@ interface YCloudIconsProps {
 }
 ```
 
-### Using `YCloudIconsProps`
+### 使用 `YCloudIconsProps`
 
-You can use the `YCloudIconsProps` interface to type props for your custom icon components.
+当你封装自定义图标组件时，可以使用 `YCloudIconsProps` 接口为 props 添加类型。
 
 ::: code-group
 
@@ -47,15 +47,15 @@ defineProps<YCloudIconsProps>();
 
 ## `YCloudIcon`
 
-Type for individual icon components, this is use full when you want to type a variable or prop that holds an icon component.
+单个图标组件的类型。需要为保存图标组件的变量或 prop 添加类型时，可以使用它。
 
 ```ts
 type YCloudIcon = React.FC<YCloudIconsProps>;
 ```
 
-### Using `YCloudIcon`
+### 使用 `YCloudIcon`
 
-You can use the `YCloudIcon` type when you need to work with icon components directly.
+当你需要直接接收或传递图标组件时，可以使用 `YCloudIcon` 类型。
 
 ::: code-group
 
@@ -84,16 +84,16 @@ defineProps<{
 
 ## `IconNode`
 
-Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with YCloud Icons Lab.
+图标原始 SVG 结构的类型。它是一个由 SVG 元素及其属性组成的数组，用于渲染图标。
+应用代码通常不会直接使用它，但在自定义图标或 YCloud Icons Lab 等进阶场景中会很有用。
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
-### Using `IconNode`
+### 使用 `IconNode`
 
-You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
+当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ::: code-group
 

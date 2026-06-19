@@ -9,11 +9,11 @@ A standalone, signal-based, zoneless implementation of YCloud icons for Angular.
 - Integrate with Angular's reactive forms and data binding
 - Build scalable applications with tree-shaken icons and lazy loading support
 
-## Prerequisites
+## 前置要求
 
-This package requires Angular 17+ and uses standalone components, signals, and zoneless change detection.
+该包要求 Angular 17+，并使用 standalone components、signals 和 zoneless change detection。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -35,9 +35,9 @@ bun add @ycloud-web/icons-angular
 
 :::
 
-## How to use
+## 使用方式
 
-### Standalone icons
+### 独立图标
 
 Every icon can be imported as a ready-to-use standalone component:
 
@@ -63,7 +63,7 @@ Standalone icon components use the selector `svg[ycloud{PascalCaseIconName}]`.
 This ensures minimal bloating of the DOM and the ability to directly manipulate all attributes of the resulting SVG element.
 :::
 
-### Dynamic icon component
+### 动态图标组件
 
 You may also use the dynamic `YCloudIcon` component to dynamically render icons.
 
@@ -157,9 +157,9 @@ Providing all icons at the root level may increase your initial bundle size, whi
 While you may provide your icons at any level of the dependency injection tree, be aware that [Angular's DI system is hierarchical](https://angular.dev/guide/di/defining-dependency-providers#injector-hierarchy-in-angular): `YCloudIcon` will only have access to the icons provided closest to it in the tree.
 :::
 
-## Accessible labels
+## 无障碍标签
 
-You can use the `title` input property to set the [accessible name element](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title) on the SVG:
+可以使用 `title` input 属性在 SVG 上设置[无障碍名称元素](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title)：
 
 ```html
 <svg
@@ -168,7 +168,7 @@ You can use the `title` input property to set the [accessible name element](http
 ></svg>
 ```
 
-This will result in the following output:
+输出结果如下：
 
 ```html{2}
 <svg class="ycloud ycloud-house" ...>
@@ -179,9 +179,9 @@ This will result in the following output:
 
 ## Props
 
-You can pass additional props to adjust the icon appearance.
+可以传入额外 props 调整图标外观。
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
@@ -197,9 +197,9 @@ You can pass additional props to adjust the icon appearance.
 ></svg>
 ```
 
-## Global configuration
+## 全局配置
 
-You can use `provideYCloudConfig` to configure the default property values as defined above:
+可以使用 `provideYCloudConfig` 配置上面定义的默认属性值：
 
 ```ts{2,7-9}
 import { ApplicationConfig } from '@angular/core';
@@ -215,7 +215,7 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-## Styling via CSS
+## 通过 CSS 设置样式
 
 Icons can also be styled by using custom CSS classes:
 
@@ -234,11 +234,11 @@ svg.my-icon {
 }
 ```
 
-## With YCloud lab or custom icons
+## 使用 YCloud Icons Lab 或自定义图标
 
 [YCloud lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
 
-While they aren't provided as standalone components, they can be still be passed to the `YCloudIcon` component the same way as official icons:
+这些图标不会以独立组件形式提供，但仍可以像官方图标一样传给 `YCloudIcon` 组件：
 
 ```html
 <!-- Directly as YCloudIconData: -->
@@ -264,9 +264,9 @@ export class Foobar {
 }
 ```
 
-## Troubleshooting
+## 故障排查
 
-### The icon is not being displayed
+### 图标未显示
 
 If using per-icon-components:
 
@@ -280,8 +280,8 @@ If using the dynamic component:
 
 ### TypeScript errors?
 
-Make sure you're importing from `@ycloud-web/icons-angular`.
+请确保从 `@ycloud-web/icons-angular` 导入。
 
-### Icons render with wrong defaults
+### 图标使用了错误的默认值
 
 Ensure `provideYCloudConfig()` is used at the right level.

@@ -1,6 +1,6 @@
 ---
 title: Shadow DOM - YCloud
-description: Learn how to use YCloud icons within a shadow DOM in your Vanilla JavaScript applications.
+description: 了解如何在 Vanilla JavaScript 应用的 Shadow DOM 中使用 YCloud Icons。
 ---
 
 <script setup>
@@ -9,11 +9,11 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 # Shadow DOM
 
-It's possible to use YCloud icons within a shadow DOM.
+YCloud Icons 可以在 Shadow DOM 中使用。
 
-## Example using `createElement` function
+## 使用 `createElement` 函数的示例
 
-Using the `createElement` function to create a single icon and append it to a shadow DOM.
+使用 `createElement` 函数创建单个图标，并将它追加到 Shadow DOM 中。
 
 ::: sandpack {template=vanilla editorHeight=300 editorWidthPercentage=60 dependencies="ycloud"}
 
@@ -41,10 +41,10 @@ shadowRoot.appendChild(iconElement);
 
 :::
 
-## Example using `createIcons` function
+## 使用 `createIcons` 函数的示例
 
-If you want to create multiple icons within a shadow DOM, you can use the `createIcons` function.
-With the `root` option, you can specify the shadow root as the root element where the icons should be rendered.
+如果想在 Shadow DOM 中创建多个图标，可以使用 `createIcons` 函数。
+通过 `root` 选项，可以把 shadow root 指定为图标渲染的根元素。
 
 ::: sandpack {template=vanilla editorHeight=420 editorWidthPercentage=60 dependencies="ycloud"}
 

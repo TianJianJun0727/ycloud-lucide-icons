@@ -3,9 +3,9 @@
 `@ycloud-web/icons-data` is a helper library that exports YCloud **icon data** in a tree-shakable format, also providing utilities for dynamic importing icons.
 
 It intentionally ships **no real rendering logic or components** — other packages (for example [`@ycloud-web/icons-angular`](http://npmjs.com/package/@ycloud-web/icons-angular)) can consume this data to render icons in their respective
-frameworks. You can also use this package to build third-party integrations for frameworks we don't (yet) support.
+框架。你也可以使用这个包为暂未支持的框架构建第三方集成。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -27,7 +27,7 @@ bun add @ycloud-web/icons-data
 
 :::
 
-## Icon data format
+## 图标数据格式
 
 Each icon is described by the following interface:
 
@@ -44,7 +44,7 @@ export type YCloudIconData = {
 | `node`                       | `YCloudIconNode[]` | SVG child nodes as `[tagName, attributes]` tuples.                 |
 | `size` or `width` & `height` | `number`           | The dimensions of the icon (`size` is shorthand for square icons). |
 
-## How to use
+## 使用方式
 
 Icons can be imported individually. Only the icons you import end up referenced by your application code — the rest will be eliminated by tree-shaking.
 
@@ -53,12 +53,12 @@ import { House } from '@ycloud-web/icons-data';
 // House is icon data (not a rendered component).
 ```
 
-## Building icons
+## 构建图标
 
 `@ycloud-web/icons-data` ships small helpers that convert YCloud icon data into different render-ready outputs.
 All builders accept the same `params` object (`YCloudBuildParams`) to customize the generated SVG.
 
-### Build parameters
+### 构建参数
 
 The following parameters are supported (names reflect the current implementation):
 
@@ -94,7 +94,7 @@ const node = buildYCloudIconNode(House, {
 // -> ['svg', attributes, children]
 ```
 
-This is useful if you want to plug YCloud icons into your own renderer, templating system, or framework integration.
+如果你想把 YCloud Icons 接入自己的渲染器、模板系统或框架集成，这会很有用。
 
 ### `buildYCloudSvg`
 
@@ -149,7 +149,7 @@ The returned value can be used directly in places such as:
 - If neither `btoa` nor `Buffer` is available, an error is thrown.
   :::
 
-## Dynamic imports
+## 动态导入
 
 Dynamic imports are useful when you only know the icon name at runtime (for example, icon names stored in a database or a CMS). For purely static use cases, prefer direct imports for the best tree-shaking results.
 
@@ -157,7 +157,7 @@ Dynamic imports are useful when you only know the icon name at runtime (for exam
 Validate `iconName` before indexing the map (and provide a fallback icon) to avoid runtime errors.
 :::
 
-## Dynamic imports
+## 动态导入
 
 Dynamic imports are useful when the icon name is only known at runtime (for example, icon names stored in a CMS or database). For purely static usage, prefer direct imports for maximum tree-shaking.
 

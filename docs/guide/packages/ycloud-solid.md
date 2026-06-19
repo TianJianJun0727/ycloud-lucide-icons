@@ -1,4 +1,4 @@
-# YCloud Solid
+# YCloud Icons for Solid
 
 SolidJS components for YCloud icons that leverage Solid's fine-grained reactivity system. Each icon is a reactive Solid component that renders as an inline SVG, providing exceptional performance through Solid's compile-time optimizations and reactive primitives.
 
@@ -10,7 +10,7 @@ SolidJS components for YCloud icons that leverage Solid's fine-grained reactivit
 - Integrate seamlessly with Solid's JSX and component patterns
 - Optimize performance with direct icon imports and minimal runtime overhead
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -32,20 +32,20 @@ bun add @ycloud-web/icons-solid
 
 :::
 
-## How to use
+## 使用方式
 
-YCloud is built with ES Modules, so it's completely tree-shakable.
+YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
-Each icon can be imported as a Solid component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Solid component 导入，并渲染为内联 SVG 元素。这样最终产物只会包含你实际导入的图标，其余未使用的图标会被构建工具移除。
 
-### Example
+### 示例
 
 Additional props can be passed to adjust the icon:
 
 ```jsx
 import { Camera } from '@ycloud-web/icons-solid';
 
-// Usage
+// 使用
 const App = () => {
   return (
     <Camera
@@ -63,7 +63,7 @@ Vite loading/performing issues with the dev server can be resolved by import ico
 ```jsx
 import Camera from '@ycloud-web/icons-solid/icons/camera';
 
-// Usage
+// 使用
 const App = () => {
   return (
     <Camera
@@ -78,19 +78,19 @@ export default App;
 
 ## Props
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
 | `strokeWidth`         | _number_  | 2            |
 | `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用 props
 
 To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```jsx
-// Usage
+// 使用
 const App = () => {
   return (
     <Camera
@@ -101,16 +101,16 @@ const App = () => {
 };
 ```
 
-## With YCloud Icons Lab or custom icons
+## 使用 YCloud Icons Lab 或自定义图标
 
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
 
-They can be used by using the `Icon` component.
-All props like the regular YCloud icons can be passed to adjust the icon appearance.
+可以通过 `Icon` 组件使用它们。
+和普通 YCloud Icons 一样，也可以传入各类 props 调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a YCloud icon component.
+下面会根据传入的 iconNode 创建并渲染一个 YCloud 图标组件。
 
 ```jsx
 import { Icon } from '@ycloud-web/icons-solid';
@@ -124,15 +124,15 @@ const App = () => (
 );
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons. It's not recommended.
+可以创建一个通用图标组件来加载图标，但不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important to keep in mind when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例会导入所有 ES Modules，使用时需要谨慎。导入全部图标会显著增加应用构建体积，并影响性能。使用 `Webpack`、`Rollup` 或 `Vite` 等构建工具时尤其需要注意。
 :::
 
-### Icon Component Example
+### Icon 组件示例
 
 ```tsx
 import { icons, type YCloudIconsProps } from '@ycloud-web/icons-solid';
@@ -157,7 +157,7 @@ const Icon = (props: IconProps) => {
 export default Icon;
 ```
 
-#### Using the Icon Component
+#### 使用 Icon 组件
 
 ```tsx
 import Icon from './Icon';
@@ -169,11 +169,11 @@ const App = () => {
 export default App;
 ```
 
-## Accessibility
+## 无障碍
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们会通过 `aria-hidden="true"` 对屏幕阅读器隐藏图标。
 
-You can add accessibility attributes using aria-labels.
+可以通过 aria-label 添加无障碍属性。
 
 ```jsx
 import { Check } from '@ycloud-web/icons-solid';

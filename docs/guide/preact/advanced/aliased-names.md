@@ -1,26 +1,26 @@
 ---
-title: Aliased Names - Preact
+title: 别名 - Preact
 description: Learn about the different import name styles available for YCloud icons in your project and how to choose the one that best fits your needs.
 ---
 
-# Aliased Names
+# 别名
 
-Some icons have multiple names. This is because we sometimes choose to rename them to make them more consistent with the rest of the icon set, or the name was not generic. For example, the `edit-2` icon is renamed to `pen` to make the name more generic, since it is just a pen icon.
+部分图标会有多个名称。这通常是因为我们会为了和整套图标保持一致而重命名图标，或者原名称不够通用。例如，`edit-2` 会被重命名为更通用的 `pen`，因为它本质上就是一个笔图标。
 
-Beside these aliases, YCloud also includes prefixed and suffixed names to use within your project. This is to prevent import name collisions with other libraries or your own code.
+除了这些别名，YCloud Icons 也提供带前缀和后缀的名称，方便在项目中使用，避免和其他库或你自己的代码发生导入命名冲突。
 
 ```tsx
-// These are all the same icon
+// 这些都是同一个图标
 import { House, HouseIcon, YCloudHouse } from '@ycloud-web/icons-preact';
 ```
 
-## Choosing import name style
+## 选择导入命名风格
 
-If you want consistent imports across your project, or if you want to change the autocompletion of YCloud icons in your IDE, there an option to choose the import name style you prefer.
+如果希望整个项目中的导入方式保持一致，或者想调整 IDE 中 YCloud Icons 的自动补全，可以选择自己偏好的导入命名风格。
 
-This can be done by creating a custom module declaration file to override YCloud imports and turning off the autocomplete in your IDE.
+可以通过创建自定义模块声明文件覆盖 YCloud Icons 的导入，并在 IDE 中关闭默认自动补全来实现。
 
-### Turn off autocomplete in your IDE
+### 关闭 IDE 自动补全
 
 ```json [.vscode/settings.json]
 {
@@ -28,27 +28,27 @@ This can be done by creating a custom module declaration file to override YCloud
 }
 ```
 
-### Create a custom module declaration file
+### 创建自定义模块声明文件
 
-Create a custom TypeScript declaration file that re-exports the preferred naming style:
+创建一个自定义 TypeScript 声明文件，重新导出你偏好的命名风格：
 
 ```ts [@ycloud-web/icons-preact.d.ts]
 declare module '@ycloud-web/icons-preact' {
-  // Prefixed import names
+  // 前缀导入名称
   export * from '@ycloud-web/icons-preact/dist/@ycloud-web/icons-preact.prefixed';
   // or
-  // Suffixed import names
+  // 后缀导入名称
   export * from '@ycloud-web/icons-preact/dist/@ycloud-web/icons-preact.suffixed';
 }
 ```
 
-Place this file in your project root or in a directory included in your TypeScript configuration.
+将这个文件放在项目根目录，或放在 TypeScript 配置会包含的目录中。
 A common approach is to create a `@types` folder and name the file `@ycloud-web/icons-preact.d.ts`.
 
-### Import name styles
+### 导入命名风格
 
-| Import Style | Available imports          | Declaration file import           |
+| 导入风格 | 可用导入          | Declaration file import           |
 | ------------ | -------------------------- | --------------------------------- |
-| Default      | Home, HomeIcon, YCloudHome |                                   |
-| Prefixed     | YCloudHome                 | @ycloud-web/icons-preact.prefixed |
-| Suffixed     | HomeIcon                   | @ycloud-web/icons-preact.suffixed |
+| 默认      | Home, HomeIcon, YCloudHome |                                   |
+| 前缀      | YCloudHome                 | @ycloud-web/icons-preact.prefixed |
+| 后缀      | HomeIcon                   | @ycloud-web/icons-preact.suffixed |

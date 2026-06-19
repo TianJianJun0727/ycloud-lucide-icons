@@ -1,17 +1,17 @@
 ---
-title: Sizing - YCloud
-description: Learn how to adjust the size of YCloud icons in your Vanilla JavaScript applications using the width and height attributes and CSS.
+title: 尺寸 - YCloud
+description: 了解如何在 Vanilla JavaScript 应用中通过 width、height 属性和 CSS 调整 YCloud Icons 的尺寸。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Sizing
+# 尺寸
 
-By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `width` and `height` attributes and or by CSS.
+默认情况下，所有图标的尺寸都是 `24px` x `24px`。你可以通过 `width`、`height` 属性或 CSS 调整图标尺寸。
 
-## Adjusting the icon size using the `width` and `height` attribute
+## 使用 `width` 和 `height` 属性调整图标尺寸
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="ycloud"}
 
@@ -44,15 +44,15 @@ createIcons({
 
 :::
 
-## Adjusting the icon size via CSS
+## 通过 CSS 调整图标尺寸
 
-The CSS properties `width` and `height` can be used to adjust the icon size.
+可以使用 CSS 的 `width` 和 `height` 属性调整图标尺寸。
 
 ::: sandpack {template=vanilla editorHeight=300 editorWidthPercentage=60 dependencies="ycloud"}
 
 ```css icon.css [active]
 .my-beer-icon {
-  /* Change this! */
+  /* 修改这里 */
   width: 64px;
   height: 64px;
 }
@@ -86,24 +86,24 @@ createIcons({
 
 :::
 
-### Dynamically change the icon size based on the font size
+### 根据字体大小动态调整图标尺寸
 
-It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
+图标也可以根据字体大小自动缩放，通常可以通过 `em` 单位实现。关于 `em` 的更多信息，可以参考这篇 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems)。
 
 ::: sandpack {template=vanilla editorHeight=320 dependencies="ycloud"}
 
 ```css icon.css [active]
 .my-icon {
-  /* Icon size will relative to font-size of .text-wrapper */
+  /* 图标尺寸会相对于 .text-wrapper 的 font-size */
   width: 1em;
   height: 1em;
 }
 
 .text-wrapper {
-  /* Change this! */
+  /* 修改这里 */
   font-size: 96px;
 
-  /* layout stuff */
+  /* 布局相关 */
   display: flex;
   gap: 0.25em;
   align-items: center;
@@ -131,7 +131,7 @@ createIcons({
         data-ycloud="star"
         class="my-icon"
       ></i>
-      <div>Yes</div>
+      <div>是</div>
     </div>
 
     <script src="index.js"></script>
@@ -141,9 +141,9 @@ createIcons({
 
 :::
 
-### Resizing with Tailwind
+### 使用 Tailwind 调整尺寸
 
-`size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
+可以使用 `size-*` 工具类调整图标尺寸。关于 `size-*` 工具类的更多信息，可以参考 [Tailwind 文档](https://tailwindcss.com/docs/width#setting-both-width-and-height)。
 
 ::: sandpack {template=vanilla editorHeight=300 editorWidthPercentage=60 dependencies="ycloud" externalResources="https://cdn.tailwindcss.com"}
 

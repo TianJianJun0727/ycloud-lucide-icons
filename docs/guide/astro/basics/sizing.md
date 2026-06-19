@@ -1,13 +1,13 @@
 ---
-title: Sizing - Astro
-description: Learn how to adjust the size of YCloud icons in your Astro applications using the size prop and CSS.
+title: 尺寸 - Astro
+description: 了解如何在 Astro 应用中通过 size prop 和 CSS 调整 YCloud Icons 的尺寸。
 ---
 
-# Sizing
+# 尺寸
 
-By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
+默认情况下，所有图标的尺寸都是 `24px` x `24px`。你可以通过 `size` prop 或 CSS 调整图标尺寸。
 
-## Adjusting the icon size using the `size` prop
+## 使用 `size` prop 调整图标尺寸
 
 ```astro
 ---
@@ -17,9 +17,9 @@ import Landmark from '@ycloud-web/icons-astro/icons/landmark';
 <Landmark size={64} />
 ```
 
-## Adjusting the icon size via CSS
+## 通过 CSS 调整图标尺寸
 
-The CSS properties `width` and `height` can be used to adjust the icon size.
+可以使用 CSS 的 `width` 和 `height` 属性调整图标尺寸。
 
 ::: code-group
 
@@ -41,15 +41,15 @@ import './icon.css'
 
 :::
 
-### Dynamically change the icon size based on the font size
+### 根据字体大小动态调整图标尺寸
 
-It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
+图标也可以根据字体大小自动缩放，通常可以通过 `em` 单位实现。关于 `em` 的更多信息，可以参考这篇 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems)。
 
 ::: code-group
 
 ```css [icon.css]
 .my-icon {
-  /* Icon size will relative to font-size of .text-wrapper */
+  /* 图标尺寸会相对于 .text-wrapper 的 font-size */
   width: 1em;
   height: 1em;
 }
@@ -57,7 +57,7 @@ It is possible to resize icons based on font size. This can be achieved using th
 .text-wrapper {
   font-size: 96px;
 
-  /* layout stuff */
+  /* 布局相关 */
   display: flex;
   gap: 0.25em;
   align-items: center;
@@ -72,15 +72,15 @@ import './icon.css'
 
 <div class="text-wrapper">
   <Star class="my-icon" />
-  <div>Yes</div>
+  <div>是</div>
 </div>
 ```
 
 :::
 
-### Resizing with Tailwind
+### 使用 Tailwind 调整尺寸
 
-`size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
+可以使用 `size-*` 工具类调整图标尺寸。关于 `size-*` 工具类的更多信息，可以参考 [Tailwind 文档](https://tailwindcss.com/docs/width#setting-both-width-and-height)。
 
 ```astro
 ---

@@ -1,4 +1,4 @@
-# YCloud Astro
+# YCloud Icons for Astro
 
 Astro components for YCloud icons that work perfectly with Astro's island architecture and multi-framework support. Each icon is an Astro component that renders as an inline SVG, providing excellent performance for static sites and server-side rendering scenarios.
 
@@ -10,7 +10,7 @@ Astro components for YCloud icons that work perfectly with Astro's island archit
 - Create multi-framework applications where icons work across different UI libraries
 - Optimize performance with direct icon imports and build-time rendering
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -32,13 +32,13 @@ bun add @ycloud-web/icons-astro
 
 :::
 
-## How to use
+## 使用方式
 
-YCloud is built with ES Modules, so it's completely tree-shakable.
+YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
 Each icon can be imported as an Astro component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
 
-### Example
+### 示例
 
 Default usage:
 
@@ -72,14 +72,14 @@ import CircleAlert from '@ycloud-web/icons-astro/icons/circle-alert';
 
 ## Props
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
 | `stroke-width`        | _number_  | 2            |
 | `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用 props
 
 To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
@@ -93,11 +93,11 @@ import { Phone } from '@ycloud-web/icons-astro';
 
 This results a filled phone icon.
 
-## Types
+## 类型
 
-The package includes type definitions for all icons. This is useful if you want to dynamically render icons.
+该包包含所有图标的类型定义。需要动态渲染图标时会很有用。
 
-### Example
+### 示例
 
 ```astro
 ---
@@ -138,16 +138,16 @@ const menuItems: MenuItem[] = [
 }
 ```
 
-## With YCloud Icons Lab or custom icons
+## 使用 YCloud Icons Lab 或自定义图标
 
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
 
-They can be used by using the `Icon` component.
-All props of the regular YCloud icons can be passed to adjust the icon appearance.
+可以通过 `Icon` 组件使用它们。
+普通 YCloud Icons 支持的所有 props 都可以传入，用于调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a YCloud icon component.
+下面会根据传入的 iconNode 创建并渲染一个 YCloud 图标组件。
 
 ```astro
 ---
@@ -159,15 +159,15 @@ import { burger, sausage } from '@ycloud-web/icons-lab';
 <Icon iconNode={sausage} color="red"/>
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用图标组件来加载图标，但不推荐这样做。
 
 ::: danger
 The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application. This may be passable if you're doing SSG and SSR in server environments. However if you're doing SSR in serverless environments, it could negatively affect your app's performance, as a bigger bundle size will translate to an increase in cold starts.
 :::
 
-### Icon Component Example
+### Icon 组件示例
 
 ```astro
 ---
@@ -184,7 +184,7 @@ const Icon = icons[name];
 <Icon {...restProps} />
 ```
 
-### Using the Icon Component
+### 使用 Icon 组件
 
 ```astro
 ---
@@ -194,11 +194,11 @@ import YCloudIcon from './YCloudIcon.astro';
 <YCloudIcon name="Menu" />
 ```
 
-## Accessibility
+## 无障碍
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们会通过 `aria-hidden="true"` 对屏幕阅读器隐藏图标。
 
-You can add accessibility attributes using aria-labels.
+可以通过 aria-label 添加无障碍属性。
 
 ```jsx
 ---

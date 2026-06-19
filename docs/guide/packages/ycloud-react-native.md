@@ -1,4 +1,4 @@
-# YCloud React Native
+# YCloud Icons for React Native
 
 React Native components for YCloud icons that work seamlessly across iOS and Android platforms. Built on top of react-native-svg, each icon renders as a native SVG component, providing consistent visual appearance and performance across mobile devices.
 
@@ -10,9 +10,9 @@ React Native components for YCloud icons that work seamlessly across iOS and And
 - Integrate with React Native's styling system and animation libraries
 - Maintain consistent icon appearance across iOS and Android platforms
 
-## Installation
+## 安装
 
-First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
+首先确保已经安装 `react-native-svg`（版本 12 到 15）。然后安装图标包：
 
 ::: code-group
 
@@ -34,18 +34,18 @@ bun add @ycloud-web/icons-react-native
 
 :::
 
-## How to use
+## 使用方式
 
 Each icon can be imported as a React component.
 
-### Example
+### 示例
 
 Additional props can be passed to adjust the icon:
 
 ```jsx
 import { Camera } from '@ycloud-web/icons-react-native';
 
-// Usage
+// 使用
 const App = () => {
   return (
     <Camera
@@ -60,34 +60,34 @@ export default App;
 
 ## Props
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
 | `strokeWidth`         | _number_  | 2            |
 | `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用 props
 
 To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements.
 
 ```jsx
-// Usage
+// 使用
 const App = () => {
   return <Camera fill="red" />;
 };
 ```
 
-## With YCloud Icons Lab or custom icons
+## 使用 YCloud Icons Lab 或自定义图标
 
-[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) is a collection of icons that are not part of the YCloud Icons main library.
+[YCloud Icons Lab](https://github.com/TianJianJun0727/ycloud-icons-lab) 收录了一批不属于 YCloud Icons 主库的图标。
 
-They can be used by using the `Icon` component.
-All props like regular YCloud icons can be passed to adjust the icon appearance.
+可以通过 `Icon` 组件使用它们。
+和普通 YCloud Icons 一样，也可以传入各类 props 调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a YCloud icon component.
+下面会根据传入的 iconNode 创建并渲染一个 YCloud 图标组件。
 
 ```jsx
 import { Icon } from '@ycloud-web/icons-react-native';
@@ -96,15 +96,15 @@ import { coconut } from '@ycloud-web/icons-lab';
 const App = () => <Icon iconNode={coconut} />;
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用图标组件来加载图标，但不推荐这样做。
 
 ::: warning
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important to keep in mind when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例会导入所有 ES Modules，使用时需要谨慎。导入全部图标会显著增加应用构建体积，并影响性能。使用 `Webpack`、`Rollup` 或 `Vite` 等构建工具时尤其需要注意。
 :::
 
-### Icon Component Example
+### Icon 组件示例
 
 ```tsx
 import * as icons from '@ycloud-web/icons-react-native/icons';
@@ -129,7 +129,7 @@ const Icon = ({ name, color, size }: IconProps) => {
 export default Icon;
 ```
 
-#### Using the Icon Component
+#### 使用 Icon 组件
 
 ```tsx
 import Icon from './Icon';

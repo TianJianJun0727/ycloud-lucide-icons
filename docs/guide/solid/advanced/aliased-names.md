@@ -1,20 +1,20 @@
 ---
-title: Aliased Names - Solid
-description: Learn about the different import name styles available for YCloud icons in your Solid project and how to choose the one that best fits your needs.
+title: 别名 - Solid
+description: 了解 Solid 项目中可用的 YCloud Icons 导入命名风格，以及如何选择适合项目的方式。
 ---
 
-# Aliased Names
+# 别名
 
-Some icons have multiple names. This is because we sometimes choose to rename them to make them more consistent with the rest of the icon set, or the name was not generic. For example, the `edit-2` icon is renamed to `pen` to make the name more generic, since it is just a pen icon.
+部分图标会有多个名称。这通常是因为我们会为了和整套图标保持一致而重命名图标，或者原名称不够通用。例如，`edit-2` 会被重命名为更通用的 `pen`，因为它本质上就是一个笔图标。
 
-Beside these aliases, YCloud also includes prefixed and suffixed names to use within your project. This is to prevent import name collisions with other libraries or your own code.
+除了这些别名，YCloud Icons 也提供带前缀和后缀的名称，方便在项目中使用，避免和其他库或你自己的代码发生导入命名冲突。
 
 ```tsx
-// These are all the same icon
+// 这些都是同一个图标
 import { House, HouseIcon, YCloudHouse } from '@ycloud-web/icons-solid';
 ```
 
-### Turn off autocomplete in your IDE
+### 关闭 IDE 自动补全
 
 ```json [.vscode/settings.json]
 {

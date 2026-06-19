@@ -55,7 +55,7 @@ export default App;
 
 你可以通过以下 props 调整图标外观：
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |

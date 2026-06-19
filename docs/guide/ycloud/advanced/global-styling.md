@@ -1,27 +1,27 @@
 ---
-title: Global styling - YCloud
-description: Learn how to apply global styles to YCloud icons in your Vanilla JavaScript applications using CSS or the attrs option in createIcons.
+title: 全局样式 - YCloud
+description: 了解如何在 Vanilla JavaScript 应用中通过 CSS 或 createIcons 的 attrs 选项为 YCloud Icons 设置全局样式。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue';
 </script>
 
-## Global styling
+# 全局样式
 
-Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally, you can either use CSS, or use the `attrs` option in `createIcons`.
+图标可以通过 [颜色](../basics/color.md)、[尺寸](../basics/sizing.md) 和 [描边宽度](../basics/stroke-width.md) 进行调整。
+如果要为所有图标设置全局样式，可以使用 CSS，也可以使用 `createIcons` 的 `attrs` 选项。
 
-We recommend using CSS for global styling, as it is the most straightforward way to achieve this.
+我们推荐使用 CSS 设置全局样式，因为这是最直接的方式。
 
 <!-- Local overwrite NOT working -->
 <!-- But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to adjust the global styles using `attrs` in `createIcons`. -->
 
-This will apply the `color`, `size` and `strokeWidth` props to all icons.
+这会把 `color`、`size` 和 `strokeWidth` props 应用到所有图标。
 
-### Style by using attrs on `createIcons`
+### 通过 `createIcons` 的 attrs 设置样式
 
-You can also apply global styles by passing attributes to the `createIcons` function.
+你也可以通过向 `createIcons` 函数传入 attributes 来应用全局样式。
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="ycloud"}
 
@@ -54,21 +54,21 @@ createIcons({
 
 :::
 
-### Style by using CSS
+### 使用 CSS 设置样式
 
-Styling icons is easy to accomplish using CSS.
+使用 CSS 设置图标样式很简单。
 
-Every icon has a class attribute applied called `ycloud`. This class name can be used in the CSS file to target all icons that are being used within the app.
+每个图标都会带有名为 `ycloud` 的 class。你可以在 CSS 文件中通过这个 class 选中应用内使用的所有图标。
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
-- The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
+- 图标的**颜色**可以通过 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS 属性修改。
+- 图标的**尺寸**可以通过 [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS 属性修改。
+- 图标的**描边宽度**可以通过 [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS 属性修改。
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="ycloud"}
 
 ```css icon.css [active]
 .ycloud {
-  /* Change this! */
+  /* 修改这里 */
   color: #ffadff;
   width: 48px;
   height: 48px;

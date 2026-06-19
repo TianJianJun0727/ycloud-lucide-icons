@@ -1,6 +1,6 @@
 ---
 title: Content Template element - YCloud
-description: Learn how to include YCloud icons inside HTML template elements using the inTemplates option.
+description: 了解如何通过 inTemplates 选项在 HTML template 元素中使用 YCloud Icons。
 ---
 
 <script setup>
@@ -9,12 +9,12 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 # Content Template element
 
-By default icons inside `<template>` tags are not added.
-By setting the `inTemplates` option to `true`, icons inside templates will also be replaced.
+默认情况下，`<template>` 标签内的图标不会被添加。
+将 `inTemplates` 选项设置为 `true` 后，template 中的图标也会被替换。
 
-More about [Content Template element on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template).
+可以在 [MDN 的 Content Template element 文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template)中了解更多。
 
-## Example using `createIcons` function with `template` element
+## 在 `template` 元素中使用 `createIcons` 函数的示例
 
 ::: sandpack {template=vanilla editorHeight=420 editorWidthPercentage=60 dependencies="ycloud"}
 

@@ -1,25 +1,25 @@
 ---
-title: Global Styling - Angular
-description: Learn how to style all icons globally in your Angular application using CSS or the provideYCloudConfig provider.
+title: 全局样式 - Angular
+description: 了解如何在 Angular 应用中通过 CSS 或 provideYCloudConfig provider 为所有图标设置全局样式。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# Global Styling
+# 全局样式
 
-YCloud icons can be customized using the inputs for [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
+YCloud Icons 可以通过 [颜色](../basics/color.md)、[尺寸](../basics/sizing.md) 和 [描边宽度](../basics/stroke-width.md) input 进行调整。
 
-To style all icons globally, you can either use CSS or configure global defaults using `provideYCloudConfig`.
+如果要为所有图标设置全局样式，可以使用 CSS，也可以通过 `provideYCloudConfig` 配置全局默认值。
 
-We recommend using CSS for global styling, as it is the most straightforward approach. However, CSS rules may override the `size`, `color`, and `strokeWidth` inputs on individual icons. If you need to keep those inputs configurable per icon, use `provideYCloudConfig` instead.
+我们推荐使用 CSS 设置全局样式，因为这是最直接的方式。不过 CSS 规则可能会覆盖单个图标上的 `size`、`color` 和 `strokeWidth` input。如果仍希望单个图标可以继续通过 input 单独配置，请改用 `provideYCloudConfig`。
 
-## Configuring global defaults
+## 配置全局默认值
 
-YCloud Angular provides the `provideYCloudConfig` provider to set default properties for all icons.
+YCloud Icons for Angular 提供了 `provideYCloudConfig` provider，用于为所有图标设置默认属性。
 
-You can define global defaults (such as `size`, `color`, or `strokeWidth`) while still allowing individual icons to override them through inputs.
+你可以定义全局默认值（例如 `size`、`color` 或 `strokeWidth`），同时仍允许单个图标通过 input 覆盖这些默认值。
 
 Register the provider in your application configuration or in a top-level component:
 
@@ -36,21 +36,21 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-## Style by using CSS
+## 使用 CSS 设置样式
 
-Styling icons globally can be done using CSS.
+可以使用 CSS 为图标设置全局样式。
 
-All YCloud icons include the `ycloud` class. You can use this class in your styles to target every icon in your application.
+所有 YCloud Icons 都包含 `ycloud` class。你可以在样式中使用这个 class 选中应用里的每个图标。
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height).
-- The **stroke width** of the icons can be changed using [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width).
+- 图标的**颜色**可以通过 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) 属性修改。
+- 图标的**尺寸**可以通过 [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) 修改。
+- 图标的**描边宽度**可以通过 [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) 修改。
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@ycloud-web/icons-angular"}
 
 ```css /src/app/icon.css [active]
 .ycloud {
-  /* Change this! */
+  /* 修改这里 */
   color: #ffadff;
   width: 56px;
   height: 56px;
@@ -111,9 +111,9 @@ export class App {}
 
 :::
 
-### Absolute stroke width
+### 固定描边宽度
 
-To keep the stroke width constant regardless of icon size, apply `vector-effect: non-scaling-stroke` to the icon's children. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more details.
+要让描边宽度不随图标尺寸变化，可以给图标的子元素应用 `vector-effect: non-scaling-stroke`。更多细节请参考[固定描边宽度](../basics/stroke-width.md#固定描边宽度)。
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@ycloud-web/icons-angular"}
 

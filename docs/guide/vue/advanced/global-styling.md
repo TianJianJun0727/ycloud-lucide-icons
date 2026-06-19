@@ -1,28 +1,28 @@
 ---
-title: Global Styling - Vue
-description: Learn how to style all YCloud icons globally in your Vue application using CSS or the YCloud context provider.
+title: 全局样式 - Vue
+description: 了解如何在 Vue 应用中通过 CSS 或 YCloud context provider 为所有 YCloud Icons 设置全局样式。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
 
-# Global Styling
+# 全局样式
 
-Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally, you can either use CSS, or use a context provider.
+图标可以通过 [颜色](../basics/color.md)、[尺寸](../basics/sizing.md) 和 [描边宽度](../basics/stroke-width.md) 进行调整。
+如果要为所有图标设置全局样式，可以使用 CSS，也可以使用 context provider。
 
-We recommend using CSS for global styling, as it is the most straightforward way to achieve this.
-But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to use the YCloud context provider.
+我们推荐使用 CSS 设置全局样式，因为这是最直接的方式。
+但如果使用 CSS，单个图标上的 `size`、`color` 和 `strokeWidth` 等 props 可能会被 CSS 优先级覆盖。若你仍希望单独图标可以继续通过 props 调整样式，可以使用 YCloud context provider。
 
 ## Context Provider
 
-YCloud Vue provides a context API called `setYCloudIconsProps` that allows you to set global default properties for all YCloud icons in your application.
-This is useful if you want all icons to share the same size, color, or stroke width by default.
+YCloud Vue 提供了名为 `setYCloudIconsProps` 的 context API，可以为应用中的所有 YCloud Icons 设置全局默认属性。
+当你希望所有图标默认共享相同尺寸、颜色或描边宽度时，这会很有用。
 
-### Setting global defaults
+### 设置全局默认值
 
-You can call `setYCloudIconsProps` in your main entry file or in a top-level component to set the default properties for all icons.
+你可以在主入口文件或顶层组件中调用 `setYCloudIconsProps`，为所有图标设置默认属性。
 
 ```js
 import { setYCloudIconsProps } from '@ycloud-web/icons-vue';
@@ -34,21 +34,21 @@ setYCloudIconsProps({
 });
 ```
 
-## Style by using CSS
+## 使用 CSS 设置样式
 
-Styling icons is easy to accomplish using CSS.
+使用 CSS 设置图标样式很简单。
 
-Every icon has a class attribute applied called `ycloud`. This class name can be used in the CSS file to target all icons that are being used within the app.
+每个图标都会带有名为 `ycloud` 的 class。你可以在 CSS 文件中通过这个 class 选中应用内使用的所有图标。
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
-- The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
+- 图标的**颜色**可以通过 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS 属性修改。
+- 图标的**尺寸**可以通过 [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS 属性修改。
+- 图标的**描边宽度**可以通过 [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS 属性修改。
 
 ::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="@ycloud-web/icons-vue"}
 
 ```css src/icon.css [active]
 .ycloud {
-  /* Change this! */
+  /* 修改这里 */
   color: #ffadff;
   width: 56px;
   height: 56px;
@@ -97,9 +97,9 @@ import './icon.css';
 
 :::
 
-### Absolute stroke width
+### 固定描边宽度
 
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+如需全局固定描边宽度，可以给图标的子元素应用 `vector-effect: non-scaling-stroke` CSS 属性。这样无论图标尺寸如何变化，描边宽度都会保持不变。更多信息请参考[固定描边宽度](../basics/stroke-width.md#固定描边宽度)。
 
 ::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="@ycloud-web/icons-vue"}
 

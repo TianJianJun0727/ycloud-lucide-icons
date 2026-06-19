@@ -1,16 +1,16 @@
 ---
-title: Combining icons - Angular
-description: Learn how to combine multiple icons into a single icon nested SVG elements in your Angular application.
+title: 组合图标 - Angular
+description: 了解如何在 Angular 应用中通过嵌套 SVG 元素把多个图标组合成一个图标。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# Combining icons
+# 组合图标
 
-You can combine multiple icons into a single icon by using SVG in SVG.
-This is useful for if you want to be creative and make your own custom icons by combining existing icons.
+可以通过在 SVG 中嵌套 SVG，把多个图标组合成一个图标。
+如果你想基于现有图标做组合，创建自己的自定义图标，这种方式会很有用。
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular"}
 
@@ -42,20 +42,20 @@ export class App {}
 
 :::
 
-This is valid SVG and all SVG properties are supported on the icons.
-The `x` and `y` coordinates can be adjusted to position the icons as you like.
+这是合法的 SVG 写法，图标也支持所有 SVG 属性。
+可以通过调整 `x` 和 `y` 坐标，把图标放到需要的位置。
 
-::: info Limitation
-When combining icons, you need to make sure that the `x` and `y` coordinates are within the `viewBox` of the outer icon (24x24).
+::: info 限制
+组合图标时，需要确保 `x` 和 `y` 坐标位于外层图标的 `viewBox` 范围内（24x24）。
 :::
 
-## With custom SVG elements
+## 与自定义 SVG 元素组合
 
-You can also use SVG elements to create your own icons.
+也可以使用 SVG 元素创建自己的图标。
 
-### Example with notification badge
+### 通知徽标示例
 
-For example, you can add a notification badge to an icon by using the `circle` SVG element.
+例如，可以通过 `circle` SVG 元素给图标添加一个通知徽标。
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular"}
 
@@ -90,9 +90,9 @@ export class App {
 
 :::
 
-### Example with text element
+### 文本元素示例
 
-You can also use the `text` SVG element to add text to your icon.
+也可以使用 `text` SVG 元素给图标添加文本。
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@ycloud-web/icons-angular"}
 
