@@ -1,77 +1,144 @@
 ---
 title: 图标维护
-description: 在 YCloud Icons 仓库中添加、删除和修改图标的实际维护流程。
+description: 给人工维护者看的 YCloud Icons 图标增删改说明。
 ---
 
 # 图标维护
 
-这份文档只描述当前仓库里真实存在的维护流程，适用于日常的图标新增、删除和修改。
+这份文档给人工维护者使用，目的是快速说明这个仓库里图标是如何组织和维护的。
 
-## 目录约定
+如果你希望让 AI / 代理直接按流程执行，请看仓库内的 Skill 文件：
 
-- `icons/*.svg`：图标 SVG 源文件。
-- `icons/*.json`：图标元数据，包含分类、标签、贡献者和中文信息。
-- `categories/*.json`：分类定义，决定左侧分类展示、分类标题和分类图标。
-- `docs/`：文档站点，图标详情页、分类页和搜索数据都由构建脚本自动生成。
+- `agents/skills/icon-maintenance/SKILL.md`
 
-一个图标必须同时具备这两份文件：
+## 图标由哪些文件组成
+
+在这个仓库里，一个图标通常由两部分组成：
 
 ```text
 icons/<icon-name>.svg
 icons/<icon-name>.json
 ```
 
-否则 `pnpm checkIcons` 会直接报错。
+- `.svg` 负责图形本体
+- `.json` 负责分类、标签、贡献者以及中文信息
 
-## 添加一个图标
+除此之外，还有一类文件与图标展示有关：
 
-### 1. 放入 SVG 源文件
+- `categories/*.json`：定义分类名称、分类图标和中文分类标题
+- `docs/`：文档站点，图标详情页、搜索和分类页都由构建脚本自动生成
 
-把新图标放到 `icons/` 目录，文件名使用 kebab-case，例如：
+## 图标规范
 
-```text
-icons/circle-arrow-up.svg
-```
+在真正修改图标之前，先看一遍公开规范页：
 
-如果 SVG 来自设计工具导出，先执行一次清洗：
+- [图标设计指南](/guide/icon-design-guide)
+
+这页更偏设计与 SVG 代码规范。日常维护时，至少记住下面几点：
+
+- 图标文件名使用 kebab-case
+- 视觉风格应保持和现有线性图标一致
+- 不要保留无意义的导出垃圾，例如多余分组、编辑器残留属性、无用元数据
+- 图标应尽量保持简洁、对齐和可读，避免过度复杂的路径结构
+- 如果只是补元数据，不要顺手改 SVG 形状
+
+如果 SVG 来自外部设计工具，建议先清洗再继续维护：
 
 ```sh
 pnpm optimize
 ```
 
-这个命令会遍历 `icons/` 下的 SVG，并按当前仓库的清洗规则重写。
+## 添加一个图标
 
-### 2. 新建元数据 JSON
+新增图标时，通常按这个顺序操作：
 
-为图标补齐同名的 JSON 文件，例如：
+1. 把 SVG 放进 `icons/`
+2. 新建同名的 JSON 元数据
+3. 检查分类是否已经存在
+4. 运行校验命令
 
-```json
-{
-  "$schema": "../icon.schema.json",
-  "contributors": ["your-github-id"],
-  "use-cases": [],
-  "tags": ["arrow", "up", "circle"],
-  "categories": ["arrows", "navigation"],
-  "i18n": {
-    "zh": {
-      "name": "圆形上箭头",
-      "tags": ["箭头", "向上", "圆形"],
-      "categories": ["箭头", "导航与地点"]
-    }
-  }
-}
+示例：
+
+```text
+icons/circle-arrow-up.svg
+icons/circle-arrow-up.json
 ```
 
-最低要求看 [icon.schema.json](/Users/tianjianjun/Projects/ycloud-lucide-icons/icon.schema.json)：
+如果 SVG 来自设计工具导出，建议先执行：
 
-- 必填：`$schema`、`contributors`、`categories`、`tags`、`use-cases`
-- 推荐补齐：`i18n.zh.name`、`i18n.zh.tags`、`i18n.zh.categories`
+```sh
+pnpm optimize
+```
 
-### 3. 校验分类是否存在
+元数据至少要包含：
 
-`categories` 字段里的每个值都必须能在 `categories/*.json` 里找到。
+- `contributors`
+- `categories`
+- `tags`
+- `use-cases`
 
-如果需要新增分类，除了增加分类文件，还要保证 `icon` 指向一个已存在的图标，例如：
+如果这个图标要在中文文档和中文搜索里正常显示，建议同时补齐：
+
+- `i18n.zh.name`
+- `i18n.zh.tags`
+- `i18n.zh.categories`
+
+## 删除一个图标
+
+删除图标时，不要只删 SVG。应当同时删除：
+
+```text
+icons/<icon-name>.svg
+icons/<icon-name>.json
+```
+
+然后确认下面几类引用是否也要一起调整：
+
+- `categories/*.json` 是否把它用作分类图标
+- 其他图标的 `aliases` 或弃用迁移是否还引用它
+- 文档示例是否还在使用这个图标
+
+## 修改一个图标
+
+修改图标通常分为三种：
+
+### 修改 SVG 形状
+
+只改：
+
+```text
+icons/<icon-name>.svg
+```
+
+修改 SVG 时，除了关注视觉效果，也要确认：
+
+- 路径没有明显冗余
+- 不存在无意义的编辑器残留属性
+- 图标在 24px 视口下仍然清晰可辨
+- 改动没有破坏现有风格一致性
+
+### 修改分类、标签或中文文案
+
+只改：
+
+```text
+icons/<icon-name>.json
+```
+
+这类改动会影响搜索、分类页和详情页的展示。
+
+### 重命名图标
+
+重命名时至少需要同步：
+
+- `.svg` 文件名
+- `.json` 文件名
+- 文档示例中的引用
+- 必要时在新 JSON 中补 `aliases`
+
+## 新增或修改分类
+
+分类定义在 `categories/*.json` 中，例如：
 
 ```json
 {
@@ -86,44 +153,16 @@ pnpm optimize
 }
 ```
 
-### 4. 运行校验
+这里需要注意两点：
 
-至少执行下面几条命令：
+1. `icon` 必须指向一个已存在的图标
+2. 图标元数据里的 `categories` 值必须是“已存在分类”或“本次同时新增的分类”
 
-```sh
-pnpm checkIcons
-pnpm lint:json
-pnpm --dir docs docs:build:no-og
-```
+默认应优先复用现有分类，不要随意新造分类名。只有在任务明确需要时，才新增新的 `categories/<name>.json`。
 
-含义分别是：
+## 建议执行的校验命令
 
-- `pnpm checkIcons`：检查 `.svg` / `.json` 是否一一对应，分类是否有效
-- `pnpm lint:json`：校验图标和分类 JSON 是否符合 schema
-- `pnpm --dir docs docs:build:no-og`：验证文档站点、图标页、分类页和搜索索引是否都能生成
-
-如果你改动了 React 产物或导出行为，额外跑：
-
-```sh
-pnpm --filter @ycloud-web/icons-react build
-```
-
-## 删除一个图标
-
-删除图标时不要只删 SVG，必须成对清理：
-
-```text
-icons/<icon-name>.svg
-icons/<icon-name>.json
-```
-
-然后继续检查下面几类引用：
-
-- 其他图标的 `aliases`、弃用迁移信息是否还引用它
-- `categories/*.json` 的 `icon` 字段是否把它当作分类图标
-- 文档里的示例代码是否还在使用这个图标
-
-删除后执行：
+无论是新增、删除还是修改图标，至少建议执行：
 
 ```sh
 pnpm checkIcons
@@ -131,96 +170,21 @@ pnpm lint:json
 pnpm --dir docs docs:build:no-og
 ```
 
-如果删除的是分类图标，先把对应分类切换到别的已存在图标，否则分类页会直接报错。
-
-## 修改一个图标
-
-修改通常分三类，处理方式不同。
-
-### 1. 只改 SVG 形状
-
-只需要更新：
-
-```text
-icons/<icon-name>.svg
-```
-
-然后执行：
-
-```sh
-pnpm optimize
-pnpm checkIcons
-pnpm --dir docs docs:build:no-og
-```
-
-### 2. 只改名称、标签、分类或中文文案
-
-只需要更新：
-
-```text
-icons/<icon-name>.json
-```
-
-常见修改包括：
-
-- 调整 `tags`
-- 调整 `categories`
-- 补齐或修正 `i18n.zh`
-- 增加 `aliases`
-
-这类改动会直接影响：
-
-- 图标搜索结果
-- 图标详情页中文显示
-- 分类页归属
-
-所以至少执行：
-
-```sh
-pnpm checkIcons
-pnpm lint:json
-pnpm --dir docs docs:build:no-og
-```
-
-### 3. 重命名图标
-
-重命名不是单纯改文件名，至少要同步下面四处：
-
-- `icons/<old-name>.svg` -> `icons/<new-name>.svg`
-- `icons/<old-name>.json` -> `icons/<new-name>.json`
-- 如果要兼容旧名字，在新 JSON 里补 `aliases`
-- 相关文档示例、分类图标引用、包导入示例一起更新
-
-如果只是保留旧名字兼容，建议用 `aliases` 标记，而不是继续保留两份图标源。
-
-## 建议的提交流程
-
-日常维护建议按下面顺序执行：
-
-```sh
-pnpm optimize
-pnpm checkIcons
-pnpm lint:json
-pnpm --dir docs docs:build:no-og
-```
-
-如果修改影响到了发布包的导出，再补对应包构建，例如：
+如果改动影响具体包的导出行为，再补对应包构建，例如：
 
 ```sh
 pnpm --filter @ycloud-web/icons-react build
 pnpm --filter @ycloud-web/icons-vue build
 ```
 
-## 发布后的表现
+## 发布与版本
 
-图标维护合入 `main` 后：
+日常维护图标时，不需要手动改包版本。
 
-1. 文档站点构建会重新生成图标页、分类页和搜索数据
-2. 如果后续通过 tag 发布，发布流会以 tag 作为版本源
-3. 发布成功后，workflow 会把各个 `packages/*/package.json` 的版本回写到 `main`
+当前仓库的版本策略是：
 
-这意味着：
+1. 版本以 Git tag / release 为真实来源
+2. 文档首页和更新日志都从 tag 数据读取版本
+3. 真正发布成功后，workflow 会把各个 `packages/*/package.json` 的版本自动回写到 `main`
 
-- 日常图标改动不需要手动改包版本
-- 真正发布时由 tag 驱动版本
-- 仓库内版本文件会在发布成功后自动与 tag 对齐
+如果你需要的是可直接交给代理执行的严格流程，请使用仓库内的 `agents/skills/icon-maintenance/SKILL.md`。
