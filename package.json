@@ -28,6 +28,7 @@
     "checkIcons": "node ./scripts/checkIconsAndCategories.mts",
     "generate:changelog": "node ./scripts/generateChangelog.mts",
     "generate:changelog:md": "node ./scripts/writeChangelog.mts",
+    "sync:package-versions": "node ./scripts/syncPackageVersions.mts",
     "generate:sponsors": "node scripts/updateSponsors.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",

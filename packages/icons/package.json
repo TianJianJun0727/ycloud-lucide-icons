@@ -1,7 +1,7 @@
 {
   "name": "@ycloud-web/icons-data",
   "description": "A YCloud icon data package that contains normalized icon nodes and metadata.",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "ISC",
   "homepage": "https://github.com/TianJianJun0727/ycloud-icons",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",

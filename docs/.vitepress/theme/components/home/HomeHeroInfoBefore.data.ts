@@ -1,21 +1,14 @@
-import { readFile } from 'node:fs/promises';
-import { fileURLToPath, URL } from 'node:url';
-import { getChangelogAnchor, listReleaseEntries } from '../../../utils/changelog';
+import changelogSidebarItems from '../../../data/changelogSidebar';
 
 export default {
   async load() {
-    const packageJsonPath = fileURLToPath(
-      new URL('../../../../../packages/ycloud-react/package.json', import.meta.url),
-    );
-    const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf-8')) as { version: string };
-    const releases = listReleaseEntries();
-    const latestRelease = releases[0];
-    const latestVersion = latestRelease?.version || packageJson.version;
-    const latestVersionDate = latestRelease?.date || new Date().toISOString().slice(0, 10);
+    const latestRelease = changelogSidebarItems[0];
+    const latestVersion = latestRelease?.text.split(' · ')[0] ?? 'v0.0.0';
+    const changelogHref = latestRelease?.link ?? '/changelog';
 
     return {
       version: latestVersion,
-      changelogHref: `/changelog#${getChangelogAnchor(latestVersion, latestVersionDate)}`,
+      changelogHref,
       installationHref: '/guide/installation',
     };
   },

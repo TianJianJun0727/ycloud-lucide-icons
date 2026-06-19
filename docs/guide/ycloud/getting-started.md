@@ -65,7 +65,7 @@ bun add @ycloud-web/icons@latest
 生产环境建议锁定具体版本，避免 CDN 上游版本变化影响线上页面：
 
 ```html
-<script src="https://unpkg.com/@ycloud-web/icons@0.1.0-beta.1"></script>
+<script src="https://unpkg.com/@ycloud-web/icons@0.1.2"></script>
 ```
 
 ## 导入第一个图标
