@@ -23,7 +23,7 @@ packages/**/src/aliases/*.ts
 packages/**/src/aliases.ts
 !packages/**/src/aliases/index.ts
 packages/**/src/utils/*.ts
-!packages/shared/src/utils/*.ts
+!packages/icons-shared/src/utils/*.ts
 packages/**/src/dynamicIconImports.ts
 packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js
@@ -37,6 +37,9 @@ packages/**/dynamic.d.mts
 packages/**/dynamic.mjs.map
 packages/**/dynamic.mjs
 packages/**/LICENSE
+packages/icons-static/icon-nodes.json
+packages/icons-static/icons
+packages/icons-static/sprite.svg
 categories.json
 tags.json
 .vercel
@@ -46,6 +49,7 @@ package-lock.json
 docs/.vitepress/cache
 docs/.vitepress/dist
 docs/.vitepress/.temp
+docs/.vitepress/config.ts.timestamp-*.mjs
 docs/.vitepress/data/iconNodes
 docs/.vitepress/data/iconMetaData.ts
 docs/.vitepress/data/releaseMetaData.json

@@ -12,11 +12,6 @@
       "permanent": true
     },
     {
-      "source": "/docs/:slug(ycloud-?.*)",
-      "destination": "/guide/packages/:slug",
-      "permanent": true
-    },
-    {
       "source": "/docs/:slug(.*-?guide)",
       "destination": "/guide/design/:slug",
       "permanent": true
@@ -53,53 +48,28 @@
       "permanent": true
     },
     {
-      "source": "/guide/packages/ycloud",
+      "source": "/guide/ycloud",
       "destination": "/guide/ycloud",
       "permanent": true
     },
     {
-      "source": "/guide/packages/ycloud-react",
+      "source": "/guide/react",
       "destination": "/guide/react",
       "permanent": true
     },
     {
-      "source": "/guide/packages/@ycloud-web/icons-vue",
+      "source": "/guide/vue",
       "destination": "/guide/vue",
       "permanent": true
     },
     {
-      "source": "/guide/packages/ycloud-vue",
-      "destination": "/guide/vue",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/@ycloud-web/icons-svelte",
-      "destination": "/guide/svelte",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/@ycloud-web/icons-solid",
-      "destination": "/guide/solid",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/ycloud-angular",
+      "source": "/guide/angular",
       "destination": "/guide/angular",
       "permanent": true
     },
     {
-      "source": "/guide/packages/@ycloud-web/icons-preact",
-      "destination": "/guide/preact",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/ycloud-astro",
+      "source": "/guide/astro",
       "destination": "/guide/astro",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/@ycloud-web/icons-static",
-      "destination": "/guide/static",
       "permanent": true
     }
   ],

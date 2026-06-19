@@ -175,8 +175,8 @@ export default defineConfig({
           if (
             warning.code === 'MODULE_LEVEL_DIRECTIVE' &&
             message.includes('"use client"') &&
-            (id.includes('packages/ycloud-react/src/') ||
-              message.includes('packages/ycloud-react/src/'))
+            (id.includes('packages/icons-react/src/') ||
+              message.includes('packages/icons-react/src/'))
           ) {
             return;
           }
@@ -184,8 +184,8 @@ export default defineConfig({
           if (
             warning.code === 'SOURCEMAP_ERROR' &&
             message.includes("Can't resolve original location") &&
-            (id.includes('packages/ycloud-react/src/') ||
-              message.includes('packages/ycloud-react/src/'))
+            (id.includes('packages/icons-react/src/') ||
+              message.includes('packages/icons-react/src/'))
           ) {
             return;
           }

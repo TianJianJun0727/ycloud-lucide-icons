@@ -7,26 +7,17 @@ docs/.vitepress/cache
 docs/.vitepress/data
 docs/.nitro
 
-# @lucide/angular
-packages/angular/.angular
+# @ycloud-web/icons-angular
+packages/icons-angular/.angular
 
-# lucide-static
-packages/lucide-static/icons
-packages/lucide-static/lib
-packages/lucide-static/sprite.svg
-packages/lucide-static/tags.json
-packages/lucide-static/icon-nodes.json
-packages/lucide-static/font
+# @ycloud-web/icons-static
+packages/icons-static/icons
+packages/icons-static/lib
+packages/icons-static/sprite.svg
+packages/icons-static/tags.json
+packages/icons-static/icon-nodes.json
+packages/icons-static/font
 
-# ycloud-static
-packages/ycloud-static/icons
-packages/ycloud-static/lib
-packages/ycloud-static/sprite.svg
-packages/ycloud-static/tags.json
-packages/ycloud-static/icon-nodes.json
-packages/ycloud-static/font
-packages/svelte/.svelte-kit
-
-# lucide-svelte
-packages/svelte/src/icons/*.svelte
-packages/svelte/.svelte-kit
+# @ycloud-web/icons-svelte
+packages/icons-svelte/src/icons/*.svelte
+packages/icons-svelte/.svelte-kit

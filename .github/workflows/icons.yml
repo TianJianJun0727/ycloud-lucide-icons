@@ -1,10 +1,12 @@
-name: YCloud Icons Checks
+name: YCloud Icons checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - packages/icons/**
-      - packages/shared/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - pnpm-lock.yaml
@@ -24,7 +26,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm --filter @ycloud-web/icons-data build
+        run: pnpm --filter @ycloud-web/icons build
 
   test:
     runs-on: ubuntu-latest
@@ -40,4 +42,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Test
-        run: pnpm --filter @ycloud-web/icons-data test
+        run: pnpm --filter @ycloud-web/icons test

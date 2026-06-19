@@ -55,6 +55,7 @@ export interface PackageItem {
   iconDark: string;
   shields: Shield[];
   source: string;
+  npmUrl: string;
   documentation: string;
   // set when the docs page name is
   // diffrent from the package name

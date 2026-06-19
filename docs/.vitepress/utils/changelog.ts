@@ -40,4 +40,3 @@ export function listReleaseEntries(): ReleaseEntry[] {
     return [];
   }
 }
-

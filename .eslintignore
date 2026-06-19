@@ -7,5 +7,5 @@ node_modules
 .eslintrc.js
 docs/images
 docs/**/examples/
-packages/lucide-react/dynamicIconImports.js
-packages/angular/.angular
+packages/icons-react/dynamicIconImports.js
+packages/icons-angular/.angular

@@ -57,6 +57,11 @@ const props = defineProps<{
           text="源码"
           theme="alt"
         />
+        <VPButton
+          :href="packageData.npmUrl"
+          text="npm"
+          theme="alt"
+        />
       </footer>
     </Card>
   </div>

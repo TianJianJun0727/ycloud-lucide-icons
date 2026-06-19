@@ -126,7 +126,7 @@ icons/<name>.json
 
 ### 1. 核心运行时包
 
-- `packages/ycloud`
+- `packages/icons`
 
 这是不绑定具体前端框架的基础入口，面向原生 JS 或通用运行时场景。
 
@@ -134,14 +134,14 @@ icons/<name>.json
 
 例如：
 
-- `packages/ycloud-react`
-- `packages/vue`
-- `packages/svelte`
-- `packages/ycloud-solid`
-- `packages/ycloud-preact`
-- `packages/ycloud-react-native`
-- `packages/angular`
-- `packages/astro`
+- `packages/icons-react`
+- `packages/icons-vue`
+- `packages/icons-svelte`
+- `packages/icons-solid`
+- `packages/icons-preact`
+- `packages/icons-react-native`
+- `packages/icons-angular`
+- `packages/icons-astro`
 
 这些包的职责是把同一份图标节点数据包装成各自框架的组件接口。
 
@@ -160,38 +160,38 @@ import { Camera } from '@ycloud-web/icons-react';
 
 ### 3. 静态资源包
 
-- `packages/ycloud-static`
+- `packages/icons-static`
 
 这个包面向 SVG 文件、Sprite、Icon Font 等非组件化消费方式。
 
 ### 4. 数据包与共享包
 
-- `packages/icons`
-- `packages/shared`
+- `packages/icons-data`
+- `packages/icons-shared`
 
 前者更偏图标数据导出，后者更偏多个包共享的工具、类型和基础逻辑。
 
 这两类包的存在，是为了避免每个框架包重复维护一套相同数据和辅助方法。
 
-## 四、为什么目录名和发布包名不完全一致
+## 四、为什么目录名跟 npm 包短名一致
 
-当前仓库内部有些目录名保留了演进痕迹，例如：
+公开包统一发布在 `@ycloud-web` scope 下，但 `packages/` 内部不再重复组织名，只保留 npm 包名去掉 scope 后的短名：
 
-- 目录可能叫 `packages/ycloud-react`
-- 发布包名是 `@ycloud-web/icons-react`
+- `@ycloud-web/icons` -> `packages/icons`
+- `@ycloud-web/icons-react` -> `packages/icons-react`
+- `@ycloud-web/icons-vue` -> `packages/icons-vue`
+- `@ycloud-web/icons-data` -> `packages/icons-data`
 
-这是有意为之，不是遗漏。
+这样做的原因很直接：
 
-原因很直接：
+1. 目录和发布包一一对应
+   看到目录名就能判断对应的 npm 包，减少脚本、CI 和文档之间的映射成本。
 
-1. 内部目录重命名成本高
-   一次性重命名目录会影响脚本、构建配置、工作流和历史追踪。
+2. 避免重复品牌前缀
+   scope 已经表达了组织归属，目录里不再重复 `ycloud`。
 
-2. 对外品牌必须统一
-   npm 包、文档和用户感知层统一归属 `YCloud Icons`。
-
-3. 先稳定发布链路，再做深层整理
-   对外契约比内部命名更重要。只要发布名、文档名和类型入口稳定，目录名可以分阶段收敛。
+3. 后续自动化更简单
+   生成文档、生成源码链接、同步包版本时，都可以从 `package.json` 直接得到稳定路径。
 
 ## 五、风格入口为什么独立
 

@@ -8,17 +8,17 @@ YCloud Icons 是 YCloud 的多框架 SVG 图标组件库，面向产品前端、
 
 | 目标            | 包名                             | 源码目录                       |
 | --------------- | -------------------------------- | ------------------------------ |
-| Core JavaScript | `@ycloud-web/icons`              | `packages/ycloud`              |
-| React           | `@ycloud-web/icons-react`        | `packages/ycloud-react`        |
-| Vue             | `@ycloud-web/icons-vue`          | `packages/vue`                 |
-| Svelte          | `@ycloud-web/icons-svelte`       | `packages/svelte`              |
-| Solid           | `@ycloud-web/icons-solid`        | `packages/ycloud-solid`        |
-| Preact          | `@ycloud-web/icons-preact`       | `packages/ycloud-preact`       |
-| React Native    | `@ycloud-web/icons-react-native` | `packages/ycloud-react-native` |
-| Angular         | `@ycloud-web/icons-angular`      | `packages/angular`             |
-| Astro           | `@ycloud-web/icons-astro`        | `packages/astro`               |
-| 静态资源        | `@ycloud-web/icons-static`       | `packages/ycloud-static`       |
-| 图标数据        | `@ycloud-web/icons-data`         | `packages/icons`               |
+| Core JavaScript | `@ycloud-web/icons`              | `packages/icons`               |
+| React           | `@ycloud-web/icons-react`        | `packages/icons-react`         |
+| Vue             | `@ycloud-web/icons-vue`          | `packages/icons-vue`           |
+| Svelte          | `@ycloud-web/icons-svelte`       | `packages/icons-svelte`        |
+| Solid           | `@ycloud-web/icons-solid`        | `packages/icons-solid`         |
+| Preact          | `@ycloud-web/icons-preact`       | `packages/icons-preact`        |
+| React Native    | `@ycloud-web/icons-react-native` | `packages/icons-react-native`  |
+| Angular         | `@ycloud-web/icons-angular`      | `packages/icons-angular`       |
+| Astro           | `@ycloud-web/icons-astro`        | `packages/icons-astro`         |
+| 静态资源        | `@ycloud-web/icons-static`       | `packages/icons-static`        |
+| 图标数据        | `@ycloud-web/icons-data`         | `packages/icons-data`          |
 
 ## 使用示例
 

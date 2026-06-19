@@ -17,7 +17,7 @@ export default defineNitroConfig({
       const message = warning.message ?? '';
       const id = warning.id ?? '';
       const isYCloudReactSource =
-        id.includes('packages/ycloud-react/src/') || message.includes('packages/ycloud-react/src/');
+        id.includes('packages/icons-react/src/') || message.includes('packages/icons-react/src/');
 
       if (
         warning.code === 'MODULE_LEVEL_DIRECTIVE' &&

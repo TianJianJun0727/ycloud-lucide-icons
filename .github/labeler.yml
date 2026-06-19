@@ -34,64 +34,64 @@
 🧳 ycloud package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/ycloud/*'
+          - 'packages/icons/*'
 
 # For changes in the YCloud React package
 ⚛️ react package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/ycloud-react/*'
+          - 'packages/icons-react/*'
 
 # For changes in the YCloud React Native package
 ⚛️ react native package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/ycloud-react-native/*'
+          - 'packages/icons-react-native/*'
 
 # For changes in the YCloud vue packages
 💎 vue package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/vue/*'
+          - 'packages/icons-vue/*'
 
 # For changes in the YCloud angular package
 🅰️ angular package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/angular/*'
+          - 'packages/icons-angular/*'
 
 # For changes in the YCloud preact package
 ⚛️ preact package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/ycloud-preact/*'
+          - 'packages/icons-preact/*'
 
 # For changes in the YCloud svelte package
 🧣 svelte package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/svelte/*'
+          - 'packages/icons-svelte/*'
 
 # For changes in the YCloud solid package
 🪝 solid package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/ycloud-solid/*'
+          - 'packages/icons-solid/*'
 
 # For changes in the YCloud astro package
 🚀 astro package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/astro/*'
+          - 'packages/icons-astro/*'
 
 # For changes in the @ycloud-web/icons-data package
-❇️ ycloud-icons:
+❇️ icons-data package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/ycloud-icons/*'
+          - 'packages/icons-data/*'
 
 # For changes in the YCloud static package
 🪨 static package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/ycloud-static/*'
+          - 'packages/icons-static/*'

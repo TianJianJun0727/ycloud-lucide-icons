@@ -1,87 +1,85 @@
 import plugins from '@ycloud-web/rollup-plugins';
-import pkg from './package.json' with { type: 'json' };
+import replace from '@rollup/plugin-replace';
 import dts from 'rollup-plugin-dts';
+import pkg from './package.json' with { type: 'json' };
 
-const packageName = '@ycloud-web/icons-data';
-const outputFileName = 'ycloud-icons';
-const inputs = [`src/ycloud-icons.ts`];
+const outputFileName = pkg.name;
+const outputDir = 'dist';
+const inputs = ['src/ycloud.ts'];
 const bundles = [
+  {
+    format: 'umd',
+    inputs,
+    outputDir,
+    minify: true,
+  },
+  {
+    format: 'umd',
+    inputs,
+    outputDir,
+  },
   {
     format: 'cjs',
     inputs,
-    extension: 'cjs',
+    outputDir,
   },
   {
     format: 'esm',
-    inputs: [...inputs, './src/dynamic.ts', './src/build.ts'],
+    inputs,
+    outputDir,
     preserveModules: true,
-    extension: 'mjs',
   },
 ];
 
 const configs = bundles
-  .map(
-    ({
-      inputs,
-      outputDir = 'dist',
-      outputFile,
-      format,
-      minify,
-      preserveModules,
-      entryFileNames,
-      external = [],
-      paths,
-      extension = 'js',
-    }) =>
-      inputs.map((input) => ({
-        input,
-        plugins: [...plugins({ pkg, minify })],
-        external,
-        output: {
-          name: packageName,
-          entryFileNames,
-          ...(preserveModules
-            ? {
-                dir: `${outputDir}/${format}`,
-                entryFileNames: `[name].${extension}`,
-              }
-            : {
-                file:
-                  outputFile ??
-                  `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.${extension}`,
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+    inputs.map((input) => ({
+      input,
+      plugins: [
+        // This is for ycloud plugin to replace an argument in createIcons so it is easier to use with UMD.
+        ...(format === 'umd'
+          ? [
+              replace({
+                'icons = {}': 'icons = iconAndAliases',
+                delimiters: ['', ''],
+                preventAssignment: false,
               }),
-          paths,
-          format,
-          sourcemap: true,
-          preserveModules,
-          exports: 'named',
-          globals: {},
-          preserveModulesRoot: 'src',
-        },
-      })),
+            ]
+          : []),
+        ...plugins({ pkg, minify }),
+      ],
+      output: {
+        name: outputFileName,
+        ...(preserveModules
+          ? {
+              dir: `${outputDir}/${format}`,
+              entryFileNames: '[name].mjs',
+            }
+          : {
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
+        format,
+        sourcemap: true,
+        preserveModules,
+        preserveModulesRoot: 'src',
+      },
+    })),
   )
   .flat();
 
-export default [
-  ...[
-    outputFileName,
-    `${outputFileName}.prefixed`,
-    `${outputFileName}.suffixed`,
-    'dynamic',
-    'build',
-  ].map((filename) => ({
-    input: `./src/${filename}.ts`,
-    output: [
-      {
-        file: `dist/esm/${filename}.d.ts`,
-        format: 'esm',
-      },
-      {
-        file: `dist/cjs/${filename}.d.cts`,
-        format: 'cjs',
-      },
-    ],
-    plugins: [dts()],
-  })),
-  ...configs,
-];
+const typesFileConfig = {
+  input: inputs[0],
+  output: [
+    {
+      file: `${outputDir}/${outputFileName}.d.ts`,
+      format: 'esm',
+    },
+  ],
+  plugins: [
+    dts({
+      include: ['src'],
+    }),
+  ],
+};
+
+export default [...configs, typesFileConfig];

@@ -1,0 +1,66 @@
+{
+  "name": "@ycloud-web/icons-astro",
+  "version": "0.1.2",
+  "author": "Moustapha Kebe",
+  "description": "A YCloud icon library package for Astro applications.",
+  "license": "ISC",
+  "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/astro/",
+  "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
+    "directory": "packages/icons-astro"
+  },
+  "keywords": [
+    "YCloud",
+    "Astro",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "sideEffects": false,
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "import": "./src/ycloud-astro.ts"
+    },
+    "./icons": {
+      "import": "./src/ycloud-astro.ts"
+    },
+    "./icons/*": {
+      "import": "./src/icons/*.ts"
+    }
+  },
+  "scripts": {
+    "build": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts --pretty=false",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "copy:utils": "mkdir -p ./src/utils && for f in hasA11yProp toKebabCase mergeClasses; do cp -f ../../packages/icons-shared/src/utils/$f.ts ./src/utils/; done",
+    "test": "pnpm copy:utils && pnpm build:icons && vitest run",
+    "test:watch": "pnpm build:icons && vitest run --watch"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.9",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@ycloud-web/build-icons": "workspace:*",
+    "astro": "^6.4.8",
+    "jest-serializer-html": "^7.1.0",
+    "linkedom": "^0.18.5",
+    "prettier": "^3.4.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "vitest": "4.1.9"
+  },
+  "peerDependencies": {
+    "astro": "^4 || ^5 || ^6"
+  }
+}

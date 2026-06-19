@@ -30,7 +30,8 @@ export default {
             description: packageDescriptions[pJson.name] ?? pJson.description,
             documentation:
               packageData.documentation ?? `/guide/${packageData.docsAlias ?? pJson.name}`,
-            source: `https://github.com/TianJianJun0727/ycloud-icons/tree/main/packages/${packageData.packageDirname ?? pJson.name}`,
+            source: `https://github.com/TianJianJun0727/ycloud-icons/tree/main/${pJson.repository?.directory ?? `packages/${packageData.packageDirname ?? pJson.name}`}`,
+            npmUrl: packageData.npmUrl ?? `https://www.npmjs.com/package/${pJson.name}`,
             icon: `/framework-logos/${packageData.icon}.svg`,
             iconDark: Boolean(packageData.iconDark)
               ? `/framework-logos/${packageData.iconDark}.svg`

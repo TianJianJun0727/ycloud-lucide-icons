@@ -1,0 +1,45 @@
+name: YCloud Icons Astro Checks
+
+on:
+  push:
+    branches:
+      - next
+  pull_request:
+    paths:
+      - packages/icons-astro/**
+      - packages/icons-shared/**
+      - tools/build-icons/**
+      - pnpm-lock.yaml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: 'package.json'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm --filter @ycloud-web/icons-astro build
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: 'package.json'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test
+        run: pnpm --filter @ycloud-web/icons-astro test

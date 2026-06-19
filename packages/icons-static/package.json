@@ -1,0 +1,50 @@
+{
+  "name": "@ycloud-web/icons-static",
+  "description": "Static SVG and font assets for YCloud Icons.",
+  "version": "0.1.2",
+  "license": "ISC",
+  "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/static/",
+  "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
+    "directory": "packages/icons-static"
+  },
+  "keywords": [
+    "YCloud",
+    "Static",
+    "Sprite",
+    "NodeJS",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "source": "src/ycloud-static.js",
+  "main": "dist/cjs/ycloud-static.js",
+  "module": "dist/esm/ycloud-static.mjs",
+  "typings": "dist/ycloud-static.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:lib && pnpm build:tags",
+    "build:tags": "node ./scripts/migrateIconsToTags.mts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
+    "build:lib": "node ./scripts/buildLib.mts",
+    "build:bundles": "rollup -c rollup.config.mjs",
+    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@ycloud-web/build-icons": "workspace:*",
+    "@ycloud-web/helpers": "workspace:*",
+    "@ycloud-web/rollup-plugins": "workspace:*",
+    "prettier": "^2.3.2",
+    "rollup": "^4.62.0",
+    "rollup-plugin-dts": "^6.4.1",
+    "svgson": "^5.2.1"
+  }
+}

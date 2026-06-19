@@ -1,17 +1,19 @@
 <p align="center">
   <a href="https://github.com/TianJianJun0727/ycloud-icons">
-    <img src="https://tianjianjun0727.github.io/ycloud-icons/package-logos/icons.svg" alt="" width="540">
+    <img src="https://tianjianjun0727.github.io/ycloud-icons/package-logos/ycloud.svg" alt="YCloud Icons Web 图标库。" width="540">
   </a>
 </p>
 
 <p align="center">
-导出 YCloud Icons 图标数据的辅助库。
+面向 Web 和 JavaScript 应用的 YCloud Icons 图标库。
 </p>
 
 <div align="center">
-  [![npm](https://img.shields.io/npm/v/@ycloud-web/icons-data?color=blue)](https://www.npmjs.com/package/@ycloud-web/icons-data)
-  ![NPM Downloads](https://img.shields.io/npm/dw/@ycloud-web/icons-data)
-  [![License](https://img.shields.io/badge/license-ISC-green)](https://tianjianjun0727.github.io/ycloud-icons/license)
+
+[![npm](https://img.shields.io/npm/v/@ycloud-web/icons?color=blue)](https://www.npmjs.com/package/@ycloud-web/icons)
+![NPM Downloads](https://img.shields.io/npm/dw/@ycloud-web/icons)
+[![License](https://img.shields.io/badge/license-ISC-green)](https://tianjianjun0727.github.io/ycloud-icons/license)
+
 </div>
 
 <p align="center">
@@ -19,49 +21,57 @@
   ·
   <a href="https://tianjianjun0727.github.io/ycloud-icons/icons/">图标</a>
   ·
-  <a href="https://tianjianjun0727.github.io/ycloud-icons/guide/packages/icons">文档</a>
+  <a href="https://tianjianjun0727.github.io/ycloud-icons/guide/ycloud">文档</a>
   ·
   <a href="https://tianjianjun0727.github.io/ycloud-icons/license">许可证</a>
 </p>
 
-# @ycloud-web/icons-data
+# @ycloud-web/icons
 
-以支持 tree-shaking 的格式导出 YCloud Icons 图标数据，并提供动态图标导入相关工具函数。
+面向 Web 和 JavaScript 应用的 YCloud Icons 核心包。
 
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-data@latest
+pnpm add @ycloud-web/icons@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-data@latest
+npm install @ycloud-web/icons@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-data@latest
+yarn add @ycloud-web/icons@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-data@latest
+bun add @ycloud-web/icons@latest
 ```
 
-### 用法
+### CDN
 
-```ts
-import { House } from '@ycloud-web/icons-data';
-import { buildYCloudSvg } from '@ycloud-web/icons-data/build';
+```html
+<!-- 开发版本 -->
+<script src="https://unpkg.com/@ycloud-web/icons@latest/dist/umd/@ycloud-web/icons.js"></script>
 
-const houseSvg = buildYCloudSvg(House, {
-  size: 24,
-  color: '#111827',
-});
+<!-- 生产版本 -->
+<script src="https://unpkg.com/@ycloud-web/icons@latest"></script>
+```
+
+CDN 方式会暴露全局变量 `ycloud`：
+
+```html
+<i data-ycloud="menu"></i>
+
+<script>
+  ycloud.createIcons();
+</script>
 ```
 
 ## 文档
 
-完整文档请访问 [YCloud Icons 文档](https://tianjianjun0727.github.io/ycloud-icons/guide/packages/icons)。
+完整文档见 [tianjianjun0727.github.io/ycloud-icons](https://tianjianjun0727.github.io/ycloud-icons/guide/ycloud)。
 
 ## 许可证
 
-YCloud Icons 使用 ISC 许可证发布。详见 [LICENSE](https://tianjianjun0727.github.io/ycloud-icons/license)。
+YCloud Icons 基于 ISC 许可证发布。详见 [LICENSE](https://tianjianjun0727.github.io/ycloud-icons/license)。
