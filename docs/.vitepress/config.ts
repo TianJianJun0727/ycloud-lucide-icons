@@ -138,6 +138,44 @@ export default defineConfig({
         },
       ],
     },
+    build: {
+      chunkSizeWarningLimit: 1800,
+      rollupOptions: {
+        onwarn(warning, defaultHandler) {
+          const message = warning.message ?? '';
+          const id = warning.id ?? '';
+
+          if (
+            warning.code === 'MODULE_LEVEL_DIRECTIVE' &&
+            message.includes('"use client"') &&
+            (id.includes('packages/ycloud-react/src/') ||
+              message.includes('packages/ycloud-react/src/'))
+          ) {
+            return;
+          }
+
+          if (
+            warning.code === 'SOURCEMAP_ERROR' &&
+            message.includes("Can't resolve original location") &&
+            (id.includes('packages/ycloud-react/src/') ||
+              message.includes('packages/ycloud-react/src/'))
+          ) {
+            return;
+          }
+
+          if (
+            warning.code === 'INVALID_ANNOTATION' &&
+            message.includes('#__PURE__') &&
+            id.includes('/node_modules/') &&
+            id.includes('@vueuse/core')
+          ) {
+            return;
+          }
+
+          defaultHandler(warning);
+        },
+      },
+    },
     plugins: [
       groupIconVitePlugin(),
       llmstxt({

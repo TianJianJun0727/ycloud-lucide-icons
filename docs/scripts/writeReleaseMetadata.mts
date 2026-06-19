@@ -148,13 +148,15 @@ const defaultReleaseMetaData = {
 };
 
 try {
+  const iconsUsingDefaultReleaseMetaData: string[] = [];
+
   const releaseMetaData = await Promise.all(
     iconJsonFiles.map(async (iconJsonFile) => {
       const iconName = path.basename(iconJsonFile, '.json');
       const metaDir = path.resolve(releaseMetaDataDirectory, `${iconName}.json`);
 
       if (!(iconName in newReleaseMetaData)) {
-        console.error(`Could not find release metadata for icon '${iconName}'.`);
+        iconsUsingDefaultReleaseMetaData.push(iconName);
       }
 
       const contents = {
@@ -183,6 +185,17 @@ try {
       return [iconName, contents];
     }),
   );
+
+  if (iconsUsingDefaultReleaseMetaData.length > 0) {
+    console.log(
+      `Release metadata fallback applied to ${iconsUsingDefaultReleaseMetaData.length} icons.`,
+    );
+
+    if (process.env.DOCS_VERBOSE_RELEASE_METADATA === '1') {
+      console.log(iconsUsingDefaultReleaseMetaData.join(', '));
+    }
+  }
+
   await fs.promises.writeFile(
     location,
     JSON.stringify(Object.fromEntries(releaseMetaData), null, 2),
