@@ -94,6 +94,4 @@ pnpm --filter @ycloud-web/icons-docs docs:dev
 
 ## 许可证
 
-YCloud Icons 使用 ISC 许可证发布。
-
-本项目的初始图标集合、包结构和生成流程基于 [Lucide](https://github.com/lucide-icons/lucide) 演进，并保留 Lucide 的必要上游授权信息。详见 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) 和 [LICENSE](./LICENSE)。
+YCloud Icons 使用 ISC 许可证发布。第三方来源与上游授权信息见 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)，完整许可证文本见 [LICENSE](./LICENSE)。
