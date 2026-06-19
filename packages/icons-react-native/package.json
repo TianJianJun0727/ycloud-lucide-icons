@@ -1,7 +1,7 @@
 {
   "name": "@ycloud-web/icons-react-native",
   "description": "A YCloud icon library package for React Native applications.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "ISC",
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/react-native/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
