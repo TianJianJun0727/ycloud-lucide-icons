@@ -33,19 +33,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-svelte
+pnpm add @ycloud-web/icons-svelte@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-svelte
+npm install @ycloud-web/icons-svelte@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-svelte
+yarn add @ycloud-web/icons-svelte@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-svelte
+bun add @ycloud-web/icons-svelte@latest
 ```
 
 > `@ycloud-web/icons-svelte` 仅支持 Svelte 5；如果使用 Svelte 4，请使用兼容版本的 [`@ycloud-web/icons-svelte`](https://www.npmjs.com/package/@ycloud-web/icons-svelte)。

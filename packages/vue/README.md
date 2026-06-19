@@ -33,19 +33,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-vue
+pnpm add @ycloud-web/icons-vue@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-vue
+npm install @ycloud-web/icons-vue@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-vue
+yarn add @ycloud-web/icons-vue@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-vue
+bun add @ycloud-web/icons-vue@latest
 ```
 
 ## 文档

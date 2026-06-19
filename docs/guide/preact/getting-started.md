@@ -19,19 +19,19 @@ import { preactSidebar } from '../../.vitepress/sidebar/preact'
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-preact
+pnpm add @ycloud-web/icons-preact@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-preact
+yarn add @ycloud-web/icons-preact@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-preact
+npm install @ycloud-web/icons-preact@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-preact
+bun add @ycloud-web/icons-preact@latest
 ```
 
 :::

@@ -47,19 +47,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-static
+pnpm add @ycloud-web/icons-static@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-static
+npm install @ycloud-web/icons-static@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-static
+yarn add @ycloud-web/icons-static@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-static
+bun add @ycloud-web/icons-static@latest
 ```
 
 ## 文档

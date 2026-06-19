@@ -14,19 +14,19 @@ YCloud Icons 当前覆盖 10 种包类型，可以按项目所用框架选择安
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons
+pnpm add @ycloud-web/icons@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons
+npm install @ycloud-web/icons@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons
+yarn add @ycloud-web/icons@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons
+bun add @ycloud-web/icons@latest
 ```
 
 :::
@@ -40,19 +40,19 @@ bun add @ycloud-web/icons
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-react
+pnpm add @ycloud-web/icons-react@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-react
+npm install @ycloud-web/icons-react@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-react
+yarn add @ycloud-web/icons-react@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-react
+bun add @ycloud-web/icons-react@latest
 ```
 
 :::
@@ -66,19 +66,19 @@ bun add @ycloud-web/icons-react
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-vue
+pnpm add @ycloud-web/icons-vue@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-vue
+npm install @ycloud-web/icons-vue@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-vue
+yarn add @ycloud-web/icons-vue@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-vue
+bun add @ycloud-web/icons-vue@latest
 ```
 
 :::
@@ -92,19 +92,19 @@ bun add @ycloud-web/icons-vue
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-svelte
+pnpm add @ycloud-web/icons-svelte@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-svelte
+npm install @ycloud-web/icons-svelte@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-svelte
+yarn add @ycloud-web/icons-svelte@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-svelte
+bun add @ycloud-web/icons-svelte@latest
 ```
 
 :::
@@ -118,19 +118,19 @@ bun add @ycloud-web/icons-svelte
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-solid
+pnpm add @ycloud-web/icons-solid@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-solid
+npm install @ycloud-web/icons-solid@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-solid
+yarn add @ycloud-web/icons-solid@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-solid
+bun add @ycloud-web/icons-solid@latest
 ```
 
 :::
@@ -144,19 +144,19 @@ bun add @ycloud-web/icons-solid
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-preact
+pnpm add @ycloud-web/icons-preact@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-preact
+npm install @ycloud-web/icons-preact@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-preact
+yarn add @ycloud-web/icons-preact@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-preact
+bun add @ycloud-web/icons-preact@latest
 ```
 
 :::
@@ -170,19 +170,19 @@ bun add @ycloud-web/icons-preact
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-react-native
+pnpm add @ycloud-web/icons-react-native@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-react-native
+npm install @ycloud-web/icons-react-native@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-react-native
+yarn add @ycloud-web/icons-react-native@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-react-native
+bun add @ycloud-web/icons-react-native@latest
 ```
 
 :::
@@ -196,19 +196,19 @@ Angular 组件和 provider API。
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-angular
+pnpm add @ycloud-web/icons-angular@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-angular
+npm install @ycloud-web/icons-angular@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-angular
+yarn add @ycloud-web/icons-angular@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-angular
+bun add @ycloud-web/icons-angular@latest
 ```
 
 :::
@@ -222,19 +222,19 @@ bun add @ycloud-web/icons-angular
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-astro
+pnpm add @ycloud-web/icons-astro@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-astro
+npm install @ycloud-web/icons-astro@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-astro
+yarn add @ycloud-web/icons-astro@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-astro
+bun add @ycloud-web/icons-astro@latest
 ```
 
 :::
@@ -248,19 +248,19 @@ bun add @ycloud-web/icons-astro
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-static
+pnpm add @ycloud-web/icons-static@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-static
+npm install @ycloud-web/icons-static@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-static
+yarn add @ycloud-web/icons-static@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-static
+bun add @ycloud-web/icons-static@latest
 ```
 
 :::

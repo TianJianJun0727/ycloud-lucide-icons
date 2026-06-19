@@ -40,19 +40,19 @@ SVG sprites 和 Icon font 会包含**全部图标**，可能显著增加应用�
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-static
+pnpm add @ycloud-web/icons-static@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-static
+yarn add @ycloud-web/icons-static@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-static
+npm install @ycloud-web/icons-static@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-static
+bun add @ycloud-web/icons-static@latest
 ```
 
 :::

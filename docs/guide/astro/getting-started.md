@@ -19,19 +19,19 @@ import { astroSidebar } from '../../.vitepress/sidebar/astro'
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-astro
+pnpm add @ycloud-web/icons-astro@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-astro
+yarn add @ycloud-web/icons-astro@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-astro
+npm install @ycloud-web/icons-astro@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-astro
+bun add @ycloud-web/icons-astro@latest
 ```
 
 :::

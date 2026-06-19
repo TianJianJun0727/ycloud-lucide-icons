@@ -33,19 +33,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-react
+pnpm add @ycloud-web/icons-react@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-react
+npm install @ycloud-web/icons-react@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-react
+yarn add @ycloud-web/icons-react@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-react
+bun add @ycloud-web/icons-react@latest
 ```
 
 ## 文档

@@ -9,19 +9,19 @@
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-data
+pnpm add @ycloud-web/icons-data@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-data
+yarn add @ycloud-web/icons-data@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-data
+npm install @ycloud-web/icons-data@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-data
+bun add @ycloud-web/icons-data@latest
 ```
 
 :::

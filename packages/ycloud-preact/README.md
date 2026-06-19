@@ -33,19 +33,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-preact
+pnpm add @ycloud-web/icons-preact@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-preact
+npm install @ycloud-web/icons-preact@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-preact
+yarn add @ycloud-web/icons-preact@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-preact
+bun add @ycloud-web/icons-preact@latest
 ```
 
 ## 文档

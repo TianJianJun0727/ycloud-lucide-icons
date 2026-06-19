@@ -21,19 +21,19 @@ import { reactSidebar } from '../../.vitepress/sidebar/react'
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons
+pnpm add @ycloud-web/icons@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons
+yarn add @ycloud-web/icons@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons
+npm install @ycloud-web/icons@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons
+bun add @ycloud-web/icons@latest
 ```
 
 :::

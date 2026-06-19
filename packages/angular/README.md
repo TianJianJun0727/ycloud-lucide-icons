@@ -33,19 +33,19 @@ A standalone, signal based, zoneless implementation of the 适用于 Angular 应
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-angular
+pnpm add @ycloud-web/icons-angular@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-angular
+npm install @ycloud-web/icons-angular@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-angular
+yarn add @ycloud-web/icons-angular@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-angular
+bun add @ycloud-web/icons-angular@latest
 ```
 
 ## 文档

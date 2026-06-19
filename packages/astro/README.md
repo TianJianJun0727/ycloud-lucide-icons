@@ -33,19 +33,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-astro
+pnpm add @ycloud-web/icons-astro@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-astro
+npm install @ycloud-web/icons-astro@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-astro
+yarn add @ycloud-web/icons-astro@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-astro
+bun add @ycloud-web/icons-astro@latest
 ```
 
 ## 文档

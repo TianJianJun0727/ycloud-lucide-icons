@@ -14,19 +14,19 @@
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-vue
+pnpm add @ycloud-web/icons-vue@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-vue
+yarn add @ycloud-web/icons-vue@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-vue
+npm install @ycloud-web/icons-vue@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-vue
+bun add @ycloud-web/icons-vue@latest
 ```
 
 :::

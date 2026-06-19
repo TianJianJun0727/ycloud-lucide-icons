@@ -17,19 +17,19 @@
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-react-native
+pnpm add @ycloud-web/icons-react-native@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-react-native
+yarn add @ycloud-web/icons-react-native@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-react-native
+npm install @ycloud-web/icons-react-native@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-react-native
+bun add @ycloud-web/icons-react-native@latest
 ```
 
 :::

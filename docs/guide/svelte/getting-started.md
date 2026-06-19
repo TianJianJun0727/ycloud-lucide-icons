@@ -19,19 +19,19 @@ import { svelteSidebar } from '../../.vitepress/sidebar/svelte'
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @ycloud-web/icons-svelte
+pnpm install @ycloud-web/icons-svelte@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-svelte
+yarn add @ycloud-web/icons-svelte@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-svelte
+npm install @ycloud-web/icons-svelte@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-svelte
+bun add @ycloud-web/icons-svelte@latest
 ```
 
 :::

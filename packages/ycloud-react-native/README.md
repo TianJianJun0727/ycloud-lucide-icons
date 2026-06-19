@@ -33,19 +33,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-react-native
+pnpm add @ycloud-web/icons-react-native@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-react-native
+npm install @ycloud-web/icons-react-native@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-react-native
+yarn add @ycloud-web/icons-react-native@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-react-native
+bun add @ycloud-web/icons-react-native@latest
 ```
 
 ## 文档

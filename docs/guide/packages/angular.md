@@ -18,19 +18,19 @@
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-angular
+pnpm add @ycloud-web/icons-angular@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-angular
+yarn add @ycloud-web/icons-angular@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-angular
+npm install @ycloud-web/icons-angular@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-angular
+bun add @ycloud-web/icons-angular@latest
 ```
 
 :::

@@ -33,19 +33,19 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons
+pnpm add @ycloud-web/icons@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons
+npm install @ycloud-web/icons@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons
+yarn add @ycloud-web/icons@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons
+bun add @ycloud-web/icons@latest
 ```
 
 ### CDN

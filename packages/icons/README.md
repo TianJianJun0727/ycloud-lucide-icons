@@ -19,7 +19,7 @@
   ·
   <a href="https://tianjianjun0727.github.io/ycloud-icons/icons/">图标</a>
   ·
-  <a href="https://tianjianjun0727.github.io/ycloud-icons/guide/packages/ycloud">文档</a>
+  <a href="https://tianjianjun0727.github.io/ycloud-icons/guide/packages/icons">文档</a>
   ·
   <a href="https://tianjianjun0727.github.io/ycloud-icons/license">许可证</a>
 </p>
@@ -31,29 +31,31 @@
 ## 安装
 
 ```sh
-pnpm add @ycloud-web/icons-data
+pnpm add @ycloud-web/icons-data@latest
 ```
 
 ```sh
-npm install @ycloud-web/icons-data
+npm install @ycloud-web/icons-data@latest
 ```
 
 ```sh
-yarn add @ycloud-web/icons-data
+yarn add @ycloud-web/icons-data@latest
 ```
 
 ```sh
-bun add @ycloud-web/icons-data
+bun add @ycloud-web/icons-data@latest
 ```
 
-### CDN
+### 用法
 
-```html
-<!-- 开发版本 -->
-<script src="https://unpkg.com/@ycloud-web/icons-data@latest/dist/umd/ycloud.js"></script>
+```ts
+import { House } from '@ycloud-web/icons-data';
+import { buildYCloudSvg } from '@ycloud-web/icons-data/build';
 
-<!-- 生产版本 -->
-<script src="https://unpkg.com/@ycloud-web/icons-data@latest"></script>
+const houseSvg = buildYCloudSvg(House, {
+  size: 24,
+  color: '#111827',
+});
 ```
 
 ## 文档

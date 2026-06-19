@@ -19,19 +19,19 @@ import { solidSidebar } from '../../.vitepress/sidebar/solid'
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @ycloud-web/icons-solid
+pnpm add @ycloud-web/icons-solid@latest
 ```
 
 ```sh [yarn]
-yarn add @ycloud-web/icons-solid
+yarn add @ycloud-web/icons-solid@latest
 ```
 
 ```sh [npm]
-npm install @ycloud-web/icons-solid
+npm install @ycloud-web/icons-solid@latest
 ```
 
 ```sh [bun]
-bun add @ycloud-web/icons-solid
+bun add @ycloud-web/icons-solid@latest
 ```
 
 :::
