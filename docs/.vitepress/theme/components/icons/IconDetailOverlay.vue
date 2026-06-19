@@ -23,7 +23,7 @@ const icon = computedAsync<IconEntity | null>(async () => {
     try {
       return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity;
     } catch (err) {
-      go(withBase(`/icons/${props.iconName}`));
+      go(`/icons/${props.iconName}`);
     }
   }
   return null;
@@ -63,7 +63,7 @@ const Expand = createYCloudIcon('Expand', expand);
             :href="releaseTagLink(icon.createdRelease.version)"
             >v{{ icon.createdRelease.version }}</Badge
           >
-          <IconButton @click="go(withBase(`/icons/${icon.name}`))">
+          <IconButton @click="go(`/icons/${icon.name}`)">
             <component :is="Expand" />
           </IconButton>
           <IconButton @click="onClose">

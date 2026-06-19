@@ -84,7 +84,7 @@ const deprecatedTitle = computed(() => {
         v-if="!page?.relativePath?.startsWith?.(`icons/${icon.name}`)"
         :href="withBase(`/icons/${icon.name}`)"
         text="查看详情"
-        @click="go(withBase(`/icons/${icon.name}`))"
+        @click="go(`/icons/${icon.name}`)"
       />
       <CopySVGButton
         :name="icon.name"

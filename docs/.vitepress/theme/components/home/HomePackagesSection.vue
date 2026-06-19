@@ -17,7 +17,7 @@ const { go } = useRouter();
         :href="withBase(path)"
         class="package-logo"
         :aria-label="`查看 ${name} 包的使用说明`"
-        @click.prevent="go(withBase(path))"
+        @click.prevent="go(path)"
       >
         <img
           :src="withBase(logo)"

@@ -62,7 +62,7 @@ async function navigateToIcon(event) {
     emit('setActiveIcon', props.name);
   } else {
     event.preventDefault();
-    go(resolvedHref.value);
+    go(href.value);
   }
 }
 </script>
