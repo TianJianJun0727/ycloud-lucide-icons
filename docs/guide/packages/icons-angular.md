@@ -9,9 +9,9 @@
 - 与 Angular 的响应式表单和数据绑定集成。
 - 构建支持 tree-shaking 和懒加载的可扩展应用。
 
-## 前置要求
+## 版本要求
 
-该包要求 Angular 17+，并使用 standalone components、signals 和 zoneless change detection。
+Angular `>=17.0.0`。文档示例使用当前最新稳定版本，并使用 standalone components、signals 和 zoneless change detection。
 
 ## 安装
 

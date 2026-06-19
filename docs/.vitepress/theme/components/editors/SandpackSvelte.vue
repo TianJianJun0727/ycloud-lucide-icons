@@ -26,13 +26,13 @@ const props = defineProps<{
               dev: 'vite',
             },
             dependencies: {
-              svelte: '^4.2.19',
+              svelte: '^5.38.6',
               '@ycloud-web/icons-svelte': 'latest',
             },
             devDependencies: {
-              '@sveltejs/vite-plugin-svelte': '2.1.1',
-              vite: '4.2.2',
-              'esbuild-wasm': '^0.17.19',
+              '@sveltejs/vite-plugin-svelte': '^7.1.2',
+              vite: '^7.3.0',
+              'esbuild-wasm': '^0.27.0',
             },
           },
           null,

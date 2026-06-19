@@ -30,6 +30,10 @@
 
 适用于 Angular 应用的 YCloud Icons 图标库，支持独立组件、Signal 和 zoneless 使用方式。
 
+## 版本要求
+
+Angular `>=17.0.0`。文档示例使用当前最新 Angular 版本。
+
 ## 安装
 
 ```sh

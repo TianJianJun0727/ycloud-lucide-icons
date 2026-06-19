@@ -3,7 +3,6 @@ import path from 'path';
 import { promises as fs } from 'fs';
 
 import { getAllIconAliases } from '@ycloud-web/helpers';
-import { outlineSVG } from './outlineSVGs.ts';
 import { allocateCodePoints } from './allocateCodepoints.ts';
 import { buildFont } from './buildFont.ts';
 import { hasMissingCodePoints } from './helpers.ts';
@@ -18,7 +17,6 @@ const { saveCodePoints = false, allowFixes = false } =
 
 const repoRoot = path.join(process.cwd(), '../../');
 const iconsDir = path.join(repoRoot, 'icons');
-const outlinedDir = path.join(repoRoot, 'outlined');
 const targetDir = path.join(repoRoot, outputDir);
 
 if (saveCodePoints && !process.env.BLOB_READ_WRITE_TOKEN) {
@@ -28,12 +26,6 @@ if (saveCodePoints && !process.env.BLOB_READ_WRITE_TOKEN) {
 }
 
 const iconsWithAliases = await getAllIconAliases(iconsDir);
-
-await outlineSVG({
-  iconsDir,
-  outlinedDir,
-  iconsWithAliases,
-});
 
 const codePoints = await allocateCodePoints({
   saveCodePoints,
@@ -46,7 +38,7 @@ if (hasMissingCodePoints(iconsWithAliases, codePoints)) {
 }
 
 await buildFont({
-  inputDir: outlinedDir,
+  inputDir: iconsDir,
   targetDir,
   fontName,
   classNamePrefix,

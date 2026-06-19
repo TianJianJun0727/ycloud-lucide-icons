@@ -57,6 +57,10 @@ bun add @ycloud-web/icons-static@latest
 
 :::
 
+## 版本要求
+
+`@ycloud-web/icons-static` 无框架 peer dependency。文档示例使用当前最新稳定版本的构建工具和运行时。
+
 ## SVG 文件
 
 可以通过多种方式使用独立 SVG 文件或 SVG sprite。
@@ -130,7 +134,17 @@ import arrowRightIcon from '@ycloud-web/icons-static/icons/arrow-right.svg?raw';
 #### 基础 sprite 用法（未针对生产环境优化）：
 
 ```html
-<img src="@ycloud-web/icons-static/sprite.svg#house" />
+<svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="@ycloud-web/icons-static/sprite.svg#house" />
+</svg>
 ```
 
 #### 内联用法:
@@ -251,11 +265,13 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.send(`
     <!DOCTYPE html>
-    <html>
+    <html lang="zh-CN">
       <head>
-        <title>页面标题</title>
+        <meta charset="utf-8" />
+        <title>YCloud Icons</title>
       </head>
       <body>
         <h1>YCloud Icons</h1>

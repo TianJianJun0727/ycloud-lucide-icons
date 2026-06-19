@@ -31,15 +31,18 @@ import { MessageSquare } from '@ycloud-web/icons-static';
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
 
   res.end(`
     <!DOCTYPE html>
-    <html>
+    <html lang="zh-CN">
+      <head>
+        <meta charset="utf-8" />
+        <title>YCloud Icons</title>
+      </head>
       <body>
         <h1>YCloud Icons</h1>
         <p>这是一个 YCloud Icons 图标 ${MessageSquare}</p>
-
       </body>
     </html>
   `);

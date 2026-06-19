@@ -7,6 +7,23 @@ description: 安装 YCloud Icons 支持的框架包和静态资源包。
 
 YCloud Icons 当前覆盖 10 种包类型，可以按项目所用框架选择安装。
 
+## 版本要求
+
+各框架包的最低版本要求与 Lucide 官方当前包保持一致。文档中的交互示例会优先使用对应框架的最新稳定主版本。
+
+| 包                               | 最低版本要求           |
+| -------------------------------- | ---------------------- | --- | ------- | --- | ------- | --- | ------------------------------------------------------------ | --- | ------- | --- | ------- | --- | -------- |
+| `@ycloud-web/icons`              | 无框架 peer dependency |
+| `@ycloud-web/icons-react`        | React `^16.5.1         |     | ^17.0.0 |     | ^18.0.0 |     | ^19.0.0`                                                     |
+| `@ycloud-web/icons-vue`          | Vue `>=3.0.1`          |
+| `@ycloud-web/icons-svelte`       | Svelte `^5`            |
+| `@ycloud-web/icons-solid`        | Solid `^1.4.7`         |
+| `@ycloud-web/icons-preact`       | Preact `^10.27.2`      |
+| `@ycloud-web/icons-react-native` | React `^16.5.1         |     | ^17.0.0 |     | ^18.0.0 |     | ^19.0.0`，React Native 任意版本，`react-native-svg` `^12.0.0 |     | ^13.0.0 |     | ^14.0.0 |     | ^15.0.0` |
+| `@ycloud-web/icons-angular`      | Angular `>=17.0.0`     |
+| `@ycloud-web/icons-astro`        | Astro `^4              |     | ^5      |     | ^6`     |
+| `@ycloud-web/icons-static`       | 无框架 peer dependency |
+
 ## 核心 JavaScript
 
 与框架无关的图标数据和辅助方法。

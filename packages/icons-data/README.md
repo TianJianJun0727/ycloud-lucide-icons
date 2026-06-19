@@ -28,6 +28,10 @@
 
 以支持 tree-shaking 的格式导出 YCloud Icons 图标数据，并提供动态图标导入相关工具函数。
 
+## 版本要求
+
+无框架 peer dependency。示例使用当前最新 `@ycloud-web/icons-data` 包。
+
 ## 安装
 
 ```sh

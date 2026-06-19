@@ -30,6 +30,10 @@
 
 适用于 Preact 应用的 YCloud Icons 实现。
 
+## 版本要求
+
+Preact `^10.27.2`。文档示例使用当前最新 Preact 10 版本。
+
 ## 安装
 
 ```sh

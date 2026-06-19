@@ -30,6 +30,10 @@
 
 面向 Web 和 JavaScript 应用的 YCloud Icons 核心包。
 
+## 版本要求
+
+无框架 peer dependency。示例使用当前最新 `@ycloud-web/icons` 包。
+
 ## 安装
 
 ```sh

@@ -56,15 +56,13 @@ Icon Font 包含全部图标，会显著增加应用包体积和加载时间。�
 
 ## JavaScript 示例
 
-<!-- TODO: Fix this example -->
-
 ::: sandpack {template=vanilla showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="@ycloud-web/icons-static"}
 
 ```html /index.html [active]
 <!doctype html>
 <html>
   <body>
-    <i class="icon-home"></i>
+    <i class="icon-house"></i>
 
     <script src="index.js"></script>
   </body>

@@ -1,6 +1,6 @@
 # YCloud Icons for Svelte
 
-面向 Svelte 的 YCloud Icons 组件，可与 Svelte 4 和 Svelte 5 一起使用。每个图标都是响应式 Svelte 组件，并渲染为内联 SVG，能很好地融入 Svelte 的响应式系统和现代能力。
+面向 Svelte 5 的 YCloud Icons 组件。每个图标都是响应式 Svelte 组件，并渲染为内联 SVG，能很好地融入 Svelte 的响应式系统和现代能力。
 
 **你可以用它完成：**
 
@@ -32,7 +32,9 @@ bun add @ycloud-web/icons-svelte@latest
 
 :::
 
-> `@ycloud-web/icons-svelte` 面向 Svelte 5；如果使用 Svelte 4，请确认项目依赖的包版本与 Svelte 4 兼容。
+## 版本要求
+
+`@ycloud-web/icons-svelte` 与 Lucide 官方保持一致，要求 Svelte `^5`。文档中的交互示例使用当前最新 Svelte 5 版本。
 
 ## 使用方式
 
@@ -97,13 +99,11 @@ YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
 ## 类型
 
-该包包含所有图标的类型定义。无论使用 TypeScript 还是 JSDoc，当你想通过 `svelte:component` 指令动态加载图标时，这都会很有用。
+该包包含所有图标的类型定义。无论使用 TypeScript 还是 JSDoc，当你想动态加载图标时，这都会很有用。
 
 ### TypeScript 示例
 
-::: code-group
-
-```svelte [Svelte 5]
+```svelte
 <script lang="ts">
   import { Home, Library, Cog, type Icon as IconType } from '@ycloud-web/icons-svelte';
 
@@ -141,53 +141,9 @@ YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 {/each}
 ```
 
-```svelte [Svelte 4]
-<script lang="ts">
-  import { Home, Library, Cog, type Icon } from '@ycloud-web/icons-svelte';
-  import type { ComponentType } from 'svelte';
-
-  type MenuItem = {
-    name: string;
-    href: string;
-    icon: ComponentType<Icon>;
-  };
-
-  const menuItems: MenuItem[] = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home
-    },
-    {
-      name: 'Blog',
-      href: '/blog',
-      icon: Library
-    },
-    {
-      name: 'Projects',
-      href: '/projects',
-      icon: Cog
-    }
-  ];
-</script>
-
-{#each menuItems as item}
-  {@const Icon = item.icon}
-  <a href={item.href}>
-    <Icon />
-    <span>{item.name}</span>
-  </a>
-{/each}
-
-```
-
-:::
-
 ### JSDoc 示例
 
-::: code-group
-
-```svelte [Svelte 5]
+```svelte
 <script>
   import { Home, Library, Cog } from '@ycloud-web/icons-svelte';
 
@@ -227,50 +183,6 @@ YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 {/each}
 ```
 
-```svelte [Svelte 4]
-<script>
-  import { Home, Library, Cog } from '@ycloud-web/icons-svelte';
-
-  /**
-   * @typedef {Object} MenuItem
-   * @property {string} name
-   * @property {string} href
-   * @property {import('svelte').ComponentType<import('@ycloud-web/icons-svelte').Icon>} icon
-   */
-
-  /** @type {MenuItem[]} */
-  const menuItems = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home,
-    },
-    {
-      name: 'Blog',
-      href: '/blog',
-      icon: Library,
-    },
-    {
-      name: 'Projects',
-      href: '/projects',
-      icon: Cog,
-    }
-  ];
-</script>
-
-{#each menuItems as item}
-  {@const Icon = item.icon}
-  <a href={item.href}>
-    <Icon />
-    <span>{item.name}</span>
-  </a>
-{/each}
-```
-
-:::
-
-关于 `svelte:component` 指令的类型标注细节，请参考 [Svelte 文档](https://svelte.dev/docs/typescript#types-componenttype)。
-
 ## 一个通用图标组件
 
 可以创建一个通用图标组件来加载图标，但不推荐这样做。
@@ -281,9 +193,7 @@ YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
 ### Icon 组件示例
 
-::: code-group
-
-```svelte [Svelte 5]
+```svelte
 <script>
   import * as icons from '@ycloud-web/icons-svelte';
   let { name, ...props } = $props();
@@ -293,17 +203,6 @@ YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。
 
 <Icon {...props} />
 ```
-
-```svelte [Svelte 4]
-<script>
-  import * as icons from '@ycloud-web/icons-svelte';
-  export let name;
-</script>
-
-<svelte:component this={icons[name]} {...$$props} />
-```
-
-:::
 
 #### 使用 Icon 组件
 

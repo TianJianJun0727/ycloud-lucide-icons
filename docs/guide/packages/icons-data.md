@@ -26,6 +26,10 @@ bun add @ycloud-web/icons-data@latest
 
 :::
 
+## 版本要求
+
+`@ycloud-web/icons-data` 无框架 peer dependency，适合被各框架包或自定义渲染器消费。
+
 ## 图标数据格式
 
 每个图标都由下面的接口描述：

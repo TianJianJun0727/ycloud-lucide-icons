@@ -2,6 +2,13 @@
 
 > 此文件会在文档构建前根据 Git tag 和提交记录自动生成。
 
+## [v0.1.4](https://github.com/TianJianJun0727/ycloud-icons/releases/tag/v0.1.4) - 2026-06-19
+
+[查看对比变更](https://github.com/TianJianJun0727/ycloud-icons/compare/v0.1.3...v0.1.4)
+
+- docs: clarify lucide-based ycloud icons docs
+- ci: fix release version metadata
+
 ## [v0.1.3](https://github.com/TianJianJun0727/ycloud-icons/releases/tag/v0.1.3) - 2026-06-19
 
 [查看对比变更](https://github.com/TianJianJun0727/ycloud-icons/compare/v0.1.2...v0.1.3)

@@ -60,9 +60,7 @@ type YCloudIcon = Component<YCloudIconsProps>;
 
 当你需要直接接收或传递图标组件时，可以使用 `YCloudIcon` 类型。
 
-::: code-group
-
-```svelte [Svelte 5]
+```svelte
 <script lang="ts">
   import { Home, Library, Cog, type YCloudIcon } from '@ycloud-web/icons-svelte';
 
@@ -99,48 +97,6 @@ type YCloudIcon = Component<YCloudIconsProps>;
   </a>
 {/each}
 ```
-
-```svelte [Svelte 4]
-<script lang="ts">
-  import { Home, Library, Cog, type Icon } from '@ycloud-web/icons-svelte';
-  import type { ComponentType } from 'svelte';
-
-  type MenuItem = {
-    name: string;
-    href: string;
-    icon: ComponentType<Icon>;
-  };
-
-  const menuItems: MenuItem[] = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home
-    },
-    {
-      name: 'Blog',
-      href: '/blog',
-      icon: Library
-    },
-    {
-      name: 'Projects',
-      href: '/projects',
-      icon: Cog
-    }
-  ];
-</script>
-
-{#each menuItems as item}
-  {@const Icon = item.icon}
-  <a href={item.href}>
-    <Icon />
-    <span>{item.name}</span>
-  </a>
-{/each}
-
-```
-
-:::
 
 ## `IconNode`
 

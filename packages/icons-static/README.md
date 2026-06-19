@@ -44,6 +44,10 @@
 > [!WARNING]
 > 除非你确实需要静态资源，否则不建议在生产 Web 应用中优先使用 SVG sprite 或 Icon Font。更推荐使用对应框架包，让构建工具可以 tree-shaking 未使用的图标：`@ycloud-web/icons`、`@ycloud-web/icons-react`、`@ycloud-web/icons-vue`、`@ycloud-web/icons-svelte`、`@ycloud-web/icons-solid`、`@ycloud-web/icons-preact`、`@ycloud-web/icons-react-native`、`@ycloud-web/icons-angular` 和 `@ycloud-web/icons-astro`。
 
+## 版本要求
+
+无框架 peer dependency。示例使用当前最新 `@ycloud-web/icons-static` 包。
+
 ## 安装
 
 ```sh

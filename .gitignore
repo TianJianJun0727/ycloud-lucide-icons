@@ -16,6 +16,7 @@ stats
 *.log
 outlined
 lucide-font
+ycloud-font
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
 packages/**/src/icons/*.tsx

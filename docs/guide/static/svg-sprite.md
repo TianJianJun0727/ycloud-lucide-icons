@@ -14,15 +14,25 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 SVG sprite 包含全部图标，会显著增加应用包体积和加载时间。生产环境建议使用支持 tree-shaking 的构建工具，只包含实际使用的图标。也可以考虑使用某个框架对应的 [package](../../packages.md)。
 :::
 
-SVG sprite 可以作为单独图片加载，也可以通过 `<use>` 元素内联使用。
+SVG sprite 可以作为外部资源加载，并通过 `<use>` 元素使用。
 项目中可能还需要额外的 SVG loader 来处理 node_modules 导入。可参考这个 [codesandbox 示例](https://codesandbox.io/s/using-the-svg-sprite-lz1kk)。
 
 ## 基础 sprite 用法
 
-可以直接在 img 标签中导入 SVG sprite，并通过 <br>`#{icon-name}` 语法选择图标：
+可以直接在 SVG 中引用 sprite 文件，并通过 `#{icon-name}` 语法选择图标：
 
 ```html
-<img src="@ycloud-web/icons-static/sprite.svg#house" />
+<svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="@ycloud-web/icons-static/sprite.svg#house" />
+</svg>
 ```
 
 ## 内联用法
@@ -59,7 +69,7 @@ SVG sprite 可以作为单独图片加载，也可以通过 `<use>` 元素内联
 
 ```js /index.js
 import './styles.css';
-import sprite from '@ycloud-web/icons-static/sprite.svg';
+import sprite from '@ycloud-web/icons-static/sprite.svg?raw';
 
 document.getElementById('sprite').innerHTML = sprite;
 ```
@@ -108,7 +118,7 @@ document.getElementById('sprite').innerHTML = sprite;
 ```js /index.js
 import './styles.css';
 import './icon.css';
-import sprite from '@ycloud-web/icons-static/sprite.svg';
+import sprite from '@ycloud-web/icons-static/sprite.svg?raw';
 
 document.getElementById('sprite').innerHTML = sprite;
 ```

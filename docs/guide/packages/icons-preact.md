@@ -36,6 +36,10 @@ bun add @ycloud-web/icons-preact@latest
 
 :::
 
+## 版本要求
+
+Preact `^10.27.2`。文档示例使用当前最新稳定版本。
+
 ## 使用方式
 
 YCloud Icons 基于 ES Modules 构建，因此可以完整支持 tree-shaking。

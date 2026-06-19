@@ -34,6 +34,10 @@ bun add @ycloud-web/icons-react-native@latest
 
 :::
 
+## 版本要求
+
+React `^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0`，React Native 任意版本，`react-native-svg` `^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0`。文档示例使用当前最新稳定版本。
+
 ## 使用方式
 
 每个图标都可以作为 React 组件导入。
