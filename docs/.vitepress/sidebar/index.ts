@@ -19,8 +19,6 @@ export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
     items: [
       { text: '什么是 YCloud Icons？', link: '/guide/' },
       { text: '安装', link: '/guide/installation' },
-      { text: '架构', link: '/guide/architecture' },
-      { text: '图标维护', link: '/guide/icon-maintenance' },
     ],
   },
 ];
@@ -59,6 +57,7 @@ const sidebarText: Record<string, string> = {
   'Shadow DOM': 'Shadow DOM',
   'Template element': '模板元素',
   'Icon design guide': '图标设计指南',
+  Architecture: '架构',
 };
 
 const sidebarDesc: Record<string, string> = {
@@ -102,30 +101,52 @@ const sidebarDesc: Record<string, string> = {
   'Use YCloud in your JavaScript projects': '在 JavaScript 项目中使用 YCloud Icons。',
   'Using content template element with ycloud': '在 YCloud Icons 中使用内容模板元素。',
   'Design rules and SVG conventions for YCloud Icons': 'YCloud Icons 的设计规则与 SVG 代码约定。',
+  'How the YCloud Icons repository is organized and why': 'YCloud Icons 仓库的组织方式与设计原因。',
 };
 
-function withIconDesignGuide(source: Sidebar): Sidebar {
+function withGuideMaintenanceItems(source: Sidebar): Sidebar {
   return Object.fromEntries(
     Object.entries(source).map(([key, value]) => [
       key,
       (value as DefaultTheme.SidebarItem[]).map((item) => {
-        if (item.text !== 'Advanced') return item;
+        if (item.text !== 'Advanced' && item.text !== '进阶') return item;
 
         const items = item.items ?? [];
         const hasGuide = items.some((child) => child.link === '/guide/icon-design-guide');
+        const hasMaintenance = items.some((child) => child.link === '/guide/icon-maintenance');
+        const hasArchitecture = items.some((child) => child.link === '/guide/architecture');
 
         return {
           ...item,
-          items: hasGuide
-            ? items
-            : [
-                ...items,
-                {
-                  text: 'Icon design guide',
-                  link: '/guide/icon-design-guide',
-                  desc: 'Design rules and SVG conventions for YCloud Icons',
-                },
-              ],
+          items: [
+            ...items,
+            ...(!hasArchitecture
+              ? [
+                  {
+                    text: 'Architecture',
+                    link: '/guide/architecture',
+                    desc: 'How the YCloud Icons repository is organized and why',
+                  },
+                ]
+              : []),
+            ...(!hasGuide
+              ? [
+                  {
+                    text: 'Icon design guide',
+                    link: '/guide/icon-design-guide',
+                    desc: 'Design rules and SVG conventions for YCloud Icons',
+                  },
+                ]
+              : []),
+            ...(!hasMaintenance
+              ? [
+                  {
+                    text: '图标维护',
+                    link: '/guide/icon-maintenance',
+                  },
+                ]
+              : []),
+          ],
         };
       }),
     ]),
@@ -155,7 +176,7 @@ function localizeSidebar(source: Sidebar): Sidebar {
 }
 
 const sidebar: Sidebar = localizeSidebar(
-  withIconDesignGuide({
+  withGuideMaintenanceItems({
     '/guide': [{ text: '', link: '/' }],
     '/guide/ycloud/': ycloudSidebar,
     '/guide/react/': reactSidebar,

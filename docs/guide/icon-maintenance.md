@@ -7,10 +7,6 @@ description: 给人工维护者看的 YCloud Icons 图标增删改说明。
 
 这份文档给人工维护者使用，目的是快速说明这个仓库里图标是如何组织和维护的。
 
-如果你希望让 AI / 代理直接按流程执行，请看仓库内的 Skill 文件：
-
-- `agents/skills/icon-maintenance/SKILL.md`
-
 ## 图标由哪些文件组成
 
 在这个仓库里，一个图标通常由两部分组成：
@@ -186,5 +182,3 @@ pnpm --filter @ycloud-web/icons-vue build
 1. 版本以 Git tag / release 为真实来源
 2. 文档首页和更新日志都从 tag 数据读取版本
 3. 真正发布成功后，workflow 会把各个 `packages/*/package.json` 的版本自动回写到 `main`
-
-如果你需要的是可直接交给代理执行的严格流程，请使用仓库内的 `agents/skills/icon-maintenance/SKILL.md`。
