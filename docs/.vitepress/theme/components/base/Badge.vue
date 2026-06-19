@@ -1,34 +1,38 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useRouter } from 'vitepress';
+import { useRouter, withBase } from 'vitepress';
 
-const { go } = useRouter()
+const { go } = useRouter();
 const props = defineProps<{
-  href?: string
-}>()
+  href?: string;
+}>();
 
-const isExternal = computed(() => props.href?.startsWith('http') ?? false)
+const isExternal = computed(() => props.href?.startsWith('http') ?? false);
+const resolvedHref = computed(() =>
+  !props.href || isExternal.value ? props.href : withBase(props.href),
+);
 
-const component = computed(() => props.href ? 'a' : 'div')
-const target = computed(() => isExternal.value ? '_blank' : undefined)
-const rel = computed(() => isExternal.value ? 'noreferrer noopener' : undefined)
+const component = computed(() => (props.href ? 'a' : 'div'));
+const target = computed(() => (isExternal.value ? '_blank' : undefined));
+const rel = computed(() => (isExternal.value ? 'noreferrer noopener' : undefined));
 
-const onClick = computed(() => {
-  if(!props.href || isExternal) return
-  return go(props.href)
-})
+function onClick(event: MouseEvent) {
+  if (!resolvedHref.value || isExternal.value) return;
+  event.preventDefault();
+  go(resolvedHref.value);
+}
 </script>
 
 <template>
   <component
     :is="component"
-    :href="href"
+    :href="resolvedHref"
     class="badge"
     :target="target"
     :rel="rel"
     @click="onClick"
   >
-    <slot/>
+    <slot />
   </component>
 </template>
 

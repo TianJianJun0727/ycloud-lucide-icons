@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import { withBase } from 'vitepress';
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 
 const props = defineProps<{
@@ -74,12 +75,15 @@ const descMap: Record<string, string> = {
 
 const localizedTitle = computed(() => (props.title ? textMap[props.title] ?? props.title : ''));
 const localizedDesc = computed(() => (props.desc ? descMap[props.desc] ?? props.desc : ''));
+const resolvedHref = computed(() =>
+  props.href && !props.href.startsWith('http') ? withBase(props.href) : props.href,
+);
 </script>
 
 <template>
   <VPLink
     class="overview-link"
-    :href="href"
+    :href="resolvedHref"
   >
     <span class="title">
       {{ localizedTitle }}

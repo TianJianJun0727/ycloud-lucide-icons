@@ -17,7 +17,7 @@ const { go } = useRouter();
         :href="withBase(path)"
         class="package-logo"
         :aria-label="`查看 ${name} 包的使用说明`"
-        @click.prevent="go(path)"
+        @click.prevent="go(withBase(path))"
       >
         <img
           :src="withBase(logo)"
@@ -38,7 +38,7 @@ const { go } = useRouter();
     <div class="more-button-wrapper">
       <VPButton
         text="查看更多"
-        href="/packages"
+        :href="withBase('/packages')"
         theme="alt"
         class="more-button"
       />

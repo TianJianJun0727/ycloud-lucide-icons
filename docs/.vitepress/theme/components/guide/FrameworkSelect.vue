@@ -88,11 +88,11 @@ function onSelectFramework(item: FrameworkItem) {
     const hasRoute = findSidebarLink(sidebar[item.value] as unknown[] | undefined, likeRoute);
 
     if (hasRoute) {
-      router.go(likeRoute);
+      router.go(withBase(likeRoute));
       return;
     }
 
-    router.go(item.value);
+    router.go(withBase(item.value));
   }
 }
 </script>

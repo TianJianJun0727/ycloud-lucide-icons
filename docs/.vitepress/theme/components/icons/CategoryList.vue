@@ -59,14 +59,14 @@ watch(headers, () => {
     <SidebarTitle>视图</SidebarTitle>
     <VPLink
       class="sidebar-link sidebar-text"
-      href="/icons/"
+      :href="withBase('/icons/')"
       :class="{ active: overviewIsActive }"
     >
       全部
     </VPLink>
     <VPLink
       class="sidebar-link sidebar-text"
-      href="/icons/categories"
+      :href="withBase('/icons/categories')"
       :class="{ active: categoriesIsActive }"
       @click="onCategoriesClick"
     >
