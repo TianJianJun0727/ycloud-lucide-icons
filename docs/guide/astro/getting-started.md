@@ -16,7 +16,7 @@ import { astroSidebar } from '../../.vitepress/sidebar/astro'
 
 ## 版本要求
 
-`@ycloud-web/icons-astro` 的最低版本要求与 Lucide 官方当前 Astro 包保持一致：Astro `^4 || ^5 || ^6`。
+`@ycloud-web/icons-astro` 的最低版本要求：Astro `^4 || ^5 || ^6`。
 
 
 ## 安装

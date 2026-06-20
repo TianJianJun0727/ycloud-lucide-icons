@@ -9,7 +9,6 @@ YCloud Icons 当前覆盖 10 种包类型，可以按项目所用框架选择安
 
 ## 版本要求
 
-各框架包的最低版本要求与 Lucide 官方当前包保持一致。
 具体版本要求放在对应框架的快速开始页，避免 React、React Native、Astro 等 peer dependency 范围里的 `|` 影响 Markdown 表格解析。
 
 ## 核心 JavaScript

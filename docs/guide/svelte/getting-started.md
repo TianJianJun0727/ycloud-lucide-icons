@@ -16,7 +16,7 @@ import { svelteSidebar } from '../../.vitepress/sidebar/svelte'
 
 ## 版本要求
 
-`@ycloud-web/icons-svelte` 的最低版本要求与 Lucide 官方当前 Svelte 包保持一致：Svelte `^5`。
+`@ycloud-web/icons-svelte` 的最低版本要求：Svelte `^5`。
 
 
 ## 安装

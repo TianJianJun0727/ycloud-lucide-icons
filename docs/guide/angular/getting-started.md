@@ -16,7 +16,7 @@ import { angularSidebar } from '../../.vitepress/sidebar/angular'
 
 ## 版本要求
 
-`@ycloud-web/icons-angular` 的最低版本要求与 Lucide 官方当前 Angular 包保持一致：Angular `>=17.0.0`。
+`@ycloud-web/icons-angular` 的最低版本要求：Angular `>=17.0.0`。
 
 该包使用 standalone components、signals 和 zoneless change detection。
 ## 安装

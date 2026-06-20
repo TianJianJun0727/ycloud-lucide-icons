@@ -4,7 +4,7 @@ description: 了解如何在 Solid 应用中通过 CSS 或 YCloud context provid
 ---
 
 <script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackSolid.vue'
 </script>
 
 # 全局样式

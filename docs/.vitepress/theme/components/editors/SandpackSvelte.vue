@@ -1,22 +1,56 @@
 <script lang="ts" setup>
-import { type SandpackFiles } from 'sandpack-vue3';
+import { SANDBOX_TEMPLATES, type SandpackFiles } from 'sandpack-vue3';
 import styledCSS from '../../sandpack-default.css?raw';
 import Sandpack from './Sandpack.vue';
-import iconsSveltePackage from '../../../../../packages/icons-svelte/package.json';
 
 const props = defineProps<{
   files: SandpackFiles;
 }>();
+
+defineOptions({
+  inheritAttrs: false,
+});
 </script>
 
 <template>
   <Sandpack
     template="vite-svelte"
     :files="{
+      ...SANDBOX_TEMPLATES['vite-svelte'].files,
       ...props.files,
       '/src/styles.css': {
         code: styledCSS,
         hidden: true,
+      },
+      '/src/main.js': {
+        hidden: true,
+        code: `import App from './App.svelte';
+import './styles.css';
+
+const app = new App({
+  target: document.getElementById('app'),
+});
+
+export default app;
+`,
+      },
+      '/vite.config.js': {
+        hidden: true,
+        code: `import { defineConfig } from 'vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+
+export default defineConfig({
+  plugins: [
+    svelte({
+      compilerOptions: {
+        compatibility: {
+          componentApi: 4,
+        },
+      },
+    }),
+  ],
+});
+`,
       },
       '/package.json': {
         hidden: true,
@@ -28,32 +62,17 @@ const props = defineProps<{
             },
             dependencies: {
               svelte: '^5.38.6',
-              '@ycloud-web/icons-svelte': iconsSveltePackage.version,
+              '@ycloud-web/icons-svelte': 'latest',
             },
             devDependencies: {
-              '@sveltejs/vite-plugin-svelte': '^7.1.2',
-              vite: '^7.3.0',
-              'esbuild-wasm': '^0.27.0',
+              '@sveltejs/vite-plugin-svelte': '^4.0.4',
+              vite: '4.2.2',
+              'esbuild-wasm': '^0.17.19',
             },
           },
           null,
           2,
         ),
-      },
-      '/vite.config.js': {
-        hidden: true,
-        code: `import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [svelte()],
-  resolve: {
-    alias: {
-      '@ycloud-web/icons-svelte': '@ycloud-web/icons-svelte',
-    },
-  },
-})`,
       },
     }"
   />

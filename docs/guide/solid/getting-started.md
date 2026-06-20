@@ -16,7 +16,7 @@ import { solidSidebar } from '../../.vitepress/sidebar/solid'
 
 ## 版本要求
 
-`@ycloud-web/icons-solid` 的最低版本要求与 Lucide 官方当前 Solid 包保持一致：Solid `^1.4.7`。
+`@ycloud-web/icons-solid` 的最低版本要求：Solid `^1.4.7`。
 
 
 ## 安装

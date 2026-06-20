@@ -22,6 +22,7 @@
     "prebuild:iconDetails": "node ./scripts/writeIconDetails.mts",
     "prebuild:iconPopularity": "node ./scripts/writeiconPopularity.mts",
     "prebuild:brandStopwords": "node ./scripts/writeBrandStopwords.mts",
+    "prebuild:fontDataUrl": "node ./scripts/writeFontDataUrl.mts",
     "postbuild:vercelJson": "node ./scripts/writeVercelOutput.mts",
     "dev": "npx nitropack dev",
     "prebuild:api": "npx nitropack prepare",

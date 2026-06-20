@@ -16,7 +16,7 @@ import { vueSidebar } from '../../.vitepress/sidebar/vue'
 
 ## 版本要求
 
-`@ycloud-web/icons-vue` 的最低版本要求与 Lucide 官方当前 Vue 包保持一致：Vue `>=3.0.1`。
+`@ycloud-web/icons-vue` 的最低版本要求：Vue `>=3.0.1`。
 
 
 ## 安装

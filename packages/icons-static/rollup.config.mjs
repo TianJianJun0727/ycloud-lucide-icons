@@ -2,7 +2,8 @@ import plugins from '@ycloud-web/rollup-plugins';
 import dts from 'rollup-plugin-dts';
 import pkg from './package.json' with { type: 'json' };
 
-const outputFileName = pkg.name;
+const packageName = pkg.name;
+const outputFileName = 'ycloud-static';
 const outputDir = 'dist';
 const inputs = ['src/ycloud-static.ts'];
 const bundles = [
@@ -26,7 +27,7 @@ const configs = bundles
       input,
       plugins: plugins({ pkg, minify }),
       output: {
-        name: outputFileName,
+        name: packageName,
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
@@ -38,6 +39,7 @@ const configs = bundles
         format,
         sourcemap: true,
         preserveModules,
+        preserveModulesRoot: 'src',
       },
     })),
   )

@@ -67,4 +67,8 @@ defineProps<FunctionalComponent<YCloudIconsProps>>();
   color: var(--sp-colors-clickable);
   text-decoration: none;
 }
+
+.sp-wrapper .sp-button[title='Open in CodeSandbox'] {
+  display: none;
+}
 </style>

@@ -4,7 +4,7 @@ description: 了解如何在 Solid 应用中通过 `size` prop 或 CSS 调整图
 ---
 
 <script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackSolid.vue'
 </script>
 
 # 尺寸

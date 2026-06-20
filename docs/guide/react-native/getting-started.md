@@ -16,7 +16,7 @@ import { reactNativeSidebar } from '../../.vitepress/sidebar/react-native'
 
 ## 版本要求
 
-`@ycloud-web/icons-react-native` 的最低版本要求与 Lucide 官方当前 React Native 包保持一致：
+`@ycloud-web/icons-react-native` 的最低版本要求：
 
 - React `^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0`
 - React Native 任意版本

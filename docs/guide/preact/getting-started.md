@@ -16,7 +16,7 @@ import { preactSidebar } from '../../.vitepress/sidebar/preact'
 
 ## 版本要求
 
-`@ycloud-web/icons-preact` 的最低版本要求与 Lucide 官方当前 Preact 包保持一致：Preact `^10.27.2`。
+`@ycloud-web/icons-preact` 的最低版本要求：Preact `^10.27.2`。
 
 
 ## 安装

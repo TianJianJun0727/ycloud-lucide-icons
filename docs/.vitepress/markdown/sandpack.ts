@@ -1,9 +1,6 @@
 import type MarkdownIt from 'markdown-it';
 import type { RenderRule } from 'markdown-it/lib/renderer.mjs';
 import container from 'markdown-it-container';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import sandpackTheme from '../theme/sandpackTheme.json';
 
 type SnackParams = {
@@ -18,45 +15,6 @@ type SnackParams = {
 };
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
-
-const currentDir = path.dirname(fileURLToPath(import.meta.url));
-const repoRoot = path.resolve(currentDir, '../../..');
-const packageVersionCache = new Map<string, string>();
-
-function resolveSandboxDependencyVersion(packageName: string) {
-  if (packageVersionCache.has(packageName)) {
-    return packageVersionCache.get(packageName) as string;
-  }
-
-  const packagesDir = path.join(repoRoot, 'packages');
-  const fallbackVersion = 'latest';
-
-  try {
-    const packageDirs = fs.readdirSync(packagesDir, { withFileTypes: true });
-
-    for (const packageDir of packageDirs) {
-      if (!packageDir.isDirectory()) continue;
-
-      const packageJsonPath = path.join(packagesDir, packageDir.name, 'package.json');
-      if (!fs.existsSync(packageJsonPath)) continue;
-
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8')) as {
-        name?: string;
-        version?: string;
-      };
-
-      if (packageJson.name === packageName && packageJson.version) {
-        packageVersionCache.set(packageName, packageJson.version);
-        return packageJson.version;
-      }
-    }
-  } catch {
-    // Keep docs build resilient when a package is not part of this repository.
-  }
-
-  packageVersionCache.set(packageName, fallbackVersion);
-  return fallbackVersion;
-}
 
 export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParams = {}) {
   if (md == null) {
@@ -119,7 +77,7 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
 
         const dependencyObject = dependencyList.reduce(
           (acc: Record<string, string>, name: string) => {
-            acc[name] = resolveSandboxDependencyVersion(name);
+            acc[name] = 'latest';
             return acc;
           },
           {},

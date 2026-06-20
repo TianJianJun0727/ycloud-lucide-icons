@@ -8,7 +8,8 @@ const inputs = [`src/ycloud-icons.ts`];
 const bundles = [
   {
     format: 'cjs',
-    inputs,
+    inputs: [...inputs, './src/dynamic.ts', './src/build.ts'],
+    preserveModules: true,
     extension: 'cjs',
   },
   {
