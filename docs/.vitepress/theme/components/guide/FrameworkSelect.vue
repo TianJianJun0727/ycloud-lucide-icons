@@ -17,6 +17,9 @@ type FrameworkItem = {
 const { page, site } = useData();
 const route = useRoute();
 const router = useRouter();
+const props = withDefaults(defineProps<{ placement?: 'before' | 'after' }>(), {
+  placement: 'before',
+});
 
 const frameworks: FrameworkItem[] = [
   { name: 'Vanilla', icon: '/framework-logos/js.svg', value: '/guide/ycloud/' },
@@ -99,6 +102,15 @@ const isFrameworkGuidePage = computed(() =>
 
 const isGuidePage = computed(() => normalizedPath.value === '/guide/' || normalizedPath.value.startsWith('/guide/'));
 
+const selectedFrameworkSidebar = computed(
+  () => site.value.themeConfig.sidebar?.[`${currentLocalePrefix.value}${selected.value.value}`],
+);
+
+const showBeforeGuideNavigation = computed(() => props.placement === 'before' && isFrameworkGuidePage.value);
+const showAfterGuideNavigation = computed(
+  () => props.placement === 'after' && isGuidePage.value && !isFrameworkGuidePage.value,
+);
+
 function onSelectFramework(item: FrameworkItem) {
   fallbackFramework.value = item;
   if (item.value !== normalizedPath.value) {
@@ -121,11 +133,11 @@ function onSelectFramework(item: FrameworkItem) {
 <template>
   <VPSidebarGroup
     :items="currentGuideSidebarTop"
-    v-if="isFrameworkGuidePage"
+    v-if="showBeforeGuideNavigation"
   />
   <div
     class="framework-select"
-    v-if="isGuidePage"
+    v-if="showBeforeGuideNavigation || showAfterGuideNavigation"
   >
     <label for="framework-select">{{ currentLocale === 'zh' ? '框架' : 'Framework' }}</label>
     <Select
@@ -138,8 +150,8 @@ function onSelectFramework(item: FrameworkItem) {
   </div>
   <VPSidebarGroup
     :key="selected.value"
-    v-if="isGuidePage && !isFrameworkGuidePage"
-    :items="site.themeConfig.sidebar?.[`${currentLocalePrefix}${selected.value}`]"
+    v-if="showAfterGuideNavigation"
+    :items="selectedFrameworkSidebar"
   />
 </template>
 

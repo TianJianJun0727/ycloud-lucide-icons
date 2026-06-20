@@ -16,9 +16,12 @@ const theme: Partial<Theme> = {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'sidebar-nav-before': () => h(FrameworkSelect),
+      'sidebar-nav-before': () => h(FrameworkSelect, { placement: 'before' }),
       'home-hero-info-before': () => h(HomeHeroInfoBefore),
-      'sidebar-nav-after': () => h(IconsSidebarNavAfter),
+      'sidebar-nav-after': () => [
+        h(FrameworkSelect, { placement: 'after' }),
+        h(IconsSidebarNavAfter),
+      ],
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
     });
