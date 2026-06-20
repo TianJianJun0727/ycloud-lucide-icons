@@ -6,9 +6,11 @@ import { astroTestConfig } from './astroConfig';
 import type { RenderFn } from './types';
 
 export const render = async function (AstroComponent, options?) {
-  const astroContainer = await AstroContainer.create({
-    astroConfig: astroTestConfig,
-  });
+  type AstroContainerInstance = Awaited<ReturnType<typeof AstroContainer.create>>;
+  const Container = AstroContainer as unknown as new (options: {
+    astroConfig: typeof astroTestConfig;
+  }) => AstroContainerInstance;
+  const astroContainer = new Container({ astroConfig: astroTestConfig });
   const htmlString = await astroContainer.renderToString(
     AstroComponent as AstroComponentFactory,
     options,

@@ -2,6 +2,12 @@
 
 > This file is generated before the documentation build from Git tags and commit history.
 
+## [v0.1.11](https://github.com/TianJianJun0727/ycloud-icons/releases/tag/v0.1.11) - 2026-06-21
+
+[View comparison](https://github.com/TianJianJun0727/ycloud-icons/compare/v0.1.10...v0.1.11)
+
+- fix: remove astro test deprecation warning
+
 ## [v0.1.10](https://github.com/TianJianJun0727/ycloud-icons/releases/tag/v0.1.10) - 2026-06-21
 
 [View comparison](https://github.com/TianJianJun0727/ycloud-icons/compare/v0.1.9...v0.1.10)

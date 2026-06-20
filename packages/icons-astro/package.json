@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-astro",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "Moustapha Kebe",
   "description": "A YCloud icon library package for Astro applications.",
   "license": "ISC",

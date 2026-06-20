@@ -1,7 +1,7 @@
 {
   "name": "@ycloud-web/icons-react",
   "description": "A YCloud icon library package for React applications.",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "license": "ISC",
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/react/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",

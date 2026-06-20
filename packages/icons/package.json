@@ -1,7 +1,7 @@
 {
   "name": "@ycloud-web/icons",
   "description": "A YCloud icon library package for web and JavaScript applications.",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "license": "ISC",
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/ycloud/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
