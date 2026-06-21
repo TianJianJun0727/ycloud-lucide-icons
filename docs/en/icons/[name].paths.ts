@@ -1,5 +1,4 @@
 import relatedIcons from '../../.vitepress/data/relatedIcons.json';
-import iconNodes from '../../.vitepress/data/iconNodes';
 import * as iconDetails from '../../.vitepress/data/iconDetails';
 import { IconEntity } from '../../.vitepress/theme/types';
 
@@ -25,7 +24,6 @@ export default {
             englishTags: relatedIcon?.englishTags,
             englishCategories: relatedIcon?.englishCategories,
             i18n: relatedIcon?.i18n,
-            iconNode: iconNodes[name],
           };
         }),
       };

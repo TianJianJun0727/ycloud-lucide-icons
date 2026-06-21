@@ -39,6 +39,12 @@
       "import": "./dist/esm/icons/index.mjs",
       "browser": "./dist/esm/icons/index.mjs",
       "require": "./dist/cjs/icons/index.js"
+    },
+    "./prefixed": {
+      "types": "./dist/ycloud-react-native.prefixed.d.ts"
+    },
+    "./suffixed": {
+      "types": "./dist/ycloud-react-native.suffixed.d.ts"
     }
   },
   "sideEffects": false,

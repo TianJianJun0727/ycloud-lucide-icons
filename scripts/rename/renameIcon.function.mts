@@ -12,7 +12,13 @@ import { type IconMetadata } from '../../tools/build-icons/types.ts';
  * @param {boolean} logInfo
  * @param {boolean} addAlias
  */
-export async function renameIcon(ICONS_DIR: string, oldName: string, newName: string, logInfo = true, addAlias = true) {
+export async function renameIcon(
+  ICONS_DIR: string,
+  oldName: string,
+  newName: string,
+  logInfo = true,
+  addAlias = true,
+) {
   const git = simpleGit();
 
   async function fileExists(filePath: string) {
@@ -50,7 +56,7 @@ export async function renameIcon(ICONS_DIR: string, oldName: string, newName: st
       ...(jsonData.aliases ?? []),
       {
         name: oldName,
-        deprecate: true,
+        deprecated: true,
         deprecationReason: 'alias.name',
         toBeRemovedInVersion: 'v1.0',
       },

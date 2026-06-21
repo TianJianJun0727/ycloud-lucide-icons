@@ -48,8 +48,8 @@ const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
   const name = iconName.replace('.json', '');
 
   return {
+    ...metaData,
     name,
-    ...metaData.default,
   };
 });
 
@@ -60,11 +60,13 @@ const relatedIcons = iconsMetaData.map((icon) => {
   return [icon.name, iconRelatedIcons.map((i) => i.name)];
 });
 
-fs.promises
-  .writeFile(location, JSON.stringify(Object.fromEntries(relatedIcons), null, 2), 'utf-8')
-  .then(() => {
-    console.log('Successfully written relatedIcons.json file');
-  })
-  .catch((error) => {
-    throw new Error(`Something went wrong generating iconNode files,\n ${error}`);
-  });
+try {
+  await fs.promises.writeFile(
+    location,
+    JSON.stringify(Object.fromEntries(relatedIcons), null, 2),
+    'utf-8',
+  );
+  console.log('Successfully written relatedIcons.json file');
+} catch (error) {
+  throw new Error(`Something went wrong generating related icon files,\n ${error}`);
+}

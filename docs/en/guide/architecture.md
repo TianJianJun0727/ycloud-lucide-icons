@@ -170,12 +170,7 @@ This keeps the package directory, `package.json`, CI jobs, documentation links, 
 
 ## Style Entrypoints
 
-YCloud Icons prefers style-specific entrypoints over a runtime `theme` string whenever style variants are generated:
-
-```tsx
-import { Camera } from '@ycloud-web/icons-react/outline';
-import { Camera as CameraFilled } from '@ycloud-web/icons-react/filled';
-```
+The current release ships one outline-style icon set. When generated outline, filled, or other style variants are added later, YCloud Icons should prefer explicit style entrypoints over a runtime `theme` string.
 
 This keeps tree-shaking predictable and preserves strong component names. Style conversion should happen during generation, not at runtime, and generated variants should only be published when the conversion is reliable.
 

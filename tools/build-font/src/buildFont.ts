@@ -87,9 +87,11 @@ export async function buildFont({
     });
     await normalizeGeneratedFontFiles(targetDir, fontName);
   } catch (err) {
-    console.log(err);
+    console.error(err);
+    throw err;
+  } finally {
+    console.timeEnd('Font generation');
   }
-  console.timeEnd('Font generation');
 }
 
 async function normalizeGeneratedFontFiles(targetDir: string, fontName: string) {

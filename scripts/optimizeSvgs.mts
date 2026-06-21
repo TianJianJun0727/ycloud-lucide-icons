@@ -9,7 +9,10 @@ console.log(`Optimizing SVGs...`);
 
 const svgFiles = await readSvgDirectory(ICONS_DIR);
 
-svgFiles.forEach((svgFile: string) => {
-  const content = fs.readFileSync(path.join(ICONS_DIR, svgFile), 'utf-8');
-  processSvg(content, svgFile).then((svg) => writeSvgFile(svgFile, ICONS_DIR, svg));
-});
+await Promise.all(
+  svgFiles.map(async (svgFile: string) => {
+    const content = fs.readFileSync(path.join(ICONS_DIR, svgFile), 'utf-8');
+    const svg = await processSvg(content, svgFile);
+    await writeSvgFile(svgFile, ICONS_DIR, svg);
+  }),
+);

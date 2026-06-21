@@ -38,7 +38,7 @@ Astro `^4 || ^5 || ^6`.
 
 ```astro
 ---
-import House from '@ycloud-web/icons-astro/House.astro';
+import House from '@ycloud-web/icons-astro/icons/house';
 ---
 
 <House size={32} color="#ff5a5f" />

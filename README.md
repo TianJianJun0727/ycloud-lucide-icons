@@ -76,14 +76,7 @@ createIcons({
 
 ## 风格策略
 
-YCloud Icons 会保持稳定的公开组件名，例如 `Camera`。后续如果引入 outline、filled 等多风格形态，优先通过包入口或目录区分，而不是给组件名追加风格后缀：
-
-```tsx
-import { Camera } from '@ycloud-web/icons-react/outline';
-import { Camera as FilledCamera } from '@ycloud-web/icons-react/filled';
-```
-
-这样可以让组件命名、图标搜索和重构体验保持一致。
+YCloud Icons 会保持稳定的公开组件名，例如 `Camera`。当前版本先提供单一线性图标集；后续如果引入 outline、filled 等多风格形态，会优先通过明确的包入口或目录区分，而不是给组件名追加风格后缀。这样可以让组件命名、图标搜索和重构体验保持一致。
 
 ## 开发
 

@@ -24,7 +24,7 @@ const iconNames = svgFiles.map((icon) => icon.split('.')[0]).reverse();
 
 console.log('Creating aliases for NextJS imports: ');
 
-Promise.all(
+await Promise.all(
   iconNames.map(async (iconName) => {
     const pascalCaseName = iconName.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
 
@@ -37,13 +37,19 @@ Promise.all(
       const iconMetaData = JSON.parse(metaJson);
 
       const aliases = iconMetaData.aliases ?? [];
-      if (!aliases.includes(iconNameKebabCaseNextjsFlavour)) {
-        aliases.push(iconNameKebabCaseNextjsFlavour);
+      const hasAlias = aliases.some((alias) =>
+        typeof alias === 'string'
+          ? alias === iconNameKebabCaseNextjsFlavour
+          : alias.name === iconNameKebabCaseNextjsFlavour,
+      );
+
+      if (!hasAlias) {
+        aliases.push({ name: iconNameKebabCaseNextjsFlavour });
       }
 
       let output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
       output = `${output}\n`;
-      fs.writeFile(path.resolve(ICONS_DIR, `${iconName}.json`), output, 'utf-8');
+      await fs.writeFile(path.resolve(ICONS_DIR, `${iconName}.json`), output, 'utf-8');
     }
   }),
 );

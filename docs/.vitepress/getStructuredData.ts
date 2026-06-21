@@ -1,7 +1,23 @@
 import { PageData } from 'vitepress';
 
-export default async function getStructuredData(iconName: string, pageData: PageData) {
-  const url = `https://tianjianjun0727.github.io/ycloud-icons/icons/${iconName}`;
+type StructuredDataOptions = {
+  locale: 'zh' | 'en';
+  siteUrl: string;
+};
+
+export default async function getStructuredData(
+  iconName: string,
+  pageData: PageData,
+  { locale, siteUrl }: StructuredDataOptions,
+) {
+  const localePrefix = locale === 'en' ? '/en' : '';
+  const url = `${siteUrl}${localePrefix}/icons/${iconName}`;
+  const iconsUrl = `${siteUrl}${localePrefix}/icons`;
+  const iconSvgUrl = `https://raw.githubusercontent.com/TianJianJun0727/ycloud-icons/main/icons/${iconName}.svg`;
+  const keywords =
+    locale === 'en'
+      ? pageData.params?.englishTags || pageData.params?.tags
+      : pageData.params?.displayTags || pageData.params?.tags;
 
   return {
     '@context': 'https://schema.org',
@@ -10,11 +26,11 @@ export default async function getStructuredData(iconName: string, pageData: Page
     name: pageData.title,
     description: pageData.description,
     url,
-    inLanguage: 'en',
+    inLanguage: locale === 'en' ? 'en-US' : 'zh-CN',
     isPartOf: {
       '@type': 'WebSite',
       name: 'YCloud Icons',
-      url: 'https://tianjianjun0727.github.io/ycloud-icons',
+      url: siteUrl,
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',
@@ -22,8 +38,8 @@ export default async function getStructuredData(iconName: string, pageData: Page
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Icons',
-          item: 'https://tianjianjun0727.github.io/ycloud-icons/icons',
+          name: locale === 'en' ? 'Icons' : '图标',
+          item: iconsUrl,
         },
         { '@type': 'ListItem', position: 2, name: iconName, item: url },
       ],
@@ -34,10 +50,10 @@ export default async function getStructuredData(iconName: string, pageData: Page
       name: iconName,
       // TODO: Add support for description extraction from icon metadata
       // description: 'An ...SVG icon from the YCloud icon set.',
-      contentUrl: `https://tianjianjun0727.github.io/ycloud-icons/api/icons/${iconName}}?width=24&height=24&background=white`,
-      thumbnailUrl: `https://tianjianjun0727.github.io/ycloud-icons/api/icons/${iconName}}?width=256&height=256&background=white`,
+      contentUrl: iconSvgUrl,
+      thumbnailUrl: iconSvgUrl,
       encodingFormat: 'image/svg+xml',
-      keywords: pageData.params?.tags,
+      keywords,
       width: 24,
       height: 24,
       creator: {

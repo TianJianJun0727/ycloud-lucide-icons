@@ -1,12 +1,9 @@
-import { useFetch } from '@vueuse/core';
+import { shallowRef } from 'vue';
 
 const useFetchTags = () =>
-  useFetch<Record<string, string[]>>(
-    `${import.meta.env.DEV ? 'http://localhost:3000' : ''}/api/tags`,
-    {
-      immediate:
-        typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('search'),
-    },
-  ).json();
+  ({
+    data: shallowRef<Record<string, string[]> | null>(null),
+    execute: () => Promise.resolve(null),
+  }) as const;
 
 export default useFetchTags;

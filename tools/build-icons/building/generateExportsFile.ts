@@ -1,5 +1,5 @@
 import path from 'path';
-import { toPascalCase, toCamelCase, resetFile, appendFile } from '@ycloud-web/helpers';
+import { toPascalCase, toCamelCase, resetFile, appendFile, writeFile } from '@ycloud-web/helpers';
 import type { INode } from 'svgson';
 
 export default async function generateExportFile(
@@ -12,13 +12,10 @@ export default async function generateExportFile(
 ) {
   const fileName = path.basename(inputEntry);
 
-  // Reset file
-  await resetFile(fileName, outputDirectory);
-
   const icons = Object.keys(iconNodes);
 
   // Generate Import for Icon VNodes
-  const iconImportNodesPromises = icons.map(async (iconName) => {
+  const iconImportNodes = icons.map((iconName) => {
     let componentName;
 
     if (exportModuleNameCasing === 'camel') {
@@ -29,12 +26,10 @@ export default async function generateExportFile(
     const importString = `export ${
       useDefaultExports ? `{ default as ${componentName} }` : `*`
     } from './${iconName}${iconFileExtension}';\n`;
-    return appendFile(importString, fileName, outputDirectory);
+    return importString;
   });
 
-  await Promise.all(iconImportNodesPromises);
-
-  await appendFile('\n', fileName, outputDirectory);
+  await writeFile(`${iconImportNodes.join('')}\n`, fileName, outputDirectory);
 
   console.log(`Successfully generated ${fileName} file`);
 }

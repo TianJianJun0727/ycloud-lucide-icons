@@ -76,14 +76,7 @@ createIcons({
 
 ## Style Strategy
 
-YCloud Icons keeps stable public component names such as `Camera`. If outline, filled, or other style variants are introduced later, they should be separated by package entrypoints or directories instead of adding style suffixes to component names:
-
-```tsx
-import { Camera } from '@ycloud-web/icons-react/outline';
-import { Camera as FilledCamera } from '@ycloud-web/icons-react/filled';
-```
-
-This keeps component naming, icon search, and refactoring behavior consistent.
+YCloud Icons keeps stable public component names such as `Camera`. The current release ships one outline-style icon set. If outline, filled, or other style variants are introduced later, they should be separated by explicit package entrypoints or directories instead of adding style suffixes to component names. This keeps component naming, icon search, and refactoring behavior consistent.
 
 ## Development
 

@@ -35,10 +35,10 @@ Create a custom TypeScript declaration file that re-exports the preferred naming
 ```ts [@ycloud-web/icons-react-native.d.ts]
 declare module '@ycloud-web/icons-react-native' {
   // Prefixed import names
-  export * from '@ycloud-web/icons-react-native/dist/@ycloud-web/icons-react-native.prefixed';
+  export * from '@ycloud-web/icons-react-native/prefixed';
   // or
   // Suffixed import names
-  export * from '@ycloud-web/icons-react-native/dist/@ycloud-web/icons-react-native.suffixed';
+  export * from '@ycloud-web/icons-react-native/suffixed';
 }
 ```
 

@@ -38,9 +38,9 @@ No framework peer dependency.
 
 ```ts
 import { House } from '@ycloud-web/icons-data';
-import { buildSvgString } from '@ycloud-web/icons-data/builders';
+import { buildYCloudSvg } from '@ycloud-web/icons-data/build';
 
-const svg = buildSvgString(House);
+const svg = buildYCloudSvg(House);
 ```
 
 ## Documentation

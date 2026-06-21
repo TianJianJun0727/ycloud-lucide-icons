@@ -16,5 +16,5 @@ export const readSvgDirectory = async (
 ): Promise<string[]> => {
   const directoryContents = await fs.readdir(directory);
 
-  return directoryContents.filter((file) => path.extname(file) === fileExtension);
+  return directoryContents.filter((file) => path.extname(file) === fileExtension).sort();
 };

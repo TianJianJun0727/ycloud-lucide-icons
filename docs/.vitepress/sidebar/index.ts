@@ -120,7 +120,7 @@ function getChangelogSidebar(locale: DocsLocale): DefaultTheme.SidebarItem[] {
       text: 'Changelog',
       items: changelogSidebarItems.map((item) => ({
         ...item,
-        link: `${localePrefix[locale]}${item.link}`,
+        link: item.link,
       })),
     },
   ];

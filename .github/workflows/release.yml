@@ -15,6 +15,10 @@ on:
         description: NPM tag
         default: latest
         type: string
+      ref:
+        description: Git ref to publish from. Use the release tag when available.
+        default: ''
+        type: string
 
 permissions:
   contents: write
@@ -94,6 +98,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          ref: ${{ inputs.ref || github.ref }}
 
       - uses: ./.github/actions/setup-pnpm
         with:
@@ -119,8 +124,18 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --tag ${{ needs.prepare.outputs.npm-tag }} --access public --provenance --no-git-checks
+        shell: bash
+        run: |
+          if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
+            echo "${PACKAGE}@${VERSION} is already published. Skipping."
+            exit 0
+          fi
+
+          pnpm --filter "${PACKAGE}" publish --tag "${NPM_TAG}" --access public --provenance --no-git-checks
         env:
+          PACKAGE: ${{ matrix.package }}
+          VERSION: ${{ needs.prepare.outputs.version }}
+          NPM_TAG: ${{ needs.prepare.outputs.npm-tag }}
           NPM_CONFIG_PROVENANCE: true
 
   github-release:

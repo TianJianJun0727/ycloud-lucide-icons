@@ -87,6 +87,11 @@ jobs:
         id: latest-tag
         run: |
           latest_tag="$(git tag --sort=-v:refname | grep -E '^v?[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)"
+          if [ -z "$latest_tag" ]; then
+            echo "No stable release tag found. Create an initial v0.0.0-style tag before automatic icon releases." >&2
+            exit 1
+          fi
+
           latest_version="${latest_tag#v}"
           echo "LATEST_TAG=${latest_tag}" >> "$GITHUB_OUTPUT"
           echo "LATEST_VERSION=${latest_version}" >> "$GITHUB_OUTPUT"
@@ -108,6 +113,33 @@ jobs:
       - name: Check output
         run: echo '${{ steps.new-version.outputs.NEW_VERSION }}'
 
+      - name: Sync package versions
+        run: node ./scripts/syncPackageVersions.mts "${VERSION}"
+        env:
+          VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
+
+      - name: Commit synced package versions
+        shell: bash
+        run: |
+          if git diff --quiet -- packages; then
+            echo "No package version changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add packages/*/package.json
+            git commit -m "chore(release): sync package versions to ${VERSION}"
+            git push origin HEAD:main
+          fi
+        env:
+          VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
+
+      - name: Create and push release tag
+        run: |
+          git tag "v${VERSION}"
+          git push origin "v${VERSION}"
+        env:
+          VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
+
       - name: Create Release
         uses: softprops/action-gh-release@v3
         with:
@@ -122,6 +154,7 @@ jobs:
     secrets: inherit
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
+      ref: v${{ needs.create-release.outputs.VERSION }}
 
   dispatch-release:
     if: github.event_name == 'workflow_dispatch'
@@ -130,3 +163,4 @@ jobs:
     with:
       version: ${{ inputs.version }}
       tag: ${{ inputs.tag }}
+      ref: v${{ inputs.version }}

@@ -12,6 +12,7 @@ const getHeadConfig = ({
   base: string;
 }): HeadConfig[] => {
   const assetBase = base.endsWith('/') ? base : `${base}/`;
+  const siteUrl = process.env.DOCS_SITE_URL ?? 'https://tianjianjun0727.github.io/ycloud-icons';
 
   return [
     [
@@ -87,14 +88,14 @@ const getHeadConfig = ({
       'meta',
       {
         property: 'og:url',
-        content: 'https://tianjianjun0727.github.io/ycloud-icons',
+        content: siteUrl,
       },
     ],
     [
       'meta',
       {
         property: 'og:image',
-        content: 'https://tianjianjun0727.github.io/ycloud-icons/og.png',
+        content: `${siteUrl}/og.png`,
       },
     ],
     [
@@ -143,7 +144,7 @@ const getHeadConfig = ({
       'meta',
       {
         property: 'twitter:image',
-        content: 'https://tianjianjun0727.github.io/ycloud-icons/og.png',
+        content: `${siteUrl}/og.png`,
       },
     ],
   ];

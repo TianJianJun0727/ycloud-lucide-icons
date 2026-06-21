@@ -35,10 +35,10 @@ import { House, HouseIcon, YCloudHouse } from '@ycloud-web/icons-react-native';
 ```ts [@ycloud-web/icons-react-native.d.ts]
 declare module '@ycloud-web/icons-react-native' {
   // 前缀导入名称
-  export * from '@ycloud-web/icons-react-native/dist/@ycloud-web/icons-react-native.prefixed';
+  export * from '@ycloud-web/icons-react-native/prefixed';
   // 或
   // 后缀导入名称
-  export * from '@ycloud-web/icons-react-native/dist/@ycloud-web/icons-react-native.suffixed';
+  export * from '@ycloud-web/icons-react-native/suffixed';
 }
 ```
 

@@ -195,16 +195,9 @@ import { Camera } from '@ycloud-web/icons-react';
 
 ## 五、风格入口为什么独立
 
-当前设计里，风格不是塞进一个运行时 `theme` 参数里临时切换，而是优先通过入口表达。
+当前版本先提供单一线性图标集。后续如果生成 outline、filled 等多风格形态，风格不会塞进一个运行时 `theme` 参数里临时切换，而会优先通过明确入口表达。
 
-典型形式是：
-
-```tsx
-import { Camera } from '@ycloud-web/icons-react/outline';
-import { Camera as CameraFilled } from '@ycloud-web/icons-react/filled';
-```
-
-这样做的原因是：
+这样设计的原因是：
 
 1. 更符合 Tree Shaking
    业务侧只引入实际用到的风格入口。
