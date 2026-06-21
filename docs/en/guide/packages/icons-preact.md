@@ -40,7 +40,12 @@ Preact `^10.27.2`.
 import { House } from '@ycloud-web/icons-preact';
 
 export function App() {
-  return <House size={32} color="#ff5a5f" />;
+  return (
+    <House
+      size={32}
+      color="#ff5a5f"
+    />
+  );
 }
 ```
 

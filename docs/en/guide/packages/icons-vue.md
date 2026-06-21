@@ -42,7 +42,10 @@ import { House } from '@ycloud-web/icons-vue';
 </script>
 
 <template>
-  <House :size="32" color="#ff5a5f" />
+  <House
+    :size="32"
+    color="#ff5a5f"
+  />
 </template>
 ```
 

@@ -35,7 +35,7 @@ import FolderLock from "@ycloud-web/icons-svelte/icons/folder-lock";
 
 `2px` 是 YCloud Icons 的默认描边宽度，你可以根据需要调整。
 
-![固定描边宽度对比](../../../images/absolute-stroke-width-compare.png?raw=true "固定描边宽度对比")
+![固定描边宽度对比](../../../images/absolute-stroke-width-compare.png?raw=true '固定描边宽度对比')
 
 ### 使用 `absoluteStrokeWidth` prop 调整描边宽度
 

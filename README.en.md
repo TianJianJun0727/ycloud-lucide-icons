@@ -8,19 +8,19 @@ It provides consistent icon source data, tree-shakable component packages, stati
 
 ## Packages
 
-| Target | Package | Source directory |
-| ------ | ------- | ---------------- |
-| Core JavaScript | `@ycloud-web/icons` | `packages/icons` |
-| React | `@ycloud-web/icons-react` | `packages/icons-react` |
-| Vue | `@ycloud-web/icons-vue` | `packages/icons-vue` |
-| Svelte | `@ycloud-web/icons-svelte` | `packages/icons-svelte` |
-| Solid | `@ycloud-web/icons-solid` | `packages/icons-solid` |
-| Preact | `@ycloud-web/icons-preact` | `packages/icons-preact` |
-| React Native | `@ycloud-web/icons-react-native` | `packages/icons-react-native` |
-| Angular | `@ycloud-web/icons-angular` | `packages/icons-angular` |
-| Astro | `@ycloud-web/icons-astro` | `packages/icons-astro` |
-| Static assets | `@ycloud-web/icons-static` | `packages/icons-static` |
-| Icon data | `@ycloud-web/icons-data` | `packages/icons-data` |
+| Target          | Package                          | Source directory              |
+| --------------- | -------------------------------- | ----------------------------- |
+| Core JavaScript | `@ycloud-web/icons`              | `packages/icons`              |
+| React           | `@ycloud-web/icons-react`        | `packages/icons-react`        |
+| Vue             | `@ycloud-web/icons-vue`          | `packages/icons-vue`          |
+| Svelte          | `@ycloud-web/icons-svelte`       | `packages/icons-svelte`       |
+| Solid           | `@ycloud-web/icons-solid`        | `packages/icons-solid`        |
+| Preact          | `@ycloud-web/icons-preact`       | `packages/icons-preact`       |
+| React Native    | `@ycloud-web/icons-react-native` | `packages/icons-react-native` |
+| Angular         | `@ycloud-web/icons-angular`      | `packages/icons-angular`      |
+| Astro           | `@ycloud-web/icons-astro`        | `packages/icons-astro`        |
+| Static assets   | `@ycloud-web/icons-static`       | `packages/icons-static`       |
+| Icon data       | `@ycloud-web/icons-data`         | `packages/icons-data`         |
 
 ## Usage Examples
 

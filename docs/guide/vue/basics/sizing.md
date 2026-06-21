@@ -2,6 +2,7 @@
 title: 尺寸 - Vue
 description: 了解如何在 Vue 应用中通过 `size` prop 或 CSS 调整图标尺寸。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
@@ -16,7 +17,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 
 ```vue src/App.vue [active]
 <script setup>
-import { Landmark } from "@ycloud-web/icons-vue"
+import { Landmark } from '@ycloud-web/icons-vue';
 </script>
 
 <template>
@@ -25,7 +26,6 @@ import { Landmark } from "@ycloud-web/icons-vue"
 ```
 
 :::
-
 
 ## 通过 CSS 调整图标尺寸
 
@@ -43,14 +43,15 @@ import { Landmark } from "@ycloud-web/icons-vue"
 
 ```vue src/App.vue
 <script setup>
-import { Beer } from "@ycloud-web/icons-vue";
-import './icon.css'
+import { Beer } from '@ycloud-web/icons-vue';
+import './icon.css';
 </script>
 
 <template>
   <Beer class="my-beer-icon" />
 </template>
 ```
+
 :::
 
 ### 根据字体大小动态调整图标尺寸
@@ -79,8 +80,8 @@ import './icon.css'
 
 ```vue src/App.vue
 <script setup>
-import { Star } from "@ycloud-web/icons-vue";
-import "./icon.css";
+import { Star } from '@ycloud-web/icons-vue';
+import './icon.css';
 </script>
 
 <template>
@@ -89,8 +90,8 @@ import "./icon.css";
     <div>是</div>
   </div>
 </template>
-
 ```
+
 :::
 
 ### 使用 Tailwind 调整尺寸
@@ -101,7 +102,7 @@ import "./icon.css";
 
 ```vue src/App.vue [active]
 <script setup>
-import { PartyPopper } from "@ycloud-web/icons-vue";
+import { PartyPopper } from '@ycloud-web/icons-vue';
 </script>
 
 <template>
@@ -110,4 +111,5 @@ import { PartyPopper } from "@ycloud-web/icons-vue";
   </div>
 </template>
 ```
+
 :::

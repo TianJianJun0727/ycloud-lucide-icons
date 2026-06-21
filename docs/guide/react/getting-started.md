@@ -18,7 +18,6 @@ import { reactSidebar } from '../../.vitepress/sidebar/react'
 
 `@ycloud-web/icons-react` 的最低版本要求：React `^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0`。
 
-
 ## 安装
 
 ::: code-group

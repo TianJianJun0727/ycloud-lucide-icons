@@ -2,6 +2,7 @@
 title: Sizing - Vue
 description: Learn how to adjust the size of icons in your Vue application using the `size` prop or by using CSS.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
@@ -16,7 +17,7 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 
 ```vue src/App.vue [active]
 <script setup>
-import { Landmark } from "@ycloud-web/icons-vue"
+import { Landmark } from '@ycloud-web/icons-vue';
 </script>
 
 <template>
@@ -25,7 +26,6 @@ import { Landmark } from "@ycloud-web/icons-vue"
 ```
 
 :::
-
 
 ## Adjusting the icon size via CSS
 
@@ -43,14 +43,15 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 
 ```vue src/App.vue
 <script setup>
-import { Beer } from "@ycloud-web/icons-vue";
-import './icon.css'
+import { Beer } from '@ycloud-web/icons-vue';
+import './icon.css';
 </script>
 
 <template>
   <Beer class="my-beer-icon" />
 </template>
 ```
+
 :::
 
 ### Dynamically change the icon size based on the font size
@@ -79,8 +80,8 @@ It is possible to resize icons based on font size. This can be achieved using th
 
 ```vue src/App.vue
 <script setup>
-import { Star } from "@ycloud-web/icons-vue";
-import "./icon.css";
+import { Star } from '@ycloud-web/icons-vue';
+import './icon.css';
 </script>
 
 <template>
@@ -89,8 +90,8 @@ import "./icon.css";
     <div>Yes</div>
   </div>
 </template>
-
 ```
+
 :::
 
 ### Resizing with Tailwind
@@ -101,7 +102,7 @@ import "./icon.css";
 
 ```vue src/App.vue [active]
 <script setup>
-import { PartyPopper } from "@ycloud-web/icons-vue";
+import { PartyPopper } from '@ycloud-web/icons-vue';
 </script>
 
 <template>
@@ -110,4 +111,5 @@ import { PartyPopper } from "@ycloud-web/icons-vue";
   </div>
 </template>
 ```
+
 :::

@@ -18,7 +18,6 @@ import { preactSidebar } from '../../.vitepress/sidebar/preact'
 
 `@ycloud-web/icons-preact` 的最低版本要求：Preact `^10.27.2`。
 
-
 ## 安装
 
 ::: code-group

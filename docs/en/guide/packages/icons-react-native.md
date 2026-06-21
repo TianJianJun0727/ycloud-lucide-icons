@@ -40,7 +40,12 @@ React `^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0`, any React Native version, and 
 import { House } from '@ycloud-web/icons-react-native';
 
 export function App() {
-  return <House size={32} color="#ff5a5f" />;
+  return (
+    <House
+      size={32}
+      color="#ff5a5f"
+    />
+  );
 }
 ```
 

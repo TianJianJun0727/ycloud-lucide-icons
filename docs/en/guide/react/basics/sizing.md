@@ -2,6 +2,7 @@
 title: Sizing - React
 description: Learn how to adjust the size of icons in your React application using the `size` prop or by using CSS.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
@@ -15,7 +16,7 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 ::: sandpack {template=react showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="@ycloud-web/icons-react"}
 
 ```jsx App.js [active]
-import { Landmark } from "@ycloud-web/icons-react";
+import { Landmark } from '@ycloud-web/icons-react';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
 
 export default App;
 ```
+
 :::
 
 ## Adjusting the icon size via CSS
@@ -44,8 +46,8 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 ```
 
 ```jsx App.js
-import { Beer } from "@ycloud-web/icons-react";
-import "./icon.css";
+import { Beer } from '@ycloud-web/icons-react';
+import './icon.css';
 
 function App() {
   return (
@@ -56,8 +58,8 @@ function App() {
 }
 
 export default App;
-
 ```
+
 :::
 
 ### Dynamically change the icon size based on the font size
@@ -85,8 +87,8 @@ It is possible to resize icons based on font size. This can be achieved using th
 ```
 
 ```jsx App.js
-import { Star } from "@ycloud-web/icons-react";
-import "./icon.css";
+import { Star } from '@ycloud-web/icons-react';
+import './icon.css';
 
 function App() {
   return (
@@ -109,7 +111,7 @@ export default App;
 ::: sandpack {template=react editorHeight=300 editorWidthPercentage=60 dependencies="@ycloud-web/icons-react" externalResources="https://cdn.tailwindcss.com"}
 
 ```jsx App.js [active]
-import { PartyPopper } from "@ycloud-web/icons-react";
+import { PartyPopper } from '@ycloud-web/icons-react';
 
 function App() {
   return (
@@ -121,4 +123,5 @@ function App() {
 
 export default App;
 ```
+
 :::

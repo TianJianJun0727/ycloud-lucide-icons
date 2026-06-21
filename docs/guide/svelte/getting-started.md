@@ -18,7 +18,6 @@ import { svelteSidebar } from '../../.vitepress/sidebar/svelte'
 
 `@ycloud-web/icons-svelte` 的最低版本要求：Svelte `^5`。
 
-
 ## 安装
 
 ::: code-group

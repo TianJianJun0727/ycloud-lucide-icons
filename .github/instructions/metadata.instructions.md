@@ -1,6 +1,7 @@
 ---
-applyTo: "icons/*.json"
+applyTo: 'icons/*.json'
 ---
+
 # JSON Metadata Descriptor
 
 The schema for the JSON metadata descriptor can be found in `icon.schema.json`. It defines the required and optional properties for the JSON files that accompany each icon. The JSON metadata descriptor should be placed in the same directory as the SVG file of the icon and should have the same name as the SVG file, but with a `.json` extension. For example, if the SVG file is named `home.svg`, the JSON metadata descriptor should be named `home.json`.

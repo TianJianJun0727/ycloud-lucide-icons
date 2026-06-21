@@ -22,7 +22,6 @@ import { reactNativeSidebar } from '../../.vitepress/sidebar/react-native'
 - React Native 任意版本
 - `react-native-svg` `^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0`
 
-
 ## 安装
 
 首先确保已经安装 `react-native-svg`（版本 12 到 15）。然后安装图标包：

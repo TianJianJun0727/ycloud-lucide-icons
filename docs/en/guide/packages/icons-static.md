@@ -37,7 +37,10 @@ No framework peer dependency.
 ## Usage
 
 ```html
-<img src="./node_modules/@ycloud-web/icons-static/icons/house.svg" alt="House" />
+<img
+  src="./node_modules/@ycloud-web/icons-static/icons/house.svg"
+  alt="House"
+/>
 ```
 
 ## Documentation

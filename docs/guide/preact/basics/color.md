@@ -51,8 +51,7 @@ import { ThumbsUp } from '@ycloud-web/icons-preact';
 function LikeButton() {
   return (
     <button style={{ color: '#fff' }}>
-      <ThumbsUp />
-      赞
+      <ThumbsUp />赞
     </button>
   );
 }

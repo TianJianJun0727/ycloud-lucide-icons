@@ -19,6 +19,7 @@ import { angularSidebar } from '../../.vitepress/sidebar/angular'
 `@ycloud-web/icons-angular` 的最低版本要求：Angular `>=17.0.0`。
 
 该包使用 standalone components、signals 和 zoneless change detection。
+
 ## 安装
 
 ::: code-group

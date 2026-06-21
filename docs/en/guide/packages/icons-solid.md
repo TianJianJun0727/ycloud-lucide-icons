@@ -40,7 +40,12 @@ Solid `^1.4.7`.
 import { House } from '@ycloud-web/icons-solid';
 
 export function App() {
-  return <House size={32} color="#ff5a5f" />;
+  return (
+    <House
+      size={32}
+      color="#ff5a5f"
+    />
+  );
 }
 ```
 

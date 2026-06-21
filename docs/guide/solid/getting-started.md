@@ -18,7 +18,6 @@ import { solidSidebar } from '../../.vitepress/sidebar/solid'
 
 `@ycloud-web/icons-solid` 的最低版本要求：Solid `^1.4.7`。
 
-
 ## 安装
 
 ::: code-group

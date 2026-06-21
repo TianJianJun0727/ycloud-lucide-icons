@@ -18,7 +18,6 @@ import { astroSidebar } from '../../.vitepress/sidebar/astro'
 
 `@ycloud-web/icons-astro` 的最低版本要求：Astro `^4 || ^5 || ^6`。
 
-
 ## 安装
 
 ::: code-group

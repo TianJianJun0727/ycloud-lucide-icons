@@ -18,7 +18,6 @@ import { vueSidebar } from '../../.vitepress/sidebar/vue'
 
 `@ycloud-web/icons-vue` 的最低版本要求：Vue `>=3.0.1`。
 
-
 ## 安装
 
 ::: code-group

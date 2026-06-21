@@ -17,6 +17,7 @@ import { reactSidebar } from '../../.vitepress/sidebar/react'
 ## 版本要求
 
 `@ycloud-web/icons` 无框架 peer dependency。
+
 ## 安装
 
 ### 包管理器

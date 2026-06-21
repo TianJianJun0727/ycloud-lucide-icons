@@ -49,8 +49,7 @@ import ThumbsUp from '@ycloud-web/icons-solid/icons/thumbs-up';
 function LikeButton() {
   return (
     <button style={{ color: '#fff' }}>
-      <ThumbsUp />
-      赞
+      <ThumbsUp />赞
     </button>
   );
 }

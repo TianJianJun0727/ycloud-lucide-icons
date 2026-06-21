@@ -47,8 +47,8 @@ declare module '@ycloud-web/icons-react-native' {
 
 ### 导入命名风格
 
-| 导入风格 | 可用导入          | 声明文件导入路径                        |
-| ------------ | -------------------------- | --------------------------------------- |
-| 默认      | Home, HomeIcon, YCloudHome |                                         |
-| 前缀      | YCloudHome                 | @ycloud-web/icons-react-native.prefixed |
-| 后缀      | HomeIcon                   | @ycloud-web/icons-react-native.suffixed |
+| 导入风格 | 可用导入                   | 声明文件导入路径                        |
+| -------- | -------------------------- | --------------------------------------- |
+| 默认     | Home, HomeIcon, YCloudHome |                                         |
+| 前缀     | YCloudHome                 | @ycloud-web/icons-react-native.prefixed |
+| 后缀     | HomeIcon                   | @ycloud-web/icons-react-native.suffixed |
