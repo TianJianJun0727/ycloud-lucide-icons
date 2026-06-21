@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "use-cases": [],
+  "name": "ycloud start",
+  "tags": [
+    "Test"
+  ],
+  "categories": [
+    "sports"
+  ],
+  "i18n": {
+    "en": {
+      "name": "ycloud start",
+      "tags": [
+        "Test"
+      ],
+      "categories": [
+        "sports"
+      ]
+    }
+  }
+}
