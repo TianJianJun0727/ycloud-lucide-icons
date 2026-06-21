@@ -20,16 +20,18 @@ const isEnglish = computed(() => page.value.relativePath?.startsWith?.('en/') ??
 
 const tags = computed(() => {
   if (!props.icon) return '';
-  const displayTags = isEnglish.value ? props.icon.englishTags : props.icon.displayTags;
+  const displayTags =
+    props.icon.displayTags ?? (isEnglish.value ? props.icon.englishTags : props.icon.tags);
   return displayTags?.join(' • ') ?? '';
 });
 
-const displayName = computed(() =>
-  isEnglish.value ? props.icon.englishName : props.icon.displayName,
+const displayName = computed(
+  () => props.icon.displayName ?? (isEnglish.value ? props.icon.englishName : props.icon.name),
 );
 
-const displayCategories = computed(() =>
-  isEnglish.value ? props.icon.englishCategories : props.icon.displayCategories,
+const displayCategories = computed(
+  () =>
+    props.icon.displayCategories ?? (isEnglish.value ? props.icon.englishCategories : undefined),
 );
 
 const deprecatedTitle = computed(() => {
