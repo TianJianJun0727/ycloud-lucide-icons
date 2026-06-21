@@ -29,6 +29,7 @@
     "checkIcons": "node ./scripts/checkIconsAndCategories.mts",
     "generate:changelog": "node ./scripts/writeChangelog.mts",
     "generate:changelog:md": "node ./scripts/writeChangelog.mts",
+    "sync:github-release-notes": "node ./scripts/syncGitHubReleaseNotes.mts",
     "sync:package-versions": "node ./scripts/syncPackageVersions.mts",
     "generate:sponsors": "node scripts/updateSponsors.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
