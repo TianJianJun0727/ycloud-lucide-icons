@@ -11,7 +11,7 @@
     "docs:build": "pnpm run /^prebuild:.*/ && vitepress build",
     "docs:build:no-og": "DOCS_OG=0 pnpm docs:build",
     "docs:build:og": "DOCS_OG=1 pnpm docs:build",
-    "docs:build:github-pages": "pnpm clean:generated-og && pnpm prebuild:api && DOCS_BASE=/ycloud-icons/ DOCS_OG=0 DOCS_LLMS=0 DOCS_META_CHUNK=1 pnpm generate:docs-data && NODE_OPTIONS=${NODE_OPTIONS:---max-old-space-size=8192} DOCS_BASE=/ycloud-icons/ DOCS_OG=0 DOCS_LLMS=0 DOCS_META_CHUNK=1 vitepress build && DOCS_VERCEL=0 pnpm postbuild:vercelJson",
+    "docs:build:github-pages": "pnpm clean:generated-og && pnpm prebuild:api && DOCS_BASE=/ycloud-icons/ DOCS_OG=0 DOCS_LLMS=0 DOCS_META_CHUNK=1 pnpm generate:docs-data && NODE_OPTIONS=${NODE_OPTIONS:---max-old-space-size=12288} DOCS_BASE=/ycloud-icons/ DOCS_OG=0 DOCS_LLMS=0 DOCS_META_CHUNK=1 vitepress build && DOCS_VERCEL=0 pnpm postbuild:vercelJson",
     "docs:build:llms": "DOCS_LLMS=1 pnpm docs:build",
     "docs:preview": "vitepress preview",
     "build:docs": "vitepress build",

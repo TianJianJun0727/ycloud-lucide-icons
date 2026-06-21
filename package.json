@@ -19,7 +19,7 @@
     "docs:dev:og": "pnpm --filter @ycloud-web/icons-docs docs:dev:og",
     "docs:dev:no-og": "pnpm --filter @ycloud-web/icons-docs docs:dev:no-og",
     "docs:build": "pnpm --filter @ycloud-web/icons-docs docs:build",
-    "docs:build:github-pages": "NODE_OPTIONS=--max-old-space-size=8192 pnpm --dir docs docs:build:github-pages",
+    "docs:build:github-pages": "NODE_OPTIONS=--max-old-space-size=12288 pnpm --dir docs docs:build:github-pages",
     "docs:build:og": "pnpm --filter @ycloud-web/icons-docs docs:build:og",
     "docs:build:no-og": "pnpm --filter @ycloud-web/icons-docs docs:build:no-og",
     "build:outline-icons": "pnpm --filter outline-svg start",
