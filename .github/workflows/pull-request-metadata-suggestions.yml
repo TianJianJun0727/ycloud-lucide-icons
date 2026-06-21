@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      models: read
 
     steps:
       #  We checkout the main branch of main repository for security reasons.

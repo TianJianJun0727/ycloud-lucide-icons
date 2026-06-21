@@ -1,5 +1,4 @@
 import 'dotenv/config';
-import OpenAI from 'openai';
 import { Octokit } from '@octokit/rest';
 import { zodTextFormat } from 'openai/helpers/zod';
 
@@ -7,6 +6,7 @@ import path from 'node:path';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import z from 'zod';
+import { createAiClient } from './aiClient.mts';
 
 // Resolve repo paths relative to this script so they work no matter which
 // directory the script is invoked from (the workflow runs it from the repo root).
@@ -21,8 +21,14 @@ const username = process.env.REVIEWER ?? 'github-actions[bot]';
 const commitSha = process.env.COMMIT_SHA ?? 'HEAD';
 const useFileSystem = process.env.USE_FILE_SYSYEM === 'true' || false;
 
-const owner = 'ycloud-icons';
-const repo = 'ycloud';
+const [owner, repo] = (process.env.GITHUB_REPOSITORY ?? 'TianJianJun0727/ycloud-icons').split('/');
+
+const ai = createAiClient();
+
+if (!ai) {
+  console.log('No AI provider is configured. Skipping metadata suggestions.');
+  process.exit(0);
+}
 
 const METADATA_FIELDS = ['tags', 'categories', 'use-cases'] as const;
 type MetadataField = (typeof METADATA_FIELDS)[number];
@@ -130,9 +136,7 @@ if (changedFiles.length === 0) {
   process.exit(0);
 }
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+console.log(`Using ${ai.provider} for metadata suggestions with model ${ai.model}.`);
 
 const categoriesContext = categories.map(({ name, title }) => `- ${name}: ${title}`).join('\n');
 
@@ -214,8 +218,8 @@ ${prDescription || '(no description provided)'}
 Reference examples from existing icons:
 ${JSON.stringify(referenceExamples, null, 2)}`;
 
-  const response = await client.responses.create({
-    model: 'gpt-5-mini',
+  const response = await ai.client.responses.create({
+    model: ai.model,
     input,
     text: {
       format: zodTextFormat(metadataSchema, 'metadata'),

@@ -1,0 +1,108 @@
+name: Fix Icon Source
+
+on:
+  pull_request:
+    paths:
+      - 'icons/*.svg'
+      - 'icons/*.json'
+      - 'categories/*.json'
+
+concurrency:
+  group: fix-icon-source-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: read
+  models: read
+
+jobs:
+  fix-icon-source:
+    name: Fix Icon Source
+    if: github.repository == 'TianJianJun0727/ycloud-icons' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          cache-mode: restore
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Get changed icon source files
+        id: changed-files
+        uses: tj-actions/changed-files@v47
+        with:
+          files: |
+            icons/*.svg
+            icons/*.json
+            categories/*.json
+
+      - name: Optimize changed SVGs
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          svg_files=()
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ "$file" == icons/*.svg && -f "$file" ]]; then
+              svg_files+=("$file")
+            fi
+          done
+
+          if (( ${#svg_files[@]} > 0 )); then
+            node ./scripts/optimizeStagedSvgs.mts "${svg_files[@]}"
+          fi
+
+      - name: Complete changed metadata i18n
+        if: steps.changed-files.outputs.any_changed == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          json_files=()
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ ( "$file" == icons/*.json || "$file" == categories/*.json ) && -f "$file" ]]; then
+              json_files+=("$file")
+            fi
+          done
+
+          if (( ${#json_files[@]} > 0 )); then
+            node ./scripts/fixIconMetadataI18n.mts "${json_files[@]}"
+          fi
+
+      - name: Format changed metadata
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          format_files=()
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ ( "$file" == icons/*.json || "$file" == categories/*.json ) && -f "$file" ]]; then
+              format_files+=("$file")
+            fi
+          done
+
+          if (( ${#format_files[@]} > 0 )); then
+            pnpm exec prettier --write "${format_files[@]}"
+          fi
+
+      - name: Validate changed icon source
+        run: |
+          pnpm exec eslint icons/*.svg
+          pnpm lint:json
+          pnpm checkIcons
+
+      - name: Commit fixes
+        run: |
+          if git diff --quiet; then
+            echo "No icon source fixes needed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add icons categories
+          git commit -m "fix(icons): normalize icon source files"
+          git push
