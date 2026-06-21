@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "use-cases": [],
+  "name": "start",
+  "tags": [
+    "start"
+  ],
+  "categories": [
+    "development"
+  ],
+  "i18n": {
+    "en": {
+      "name": "start",
+      "tags": [
+        "test"
+      ],
+      "categories": [
+        "development"
+      ]
+    }
+  }
+}
