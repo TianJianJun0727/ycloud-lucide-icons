@@ -1,22 +1,29 @@
 <script setup lang="ts">
-import type { IconEntity } from '@theme/types';
+import type { IconMetaData } from '@theme/types';
 import IconGrid from './IconGrid.vue';
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import iconNodes from '@data/iconNodes';
+import iconMetaData from '@data/iconMetaData';
 
 const props = defineProps<{
-  icons: IconEntity[];
+  icons: string[];
 }>();
 
 const { page } = useData();
 const isEnglish = computed(() => page.value.relativePath?.startsWith?.('en/') ?? false);
 const iconsWithNodes = computed(() =>
   props.icons
-    .map((icon) => ({
-      ...icon,
-      iconNode: icon.iconNode ?? iconNodes[icon.name],
-    }))
+    .map((name) => {
+      const metaData = iconMetaData[name] as IconMetaData | undefined;
+
+      return {
+        name,
+        displayName: metaData?.name,
+        englishName: metaData?.i18n?.en?.name,
+        iconNode: iconNodes[name],
+      };
+    })
     .filter((icon) => icon.iconNode),
 );
 </script>
