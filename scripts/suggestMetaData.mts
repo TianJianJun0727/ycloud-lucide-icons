@@ -29,8 +29,9 @@ if (!ai) {
   process.exit(0);
 }
 
-const METADATA_FIELDS = ['tags', 'categories', 'use-cases'] as const;
-type MetadataField = (typeof METADATA_FIELDS)[number];
+const ALL_METADATA_FIELDS = ['tags', 'categories', 'use-cases'] as const;
+const PORTAL_METADATA_FIELDS = ['tags', 'use-cases'] as const;
+type MetadataField = (typeof ALL_METADATA_FIELDS)[number];
 
 // Load the allowed categories (name + human-readable title) straight from the
 // `categories/` directory so we can both validate suggestions and give the
@@ -61,7 +62,7 @@ async function loadReferenceExamples(count = 8) {
   for (let i = 0; i < fileNames.length && examples.length < count; i += step) {
     try {
       const metadata = JSON.parse(await fs.readFile(path.join(iconsDir, fileNames[i]), 'utf-8'));
-      const isWellPopulated = METADATA_FIELDS.every(
+      const isWellPopulated = ALL_METADATA_FIELDS.every(
         (field) => Array.isArray(metadata[field]) && metadata[field].length > 0,
       );
 
@@ -85,14 +86,6 @@ const categories = await loadCategories();
 const categoryNames = categories.map((category) => category.name);
 const referenceExamples = await loadReferenceExamples();
 
-const metadataSchema = z.object({
-  tags: z.array(z.string()),
-  categories: z.array(z.enum(categoryNames as [string, ...string[]])),
-  'use-cases': z.array(z.string()),
-});
-
-type MetadataSuggestion = z.infer<typeof metadataSchema>;
-
 const { data: files } = await octokit.pulls.listFiles({
   owner,
   repo,
@@ -115,6 +108,21 @@ const { data: pullRequest } = await octokit.pulls.get({
 });
 
 const prDescription = (pullRequest.body || '').slice(0, 4000);
+const isPortalPullRequest =
+  pullRequest.head.ref.startsWith('ycloud-icons-portal/') ||
+  (pullRequest.body || '').includes('ycloud-icons-source:figma-plugin') ||
+  (pullRequest.body || '').includes('YCloud 图标同步助手');
+const metadataFields = isPortalPullRequest ? PORTAL_METADATA_FIELDS : ALL_METADATA_FIELDS;
+
+const metadataSchema = z.object({
+  tags: z.array(z.string()),
+  ...(metadataFields.includes('categories')
+    ? {
+        categories: z.array(z.enum(categoryNames as [string, ...string[]])),
+      }
+    : {}),
+  'use-cases': z.array(z.string()),
+});
 
 const hasUserReviews = reviews.some((review) => review.user?.login === username);
 
@@ -201,7 +209,7 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
 
 Guidelines:
 - tags: lowercase, single words, no spaces. Used for search. Never include the word "icon" or the icon's own name ("${iconName}").
-- categories: only use values from the allowed categories listed below. Lowercase. Keep them relevant to the icon.
+- categories: ${isPortalPullRequest ? 'do not suggest categories. This PR comes from the Figma submission flow, where categories are explicitly selected by the designer.' : 'only use values from the allowed categories listed below. Lowercase. Keep them relevant to the icon.'}
 - use-cases: short lowercase phrases describing concrete situations the icon represents (e.g. "indicating a disabled webcam"). No trailing punctuation.
 Only suggest NEW values that build on the current metadata, and prefer quality over quantity.
 
@@ -227,7 +235,7 @@ ${JSON.stringify(referenceExamples, null, 2)}`;
 
   // Build one inline GitHub suggestion per field, deduped against the values
   // already present in the file.
-  const comments = METADATA_FIELDS.flatMap((field) => {
+  const comments = metadataFields.flatMap((field) => {
     const current: string[] = currentMetadata[field];
     const newValues = suggested[field].filter(
       (value) => !current.includes(value) && value !== iconName,
