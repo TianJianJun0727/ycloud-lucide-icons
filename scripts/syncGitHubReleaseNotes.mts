@@ -40,6 +40,38 @@ function runGh(args: string[]) {
   }).trim();
 }
 
+function runGit(args: string[]) {
+  return execFileSync('git', args, {
+    cwd: projectRoot,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe'],
+  }).trim();
+}
+
+function formatShanghaiDateTime(isoDateTime: string) {
+  const parts = new Intl.DateTimeFormat('zh-CN', {
+    timeZone: 'Asia/Shanghai',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
+  })
+    .formatToParts(new Date(isoDateTime))
+    .reduce<Record<string, string>>((result, part) => {
+      result[part.type] = part.value;
+      return result;
+    }, {});
+
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} (UTC+08:00)`;
+}
+
+function getTagDateTime(tag: string) {
+  return formatShanghaiDateTime(runGit(['log', '-1', '--format=%cI', tag]));
+}
+
 function releaseExists(tag: string) {
   try {
     runGh(['release', 'view', tag, '--repo', repo]);
@@ -66,9 +98,7 @@ function validateReleaseNotes(notes: PersistedReleaseNotes) {
 
 function renderReleaseBody(notes: PersistedReleaseNotes) {
   const lines = [
-    `# ${notes.tag}`,
-    '',
-    `发布日期：${notes.date}`,
+    `发布日期：${getTagDateTime(notes.tag)}`,
     '',
     '## 中文',
     '',

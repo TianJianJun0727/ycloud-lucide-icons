@@ -61,6 +61,30 @@ function getTagDate(tag: string) {
   return run(`git log -1 --format=%cs ${tag}`);
 }
 
+function getTagDateTime(tag: string) {
+  return run(`git log -1 --format=%cI ${tag}`);
+}
+
+function formatShanghaiDateTime(isoDateTime: string) {
+  const parts = new Intl.DateTimeFormat('zh-CN', {
+    timeZone: 'Asia/Shanghai',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
+  })
+    .formatToParts(new Date(isoDateTime))
+    .reduce<Record<string, string>>((result, part) => {
+      result[part.type] = part.value;
+      return result;
+    }, {});
+
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} (UTC+08:00)`;
+}
+
 function getCommits(currentTag: string, previousTag?: string) {
   if (!previousTag) {
     return ['首个正式版本发布。'];
@@ -347,9 +371,7 @@ function toMarkdown(entries: ReleaseEntry[], locale: 'zh' | 'en') {
 
 function toReleaseNotesMarkdown(entry: ReleaseEntry) {
   const lines = [
-    `# ${entry.tag}`,
-    '',
-    `发布日期：${entry.date}`,
+    `发布日期：${formatShanghaiDateTime(getTagDateTime(entry.tag))}`,
     '',
     '## 中文',
     '',
