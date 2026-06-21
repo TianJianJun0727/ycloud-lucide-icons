@@ -164,6 +164,7 @@
 }
 
 .package-ycloud-logo {
+  color: var(--vp-c-text-1);
   margin: 0 auto 48px;
   max-width: 480px;
 }

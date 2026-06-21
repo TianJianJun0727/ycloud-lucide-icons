@@ -1,6 +1,6 @@
 # Changelog
 
-> This file is generated before the documentation build from Git tags and commit history.
+> This file is generated before the documentation build from Git tags and release changes.
 
 ## [v0.1.12](https://github.com/TianJianJun0727/ycloud-icons/releases/tag/v0.1.12) - 2026-06-21
 

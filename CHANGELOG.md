@@ -1,6 +1,6 @@
 # 更新日志
 
-> 此文件会在文档构建前根据 Git tag 和提交记录自动生成。
+> 此文件会在文档构建前根据 Git tag 和版本变更自动生成。
 
 ## [v0.1.12](https://github.com/TianJianJun0727/ycloud-icons/releases/tag/v0.1.12) - 2026-06-21
 
