@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, watchEffect } from 'vue';
 import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
 import { useMediaQuery } from '@vueuse/core';
 import { useData, useRouter } from 'vitepress';
@@ -29,6 +29,10 @@ const emit = defineEmits(['setActiveIcon']);
 const { go } = useRouter();
 const showOverlay = useMediaQuery('(min-width: 860px)');
 const { animate, confetti, confettiText } = useConfetti();
+
+watchEffect(() => {
+  confettiText.value = copiedText.value;
+});
 
 const icon = computed(() => {
   if (!props.name || !props.iconNode) return null;

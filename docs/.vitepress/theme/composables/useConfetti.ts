@@ -1,8 +1,8 @@
 import { ref } from 'vue';
 
-export default function useConfetti() {
+export default function useConfetti(initialText = '') {
   const animate = ref(false);
-  const confettiText = ref('已复制');
+  const confettiText = ref(initialText);
 
   function confetti() {
     animate.value = true;
