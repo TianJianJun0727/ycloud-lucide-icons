@@ -18,9 +18,6 @@
         "notification",
         "sound",
         "reminder"
-      ],
-      "categories": [
-        "Notification"
       ]
     }
   }

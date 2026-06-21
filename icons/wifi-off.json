@@ -14,10 +14,6 @@
       "name": "wifi off",
       "tags": [
         "disabled"
-      ],
-      "categories": [
-        "Connectivity",
-        "Devices"
       ]
     }
   }

@@ -26,10 +26,6 @@
         "add",
         "update",
         "create"
-      ],
-      "categories": [
-        "Text formatting",
-        "File icons"
       ]
     }
   }

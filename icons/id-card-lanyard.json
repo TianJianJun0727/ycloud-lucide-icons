@@ -21,10 +21,6 @@
         "employee",
         "gate-pass",
         "badge"
-      ],
-      "categories": [
-        "Security",
-        "Accounts & access"
       ]
     }
   }

@@ -17,9 +17,6 @@
         "notification",
         "silent",
         "reminder"
-      ],
-      "categories": [
-        "Notification"
       ]
     }
   }

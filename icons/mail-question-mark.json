@@ -27,9 +27,6 @@
         "letter",
         "delivery",
         "undelivered"
-      ],
-      "categories": [
-        "Mail"
       ]
     }
   }

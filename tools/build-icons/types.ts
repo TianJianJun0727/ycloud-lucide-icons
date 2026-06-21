@@ -47,7 +47,6 @@ export type IconMetadataBase = {
     en: {
       name: string;
       tags: string[];
-      categories: string[];
     };
   };
   deprecationReason?: IconDeprecationReason;

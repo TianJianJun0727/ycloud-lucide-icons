@@ -9,7 +9,6 @@ export interface IconMetaData {
     en: {
       name: string;
       tags: string[];
-      categories: string[];
     };
   };
   aliases?: string[];

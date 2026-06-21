@@ -33,10 +33,6 @@
         "click",
         "no-click",
         "interaction"
-      ],
-      "categories": [
-        "Arrows",
-        "Cursors"
       ]
     }
   }

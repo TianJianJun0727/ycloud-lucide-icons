@@ -21,9 +21,6 @@
       "name": "lock keyhole open",
       "tags": [
         "security"
-      ],
-      "categories": [
-        "Security"
       ]
     }
   }

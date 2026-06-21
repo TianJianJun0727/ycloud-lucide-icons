@@ -19,10 +19,6 @@
         "identity",
         "authentication",
         "secure"
-      ],
-      "categories": [
-        "Security",
-        "Accounts & access"
       ]
     }
   }

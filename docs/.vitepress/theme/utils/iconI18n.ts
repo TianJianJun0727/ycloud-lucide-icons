@@ -1,5 +1,3 @@
-import { localizeCategoryName } from './categoryLabels';
-
 const iconNameMap: Record<string, string> = {
   'a-arrow-down': '字号减小',
   'a-arrow-up': '字号增大',
@@ -1181,8 +1179,4 @@ export function localizeIconTags(tags: string[] = [], zhTags?: string[]) {
   const localizedTags = tags.map((tag) => tagMap[tag]).filter((tag): tag is string => Boolean(tag));
 
   return localizedTags;
-}
-
-export function localizeIconCategories(categories: string[] = [], zhCategories?: string[]) {
-  return zhCategories?.length ? zhCategories : categories.map(localizeCategoryName);
 }

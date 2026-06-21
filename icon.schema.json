@@ -118,19 +118,12 @@
         "en": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["name", "tags", "categories"],
+          "required": ["name", "tags"],
           "properties": {
             "name": {
               "type": "string"
             },
             "tags": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "uniqueItems": true
-            },
-            "categories": {
               "type": "array",
               "items": {
                 "type": "string"

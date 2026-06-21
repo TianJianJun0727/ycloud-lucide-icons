@@ -16,9 +16,6 @@
         "celsius",
         "fahrenheit",
         "weather"
-      ],
-      "categories": [
-        "Weather"
       ]
     }
   }

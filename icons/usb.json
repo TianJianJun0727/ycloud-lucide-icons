@@ -20,11 +20,6 @@
         "controller",
         "connector",
         "interface"
-      ],
-      "categories": [
-        "Devices",
-        "Multimedia",
-        "Home"
       ]
     }
   }

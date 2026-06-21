@@ -24,10 +24,6 @@
         "prediction",
         "dynamic",
         "volatile"
-      ],
-      "categories": [
-        "Charts",
-        "Arrows"
       ]
     }
   }

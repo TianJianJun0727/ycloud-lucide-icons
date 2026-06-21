@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/labeler@v6
-      - name: Label Figma source PR
-        if: startsWith(github.event.pull_request.head.ref, 'ycloud-icons-portal/') || contains(github.event.pull_request.body, 'ycloud-icons-source:figma-plugin')
+      - name: Label icon source PR
+        if: startsWith(github.event.pull_request.head.ref, 'ycloud-icons-portal/') || contains(github.event.pull_request.body, 'ycloud-icons-source:figma-plugin') || contains(github.event.pull_request.body, 'ycloud-icons-source:portal')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

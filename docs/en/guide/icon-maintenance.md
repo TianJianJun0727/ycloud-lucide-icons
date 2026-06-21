@@ -31,7 +31,7 @@ YCloud Icons is Chinese-first at the source-data level:
 - `name` is the Simplified Chinese icon name.
 - `tags` are Simplified Chinese search tags.
 - `categories` are stable category slugs, not display text.
-- `i18n.en.name` and `i18n.en.tags` are required for English docs and English search. `i18n.en.categories` stores the same stable category slugs as `categories`.
+- `i18n.en.name` and `i18n.en.tags` are required for English docs and English search. Category translations are maintained in `categories/*.json`.
 
 Example:
 
@@ -45,8 +45,7 @@ Example:
   "i18n": {
     "en": {
       "name": "circle arrow up",
-      "tags": ["arrow", "up", "circle"],
-      "categories": ["arrows", "navigation"]
+      "tags": ["arrow", "up", "circle"]
     }
   }
 }

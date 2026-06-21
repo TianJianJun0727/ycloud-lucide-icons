@@ -23,10 +23,6 @@
         "reconnect",
         "reset",
         "restart"
-      ],
-      "categories": [
-        "Connectivity",
-        "Devices"
       ]
     }
   }

@@ -134,8 +134,7 @@ pnpm optimize
   "i18n": {
     "en": {
       "name": "circle arrow up",
-      "tags": ["arrow", "up", "circle"],
-      "categories": ["arrows", "navigation"]
+      "tags": ["arrow", "up", "circle"]
     }
   }
 }
@@ -145,7 +144,7 @@ pnpm optimize
 
 - 必填：`$schema`、`name`、`categories`、`tags`、`i18n.en`、`use-cases`
 - `name` 和 `tags` 使用中文，`i18n.en.name`、`i18n.en.tags` 使用英文
-- `categories` 和 `i18n.en.categories` 都使用稳定分类 slug，必须保持一致；英文分类展示名来自 `categories/*.json` 的 `i18n.en.title`
+- `categories` 使用稳定分类 slug；分类展示名来自 `categories/*.json`，不要在 `i18n.en` 里重复维护分类
 
 额外约束：
 

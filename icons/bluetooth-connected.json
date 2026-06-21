@@ -16,10 +16,6 @@
       "name": "bluetooth connected",
       "tags": [
         "paired"
-      ],
-      "categories": [
-        "Connectivity",
-        "Devices"
       ]
     }
   }

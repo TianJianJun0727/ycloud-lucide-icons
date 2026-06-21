@@ -27,7 +27,7 @@ import iconNode from '../iconNodes/${iconName}.node.json'
 import metaData from '../../../../icons/${iconName}.json'
 import releaseData from '../releaseMetadata/${iconName}.json'
 import popularity from '../iconPopularity/${iconName}.json'
-import { localizeCategoryName } from '../../theme/utils/categoryLabels'
+import categoriesData from '../categoriesData.json'
 
 type IconMetaJson = {
   name: string
@@ -46,18 +46,31 @@ type IconMetaJson = {
     en: {
       name: string
       tags: string[]
-      categories: string[]
     }
   }
 }
 
+type CategoryMetaJson = {
+  name: string
+  title: string
+  englishTitle: string
+}
+
 const typedMetaData = metaData as IconMetaJson
+const typedCategoriesData = categoriesData as CategoryMetaJson[]
 const { name: displayName, tags, categories, aliases, deprecated, deprecationReason, toBeRemovedInVersion, i18n } = typedMetaData
 const displayTags = tags
-const displayCategories = categories.map(localizeCategoryName)
+const categoryDetails = categories.map((categoryName) => {
+  return typedCategoriesData.find((category) => category.name === categoryName)
+})
+const displayCategories = categories.map((categoryName, index) => {
+  return categoryDetails[index]?.title ?? categoryName
+})
 const englishName = i18n.en.name
 const englishTags = i18n.en.tags
-const englishCategories = i18n.en.categories
+const englishCategories = categories.map((categoryName, index) => {
+  return categoryDetails[index]?.englishTitle ?? categoryName
+})
 
 const iconDetails = {
   name: '${iconName}',

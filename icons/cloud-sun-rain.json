@@ -15,9 +15,6 @@
         "weather",
         "partly",
         "rainfall"
-      ],
-      "categories": [
-        "Weather"
       ]
     }
   }

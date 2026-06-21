@@ -27,10 +27,6 @@
         "rescue",
         "urgent",
         "first aid"
-      ],
-      "categories": [
-        "Medical",
-        "Transportation"
       ]
     }
   }

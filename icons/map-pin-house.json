@@ -36,11 +36,6 @@
         "geolocation",
         "place",
         "landmark"
-      ],
-      "categories": [
-        "Navigation & Places",
-        "Travel",
-        "Accounts & access"
       ]
     }
   }

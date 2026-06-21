@@ -19,10 +19,6 @@
         "move",
         "mouse",
         "grab"
-      ],
-      "categories": [
-        "Cursors",
-        "Accessibility"
       ]
     }
   }

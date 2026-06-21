@@ -151,8 +151,7 @@ interface DraftIcon {
   "i18n": {
     "en": {
       "name": "english name",
-      "tags": ["english tag"],
-      "categories": ["arrows"]
+      "tags": ["english tag"]
     }
   }
 }

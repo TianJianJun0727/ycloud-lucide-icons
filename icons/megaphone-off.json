@@ -25,10 +25,6 @@
         "notification",
         "disable",
         "silent"
-      ],
-      "categories": [
-        "Multimedia",
-        "Notification"
       ]
     }
   }

@@ -111,6 +111,7 @@ const prDescription = (pullRequest.body || '').slice(0, 4000);
 const isPortalPullRequest =
   pullRequest.head.ref.startsWith('ycloud-icons-portal/') ||
   (pullRequest.body || '').includes('ycloud-icons-source:figma-plugin') ||
+  (pullRequest.body || '').includes('ycloud-icons-source:portal') ||
   (pullRequest.body || '').includes('YCloud 图标同步助手');
 const metadataFields = isPortalPullRequest ? PORTAL_METADATA_FIELDS : ALL_METADATA_FIELDS;
 
@@ -205,10 +206,10 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
     'use-cases': metadata['use-cases'] ?? [],
   };
 
-  const input = `You are maintaining the metadata for the YCloud icon library. Suggest additional metadata for the \`${iconName}\` icon.
+const input = `You are maintaining the metadata for the YCloud icon library. Suggest additional metadata for the \`${iconName}\` icon.
 
 Guidelines:
-- tags: lowercase, single words, no spaces. Used for search. Never include the word "icon" or the icon's own name ("${iconName}").
+- tags: Simplified Chinese search terms for the default Chinese metadata. Keep them short. Technical proper nouns are allowed when they are the common UI term. Never include the word "icon" or the icon's own name ("${iconName}").
 - categories: ${isPortalPullRequest ? 'do not suggest categories. This PR comes from the Figma submission flow, where categories are explicitly selected by the designer.' : 'only use values from the allowed categories listed below. Lowercase. Keep them relevant to the icon.'}
 - use-cases: short lowercase phrases describing concrete situations the icon represents (e.g. "indicating a disabled webcam"). No trailing punctuation.
 Only suggest NEW values that build on the current metadata, and prefer quality over quantity.
@@ -231,7 +232,7 @@ ${JSON.stringify(referenceExamples, null, 2)}`;
   console.log(`Current metadata for ${iconName}:`, currentMetadata);
 
   const lines = fileContent.split('\n');
-  const chatGptQuery = `Suggest tags, categories and use-cases for a "${iconName}" icon in the YCloud icon library.`;
+  const chatGptQuery = `Suggest Simplified Chinese tags, categories and use-cases for a "${iconName}" icon in the YCloud icon library.`;
 
   // Build one inline GitHub suggestion per field, deduped against the values
   // already present in the file.
@@ -286,8 +287,9 @@ if (comments.length === 0) {
   process.exit(0);
 }
 
-const reviewBody = `### 🤖 Metadata suggestions ✨
-I've asked ChatGPT for some suggestions for \`tags\`, \`categories\` and \`use-cases\`.
+const reviewBody = `### Metadata suggestions
+I've asked AI for suggestions for \`tags\`, \`categories\` and \`use-cases\`.
+\`tags\` are Simplified Chinese because they belong to the default Chinese metadata.
 Please review them and apply any that you find useful.
 `;
 

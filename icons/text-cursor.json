@@ -26,10 +26,6 @@
         "insert",
         "input",
         "textarea"
-      ],
-      "categories": [
-        "Text formatting",
-        "Cursors"
       ]
     }
   }

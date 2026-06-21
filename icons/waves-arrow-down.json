@@ -31,10 +31,6 @@
         "rising",
         "down",
         "falling"
-      ],
-      "categories": [
-        "Weather",
-        "Sustainability"
       ]
     }
   }

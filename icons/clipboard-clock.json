@@ -39,10 +39,6 @@
         "timesheets",
         "appointment",
         "logbook"
-      ],
-      "categories": [
-        "Time & calendar",
-        "Text formatting"
       ]
     }
   }

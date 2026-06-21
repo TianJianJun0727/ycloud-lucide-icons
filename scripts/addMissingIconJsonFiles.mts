@@ -27,7 +27,6 @@ iconNames.forEach((iconName) => {
           en: {
             name: iconName,
             tags: [],
-            categories: [],
           },
         },
       },

@@ -11,10 +11,9 @@ if (files.length === 0) {
 }
 
 const hasCjk = (value: string) => /[\u3400-\u9fff]/.test(value);
+const isSlugLike = (value: string) => /^[a-z0-9]+(?:[-_][a-z0-9]+)+$/.test(value.trim());
 const isMeaningfulArray = (value: unknown): value is string[] =>
   Array.isArray(value) && value.every((item) => typeof item === 'string') && value.length > 0;
-const sameArray = (left: string[], right: string[]) =>
-  left.length === right.length && left.every((item, index) => item === right[index]);
 
 const iconI18nSchema = z.object({
   nameZh: z.string(),
@@ -28,24 +27,59 @@ const categoryI18nSchema = z.object({
   titleEn: z.string(),
 });
 
-async function completeIconMetadata(file: string, metadata: Record<string, any>) {
-  const iconName = path.basename(file, '.json');
+function needsIconAiFix(metadata: Record<string, any>) {
   const currentName = String(metadata.name ?? '');
   const currentEnglishName = String(metadata.i18n?.en?.name ?? '');
   const currentTags = metadata.tags;
   const currentEnglishTags = metadata.i18n?.en?.tags;
-  const currentCategories = metadata.categories;
-  const currentEnglishCategories = metadata.i18n?.en?.categories;
-  const shouldFixName = !currentName || !hasCjk(currentName);
-  const shouldFixEnglishName =
-    !currentEnglishName || hasCjk(currentEnglishName) || currentEnglishName === currentName;
-  const shouldFixTags = !isMeaningfulArray(currentTags) || currentTags.every((tag) => !hasCjk(tag));
-  const shouldFixEnglishTags =
-    !isMeaningfulArray(currentEnglishTags) || currentEnglishTags.some((tag) => hasCjk(tag));
-  const shouldFixEnglishCategories =
-    isMeaningfulArray(currentCategories) &&
-    (!isMeaningfulArray(currentEnglishCategories) ||
-      !sameArray(currentCategories, currentEnglishCategories));
+
+  return {
+    shouldFixName: !currentName || !hasCjk(currentName),
+    shouldFixEnglishName:
+      !currentEnglishName ||
+      hasCjk(currentEnglishName) ||
+      currentEnglishName === currentName ||
+      isSlugLike(currentEnglishName),
+    shouldFixTags: !isMeaningfulArray(currentTags) || currentTags.every((tag) => !hasCjk(tag)),
+    shouldFixEnglishTags:
+      !isMeaningfulArray(currentEnglishTags) || currentEnglishTags.some((tag) => hasCjk(tag)),
+  };
+}
+
+function needsCategoryAiFix(metadata: Record<string, any>) {
+  const currentTitle = String(metadata.title ?? '');
+  const currentEnglishTitle = String(metadata.i18n?.en?.title ?? '');
+
+  return {
+    shouldFixTitle: !currentTitle || !hasCjk(currentTitle),
+    shouldFixEnglishTitle:
+      !currentEnglishTitle ||
+      hasCjk(currentEnglishTitle) ||
+      currentEnglishTitle === currentTitle ||
+      isSlugLike(currentEnglishTitle),
+  };
+}
+
+function assertAiClient(file: string) {
+  const ai = createAiClient();
+
+  if (!ai) {
+    throw new Error(
+      `${file} needs bilingual metadata fixes, but no AI provider is configured. Set OPENAI_API_KEY or run in GitHub Actions with models:read permissions.`,
+    );
+  }
+
+  return ai;
+}
+
+async function completeIconMetadata(file: string, metadata: Record<string, any>) {
+  const iconName = path.basename(file, '.json');
+  const {
+    shouldFixName,
+    shouldFixEnglishName,
+    shouldFixTags,
+    shouldFixEnglishTags,
+  } = needsIconAiFix(metadata);
 
   const next = { ...metadata };
   next.i18n = {
@@ -55,19 +89,15 @@ async function completeIconMetadata(file: string, metadata: Record<string, any>)
     },
   };
 
-  if (shouldFixEnglishCategories) {
-    next.i18n.en.categories = currentCategories;
+  if (Object.prototype.hasOwnProperty.call(next.i18n.en, 'categories')) {
+    delete next.i18n.en.categories;
   }
 
   if (!shouldFixName && !shouldFixEnglishName && !shouldFixTags && !shouldFixEnglishTags) {
     return next;
   }
 
-  const ai = createAiClient();
-  if (!ai) {
-    console.log(`No AI provider is configured. Skipping language fixes for ${file}.`);
-    return next;
-  }
+  const ai = assertAiClient(file);
   console.log(`Using ${ai.provider} for icon metadata i18n fixes with model ${ai.model}.`);
 
   const current = {
@@ -115,11 +145,10 @@ ${JSON.stringify(current, null, 2)}`,
 
 async function completeCategoryMetadata(file: string, metadata: Record<string, any>) {
   const categoryName = path.basename(file, '.json');
-  const currentTitle = String(metadata.title ?? '');
-  const currentEnglishTitle = String(metadata.i18n?.en?.title ?? '');
-  const shouldFixTitle = !currentTitle || !hasCjk(currentTitle);
-  const shouldFixEnglishTitle =
-    !currentEnglishTitle || hasCjk(currentEnglishTitle) || currentEnglishTitle === currentTitle;
+  const {
+    shouldFixTitle,
+    shouldFixEnglishTitle,
+  } = needsCategoryAiFix(metadata);
 
   const next = { ...metadata };
   next.i18n = {
@@ -133,11 +162,7 @@ async function completeCategoryMetadata(file: string, metadata: Record<string, a
     return next;
   }
 
-  const ai = createAiClient();
-  if (!ai) {
-    console.log(`No AI provider is configured. Skipping language fixes for ${file}.`);
-    return next;
-  }
+  const ai = assertAiClient(file);
   console.log(`Using ${ai.provider} for category metadata i18n fixes with model ${ai.model}.`);
 
   const current = {
@@ -191,6 +216,7 @@ try {
     }
   }
 } catch (error) {
-  console.warn('AI metadata i18n fixes failed. Skipping optional AI step.');
-  console.warn(error);
+  console.error('AI metadata i18n fixes failed.');
+  console.error(error);
+  process.exit(1);
 }

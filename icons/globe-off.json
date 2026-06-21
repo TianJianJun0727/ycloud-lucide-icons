@@ -42,11 +42,6 @@
         "no connection",
         "network failure",
         "signal off"
-      ],
-      "categories": [
-        "Navigation & Places",
-        "Connectivity",
-        "Devices"
       ]
     }
   }

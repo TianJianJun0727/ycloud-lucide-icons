@@ -27,10 +27,6 @@
         "tick",
         "complete",
         "task"
-      ],
-      "categories": [
-        "Devices",
-        "Notification"
       ]
     }
   }

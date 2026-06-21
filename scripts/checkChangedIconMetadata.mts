@@ -13,6 +13,8 @@ const categoryFiles = (await fs.readdir(categoriesDir)).filter((file) => file.en
 const knownCategories = new Set(categoryFiles.map((file) => path.basename(file, '.json')));
 
 let hasError = false;
+const hasCjk = (value: string) => /[\u3400-\u9fff]/.test(value);
+const isSlugLike = (value: string) => /^[a-z0-9]+(?:[-_][a-z0-9]+)+$/.test(value.trim());
 
 function report(file: string, message: string) {
   console.error(`${file}: ${message}`);
@@ -23,8 +25,43 @@ function isStringArray(value: unknown): value is string[] {
   return Array.isArray(value) && value.every((item) => typeof item === 'string');
 }
 
-function sameArray(left: string[], right: string[]) {
-  return left.length === right.length && left.every((item, index) => item === right[index]);
+function assertChineseText(file: string, field: string, value: unknown) {
+  if (typeof value !== 'string' || value.trim().length === 0 || !hasCjk(value)) {
+    report(file, `\`${field}\` must be Simplified Chinese.`);
+  }
+}
+
+function assertEnglishText(file: string, field: string, value: unknown) {
+  if (typeof value !== 'string' || value.trim().length === 0 || hasCjk(value)) {
+    report(file, `\`${field}\` must be English and must not contain Chinese characters.`);
+    return;
+  }
+
+  if (isSlugLike(value)) {
+    report(file, `\`${field}\` must be natural English, not a kebab-case or snake_case slug.`);
+  }
+}
+
+function assertChineseTags(file: string, field: string, value: unknown) {
+  if (!isStringArray(value) || value.length === 0) {
+    report(file, `\`${field}\` must be a non-empty array of Simplified Chinese tags.`);
+    return;
+  }
+
+  if (value.every((tag) => !hasCjk(tag))) {
+    report(file, `\`${field}\` must include Simplified Chinese tags.`);
+  }
+}
+
+function assertEnglishTags(file: string, field: string, value: unknown) {
+  if (!isStringArray(value) || value.length === 0) {
+    report(file, `\`${field}\` must be a non-empty array of English tags.`);
+    return;
+  }
+
+  if (value.some((tag) => hasCjk(tag))) {
+    report(file, `\`${field}\` must not contain Chinese characters.`);
+  }
 }
 
 for (const file of files) {
@@ -40,34 +77,43 @@ for (const file of files) {
     continue;
   }
 
+  if (file.startsWith('categories/')) {
+    const englishMetadata = (metadata.i18n as Record<string, any> | undefined)?.en;
+
+    assertChineseText(file, 'title', metadata.title);
+    assertEnglishText(file, 'i18n.en.title', englishMetadata?.title);
+
+    continue;
+  }
+
   if (!file.startsWith('icons/')) {
     continue;
   }
 
   const categories = metadata.categories;
-  const englishCategories = (metadata.i18n as Record<string, any> | undefined)?.en?.categories;
+  const englishMetadata = (metadata.i18n as Record<string, any> | undefined)?.en;
 
   if (!isStringArray(categories)) {
     report(file, '`categories` must be an array of category slugs.');
     continue;
   }
 
-  if (!isStringArray(englishCategories)) {
-    report(file, '`i18n.en.categories` must be an array of the same category slugs.');
-    continue;
+  if (englishMetadata && Object.prototype.hasOwnProperty.call(englishMetadata, 'categories')) {
+    report(
+      file,
+      '`i18n.en.categories` is no longer supported; category translations live in categories/*.json.',
+    );
   }
+
+  assertChineseText(file, 'name', metadata.name);
+  assertChineseTags(file, 'tags', metadata.tags);
+  assertEnglishText(file, 'i18n.en.name', englishMetadata?.name);
+  assertEnglishTags(file, 'i18n.en.tags', englishMetadata?.tags);
 
   for (const category of categories) {
     if (!knownCategories.has(category)) {
       report(file, `category '${category}' does not exist in categories/*.json.`);
     }
-  }
-
-  if (!sameArray(categories, englishCategories)) {
-    report(
-      file,
-      '`i18n.en.categories` must be identical to `categories`; both fields store stable category slugs, not translated display names.',
-    );
   }
 }
 

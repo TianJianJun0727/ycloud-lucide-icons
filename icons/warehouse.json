@@ -21,10 +21,6 @@
         "stockroom",
         "logistics",
         "building"
-      ],
-      "categories": [
-        "Buildings",
-        "Navigation & Places"
       ]
     }
   }

@@ -26,10 +26,6 @@
         "voltage",
         "current",
         "charger"
-      ],
-      "categories": [
-        "Devices",
-        "Coding & development"
       ]
     }
   }

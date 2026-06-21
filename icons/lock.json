@@ -16,9 +16,6 @@
         "password",
         "secure",
         "admin"
-      ],
-      "categories": [
-        "Security"
       ]
     }
   }

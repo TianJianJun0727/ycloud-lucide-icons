@@ -13,9 +13,6 @@
       "name": "cloud",
       "tags": [
         "weather"
-      ],
-      "categories": [
-        "Weather"
       ]
     }
   }
