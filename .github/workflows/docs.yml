@@ -8,14 +8,13 @@ on:
       - '.github/actions/setup-pnpm/**'
       - '.github/workflows/docs.yml'
       - 'categories/**'
+      - 'changelogs/releases/**'
       - 'docs/**'
       - 'icons/**'
-      - 'package.json'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
-      - 'scripts/**'
-      - 'tools/build-font/**'
+      - 'scripts/writeChangelog.mts'
   workflow_call:
     inputs:
       ref:
@@ -37,7 +36,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -67,14 +66,13 @@ jobs:
         uses: actions/cache@v5
         with:
           path: docs/.vercel/output/static
-          key: pages-static-${{ runner.os }}-${{ steps.pages-cache-key.outputs.release-tags }}-${{ hashFiles('.github/workflows/docs.yml', 'docs/*.md', 'docs/*.ts', 'docs/*.json', 'docs/en/**', 'docs/guide/**', 'docs/icons/**', 'docs/images/**', 'docs/public/**', 'docs/.vitepress/**/*.ts', 'docs/.vitepress/**/*.vue', 'docs/.vitepress/**/*.css', 'docs/.vitepress/**/*.json', 'docs/.vitepress/**/*.svg', 'docs/scripts/**', 'icons/**', 'categories/**', 'packages/**', 'scripts/**', 'tools/build-font/**', 'package.json', 'docs/package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml') }}
+          key: pages-static-${{ runner.os }}-${{ steps.pages-cache-key.outputs.release-tags }}-${{ hashFiles('docs/*.md', 'docs/*.ts', 'docs/*.json', 'docs/en/**', 'docs/guide/**', 'docs/icons/**', 'docs/images/**', 'docs/public/**', 'docs/.vitepress/**/*.ts', 'docs/.vitepress/**/*.vue', 'docs/.vitepress/**/*.css', 'docs/.vitepress/**/*.json', 'docs/.vitepress/**/*.svg', 'docs/scripts/**', 'icons/**', 'categories/**', 'changelogs/releases/**', 'packages/**', 'packages/icons-static/font/**', 'scripts/writeChangelog.mts', 'docs/package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml') }}
 
       - name: Build docs
         if: steps.pages-build-cache.outputs.cache-hit != 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           NODE_OPTIONS: --max-old-space-size=8192
-          YCLOUD_AI_CHANGELOG: '1'
         run: pnpm docs:build:github-pages
 
       - name: Reuse GitHub Pages build output
