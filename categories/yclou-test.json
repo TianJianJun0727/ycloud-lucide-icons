@@ -1,0 +1,10 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "YCloud 测试",
+  "icon": "test",
+  "i18n": {
+    "en": {
+      "title": "YCloud 测试"
+    }
+  }
+}
