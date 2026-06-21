@@ -52,8 +52,6 @@ jobs:
         with:
           path: docs/.vercel/output/static
           key: pages-static-${{ runner.os }}-${{ steps.pages-cache-key.outputs.release-tags }}-${{ hashFiles('.github/workflows/docs.yml', 'docs/*.md', 'docs/*.ts', 'docs/*.json', 'docs/en/**', 'docs/guide/**', 'docs/icons/**', 'docs/images/**', 'docs/public/*', 'docs/public/framework-logos/**', 'docs/public/package-logos/**', 'docs/.vitepress/**/*.ts', 'docs/.vitepress/**/*.vue', 'docs/.vitepress/**/*.css', 'docs/.vitepress/**/*.json', 'docs/.vitepress/**/*.svg', 'docs/scripts/**', 'icons/**', 'categories/**', 'packages/**', 'scripts/**', 'tools/build-font/**', 'package.json', 'docs/package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml') }}
-          restore-keys: |
-            pages-static-${{ runner.os }}-
 
       - name: Build docs
         if: steps.pages-build-cache.outputs.cache-hit != 'true'
