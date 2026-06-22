@@ -1,21 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "3D建模软件的缩放工具",
-    "调整三维空间中的物体尺寸",
-    "3D设计或CAD界面"
-  ],
+  "use-cases": ["3D建模软件的缩放工具", "调整三维空间中的物体尺寸", "3D设计或CAD界面"],
   "name": "比例尺三维",
-  "tags": [
-    "3D缩放",
-    "三维变换",
-    "模型缩放",
-    "尺寸调整",
-    "轴缩放"
-  ],
-  "categories": [
-    "design"
-  ],
+  "tags": ["3D缩放", "三维变换", "模型缩放", "尺寸调整", "轴缩放"],
+  "categories": ["design"],
   "aliases": [
     {
       "name": "scale-3-d",
@@ -27,18 +15,8 @@
   "i18n": {
     "en": {
       "name": "scale 3d",
-      "tags": [
-        "3d scale",
-        "3d transform",
-        "model scaling",
-        "resize 3d",
-        "axis scale"
-      ],
-      "use-cases": [
-        "3D modeling software scaling tool",
-        "Adjusting object size in 3D space",
-        "3D design or CAD interface"
-      ]
+      "tags": ["3d scale", "3d transform", "model scaling", "resize 3d", "axis scale"],
+      "use-cases": ["3D modeling software scaling tool", "Adjusting object size in 3D space", "3D design or CAD interface"]
     }
   }
 }

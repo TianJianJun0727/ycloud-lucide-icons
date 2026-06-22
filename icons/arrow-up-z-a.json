@@ -1,23 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "字母排序Z-A",
-    "反向字母顺序",
-    "文本降序排序"
-  ],
+  "use-cases": ["字母排序Z-A", "反向字母顺序", "文本降序排序"],
   "name": "箭头上ZA",
-  "tags": [
-    "排序",
-    "字母顺序",
-    "降序",
-    "反向",
-    "文本排序"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "arrows"
-  ],
+  "tags": ["排序", "字母顺序", "降序", "反向", "文本排序"],
+  "categories": ["text", "layout", "arrows"],
   "aliases": [
     {
       "name": "arrow-up-za",
@@ -29,18 +15,8 @@
   "i18n": {
     "en": {
       "name": "arrow up Z A",
-      "tags": [
-        "sort",
-        "alphabetical",
-        "descending",
-        "reverse",
-        "text sorting"
-      ],
-      "use-cases": [
-        "Alphabetical sort Z-A",
-        "Reverse alphabetical order",
-        "Text descending sort"
-      ]
+      "tags": ["sort", "alphabetical", "descending", "reverse", "text sorting"],
+      "use-cases": ["Alphabetical sort Z-A", "Reverse alphabetical order", "Text descending sort"]
     }
   }
 }

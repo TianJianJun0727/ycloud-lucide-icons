@@ -1,27 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "仪表板小部件选择确认",
-    "表单多选完成",
-    "布局模板批准",
-    "数据网格项目选中状态"
-  ],
+  "use-cases": ["仪表板小部件选择确认", "表单多选完成", "布局模板批准", "数据网格项目选中状态"],
   "name": "网格2x2勾选",
-  "tags": [
-    "网格",
-    "表格",
-    "选中",
-    "确认",
-    "布局",
-    "区块",
-    "数据",
-    "完成"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "math"
-  ],
+  "tags": ["网格", "表格", "选中", "确认", "布局", "区块", "数据", "完成"],
+  "categories": ["text", "layout", "math"],
   "aliases": [
     {
       "name": "grid-2-x-2-check",
@@ -33,22 +15,8 @@
   "i18n": {
     "en": {
       "name": "grid 2x2 check",
-      "tags": [
-        "grid",
-        "table",
-        "selected",
-        "confirm",
-        "layout",
-        "block",
-        "data",
-        "completed"
-      ],
-      "use-cases": [
-        "Dashboard widget selection confirmation",
-        "Form multi-select completion",
-        "Layout template approval",
-        "Data grid item checked state"
-      ]
+      "tags": ["grid", "table", "selected", "confirm", "layout", "block", "data", "completed"],
+      "use-cases": ["Dashboard widget selection confirmation", "Form multi-select completion", "Layout template approval", "Data grid item checked state"]
     }
   }
 }

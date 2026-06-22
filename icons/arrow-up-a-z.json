@@ -1,24 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "从A到Z排序列表",
-    "字母顺序按钮",
-    "文本列排序"
-  ],
+  "use-cases": ["从A到Z排序列表", "字母顺序按钮", "文本列排序"],
   "name": "箭头上AZ",
-  "tags": [
-    "排序",
-    "升序",
-    "字母排序",
-    "降序",
-    "筛选",
-    "文字"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "arrows"
-  ],
+  "tags": ["排序", "升序", "字母排序", "降序", "筛选", "文字"],
+  "categories": ["text", "layout", "arrows"],
   "aliases": [
     {
       "name": "arrow-up-az",
@@ -30,19 +15,8 @@
   "i18n": {
     "en": {
       "name": "arrow up A Z",
-      "tags": [
-        "sort",
-        "ascending",
-        "alphabetical sort",
-        "descending",
-        "filter",
-        "text"
-      ],
-      "use-cases": [
-        "Sort list A to Z",
-        "Alphabetical order button",
-        "Text column sorting"
-      ]
+      "tags": ["sort", "ascending", "alphabetical sort", "descending", "filter", "text"],
+      "use-cases": ["Sort list A to Z", "Alphabetical order button", "Text column sorting"]
     }
   }
 }

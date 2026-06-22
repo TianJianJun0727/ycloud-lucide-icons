@@ -1,25 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "数值数据降序排序",
-    "列表从高到低筛选",
-    "设置较低优先级"
-  ],
+  "use-cases": ["数值数据降序排序", "列表从高到低筛选", "设置较低优先级"],
   "name": "箭头下01",
-  "tags": [
-    "排序",
-    "降序",
-    "数值",
-    "数据",
-    "筛选",
-    "列表",
-    "优先级"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "arrows"
-  ],
+  "tags": ["排序", "降序", "数值", "数据", "筛选", "列表", "优先级"],
+  "categories": ["text", "layout", "arrows"],
   "aliases": [
     {
       "name": "arrow-down-01",
@@ -31,20 +15,8 @@
   "i18n": {
     "en": {
       "name": "arrow down 0 1",
-      "tags": [
-        "sort",
-        "descending",
-        "numerical",
-        "data",
-        "filter",
-        "list",
-        "priority"
-      ],
-      "use-cases": [
-        "Sort numerical data descending",
-        "Filter list from high to low",
-        "Set lower priority"
-      ]
+      "tags": ["sort", "descending", "numerical", "data", "filter", "list", "priority"],
+      "use-cases": ["Sort numerical data descending", "Filter list from high to low", "Set lower priority"]
     }
   }
 }

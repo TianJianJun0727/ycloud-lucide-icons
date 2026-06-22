@@ -1,23 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "3D模型文件图标",
-    "坐标系参考",
-    "设计软件文件类型"
-  ],
+  "use-cases": ["3D模型文件图标", "坐标系参考", "设计软件文件类型"],
   "name": "文件轴三维",
-  "tags": [
-    "3D文件",
-    "坐标轴",
-    "模型",
-    "三维设计",
-    "轴",
-    "空间坐标"
-  ],
-  "categories": [
-    "design",
-    "files"
-  ],
+  "tags": ["3D文件", "坐标轴", "模型", "三维设计", "轴", "空间坐标"],
+  "categories": ["design", "files"],
   "aliases": [
     {
       "name": "file-axis-3-d",
@@ -29,19 +15,8 @@
   "i18n": {
     "en": {
       "name": "file axis 3d",
-      "tags": [
-        "3D file",
-        "coordinate axis",
-        "model",
-        "3D design",
-        "axis",
-        "spatial coordinates"
-      ],
-      "use-cases": [
-        "3D model file icon",
-        "Coordinate system reference",
-        "Design software file type"
-      ]
+      "tags": ["3D file", "coordinate axis", "model", "3D design", "axis", "spatial coordinates"],
+      "use-cases": ["3D model file icon", "Coordinate system reference", "Design software file type"]
     }
   }
 }

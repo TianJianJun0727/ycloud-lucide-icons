@@ -1,23 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "3D建模工具",
-    "对象操控",
-    "空间变换"
-  ],
+  "use-cases": ["3D建模工具", "对象操控", "空间变换"],
   "name": "移动三维",
-  "tags": [
-    "3D移动",
-    "三维",
-    "变换",
-    "坐标轴",
-    "操控",
-    "平移",
-    "旋转"
-  ],
-  "categories": [
-    "design"
-  ],
+  "tags": ["3D移动", "三维", "变换", "坐标轴", "操控", "平移", "旋转"],
+  "categories": ["design"],
   "aliases": [
     {
       "name": "move-3-d",
@@ -29,20 +15,8 @@
   "i18n": {
     "en": {
       "name": "move 3d",
-      "tags": [
-        "3d-move",
-        "three-dimensional",
-        "transform",
-        "axis",
-        "manipulate",
-        "translate",
-        "rotate"
-      ],
-      "use-cases": [
-        "3D modeling tools",
-        "Object manipulation",
-        "Spatial transformations"
-      ]
+      "tags": ["3d-move", "three-dimensional", "transform", "axis", "manipulate", "translate", "rotate"],
+      "use-cases": ["3D modeling tools", "Object manipulation", "Spatial transformations"]
     }
   }
 }

@@ -1,25 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "文本按字母顺序Z到A排序",
-    "列表反向字母顺序筛选",
-    "内容降序整理"
-  ],
+  "use-cases": ["文本按字母顺序Z到A排序", "列表反向字母顺序筛选", "内容降序整理"],
   "name": "箭头下AZ",
-  "tags": [
-    "排序",
-    "降序",
-    "字母顺序",
-    "文本",
-    "筛选",
-    "列表",
-    "从A到Z"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "arrows"
-  ],
+  "tags": ["排序", "降序", "字母顺序", "文本", "筛选", "列表", "从A到Z"],
+  "categories": ["text", "layout", "arrows"],
   "aliases": [
     {
       "name": "arrow-down-az",
@@ -31,20 +15,8 @@
   "i18n": {
     "en": {
       "name": "arrow down A Z",
-      "tags": [
-        "sort",
-        "descending",
-        "alphabetical",
-        "text",
-        "filter",
-        "list",
-        "A to Z"
-      ],
-      "use-cases": [
-        "Sort text alphabetically Z to A",
-        "Filter list in reverse alphabetical order",
-        "Organize content descending"
-      ]
+      "tags": ["sort", "descending", "alphabetical", "text", "filter", "list", "A to Z"],
+      "use-cases": ["Sort text alphabetically Z to A", "Filter list in reverse alphabetical order", "Organize content descending"]
     }
   }
 }

@@ -1,27 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "向仪表板添加新小部件",
-    "创建新的网格布局",
-    "插入表格行/列",
-    "图库添加照片按钮"
-  ],
+  "use-cases": ["向仪表板添加新小部件", "创建新的网格布局", "插入表格行/列", "图库添加照片按钮"],
   "name": "网格2x2加号",
-  "tags": [
-    "网格",
-    "添加",
-    "新建",
-    "创建",
-    "布局",
-    "表格",
-    "区块",
-    "插入"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "math"
-  ],
+  "tags": ["网格", "添加", "新建", "创建", "布局", "表格", "区块", "插入"],
+  "categories": ["text", "layout", "math"],
   "aliases": [
     {
       "name": "grid-2-x-2-plus",
@@ -33,22 +15,8 @@
   "i18n": {
     "en": {
       "name": "grid 2x2 plus",
-      "tags": [
-        "grid",
-        "add",
-        "new",
-        "create",
-        "layout",
-        "table",
-        "block",
-        "insert"
-      ],
-      "use-cases": [
-        "Add new widget to dashboard",
-        "Create a new grid layout",
-        "Insert table row/column",
-        "Gallery add photo button"
-      ]
+      "tags": ["grid", "add", "new", "create", "layout", "table", "block", "insert"],
+      "use-cases": ["Add new widget to dashboard", "Create a new grid layout", "Insert table row/column", "Gallery add photo button"]
     }
   }
 }

@@ -1,47 +1,14 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "数据表格布局选项",
-    "照片库网格视图",
-    "包含更多小部件的仪表板",
-    "产品网格展示"
-  ],
+  "use-cases": ["数据表格布局选项", "照片库网格视图", "包含更多小部件的仪表板", "产品网格展示"],
   "name": "网格3x2",
-  "tags": [
-    "网格",
-    "布局",
-    "表格",
-    "区块",
-    "排列",
-    "设计",
-    "视图",
-    "数据"
-  ],
-  "categories": [
-    "text",
-    "math",
-    "layout",
-    "design"
-  ],
+  "tags": ["网格", "布局", "表格", "区块", "排列", "设计", "视图", "数据"],
+  "categories": ["text", "math", "layout", "design"],
   "i18n": {
     "en": {
       "name": "grid 3x2",
-      "tags": [
-        "grid",
-        "layout",
-        "table",
-        "block",
-        "arrange",
-        "design",
-        "view",
-        "data"
-      ],
-      "use-cases": [
-        "Data table layout option",
-        "Photo gallery grid view",
-        "Dashboard with more widgets",
-        "Product grid display"
-      ]
+      "tags": ["grid", "layout", "table", "block", "arrange", "design", "view", "data"],
+      "use-cases": ["Data table layout option", "Photo gallery grid view", "Dashboard with more widgets", "Product grid display"]
     }
   },
   "aliases": [

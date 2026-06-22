@@ -1,24 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "数据表格布局",
-    "仪表板网格设计",
-    "内容管理系统"
-  ],
+  "use-cases": ["数据表格布局", "仪表板网格设计", "内容管理系统"],
   "name": "网格3x3",
-  "tags": [
-    "网格",
-    "布局",
-    "表格",
-    "行列",
-    "设计",
-    "排版"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "design"
-  ],
+  "tags": ["网格", "布局", "表格", "行列", "设计", "排版"],
+  "categories": ["text", "layout", "design"],
   "aliases": [
     {
       "name": "grid",
@@ -36,19 +21,8 @@
   "i18n": {
     "en": {
       "name": "grid 3x3",
-      "tags": [
-        "grid",
-        "layout",
-        "table",
-        "rows",
-        "columns",
-        "design"
-      ],
-      "use-cases": [
-        "Data table layout",
-        "Dashboard grid design",
-        "Content management system"
-      ]
+      "tags": ["grid", "layout", "table", "rows", "columns", "design"],
+      "use-cases": ["Data table layout", "Dashboard grid design", "Content management system"]
     }
   }
 }

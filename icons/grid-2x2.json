@@ -1,28 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [
-    "仪表板布局选择器",
-    "图库缩略图视图",
-    "表单设计器网格工具",
-    "用户界面组件排列"
-  ],
+  "use-cases": ["仪表板布局选择器", "图库缩略图视图", "表单设计器网格工具", "用户界面组件排列"],
   "name": "网格2x2",
-  "tags": [
-    "网格",
-    "布局",
-    "表格",
-    "区块",
-    "排列",
-    "设计",
-    "视图",
-    "窗口"
-  ],
-  "categories": [
-    "text",
-    "layout",
-    "design",
-    "math"
-  ],
+  "tags": ["网格", "布局", "表格", "区块", "排列", "设计", "视图", "窗口"],
+  "categories": ["text", "layout", "design", "math"],
   "aliases": [
     {
       "name": "grid-2-x-2",
@@ -34,22 +15,8 @@
   "i18n": {
     "en": {
       "name": "grid 2x2",
-      "tags": [
-        "grid",
-        "layout",
-        "table",
-        "block",
-        "arrange",
-        "design",
-        "view",
-        "window"
-      ],
-      "use-cases": [
-        "Dashboard layout selector",
-        "Gallery thumbnail view",
-        "Form designer grid tool",
-        "UI component arrangement"
-      ]
+      "tags": ["grid", "layout", "table", "block", "arrange", "design", "view", "window"],
+      "use-cases": ["Dashboard layout selector", "Gallery thumbnail view", "Form designer grid tool", "UI component arrangement"]
     }
   }
 }
