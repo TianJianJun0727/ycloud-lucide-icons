@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+语言：中文 | [English](./README.en.md)
+</p>
+
+<p align="center">
 导出 YCloud Icons 图标数据的辅助库。
 </p>
 

@@ -1,5 +1,7 @@
 # YCloud Icons
 
+Language: [中文](./README.md) | English
+
 YCloud Icons is a multi-framework SVG icon component library for YCloud products, admin systems, and design engineering workflows.
 
 This project is developed from [Lucide](https://github.com/lucide-icons/lucide). It keeps the upstream ISC license and required third-party notices, while adapting the brand, Chinese-first source data, package names, documentation, publishing flow, and icon maintenance model for YCloud.

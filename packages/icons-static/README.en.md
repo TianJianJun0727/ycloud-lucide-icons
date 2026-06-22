@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+Language: [中文](./README.md) | English
+</p>
+
+<p align="center">
 YCloud Icons static asset package for web applications.
 </p>
 

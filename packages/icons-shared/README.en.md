@@ -1,5 +1,7 @@
 # @ycloud-web/shared
 
+Language: [中文](./README.md) | English
+
 Internal shared utilities for YCloud Icons builds and code generation.
 
 ## Version requirements

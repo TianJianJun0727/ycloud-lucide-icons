@@ -1,5 +1,7 @@
 # YCloud Icons
 
+语言：中文 | [English](./README.en.md)
+
 YCloud Icons 是 YCloud 的多框架 SVG 图标组件库，面向产品前端、后台系统和设计工程化场景。
 
 本项目基于 [Lucide](https://github.com/lucide-icons/lucide) 二次开发，保留上游 ISC 许可证与必要的第三方授权说明，并在此基础上调整了 YCloud 品牌、中文文档、包命名、多框架发布和图标维护流程。

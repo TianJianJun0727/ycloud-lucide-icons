@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+语言：中文 | [English](./README.en.md)
+</p>
+
+<p align="center">
 适用于 React Native 应用的 YCloud Icons 图标库。
 </p>
 

@@ -1,5 +1,7 @@
 # @ycloud-web/shared
 
+语言：中文 | [English](./README.en.md)
+
 YCloud 内部共享工具集合。
 
 ## 版本要求
