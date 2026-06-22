@@ -1,18 +1,14 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
-  "name": "",
-  "tags": [],
-  "categories": [
-    "security"
-  ],
+  "use-cases": ["定义安全边界框", "标记内容区域", "设置UI容器", "突出显示受保护范围"],
+  "name": "矩形",
+  "tags": ["形状", "安全区", "边框", "区域"],
+  "categories": ["security"],
   "i18n": {
     "en": {
       "name": "rectangle",
-      "tags": [
-        "shape"
-      ],
-      "use-cases": []
+      "tags": ["shape", "bounding box", "border", "area", "security"],
+      "use-cases": ["Define security bounding box", "Mark content area", "Set UI container", "Highlight protected scope"]
     }
   }
 }
