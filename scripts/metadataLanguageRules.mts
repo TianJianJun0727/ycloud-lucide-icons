@@ -1,4 +1,6 @@
-import { allowedNonChineseTermSet } from './data/allowedNonChineseTerms.mts';
+import allowedNonChineseTerms from './data/allowedNonChineseTerms.json' with { type: 'json' };
+
+const allowedNonChineseTermSet = new Set<string>(allowedNonChineseTerms);
 
 export const hasCjk = (value: string) => /[\u3400-\u9fff]/.test(value);
 

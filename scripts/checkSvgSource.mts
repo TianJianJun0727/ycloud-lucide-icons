@@ -3,6 +3,7 @@
  *
  * 输入：可通过命令行传入 SVG 文件列表；未传入时全量读取 `icons/*.svg`。
  * 检查内容：
+ * - 文件名必须是小写字母/数字组成的 kebab-case，例如 `a-arrow-down.svg`。
  * - 根节点必须是 `<svg>`。
  * - 根节点属性必须与 `tools/build-icons/render/default-attrs.json` 完全一致。
  * - 任意节点都不能包含 `style` 或 `class` 属性，避免设计工具导出的样式污染组件。
@@ -14,22 +15,25 @@
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseSync, type INode } from 'svgson';
 import DEFAULT_ATTRS from '../tools/build-icons/render/default-attrs.json' with { type: 'json' };
 
-const svgFiles = process.argv.slice(2);
-const files = svgFiles.length
-  ? svgFiles
-  : (await fs.readdir('icons')).filter((file) => file.endsWith('.svg')).map((file) => path.join('icons', file));
+const SVG_FILENAME_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*\.svg$/;
 
-let hasError = false;
+export function validateSvgFileName(file: string) {
+  const fileName = path.basename(file);
 
-function report(file: string, message: string) {
-  console.error(`${file}: ${message}`);
-  hasError = true;
+  if (!SVG_FILENAME_PATTERN.test(fileName)) {
+    return [
+      `SVG filename must be lowercase kebab-case with only letters and numbers, for example "a-arrow-down.svg".`,
+    ];
+  }
+
+  return [];
 }
 
-function checkDuplicatedAttributes(file: string, svg: string) {
+function checkDuplicatedAttributes(errors: string[], svg: string) {
   for (const tag of svg.matchAll(/<([a-zA-Z][\w:-]*)([^<>]*?)\/?>/g)) {
     const tagName = tag[1];
     const attributes = tag[2];
@@ -38,32 +42,32 @@ function checkDuplicatedAttributes(file: string, svg: string) {
     for (const attribute of attributes.matchAll(/\s([^\s"'=<>/]+)\s*=/g)) {
       const name = attribute[1];
       if (seen.has(name)) {
-        report(file, `<${tagName}> has duplicated "${name}" attribute.`);
+        errors.push(`<${tagName}> has duplicated "${name}" attribute.`);
       }
       seen.add(name);
     }
   }
 }
 
-function walk(file: string, node: INode) {
+function walk(errors: string[], node: INode) {
   const attributes = node.attributes ?? {};
 
   for (const attr of ['style', 'class']) {
     if (attr in attributes) {
-      report(file, `<${node.name}> must not use "${attr}" attributes.`);
+      errors.push(`<${node.name}> must not use "${attr}" attributes.`);
     }
   }
 
   for (const child of node.children ?? []) {
     if (typeof child !== 'string') {
-      walk(file, child);
+      walk(errors, child);
     }
   }
 }
 
-function checkRootAttributes(file: string, root: INode) {
+function checkRootAttributes(errors: string[], root: INode) {
   if (root.name !== 'svg') {
-    report(file, 'root element must be <svg>.');
+    errors.push('root element must be <svg>.');
     return;
   }
 
@@ -72,24 +76,62 @@ function checkRootAttributes(file: string, root: INode) {
     const expected = String(value);
 
     if (actual !== expected) {
-      report(file, `<svg> "${attr}" must be "${expected}", got "${actual ?? 'missing'}".`);
+      errors.push(`<svg> "${attr}" must be "${expected}", got "${actual ?? 'missing'}".`);
     }
   }
 }
 
-for (const file of files) {
-  const svg = await fs.readFile(file, 'utf-8');
-  checkDuplicatedAttributes(file, svg);
+export function validateSvgSource(svg: string) {
+  const errors: string[] = [];
+  checkDuplicatedAttributes(errors, svg);
 
   try {
     const root = parseSync(svg);
-    checkRootAttributes(file, root);
-    walk(file, root);
+    checkRootAttributes(errors, root);
+    walk(errors, root);
   } catch (error) {
-    report(file, error instanceof Error ? error.message : String(error));
+    errors.push(error instanceof Error ? error.message : String(error));
+  }
+
+  return errors;
+}
+
+export async function validateSvgSourceFile(file: string) {
+  const fileNameErrors = validateSvgFileName(file);
+
+  try {
+    return [...fileNameErrors, ...validateSvgSource(await fs.readFile(file, 'utf-8'))];
+  } catch (error) {
+    return [
+      ...fileNameErrors,
+      `cannot read SVG: ${error instanceof Error ? error.message : String(error)}`,
+    ];
   }
 }
 
-if (hasError) {
-  process.exit(1);
+async function main() {
+  const svgFiles = process.argv.slice(2);
+  const files = svgFiles.length
+    ? svgFiles
+    : (await fs.readdir('icons'))
+        .filter((file) => file.endsWith('.svg'))
+        .map((file) => path.join('icons', file));
+  let hasError = false;
+
+  for (const file of files) {
+    const errors = await validateSvgSourceFile(file);
+
+    for (const message of errors) {
+      console.error(`${file}: ${message}`);
+      hasError = true;
+    }
+  }
+
+  if (hasError) {
+    process.exit(1);
+  }
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  await main();
 }

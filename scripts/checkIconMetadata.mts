@@ -21,6 +21,7 @@
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import {
   hasCjk,
   hasUnreviewedNonChineseTerm,
@@ -29,70 +30,52 @@ import {
   isValidChineseSideText,
 } from './metadataLanguageRules.mts';
 
-const files = process.argv
-  .slice(2)
-  .filter((file) => file.startsWith('icons/') && file.endsWith('.json'));
-
-if (files.length === 0) {
-  console.log('No changed icon metadata files to validate.');
-  process.exit(0);
+export async function loadKnownCategoryNames(categoriesDir = path.resolve('categories')) {
+  const categoryFiles = (await fs.readdir(categoriesDir)).filter((file) => file.endsWith('.json'));
+  return new Set(categoryFiles.map((file) => path.basename(file, '.json')));
 }
 
-const categoriesDir = path.resolve('categories');
-const categoryFiles = (await fs.readdir(categoriesDir)).filter((file) => file.endsWith('.json'));
-const knownCategories = new Set(categoryFiles.map((file) => path.basename(file, '.json')));
-
-let hasError = false;
-
-function report(file: string, message: string) {
-  console.error(`${file}: ${message}`);
-  hasError = true;
-}
-
-function assertUniqueArray(file: string, field: string, value: unknown) {
+function assertUniqueArray(errors: string[], field: string, value: unknown) {
   if (!isStringArray(value)) {
     return;
   }
 
   const duplicates = value.filter((item, index, list) => list.indexOf(item) !== index);
   if (duplicates.length > 0) {
-    report(
-      file,
+    errors.push(
       `\`${field}\` must not contain duplicate values: ${[...new Set(duplicates)].join(', ')}.`,
     );
   }
 }
 
-function assertChineseText(file: string, field: string, value: unknown) {
+function assertChineseText(errors: string[], field: string, value: unknown) {
   if (typeof value !== 'string' || value.trim().length === 0 || !isValidChineseSideText(value)) {
-    report(
-      file,
+    errors.push(
       `\`${field}\` must be Simplified Chinese or a reviewed English term for Chinese search.`,
     );
   }
 }
 
-function assertEnglishText(file: string, field: string, value: unknown) {
+function assertEnglishText(errors: string[], field: string, value: unknown) {
   if (typeof value !== 'string' || value.trim().length === 0 || hasCjk(value)) {
-    report(file, `\`${field}\` must be English and must not contain Chinese characters.`);
+    errors.push(`\`${field}\` must be English and must not contain Chinese characters.`);
     return;
   }
 
   if (isSlugLike(value)) {
-    report(file, `\`${field}\` must be natural English, not a kebab-case or snake_case slug.`);
+    errors.push(`\`${field}\` must be natural English, not a kebab-case or snake_case slug.`);
   }
 }
 
-function assertChineseTags(file: string, field: string, value: unknown) {
+function assertChineseTags(errors: string[], field: string, value: unknown) {
   if (!isStringArray(value) || value.length === 0) {
-    report(file, `\`${field}\` must be a non-empty array of Simplified Chinese tags.`);
+    errors.push(`\`${field}\` must be a non-empty array of Simplified Chinese tags.`);
     return;
   }
 
   const invalidTags = value.filter((tag) => hasUnreviewedNonChineseTerm(tag));
   if (invalidTags.length > 0) {
-    report(
-      file,
+    errors.push(
       `\`${field}\` contains English tags that need AI review before they can be kept in Chinese-side metadata: ${invalidTags.join(
         ', ',
       )}.`,
@@ -100,43 +83,42 @@ function assertChineseTags(file: string, field: string, value: unknown) {
   }
 }
 
-function assertEnglishTags(file: string, field: string, value: unknown) {
+function assertEnglishTags(errors: string[], field: string, value: unknown) {
   if (!isStringArray(value) || value.length === 0) {
-    report(file, `\`${field}\` must be a non-empty array of English tags.`);
+    errors.push(`\`${field}\` must be a non-empty array of English tags.`);
     return;
   }
 
   if (value.some((tag) => hasCjk(tag))) {
-    report(file, `\`${field}\` must not contain Chinese characters.`);
+    errors.push(`\`${field}\` must not contain Chinese characters.`);
   }
 }
 
-function assertChineseUseCases(file: string, field: string, value: unknown) {
+function assertChineseUseCases(errors: string[], field: string, value: unknown) {
   if (!isStringArray(value)) {
-    report(file, `\`${field}\` must be an array of Simplified Chinese use cases.`);
+    errors.push(`\`${field}\` must be an array of Simplified Chinese use cases.`);
     return;
   }
 
   if (value.some((useCase) => useCase.trim().length > 0 && !isValidChineseSideText(useCase))) {
-    report(
-      file,
+    errors.push(
       `\`${field}\` must contain Simplified Chinese use cases or reviewed English terms.`,
     );
   }
 }
 
-function assertEnglishUseCases(file: string, field: string, value: unknown) {
+function assertEnglishUseCases(errors: string[], field: string, value: unknown) {
   if (!isStringArray(value)) {
-    report(file, `\`${field}\` must be an array of English use cases.`);
+    errors.push(`\`${field}\` must be an array of English use cases.`);
     return;
   }
 
   if (value.some((useCase) => hasCjk(useCase))) {
-    report(file, `\`${field}\` must not contain Chinese characters.`);
+    errors.push(`\`${field}\` must not contain Chinese characters.`);
   }
 }
 
-function assertBilingualUseCases(file: string, chineseValue: unknown, englishValue: unknown) {
+function assertBilingualUseCases(errors: string[], chineseValue: unknown, englishValue: unknown) {
   if (!isStringArray(chineseValue) || !isStringArray(englishValue)) {
     return;
   }
@@ -146,71 +128,105 @@ function assertBilingualUseCases(file: string, chineseValue: unknown, englishVal
   }
 
   if (chineseValue.length === 0) {
-    report(
-      file,
+    errors.push(
       '`use-cases` is empty but `i18n.en.use-cases` has values; add the matching Simplified Chinese translations.',
     );
     return;
   }
 
   if (englishValue.length === 0) {
-    report(
-      file,
+    errors.push(
       '`i18n.en.use-cases` is empty but `use-cases` has values; add the matching English translations.',
     );
     return;
   }
 
   if (chineseValue.length !== englishValue.length) {
-    report(file, '`use-cases` and `i18n.en.use-cases` must have the same length and order.');
+    errors.push('`use-cases` and `i18n.en.use-cases` must have the same length and order.');
   }
 }
 
-for (const file of files) {
-  let metadata: Record<string, unknown>;
-  try {
-    metadata = JSON.parse(await fs.readFile(file, 'utf-8')) as Record<string, unknown>;
-  } catch (error) {
-    report(file, `cannot parse JSON: ${error instanceof Error ? error.message : String(error)}`);
-    continue;
-  }
-
+export function validateIconMetadata(
+  metadata: Record<string, unknown>,
+  knownCategories: ReadonlySet<string>,
+) {
+  const errors: string[] = [];
   const categories = metadata.categories;
   const englishMetadata = (metadata.i18n as Record<string, any> | undefined)?.en;
 
   if (!isStringArray(categories)) {
-    report(file, '`categories` must be an array of category slugs.');
-    continue;
+    errors.push('`categories` must be an array of category slugs.');
+    return errors;
   }
 
   if (englishMetadata && Object.prototype.hasOwnProperty.call(englishMetadata, 'categories')) {
-    report(
-      file,
+    errors.push(
       '`i18n.en.categories` is no longer supported; category translations live in categories/*.json.',
     );
   }
 
-  assertChineseText(file, 'name', metadata.name);
-  assertChineseTags(file, 'tags', metadata.tags);
-  assertUniqueArray(file, 'tags', metadata.tags);
-  assertChineseUseCases(file, 'use-cases', metadata['use-cases']);
-  assertEnglishText(file, 'i18n.en.name', englishMetadata?.name);
-  assertEnglishTags(file, 'i18n.en.tags', englishMetadata?.tags);
-  assertUniqueArray(file, 'i18n.en.tags', englishMetadata?.tags);
-  assertEnglishUseCases(file, 'i18n.en.use-cases', englishMetadata?.['use-cases']);
-  assertUniqueArray(file, 'categories', categories);
+  assertChineseText(errors, 'name', metadata.name);
+  assertChineseTags(errors, 'tags', metadata.tags);
+  assertUniqueArray(errors, 'tags', metadata.tags);
+  assertChineseUseCases(errors, 'use-cases', metadata['use-cases']);
+  assertEnglishText(errors, 'i18n.en.name', englishMetadata?.name);
+  assertEnglishTags(errors, 'i18n.en.tags', englishMetadata?.tags);
+  assertUniqueArray(errors, 'i18n.en.tags', englishMetadata?.tags);
+  assertEnglishUseCases(errors, 'i18n.en.use-cases', englishMetadata?.['use-cases']);
+  assertUniqueArray(errors, 'categories', categories);
 
-  assertBilingualUseCases(file, metadata['use-cases'], englishMetadata?.['use-cases']);
+  assertBilingualUseCases(errors, metadata['use-cases'], englishMetadata?.['use-cases']);
 
   for (const category of categories) {
     if (!knownCategories.has(category)) {
-      report(file, `category '${category}' does not exist in categories/*.json.`);
+      errors.push(`category '${category}' does not exist in categories/*.json.`);
     }
+  }
+
+  return errors;
+}
+
+export async function validateIconMetadataFile(
+  file: string,
+  knownCategories?: ReadonlySet<string>,
+) {
+  try {
+    const metadata = JSON.parse(await fs.readFile(file, 'utf-8')) as Record<string, unknown>;
+    return validateIconMetadata(metadata, knownCategories ?? (await loadKnownCategoryNames()));
+  } catch (error) {
+    return [`cannot parse JSON: ${error instanceof Error ? error.message : String(error)}`];
   }
 }
 
-if (hasError) {
-  process.exit(1);
+async function main() {
+  const files = process.argv
+    .slice(2)
+    .filter((file) => file.startsWith('icons/') && file.endsWith('.json'));
+
+  if (files.length === 0) {
+    console.log('No changed icon metadata files to validate.');
+    return;
+  }
+
+  const knownCategories = await loadKnownCategoryNames();
+  let hasError = false;
+
+  for (const file of files) {
+    const errors = await validateIconMetadataFile(file, knownCategories);
+
+    for (const message of errors) {
+      console.error(`${file}: ${message}`);
+      hasError = true;
+    }
+  }
+
+  if (hasError) {
+    process.exit(1);
+  }
+
+  console.log('Changed icon metadata files are valid.');
 }
 
-console.log('Changed icon metadata files are valid.');
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  await main();
+}

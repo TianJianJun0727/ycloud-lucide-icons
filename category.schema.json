@@ -19,10 +19,12 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "i18n": {
       "type": "object",
@@ -35,10 +37,12 @@
           "required": ["title"],
           "properties": {
             "title": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             },
             "description": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
           }
         }

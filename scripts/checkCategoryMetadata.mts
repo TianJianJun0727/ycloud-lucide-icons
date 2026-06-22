@@ -11,61 +11,75 @@
  * 调用时机：PR 中分类源文件经过 AI 元数据补全和格式化后，对本次变更 JSON 做最后一道增量校验。
  */
 import fs from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 import { hasCjk, isSlugLike, isValidChineseSideText } from './metadataLanguageRules.mts';
 
-const files = process.argv
-  .slice(2)
-  .filter((file) => file.startsWith('categories/') && file.endsWith('.json'));
-
-if (files.length === 0) {
-  console.log('No changed category metadata files to validate.');
-  process.exit(0);
-}
-
-let hasError = false;
-
-function report(file: string, message: string) {
-  console.error(`${file}: ${message}`);
-  hasError = true;
-}
-
-function assertChineseText(file: string, field: string, value: unknown) {
+function assertChineseText(errors: string[], field: string, value: unknown) {
   if (typeof value !== 'string' || value.trim().length === 0 || !isValidChineseSideText(value)) {
-    report(
-      file,
+    errors.push(
       `\`${field}\` must be Simplified Chinese or a reviewed English term for Chinese search.`,
     );
   }
 }
 
-function assertEnglishText(file: string, field: string, value: unknown) {
+function assertEnglishText(errors: string[], field: string, value: unknown) {
   if (typeof value !== 'string' || value.trim().length === 0 || hasCjk(value)) {
-    report(file, `\`${field}\` must be English and must not contain Chinese characters.`);
+    errors.push(`\`${field}\` must be English and must not contain Chinese characters.`);
     return;
   }
 
   if (isSlugLike(value)) {
-    report(file, `\`${field}\` must be natural English, not a kebab-case or snake_case slug.`);
+    errors.push(`\`${field}\` must be natural English, not a kebab-case or snake_case slug.`);
   }
 }
 
-for (const file of files) {
-  let metadata: Record<string, unknown>;
-  try {
-    metadata = JSON.parse(await fs.readFile(file, 'utf-8')) as Record<string, unknown>;
-  } catch (error) {
-    report(file, `cannot parse JSON: ${error instanceof Error ? error.message : String(error)}`);
-    continue;
-  }
-
+export function validateCategoryMetadata(metadata: Record<string, unknown>) {
+  const errors: string[] = [];
   const englishMetadata = (metadata.i18n as Record<string, any> | undefined)?.en;
 
-  assertChineseText(file, 'title', metadata.title);
-  assertEnglishText(file, 'i18n.en.title', englishMetadata?.title);
+  assertChineseText(errors, 'title', metadata.title);
+  assertEnglishText(errors, 'i18n.en.title', englishMetadata?.title);
+
+  return errors;
 }
 
-if (hasError) {
-  process.exit(1);
+export async function validateCategoryMetadataFile(file: string) {
+  try {
+    const metadata = JSON.parse(await fs.readFile(file, 'utf-8')) as Record<string, unknown>;
+    return validateCategoryMetadata(metadata);
+  } catch (error) {
+    return [`cannot parse JSON: ${error instanceof Error ? error.message : String(error)}`];
+  }
 }
 
-console.log('Changed category metadata files are valid.');
+async function main() {
+  const files = process.argv
+    .slice(2)
+    .filter((file) => file.startsWith('categories/') && file.endsWith('.json'));
+
+  if (files.length === 0) {
+    console.log('No changed category metadata files to validate.');
+    return;
+  }
+
+  let hasError = false;
+
+  for (const file of files) {
+    const errors = await validateCategoryMetadataFile(file);
+
+    for (const message of errors) {
+      console.error(`${file}: ${message}`);
+      hasError = true;
+    }
+  }
+
+  if (hasError) {
+    process.exit(1);
+  }
+
+  console.log('Changed category metadata files are valid.');
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  await main();
+}

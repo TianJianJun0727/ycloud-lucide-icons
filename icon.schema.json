@@ -26,7 +26,8 @@
         "required": ["name"],
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "deprecated": {
             "const": true
@@ -96,18 +97,22 @@
           "weather"
         ]
       },
+      "minItems": 1,
       "uniqueItems": true
     },
     "name": {
       "type": "string",
+      "minLength": 1,
       "description": "The Simplified Chinese display name for this icon."
     },
     "tags": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       },
-      "minItems": 1
+      "minItems": 1,
+      "uniqueItems": true
     },
     "i18n": {
       "type": "object",
@@ -120,19 +125,23 @@
           "required": ["name", "tags", "use-cases"],
           "properties": {
             "name": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             },
             "tags": {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               },
+              "minItems": 1,
               "uniqueItems": true
             },
             "use-cases": {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               },
               "minItems": 0,
               "uniqueItems": true
@@ -144,7 +153,8 @@
     "use-cases": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       },
       "minItems": 0,
       "uniqueItems": true

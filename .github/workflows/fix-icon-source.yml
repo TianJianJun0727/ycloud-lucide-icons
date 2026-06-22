@@ -93,7 +93,7 @@ jobs:
           node ./scripts/checkSvgSource.mts
           pnpm exec prettier --parser html --check 'icons/*.svg'
           pnpm lint:json
-          pnpm checkIcons
+          ADDED_FILES="${{ steps.changed-files.outputs.added_files }}" pnpm checkIcons
           icon_json_files=()
           category_json_files=()
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
