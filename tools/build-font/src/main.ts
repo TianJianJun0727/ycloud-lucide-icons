@@ -10,14 +10,17 @@ import { hasMissingCodePoints } from './helpers.ts';
 const fontName = 'ycloud';
 const classNamePrefix = 'icon';
 const startUnicode = 57400;
-const outputDir = 'ycloud-font';
+const defaultOutputDir = 'packages/icons-static/font';
 
-const { saveCodePoints = false, allowFixes = false } =
-  getArgumentOptions(process.argv.slice(2)) ?? {};
+const {
+  saveCodePoints = false,
+  allowFixes = false,
+  output = defaultOutputDir,
+} = getArgumentOptions(process.argv.slice(2)) ?? {};
 
 const repoRoot = path.join(process.cwd(), '../../');
 const iconsDir = path.join(repoRoot, 'icons');
-const targetDir = path.join(repoRoot, outputDir);
+const targetDir = path.resolve(repoRoot, String(output));
 
 if (saveCodePoints && !process.env.BLOB_READ_WRITE_TOKEN) {
   throw new Error(

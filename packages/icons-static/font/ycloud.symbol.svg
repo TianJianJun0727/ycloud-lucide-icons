@@ -1527,7 +1527,7 @@
   <path d="M7 15h2.5"></path>
 </symbol><symbol viewBox="0 0 24 24" id="icon-captions">
   <rect width="18" height="14" x="3" y="5" rx="2" ry="2"></rect>
-  <path d="M7 15h4M15 15h2M7 11h2M13 11h4"></path>
+  <path d="M7 15h4m4 0h2M7 11h2m4 0h4"></path>
 </symbol><symbol viewBox="0 0 24 24" id="icon-car-front">
   <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"></path>
   <path d="M7 14h.01"></path>
@@ -3937,7 +3937,7 @@
   <path d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
   <path d="m2 13 6 6"></path>
 </symbol><symbol viewBox="0 0 24 24" id="icon-hand-metal">
-  <path d="M18 12.5V10a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4"></path>
+  <path d="M18 12.5V10a2 2 0 0 0-2-2 2 2 0 0 0-2 2v1.4"></path>
   <path d="M14 11V9a2 2 0 1 0-4 0v2"></path>
   <path d="M10 10.5V5a2 2 0 1 0-4 0v9"></path>
   <path d="m7 15-1.76-1.76a2 2 0 0 0-2.83 2.82l3.6 3.6C7.5 21.14 9.2 22 12 22h2a8 8 0 0 0 8-8V7a2 2 0 1 0-4 0v5"></path>
@@ -4108,7 +4108,7 @@
   <path d="M7 21h14"></path>
   <path d="M8 13H2"></path>
 </symbol><symbol viewBox="0 0 24 24" id="icon-hexagon">
-  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16"></path>
 </symbol><symbol viewBox="0 0 24 24" id="icon-highlighter">
   <path d="m9 11-6 6v3h9l3-3"></path>
   <path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4"></path>
@@ -6708,7 +6708,7 @@
   <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-8.188-3.639a2 2 0 0 0-1.624 0L3 14a11.6 11.6 0 0 0 2.81 7.76"></path>
   <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
 </symbol><symbol viewBox="0 0 24 24" id="icon-shirt">
-  <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+  <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23"></path>
 </symbol><symbol viewBox="0 0 24 24" id="icon-shopping-bag">
   <path d="M16 10a4 4 0 0 1-8 0"></path>
   <path d="M3.103 6.034h17.794"></path>

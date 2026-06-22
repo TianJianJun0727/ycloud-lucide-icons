@@ -21,11 +21,11 @@ jobs:
       - name: Execute unit tests for build-font
         run: pnpm test:font
 
-      - name: Create font in ./ycloud-font
+      - name: Create font in packages/icons-static/font
         run: pnpm build:font
 
       - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v7
         with:
           name: ycloud-font
-          path: ycloud-font
+          path: packages/icons-static/font
