@@ -1,12 +1,15 @@
 name: Pull request metadata suggestions
 
 on:
-  pull_request_target:
-    paths:
-      - 'icons/*.json'
+  workflow_dispatch:
+    inputs:
+      pull_request_number:
+        description: 'Pull request number to suggest metadata for'
+        required: true
+        type: number
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: ${{ github.workflow }}-${{ inputs.pull_request_number }}
   cancel-in-progress: true
 
 jobs:
@@ -33,6 +36,5 @@ jobs:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: ${{ vars.AI_BASE_URL }}
           AI_MODEL: ${{ vars.AI_MODEL }}
-          PULL_REQUEST_NUMBER: ${{ github.event.number }}
-          COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+          PULL_REQUEST_NUMBER: ${{ inputs.pull_request_number }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

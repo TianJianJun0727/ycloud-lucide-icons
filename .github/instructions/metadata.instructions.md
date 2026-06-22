@@ -96,9 +96,9 @@ GitHub PR automation may normalize metadata:
 - `fix-icon-source.yml` runs on same-repository PRs that change icons or
   categories. It optimizes SVG, completes bilingual metadata, formats JSON, and
   validates the result.
-- `pull-request-metadata-suggestions.yml` comments AI suggestions on icon JSON
-  changes. For Figma/Portal-created PRs, it does not suggest categories because
-  the designer already selected them.
+- `pull-request-metadata-suggestions.yml` can be run manually with a PR number
+  when reviewers want optional AI metadata suggestions. For Figma/Portal-created
+  PRs, it does not suggest categories because the designer already selected them.
 - `checkIconMetadata.mts` enforces icon Chinese defaults, English `i18n.en`
   fields, deduplicated tags/categories, and no `i18n.en.categories`.
 - `checkCategoryMetadata.mts` enforces category Chinese titles and English

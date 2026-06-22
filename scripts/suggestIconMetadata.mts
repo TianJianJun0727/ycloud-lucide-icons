@@ -35,11 +35,14 @@ const categoriesDir = path.join(repoRoot, 'categories');
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
-const commitSha = process.env.COMMIT_SHA ?? 'HEAD';
 const useFileSystem =
   process.env.USE_FILE_SYSTEM === 'true' || process.env.USE_FILE_SYSYEM === 'true';
 
 const [owner, repo] = (process.env.GITHUB_REPOSITORY ?? 'TianJianJun0727/ycloud-icons').split('/');
+
+if (!Number.isInteger(pullRequestNumber) || pullRequestNumber <= 0) {
+  throw new Error('PULL_REQUEST_NUMBER must be a positive integer.');
+}
 
 const ai = createAiClient();
 
@@ -156,6 +159,7 @@ const { data: pullRequest } = await octokit.pulls.get({
   repo,
   pull_number: pullRequestNumber,
 });
+const commitSha = process.env.COMMIT_SHA?.trim() || pullRequest.head.sha;
 
 const prDescription = (pullRequest.body || '').slice(0, 4000);
 const isPortalPullRequest =
