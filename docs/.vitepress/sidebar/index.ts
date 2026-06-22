@@ -182,10 +182,10 @@ function localizeSidebarItems(
 ): DefaultTheme.SidebarItem[] | undefined {
   return items?.map((item) => ({
     ...item,
-    text: item.text && locale === 'zh' ? zhText[item.text] ?? item.text : item.text,
+    text: item.text && locale === 'zh' ? (zhText[item.text] ?? item.text) : item.text,
     desc:
       locale === 'zh'
-        ? zhDesc[(item as SidebarItemWithDesc).desc ?? ''] ?? (item as SidebarItemWithDesc).desc
+        ? (zhDesc[(item as SidebarItemWithDesc).desc ?? ''] ?? (item as SidebarItemWithDesc).desc)
         : (item as SidebarItemWithDesc).desc,
     items: localizeSidebarItems(item.items, locale),
   }));

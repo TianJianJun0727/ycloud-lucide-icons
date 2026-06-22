@@ -13,7 +13,7 @@
       "@data/*": ["./.vitepress/data/*"],
       "@lib/*": ["./.vitepress/lib/*"],
       "@tools/*": ["../tools/*"],
-      "@packages/*": ["../packages/*"],
-    },
-  },
+      "@packages/*": ["../packages/*"]
+    }
+  }
 }

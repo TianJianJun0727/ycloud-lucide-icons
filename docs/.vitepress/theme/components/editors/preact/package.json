@@ -6,12 +6,12 @@
     "serve": "preact build && preact serve",
     "dev": "preact watch"
   },
+  "dependencies": {
+    "@ycloud-web/icons-preact": "latest",
+    "preact": "10.11.3",
+    "preact-compat": "3.19.0"
+  },
   "devDependencies": {
     "preact-cli": "^1.4.1"
-  },
-  "dependencies": {
-    "preact": "10.11.3",
-    "preact-compat": "3.19.0",
-    "@ycloud-web/icons-preact": "latest"
   }
 }

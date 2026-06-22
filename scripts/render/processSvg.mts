@@ -61,10 +61,7 @@ function processSvg(svg: string, path: string) {
   return (
     optimizeSvg(svg, path)
       .then(setAttrs)
-      .then((optimizedSvg) => prettier.format(optimizedSvg, { parser: 'babel' }))
-      // remove semicolon inserted by prettier
-      // because prettier thinks it's formatting JSX not HTML
-      .then((svg) => svg.replace(/;/g, ''))
+      .then((optimizedSvg) => prettier.format(optimizedSvg, { parser: 'html' }))
   );
 }
 

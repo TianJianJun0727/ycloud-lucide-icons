@@ -1,11 +1,21 @@
 pnpm-lock.yaml
 
-# docs examples
+# generated output
+dist
+build
+coverage
+lib
+tests
+node_modules
+docs/images
 docs/**/examples/
 docs/.vitepress/.temp
 docs/.vitepress/cache
 docs/.vitepress/data
 docs/.nitro
+
+# SVG source is handled by Prettier with the HTML parser.
+icons/*.svg
 
 # @ycloud-web/icons-angular
 packages/icons-angular/.angular

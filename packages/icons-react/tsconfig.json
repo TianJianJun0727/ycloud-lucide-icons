@@ -15,13 +15,12 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
-    "downlevelIteration": true,
     "ignoreDeprecations": "6.0",
     "sourceMap": true,
     "outDir": "./dist",
     "jsx": "react-jsx",
-    "types": ["@testing-library/jest-dom"],
+    "types": ["@testing-library/jest-dom"]
   },
   "exclude": ["**/node_modules"],
-  "include": ["src", "tests"],
+  "include": ["src", "tests"]
 }

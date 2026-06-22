@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import prettier from 'prettier';
+import { format } from 'oxfmt';
 import { readSvg, toPascalCase } from '@ycloud-web/helpers';
 import deprecationReasonTemplate from '../utils/deprecationReasonTemplate.ts';
 import type { IconMetadata, IconNode, Path, TemplateFunction } from '../types.ts';
@@ -80,11 +80,16 @@ function generateIconFiles({
     });
 
     const output = pretty
-      ? await prettier.format(elementTemplate, {
+      ? await format(location, elementTemplate, {
           singleQuote: true,
           trailingComma: 'all',
           printWidth: 100,
-          parser: iconFileExtension.endsWith('.ts') ? 'babel-ts' : 'babel',
+        }).then((result) => {
+          if (result.errors.length > 0) {
+            throw new Error(result.errors.map((error) => error.message).join('\n'));
+          }
+
+          return result.code;
         })
       : elementTemplate;
 

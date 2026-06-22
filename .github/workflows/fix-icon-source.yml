@@ -85,12 +85,13 @@ jobs:
           done
 
           if (( ${#format_files[@]} > 0 )); then
-            pnpm exec prettier --write "${format_files[@]}"
+            pnpm exec oxfmt "${format_files[@]}"
           fi
 
       - name: Validate changed icon source
         run: |
-          pnpm exec eslint icons/*.svg
+          node ./scripts/checkSvgSource.mts
+          pnpm exec prettier --parser html --check 'icons/*.svg'
           pnpm lint:json
           pnpm checkIcons
           json_files=()

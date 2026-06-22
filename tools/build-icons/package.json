@@ -1,18 +1,22 @@
 {
   "name": "@ycloud-web/build-icons",
-  "description": "Internal package used to build icon code files for YCloud icon packages.",
   "version": "1.1.0",
-  "main": "index.ts",
-  "type": "module",
-  "scripts": {
-    "start": "node ./cli.ts"
+  "description": "Internal package used to build icon code files for YCloud icon packages.",
+  "keywords": [],
+  "homepage": "https://github.com/TianJianJun0727/ycloud-icons",
+  "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
+  "license": "ISC",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
+    "directory": "tools/build-icons"
   },
   "bin": {
     "build-icons": "./cli.ts"
   },
-  "engines": {
-    "node": ">= 23"
-  },
+  "type": "module",
+  "main": "index.ts",
   "exports": {
     ".": {
       "import": "./index.ts",
@@ -27,28 +31,24 @@
       "require": "./utils/*.ts"
     }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "node ./cli.ts"
+  },
+  "dependencies": {
+    "minimist": "^1.2.7",
+    "oxfmt": "0.55.0",
+    "svgo": "^3.3.3",
+    "svgson": "^5.2.1"
+  },
   "devDependencies": {
     "@types/minimist": "^1.2.5",
     "@types/node": "^22",
     "@ycloud-web/helpers": "workspace:*"
   },
-  "dependencies": {
-    "minimist": "^1.2.7",
-    "prettier": "2.7.1",
-    "svgo": "^3.3.3",
-    "svgson": "^5.2.1"
-  },
   "peerDependencies": {
     "@ycloud-web/helpers": "*"
   },
-  "homepage": "https://github.com/TianJianJun0727/ycloud-icons",
-  "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
-    "directory": "tools/build-icons"
+  "engines": {
+    "node": ">= 23"
   }
 }

@@ -1,32 +1,32 @@
 {
   "name": "@ycloud-web/icons-astro",
   "version": "0.1.12",
-  "author": "Moustapha Kebe",
   "description": "A YCloud icon library package for Astro applications.",
-  "license": "ISC",
+  "keywords": [
+    "Astro",
+    "Feather",
+    "Feather Icons",
+    "Font Awesome",
+    "Fontawesome",
+    "Icon",
+    "Icons",
+    "SVG",
+    "YCloud"
+  ],
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/astro/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
-  "type": "module",
+  "license": "ISC",
+  "author": "Moustapha Kebe",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
     "directory": "packages/icons-astro"
   },
-  "keywords": [
-    "YCloud",
-    "Astro",
-    "Feather",
-    "Icons",
-    "Icon",
-    "SVG",
-    "Feather Icons",
-    "Fontawesome",
-    "Font Awesome"
-  ],
-  "sideEffects": false,
   "files": [
     "src"
   ],
+  "type": "module",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./src/ycloud-astro.ts"
@@ -56,8 +56,7 @@
     "astro": "^6.4.8",
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.5",
-    "prettier": "^3.4.2",
-    "typescript": "^6.0.3",
+    "typescript": "7.0.1-rc",
     "vite": "^8.0.16",
     "vitest": "4.1.9"
   },

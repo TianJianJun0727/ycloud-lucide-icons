@@ -1,17 +1,17 @@
 {
   "name": "build-font",
-  "description": "A internal used package to build the font.",
-  "private": true,
   "version": "1.0.0",
-  "main": "main.ts",
+  "private": true,
+  "description": "A internal used package to build the font.",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "main.ts",
   "scripts": {
     "start": "node ./src/main.ts",
     "test": "vitest run"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@vercel/blob": "^2.3.0",
     "fs-extra": "^11.2.0",

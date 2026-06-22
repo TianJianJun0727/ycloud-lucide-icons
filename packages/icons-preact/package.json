@@ -1,30 +1,34 @@
 {
   "name": "@ycloud-web/icons-preact",
-  "description": "A YCloud icon library package for Preact applications.",
   "version": "0.1.12",
-  "license": "ISC",
+  "description": "A YCloud icon library package for Preact applications.",
+  "keywords": [
+    "Feather",
+    "Feather Icons",
+    "Font Awesome",
+    "Fontawesome",
+    "Icon",
+    "Icons",
+    "Preact",
+    "SVG",
+    "YCloud"
+  ],
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/preact/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
+  "license": "ISC",
+  "author": "YCloud",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
     "directory": "packages/icons-preact"
   },
-  "keywords": [
-    "YCloud",
-    "Preact",
-    "Feather",
-    "Icons",
-    "Icon",
-    "SVG",
-    "Feather Icons",
-    "Fontawesome",
-    "Font Awesome"
+  "files": [
+    "dist"
   ],
-  "author": "YCloud",
-  "amdName": "ycloud-preact",
+  "sideEffects": false,
   "main": "dist/cjs/ycloud-preact.js",
   "module": "dist/esm/ycloud-preact.mjs",
+  "typings": "dist/ycloud-preact.d.ts",
   "exports": {
     ".": {
       "types": "./dist/ycloud-preact.d.ts",
@@ -32,17 +36,12 @@
       "require": "./dist/cjs/ycloud-preact.js"
     }
   },
-  "typings": "dist/ycloud-preact.d.ts",
-  "files": [
-    "dist"
-  ],
-  "sideEffects": false,
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
-    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch"
   },
@@ -57,10 +56,11 @@
     "preact": "^10.27.3",
     "rollup": "^4.62.0",
     "rollup-plugin-dts": "^6.4.1",
-    "typescript": "^6.0.3",
+    "typescript": "7.0.1-rc",
     "vite": "^8.0.16"
   },
   "peerDependencies": {
     "preact": "^10.27.2"
-  }
+  },
+  "amdName": "ycloud-preact"
 }

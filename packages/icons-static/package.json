@@ -1,33 +1,29 @@
 {
   "name": "@ycloud-web/icons-static",
-  "description": "Static SVG and font assets for YCloud Icons.",
   "version": "0.1.12",
-  "license": "ISC",
+  "description": "Static SVG and font assets for YCloud Icons.",
+  "keywords": [
+    "Feather",
+    "Feather Icons",
+    "Font Awesome",
+    "Fontawesome",
+    "Icon",
+    "Icons",
+    "NodeJS",
+    "SVG",
+    "Sprite",
+    "Static",
+    "YCloud"
+  ],
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/static/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
     "directory": "packages/icons-static"
   },
-  "keywords": [
-    "YCloud",
-    "Static",
-    "Sprite",
-    "NodeJS",
-    "Feather",
-    "Icons",
-    "Icon",
-    "SVG",
-    "Feather Icons",
-    "Fontawesome",
-    "Font Awesome"
-  ],
   "source": "src/ycloud-static.js",
-  "main": "dist/cjs/ycloud-static.js",
-  "module": "dist/esm/ycloud-static.mjs",
-  "typings": "dist/ycloud-static.d.ts",
-  "sideEffects": false,
   "files": [
     "dist",
     "font",
@@ -37,6 +33,10 @@
     "sprite.svg",
     "tags.json"
   ],
+  "sideEffects": false,
+  "main": "dist/cjs/ycloud-static.js",
+  "module": "dist/esm/ycloud-static.mjs",
+  "typings": "dist/ycloud-static.d.ts",
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:lib && pnpm build:tags && pnpm build:font",
@@ -44,7 +44,7 @@
     "build:tags": "node ./scripts/migrateIconsToTags.mts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mts",
-    "build:bundles": "rollup -c rollup.config.mjs",
+    "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c rollup.config.mjs",
     "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
   },
   "devDependencies": {

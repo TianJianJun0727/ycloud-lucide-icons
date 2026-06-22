@@ -4,7 +4,7 @@
     "declaration": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "module": "ESNext",
     "target": "ESNext",
     "esModuleInterop": true,
@@ -13,6 +13,6 @@
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "sourceMap": true,
-    "outDir": "./dist",
-  },
+    "outDir": "./dist"
+  }
 }

@@ -9,7 +9,12 @@ import { By } from '@angular/platform-browser';
 @Component({
   template: `@if (icon(); as iconData) {
     <svg [ycloudIcon]="iconData">
-      <rect x="1" y="1" width="22" height="22" />
+      <rect
+        x="1"
+        y="1"
+        width="22"
+        height="22"
+      />
     </svg>
   }`,
   imports: [YCloudDynamicIcon],

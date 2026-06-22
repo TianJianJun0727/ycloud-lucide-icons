@@ -12,11 +12,11 @@ const config = {
   ],
   'icons/*.json': (filenames) => [
     `ajv --spec=draft2020 -s icon.schema.json ${filenamesToAjvOption(filenames)}`,
-    `prettier --write ${filenames.join(' ')}`,
+    `oxfmt ${filenames.join(' ')}`,
   ],
   'categories/*.json': (filenames) => [
     `ajv --spec=draft2020 -s category.schema.json ${filenamesToAjvOption(filenames)}`,
-    `prettier --write ${filenames.join(' ')}`,
+    `oxfmt ${filenames.join(' ')}`,
   ],
 };
 

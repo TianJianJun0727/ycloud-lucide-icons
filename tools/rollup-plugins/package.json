@@ -2,11 +2,18 @@
   "name": "@ycloud-web/rollup-plugins",
   "version": "1.0.0",
   "description": "Internal Rollup plugins used to build YCloud icon packages.",
+  "homepage": "https://github.com/TianJianJun0727/ycloud-icons",
+  "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
+  "license": "ISC",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
+    "directory": "tools/rollup-plugins"
+  },
+  "type": "module",
   "main": "plugins.js",
   "module": "plugins.js",
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "dependencies": {
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-replace": "^6.0.3",
@@ -16,12 +23,5 @@
     "rollup-plugin-license": "^3.6.0",
     "rollup-plugin-summary": "^3.0.1",
     "rollup-plugin-visualizer": "^6.0.5"
-  },
-  "homepage": "https://github.com/TianJianJun0727/ycloud-icons",
-  "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
-    "directory": "tools/rollup-plugins"
   }
 }

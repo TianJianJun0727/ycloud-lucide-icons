@@ -3,8 +3,9 @@
     "strict": true,
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
@@ -14,6 +15,6 @@
     "isolatedModules": true,
     "outDir": "./dist",
     "declarationDir": "./dist",
-    "declaration": true,
-  },
+    "declaration": true
+  }
 }

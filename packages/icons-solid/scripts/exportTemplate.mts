@@ -1,7 +1,8 @@
 import base64SVG from '@ycloud-web/build-icons/utils/base64SVG';
 import defineExportTemplate from '@ycloud-web/build-icons/utils/defineExportTemplate';
+import type { TemplateFunction } from '@ycloud-web/build-icons';
 
-export default defineExportTemplate(
+const exportTemplate: TemplateFunction = defineExportTemplate(
   async ({ componentName, iconName, children, getSvg, deprecated, deprecationReason }) => {
     const svgContents = await getSvg();
     const svgBase64 = base64SVG(svgContents);
@@ -31,3 +32,5 @@ export default ${componentName};
 `;
   },
 );
+
+export default exportTemplate;

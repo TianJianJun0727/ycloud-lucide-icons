@@ -1,13 +1,13 @@
 {
   "name": "@ycloud-web/helpers",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "description": "A internal used package with helpers.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "helpers.ts",
   "types": "helpers.ts",
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@types/node": "^22"
   }

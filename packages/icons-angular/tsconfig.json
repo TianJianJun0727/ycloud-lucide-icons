@@ -4,7 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@ycloud-web/icons-angular": ["./dist"],
+      "@ycloud-web/icons-angular": ["./dist"]
     },
     "strict": true,
     "noImplicitOverride": true,
@@ -14,26 +14,25 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "declaration": false,
-    "downlevelIteration": true,
     "ignoreDeprecations": "6.0",
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve",
+    "module": "preserve"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
+    "strictTemplates": true
   },
   "files": [],
   "references": [
     {
-      "path": "./tsconfig.lib.json",
+      "path": "./tsconfig.lib.json"
     },
     {
-      "path": "./tsconfig.spec.json",
-    },
-  ],
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }

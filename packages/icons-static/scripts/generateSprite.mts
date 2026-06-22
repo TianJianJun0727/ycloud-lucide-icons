@@ -35,7 +35,7 @@ export default async function generateSprite(svgs: SVGFile[], packageDir: string
   };
 
   const spriteSvg = stringify(spriteSvgObject);
-  const prettifiedSprite = (await format(spriteSvg, { parser: 'babel' })).replace(/;/g, '');
+  const prettifiedSprite = await format(spriteSvg, { parser: 'html' });
 
   const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n<!-- ${license} -->\n`;
 
