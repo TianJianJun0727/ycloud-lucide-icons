@@ -12,7 +12,7 @@
  * - 通过 `generateText` 的 JSON output 约束返回结构。
  * - 使用调用方传入的 Zod schema 做最终校验，保证脚本拿到的是结构化 JSON。
  *
- * 调用位置：`fixIconMetadataI18n.mts`、`polishIconTagsByCategory.mts`、`suggestMetaData.mts`、`writeChangelog.mts`。
+ * 调用位置：`fixMetadata.mts`、`polishIconTagsByCategory.mts`、`suggestIconMetadata.mts`、`writeChangelog.mts`。
  * 调用时机：需要 AI 生成 JSON 结构化结果时由上层脚本创建，不单独作为命令运行。
  */
 import { createOpenAI } from '@ai-sdk/openai';

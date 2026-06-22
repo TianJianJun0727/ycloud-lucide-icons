@@ -48,7 +48,7 @@
     "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
   },
   "devDependencies": {
-    "@types/node": "^22.15.30",
+    "@types/node": "^24.13.2",
     "@ycloud-web/build-icons": "workspace:*",
     "@ycloud-web/helpers": "workspace:*",
     "@ycloud-web/rollup-plugins": "workspace:*",

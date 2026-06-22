@@ -24,7 +24,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Generate comment markup
-        run: node ./scripts/suggestMetaData.mts
+        run: node ./scripts/suggestIconMetadata.mts
         env:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: ${{ vars.AI_BASE_URL }}

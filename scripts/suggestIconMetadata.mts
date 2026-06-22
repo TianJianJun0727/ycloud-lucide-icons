@@ -18,6 +18,12 @@ import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import z from 'zod';
 import { createAiClient } from './aiClient.mts';
+import {
+  hasCjk,
+  hasInvalidChineseSideUseCases,
+  isMeaningfulArray,
+  isStringArray,
+} from './metadataLanguageRules.mts';
 
 // Resolve repo paths relative to this script so they work no matter which
 // directory the script is invoked from (the workflow runs it from the repo root).
@@ -42,8 +48,14 @@ if (!ai) {
   process.exit(0);
 }
 
-const ALL_METADATA_FIELDS = ['tags', 'categories', 'use-cases', 'i18n.en.use-cases'] as const;
-const PORTAL_METADATA_FIELDS = ['tags', 'use-cases', 'i18n.en.use-cases'] as const;
+const ALL_METADATA_FIELDS = [
+  'tags',
+  'i18n.en.tags',
+  'categories',
+  'use-cases',
+  'i18n.en.use-cases',
+] as const;
+const PORTAL_METADATA_FIELDS = ['tags', 'i18n.en.tags', 'use-cases', 'i18n.en.use-cases'] as const;
 type MetadataField = (typeof ALL_METADATA_FIELDS)[number];
 type ReviewComment = {
   path: string;
@@ -164,6 +176,7 @@ const metadataSchema = z.object({
   'use-cases': z.array(z.string()),
   i18n: z.object({
     en: z.object({
+      tags: z.array(z.string()),
       'use-cases': z.array(z.string()),
     }),
   }),
@@ -238,7 +251,7 @@ function findFieldBlock(lines: string[], field: string, startAt = 0) {
 }
 
 function findMetadataFieldBlock(lines: string[], field: MetadataField) {
-  if (field !== 'i18n.en.use-cases') {
+  if (!field.startsWith('i18n.en.')) {
     return { block: findFieldBlock(lines, field), indent: '  ' };
   }
 
@@ -247,10 +260,15 @@ function findMetadataFieldBlock(lines: string[], field: MetadataField) {
     return { block: null, indent: '      ' };
   }
 
-  return { block: findFieldBlock(lines, 'use-cases', englishMetadataIdx + 1), indent: '      ' };
+  const fieldName = field.split('.').at(-1) ?? field;
+  return { block: findFieldBlock(lines, fieldName, englishMetadataIdx + 1), indent: '      ' };
 }
 
 function getCurrentValues(metadata: any, field: MetadataField): string[] {
+  if (field === 'i18n.en.tags') {
+    return metadata.i18n?.en?.tags ?? [];
+  }
+
   if (field === 'i18n.en.use-cases') {
     return metadata.i18n?.en?.['use-cases'] ?? [];
   }
@@ -259,6 +277,10 @@ function getCurrentValues(metadata: any, field: MetadataField): string[] {
 }
 
 function getSuggestedValues(suggested: any, field: MetadataField): string[] {
+  if (field === 'i18n.en.tags') {
+    return suggested.i18n?.en?.tags ?? [];
+  }
+
   if (field === 'i18n.en.use-cases') {
     return suggested.i18n?.en?.['use-cases'] ?? [];
   }
@@ -267,14 +289,16 @@ function getSuggestedValues(suggested: any, field: MetadataField): string[] {
 }
 
 function getUseCasesState(metadata: any) {
-  const chineseUseCases = Array.isArray(metadata['use-cases']) ? metadata['use-cases'] : [];
-  const englishUseCases = Array.isArray(metadata.i18n?.en?.['use-cases'])
+  const chineseUseCases = isStringArray(metadata['use-cases']) ? metadata['use-cases'] : [];
+  const englishUseCases = isStringArray(metadata.i18n?.en?.['use-cases'])
     ? metadata.i18n.en['use-cases']
     : [];
 
   return {
-    hasChineseUseCases: chineseUseCases.length > 0,
-    hasEnglishUseCases: englishUseCases.length > 0,
+    hasValidChineseUseCases:
+      isMeaningfulArray(chineseUseCases) && !hasInvalidChineseSideUseCases(chineseUseCases),
+    hasValidEnglishUseCases:
+      isMeaningfulArray(englishUseCases) && !englishUseCases.some((useCase) => hasCjk(useCase)),
   };
 }
 
@@ -298,13 +322,13 @@ function shouldSuggestField(metadata: any, field: MetadataField) {
     return true;
   }
 
-  const { hasChineseUseCases, hasEnglishUseCases } = getUseCasesState(metadata);
+  const { hasValidChineseUseCases, hasValidEnglishUseCases } = getUseCasesState(metadata);
 
-  if (!hasChineseUseCases) {
+  if (!hasValidChineseUseCases) {
     return field === 'use-cases';
   }
 
-  if (!hasEnglishUseCases) {
+  if (!hasValidEnglishUseCases) {
     return field === 'i18n.en.use-cases';
   }
 
@@ -333,12 +357,14 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
   const currentMetadata = {
     libraryContext:
       'This item is one icon in the YCloud Icons library, a general-purpose SVG icon set based on Lucide-style icon names. Suggest metadata for icon search and display, not as standalone dictionary entries.',
+    name: metadata.name ?? '',
     tags: metadata.tags ?? [],
     categories: metadata.categories ?? [],
     categoryContext: getCategoryContext(metadata),
     'use-cases': metadata['use-cases'] ?? [],
     i18n: {
       en: {
+        name: metadata.i18n?.en?.name ?? '',
         tags: metadata.i18n?.en?.tags ?? [],
         'use-cases': metadata.i18n?.en?.['use-cases'] ?? [],
       },
@@ -355,18 +381,19 @@ Library context:
 - Use-cases describe product/UI scenarios and must follow the icon's primary meaning in this icon library.
 
 Guidelines:
-- tags: Simplified Chinese search terms for the default Chinese metadata. Treat English metadata as the source of truth: icon name, i18n.en.name, i18n.en.tags, and i18n.en.use-cases. Use Chinese metadata only as wording reference.
-- tags: Generate Chinese tags by translating from English source metadata, using selected category context and use-cases to resolve ambiguity. Do not translate English tags word by word.
-- tags: If an English tag has multiple meanings, choose the Chinese term that fits the category and use-cases. Prefer natural Chinese UI/product search terms, such as "排列", "下载", "筛选", "急救", "波形". Avoid awkward dictionary words, machine translation, and rare transliterations.
-- tags: Chinese tags do not need to match English tags one-to-one. Translate English tags into natural Chinese concepts, then merge duplicates and remove weak secondary meanings.
-- tags: Prefer the icon's primary library meaning over weak secondary literal meanings. Use the filename, English name, current tags, categories, and use-cases together as context.
-- tags: Keep common technical proper nouns as-is when Chinese users search for them that way, such as API, CSS, JSON, SVG, GitHub. Never include the word "icon" or the icon's own name ("${iconName}").
+- tags and i18n.en.tags: generate Chinese and English search terms as a semantic pair from the whole icon context: file name, current names, both tag lists, categories, and use-cases.
+- tags: Simplified Chinese search terms for the default Chinese metadata. Chinese-side metadata should be Simplified Chinese by default.
+- tags: Keep common technical proper nouns as-is when Chinese users search for them that way, such as API, CSS, JSON, SVG, GitHub. Do not keep ordinary English words only because they appeared in the source.
+- i18n.en.tags: natural English search terms. English-side metadata must not contain Chinese characters.
+- tags and i18n.en.tags: do not translate tags one word at a time in either direction. Resolve ambiguous terms from category and use-case context, then produce natural search terms in each language.
+- tags and i18n.en.tags: the two languages do not need to have the same length or matching order. Merge duplicates and remove weak secondary meanings in both languages.
+- tags and i18n.en.tags: prefer the icon's primary library meaning over weak secondary literal meanings. Use the filename, English name, current tags, categories, and use-cases together as context. Never include the word "icon" or the icon's own name ("${iconName}").
 - categories: ${isPortalPullRequest ? 'do not suggest categories. This PR comes from the Figma submission flow, where categories are explicitly selected by the designer.' : 'only use values from the allowed categories listed below. Lowercase. Keep them relevant to the icon.'}
+- use-cases and i18n.en.use-cases: generate paired concrete product/UI scenarios from the whole icon context. Do not translate sentence by sentence mechanically.
 - use-cases: Simplified Chinese phrases describing concrete product/UI situations for this icon's primary library meaning (e.g. "表示摄像头已禁用"). No trailing punctuation.
-- i18n.en.use-cases: English lowercase phrases describing the same concrete product/UI situations for this icon's primary library meaning (e.g. "indicating a disabled webcam"). No trailing punctuation.
-- use-cases: If both languages have empty use-cases, suggest English use-cases first from the icon's English source meaning, then translate them into Chinese.
-- use-cases: If i18n.en.use-cases exists, treat it as source and translate/polish top-level use-cases from it. If only top-level use-cases exists, translate it into English first, then polish Chinese from that English source.
-- use-cases: Do not suggest use-cases from weak secondary meanings unless categories or current use-cases clearly make that meaning primary.
+- i18n.en.use-cases: English phrases describing the same concrete product/UI situations for this icon's primary library meaning (e.g. "indicating a disabled webcam"). No trailing punctuation and no Chinese characters.
+- use-cases and i18n.en.use-cases: if valid i18n.en.use-cases exists, use it as the primary scenario source and translate/polish top-level use-cases from it. If i18n.en.use-cases is missing or contains Chinese but top-level use-cases is valid, infer English from top-level use-cases plus file/category/tag context.
+- use-cases and i18n.en.use-cases: keep the same length and order. Do not suggest use-cases from weak secondary meanings unless categories or current use-cases clearly make that meaning primary.
 Only suggest NEW values that build on the current metadata, and prefer quality over quantity.
 
 Allowed categories:
@@ -387,7 +414,7 @@ ${JSON.stringify(referenceExamples, null, 2)}`;
   console.log(`Current metadata for ${iconName}:`, currentMetadata);
 
   const lines = fileContent.split('\n');
-  const chatGptQuery = `Suggest Simplified Chinese tags, categories, Simplified Chinese use-cases, and English i18n.en.use-cases for a "${iconName}" icon in the YCloud icon library.`;
+  const chatGptQuery = `Suggest Simplified Chinese tags, English i18n.en.tags, categories, Simplified Chinese use-cases, and English i18n.en.use-cases for a "${iconName}" icon in the YCloud icon library.`;
 
   // Build one inline GitHub suggestion per field, deduped against the values
   // already present in the file.
@@ -453,8 +480,8 @@ if (comments.length === 0) {
 }
 
 const reviewBody = `### Metadata suggestions
-I've asked AI for suggestions for \`tags\`, \`categories\`, Simplified Chinese \`use-cases\`, and English \`i18n.en.use-cases\`.
-\`tags\` and top-level \`use-cases\` are Simplified Chinese because they belong to the default Chinese metadata.
+I've asked AI for suggestions for \`tags\`, \`i18n.en.tags\`, \`categories\`, Simplified Chinese \`use-cases\`, and English \`i18n.en.use-cases\`.
+\`tags\` and top-level \`use-cases\` are Chinese-side metadata because they belong to the default Chinese metadata.
 Please review them and apply any that you find useful.
 `;
 

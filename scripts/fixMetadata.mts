@@ -4,14 +4,15 @@
  * 输入：命令行传入的 `icons/*.json` 或 `categories/*.json` 文件列表。
  * 依赖：通过 `AI_API_KEY`、`AI_BASE_URL`、`AI_MODEL` 创建 OpenAI 兼容 AI 客户端。
  * 图标修复范围：
- * - `name` 缺失或不是中文时，生成简体中文图标名。
+ * - `name` 缺失、不是中文且不是已审核可保留的英文专有词/术语时，生成简体中文图标名。
  * - `i18n.en.name` 缺失、含中文、等于中文名或像 slug 时，生成自然英文名。
- * - `tags` 缺失、全是英文或包含非允许英文词时，基于英文源数据、分类上下文和使用场景生成中文标签。
- * - `i18n.en.tags` 缺失或含中文时，生成英文标签。
- * - `use-cases` / `i18n.en.use-cases` 缺失、不成对、语言不对或为空时，生成成对的中英文使用场景。
+ * - `tags` / `i18n.en.tags` 任一侧缺失、语言不对或中文侧包含未审核英文词时，
+ *   基于文件名、两侧现有元数据、分类上下文和使用场景整体生成中英文标签，不逐词直译。
+ * - `use-cases` / `i18n.en.use-cases` 缺失、不成对、语言不对、中文侧包含未审核英文或为空时，
+ *   基于文件名、两侧现有元数据、分类上下文和标签整体生成成对的中英文使用场景，不逐词直译。
  * - 自动移除废弃的 `i18n.en.categories` 字段。
  * 分类修复范围：
- * - `title` 缺失或不是中文时，生成中文分类标题。
+ * - `title` 缺失、不是中文且不是已审核可保留的英文专有词/术语时，生成中文分类标题。
  * - `i18n.en.title` 缺失、含中文、等于中文标题或像 slug 时，生成英文分类标题。
  *
  * 约束：英文元数据是语义来源，中文结果用于 UI 展示和中文搜索；标签会去重，use-cases 会保持中英文成对。
@@ -22,6 +23,16 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import z from 'zod';
 import { createAiClient } from './aiClient.mts';
+import {
+  hasCjk,
+  hasUnreviewedNonChineseTerm,
+  hasInvalidChineseSideUseCases,
+  isMeaningfulArray,
+  isSlugLike,
+  isStringArray,
+  isValidChineseSideText,
+  uniqueList,
+} from './metadataLanguageRules.mts';
 
 const files = process.argv.slice(2).filter((file) => file.endsWith('.json'));
 
@@ -30,129 +41,18 @@ if (files.length === 0) {
   process.exit(0);
 }
 
-const hasCjk = (value: string) => /[\u3400-\u9fff]/.test(value);
-const isSlugLike = (value: string) => /^[a-z0-9]+(?:[-_][a-z0-9]+)+$/.test(value.trim());
-const allowedNonChineseTags = new Set([
-  '&',
-  '&&',
-  '*',
-  '+',
-  '-',
-  '---',
-  '->',
-  '<-',
-  '<-|',
-  '>',
-  'AI',
-  'API',
-  'CSS',
-  'DNA',
-  'Git',
-  'GitHub',
-  'GitLab',
-  'GIF',
-  'GPU',
-  'HDMI',
-  'HTML',
-  'ID',
-  'JSON',
-  'Markdown',
-  'NFC',
-  'OS X',
-  'PDF',
-  'RSS',
-  'SIM',
-  'SVG',
-  'USB',
-  'Webhook',
-  'Wi-Fi',
-  'XML',
-  'YAML',
-  'iOS',
-  'macOS',
-  '3D',
-  '2FA',
-  '4K',
-  '8K',
-  '720p',
-  '1080p',
-  'A-Z',
-  'AirPlay',
-  'AR',
-  'Bash',
-  'CC',
-  'CHF',
-  'CI',
-  'Chromecast',
-  'Cookie',
-  'CPU',
-  'DevOps',
-  'DIY',
-  'DJ',
-  'Docker',
-  'DOM',
-  'DVD',
-  'EP',
-  'ESC',
-  'Excel',
-  'Facebook',
-  'FAQ',
-  'Flex',
-  'GB',
-  'GBP',
-  'Gist',
-  'GPS',
-  'GSM',
-  'H1',
-  'H2',
-  'H3',
-  'H4',
-  'H5',
-  'H6',
-  'ICS',
-  'INR',
-  'Instagram',
-  'LAN',
-  'LGBTQ+',
-  'LP',
-  'Mac',
-  'Meta',
-  'MIDI',
-  'MP3',
-  'Node.js',
-  'OCR',
-  'PHP',
-  'PR',
-  'RAM',
-  'RCA',
-  'SaaS',
-  'Shell',
-  'Snapchat',
-  'SSD',
-  'TXT',
-  'UI',
-  'VDI',
-  'VIP',
-  'VPN',
-  'VR',
-  'ZIP',
-  'Zsh',
-  'grep',
-  'x̄',
-]);
-const isStringArray = (value: unknown): value is string[] =>
-  Array.isArray(value) && value.every((item) => typeof item === 'string');
-const isMeaningfulArray = (value: unknown): value is string[] =>
-  Array.isArray(value) && value.every((item) => typeof item === 'string') && value.length > 0;
-const uniqueList = (items: string[]) =>
-  items.filter((item, index, list) => list.indexOf(item) === index);
 const uniquePairs = (leftItems: string[], rightItems: string[]) => {
+  if (leftItems.length !== rightItems.length) {
+    throw new Error(
+      `AI returned mismatched use-cases: ${leftItems.length} Chinese values and ${rightItems.length} English values.`,
+    );
+  }
+
   const seen = new Set<string>();
   const left: string[] = [];
   const right: string[] = [];
-  const count = Math.min(leftItems.length, rightItems.length);
 
-  for (let index = 0; index < count; index += 1) {
+  for (let index = 0; index < leftItems.length; index += 1) {
     const leftItem = leftItems[index];
     const rightItem = rightItems[index];
     const key = `${leftItem}\n${rightItem}`;
@@ -169,8 +69,7 @@ const uniquePairs = (leftItems: string[], rightItems: string[]) => {
   return { left, right };
 };
 const hasDisallowedNonChineseTag = (value: unknown) =>
-  isStringArray(value) &&
-  value.some((tag) => !hasCjk(tag) && /[A-Za-z]/.test(tag) && !allowedNonChineseTags.has(tag));
+  isStringArray(value) && value.some((tag) => hasUnreviewedNonChineseTerm(tag));
 const categoriesDir = path.resolve('categories');
 
 type CategoryContext = {
@@ -249,11 +148,11 @@ function needsIconAiFix(metadata: Record<string, any>) {
     !isEnglishUseCasesArray ||
     !hasAnyUseCases ||
     hasChineseUseCases !== hasEnglishUseCases ||
-    (hasChineseUseCases && currentUseCases.some((useCase) => !hasCjk(useCase))) ||
+    (hasChineseUseCases && hasInvalidChineseSideUseCases(currentUseCases)) ||
     (hasEnglishUseCases && currentEnglishUseCases.some((useCase) => hasCjk(useCase)));
 
   return {
-    shouldFixName: !currentName || !hasCjk(currentName),
+    shouldFixName: !currentName || !isValidChineseSideText(currentName),
     shouldFixEnglishName:
       !currentEnglishName ||
       hasCjk(currentEnglishName) ||
@@ -261,7 +160,7 @@ function needsIconAiFix(metadata: Record<string, any>) {
       isSlugLike(currentEnglishName),
     shouldFixTags:
       !isMeaningfulArray(currentTags) ||
-      currentTags.every((tag) => !hasCjk(tag)) ||
+      currentTags.every((tag) => !isValidChineseSideText(tag)) ||
       hasDisallowedNonChineseTag(currentTags),
     shouldFixEnglishTags:
       !isMeaningfulArray(currentEnglishTags) || currentEnglishTags.some((tag) => hasCjk(tag)),
@@ -274,7 +173,7 @@ function needsCategoryAiFix(metadata: Record<string, any>) {
   const currentEnglishTitle = String(metadata.i18n?.en?.title ?? '');
 
   return {
-    shouldFixTitle: !currentTitle || !hasCjk(currentTitle),
+    shouldFixTitle: !currentTitle || !isValidChineseSideText(currentTitle),
     shouldFixEnglishTitle:
       !currentEnglishTitle ||
       hasCjk(currentEnglishTitle) ||
@@ -304,6 +203,7 @@ async function completeIconMetadata(file: string, metadata: Record<string, any>)
     shouldFixEnglishTags,
     shouldFixUseCases,
   } = needsIconAiFix(metadata);
+  const shouldFixTagGroup = shouldFixTags || shouldFixEnglishTags;
 
   const next = { ...metadata };
   next.i18n = {
@@ -317,13 +217,7 @@ async function completeIconMetadata(file: string, metadata: Record<string, any>)
     delete next.i18n.en.categories;
   }
 
-  if (
-    !shouldFixName &&
-    !shouldFixEnglishName &&
-    !shouldFixTags &&
-    !shouldFixEnglishTags &&
-    !shouldFixUseCases
-  ) {
+  if (!shouldFixName && !shouldFixEnglishName && !shouldFixTagGroup && !shouldFixUseCases) {
     return next;
   }
 
@@ -354,23 +248,30 @@ Library context:
 - Use-cases describe product/UI scenarios and must follow the icon's primary meaning in this icon library.
 
 Rules:
-- nameZh and tagsZh must be Simplified Chinese for UI display and search.
+- nameZh, tagsZh, and useCasesZh are Chinese-side metadata for UI display and Chinese search.
+- Chinese-side metadata should be Simplified Chinese by default.
+- English words already present in the reviewed allowlist may be kept as-is.
+- For English words outside the allowlist, decide from icon context whether they are true proper nouns, brands, standards, abbreviations, or technical terms that Chinese users naturally search for in English. Keep them only when that is true; otherwise translate them according to icon context.
 - nameEn and tagsEn must be natural English.
-- Treat English metadata as the source of truth: file, nameEn, tagsEn, and useCasesEn.
-- Use Chinese metadata only as reference for existing wording style; do not let bad Chinese translations override English source semantics.
-- Generate Chinese tags by translating from English source metadata, using category context and use-cases to resolve ambiguity. Do not translate English tags word by word.
-- If an English tag has multiple meanings, choose the Chinese term that fits the category and use-cases.
+- English-side metadata must not contain Chinese characters.
+- Treat valid English metadata as the strongest source of truth, but do not trust English-side fields that are missing, contain Chinese, are slug-like, or are only literal/machine translations.
+- When English-side fields are missing or contain Chinese, infer natural English from the file name, valid Chinese metadata, category context, tags, and use-cases.
+- Use existing Chinese metadata only as context for meaning and wording style; do not let bad Chinese translations override stronger file/category semantics.
+- Generate tagsZh and tagsEn as a semantic pair from the whole icon context: file name, current names, both tag lists, categories, and use-cases.
+- Do not translate tags one word at a time in either direction. Resolve ambiguous terms from category and use-case context, then produce natural search terms in each language.
+- If a tag has multiple meanings, choose the term that fits the category and use-cases.
 - Prefer natural Chinese UI/product search terms, such as "排列", "下载", "筛选", "急救", "波形". Avoid awkward dictionary words, machine translation, and rare transliterations.
-- Keep common technical proper nouns as-is when Chinese users search for them that way, such as API, CSS, JSON, SVG, GitHub.
+- Keep common technical proper nouns as-is when Chinese users search for them that way, such as API, CSS, JSON, SVG, GitHub. Do not keep ordinary English words only because they appeared in the source; translate those into natural Chinese.
 - Chinese tags and English tags do not need to have the same length or matching order.
-- Translate English tags into natural Chinese concepts, then merge duplicates and remove weak secondary meanings.
+- Merge duplicates and remove weak secondary meanings in both languages.
 - Prefer the icon's primary library meaning over secondary literal meanings. For example, if "bug" is in development context, use "错误", "缺陷", "调试", "排查"; do not keep animal terms just because "bug" can mean insect.
 - If categories contain development, software, debugging, or code context, prioritize the software meaning of "bug"; do not include "昆虫" or "甲虫" unless the animal meaning is the primary icon usage.
-- useCasesZh must be Simplified Chinese and useCasesEn must be English.
-- If both languages have empty use-cases, generate concise use-cases for the icon's primary library meaning.
-- If both languages have empty use-cases, generate useCasesEn first from the icon's English source meaning, then translate them into useCasesZh.
-- If useCasesEn exists, treat it as source and translate/polish useCasesZh from it; keep the same length and order.
-- If only useCasesZh exists, translate it into useCasesEn, then polish useCasesZh from the English source; keep the same length and order.
+- useCasesZh must be Simplified Chinese scenarios, except English proper nouns/technical terms when they are the natural Chinese-search wording after review. useCasesEn must be English.
+- Generate useCasesZh and useCasesEn as paired scenarios from the whole icon context: file name, current names, tags in both languages, categories, and existing use-cases.
+- Do not translate use-cases sentence by sentence mechanically. Preserve the scenario intent, then write natural short scenarios in each language.
+- If valid useCasesEn exists, use it as the primary scenario source and translate/polish useCasesZh from it; keep the same length and order.
+- If useCasesEn is missing or contains Chinese but useCasesZh is valid, infer useCasesEn from useCasesZh plus file/category/tag context, then polish both sides; keep the same length and order.
+- If both languages have empty use-cases, generate concise paired use-cases for the icon's primary library meaning.
 - Do not generate use-cases from weak secondary meanings unless categories or current use-cases clearly make that meaning primary.
 - Do not include the word "icon".
 - Keep tags short and useful for search.
@@ -391,11 +292,8 @@ ${JSON.stringify(current, null, 2)}`,
     next.i18n.en.name = fixed.nameEn;
   }
 
-  if (shouldFixTags) {
+  if (shouldFixTagGroup) {
     next.tags = uniqueList(fixed.tagsZh);
-  }
-
-  if (shouldFixEnglishTags) {
     next.i18n.en.tags = uniqueList(fixed.tagsEn);
   }
 

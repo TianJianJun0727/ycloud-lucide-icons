@@ -71,7 +71,7 @@ jobs:
           done
 
           if (( ${#json_files[@]} > 0 )); then
-            node ./scripts/fixIconMetadataI18n.mts "${json_files[@]}"
+            node ./scripts/fixMetadata.mts "${json_files[@]}"
           fi
 
       - name: Format changed metadata
@@ -94,15 +94,22 @@ jobs:
           pnpm exec prettier --parser html --check 'icons/*.svg'
           pnpm lint:json
           pnpm checkIcons
-          json_files=()
+          icon_json_files=()
+          category_json_files=()
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            if [[ ( "$file" == icons/*.json || "$file" == categories/*.json ) && -f "$file" ]]; then
-              json_files+=("$file")
+            if [[ "$file" == icons/*.json && -f "$file" ]]; then
+              icon_json_files+=("$file")
+            elif [[ "$file" == categories/*.json && -f "$file" ]]; then
+              category_json_files+=("$file")
             fi
           done
 
-          if (( ${#json_files[@]} > 0 )); then
-            node ./scripts/checkChangedIconMetadata.mts "${json_files[@]}"
+          if (( ${#icon_json_files[@]} > 0 )); then
+            node ./scripts/checkIconMetadata.mts "${icon_json_files[@]}"
+          fi
+
+          if (( ${#category_json_files[@]} > 0 )); then
+            node ./scripts/checkCategoryMetadata.mts "${category_json_files[@]}"
           fi
 
       - name: Commit fixes

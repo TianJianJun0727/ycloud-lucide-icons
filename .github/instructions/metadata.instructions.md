@@ -99,8 +99,10 @@ GitHub PR automation may normalize metadata:
 - `pull-request-metadata-suggestions.yml` comments AI suggestions on icon JSON
   changes. For Figma/Portal-created PRs, it does not suggest categories because
   the designer already selected them.
-- `checkChangedIconMetadata.mts` enforces Chinese defaults, English `i18n.en`
+- `checkIconMetadata.mts` enforces icon Chinese defaults, English `i18n.en`
   fields, deduplicated tags/categories, and no `i18n.en.categories`.
+- `checkCategoryMetadata.mts` enforces category Chinese titles and English
+  `i18n.en.title`.
 
 For local bulk polishing, use `pnpm polish:tags -- --use-cases --write` with an
 OpenAI-compatible AI provider configured through `AI_API_KEY`, `AI_BASE_URL`,

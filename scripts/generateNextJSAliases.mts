@@ -15,6 +15,8 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import { getCurrentDirPath, readSvgDirectory } from '../tools/build-helpers/helpers.ts';
 
+type IconAlias = string | { name: string };
+
 // This is a special case convertion NextJS uses for their modularize imports. We try to follow the same convention, to generate the same imports.
 function pascalToKebabNextJSFlavour(str: string) {
   return str
@@ -49,7 +51,7 @@ await Promise.all(
       const metaJson = await fs.readFile(path.resolve(ICONS_DIR, `${iconName}.json`), 'utf-8');
       const iconMetaData = JSON.parse(metaJson);
 
-      const aliases = iconMetaData.aliases ?? [];
+      const aliases = (iconMetaData.aliases ?? []) as IconAlias[];
       const hasAlias = aliases.some((alias) =>
         typeof alias === 'string'
           ? alias === iconNameKebabCaseNextjsFlavour

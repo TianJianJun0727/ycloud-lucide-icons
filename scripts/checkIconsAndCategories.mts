@@ -7,7 +7,8 @@
  * - 每个 `icons/*.json` 必须有同名 `icons/*.svg`。
  * - 每个图标 JSON 中的 `categories` 必须引用已经存在的 `categories/*.json`。
  *
- * 注意：这里不检查中英文内容细节；字段语言、重复值和 use-cases 成对规则由 `checkChangedIconMetadata.mts` 负责。
+ * 注意：这里不检查中英文内容细节；字段语言、重复值和 use-cases 成对规则由
+ * `checkIconMetadata.mts` / `checkCategoryMetadata.mts` 负责。
  * 调用位置：根 `package.json` 的 `pnpm checkIcons`，并被 lint-staged 在提交图标源文件时调用。
  * 调用时机：本地检查、CI 校验和提交前校验都会运行，用于防止 SVG/JSON/分类引用关系断裂。
  */

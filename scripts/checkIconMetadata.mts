@@ -1,28 +1,37 @@
 /**
- * 校验本次变更的图标与分类元数据，通常由 PR 自动修复流程调用。
+ * 校验本次变更的图标元数据，通常由 PR 自动修复流程调用。
  *
- * 输入：命令行传入的 `icons/*.json` 或 `categories/*.json` 文件列表。
- * 图标规则：
- * - 顶层 `name` 必须是简体中文；`i18n.en.name` 必须是自然英文，不能是 slug。
- * - 顶层 `tags` 必须是非空中文搜索词数组；经审核确认适合中文搜索场景保留的英文品牌、
- *   标准、缩写、技术术语等例外词可保留在 `allowedNonChineseTags` 中，其余英文词应按图标语义翻译为中文。
+ * 输入：命令行传入的 `icons/*.json` 文件列表。
+ * 规则：
+ * - 顶层 `name` 必须是简体中文，或是经审核确认适合中文搜索场景保留的英文品牌、
+ *   标准、缩写、技术术语等例外词；`i18n.en.name` 必须是自然英文，不能是 slug。
+ * - 顶层 `tags` 必须是非空中文搜索词数组；通用非中文术语 allowlist 中的例外词已审核，可直接保留。
+ *   不在列表中的英文词需要进入 AI 审核：如果 AI 判断是中文搜索中应保留的专有名词/术语，可继续保留；
+ *   否则应按图标语义翻译为自然中文。
  * - `i18n.en.tags` 必须是非空英文搜索词数组。
  * - `tags`、`i18n.en.tags`、`categories` 都不能包含重复值。
  * - `use-cases` 和 `i18n.en.use-cases` 必须都是数组；双空允许，但只要一侧有值，另一侧也必须有值。
- * - 非空的 `use-cases` 必须是中文，非空的 `i18n.en.use-cases` 必须是英文，并且两侧长度和顺序一致。
+ * - 非空的 `use-cases` 必须是中文，或是经审核的英文例外词；非空的 `i18n.en.use-cases`
+ *   必须是英文，并且两侧长度和顺序一致。
  * - `categories` 只能引用 `categories/*.json` 中存在的分类 slug。
  * - 禁止继续使用 `i18n.en.categories`，分类翻译统一放在 `categories/*.json`。
- * 分类规则：
- * - 顶层 `title` 必须是简体中文。
- * - `i18n.en.title` 必须是自然英文，不能包含中文，也不能是 kebab-case/snake_case slug。
  *
  * 调用位置：`.github/workflows/fix-icon-source.yml` 的 `Validate changed icon source` 步骤。
  * 调用时机：PR 中图标源文件经过 SVG 清洗、AI 元数据补全和格式化后，对本次变更 JSON 做最后一道增量校验。
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import {
+  hasCjk,
+  hasUnreviewedNonChineseTerm,
+  isSlugLike,
+  isStringArray,
+  isValidChineseSideText,
+} from './metadataLanguageRules.mts';
 
-const files = process.argv.slice(2).filter((file) => file.endsWith('.json'));
+const files = process.argv
+  .slice(2)
+  .filter((file) => file.startsWith('icons/') && file.endsWith('.json'));
 
 if (files.length === 0) {
   console.log('No changed icon metadata files to validate.');
@@ -34,128 +43,10 @@ const categoryFiles = (await fs.readdir(categoriesDir)).filter((file) => file.en
 const knownCategories = new Set(categoryFiles.map((file) => path.basename(file, '.json')));
 
 let hasError = false;
-const hasCjk = (value: string) => /[\u3400-\u9fff]/.test(value);
-const isSlugLike = (value: string) => /^[a-z0-9]+(?:[-_][a-z0-9]+)+$/.test(value.trim());
-// English terms that have been reviewed and are intentionally kept in Chinese tags
-// because users commonly search for these brands, standards, abbreviations, or
-// technical terms as-is. Unreviewed English words should be translated into
-// natural Chinese tags based on icon context instead of being added mechanically.
-const allowedNonChineseTags = new Set([
-  '&',
-  '&&',
-  '*',
-  '+',
-  '-',
-  '---',
-  '->',
-  '<-',
-  '<-|',
-  '>',
-  'AI',
-  'API',
-  'CSS',
-  'DNA',
-  'Git',
-  'GitHub',
-  'GitLab',
-  'GIF',
-  'GPU',
-  'HDMI',
-  'HTML',
-  'ID',
-  'JSON',
-  'Markdown',
-  'NFC',
-  'OS X',
-  'PDF',
-  'RSS',
-  'SIM',
-  'SVG',
-  'USB',
-  'Webhook',
-  'Wi-Fi',
-  'XML',
-  'YAML',
-  'iOS',
-  'macOS',
-  '3D',
-  '2FA',
-  '4K',
-  '8K',
-  '720p',
-  '1080p',
-  'A-Z',
-  'AirPlay',
-  'AR',
-  'Bash',
-  'CC',
-  'CHF',
-  'CI',
-  'Chromecast',
-  'Cookie',
-  'CPU',
-  'DevOps',
-  'DIY',
-  'DJ',
-  'Docker',
-  'DOM',
-  'DVD',
-  'EP',
-  'ESC',
-  'Excel',
-  'Facebook',
-  'FAQ',
-  'Flex',
-  'GB',
-  'GBP',
-  'Gist',
-  'GPS',
-  'GSM',
-  'H1',
-  'H2',
-  'H3',
-  'H4',
-  'H5',
-  'H6',
-  'ICS',
-  'INR',
-  'Instagram',
-  'LAN',
-  'LGBTQ+',
-  'LP',
-  'Mac',
-  'Meta',
-  'MIDI',
-  'MP3',
-  'Node.js',
-  'OCR',
-  'PHP',
-  'PR',
-  'RAM',
-  'RCA',
-  'SaaS',
-  'Shell',
-  'Snapchat',
-  'SSD',
-  'TXT',
-  'UI',
-  'VDI',
-  'VIP',
-  'VPN',
-  'VR',
-  'ZIP',
-  'Zsh',
-  'grep',
-  'x̄',
-]);
 
 function report(file: string, message: string) {
   console.error(`${file}: ${message}`);
   hasError = true;
-}
-
-function isStringArray(value: unknown): value is string[] {
-  return Array.isArray(value) && value.every((item) => typeof item === 'string');
 }
 
 function assertUniqueArray(file: string, field: string, value: unknown) {
@@ -173,8 +64,11 @@ function assertUniqueArray(file: string, field: string, value: unknown) {
 }
 
 function assertChineseText(file: string, field: string, value: unknown) {
-  if (typeof value !== 'string' || value.trim().length === 0 || !hasCjk(value)) {
-    report(file, `\`${field}\` must be Simplified Chinese.`);
+  if (typeof value !== 'string' || value.trim().length === 0 || !isValidChineseSideText(value)) {
+    report(
+      file,
+      `\`${field}\` must be Simplified Chinese or a reviewed English term for Chinese search.`,
+    );
   }
 }
 
@@ -195,13 +89,11 @@ function assertChineseTags(file: string, field: string, value: unknown) {
     return;
   }
 
-  const invalidTags = value.filter(
-    (tag) => !hasCjk(tag) && /[A-Za-z]/.test(tag) && !allowedNonChineseTags.has(tag),
-  );
+  const invalidTags = value.filter((tag) => hasUnreviewedNonChineseTerm(tag));
   if (invalidTags.length > 0) {
     report(
       file,
-      `\`${field}\` contains English tags that have not been reviewed as allowed Chinese-search terms: ${invalidTags.join(
+      `\`${field}\` contains English tags that need AI review before they can be kept in Chinese-side metadata: ${invalidTags.join(
         ', ',
       )}.`,
     );
@@ -225,8 +117,11 @@ function assertChineseUseCases(file: string, field: string, value: unknown) {
     return;
   }
 
-  if (value.some((useCase) => useCase.trim().length > 0 && !hasCjk(useCase))) {
-    report(file, `\`${field}\` must contain Simplified Chinese use cases.`);
+  if (value.some((useCase) => useCase.trim().length > 0 && !isValidChineseSideText(useCase))) {
+    report(
+      file,
+      `\`${field}\` must contain Simplified Chinese use cases or reviewed English terms.`,
+    );
   }
 }
 
@@ -272,28 +167,11 @@ function assertBilingualUseCases(file: string, chineseValue: unknown, englishVal
 }
 
 for (const file of files) {
-  if (!file.startsWith('icons/') && !file.startsWith('categories/')) {
-    continue;
-  }
-
   let metadata: Record<string, unknown>;
   try {
     metadata = JSON.parse(await fs.readFile(file, 'utf-8')) as Record<string, unknown>;
   } catch (error) {
     report(file, `cannot parse JSON: ${error instanceof Error ? error.message : String(error)}`);
-    continue;
-  }
-
-  if (file.startsWith('categories/')) {
-    const englishMetadata = (metadata.i18n as Record<string, any> | undefined)?.en;
-
-    assertChineseText(file, 'title', metadata.title);
-    assertEnglishText(file, 'i18n.en.title', englishMetadata?.title);
-
-    continue;
-  }
-
-  if (!file.startsWith('icons/')) {
     continue;
   }
 
