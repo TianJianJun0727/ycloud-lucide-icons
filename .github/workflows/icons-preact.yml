@@ -4,6 +4,15 @@ on:
   push:
     branches:
       - next
+    paths:
+      - .github/actions/setup-pnpm/**
+      - package.json
+      - packages/icons-preact/**
+      - packages/icons-shared/**
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+      - tools/build-icons/**
+      - tools/rollup-plugins/**
   pull_request:
     paths:
       - packages/icons-preact/**
@@ -11,6 +20,10 @@ on:
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - pnpm-lock.yaml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   icons-preact:

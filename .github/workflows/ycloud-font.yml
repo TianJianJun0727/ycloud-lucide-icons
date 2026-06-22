@@ -4,10 +4,20 @@ on:
   push:
     branches:
       - next
+    paths:
+      - .github/actions/setup-pnpm/**
+      - package.json
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+      - tools/build-font/**
   pull_request:
     paths:
       - tools/build-font/**
       - pnpm-lock.yaml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   ycloud-font:
@@ -29,3 +39,4 @@ jobs:
         with:
           name: ycloud-font
           path: packages/icons-static/font
+          retention-days: 3

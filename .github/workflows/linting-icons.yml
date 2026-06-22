@@ -4,13 +4,19 @@ on:
   push:
     branches:
       - next
+    paths:
+      - icons/*
   pull_request:
     paths:
       - 'icons/*'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  lint-filenames:
-    name: Lint Filenames
+  lint-icons:
+    name: Lint Icons
     if: github.repository == 'TianJianJun0727/ycloud-icons'
     runs-on: ubuntu-latest
     permissions:
@@ -31,12 +37,5 @@ jobs:
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
 
-  lint-aliases:
-    name: Check Uniqueness of Aliases
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v7
       - name: Check Uniqueness of Aliases
         run: "! cat <(printf \"%s\\n\" icons/*.json | while read -r name; do basename \"$name\" .json; done) <(jq -cr 'select(.aliases) | .aliases[] | if type==\"string\" then . else .name end' icons/*.json) | sort | uniq -c | grep -ve '^\\s*1 '"

@@ -2,8 +2,25 @@ name: Linting PR
 
 on:
   pull_request:
-    paths-ignore:
-      - icons/*.svg
+    paths:
+      - '**/*.js'
+      - '**/*.mjs'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.html'
+      - '**/*.css'
+      - '**/*.scss'
+      - '**/*.json'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - .oxfmtignore
+      - package.json
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint-code:

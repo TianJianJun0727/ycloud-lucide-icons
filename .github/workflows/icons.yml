@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - next
+    paths:
+      - .github/actions/setup-pnpm/**
+      - package.json
+      - packages/icons/**
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+      - tools/build-icons/**
+      - tools/rollup-plugins/**
   pull_request:
     paths:
       - packages/icons/**
@@ -11,8 +19,12 @@ on:
       - tools/rollup-plugins/**
       - pnpm-lock.yaml
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -22,14 +34,6 @@ jobs:
 
       - name: Build
         run: pnpm --filter @ycloud-web/icons build
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - uses: ./.github/actions/setup-pnpm
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
 
       - name: Test
         run: pnpm --filter @ycloud-web/icons test

@@ -4,10 +4,20 @@ on:
   push:
     branches:
       - next
+    paths:
+      - .github/actions/setup-pnpm/**
+      - package.json
+      - packages/icons-shared/**
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
   pull_request:
     paths:
       - packages/icons-shared/**
       - pnpm-lock.yaml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
