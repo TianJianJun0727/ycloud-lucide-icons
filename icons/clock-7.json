@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示7点时间",
+    "早晨闹钟或晚间新闻时间",
+    "基于时间的触发器"
+  ],
   "name": "时钟7",
   "tags": [
     "时间",
-    "手表",
-    "闹钟"
+    "时钟",
+    "时刻",
+    "7点",
+    "早上",
+    "晚上"
   ],
   "categories": [
     "time"
@@ -15,10 +22,17 @@
       "name": "clock 7",
       "tags": [
         "time",
-        "watch",
-        "alarm"
+        "clock",
+        "hour",
+        "7",
+        "seven",
+        "o'clock"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Time display for 7:00",
+        "Morning alarm or evening news time",
+        "Time-based triggers"
+      ]
     }
   }
 }

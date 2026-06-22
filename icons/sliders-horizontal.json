@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设置面板控制",
+    "过滤器调节界面",
+    "参数调整"
+  ],
   "name": "滑块水平",
   "tags": [
+    "滑块",
     "设置",
+    "调节",
+    "控制",
     "过滤器",
-    "控制"
+    "水平控制"
   ],
   "categories": [
     "account"
@@ -14,11 +21,18 @@
     "en": {
       "name": "sliders horizontal",
       "tags": [
+        "sliders",
         "settings",
+        "adjust",
+        "control",
         "filters",
-        "controls"
+        "horizontal control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Settings panel controls",
+        "Filter adjustment interface",
+        "Parameter tuning"
+      ]
     }
   }
 }

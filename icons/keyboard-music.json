@@ -1,30 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐制作软件",
+    "数字音频工作站控制",
+    "MIDI控制器连接状态",
+    "音频插件界面"
+  ],
   "name": "键盘音乐",
   "tags": [
     "音乐",
-    "音频",
-    "声音",
-    "噪音",
-    "笔记",
-    "键",
-    "和弦",
-    "八度",
-    "迷笛",
+    "键盘",
+    "MIDI",
     "控制器",
-    "仪器",
-    "电动的",
-    "信号",
-    "数字化",
+    "音频",
+    "乐器",
+    "数字音频",
     "工作室",
-    "生产",
-    "制片人",
-    "钢琴家",
-    "钢琴",
-    "播放",
-    "表现",
-    "音乐会"
+    "制作",
+    "演奏"
   ],
   "categories": [
     "multimedia",
@@ -35,29 +28,22 @@
       "name": "keyboard music",
       "tags": [
         "music",
-        "audio",
-        "sound",
-        "noise",
-        "notes",
-        "keys",
-        "chord",
-        "octave",
-        "midi",
+        "keyboard",
+        "MIDI",
         "controller",
+        "audio",
         "instrument",
-        "electric",
-        "signal",
-        "digital",
+        "digital audio",
         "studio",
         "production",
-        "producer",
-        "pianist",
-        "piano",
-        "play",
-        "performance",
-        "concert"
+        "performance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music production software",
+        "Digital audio workstation controls",
+        "MIDI controller connection status",
+        "Audio plugin interface"
+      ]
     }
   }
 }

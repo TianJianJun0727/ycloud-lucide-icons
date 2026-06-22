@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "科学",
-  "icon": "flask-conical",
   "i18n": {
     "en": {
       "title": "Science"

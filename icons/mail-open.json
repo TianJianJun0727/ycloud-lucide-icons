@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打开邮件查看器",
+    "已读回执指示器",
+    "收件箱消息预览"
+  ],
   "name": "邮件打开",
   "tags": [
-    "邮箱",
-    "消息",
-    "信",
-    "读"
+    "打开邮件",
+    "已读邮件",
+    "查看邮件",
+    "邮件内容",
+    "阅读消息"
   ],
   "categories": [
     "mail"
@@ -15,12 +20,17 @@
     "en": {
       "name": "mail open",
       "tags": [
-        "email",
-        "message",
-        "letter",
-        "read"
+        "mail open",
+        "open email",
+        "read message",
+        "view letter",
+        "inspect mail"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Open email message viewer",
+        "Read receipt indicator",
+        "Inbox message preview"
+      ]
     }
   }
 }

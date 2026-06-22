@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "可再生能源仪表板",
+    "家庭太阳能系统监视器",
+    "可持续功能开关",
+    "电源选择器"
+  ],
   "name": "太阳能面板",
   "tags": [
-    "太阳能电池板",
-    "太阳能",
-    "面板",
-    "太阳",
-    "能量",
-    "电力",
-    "光"
+    "太阳能板",
+    "光伏",
+    "能源",
+    "发电",
+    "可持续",
+    "绿色",
+    "阳光"
   ],
   "categories": [
     "home",
@@ -22,14 +27,19 @@
       "name": "solar panel",
       "tags": [
         "solar panel",
-        "solar",
-        "panel",
-        "sun",
+        "photovoltaic",
         "energy",
-        "electricity",
-        "light"
+        "power generation",
+        "sustainable",
+        "green",
+        "sunlight"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Renewable energy dashboard",
+        "Home solar system monitor",
+        "Sustainability feature toggle",
+        "Power source selector"
+      ]
     }
   }
 }

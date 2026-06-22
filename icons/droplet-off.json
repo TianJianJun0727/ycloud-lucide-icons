@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "湿度控制设置",
+    "水功能禁用",
+    "干燥条件指示",
+    "天气应用控制"
+  ],
   "name": "水滴关闭",
   "tags": [
-    "水",
+    "无水",
+    "干燥",
+    "关闭水滴",
+    "禁用液体",
     "天气",
-    "液体",
-    "流体",
-    "湿的",
-    "水分",
-    "潮湿",
-    "珠子",
-    "小球"
+    "湿度控制"
   ],
   "categories": [
     "weather",
@@ -21,17 +23,19 @@
     "en": {
       "name": "droplet off",
       "tags": [
-        "water",
+        "no water",
+        "dry",
+        "droplet disabled",
+        "liquid off",
         "weather",
-        "liquid",
-        "fluid",
-        "wet",
-        "moisture",
-        "damp",
-        "bead",
-        "globule"
+        "humidity control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Humidity control settings",
+        "Water feature disable",
+        "Dry condition indicators",
+        "Weather app controls"
+      ]
     }
   }
 }

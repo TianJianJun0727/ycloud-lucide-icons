@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "呼叫转移功能",
+    "转接电话"
+  ],
   "name": "电话已转发",
   "tags": [
-    "通话"
+    "电话转发",
+    "呼叫转移",
+    "通话",
+    "箭头"
   ],
   "categories": [
     "arrows",
@@ -15,9 +21,15 @@
     "en": {
       "name": "phone forwarded",
       "tags": [
-        "call"
+        "phone forwarded",
+        "call transfer",
+        "call",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Call forwarding feature",
+        "Redirecting a phone call"
+      ]
     }
   }
 }

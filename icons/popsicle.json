@@ -1,12 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "冰淇淋店菜单",
+    "夏季冷饮图标"
+  ],
   "name": "冰棍",
   "tags": [
-    "冰棒",
+    "冰棍",
     "冰淇淋",
-    "甜甜的",
-    "食物"
+    "冷饮",
+    "甜品"
   ],
   "categories": [
     "food-beverage"
@@ -15,12 +18,15 @@
     "en": {
       "name": "popsicle",
       "tags": [
-        "ice lolly",
+        "popsicle",
         "ice cream",
-        "sweet",
-        "food"
+        "cold treat",
+        "dessert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Ice cream shop menu",
+        "Summer treat icon"
+      ]
     }
   }
 }

@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏角色或敌人图标",
+    "万圣节主题界面元素",
+    "可爱或恐怖头像"
+  ],
   "name": "幽灵",
   "tags": [
+    "幽灵",
+    "鬼魂",
+    "游戏角色",
     "吃豆人",
-    "怪异的"
+    "恐怖",
+    "可爱"
   ],
   "categories": [
     "gaming"
@@ -13,10 +21,18 @@
     "en": {
       "name": "ghost",
       "tags": [
-        "pac-man",
-        "spooky"
+        "ghost",
+        "spooky",
+        "game character",
+        "Pac-Man",
+        "cute",
+        "halloween"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game character or enemy icon",
+        "Halloween-themed UI element",
+        "Cute or spooky avatar"
+      ]
     }
   }
 }

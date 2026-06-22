@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "左转指示",
+    "方向改变控制",
+    "游戏向左移动"
+  ],
   "name": "双折角箭头左",
   "tags": [
-    "转",
-    "角落"
+    "左转",
+    "拐角",
+    "方向改变",
+    "游戏控制"
   ],
   "categories": [
     "arrows",
@@ -14,10 +20,16 @@
     "en": {
       "name": "chevrons left",
       "tags": [
-        "turn",
-        "corner"
+        "left turn",
+        "corner",
+        "direction change",
+        "gaming control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Left turn indication",
+        "Direction change control",
+        "Game left movement"
+      ]
     }
   }
 }

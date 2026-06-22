@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "纸牌游戏界面",
+    "游戏符号",
+    "形状设计"
+  ],
   "name": "梅花",
   "tags": [
+    "梅花",
+    "扑克",
+    "游戏",
     "形状",
-    "西装",
-    "玩",
     "卡片"
   ],
   "categories": [
@@ -16,12 +21,17 @@
     "en": {
       "name": "club",
       "tags": [
+        "club",
+        "poker",
+        "gaming",
         "shape",
-        "suit",
-        "playing",
         "cards"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Card game interface",
+        "Gaming symbols",
+        "Shape design"
+      ]
     }
   }
 }

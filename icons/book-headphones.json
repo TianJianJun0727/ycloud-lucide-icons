@@ -1,22 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "有声读物收听界面",
+    "带音频的语言学习",
+    "播客或音频故事应用",
+    "辅助音频功能"
+  ],
   "name": "书籍耳机",
   "tags": [
     "有声读物",
-    "阅读",
-    "倾听",
-    "声音",
+    "听书",
+    "耳机",
+    "音频",
     "故事",
-    "小说",
-    "小说",
-    "信息",
-    "知识",
     "教育",
-    "学生",
     "学习",
-    "学习",
-    "研究"
+    "多媒体",
+    "倾听"
   ],
   "categories": [
     "multimedia",
@@ -27,21 +27,21 @@
       "name": "book headphones",
       "tags": [
         "audiobook",
-        "reading",
-        "listening",
-        "sound",
+        "listen to book",
+        "headphones",
+        "audio",
         "story",
-        "fiction",
-        "novel",
-        "information",
-        "knowledge",
         "education",
-        "student",
         "study",
-        "learning",
-        "research"
+        "multimedia",
+        "listening"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audiobook listening interface",
+        "Language learning with audio",
+        "Podcast or audio story app",
+        "Accessibility audio feature"
+      ]
     }
   }
 }

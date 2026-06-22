@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "无障碍设置",
+    "视力护理产品",
+    "阅读辅助功能"
+  ],
   "name": "眼镜",
   "tags": [
     "眼镜",
-    "眼镜"
+    "视力",
+    "阅读",
+    "近视",
+    "老花",
+    "辅助",
+    "视障",
+    "光学"
   ],
   "categories": [
     "accessibility"
@@ -14,9 +24,19 @@
       "name": "glasses",
       "tags": [
         "glasses",
-        "spectacles"
+        "vision",
+        "reading",
+        "nearsighted",
+        "farsighted",
+        "assistive",
+        "visual impairment",
+        "optical"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Accessibility settings",
+        "Vision care products",
+        "Reading assistance features"
+      ]
     }
   }
 }

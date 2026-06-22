@@ -1,26 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用扫描功能",
+    "增强现实应用",
+    "物体检测系统"
+  ],
   "name": "扫描",
   "tags": [
+    "扫描",
     "二维码",
-    "条形码",
-    "结账",
+    "条码",
     "增强现实",
-    "阿尔",
-    "目标",
-    "监视",
-    "相机",
-    "镜头",
-    "焦点",
-    "框架",
-    "选择",
-    "盒子",
-    "边界",
-    "边界",
-    "面积",
-    "正方形",
-    "虚线"
+    "目标识别",
+    "边界检测",
+    "区域扫描"
   ],
   "categories": [
     "devices",
@@ -33,26 +26,19 @@
     "en": {
       "name": "scan",
       "tags": [
-        "qr-code",
+        "scan",
+        "QR code",
         "barcode",
-        "checkout",
         "augmented reality",
-        "ar",
-        "target",
-        "surveillance",
-        "camera",
-        "lens",
-        "focus",
-        "frame",
-        "select",
-        "box",
-        "boundary",
-        "bounds",
-        "area",
-        "square",
-        "dashed"
+        "target recognition",
+        "boundary detection",
+        "area scanning"
       ],
-      "use-cases": []
+      "use-cases": [
+        "General scanning functions",
+        "AR applications",
+        "Object detection systems"
+      ]
     }
   }
 }

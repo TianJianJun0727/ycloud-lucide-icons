@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "社交媒体标签",
+    "数字符号输入",
+    "话题分类"
+  ],
   "name": "哈希",
   "tags": [
-    "主题标签",
-    "数量",
-    "英镑"
+    "标签",
+    "井号",
+    "数字",
+    "话题",
+    "社交媒体"
   ],
   "categories": [
     "text",
@@ -17,9 +23,15 @@
       "tags": [
         "hashtag",
         "number",
-        "pound"
+        "pound",
+        "topic",
+        "social media"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Social media tagging",
+        "Number sign input",
+        "Topic categorization"
+      ]
     }
   }
 }

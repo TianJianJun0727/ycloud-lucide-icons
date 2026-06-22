@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下载文件夹",
+    "导入目录",
+    "文件接收位置"
+  ],
   "name": "文件夹下",
   "tags": [
-    "目录",
     "下载",
     "导入",
-    "导出"
+    "接收",
+    "下拉",
+    "获取"
   ],
   "categories": [
     "files",
@@ -16,12 +21,17 @@
     "en": {
       "name": "folder down",
       "tags": [
-        "directory",
         "download",
         "import",
-        "export"
+        "receive",
+        "dropdown",
+        "fetch"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Download folder",
+        "Import directory",
+        "File reception location"
+      ]
     }
   }
 }

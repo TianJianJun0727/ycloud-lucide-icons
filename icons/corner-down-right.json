@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本缩进或制表符操作",
+    "右下方向指示",
+    "代码格式化或缩进"
+  ],
   "name": "角落下右",
   "tags": [
     "箭头",
     "缩进",
-    "选项卡"
+    "制表符",
+    "右下",
+    "方向"
   ],
   "categories": [
     "arrows",
@@ -18,9 +24,15 @@
       "tags": [
         "arrow",
         "indent",
-        "tab"
+        "tab",
+        "down right",
+        "direction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text indent or tab action",
+        "Down-right directional indicator",
+        "Code formatting or indentation"
+      ]
     }
   }
 }

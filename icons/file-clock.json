@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件版本历史",
+    "审计日志文件",
+    "时间戳文档"
+  ],
   "name": "文件时钟",
   "tags": [
     "历史",
     "日志",
-    "时钟"
+    "时间",
+    "记录",
+    "存档"
   ],
   "categories": [
     "files",
@@ -17,9 +23,15 @@
       "tags": [
         "history",
         "log",
-        "clock"
+        "time",
+        "record",
+        "archive"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File version history",
+        "Audit log file",
+        "Time-stamped document"
+      ]
     }
   }
 }

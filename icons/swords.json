@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多人战斗",
+    "战斗游戏界面",
+    "对决指示器",
+    "冲突解决"
+  ],
   "name": "双剑",
   "tags": [
-    "战斗",
-    "挑战",
+    "双剑",
+    "武器",
     "游戏",
-    "战争",
-    "武器"
+    "战斗",
+    "对决",
+    "冲突"
   ],
   "categories": [
     "gaming",
@@ -17,13 +23,19 @@
     "en": {
       "name": "swords",
       "tags": [
+        "swords",
+        "weapon",
+        "gaming",
         "battle",
-        "challenge",
-        "game",
-        "war",
-        "weapon"
+        "duel",
+        "conflict"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multiplayer combat",
+        "Battle game interface",
+        "Duel indicator",
+        "Conflict resolution"
+      ]
     }
   }
 }

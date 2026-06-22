@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示9点时间",
+    "上午会议时间或深夜",
+    "时间轴和日程图标"
+  ],
   "name": "时钟9",
   "tags": [
     "时间",
-    "手表",
-    "闹钟"
+    "时钟",
+    "时刻",
+    "9点",
+    "上午",
+    "晚上"
   ],
   "categories": [
     "time"
@@ -15,10 +22,17 @@
       "name": "clock 9",
       "tags": [
         "time",
-        "watch",
-        "alarm"
+        "clock",
+        "hour",
+        "9",
+        "nine",
+        "o'clock"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Time display for 9:00",
+        "Morning meeting time or late night",
+        "Timeline and schedule icons"
+      ]
     }
   }
 }

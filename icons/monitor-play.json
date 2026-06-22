@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放开始",
+    "虚拟机启动",
+    "应用启动屏幕"
+  ],
   "name": "显示器播放",
   "tags": [
-    "电视",
-    "屏幕",
-    "显示",
-    "桌面",
-    "视频",
-    "电影",
-    "电影",
-    "跑步",
-    "开始",
-    "启动",
-    "虚拟机",
-    "虚拟机"
+    "播放",
+    "视频播放",
+    "电影播放",
+    "虚拟机启动",
+    "开始运行"
   ],
   "categories": [
     "connectivity",
@@ -25,20 +22,17 @@
     "en": {
       "name": "monitor play",
       "tags": [
-        "tv",
-        "screen",
-        "display",
-        "desktop",
-        "video",
-        "movie",
-        "film",
-        "running",
-        "start",
-        "boot",
-        "virtual machine",
-        "vm"
+        "play",
+        "video play",
+        "movie play",
+        "virtual machine start",
+        "start running"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media playback start",
+        "Virtual machine boot",
+        "Application launch screen"
+      ]
     }
   }
 }

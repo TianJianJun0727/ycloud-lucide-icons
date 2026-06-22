@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "云同步状态",
+    "文件夹同步",
+    "备份过程指示器"
+  ],
   "name": "文件夹同步",
   "tags": [
-    "目录",
-    "同步",
-    "同步",
-    "刷新",
-    "重新连接",
-    "转移",
-    "备份"
+    "文件夹同步",
+    "目录同步",
+    "数据同步",
+    "备份",
+    "刷新"
   ],
   "categories": [
     "files",
@@ -19,15 +21,17 @@
     "en": {
       "name": "folder sync",
       "tags": [
-        "directory",
-        "synchronize",
-        "synchronise",
-        "refresh",
-        "reconnect",
-        "transfer",
-        "backup"
+        "folder sync",
+        "directory sync",
+        "data sync",
+        "backup",
+        "refresh"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloud sync status",
+        "Folder synchronization",
+        "Backup process indicator"
+      ]
     }
   }
 }

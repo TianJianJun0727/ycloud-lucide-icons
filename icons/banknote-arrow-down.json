@@ -1,24 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "取款交易",
+    "支出跟踪",
+    "退款状态"
+  ],
   "name": "纸币箭头下",
   "tags": [
-    "账单",
-    "货币",
-    "钱",
-    "付款",
-    "资金",
-    "交易",
-    "现金",
-    "金融",
-    "撤回",
-    "费用",
-    "出",
-    "支付",
-    "退款",
-    "借方",
     "支出",
-    "减少"
+    "取款",
+    "付款",
+    "退款",
+    "扣款",
+    "资金减少",
+    "交易",
+    "现金"
   ],
   "categories": [
     "finance"
@@ -27,24 +23,20 @@
     "en": {
       "name": "banknote arrow down",
       "tags": [
-        "bill",
-        "currency",
-        "money",
-        "payment",
-        "funds",
-        "transaction",
-        "cash",
-        "finance",
-        "withdraw",
         "expense",
-        "out",
-        "payout",
+        "withdrawal",
+        "payment",
         "refund",
         "debit",
-        "spending",
-        "decrease"
+        "decrease",
+        "transaction",
+        "cash"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Withdrawal transaction",
+        "Expense tracking",
+        "Refund status"
+      ]
     }
   }
 }

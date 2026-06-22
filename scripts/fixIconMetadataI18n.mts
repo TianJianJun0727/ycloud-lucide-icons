@@ -16,6 +16,14 @@ const isStringArray = (value: unknown): value is string[] =>
   Array.isArray(value) && value.every((item) => typeof item === 'string');
 const isMeaningfulArray = (value: unknown): value is string[] =>
   Array.isArray(value) && value.every((item) => typeof item === 'string') && value.length > 0;
+const uniqueList = (items: string[]) =>
+  items.filter((item, index, list) => list.indexOf(item) === index);
+const categoriesDir = path.resolve('categories');
+
+type CategoryContext = {
+  title?: string;
+  englishTitle?: string;
+};
 
 const iconI18nSchema = z.object({
   nameZh: z.string(),
@@ -31,6 +39,46 @@ const categoryI18nSchema = z.object({
   titleEn: z.string(),
 });
 
+async function loadCategoryContext() {
+  const categoryMap = new Map<string, CategoryContext>();
+
+  try {
+    const categoryFiles = (await fs.readdir(categoriesDir)).filter((file) =>
+      file.endsWith('.json'),
+    );
+
+    await Promise.all(
+      categoryFiles.map(async (file) => {
+        const key = path.basename(file, '.json');
+        const metadata = JSON.parse(await fs.readFile(path.join(categoriesDir, file), 'utf-8'));
+
+        categoryMap.set(key, {
+          title: metadata.title,
+          englishTitle: metadata.i18n?.en?.title,
+        });
+      }),
+    );
+  } catch {
+    // Keep metadata fixing usable for isolated test fixtures.
+  }
+
+  return categoryMap;
+}
+
+const categoryContext = await loadCategoryContext();
+
+function getIconCategoryContext(metadata: Record<string, any>) {
+  if (!Array.isArray(metadata.categories)) {
+    return [];
+  }
+
+  return metadata.categories.map((category: string) => ({
+    key: category,
+    title: categoryContext.get(category)?.title ?? '',
+    englishTitle: categoryContext.get(category)?.englishTitle ?? '',
+  }));
+}
+
 function needsIconAiFix(metadata: Record<string, any>) {
   const currentName = String(metadata.name ?? '');
   const currentEnglishName = String(metadata.i18n?.en?.name ?? '');
@@ -43,6 +91,13 @@ function needsIconAiFix(metadata: Record<string, any>) {
   const hasChineseUseCases = isMeaningfulArray(currentUseCases);
   const hasEnglishUseCases = isMeaningfulArray(currentEnglishUseCases);
   const hasAnyUseCases = hasChineseUseCases || hasEnglishUseCases;
+  const hasInvalidUseCases =
+    !isChineseUseCasesArray ||
+    !isEnglishUseCasesArray ||
+    !hasAnyUseCases ||
+    hasChineseUseCases !== hasEnglishUseCases ||
+    (hasChineseUseCases && currentUseCases.some((useCase) => !hasCjk(useCase))) ||
+    (hasEnglishUseCases && currentEnglishUseCases.some((useCase) => hasCjk(useCase)));
 
   return {
     shouldFixName: !currentName || !hasCjk(currentName),
@@ -54,15 +109,7 @@ function needsIconAiFix(metadata: Record<string, any>) {
     shouldFixTags: !isMeaningfulArray(currentTags) || currentTags.every((tag) => !hasCjk(tag)),
     shouldFixEnglishTags:
       !isMeaningfulArray(currentEnglishTags) || currentEnglishTags.some((tag) => hasCjk(tag)),
-    shouldNormalizeEmptyUseCases:
-      !hasAnyUseCases && (!isChineseUseCasesArray || !isEnglishUseCasesArray),
-    shouldFixUseCases:
-      hasAnyUseCases &&
-      (!isChineseUseCasesArray ||
-        !isEnglishUseCasesArray ||
-        hasChineseUseCases !== hasEnglishUseCases ||
-        (hasChineseUseCases && currentUseCases.some((useCase) => !hasCjk(useCase))) ||
-        (hasEnglishUseCases && currentEnglishUseCases.some((useCase) => hasCjk(useCase)))),
+    shouldFixUseCases: hasInvalidUseCases,
   };
 }
 
@@ -85,7 +132,7 @@ function assertAiClient(file: string) {
 
   if (!ai) {
     throw new Error(
-      `${file} needs bilingual metadata fixes, but no AI provider is configured. Set OPENAI_API_KEY or run in GitHub Actions with models:read permissions.`,
+      `${file} needs bilingual metadata fixes, but no AI provider is configured. Set OPENROUTER_API_KEY or run in GitHub Actions with models:read permissions.`,
     );
   }
 
@@ -99,7 +146,6 @@ async function completeIconMetadata(file: string, metadata: Record<string, any>)
     shouldFixEnglishName,
     shouldFixTags,
     shouldFixEnglishTags,
-    shouldNormalizeEmptyUseCases,
     shouldFixUseCases,
   } = needsIconAiFix(metadata);
 
@@ -113,11 +159,6 @@ async function completeIconMetadata(file: string, metadata: Record<string, any>)
 
   if (Object.prototype.hasOwnProperty.call(next.i18n.en, 'categories')) {
     delete next.i18n.en.categories;
-  }
-
-  if (shouldNormalizeEmptyUseCases) {
-    next['use-cases'] = [];
-    next.i18n.en['use-cases'] = [];
   }
 
   if (
@@ -134,8 +175,11 @@ async function completeIconMetadata(file: string, metadata: Record<string, any>)
   console.log(`Using ${ai.provider} for icon metadata i18n fixes with model ${ai.model}.`);
 
   const current = {
+    libraryContext:
+      'This item is one icon in the YCloud Icons library, a general-purpose SVG icon set based on Lucide-style icon names. Translate metadata for icon search and display, not as standalone dictionary entries.',
     file: iconName,
     name: metadata.name ?? '',
+    categoryContext: getIconCategoryContext(metadata),
     tags: metadata.tags ?? [],
     useCases: metadata['use-cases'] ?? [],
     englishName: metadata.i18n?.en?.name ?? '',
@@ -146,13 +190,32 @@ async function completeIconMetadata(file: string, metadata: Record<string, any>)
   const fixed = await ai.completeJson(
     `Complete bilingual metadata for a YCloud icon.
 
+Library context:
+- YCloud Icons is a general-purpose SVG icon library based on Lucide-style icon names.
+- The file name is the canonical English symbol name and is often more important than individual legacy tags.
+- Categories are coarse semantic buckets. Use them to resolve ambiguous English words and decide the primary meaning.
+- Existing tags and use-cases may contain literal translations, old aliases, typos, or weak secondary meanings. Treat them as hints, not as facts that must be preserved.
+- Use-cases describe product/UI scenarios and must follow the icon's primary meaning in this icon library.
+
 Rules:
 - nameZh and tagsZh must be Simplified Chinese for UI display and search.
 - nameEn and tagsEn must be natural English.
-- If either language already has tags, translate them into the other language and keep the same length and order.
+- Treat English metadata as the source of truth: file, nameEn, tagsEn, and useCasesEn.
+- Use Chinese metadata only as reference for existing wording style; do not let bad Chinese translations override English source semantics.
+- Generate Chinese tags by translating from English source metadata, using category context and use-cases to resolve ambiguity. Do not translate English tags word by word.
+- If an English tag has multiple meanings, choose the Chinese term that fits the category and use-cases.
+- Prefer natural Chinese UI/product search terms, such as "排列", "下载", "筛选", "急救", "波形". Avoid awkward dictionary words, machine translation, and rare transliterations.
+- Keep common technical proper nouns as-is when Chinese users search for them that way, such as API, CSS, JSON, SVG, GitHub.
+- Chinese tags and English tags do not need to have the same length or matching order.
+- Translate English tags into natural Chinese concepts, then merge duplicates and remove weak secondary meanings.
+- Prefer the icon's primary library meaning over secondary literal meanings. For example, if "bug" is in development context, use "错误", "缺陷", "调试", "排查"; do not keep animal terms just because "bug" can mean insect.
+- If categories contain development, software, debugging, or code context, prioritize the software meaning of "bug"; do not include "昆虫" or "甲虫" unless the animal meaning is the primary icon usage.
 - useCasesZh must be Simplified Chinese and useCasesEn must be English.
-- Empty use-cases are allowed only when both languages are empty.
-- If either language already has use-cases, translate them into the other language and keep the same length and order.
+- If both languages have empty use-cases, generate concise use-cases for the icon's primary library meaning.
+- If both languages have empty use-cases, generate useCasesEn first from the icon's English source meaning, then translate them into useCasesZh.
+- If useCasesEn exists, treat it as source and translate/polish useCasesZh from it; keep the same length and order.
+- If only useCasesZh exists, translate it into useCasesEn, then polish useCasesZh from the English source; keep the same length and order.
+- Do not generate use-cases from weak secondary meanings unless categories or current use-cases clearly make that meaning primary.
 - Do not include the word "icon".
 - Keep tags short and useful for search.
 - Keep use-cases short, concrete, and without trailing punctuation.
@@ -173,11 +236,11 @@ ${JSON.stringify(current, null, 2)}`,
   }
 
   if (shouldFixTags) {
-    next.tags = fixed.tagsZh;
+    next.tags = uniqueList(fixed.tagsZh);
   }
 
   if (shouldFixEnglishTags) {
-    next.i18n.en.tags = fixed.tagsEn;
+    next.i18n.en.tags = uniqueList(fixed.tagsEn);
   }
 
   if (shouldFixUseCases) {
@@ -185,10 +248,8 @@ ${JSON.stringify(current, null, 2)}`,
     const currentEnglishUseCases = isStringArray(metadata.i18n?.en?.['use-cases'])
       ? metadata.i18n.en['use-cases']
       : [];
-    const bothEmpty = currentUseCases.length === 0 && currentEnglishUseCases.length === 0;
-
-    next['use-cases'] = bothEmpty ? [] : fixed.useCasesZh;
-    next.i18n.en['use-cases'] = bothEmpty ? [] : fixed.useCasesEn;
+    next['use-cases'] = uniqueList(fixed.useCasesZh);
+    next.i18n.en['use-cases'] = uniqueList(fixed.useCasesEn);
   }
 
   return next;

@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收藏日历事件",
+    "标记重要日期",
+    "订阅喜爱活动",
+    "纪念日提醒"
+  ],
   "name": "日历爱心",
   "tags": [
     "日期",
-    "月",
-    "年",
-    "事件",
-    "心",
-    "最喜欢的",
-    "订阅",
-    "情人节"
+    "日历",
+    "收藏",
+    "喜欢",
+    "重要事件",
+    "纪念日",
+    "爱心",
+    "订阅"
   ],
   "categories": [
     "time"
@@ -20,15 +25,20 @@
       "name": "calendar heart",
       "tags": [
         "date",
-        "month",
-        "year",
-        "event",
+        "calendar",
+        "favorite",
+        "like",
+        "important event",
+        "anniversary",
         "heart",
-        "favourite",
-        "subscribe",
-        "valentines day"
+        "subscribe"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Favorite a calendar event",
+        "Mark important date",
+        "Subscribe to loved event",
+        "Anniversary reminder"
+      ]
     }
   }
 }

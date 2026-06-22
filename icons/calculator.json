@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "财务计算工具",
+    "结账价格汇总",
+    "数学教育应用"
+  ],
   "name": "计算器",
   "tags": [
-    "计数",
-    "计算机器"
+    "计算器",
+    "计算",
+    "数学",
+    "工具",
+    "设备",
+    "算术"
   ],
   "categories": [
     "math",
@@ -14,10 +22,18 @@
     "en": {
       "name": "calculator",
       "tags": [
-        "count",
-        "calculating machine"
+        "calculator",
+        "calculation",
+        "math",
+        "tool",
+        "device",
+        "arithmetic"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Financial calculation tool",
+        "Checkout price summary",
+        "Math education app"
+      ]
     }
   }
 }

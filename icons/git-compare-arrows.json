@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码差异查看器",
+    "分支比较工具",
+    "文件版本差异"
+  ],
   "name": "Git比较箭头",
   "tags": [
-    "代码",
+    "比较",
+    "差异",
     "版本控制",
-    "差异"
+    "Git",
+    "代码对比",
+    "箭头"
   ],
   "categories": [
     "development",
@@ -15,11 +22,18 @@
     "en": {
       "name": "git compare arrows",
       "tags": [
-        "code",
+        "compare",
+        "diff",
         "version control",
-        "diff"
+        "Git",
+        "code comparison",
+        "arrows"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code diff viewer",
+        "Branch comparison tool",
+        "File version difference"
+      ]
     }
   }
 }

@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户成就徽章",
+    "认证文件标识",
+    "奖励文件标记",
+    "验证状态显示"
+  ],
   "name": "文件徽章",
   "tags": [
-    "奖项",
-    "成就",
     "徽章",
-    "玫瑰花结",
-    "奖品",
-    "获胜者"
+    "认证",
+    "成就",
+    "奖励",
+    "标识",
+    "验证"
   ],
   "categories": [
     "files"
@@ -25,14 +30,19 @@
     "en": {
       "name": "file badge",
       "tags": [
-        "award",
-        "achievement",
         "badge",
-        "rosette",
-        "prize",
-        "winner"
+        "certification",
+        "achievement",
+        "reward",
+        "identifier",
+        "verification"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User achievement badges",
+        "Certified file identification",
+        "Reward file markers",
+        "Verification status display"
+      ]
     }
   }
 }

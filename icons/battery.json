@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用电池或电源符号",
+    "设备电源指示",
+    "能量水平显示"
+  ],
   "name": "电池",
   "tags": [
+    "电池",
     "电源",
-    "电力",
+    "电量",
     "能量",
-    "累加器",
-    "收费"
+    "设备"
   ],
   "categories": [
     "connectivity",
@@ -17,13 +21,17 @@
     "en": {
       "name": "battery",
       "tags": [
+        "battery",
         "power",
         "electricity",
         "energy",
-        "accumulator",
-        "charge"
+        "device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Generic battery or power symbol",
+        "Device power source indicator",
+        "Energy level display"
+      ]
     }
   }
 }

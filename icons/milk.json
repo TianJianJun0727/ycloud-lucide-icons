@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "乳制品图标",
+    "饮料菜单项",
+    "营养信息显示"
+  ],
   "name": "牛奶",
   "tags": [
-    "乳糖",
-    "瓶子",
+    "牛奶",
+    "乳制品",
     "饮料",
-    "喝",
-    "水",
-    "饮食"
+    "营养",
+    "早餐"
   ],
   "categories": [
     "food-beverage"
@@ -17,14 +20,17 @@
     "en": {
       "name": "milk",
       "tags": [
-        "lactose",
-        "bottle",
+        "milk",
+        "dairy",
         "beverage",
-        "drink",
-        "water",
-        "diet"
+        "nutrition",
+        "breakfast"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dairy product icon",
+        "Beverage menu item",
+        "Nutritional info display"
+      ]
     }
   }
 }

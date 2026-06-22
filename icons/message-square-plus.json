@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "新消息按钮",
+    "添加评论",
+    "编写聊天"
+  ],
   "name": "消息方形加号",
   "tags": [
-    "评论",
+    "添加",
+    "新建",
+    "消息",
+    "创建",
     "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
-    "添加"
+    "评论",
+    "加号",
+    "发起"
   ],
   "categories": [
     "social"
@@ -18,15 +23,20 @@
     "en": {
       "name": "message square plus",
       "tags": [
-        "comment",
+        "add",
+        "new",
+        "message",
+        "create",
         "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "add"
+        "comment",
+        "plus",
+        "compose"
       ],
-      "use-cases": []
+      "use-cases": [
+        "New message button",
+        "Add a comment",
+        "Compose a chat"
+      ]
     }
   }
 }

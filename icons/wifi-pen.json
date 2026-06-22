@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑Wi-Fi网络设置",
+    "配置无线连接详细信息"
+  ],
   "name": "无线网络笔",
   "tags": [
-    "编辑",
-    "Wi-Fi",
-    "笔",
-    "改变",
-    "网络"
+    "编辑Wi-Fi",
+    "配置网络",
+    "修改设置",
+    "网络编辑",
+    "Wi-Fi设置"
   ],
   "categories": [
     "connectivity",
@@ -17,13 +20,16 @@
     "en": {
       "name": "wifi pen",
       "tags": [
-        "edit",
-        "wifi",
-        "pen",
-        "change",
-        "network"
+        "edit wifi",
+        "configure network",
+        "modify settings",
+        "network edit",
+        "wifi settings"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Editing Wi-Fi network settings",
+        "Configuring wireless connection details"
+      ]
     }
   }
 }

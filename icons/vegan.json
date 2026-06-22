@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食品菜单按饮食偏好筛选",
+    "可持续性或生活方式应用",
+    "食谱网站分类",
+    "杂货配送产品标签"
+  ],
   "name": "素食",
   "tags": [
-    "素食主义者",
-    "果食主义者",
-    "草食性的",
-    "动物权利",
-    "饮食"
+    "纯素",
+    "素食",
+    "饮食",
+    "植物性",
+    "环保",
+    "健康"
   ],
   "categories": [
     "food-beverage",
@@ -17,13 +23,19 @@
     "en": {
       "name": "vegan",
       "tags": [
+        "vegan",
+        "plant-based",
+        "diet",
         "vegetarian",
-        "fruitarian",
-        "herbivorous",
-        "animal rights",
-        "diet"
+        "sustainable",
+        "healthy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food menu filtering for dietary preferences",
+        "Sustainability or lifestyle apps",
+        "Recipe website categories",
+        "Grocery delivery product tags"
+      ]
     }
   }
 }

@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑器中拆分表格单元格",
+    "电子表格单元格格式化",
+    "数据分离界面"
+  ],
   "name": "表格单元格拆分",
   "tags": [
+    "拆分单元格",
+    "表格",
     "电子表格",
-    "网格",
-    "行"
+    "单元格操作"
   ],
   "categories": [
     "text",
@@ -15,11 +20,16 @@
     "en": {
       "name": "table cells split",
       "tags": [
+        "split cells",
+        "table",
         "spreadsheet",
-        "grid",
-        "row"
+        "cell operation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Split table cells in an editor",
+        "Spreadsheet cell formatting",
+        "Data separation UI"
+      ]
     }
   }
 }

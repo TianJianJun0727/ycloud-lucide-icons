@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据备份界面",
+    "服务器管理",
+    "文件下载操作"
+  ],
   "name": "硬盘驱动器下载",
   "tags": [
-    "电脑",
+    "硬盘下载",
+    "数据存储",
     "服务器",
-    "记忆",
-    "数据",
-    "固态硬盘",
-    "磁盘",
-    "硬盘",
-    "保存"
+    "文件保存",
+    "SSD"
   ],
   "categories": [
     "development",
@@ -22,16 +23,17 @@
     "en": {
       "name": "hard drive download",
       "tags": [
-        "computer",
+        "hard drive download",
+        "data storage",
         "server",
-        "memory",
-        "data",
-        "ssd",
-        "disk",
-        "hard disk",
-        "save"
+        "file save",
+        "SSD"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data backup interfaces",
+        "Server management",
+        "File download actions"
+      ]
     }
   }
 }

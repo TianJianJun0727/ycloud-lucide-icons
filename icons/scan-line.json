@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "条码扫描器",
+    "零售收银系统",
+    "库存扫描"
+  ],
   "name": "扫描线条",
   "tags": [
-    "结账",
-    "直到",
-    "购物车",
-    "交易",
-    "购买",
-    "买",
-    "产品",
-    "包装",
-    "零售",
-    "消费者",
-    "二维码",
-    "虚线"
+    "线性扫描",
+    "条码读取",
+    "收银扫描",
+    "零售设备",
+    "支付终端",
+    "商品识别"
   ],
   "categories": [
     "devices",
@@ -24,20 +22,18 @@
     "en": {
       "name": "scan line",
       "tags": [
-        "checkout",
-        "till",
-        "cart",
-        "transaction",
-        "purchase",
-        "buy",
-        "product",
-        "packaging",
-        "retail",
-        "consumer",
-        "qr-code",
-        "dashed"
+        "linear scan",
+        "barcode reading",
+        "checkout scanning",
+        "retail device",
+        "payment terminal",
+        "product identification"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Barcode scanners",
+        "Retail checkout systems",
+        "Inventory scanning"
+      ]
     }
   }
 }

@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备状态指示",
+    "电源管理界面",
+    "断开连接操作"
+  ],
   "name": "拔出",
   "tags": [
-    "电力",
-    "能量",
-    "电子产品",
-    "插座",
-    "插座",
-    "断开连接"
+    "拔插头",
+    "断开连接",
+    "电源断开",
+    "设备离线",
+    "断电"
   ],
   "categories": [
     "devices",
@@ -18,14 +21,17 @@
     "en": {
       "name": "unplug",
       "tags": [
-        "electricity",
-        "energy",
-        "electronics",
-        "socket",
-        "outlet",
-        "disconnect"
+        "unplug",
+        "disconnect",
+        "power off",
+        "device offline",
+        "power disconnect"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device status indicator",
+        "Power management interface",
+        "Disconnect operation"
+      ]
     }
   }
 }

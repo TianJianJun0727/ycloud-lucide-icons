@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "科学教育材料",
+    "物理研究界面",
+    "化学应用",
+    "能源技术显示"
+  ],
   "name": "原子",
   "tags": [
-    "原子的",
-    "核",
-    "物理学",
+    "原子",
+    "核物理",
     "粒子",
     "元素",
     "分子",
-    "电力",
     "能量",
-    "化学"
+    "化学",
+    "科学"
   ],
   "categories": [
     "science"
@@ -26,11 +30,15 @@
         "particle",
         "element",
         "molecule",
-        "electricity",
         "energy",
         "chemistry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Science education materials",
+        "Physics research interfaces",
+        "Chemistry applications",
+        "Energy technology displays"
+      ]
     }
   }
 }

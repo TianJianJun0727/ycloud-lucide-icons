@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "运动器材租赁页面",
+    "户外活动预订",
+    "探险旅游网站"
+  ],
   "name": "皮划艇",
   "tags": [
     "皮划艇",
     "船",
-    "桨",
-    "水",
-    "运动",
-    "休闲",
-    "冒险",
+    "划桨",
+    "水上运动",
     "户外",
-    "设备",
-    "湖",
-    "海洋"
+    "休闲",
+    "冒险"
   ],
   "categories": [
     "transportation"
@@ -25,16 +25,16 @@
         "kayak",
         "boat",
         "paddle",
-        "water",
-        "sport",
-        "recreation",
-        "adventure",
+        "water sport",
         "outdoors",
-        "equipment",
-        "lake",
-        "ocean"
+        "recreation",
+        "adventure"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sports equipment rental page",
+        "Outdoor activity booking",
+        "Adventure travel website"
+      ]
     }
   }
 }

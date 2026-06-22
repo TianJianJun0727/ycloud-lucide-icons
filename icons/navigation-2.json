@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "逐向导航界面",
+    "地图上的位置图钉",
+    "指南针应用界面"
+  ],
   "name": "导航2",
   "tags": [
-    "位置",
-    "旅行"
+    "导航",
+    "定位",
+    "GPS",
+    "指南针",
+    "旅行",
+    "方向",
+    "地图"
   ],
   "categories": [
     "navigation"
@@ -13,10 +22,19 @@
     "en": {
       "name": "navigation 2",
       "tags": [
+        "navigation",
         "location",
-        "travel"
+        "GPS",
+        "compass",
+        "travel",
+        "direction",
+        "map"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Turn-by-turn navigation UI",
+        "Location pin on map",
+        "Compass app interface"
+      ]
     }
   }
 }

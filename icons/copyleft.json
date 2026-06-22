@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "开源许可证标识",
+    "左版许可证符号",
+    "自由软件归属"
+  ],
   "name": "开放版权",
   "tags": [
-    "许可证"
+    "版权",
+    "许可证",
+    "开源",
+    "左版",
+    "自由软件"
   ],
   "categories": [
     "text"
@@ -12,9 +20,16 @@
     "en": {
       "name": "copyleft",
       "tags": [
-        "licence"
+        "copyleft",
+        "license",
+        "open source",
+        "free software"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Open source license indicator",
+        "Copyleft license symbol",
+        "Free software attribution"
+      ]
     }
   }
 }

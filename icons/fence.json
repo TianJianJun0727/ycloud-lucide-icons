@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图上的物业边界",
+    "花园围栏设置",
+    "家装材料"
+  ],
   "name": "栅栏",
   "tags": [
-    "纠察队",
-    "面板",
-    "木制品",
-    "DIY",
-    "材料",
-    "郊区的",
+    "围栏",
+    "栅栏",
+    "边界",
     "花园",
-    "财产",
-    "领土"
+    "护栏",
+    "木工"
   ],
   "categories": [
     "home",
@@ -21,17 +22,18 @@
     "en": {
       "name": "fence",
       "tags": [
-        "picket",
-        "panels",
-        "woodwork",
-        "diy",
-        "materials",
-        "suburban",
+        "fence",
+        "railing",
+        "boundary",
         "garden",
-        "property",
-        "territory"
+        "barrier",
+        "woodwork"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Property boundary on map",
+        "Garden fence setting",
+        "Home improvement material"
+      ]
     }
   }
 }

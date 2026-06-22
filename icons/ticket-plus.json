@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "购买新活动门票",
+    "添加票券到购物车",
+    "预订入场通行证"
+  ],
   "name": "票券加号",
   "tags": [
-    "条目",
-    "通过",
-    "优惠券",
-    "事件",
-    "音乐会",
-    "显示",
-    "书",
-    "购买",
+    "票务",
+    "购票",
     "添加",
-    "+"
+    "预订",
+    "活动",
+    "新增",
+    "加号"
   ],
   "categories": [
     "transportation"
@@ -21,18 +22,19 @@
     "en": {
       "name": "ticket plus",
       "tags": [
-        "entry",
-        "pass",
-        "voucher",
-        "event",
-        "concert",
-        "show",
-        "book",
+        "ticket",
         "purchase",
         "add",
-        "+"
+        "book",
+        "event",
+        "new",
+        "plus"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Buy a new event ticket",
+        "Add a ticket to cart",
+        "Book an admission pass"
+      ]
     }
   }
 }

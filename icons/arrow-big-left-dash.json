@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "快速返回导航",
+    "游戏左转控制",
+    "快速倒回操作"
+  ],
   "name": "箭头大左短横线",
   "tags": [
-    "上一个",
+    "向左",
     "返回",
     "方向",
     "西",
-    "转",
-    "角落"
+    "转弯",
+    "快速",
+    "后退"
   ],
   "categories": [
     "arrows",
@@ -18,14 +23,19 @@
     "en": {
       "name": "arrow big left dash",
       "tags": [
-        "previous",
+        "left",
         "back",
         "direction",
         "west",
         "turn",
-        "corner"
+        "quick",
+        "backwards"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Quick back navigation",
+        "Game control for left turn",
+        "Fast rewind action"
+      ]
     }
   }
 }

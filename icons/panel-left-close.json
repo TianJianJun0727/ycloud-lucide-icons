@@ -1,13 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "左侧面板收起",
+    "侧边栏关闭",
+    "界面最小化",
+    "导航隐藏"
+  ],
   "name": "面板左关闭",
   "tags": [
-    "小学",
-    "抽屉",
+    "面板",
+    "左侧",
+    "关闭",
     "隐藏",
-    "雪佛龙",
-    "<"
+    "折叠",
+    "UI控件",
+    "侧边栏"
   ],
   "categories": [
     "layout",
@@ -25,13 +32,20 @@
     "en": {
       "name": "panel left close",
       "tags": [
-        "primary",
-        "drawer",
+        "panel",
+        "left",
+        "close",
         "hide",
-        "chevron",
-        "<"
+        "collapse",
+        "UI control",
+        "sidebar"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Left panel collapse",
+        "Sidebar closing",
+        "Interface minimization",
+        "Navigation hide"
+      ]
     }
   }
 }

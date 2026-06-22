@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务管理界面",
+    "待办事项清单",
+    "项目完成状态"
+  ],
   "name": "列表待办",
   "tags": [
     "待办事项",
+    "任务列表",
+    "清单",
     "完成",
     "勾选",
-    "勾选",
-    "完成",
-    "任务",
     "项目",
-    "待定"
+    "待处理"
   ],
   "categories": [
     "text"
@@ -20,15 +23,18 @@
       "name": "list todo",
       "tags": [
         "todo",
+        "task list",
+        "checklist",
         "done",
         "check",
-        "tick",
-        "complete",
-        "tasks",
         "items",
         "pending"
       ],
-      "use-cases": []
+      "use-cases": [
+        "task management interface",
+        "todo checklist",
+        "item completion status"
+      ]
     }
   }
 }

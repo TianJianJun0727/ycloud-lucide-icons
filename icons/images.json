@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打开照片画廊",
+    "查看图片集",
+    "浏览幻灯片"
+  ],
   "name": "图片",
   "tags": [
-    "图片",
-    "照片",
-    "多个",
-    "复制",
+    "多图",
+    "图片集",
     "画廊",
-    "专辑",
-    "收藏",
-    "幻灯片",
-    "展示"
+    "相册",
+    "幻灯片"
   ],
   "categories": [
     "photography",
@@ -23,17 +23,17 @@
     "en": {
       "name": "images",
       "tags": [
-        "picture",
-        "photo",
-        "multiple",
-        "copy",
+        "multiple images",
         "gallery",
         "album",
         "collection",
-        "slideshow",
-        "showcase"
+        "slideshow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Open a photo gallery",
+        "View an image collection",
+        "Navigate a slideshow"
+      ]
     }
   }
 }

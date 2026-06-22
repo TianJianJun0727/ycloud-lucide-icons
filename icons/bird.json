@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "自然应用",
+    "动物保护网站",
+    "自由象征图标"
+  ],
   "name": "鸟",
   "tags": [
-    "和平",
-    "自由",
-    "翼",
-    "鸟类的",
-    "推特"
+    "鸟",
+    "动物",
+    "自然",
+    "飞行",
+    "自由"
   ],
   "categories": [
     "animals"
@@ -16,13 +20,17 @@
     "en": {
       "name": "bird",
       "tags": [
-        "peace",
-        "freedom",
-        "wing",
-        "avian",
-        "tweet"
+        "bird",
+        "animal",
+        "nature",
+        "flight",
+        "freedom"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Nature app",
+        "Animal conservation website",
+        "Freedom symbol icon"
+      ]
     }
   }
 }

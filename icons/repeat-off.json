@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在音乐播放器中禁用重复模式",
+    "将视频播放设置为仅播放一次",
+    "关闭自动重试循环"
+  ],
   "name": "重复关闭",
   "tags": [
-    "循环",
-    "箭头",
-    "反复出现的",
-    "再次"
+    "关闭重复",
+    "停止循环",
+    "单次播放",
+    "禁用循环"
   ],
   "categories": [
     "arrows",
@@ -16,12 +20,16 @@
     "en": {
       "name": "repeat off",
       "tags": [
-        "loop",
-        "arrows",
-        "recurring",
-        "again"
+        "repeat off",
+        "stop loop",
+        "play once",
+        "disable repeat"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable repeat mode in a music player",
+        "Set video playback to play once",
+        "Turn off automatic retry loops"
+      ]
     }
   }
 }

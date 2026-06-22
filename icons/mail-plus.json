@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "撰写新邮件操作",
+    "向对话添加收件人",
+    "创建新闻通讯活动"
+  ],
   "name": "邮件加号",
   "tags": [
-    "邮箱",
-    "消息",
-    "信",
-    "添加",
-    "创建",
-    "新建",
-    "作曲"
+    "新建邮件",
+    "添加邮件",
+    "撰写邮件",
+    "创建消息",
+    "邮件加号"
   ],
   "categories": [
     "mail"
@@ -18,15 +20,17 @@
     "en": {
       "name": "mail plus",
       "tags": [
-        "email",
-        "message",
-        "letter",
-        "add",
-        "create",
-        "new",
-        "compose"
+        "mail plus",
+        "compose email",
+        "new message",
+        "add mail",
+        "create letter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Compose new email action",
+        "Add recipient to thread",
+        "Create newsletter campaign"
+      ]
     }
   }
 }

@@ -90,6 +90,20 @@ function isStringArray(value: unknown): value is string[] {
   return Array.isArray(value) && value.every((item) => typeof item === 'string');
 }
 
+function assertUniqueArray(file: string, field: string, value: unknown) {
+  if (!isStringArray(value)) {
+    return;
+  }
+
+  const duplicates = value.filter((item, index, list) => list.indexOf(item) !== index);
+  if (duplicates.length > 0) {
+    report(
+      file,
+      `\`${field}\` must not contain duplicate values: ${[...new Set(duplicates)].join(', ')}.`,
+    );
+  }
+}
+
 function assertChineseText(file: string, field: string, value: unknown) {
   if (typeof value !== 'string' || value.trim().length === 0 || !hasCjk(value)) {
     report(file, `\`${field}\` must be Simplified Chinese.`);
@@ -232,18 +246,13 @@ for (const file of files) {
 
   assertChineseText(file, 'name', metadata.name);
   assertChineseTags(file, 'tags', metadata.tags);
+  assertUniqueArray(file, 'tags', metadata.tags);
   assertChineseUseCases(file, 'use-cases', metadata['use-cases']);
   assertEnglishText(file, 'i18n.en.name', englishMetadata?.name);
   assertEnglishTags(file, 'i18n.en.tags', englishMetadata?.tags);
+  assertUniqueArray(file, 'i18n.en.tags', englishMetadata?.tags);
   assertEnglishUseCases(file, 'i18n.en.use-cases', englishMetadata?.['use-cases']);
-
-  if (
-    isStringArray(metadata.tags) &&
-    isStringArray(englishMetadata?.tags) &&
-    metadata.tags.length !== englishMetadata.tags.length
-  ) {
-    report(file, '`tags` and `i18n.en.tags` must have the same length and order.');
-  }
+  assertUniqueArray(file, 'categories', categories);
 
   assertBilingualUseCases(file, metadata['use-cases'], englishMetadata?.['use-cases']);
 

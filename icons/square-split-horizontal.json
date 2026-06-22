@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "水平布局分割",
+    "分屏界面",
+    "面板分离"
+  ],
   "name": "方形拆分水平",
   "tags": [
-    "分裂",
-    "划分"
+    "水平分割",
+    "布局",
+    "拆分",
+    "分屏",
+    "并排"
   ],
   "categories": [
     "layout"
@@ -21,10 +28,17 @@
     "en": {
       "name": "square split horizontal",
       "tags": [
+        "horizontal split",
+        "layout",
         "split",
-        "divide"
+        "split screen",
+        "side by side"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Horizontal layout division",
+        "Split screen interface",
+        "Panel separation"
+      ]
     }
   }
 }

@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "选择印度卢比作为支付货币",
+    "显示印度卢比价格",
+    "面向印度的金融应用"
+  ],
   "name": "印度卢比",
   "tags": [
+    "印度卢比",
     "货币",
-    "钱",
-    "付款"
+    "印度",
+    "付款",
+    "INR"
   ],
   "categories": [
     "finance"
@@ -14,11 +20,17 @@
     "en": {
       "name": "indian rupee",
       "tags": [
+        "Indian rupee",
         "currency",
-        "money",
-        "payment"
+        "India",
+        "payment",
+        "INR"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Select INR as payment currency",
+        "Show Indian rupee price",
+        "Financial app for India"
+      ]
     }
   }
 }

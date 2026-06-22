@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "航班状态到达显示",
+    "旅行行程",
+    "机场信息系统"
+  ],
   "name": "飞机降落",
   "tags": [
+    "飞机降落",
     "到达",
-    "飞机",
+    "航空",
     "旅行",
-    "飞机",
-    "着陆"
+    "交通"
   ],
   "categories": [
     "transportation",
@@ -17,13 +21,17 @@
     "en": {
       "name": "plane landing",
       "tags": [
+        "plane landing",
         "arrival",
-        "plane",
-        "trip",
-        "airplane",
-        "landing"
+        "aviation",
+        "travel",
+        "transportation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Flight status arrival display",
+        "Travel itinerary",
+        "Airport information system"
+      ]
     }
   }
 }

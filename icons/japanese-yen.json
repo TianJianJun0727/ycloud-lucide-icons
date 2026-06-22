@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "日元货币选择器",
+    "日元价格显示",
+    "日本金融仪表板"
+  ],
   "name": "日元日元",
   "tags": [
+    "日元",
     "货币",
-    "钱",
-    "付款"
+    "金钱",
+    "支付",
+    "金融",
+    "日本"
   ],
   "categories": [
     "finance"
@@ -14,11 +21,18 @@
     "en": {
       "name": "japanese yen",
       "tags": [
+        "yen",
         "currency",
         "money",
-        "payment"
+        "payment",
+        "finance",
+        "japan"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Currency selector for Japanese Yen",
+        "Price display in JPY",
+        "Financial dashboard for Japan"
+      ]
     }
   }
 }

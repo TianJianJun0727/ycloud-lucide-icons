@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI元素展开控件",
+    "全屏模式切换",
+    "内容缩放界面",
+    "布局调整操作"
+  ],
   "name": "展开",
   "tags": [
-    "规模",
+    "展开",
+    "放大",
     "全屏",
     "最大化",
-    "最小化",
-    "合同"
+    "缩放"
   ],
   "categories": [
     "text",
@@ -17,13 +22,18 @@
     "en": {
       "name": "expand",
       "tags": [
-        "scale",
+        "expand",
+        "enlarge",
         "fullscreen",
         "maximize",
-        "minimize",
-        "contract"
+        "zoom"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI element expansion controls",
+        "Fullscreen mode toggles",
+        "Content zoom interfaces",
+        "Layout resizing actions"
+      ]
     }
   }
 }

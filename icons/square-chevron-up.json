@@ -1,21 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收起内容控件",
+    "向上导航",
+    "数学运算"
+  ],
   "name": "方形折角箭头上",
   "tags": [
-    "插入符",
-    "键盘",
-    "按钮",
-    "麦克",
-    "控制",
-    "控制键",
-    "上标",
-    "指数",
-    "电源",
-    "前面",
-    "菜单",
-    "面板",
-    "^"
+    "收起",
+    "向上",
+    "导航",
+    "箭头",
+    "数学"
   ],
   "categories": [
     "arrows",
@@ -34,21 +30,17 @@
     "en": {
       "name": "square chevron up",
       "tags": [
-        "caret",
-        "keyboard",
-        "button",
-        "mac",
-        "control",
-        "ctrl",
-        "superscript",
-        "exponential",
-        "power",
-        "ahead",
-        "menu",
-        "panel",
-        "^"
+        "collapse",
+        "up",
+        "navigation",
+        "arrow",
+        "mathematics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Collapse content controls",
+        "Upward navigation",
+        "Mathematical operations"
+      ]
     }
   }
 }

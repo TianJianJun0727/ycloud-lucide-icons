@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "底部UI面板",
+    "布局容器",
+    "界面区域",
+    "内容区域"
+  ],
   "name": "面板底部",
   "tags": [
-    "抽屉",
-    "码头"
+    "面板",
+    "底部",
+    "UI",
+    "布局",
+    "容器",
+    "界面",
+    "区域"
   ],
   "categories": [
     "layout"
@@ -13,10 +23,20 @@
     "en": {
       "name": "panel bottom",
       "tags": [
-        "drawer",
-        "dock"
+        "panel",
+        "bottom",
+        "UI",
+        "layout",
+        "container",
+        "interface",
+        "area"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bottom UI panel",
+        "Layout container",
+        "Interface section",
+        "Content area"
+      ]
     }
   }
 }

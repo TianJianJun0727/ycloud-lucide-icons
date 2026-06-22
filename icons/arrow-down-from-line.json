@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下载文件或内容",
+    "展开折叠部分",
+    "下拉刷新"
+  ],
   "name": "箭头下从线条",
   "tags": [
-    "向后",
-    "反向",
-    "方向",
-    "南",
     "下载",
     "展开",
-    "折叠",
-    "垂直"
+    "垂直",
+    "向下",
+    "导出",
+    "拉取",
+    "显示更多"
   ],
   "categories": [
     "arrows",
@@ -20,16 +23,19 @@
     "en": {
       "name": "arrow down from line",
       "tags": [
-        "backwards",
-        "reverse",
-        "direction",
-        "south",
         "download",
         "expand",
-        "fold",
-        "vertical"
+        "vertical",
+        "down",
+        "export",
+        "pull",
+        "show more"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Download file or content",
+        "Expand a collapsed section",
+        "Pull down to refresh"
+      ]
     }
   }
 }

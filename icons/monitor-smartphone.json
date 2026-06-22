@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "手机投屏",
+    "响应式设计界面",
+    "移动设备连接"
+  ],
   "name": "显示器智能手机",
   "tags": [
-    "智能手机",
-    "电话",
-    "手机",
-    "装置",
-    "移动",
-    "桌面",
-    "显示器",
-    "反应灵敏",
-    "屏幕"
+    "智能手机连接",
+    "移动设备",
+    "响应式设计",
+    "多屏互动",
+    "设备同步"
   ],
   "categories": [
     "connectivity",
@@ -21,17 +21,17 @@
     "en": {
       "name": "monitor smartphone",
       "tags": [
-        "smartphone",
-        "phone",
-        "cellphone",
-        "device",
-        "mobile",
-        "desktop",
-        "monitor",
-        "responsive",
-        "screens"
+        "smartphone connection",
+        "mobile device",
+        "responsive design",
+        "multi-screen interaction",
+        "device sync"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Phone to screen mirroring",
+        "Responsive design interface",
+        "Mobile device connectivity"
+      ]
     }
   }
 }

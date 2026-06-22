@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "绘图模式切换",
+    "草图工具选择",
+    "手绘线条工具图标"
+  ],
   "name": "笔线条",
   "tags": [
-    "铅笔",
-    "改变",
-    "创建",
-    "画",
-    "作家",
-    "写作",
-    "比罗",
-    "墨水",
-    "标记",
-    "毡尖",
-    "文具",
-    "艺术家"
+    "画笔",
+    "绘图",
+    "线条",
+    "手绘",
+    "草图",
+    "创作"
   ],
   "categories": [
     "text",
@@ -33,20 +31,18 @@
     "en": {
       "name": "pen line",
       "tags": [
-        "pencil",
-        "change",
-        "create",
-        "draw",
-        "writer",
-        "writing",
-        "biro",
-        "ink",
-        "marker",
-        "felt tip",
-        "stationery",
-        "artist"
+        "pen",
+        "drawing",
+        "line",
+        "hand-drawn",
+        "sketch",
+        "create"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Drawing mode toggle",
+        "Sketching tool selection",
+        "Freehand line tool icon"
+      ]
     }
   }
 }

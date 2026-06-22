@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网络拓扑展示",
+    "关系图谱可视化",
+    "连接分析界面"
+  ],
   "name": "图表网络",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图",
+    "网络图",
     "拓扑结构",
-    "集群",
-    "网络",
-    "节点",
-    "连接",
-    "边缘"
+    "节点连接",
+    "关系图谱",
+    "数据分析"
   ],
   "categories": [
     "charts"
@@ -21,18 +20,17 @@
     "en": {
       "name": "chart network",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
+        "network chart",
         "topology",
-        "cluster",
-        "web",
-        "nodes",
-        "connections",
-        "edges"
+        "node connections",
+        "relationship graph",
+        "data analysis"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Network topology display",
+        "Relationship graph visualization",
+        "Connection analysis interface"
+      ]
     }
   }
 }

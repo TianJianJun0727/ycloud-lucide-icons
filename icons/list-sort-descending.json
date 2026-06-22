@@ -6,22 +6,14 @@
   ],
   "name": "降序列表",
   "tags": [
-    "列表",
-    "订单",
-    "安排",
-    "组织",
-    "序列",
-    "排名",
-    "类别",
-    "演示",
-    "筛选",
     "排序",
-    "上升",
-    "下降",
-    "增加",
-    "减少",
-    "上升",
-    "坠落"
+    "降序",
+    "列表",
+    "表格",
+    "排列",
+    "递减",
+    "顺序",
+    "数据排序"
   ],
   "categories": [
     "text",
@@ -31,22 +23,14 @@
     "en": {
       "name": "list sort descending",
       "tags": [
-        "list",
-        "order",
-        "arrangement",
-        "organization",
-        "sequence",
-        "ranking",
-        "categories",
-        "presentation",
-        "filter",
         "sort",
-        "ascending",
         "descending",
-        "increasing",
+        "list",
+        "table",
+        "arrange",
         "decreasing",
-        "rising",
-        "falling"
+        "order",
+        "data sorting"
       ],
       "use-cases": [
         "sorting items in a table by column (name, date, price, status)",

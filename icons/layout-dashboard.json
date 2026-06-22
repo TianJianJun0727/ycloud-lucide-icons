@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "仪表盘配置面板",
+    "数据概览页面布局",
+    "砖块式小组件排列"
+  ],
   "name": "布局仪表盘",
   "tags": [
-    "砌体",
-    "砖"
+    "仪表盘",
+    "布局",
+    "面板",
+    "数据视图",
+    "概览",
+    "砖块布局"
   ],
   "categories": [
     "design",
@@ -14,10 +22,18 @@
     "en": {
       "name": "layout dashboard",
       "tags": [
-        "masonry",
-        "brick"
+        "dashboard",
+        "layout",
+        "panel",
+        "data view",
+        "overview",
+        "masonry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dashboard configuration panel",
+        "Data overview page layout",
+        "Masonry-style widget arrangement"
+      ]
     }
   }
 }

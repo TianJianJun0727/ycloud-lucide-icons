@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除损坏的文件",
+    "取消文件上传",
+    "移除无效文档"
+  ],
   "name": "文件关闭角落",
   "tags": [
-    "迷失了",
     "删除",
     "移除",
-    "文档"
+    "取消",
+    "关闭",
+    "错误文件",
+    "无效文件"
   ],
   "categories": [
     "files"
@@ -23,12 +29,18 @@
     "en": {
       "name": "file X corner",
       "tags": [
-        "lost",
         "delete",
         "remove",
-        "document"
+        "cancel",
+        "close",
+        "error",
+        "invalid"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Deleting a corrupted file",
+        "Cancelling a file upload",
+        "Removing an invalid document"
+      ]
     }
   }
 }

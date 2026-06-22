@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器右对齐按钮",
+    "文档格式化工具栏",
+    "将内容对齐到右侧的用户界面"
+  ],
   "name": "文本对齐末端",
   "tags": [
     "文本",
-    "对准",
-    "右"
+    "对齐",
+    "右对齐",
+    "末尾",
+    "排版",
+    "格式"
   ],
   "categories": [
     "text"
@@ -24,9 +31,16 @@
       "tags": [
         "text",
         "alignment",
-        "right"
+        "right",
+        "end",
+        "typography",
+        "format"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor right alignment button",
+        "Document formatting toolbar",
+        "UI for aligning content to the right"
+      ]
     }
   }
 }

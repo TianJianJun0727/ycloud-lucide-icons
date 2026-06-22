@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "价格标签显示",
+    "折扣徽章",
+    "金融计算器",
+    "促销贴纸"
+  ],
   "name": "方形百分比",
   "tags": [
-    "已验证",
-    "未经验证",
-    "销售",
     "折扣",
-    "报价",
-    "营销",
-    "贴纸",
-    "价格标签"
+    "百分比",
+    "促销",
+    "优惠",
+    "销售",
+    "数学",
+    "利率",
+    "比率"
   ],
   "categories": [
     "social",
@@ -30,16 +35,21 @@
     "en": {
       "name": "square percent",
       "tags": [
-        "verified",
-        "unverified",
-        "sale",
         "discount",
+        "percent",
+        "sale",
         "offer",
         "marketing",
-        "sticker",
-        "price tag"
+        "math",
+        "rate",
+        "ratio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Price tag display",
+        "Discount badge",
+        "Financial calculator",
+        "Promotional sticker"
+      ]
     }
   }
 }

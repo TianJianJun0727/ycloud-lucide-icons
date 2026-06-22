@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在邮件收件箱内搜索",
+    "查找特定消息对话",
+    "按关键词过滤邮件"
+  ],
   "name": "邮件搜索",
   "tags": [
-    "邮箱",
-    "消息",
-    "信",
-    "搜索",
-    "镜头"
+    "搜索邮件",
+    "邮件查找",
+    "邮件检索",
+    "查找消息",
+    "邮件镜头"
   ],
   "categories": [
     "mail"
@@ -16,13 +20,17 @@
     "en": {
       "name": "mail search",
       "tags": [
-        "email",
-        "message",
-        "letter",
-        "search",
-        "lens"
+        "mail search",
+        "search email",
+        "find message",
+        "email lookup",
+        "message filter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search within email inbox",
+        "Find specific message thread",
+        "Filter mail by keyword"
+      ]
     }
   }
 }

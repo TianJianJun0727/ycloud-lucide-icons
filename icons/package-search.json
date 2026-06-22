@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "搜索文件包",
+    "查找软件模块",
+    "定位数据归档"
+  ],
   "name": "包搜索",
   "tags": [
-    "找到",
-    "产品工艺",
-    "镜头"
+    "搜索",
+    "查找",
+    "定位",
+    "查询",
+    "检索"
   ],
   "categories": [
     "files",
@@ -15,11 +21,17 @@
     "en": {
       "name": "package search",
       "tags": [
+        "search",
         "find",
-        "product process",
-        "lens"
+        "locate",
+        "query",
+        "retrieve"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search for file package",
+        "Find software module",
+        "Locate data archive"
+      ]
     }
   }
 }

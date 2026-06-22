@@ -1,32 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "流媒体服务播放按钮",
+    "智能电视界面控制",
+    "视频内容启动图标"
+  ],
   "name": "电视极简播放",
   "tags": [
-    "平面屏幕",
-    "电视",
-    "流",
-    "显示",
-    "宽银幕",
-    "高清",
-    "高清",
-    "1080p",
-    "4K",
-    "8K",
-    "聪明的",
-    "数字化",
+    "电视播放",
+    "流媒体",
     "视频",
-    "电影",
-    "直播",
-    "奥特",
-    "跑步",
     "开始",
-    "电影",
-    "家庭影院",
     "娱乐",
-    "放映时间",
-    "渠道",
-    "追赶"
+    "智能电视"
   ],
   "categories": [
     "devices",
@@ -36,32 +22,19 @@
     "en": {
       "name": "tv minimal play",
       "tags": [
-        "flatscreen",
         "television",
         "stream",
-        "display",
-        "widescreen",
-        "high-definition",
-        "hd",
-        "1080p",
-        "4k",
-        "8k",
-        "smart",
-        "digital",
         "video",
-        "movie",
-        "live",
-        "ott",
-        "running",
+        "play",
         "start",
-        "film",
-        "home cinema",
         "entertainment",
-        "showtime",
-        "channels",
-        "catchup"
+        "smart tv"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Streaming service play button",
+        "Smart TV interface control",
+        "Video content launch icon"
+      ]
     }
   }
 }

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图片编辑器",
+    "照片裁剪工具",
+    "设计软件",
+    "图像处理"
+  ],
   "name": "裁剪",
   "tags": [
-    "照片",
-    "图片"
+    "裁剪",
+    "图片编辑",
+    "照片处理",
+    "修剪"
   ],
   "categories": [
     "photography",
@@ -14,10 +21,17 @@
     "en": {
       "name": "crop",
       "tags": [
-        "photo",
-        "image"
+        "crop",
+        "image editing",
+        "photo processing",
+        "trim"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Image editor",
+        "Photo cropping tool",
+        "Design software",
+        "Image processing"
+      ]
     }
   }
 }

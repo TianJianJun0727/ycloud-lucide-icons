@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "进入全屏模式",
+    "展开面板或窗口",
+    "最大化视图区域"
+  ],
   "name": "最大化2",
   "tags": [
+    "最大化",
     "全屏",
-    "箭头",
-    "展开"
+    "展开",
+    "放大",
+    "箭头扩展"
   ],
   "categories": [
     "arrows",
@@ -16,11 +22,17 @@
     "en": {
       "name": "maximize 2",
       "tags": [
+        "maximize",
         "fullscreen",
-        "arrows",
-        "expand"
+        "expand",
+        "enlarge",
+        "arrow expand"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Enter fullscreen mode",
+        "Expand a panel or window",
+        "Maximize view area"
+      ]
     }
   }
 }

@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "全球服务状态",
+    "网络连接验证",
+    "国际可用性检查"
+  ],
   "name": "地球勾选",
   "tags": [
-    "世界",
-    "浏览器",
-    "语言",
-    "翻译",
-    "互联网",
+    "地球",
+    "验证",
+    "全球",
     "网络",
-    "勾选",
-    "已验证",
-    "成功",
-    "有效",
-    "可用",
+    "互联网",
+    "可用性",
     "在线",
-    "状态"
+    "状态确认"
   ],
   "categories": [
     "navigation"
@@ -24,21 +23,20 @@
     "en": {
       "name": "globe check",
       "tags": [
-        "world",
-        "browser",
-        "language",
-        "translate",
-        "internet",
-        "web",
-        "check",
+        "globe",
         "verified",
-        "success",
-        "valid",
-        "available",
+        "global",
+        "network",
+        "internet",
+        "availability",
         "online",
-        "status"
+        "status confirmation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Global service status",
+        "Network connectivity verification",
+        "International availability check"
+      ]
     }
   }
 }

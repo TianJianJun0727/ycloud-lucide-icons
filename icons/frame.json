@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计工具中的图像或照片框",
+    "UI元素容器和边框",
+    "徽标或徽章展示框"
+  ],
   "name": "框架",
   "tags": [
-    "标志",
-    "设计",
-    "工具"
+    "画框",
+    "边框",
+    "相框",
+    "设计工具",
+    "容器"
   ],
   "categories": [
     "design",
@@ -15,11 +21,17 @@
     "en": {
       "name": "frame",
       "tags": [
-        "logo",
-        "design",
-        "tool"
+        "frame",
+        "border",
+        "picture-frame",
+        "design-tool",
+        "container"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Image or photo framing in design tools",
+        "UI element containers and borders",
+        "Logo or badge display frames"
+      ]
     }
   }
 }

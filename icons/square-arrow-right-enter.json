@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "输入框",
+    "导入数据",
+    "插入内容"
+  ],
   "name": "方形箭头右进入",
   "tags": [
-    "左",
-    "在",
-    "里面",
     "输入",
     "插入",
-    "来源",
     "导入",
-    "地方",
-    "->"
+    "进入",
+    "方向"
   ],
   "categories": [
     "arrows",
@@ -23,17 +23,17 @@
     "en": {
       "name": "square arrow right enter",
       "tags": [
-        "left",
-        "in",
-        "inside",
         "input",
         "insert",
-        "source",
         "import",
-        "place",
-        "->"
+        "enter",
+        "direction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Input field",
+        "Import data",
+        "Insert content"
+      ]
     }
   }
 }

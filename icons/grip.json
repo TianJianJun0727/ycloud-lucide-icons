@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "拖放界面",
+    "UI操作控制",
+    "交互元素"
+  ],
   "name": "握柄",
   "tags": [
-    "抢",
-    "点",
+    "拖拽",
     "手柄",
     "移动",
-    "拖动"
+    "控制",
+    "操作点"
   ],
   "categories": [
     "layout"
@@ -16,13 +20,17 @@
     "en": {
       "name": "grip",
       "tags": [
-        "grab",
-        "dots",
+        "drag",
         "handle",
         "move",
-        "drag"
+        "control",
+        "manipulation points"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Drag and drop interfaces",
+        "UI manipulation controls",
+        "Interactive elements"
+      ]
     }
   }
 }

@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编程中的逻辑与运算符",
+    "表示多个条件或连接"
+  ],
   "name": "多个与号",
   "tags": [
-    "和",
-    "操作员",
-    "然后",
-    "代码",
-    "&&"
+    "双与号",
+    "&&",
+    "逻辑与",
+    "编程运算符",
+    "条件判断",
+    "代码"
   ],
   "categories": [
     "text",
@@ -17,13 +21,17 @@
     "en": {
       "name": "ampersands",
       "tags": [
-        "and",
-        "operator",
-        "then",
-        "code",
-        "&&"
+        "ampersands",
+        "&&",
+        "logical and",
+        "programming operator",
+        "condition",
+        "code"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Logical AND operator in programming",
+        "Multiple conditions or concatenations"
+      ]
     }
   }
 }

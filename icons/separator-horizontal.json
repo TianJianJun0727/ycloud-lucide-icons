@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本中的水平线",
+    "界面区域分隔线",
+    "内容分割线"
+  ],
   "name": "分隔符水平",
   "tags": [
-    "移动",
-    "分裂"
+    "分隔线",
+    "水平线",
+    "分割",
+    "布局",
+    "排版",
+    "装饰"
   ],
   "categories": [
     "text",
@@ -15,10 +23,18 @@
     "en": {
       "name": "separator horizontal",
       "tags": [
-        "move",
-        "split"
+        "separator",
+        "horizontal line",
+        "divide",
+        "layout",
+        "typography",
+        "divider"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Horizontal rule in text",
+        "UI section divider",
+        "Content separation line"
+      ]
     }
   }
 }

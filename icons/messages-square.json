@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "群组消息界面",
+    "查看消息线程",
+    "团队讨论板"
+  ],
   "name": "方形消息",
   "tags": [
-    "评论",
+    "消息",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "泡泡",
-    "复制",
-    "多个",
+    "群聊",
     "讨论",
-    "采访",
-    "辩论"
+    "评论",
+    "多个",
+    "沟通"
   ],
   "categories": [
     "social"
@@ -22,19 +23,20 @@
     "en": {
       "name": "messages square",
       "tags": [
-        "comment",
+        "messages",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubbles",
-        "copy",
-        "multiple",
+        "group chat",
         "discussion",
-        "interview",
-        "debate"
+        "comments",
+        "multiple",
+        "communication"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Group messaging interface",
+        "Viewing a message thread",
+        "Team discussion board"
+      ]
     }
   }
 }

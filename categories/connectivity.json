@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "连接",
-  "icon": "wifi",
   "i18n": {
     "en": {
       "title": "Connectivity"

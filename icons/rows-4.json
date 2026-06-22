@@ -1,24 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多行数据网格",
+    "列表项组织",
+    "布局设计面板",
+    "文本分段"
+  ],
   "name": "行4",
   "tags": [
-    "线",
+    "行",
     "列表",
-    "队列",
-    "预览",
-    "段落",
-    "平行",
-    "系列",
-    "分裂",
+    "布局",
+    "网格",
+    "排列",
     "垂直",
-    "水平的",
-    "一半",
-    "中心",
-    "中",
-    "甚至",
-    "抽屉",
-    "烧烤"
+    "水平",
+    "分割",
+    "预览",
+    "文本"
   ],
   "categories": [
     "layout",
@@ -29,24 +28,23 @@
     "en": {
       "name": "rows 4",
       "tags": [
-        "lines",
+        "rows",
         "list",
-        "queue",
-        "preview",
-        "paragraphs",
-        "parallel",
-        "series",
-        "split",
+        "layout",
+        "grid",
+        "arrangement",
         "vertical",
         "horizontal",
-        "half",
-        "center",
-        "middle",
-        "even",
-        "drawers",
-        "grill"
+        "split",
+        "preview",
+        "text"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multi-row data grid",
+        "List item organization",
+        "Layout design panels",
+        "Text section division"
+      ]
     }
   }
 }

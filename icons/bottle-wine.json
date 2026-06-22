@@ -1,28 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "餐厅酒水菜单",
+    "酒吧饮品选择",
+    "葡萄酒商店"
+  ],
   "name": "瓶子葡萄酒",
   "tags": [
-    "酒精",
-    "喝",
-    "玻璃",
-    "高脚杯",
-    "圣杯",
-    "葡萄园",
-    "酒厂",
-    "红色",
-    "白色",
-    "玫瑰",
-    "干燥",
-    "闪闪发光的",
-    "酒吧",
-    "聚会",
-    "夜总会",
-    "夜生活",
-    "侍酒师",
-    "餐厅",
-    "晚餐",
-    "餐"
+    "葡萄酒",
+    "酒瓶",
+    "饮品",
+    "酒精饮料",
+    "红酒"
   ],
   "categories": [
     "food-beverage"
@@ -31,28 +20,17 @@
     "en": {
       "name": "bottle wine",
       "tags": [
-        "alcohol",
+        "wine",
+        "bottle",
         "drink",
-        "glass",
-        "goblet",
-        "chalice",
-        "vineyard",
-        "winery",
-        "red",
-        "white",
-        "rose",
-        "dry",
-        "sparkling",
-        "bar",
-        "party",
-        "nightclub",
-        "nightlife",
-        "sommelier",
-        "restaurant",
-        "dinner",
-        "meal"
+        "alcoholic beverage",
+        "red wine"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Restaurant drink menu",
+        "Bar beverage selection",
+        "Wine store"
+      ]
     }
   }
 }

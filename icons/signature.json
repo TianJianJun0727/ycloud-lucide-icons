@@ -1,28 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数字签名输入框",
+    "文件审批流程",
+    "身份验证步骤"
+  ],
   "name": "签名",
   "tags": [
-    "文本",
-    "格式",
-    "输入",
-    "合同",
-    "亲笔签名",
+    "签名",
     "手写",
-    "标志",
-    "草书",
-    "墨水",
-    "乱写乱画",
+    "签署",
+    "合同",
+    "文件",
+    "法律",
     "授权",
-    "个人的",
-    "协议",
-    "合法的",
-    "文档",
-    "身份",
-    "正宗的",
-    "批准",
     "验证",
-    "独特的"
+    "身份",
+    "笔迹"
   ],
   "categories": [
     "text"
@@ -31,28 +25,22 @@
     "en": {
       "name": "signature",
       "tags": [
-        "text",
-        "format",
-        "input",
-        "contract",
-        "autograph",
+        "signature",
         "handwriting",
         "sign",
-        "cursive",
-        "ink",
-        "scribble",
-        "authorize",
-        "personal",
-        "agreement",
-        "legal",
+        "contract",
         "document",
+        "legal",
+        "authorize",
+        "verify",
         "identity",
-        "authentic",
-        "approval",
-        "verification",
-        "unique"
+        "autograph"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Digital signature input field",
+        "Document approval workflow",
+        "Identity verification step"
+      ]
     }
   }
 }

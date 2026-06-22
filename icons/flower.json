@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "春季指示器",
+    "花园应用图标",
+    "自然主题界面"
+  ],
   "name": "花",
   "tags": [
-    "可持续性",
-    "自然",
+    "花朵",
     "植物",
-    "春天"
+    "自然",
+    "春天",
+    "花园"
   ],
   "categories": [
     "nature",
@@ -17,12 +22,17 @@
     "en": {
       "name": "flower",
       "tags": [
-        "sustainability",
-        "nature",
+        "flower",
         "plant",
-        "spring"
+        "nature",
+        "spring",
+        "garden"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Spring season indicator",
+        "Garden app icon",
+        "Nature themed UI"
+      ]
     }
   }
 }

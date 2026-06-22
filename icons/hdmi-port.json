@@ -1,23 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备连接状态",
+    "音视频接口",
+    "游戏机和电视连接"
+  ],
   "name": "HDMI接口",
   "tags": [
-    "插座",
-    "插头",
-    "插槽",
-    "控制器",
-    "连接器",
+    "HDMI",
     "接口",
-    "控制台",
-    "信号",
-    "音频",
     "视频",
-    "视觉的",
-    "影音",
-    "数据",
-    "输入",
-    "输出"
+    "音频",
+    "连接",
+    "输入输出"
   ],
   "categories": [
     "devices",
@@ -28,23 +23,18 @@
     "en": {
       "name": "hdmi port",
       "tags": [
-        "socket",
-        "plug",
-        "slot",
-        "controller",
-        "connector",
-        "interface",
-        "console",
-        "signal",
-        "audio",
+        "hdmi",
+        "port",
         "video",
-        "visual",
-        "av",
-        "data",
-        "input",
-        "output"
+        "audio",
+        "connection",
+        "input output"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device connectivity status",
+        "Audio video interface",
+        "Console and TV connections"
+      ]
     }
   }
 }

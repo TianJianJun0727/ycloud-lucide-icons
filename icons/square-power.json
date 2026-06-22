@@ -1,20 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电源按钮",
+    "设备控制",
+    "切换开关",
+    "系统重启"
+  ],
   "name": "方形电源",
   "tags": [
-    "上",
-    "关闭",
-    "装置",
+    "电源",
     "开关",
-    "切换",
-    "二进制",
-    "布尔值",
-    "重新启动",
-    "重新启动",
+    "启动",
+    "关闭",
+    "重启",
     "按钮",
-    "键盘",
-    "排除故障"
+    "控制",
+    "状态"
   ],
   "categories": [
     "connectivity"
@@ -31,20 +32,21 @@
     "en": {
       "name": "square power",
       "tags": [
+        "power",
+        "switch",
         "on",
         "off",
-        "device",
-        "switch",
-        "toggle",
-        "binary",
-        "boolean",
         "reboot",
-        "restart",
         "button",
-        "keyboard",
-        "troubleshoot"
+        "control",
+        "state"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Power button",
+        "Device control",
+        "Toggle switch",
+        "System reboot"
+      ]
     }
   }
 }

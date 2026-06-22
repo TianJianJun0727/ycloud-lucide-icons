@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向列表添加项目",
+    "创建新的列表条目",
+    "将歌曲加入播放列表队列"
+  ],
   "name": "列表加号",
   "tags": [
-    "播放列表",
+    "列表",
     "添加",
-    "歌曲",
-    "轨道",
-    "新建"
+    "加号",
+    "新建",
+    "播放列表",
+    "队列"
   ],
   "categories": [
     "multimedia",
@@ -17,13 +22,18 @@
     "en": {
       "name": "list plus",
       "tags": [
-        "playlist",
+        "list",
         "add",
-        "song",
-        "track",
-        "new"
+        "plus",
+        "new",
+        "playlist",
+        "queue"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add an item to a list",
+        "Create a new list entry",
+        "Enqueue a song to a playlist"
+      ]
     }
   }
 }

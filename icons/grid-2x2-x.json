@@ -1,24 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "从仪表板移除小部件",
+    "关闭网格预览",
+    "删除表格区域",
+    "取消布局选择"
+  ],
   "name": "网格2x2关闭",
   "tags": [
+    "网格",
+    "关闭",
+    "删除",
+    "移除",
+    "取消",
+    "布局",
     "表格",
-    "行",
-    "列",
-    "数据",
-    "块",
-    "情节",
-    "土地",
-    "几何学",
-    "测量",
-    "尺寸",
-    "宽度",
-    "高度",
-    "距离",
-    "表面积",
-    "平方米",
-    "英亩"
+    "错误"
   ],
   "categories": [
     "text",
@@ -37,24 +34,21 @@
     "en": {
       "name": "grid 2x2 X",
       "tags": [
+        "grid",
+        "close",
+        "delete",
+        "remove",
+        "cancel",
+        "layout",
         "table",
-        "rows",
-        "columns",
-        "data",
-        "blocks",
-        "plot",
-        "land",
-        "geometry",
-        "measure",
-        "size",
-        "width",
-        "height",
-        "distance",
-        "surface area",
-        "square meter",
-        "acre"
+        "error"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove widget from dashboard",
+        "Close a grid preview",
+        "Delete table section",
+        "Cancel layout selection"
+      ]
     }
   }
 }

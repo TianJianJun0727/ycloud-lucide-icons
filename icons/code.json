@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码片段显示",
+    "编程工具",
+    "开发者界面"
+  ],
   "name": "代码",
   "tags": [
-    "来源",
+    "代码",
     "编程",
-    "HTML",
-    "XML"
+    "开发",
+    "源代码",
+    "标记"
   ],
   "categories": [
     "text",
@@ -16,12 +21,17 @@
     "en": {
       "name": "code",
       "tags": [
-        "source",
+        "code",
         "programming",
-        "html",
-        "xml"
+        "development",
+        "source",
+        "markup"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code snippet display",
+        "Programming tools",
+        "Developer UI"
+      ]
     }
   }
 }

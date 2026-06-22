@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "查找替换对话框选项",
+    "文本编辑器搜索模式",
+    "代码编辑器匹配设置",
+    "文档搜索筛选器"
+  ],
   "name": "整词单词",
   "tags": [
-    "文本",
-    "选择",
-    "字母",
-    "人物",
-    "字体",
-    "版式"
+    "整词",
+    "单词",
+    "文本选择",
+    "查找替换",
+    "匹配模式",
+    "编辑器",
+    "全字匹配"
   ],
   "categories": [
     "text"
@@ -17,14 +23,20 @@
     "en": {
       "name": "whole word",
       "tags": [
-        "text",
-        "selection",
-        "letters",
-        "characters",
-        "font",
-        "typography"
+        "whole word",
+        "word",
+        "text selection",
+        "find and replace",
+        "match mode",
+        "editor",
+        "full word match"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Find and replace dialog option",
+        "Text editor search mode",
+        "Code editor matching setting",
+        "Document search filter"
+      ]
     }
   }
 }

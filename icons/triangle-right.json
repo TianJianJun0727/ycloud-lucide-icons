@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器控制",
+    "导航指示器",
+    "UI方向提示",
+    "几何设计"
+  ],
   "name": "三角形右",
   "tags": [
-    "体积",
+    "右三角形",
+    "播放",
     "控制",
-    "控制器",
-    "电视遥控器",
-    "几何学",
-    "三角洲",
-    "坡道",
-    "坡度",
-    "倾斜",
-    "增加"
+    "方向",
+    "几何"
   ],
   "categories": [
     "shapes",
@@ -22,18 +22,19 @@
     "en": {
       "name": "triangle right",
       "tags": [
-        "volume",
-        "controls",
-        "controller",
-        "tv remote",
-        "geometry",
-        "delta",
-        "ramp",
-        "slope",
-        "incline",
-        "increase"
+        "right",
+        "triangle",
+        "play",
+        "control",
+        "direction",
+        "geometry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player controls",
+        "Navigation indicator",
+        "UI direction cues",
+        "Geometric design"
+      ]
     }
   }
 }

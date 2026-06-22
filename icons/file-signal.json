@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频文件指示器",
+    "声音设置",
+    "音乐文件浏览器"
+  ],
   "name": "文件信号",
   "tags": [
-    "音频",
+    "音频文件",
+    "声音",
+    "音量",
     "音乐",
-    "体积"
+    "波形"
   ],
   "categories": [
     "files"
@@ -22,11 +28,17 @@
     "en": {
       "name": "file signal",
       "tags": [
-        "audio",
+        "audio file",
+        "sound",
+        "volume",
         "music",
-        "volume"
+        "waveform"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio file indicator",
+        "Sound settings",
+        "Music file browser"
+      ]
     }
   }
 }

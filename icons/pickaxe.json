@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "采矿或资源收集游戏",
+    "建筑工具选择",
+    "合成制作界面"
+  ],
   "name": "镐",
   "tags": [
+    "镐",
+    "工具",
     "采矿",
-    "我的",
-    "土地工人",
-    "提取",
-    "劳工",
-    "建筑",
-    "进展",
-    "进步",
-    "手工制作",
-    "建筑物",
-    "创造"
+    "挖掘",
+    "建造",
+    "资源",
+    "游戏"
   ],
   "categories": [
     "tools",
@@ -23,19 +23,19 @@
     "en": {
       "name": "pickaxe",
       "tags": [
+        "pickaxe",
+        "tool",
         "mining",
-        "mine",
-        "land worker",
-        "extraction",
-        "labor",
+        "dig",
         "construction",
-        "progress",
-        "advancement",
-        "crafting",
-        "building",
-        "creation"
+        "resource",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mining or resource gathering game",
+        "Construction tool selection",
+        "Crafting interface"
+      ]
     }
   }
 }

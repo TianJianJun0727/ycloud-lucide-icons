@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "墙面粉刷",
+    "装饰工具",
+    "油漆施工"
+  ],
   "name": "绘制滚筒",
   "tags": [
+    "滚筒",
     "刷子",
-    "颜色",
-    "颜色",
+    "油漆",
+    "粉刷",
     "装饰",
-    "DIY"
+    "墙面"
   ],
   "categories": [
     "text",
@@ -19,13 +24,18 @@
     "en": {
       "name": "paint roller",
       "tags": [
+        "roller",
         "brush",
-        "color",
-        "colour",
+        "paint",
+        "coating",
         "decoration",
-        "diy"
+        "wall"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Wall painting",
+        "Decoration tool",
+        "Paint application"
+      ]
     }
   }
 }

@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示解锁的安全状态",
+    "授予访问权限",
+    "打开受保护的项目"
+  ],
   "name": "锁定钥匙孔打开",
   "tags": [
-    "安全"
+    "解锁",
+    "安全",
+    "打开",
+    "钥匙孔",
+    "访问",
+    "未锁定"
   ],
   "categories": [
     "security"
@@ -20,9 +29,18 @@
     "en": {
       "name": "lock keyhole open",
       "tags": [
-        "security"
+        "unlock",
+        "security",
+        "open",
+        "keyhole",
+        "access",
+        "unlocked"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Show unlocked security state",
+        "Grant access permission",
+        "Open a secured item"
+      ]
     }
   }
 }

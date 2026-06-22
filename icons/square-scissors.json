@@ -1,15 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑菜单选项",
+    "图像编辑器工具栏",
+    "剪切命令",
+    "设计工具"
+  ],
   "name": "方形剪刀",
   "tags": [
-    "切",
-    "片段",
-    "砍",
-    "文具",
-    "工艺品",
-    "工具栏",
-    "按钮"
+    "剪切",
+    "裁剪",
+    "工具",
+    "编辑",
+    "分割",
+    "修剪",
+    "按钮",
+    "操作"
   ],
   "categories": [
     "text",
@@ -31,14 +37,20 @@
       "name": "square scissors",
       "tags": [
         "cut",
-        "snippet",
-        "chop",
-        "stationery",
-        "crafts",
-        "toolbar",
-        "button"
+        "crop",
+        "tool",
+        "edit",
+        "split",
+        "trim",
+        "button",
+        "action"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Edit menu option",
+        "Image editor toolbar",
+        "Cut command",
+        "Design tool"
+      ]
     }
   }
 }

@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图上的工厂位置",
+    "工业企业资料",
+    "制造流程步骤"
+  ],
   "name": "工厂",
   "tags": [
-    "建筑物",
-    "商业",
-    "能量",
     "工业",
     "制造",
-    "部门"
+    "厂房",
+    "生产",
+    "企业",
+    "设施"
   ],
   "categories": [
     "buildings",
@@ -18,14 +22,18 @@
     "en": {
       "name": "factory",
       "tags": [
-        "building",
-        "business",
-        "energy",
         "industry",
-        "manufacture",
-        "sector"
+        "manufacturing",
+        "plant",
+        "production",
+        "business",
+        "facility"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Factory location on map",
+        "Industrial business profile",
+        "Manufacturing process step"
+      ]
     }
   }
 }

@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "创建超链接",
+    "网址引用",
+    "文本格式",
+    "账号连接"
+  ],
   "name": "链接2",
   "tags": [
-    "链条",
-    "网址"
+    "链接",
+    "关联",
+    "网址",
+    "超链接",
+    "连接",
+    "文本格式"
   ],
   "categories": [
     "text",
@@ -14,10 +23,19 @@
     "en": {
       "name": "link 2",
       "tags": [
+        "link",
+        "connection",
+        "url",
+        "hyperlink",
         "chain",
-        "url"
+        "text formatting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Creating hyperlinks",
+        "URL references",
+        "Text formatting",
+        "Account connections"
+      ]
     }
   }
 }

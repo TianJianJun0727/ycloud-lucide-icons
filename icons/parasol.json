@@ -1,28 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "沙滩或度假村主题界面",
+    "夏季假期促销",
+    "户外活动或旅行服务"
+  ],
   "name": "阳伞",
   "tags": [
-    "雨伞",
     "遮阳伞",
-    "海滩",
-    "阴影",
-    "太阳",
-    "保护",
-    "封面",
-    "天篷",
-    "花园",
+    "沙滩",
+    "度假",
     "户外",
-    "度假村",
-    "旅行",
-    "假期",
-    "假期",
-    "夏天",
-    "服装",
-    "配件",
-    "日光浴",
-    "放松",
-    "热带"
+    "防晒",
+    "夏天"
   ],
   "categories": [
     "travel",
@@ -32,28 +22,18 @@
     "en": {
       "name": "parasol",
       "tags": [
-        "umbrella",
-        "sunshade",
+        "parasol",
         "beach",
-        "shade",
-        "sun",
-        "protection",
-        "cover",
-        "canopy",
-        "garden",
-        "outdoors",
-        "resort",
-        "travel",
         "vacation",
-        "holiday",
-        "summer",
-        "apparel",
-        "accessory",
-        "sunbathing",
-        "relax",
-        "tropical"
+        "outdoors",
+        "sun protection",
+        "summer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Beach or resort themed UI",
+        "Summer vacation promotion",
+        "Outdoor activity or travel service"
+      ]
     }
   }
 }

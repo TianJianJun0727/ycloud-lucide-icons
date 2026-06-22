@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "快捷餐选项",
+    "午餐菜单项",
+    "餐饮服务界面",
+    "小吃选择"
+  ],
   "name": "三明治",
   "tags": [
+    "三明治",
     "食物",
-    "小吃",
-    "菜",
-    "餐厅",
+    "快餐",
     "午餐",
-    "餐"
+    "餐饮",
+    "小吃"
   ],
   "categories": [
     "food-beverage"
@@ -17,14 +22,19 @@
     "en": {
       "name": "sandwich",
       "tags": [
+        "sandwich",
         "food",
-        "snack",
-        "dish",
-        "restaurant",
+        "fast food",
         "lunch",
-        "meal"
+        "dining",
+        "snack"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Quick meal option",
+        "Lunch menu item",
+        "Food service interface",
+        "Snack selection"
+      ]
     }
   }
 }

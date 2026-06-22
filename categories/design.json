@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "设计",
-  "icon": "palette",
   "i18n": {
     "en": {
       "title": "Design"

@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "结账时扫描商品",
+    "库存管理",
+    "价格查询"
+  ],
   "name": "条码",
   "tags": [
+    "条形码",
     "扫描",
-    "结账",
-    "直到",
-    "购物车",
-    "交易",
-    "购买",
-    "买",
-    "产品",
-    "包装",
+    "商品",
     "零售",
-    "消费者"
+    "结账",
+    "库存",
+    "产品"
   ],
   "categories": [
     "shopping"
@@ -22,19 +22,19 @@
     "en": {
       "name": "barcode",
       "tags": [
+        "barcode",
         "scan",
-        "checkout",
-        "till",
-        "cart",
-        "transaction",
-        "purchase",
-        "buy",
         "product",
-        "packaging",
         "retail",
-        "consumer"
+        "checkout",
+        "inventory",
+        "item"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Product scanning at checkout",
+        "Inventory management",
+        "Price lookup"
+      ]
     }
   }
 }

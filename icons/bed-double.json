@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "酒店预订界面",
+    "家居设计应用",
+    "卧室布局工具"
+  ],
   "name": "床双人",
   "tags": [
-    "睡觉",
+    "双人床",
+    "卧室",
     "酒店",
-    "家具"
+    "家具",
+    "睡眠"
   ],
   "categories": [
     "home"
@@ -14,11 +20,17 @@
     "en": {
       "name": "bed double",
       "tags": [
-        "sleep",
+        "double bed",
+        "bedroom",
         "hotel",
-        "furniture"
+        "furniture",
+        "sleep"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hotel booking interface",
+        "Home design application",
+        "Bedroom layout tool"
+      ]
     }
   }
 }

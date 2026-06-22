@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "活动会话指示器",
+    "运行应用状态",
+    "在线状态显示"
+  ],
   "name": "显示器点",
   "tags": [
-    "电视",
-    "屏幕",
-    "显示",
-    "桌面",
-    "跑步",
-    "活跃的",
-    "虚拟机",
-    "虚拟机"
+    "活动状态",
+    "运行中",
+    "在线状态",
+    "虚拟机运行",
+    "桌面活跃"
   ],
   "categories": [
     "connectivity",
@@ -20,16 +21,17 @@
     "en": {
       "name": "monitor dot",
       "tags": [
-        "tv",
-        "screen",
-        "display",
-        "desktop",
+        "active status",
         "running",
-        "active",
-        "virtual machine",
-        "vm"
+        "online status",
+        "virtual machine running",
+        "desktop active"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Active session indicator",
+        "Running application status",
+        "Online presence display"
+      ]
     }
   }
 }

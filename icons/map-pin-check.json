@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "位置验证成功",
+    "完成的路径点标记",
+    "确认的目的地图钉"
+  ],
   "name": "地图图钉勾选",
   "tags": [
-    "位置",
-    "航路点",
-    "标记",
-    "掉落",
-    "完成",
-    "勾选",
-    "完成",
-    "任务",
-    "添加了"
+    "位置确认",
+    "标记完成",
+    "地点验证",
+    "任务完成",
+    "导航确认"
   ],
   "categories": [
     "navigation",
@@ -22,17 +22,17 @@
     "en": {
       "name": "map pin check",
       "tags": [
-        "location",
-        "waypoint",
-        "marker",
-        "drop",
-        "done",
-        "tick",
-        "complete",
-        "task",
-        "added"
+        "location confirmation",
+        "marker complete",
+        "place verification",
+        "task done",
+        "navigation confirm"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Location verification success",
+        "Completed waypoint marker",
+        "Confirmed destination pin"
+      ]
     }
   }
 }

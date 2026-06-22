@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放暂停",
+    "虚拟机挂起",
+    "系统休眠状态"
+  ],
   "name": "显示器暂停",
   "tags": [
-    "电视",
-    "屏幕",
-    "显示",
-    "桌面",
-    "视频",
-    "电影",
-    "电影",
     "暂停",
-    "休眠",
-    "启动",
-    "虚拟机",
-    "虚拟机"
+    "视频暂停",
+    "电影暂停",
+    "虚拟机暂停",
+    "休眠状态"
   ],
   "categories": [
     "connectivity",
@@ -25,20 +22,17 @@
     "en": {
       "name": "monitor pause",
       "tags": [
-        "tv",
-        "screen",
-        "display",
-        "desktop",
-        "video",
-        "movie",
-        "film",
-        "suspend",
-        "hibernate",
-        "boot",
-        "virtual machine",
-        "vm"
+        "pause",
+        "video pause",
+        "movie pause",
+        "virtual machine pause",
+        "hibernate"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media playback pause",
+        "Virtual machine suspension",
+        "System hibernation state"
+      ]
     }
   }
 }

@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向上导航",
+    "方向指示器",
+    "向上滚动按钮"
+  ],
   "name": "箭头上",
   "tags": [
-    "前进",
     "方向",
-    "北"
+    "向上",
+    "北",
+    "前进",
+    "导航"
   ],
   "categories": [
     "arrows"
@@ -14,11 +20,17 @@
     "en": {
       "name": "arrow up",
       "tags": [
-        "forward",
         "direction",
-        "north"
+        "up",
+        "north",
+        "forward",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Upward navigation",
+        "Direction indicator",
+        "Scroll up button"
+      ]
     }
   }
 }

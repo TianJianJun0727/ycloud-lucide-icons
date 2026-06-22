@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备电池状态指示",
+    "充电动画或状态",
+    "电源管理界面"
+  ],
   "name": "电池充电",
   "tags": [
+    "电池",
+    "充电",
     "电源",
-    "电力",
+    "电量",
     "能量",
-    "累加器",
-    "收费"
+    "充电中"
   ],
   "categories": [
     "connectivity",
@@ -17,13 +22,18 @@
     "en": {
       "name": "battery charging",
       "tags": [
+        "battery",
+        "charging",
         "power",
         "electricity",
         "energy",
-        "accumulator",
         "charge"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device battery status indicator",
+        "Charging animation or state",
+        "Power management UI"
+      ]
     }
   }
 }

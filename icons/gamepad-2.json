@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏控制器界面",
+    "游戏设备设置",
+    "操控面板"
+  ],
   "name": "游戏手柄2",
   "tags": [
-    "控制台"
+    "游戏手柄",
+    "控制器",
+    "游戏",
+    "设备",
+    "操控"
   ],
   "categories": [
     "gaming",
@@ -13,9 +21,17 @@
     "en": {
       "name": "gamepad 2",
       "tags": [
-        "console"
+        "gamepad",
+        "controller",
+        "gaming",
+        "device",
+        "control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game controller interface",
+        "Gaming device settings",
+        "Control panel"
+      ]
     }
   }
 }

@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "医疗机构定位",
+    "医疗预约系统",
+    "紧急服务界面"
+  ],
   "name": "医院",
   "tags": [
-    "医务室",
-    "疗养院",
-    "医疗保健",
-    "医生",
-    "临终关怀",
-    "诊所",
-    "急诊室",
-    "病房",
-    "建筑物",
+    "医院",
     "医疗",
-    "兽医"
+    "急诊",
+    "诊所",
+    "医疗机构",
+    "医生",
+    "建筑",
+    "健康"
   ],
   "categories": [
     "medical",
@@ -25,19 +26,20 @@
     "en": {
       "name": "hospital",
       "tags": [
-        "infirmary",
-        "sanatorium",
+        "hospital",
+        "medical",
+        "emergency",
+        "clinic",
         "healthcare",
         "doctor",
-        "hospice",
-        "clinic",
-        "emergency room",
-        "ward",
         "building",
-        "medical",
-        "vet"
+        "health"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Healthcare facility locators",
+        "Medical appointment booking",
+        "Emergency services interfaces"
+      ]
     }
   }
 }

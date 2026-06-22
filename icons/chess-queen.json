@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "国际象棋游戏界面",
+    "强力棋子指示器",
+    "策略游戏",
+    "女性领导者图标"
+  ],
   "name": "国际象棋皇后",
   "tags": [
-    "尺子",
-    "皇冠",
-    "一块",
+    "国际象棋",
+    "皇后",
+    "女王",
+    "棋子",
     "棋盘游戏",
-    "僵局"
+    "策略",
+    "王冠",
+    "游戏"
   ],
   "categories": [
     "gaming",
@@ -17,13 +25,20 @@
     "en": {
       "name": "chess queen",
       "tags": [
-        "ruler",
-        "crown",
+        "chess",
+        "queen",
         "piece",
         "board game",
-        "stalemate"
+        "strategy",
+        "crown",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chess game interface",
+        "Powerful piece indicator",
+        "Strategy game",
+        "Female leader icon"
+      ]
     }
   }
 }

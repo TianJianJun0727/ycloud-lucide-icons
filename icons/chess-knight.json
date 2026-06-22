@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "国际象棋游戏界面",
+    "移动指示器",
+    "策略应用",
+    "中世纪主题"
+  ],
   "name": "国际象棋骑士",
   "tags": [
-    "一块",
+    "国际象棋",
+    "骑士",
     "马",
-    "棋盘游戏"
+    "棋子",
+    "棋盘游戏",
+    "策略",
+    "游戏"
   ],
   "categories": [
     "gaming",
@@ -15,11 +24,20 @@
     "en": {
       "name": "chess knight",
       "tags": [
-        "piece",
+        "chess",
+        "knight",
         "horse",
-        "board game"
+        "piece",
+        "board game",
+        "strategy",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chess game interface",
+        "Move indicator",
+        "Strategy app",
+        "Medieval theme"
+      ]
     }
   }
 }

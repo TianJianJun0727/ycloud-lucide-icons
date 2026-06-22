@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向上导航",
+    "下拉菜单展开",
+    "数学幂运算",
+    "游戏控制向上方向"
+  ],
   "name": "上箭头",
   "tags": [
-    "插入符",
-    "键盘",
-    "麦克",
-    "控制",
-    "控制键",
-    "上标",
+    "上箭头",
+    "向上",
+    "展开",
     "指数",
-    "电源",
-    "前面",
-    "快",
-    "^",
+    "幂运算",
+    "游戏控制",
     "下拉菜单"
   ],
   "categories": [
@@ -25,20 +25,20 @@
     "en": {
       "name": "chevron up",
       "tags": [
-        "caret",
-        "keyboard",
-        "mac",
-        "control",
-        "ctrl",
-        "superscript",
-        "exponential",
+        "up arrow",
+        "upward",
+        "expand",
+        "exponent",
         "power",
-        "ahead",
-        "fast",
-        "^",
+        "gaming control",
         "dropdown"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Upward navigation",
+        "Dropdown menu expansion",
+        "Mathematical exponentiation",
+        "Game control up direction"
+      ]
     }
   }
 }

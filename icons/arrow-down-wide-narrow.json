@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表格降序排序",
+    "筛选结果视图",
+    "减小字体大小"
+  ],
   "name": "箭头下宽窄",
   "tags": [
-    "筛选",
     "排序",
-    "上升",
-    "下降",
-    "增加",
+    "筛选",
+    "降序",
     "减少",
-    "上升",
-    "坠落"
+    "布局调整",
+    "文本格式"
   ],
   "categories": [
     "text",
@@ -29,16 +31,18 @@
     "en": {
       "name": "arrow down wide narrow",
       "tags": [
-        "filter",
         "sort",
-        "ascending",
+        "filter",
         "descending",
-        "increasing",
-        "decreasing",
-        "rising",
-        "falling"
+        "decrease",
+        "layout adjustment",
+        "text formatting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Table sort descending",
+        "Filter results view",
+        "Decrease font size"
+      ]
     }
   }
 }

@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移除超链接",
+    "禁用连接",
+    "文本编辑",
+    "访问控制"
+  ],
   "name": "链接2关闭",
   "tags": [
-    "解开束缚",
-    "链条"
+    "断开链接",
+    "取消链接",
+    "解除关联",
+    "文本格式",
+    "禁用"
   ],
   "categories": [
     "text"
@@ -13,10 +21,18 @@
     "en": {
       "name": "link 2 off",
       "tags": [
-        "unchain",
-        "chain"
+        "unlink",
+        "disconnect",
+        "break",
+        "text formatting",
+        "disable"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Removing hyperlinks",
+        "Disabling connections",
+        "Text editing",
+        "Access control"
+      ]
     }
   }
 }

@@ -1,21 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "可排序表格列",
+    "数据同步指示器",
+    "网络流量监控"
+  ],
   "name": "箭头下上",
   "tags": [
-    "双向",
-    "双向",
-    "2路",
-    "交换",
-    "开关",
-    "网络",
-    "交通",
-    "流量",
-    "移动数据",
-    "互联网",
     "排序",
-    "重新排序",
-    "移动"
+    "交换",
+    "双向",
+    "网络流量",
+    "数据同步",
+    "重新排序"
   ],
   "categories": [
     "arrows"
@@ -24,21 +21,18 @@
     "en": {
       "name": "arrow down up",
       "tags": [
-        "bidirectional",
-        "two-way",
-        "2-way",
-        "swap",
-        "switch",
-        "network",
-        "traffic",
-        "flow",
-        "mobile data",
-        "internet",
         "sort",
-        "reorder",
-        "move"
+        "swap",
+        "bidirectional",
+        "network traffic",
+        "data sync",
+        "reorder"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sortable table column",
+        "Data synchronization indicator",
+        "Network traffic monitor"
+      ]
     }
   }
 }

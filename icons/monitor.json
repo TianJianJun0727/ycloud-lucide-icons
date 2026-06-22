@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示设置",
+    "桌面界面",
+    "虚拟机显示"
+  ],
   "name": "显示器",
   "tags": [
-    "电视",
+    "显示器",
     "屏幕",
-    "显示",
-    "虚拟机",
+    "显示设备",
+    "桌面",
     "虚拟机"
   ],
   "categories": [
@@ -17,13 +21,17 @@
     "en": {
       "name": "monitor",
       "tags": [
-        "tv",
+        "monitor",
         "screen",
         "display",
-        "virtual machine",
-        "vm"
+        "desktop",
+        "virtual machine"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display settings",
+        "Desktop interface",
+        "Virtual machine display"
+      ]
     }
   }
 }

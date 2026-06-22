@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏成就系统",
+    "用户奖励计划",
+    "比赛结果",
+    "荣誉展示"
+  ],
   "name": "奖章",
   "tags": [
+    "奖励",
     "成就",
     "徽章",
-    "玫瑰花结",
     "奖品",
-    "获胜者"
+    "获胜",
+    "荣誉",
+    "游戏成就",
+    "用户奖励"
   ],
   "categories": [
     "account",
@@ -18,13 +26,21 @@
     "en": {
       "name": "award",
       "tags": [
+        "award",
         "achievement",
         "badge",
-        "rosette",
         "prize",
-        "winner"
+        "winning",
+        "honor",
+        "gaming achievement",
+        "user rewards"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gaming achievement systems",
+        "User reward programs",
+        "Competition results",
+        "Recognition displays"
+      ]
     }
   }
 }

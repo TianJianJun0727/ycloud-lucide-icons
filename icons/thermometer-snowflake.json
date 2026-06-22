@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用显示低温",
+    "冷冻或制冷控制",
+    "寒冷气候指示器"
+  ],
   "name": "温度计雪花",
   "tags": [
     "温度",
+    "低温",
+    "寒冷",
+    "天气",
     "摄氏度",
     "华氏度",
-    "天气",
-    "冷",
-    "冻结",
-    "冻结"
+    "冷冻",
+    "冰点"
   ],
   "categories": [
     "weather"
@@ -19,14 +24,19 @@
       "name": "thermometer snowflake",
       "tags": [
         "temperature",
-        "celsius",
-        "fahrenheit",
-        "weather",
         "cold",
         "freeze",
+        "weather",
+        "celsius",
+        "fahrenheit",
+        "low",
         "freezing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app showing low temperature",
+        "Freezer or refrigeration control",
+        "Cold climate indicator"
+      ]
     }
   }
 }

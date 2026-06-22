@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "搜索结果确认",
+    "成功查找指示器",
+    "数据验证搜索",
+    "匹配找到通知"
+  ],
   "name": "搜索勾选",
   "tags": [
-    "找到",
-    "扫描",
-    "放大镜",
-    "放大镜",
-    "发现",
-    "正确",
-    "完成",
-    "勾选",
-    "镜头",
-    "定位",
-    "探索",
-    "发现",
-    "放大",
-    "缩放"
+    "搜索成功",
+    "查找完成",
+    "搜索确认",
+    "找到结果",
+    "搜索正确",
+    "验证搜索"
   ],
   "categories": [
     "text",
@@ -26,22 +23,19 @@
     "en": {
       "name": "search check",
       "tags": [
-        "find",
-        "scan",
-        "magnifier",
-        "magnifying glass",
-        "found",
-        "correct",
-        "complete",
-        "tick",
-        "lens",
-        "locate",
-        "explore",
-        "discover",
-        "enlarge",
-        "zoom"
+        "search success",
+        "find complete",
+        "search confirmation",
+        "result found",
+        "search correct",
+        "verified search"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search result confirmation",
+        "Successful lookup indicator",
+        "Data validation search",
+        "Match found notification"
+      ]
     }
   }
 }

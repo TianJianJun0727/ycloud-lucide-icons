@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气降水指示",
+    "液位显示",
+    "湿度测量",
+    "水相关功能"
+  ],
   "name": "水滴",
   "tags": [
+    "水滴",
     "水",
-    "天气",
     "液体",
-    "流体",
-    "湿的",
-    "水分",
-    "潮湿",
-    "珠子",
-    "小球"
+    "湿度",
+    "天气",
+    "雨滴",
+    "湿润"
   ],
   "categories": [
     "weather",
@@ -21,17 +24,20 @@
     "en": {
       "name": "droplet",
       "tags": [
+        "droplet",
         "water",
-        "weather",
         "liquid",
-        "fluid",
-        "wet",
-        "moisture",
-        "damp",
-        "bead",
-        "globule"
+        "humidity",
+        "weather",
+        "raindrop",
+        "moisture"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather precipitation indicators",
+        "Liquid level displays",
+        "Humidity measurement",
+        "Water-related features"
+      ]
     }
   }
 }

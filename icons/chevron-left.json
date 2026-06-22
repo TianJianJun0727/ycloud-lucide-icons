@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "返回导航",
+    "上一个项目选择",
+    "数学小于符号",
+    "可折叠菜单指示器"
+  ],
   "name": "折角箭头左",
   "tags": [
+    "左箭头",
     "返回",
     "上一个",
+    "后退",
     "小于",
-    "更少",
-    "菜单",
-    "<"
+    "菜单"
   ],
   "categories": [
     "arrows"
@@ -17,14 +22,18 @@
     "en": {
       "name": "chevron left",
       "tags": [
+        "left arrow",
         "back",
         "previous",
         "less than",
-        "fewer",
-        "menu",
-        "<"
+        "menu"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back navigation",
+        "Previous item selection",
+        "Mathematical less than symbol",
+        "Collapsible menu indicator"
+      ]
     }
   }
 }

@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务完成确认",
+    "包裹已送达",
+    "软件包验证通过"
+  ],
   "name": "包勾选",
   "tags": [
     "确认",
     "已验证",
     "完成",
-    "待办事项",
-    "勾选",
-    "完成",
     "任务",
-    "已交付"
+    "交付",
+    "检查",
+    "勾选"
   ],
   "categories": [
     "development"
@@ -22,13 +25,16 @@
         "confirm",
         "verified",
         "done",
-        "todo",
-        "tick",
-        "complete",
         "task",
-        "delivered"
+        "delivered",
+        "check",
+        "tick"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Task completion confirmation",
+        "Package delivered",
+        "Software package verified"
+      ]
     }
   }
 }

@@ -1,18 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "VPN连接状态",
+    "安全全球网络",
+    "隐私保护功能",
+    "加密数据传输"
+  ],
   "name": "地球锁定",
   "tags": [
     "VPN",
-    "私人的",
     "隐私",
-    "网络",
-    "世界",
-    "浏览器",
     "安全",
     "加密",
+    "网络",
     "保护",
-    "连接"
+    "连接",
+    "私密"
   ],
   "categories": [
     "security",
@@ -24,17 +27,20 @@
       "name": "earth lock",
       "tags": [
         "vpn",
-        "private",
         "privacy",
-        "network",
-        "world",
-        "browser",
         "security",
         "encryption",
+        "network",
         "protection",
-        "connection"
+        "connection",
+        "private"
       ],
-      "use-cases": []
+      "use-cases": [
+        "VPN connection status",
+        "Secure global network",
+        "Privacy protection feature",
+        "Encrypted data transmission"
+      ]
     }
   }
 }

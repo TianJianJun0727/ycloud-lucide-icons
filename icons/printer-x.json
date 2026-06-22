@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打印任务错误状态",
+    "打印机故障排除"
+  ],
   "name": "打印机关闭",
   "tags": [
-    "传真",
-    "办公室",
-    "装置",
-    "十字",
+    "打印机",
+    "错误",
     "取消",
-    "移除",
-    "错误"
+    "故障"
   ],
   "categories": [
     "devices"
@@ -18,15 +18,15 @@
     "en": {
       "name": "printer X",
       "tags": [
-        "fax",
-        "office",
-        "device",
-        "cross",
+        "printer",
+        "error",
         "cancel",
-        "remove",
-        "error"
+        "failure"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Print job error status",
+        "Printer troubleshooting"
+      ]
     }
   }
 }

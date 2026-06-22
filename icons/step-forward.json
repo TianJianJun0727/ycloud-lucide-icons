@@ -1,13 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器快进",
+    "转到下一步",
+    "向前导航",
+    "向前跳过"
+  ],
   "name": "步骤前进",
   "tags": [
-    "箭头",
-    "下一个",
+    "前进",
+    "下一步",
+    "继续",
     "音乐",
-    "右",
-    "继续"
+    "媒体",
+    "箭头",
+    "跳过"
   ],
   "categories": [
     "multimedia",
@@ -17,13 +24,20 @@
     "en": {
       "name": "step forward",
       "tags": [
-        "arrow",
+        "forward",
         "next",
+        "continue",
         "music",
-        "right",
-        "continue"
+        "media",
+        "arrow",
+        "skip"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player forward",
+        "Go to next step",
+        "Forward navigation",
+        "Skip ahead"
+      ]
     }
   }
 }

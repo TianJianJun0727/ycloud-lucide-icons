@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多功能工具指示器",
+    "实用应用程序图标",
+    "切割工具表示"
+  ],
   "name": "口袋刀",
   "tags": [
-    "瑞士军刀",
     "小刀",
-    "多功能工具",
-    "多任务",
-    "刀片",
-    "切割机",
-    "小工具",
-    "开瓶器"
+    "工具",
+    "多功能",
+    "瑞士军刀",
+    "切割"
   ],
   "categories": [
     "tools"
@@ -19,16 +20,17 @@
     "en": {
       "name": "pocket knife",
       "tags": [
+        "knife",
+        "tool",
+        "multi-purpose",
         "swiss army knife",
-        "penknife",
-        "multi-tool",
-        "multitask",
-        "blade",
-        "cutter",
-        "gadget",
-        "corkscrew"
+        "cut"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multi-tool functionality indicator",
+        "Utility application icon",
+        "Cutting tool representation"
+      ]
     }
   }
 }

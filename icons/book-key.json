@@ -1,21 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "私有仓库访问",
+    "带API密钥的文档",
+    "安全知识库入口"
+  ],
   "name": "书籍钥匙",
   "tags": [
     "代码",
-    "编码",
     "版本控制",
     "Git",
-    "存储库",
-    "私人的",
-    "公开的",
-    "秘密",
+    "仓库",
+    "私密",
+    "公开",
+    "密钥",
     "解锁",
-    "隐藏的",
-    "透露",
-    "知识",
-    "学习"
+    "知识库",
+    "访问权限"
   ],
   "categories": [
     "development",
@@ -27,20 +28,21 @@
       "name": "book key",
       "tags": [
         "code",
-        "coding",
         "version control",
         "git",
         "repository",
         "private",
         "public",
-        "secret",
-        "unlocked",
-        "hidden",
-        "revealed",
-        "knowledge",
-        "learning"
+        "key",
+        "unlock",
+        "knowledge base",
+        "access"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Private repository access",
+        "Documentation with API keys",
+        "Secure knowledge base entry"
+      ]
     }
   }
 }

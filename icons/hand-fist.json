@@ -1,20 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "庆祝胜利",
+    "展示力量",
+    "社交媒体反应",
+    "体育成就"
+  ],
   "name": "手拳头",
   "tags": [
-    "握紧",
-    "实力",
-    "电源",
+    "拳头",
+    "力量",
     "团结",
-    "团结",
-    "叛乱",
     "胜利",
-    "胜利",
+    "战斗",
     "支持",
-    "战斗",
-    "战斗",
-    "争吵"
+    "反抗",
+    "社交表情"
   ],
   "categories": [
     "social",
@@ -26,20 +27,21 @@
     "en": {
       "name": "hand fist",
       "tags": [
-        "clench",
+        "fist",
         "strength",
-        "power",
         "unity",
-        "solidarity",
-        "rebellion",
         "victory",
-        "triumph",
-        "support",
         "fight",
-        "combat",
-        "brawl"
+        "support",
+        "rebellion",
+        "social emoji"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Celebrating victory",
+        "Showing strength",
+        "Social media reactions",
+        "Sports achievements"
+      ]
     }
   }
 }

@@ -1,20 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "上传到日历",
+    "提交活动日期",
+    "安排预约",
+    "按日期升序排序事件"
+  ],
   "name": "日历箭头上",
   "tags": [
     "日期",
-    "月",
-    "年",
+    "日历",
     "事件",
-    "排序",
-    "订单",
-    "上升",
-    "下降",
-    "增加",
-    "减少",
-    "上升",
-    "坠落"
+    "上传",
+    "提交",
+    "排序升序",
+    "时间"
   ],
   "categories": [
     "time"
@@ -24,19 +24,19 @@
       "name": "calendar arrow up",
       "tags": [
         "date",
-        "month",
-        "year",
+        "calendar",
         "event",
-        "sort",
-        "order",
-        "ascending",
-        "descending",
-        "increasing",
-        "decreasing",
-        "rising",
-        "falling"
+        "upload",
+        "submit",
+        "sort ascending",
+        "time"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Upload to calendar",
+        "Submit event date",
+        "Schedule an appointment",
+        "Sort events by date ascending"
+      ]
     }
   }
 }

@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "机场导航",
+    "飞行控制",
+    "交通管理"
+  ],
   "name": "塔控制",
   "tags": [
-    "机场",
-    "旅行",
-    "塔",
-    "交通",
-    "灯塔"
+    "控制塔",
+    "机场塔台",
+    "交通控制",
+    "航空管制"
   ],
   "categories": [
     "travel",
@@ -17,13 +20,16 @@
     "en": {
       "name": "tower control",
       "tags": [
-        "airport",
-        "travel",
-        "tower",
-        "transportation",
-        "lighthouse"
+        "control tower",
+        "airport tower",
+        "traffic control",
+        "air traffic control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Airport navigation",
+        "Flight control",
+        "Transportation management"
+      ]
     }
   }
 }

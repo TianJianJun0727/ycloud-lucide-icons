@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "环保网站",
+    "公园导航",
+    "林业管理",
+    "自然保护"
+  ],
   "name": "树木",
   "tags": [
-    "树",
+    "树木",
     "森林",
     "公园",
-    "自然"
+    "自然",
+    "绿化",
+    "林地"
   ],
   "categories": [
     "nature",
@@ -19,9 +26,16 @@
         "tree",
         "forest",
         "park",
-        "nature"
+        "nature",
+        "greenery",
+        "woodland"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Environmental website",
+        "Park navigation",
+        "Forestry management",
+        "Nature conservation"
+      ]
     }
   }
 }

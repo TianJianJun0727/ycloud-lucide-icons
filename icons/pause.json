@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频播放器暂停按钮",
+    "音乐播放控制",
+    "临时停止某个进程"
+  ],
   "name": "暂停",
   "tags": [
-    "音乐",
-    "停止"
+    "暂停",
+    "媒体控制",
+    "播放器",
+    "中断",
+    "等待"
   ],
   "categories": [
     "multimedia"
@@ -13,10 +20,17 @@
     "en": {
       "name": "pause",
       "tags": [
-        "music",
-        "stop"
+        "pause",
+        "media control",
+        "player",
+        "interrupt",
+        "wait"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video player pause button",
+        "Music playback control",
+        "Temporarily halt a process"
+      ]
     }
   }
 }

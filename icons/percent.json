@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "折扣或促销价格显示",
+    "数学模运算",
+    "金融百分比计算"
+  ],
   "name": "百分比",
   "tags": [
     "百分比",
-    "模数",
-    "模数",
-    "余数",
-    "%",
-    "销售",
     "折扣",
-    "报价",
-    "营销"
+    "销售",
+    "模运算",
+    "数学",
+    "金融"
   ],
   "categories": [
     "math",
@@ -23,17 +24,18 @@
     "en": {
       "name": "percent",
       "tags": [
-        "percentage",
-        "modulo",
-        "modulus",
-        "remainder",
-        "%",
-        "sale",
+        "percent",
         "discount",
-        "offer",
-        "marketing"
+        "sale",
+        "modulo",
+        "math",
+        "finance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Discount or sale pricing display",
+        "Mathematical modulo operations",
+        "Financial percentage calculations"
+      ]
     }
   }
 }

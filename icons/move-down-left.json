@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "将对象移至左下角",
+    "地图向西南平移",
+    "调整大小的光标角落",
+    "方向导航按钮"
+  ],
   "name": "移动下左",
   "tags": [
     "箭头",
-    "方向"
+    "方向",
+    "左下",
+    "移动",
+    "导航",
+    "光标"
   ],
   "categories": [
     "arrows"
@@ -14,9 +23,18 @@
       "name": "move down left",
       "tags": [
         "arrow",
-        "direction"
+        "direction",
+        "down-left",
+        "move",
+        "navigation",
+        "cursor"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Move object to bottom-left",
+        "Pan map southwest",
+        "Resize cursor corner",
+        "Directional navigation button"
+      ]
     }
   }
 }

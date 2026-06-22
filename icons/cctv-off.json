@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用安防摄像头",
+    "关闭监控",
+    "隐私模式"
+  ],
   "name": "监控关闭",
   "tags": [
-    "相机",
+    "监控关闭",
+    "摄像头关闭",
+    "安防",
     "监视",
-    "录音",
-    "电影",
-    "录像带",
-    "犯罪",
-    "观看"
+    "禁用"
   ],
   "categories": [
     "security",
@@ -22,15 +24,17 @@
     "en": {
       "name": "cctv off",
       "tags": [
-        "camera",
+        "cctv off",
+        "camera off",
         "surveillance",
-        "recording",
-        "film",
-        "videotape",
-        "crime",
-        "watching"
+        "security",
+        "disabled"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable security camera",
+        "Turn off surveillance",
+        "Privacy mode"
+      ]
     }
   }
 }

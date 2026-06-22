@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器停止按钮",
+    "音频控制",
+    "视频播放控制"
+  ],
   "name": "方形停止",
   "tags": [
-    "媒体",
-    "音乐"
+    "停止",
+    "媒体控制",
+    "音乐",
+    "视频",
+    "暂停"
   ],
   "categories": [
     "multimedia"
@@ -13,10 +20,17 @@
     "en": {
       "name": "square stop",
       "tags": [
-        "media",
-        "music"
+        "stop",
+        "media control",
+        "music",
+        "video",
+        "pause"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player stop button",
+        "Audio control",
+        "Video playback control"
+      ]
     }
   }
 }

@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户账户安全设置",
+    "密码重置流程",
+    "物理或数字访问控制"
+  ],
   "name": "钥匙",
   "tags": [
+    "钥匙",
     "密码",
     "登录",
     "认证",
     "安全",
     "解锁",
-    "钥匙扣",
-    "钥匙圈",
-    "离岸价"
+    "密钥",
+    "访问"
   ],
   "categories": [
     "security",
@@ -20,16 +24,19 @@
     "en": {
       "name": "key",
       "tags": [
+        "key",
         "password",
         "login",
         "authentication",
-        "secure",
+        "security",
         "unlock",
-        "keychain",
-        "key ring",
-        "fob"
+        "access"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User account security settings",
+        "Password reset flow",
+        "Physical or digital access control"
+      ]
     }
   }
 }

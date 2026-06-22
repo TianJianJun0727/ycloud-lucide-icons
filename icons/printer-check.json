@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打印任务成功状态",
+    "办公设备确认"
+  ],
   "name": "打印机勾选",
   "tags": [
-    "传真",
-    "办公室",
-    "装置",
+    "打印机",
     "成功",
-    "印刷的"
+    "确认",
+    "办公"
   ],
   "categories": [
     "devices"
@@ -16,13 +18,15 @@
     "en": {
       "name": "printer check",
       "tags": [
-        "fax",
-        "office",
-        "device",
+        "printer",
         "success",
-        "printed"
+        "confirm",
+        "office"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Print job success status",
+        "Office equipment confirmation"
+      ]
     }
   }
 }

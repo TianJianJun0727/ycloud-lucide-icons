@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "应用启动器或主屏幕网格",
+    "图片库网格视图",
+    "仪表盘小组件布局"
+  ],
   "name": "布局网格",
   "tags": [
-    "应用",
+    "网格",
+    "布局",
+    "应用网格",
     "首页",
-    "开始"
+    "图标网格",
+    "平铺"
   ],
   "categories": [
     "design",
@@ -15,11 +22,18 @@
     "en": {
       "name": "layout grid",
       "tags": [
-        "app",
+        "grid",
+        "layout",
+        "app grid",
         "home",
-        "start"
+        "icon grid",
+        "tile"
       ],
-      "use-cases": []
+      "use-cases": [
+        "App launcher or home screen grid",
+        "Image gallery grid view",
+        "Dashboard widget layout"
+      ]
     }
   }
 }

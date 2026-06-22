@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "连接错误状态",
+    "全局访问拒绝",
+    "网络服务不可用"
+  ],
   "name": "地球关闭",
   "tags": [
-    "地球仪",
-    "互联网",
-    "离线",
-    "断开连接",
-    "网络",
-    "连接",
-    "世界",
-    "没有连接",
+    "地球",
+    "关闭",
+    "错误",
+    "拒绝",
+    "不可用",
+    "断开",
     "网络故障",
-    "信号关闭"
+    "连接失败"
   ],
   "categories": [
     "connectivity",
@@ -24,17 +26,19 @@
       "name": "globe X",
       "tags": [
         "globe",
-        "internet",
-        "offline",
-        "disconnected",
-        "network",
-        "connection",
-        "world",
-        "no connection",
+        "close",
+        "error",
+        "reject",
+        "unavailable",
+        "disconnect",
         "network failure",
-        "signal off"
+        "connection error"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Connection error status",
+        "Access denied globally",
+        "Network service unavailable"
+      ]
     }
   }
 }

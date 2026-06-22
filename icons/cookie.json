@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Cookie 同意横幅",
+    "隐私政策设置",
+    "网站数据偏好",
+    "食品食谱应用"
+  ],
   "name": "曲奇",
   "tags": [
-    "饼干",
+    "Cookie",
     "隐私",
-    "合法的",
-    "食物"
+    "同意",
+    "数据",
+    "网站",
+    "设置",
+    "饼干"
   ],
   "categories": [
     "account",
@@ -16,12 +24,20 @@
     "en": {
       "name": "cookie",
       "tags": [
-        "biscuit",
+        "cookie",
         "privacy",
-        "legal",
-        "food"
+        "consent",
+        "data",
+        "website",
+        "settings",
+        "biscuit"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cookie consent banner",
+        "Privacy policy settings",
+        "Website data preferences",
+        "Food recipe app"
+      ]
     }
   }
 }

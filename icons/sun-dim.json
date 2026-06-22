@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "屏幕亮度控制",
+    "深色模式切换",
+    "无障碍设置",
+    "护眼模式"
+  ],
   "name": "太阳变暗",
   "tags": [
-    "亮度",
-    "昏暗",
-    "低",
-    "亮度低"
+    "亮度低",
+    "暗光",
+    "弱光",
+    "降低亮度",
+    "夜间模式",
+    "无障碍"
   ],
   "categories": [
     "accessibility",
@@ -16,12 +23,18 @@
     "en": {
       "name": "sun dim",
       "tags": [
-        "brightness",
-        "dim",
-        "low",
-        "brightness low"
+        "low brightness",
+        "dim light",
+        "reduce brightness",
+        "night mode",
+        "accessibility"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Screen brightness control",
+        "Dark mode toggle",
+        "Accessibility settings",
+        "Eye comfort mode"
+      ]
     }
   }
 }

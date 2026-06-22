@@ -1,18 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "保存网页链接",
+    "收藏重要内容",
+    "标记阅读位置"
+  ],
   "name": "书签",
   "tags": [
-    "保存",
+    "书签",
     "收藏",
-    "标记",
-    "标签",
-    "附件",
-    "文件",
-    "棍子",
-    "针",
-    "读",
-    "剪辑",
+    "保存",
     "标记",
     "标签"
   ],
@@ -23,20 +20,17 @@
     "en": {
       "name": "bookmark",
       "tags": [
-        "save",
+        "bookmark",
         "favorite",
+        "save",
         "mark",
-        "label",
-        "attachment",
-        "file",
-        "stick",
-        "pin",
-        "read",
-        "clip",
-        "marker",
-        "tag"
+        "label"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Save webpage link",
+        "Favorite important content",
+        "Mark reading position"
+      ]
     }
   }
 }

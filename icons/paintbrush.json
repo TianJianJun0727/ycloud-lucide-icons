@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计软件工具",
+    "绘画应用",
+    "颜色自定义",
+    "创意工作区"
+  ],
   "name": "画笔",
   "tags": [
-    "刷子",
     "画笔",
     "设计",
     "颜色",
-    "颜色",
+    "绘画",
+    "工具",
     "装饰",
-    "DIY"
+    "创意"
   ],
   "categories": [
     "text",
@@ -26,11 +31,17 @@
         "paintbrush",
         "design",
         "color",
-        "colour",
+        "painting",
+        "tool",
         "decoration",
-        "diy"
+        "creative"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Design software tools",
+        "Painting application",
+        "Color customization",
+        "Creative workspace"
+      ]
     }
   }
 }

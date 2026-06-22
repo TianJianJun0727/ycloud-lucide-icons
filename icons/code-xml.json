@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码编辑器",
+    "XML文件图标",
+    "Web开发"
+  ],
   "name": "代码XML",
   "tags": [
-    "来源",
+    "代码",
+    "XML",
     "编程",
-    "HTML",
-    "XML"
+    "标记",
+    "开发"
   ],
   "categories": [
     "text",
@@ -24,12 +29,17 @@
     "en": {
       "name": "code xml",
       "tags": [
-        "source",
+        "code",
+        "XML",
         "programming",
-        "html",
-        "xml"
+        "markup",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code editor",
+        "XML file icon",
+        "Web development"
+      ]
     }
   }
 }

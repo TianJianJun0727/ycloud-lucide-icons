@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家庭网络设置",
+    "智能设备连接",
+    "互联网服务应用"
+  ],
   "name": "房屋无线网络",
   "tags": [
-    "首页",
-    "生活",
-    "建筑物",
-    "Wi-Fi",
-    "连接性"
+    "房屋WiFi",
+    "智能家居",
+    "无线网络",
+    "连接",
+    "互联网",
+    "物联网"
   ],
   "categories": [
     "home",
@@ -18,13 +23,18 @@
     "en": {
       "name": "house wifi",
       "tags": [
-        "home",
-        "living",
-        "building",
-        "wifi",
-        "connectivity"
+        "house wifi",
+        "smart home",
+        "wireless",
+        "connectivity",
+        "internet",
+        "IoT"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home network setup",
+        "Smart device connectivity",
+        "Internet service applications"
+      ]
     }
   }
 }

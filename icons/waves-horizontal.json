@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频或声波可视化",
+    "水或海洋相关内容",
+    "信号或频率指示器"
+  ],
   "name": "波浪水平",
   "tags": [
-    "水",
-    "海",
-    "声音",
-    "赫兹",
-    "波长",
-    "振动",
-    "海洋",
-    "游泳",
-    "频率"
+    "波浪",
+    "水波",
+    "声波",
+    "频率",
+    "信号",
+    "振动"
   ],
   "categories": [
     "weather",
@@ -31,17 +32,18 @@
     "en": {
       "name": "waves horizontal",
       "tags": [
-        "water",
-        "sea",
-        "sound",
-        "hertz",
-        "wavelength",
-        "vibrate",
-        "ocean",
-        "swimming",
-        "frequency"
+        "waves",
+        "water waves",
+        "sound waves",
+        "frequency",
+        "signal",
+        "vibration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio or sound wave visualization",
+        "Water or ocean-related content",
+        "Signal or frequency indicators"
+      ]
     }
   }
 }

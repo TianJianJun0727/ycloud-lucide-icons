@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加反应功能",
+    "积极反馈按钮",
+    "表情选择"
+  ],
   "name": "笑脸加号",
   "tags": [
-    "表情符号",
-    "脸",
-    "快乐",
-    "好",
-    "情感",
-    "反应",
-    "反应",
-    "添加"
+    "笑脸",
+    "表情",
+    "添加",
+    "喜欢",
+    "积极反馈",
+    "情感反应"
   ],
   "categories": [
     "emoji",
@@ -22,16 +24,18 @@
     "en": {
       "name": "smile plus",
       "tags": [
+        "smile",
         "emoji",
-        "face",
-        "happy",
-        "good",
-        "emotion",
-        "react",
-        "reaction",
-        "add"
+        "add",
+        "like",
+        "positive feedback",
+        "emotional reaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add reaction feature",
+        "Positive feedback button",
+        "Emoji selection"
+      ]
     }
   }
 }

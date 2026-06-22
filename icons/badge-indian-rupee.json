@@ -1,22 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "印度卢比折扣徽章",
+    "印度卢比价格标签",
+    "印度购物促销"
+  ],
   "name": "徽章印度卢比",
   "tags": [
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
-    "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
+    "优惠",
+    "价格",
     "印度卢比",
-    "₹"
+    "促销",
+    "金融",
+    "购物",
+    "交易"
   ],
   "categories": [
     "shopping",
@@ -28,20 +26,18 @@
       "tags": [
         "discount",
         "offer",
-        "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
-        "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
+        "price",
         "inr",
-        "₹"
+        "sale",
+        "finance",
+        "shopping",
+        "transaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Discount badge in Indian rupee",
+        "INR price tag",
+        "India shopping promotion"
+      ]
     }
   }
 }

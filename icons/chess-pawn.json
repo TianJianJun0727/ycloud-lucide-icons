@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "国际象棋游戏界面",
+    "初级水平",
+    "策略教程",
+    "游戏棋子套装"
+  ],
   "name": "国际象棋兵",
   "tags": [
-    "一块",
-    "棋盘游戏"
+    "国际象棋",
+    "兵",
+    "棋子",
+    "棋盘游戏",
+    "策略",
+    "起始",
+    "游戏"
   ],
   "categories": [
     "gaming",
@@ -14,10 +24,20 @@
     "en": {
       "name": "chess pawn",
       "tags": [
+        "chess",
+        "pawn",
         "piece",
-        "board game"
+        "board game",
+        "strategy",
+        "starting",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chess game interface",
+        "Beginner level",
+        "Strategy tutorial",
+        "Game piece set"
+      ]
     }
   }
 }

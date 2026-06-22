@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带有左上角菜单的主导航",
+    "项目概览面板布局",
+    "带有侧边栏的主应用窗口"
+  ],
   "name": "面板顶部左",
   "tags": [
     "菜单栏",
     "侧边栏",
-    "小学",
-    "抽屉",
-    "窗户",
-    "网页",
-    "项目",
-    "概述"
+    "主面板",
+    "布局",
+    "顶部左侧",
+    "项目概览"
   ],
   "categories": [
     "layout",
@@ -31,14 +33,16 @@
       "tags": [
         "menu bar",
         "sidebar",
-        "primary",
-        "drawers",
-        "window",
-        "webpage",
-        "projects",
-        "overview"
+        "primary panel",
+        "layout",
+        "top left",
+        "project overview"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Primary navigation with top-left menu",
+        "Project overview panel layout",
+        "Main application window with sidebar"
+      ]
     }
   }
 }

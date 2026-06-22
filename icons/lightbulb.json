@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "建议或提示指示器",
+    "创意模式切换",
+    "灵感或想法开启"
+  ],
   "name": "灯泡",
   "tags": [
+    "灯泡",
     "想法",
+    "灵感",
+    "创意",
+    "提示",
     "明亮",
-    "灯"
+    "开启"
   ],
   "categories": [
     "photography"
@@ -14,11 +22,19 @@
     "en": {
       "name": "lightbulb",
       "tags": [
+        "lightbulb",
         "idea",
+        "inspiration",
+        "creative",
+        "hint",
         "bright",
-        "lights"
+        "on"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Suggestion or tip indicator",
+        "Creative mode toggle",
+        "Inspiration or idea on"
+      ]
     }
   }
 }

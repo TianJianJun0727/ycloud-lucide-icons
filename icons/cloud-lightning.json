@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "雷暴警告",
+    "闪电警报",
+    "暴风雨天气指示器"
+  ],
   "name": "云闪电",
   "tags": [
+    "闪电",
+    "雷暴",
+    "雷电",
     "天气",
-    "螺栓"
+    "风暴",
+    "放电"
   ],
   "categories": [
     "weather"
@@ -13,10 +21,18 @@
     "en": {
       "name": "cloud lightning",
       "tags": [
+        "lightning",
+        "thunderstorm",
+        "thunder",
         "weather",
-        "bolt"
+        "storm",
+        "electric"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Thunderstorm warning",
+        "Lightning strike alert",
+        "Stormy weather indicator"
+      ]
     }
   }
 }

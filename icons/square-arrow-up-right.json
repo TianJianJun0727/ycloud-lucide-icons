@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外部链接",
+    "分享按钮",
+    "对角线导航"
+  ],
   "name": "方形箭头上右",
   "tags": [
     "方向",
-    "东北",
     "对角线",
-    "标志",
-    "键盘",
     "按钮",
-    "分享"
+    "分享",
+    "外部"
   ],
   "categories": [
     "arrows",
@@ -28,14 +30,16 @@
       "name": "square arrow up right",
       "tags": [
         "direction",
-        "north-east",
         "diagonal",
-        "sign",
-        "keyboard",
         "button",
-        "share"
+        "share",
+        "external"
       ],
-      "use-cases": []
+      "use-cases": [
+        "External link",
+        "Share button",
+        "Diagonal navigation"
+      ]
     }
   }
 }

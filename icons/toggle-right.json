@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "开启某个设置或功能",
+    "在UI控件中启用某项功能",
+    "显示处于“开”状态的二进制开关"
+  ],
   "name": "开关右",
   "tags": [
-    "上",
-    "关闭",
-    "开关",
-    "布尔值"
+    "开关右",
+    "切换开启",
+    "启用",
+    "开",
+    "右拨动"
   ],
   "categories": [
     "layout",
@@ -17,12 +22,17 @@
     "en": {
       "name": "toggle right",
       "tags": [
+        "toggle right",
+        "switch on",
+        "enable",
         "on",
-        "off",
-        "switch",
-        "boolean"
+        "right toggle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Turn a setting or feature on",
+        "Enable a function in UI controls",
+        "Show a binary switch in the 'on' position"
+      ]
     }
   }
 }

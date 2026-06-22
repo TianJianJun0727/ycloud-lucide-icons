@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加新用户",
+    "创建账户",
+    "关注个人资料",
+    "订阅服务"
+  ],
   "name": "用户加号",
   "tags": [
-    "新建",
-    "添加",
-    "创建",
+    "添加用户",
+    "新建用户",
     "关注",
-    "订阅"
+    "订阅",
+    "用户注册"
   ],
   "categories": [
     "account"
@@ -16,13 +21,18 @@
     "en": {
       "name": "user plus",
       "tags": [
-        "new",
         "add",
         "create",
         "follow",
-        "subscribe"
+        "subscribe",
+        "user registration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "adding a new user",
+        "creating an account",
+        "following a profile",
+        "subscribing to a service"
+      ]
     }
   }
 }

@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "分享功能",
+    "社交分享按钮",
+    "内容分发"
+  ],
   "name": "分享",
   "tags": [
-    "网络",
-    "连接"
+    "分享",
+    "共享",
+    "转发",
+    "发送",
+    "社交",
+    "连接",
+    "传播"
   ],
   "categories": [
     "account",
@@ -14,10 +23,19 @@
     "en": {
       "name": "share",
       "tags": [
-        "network",
-        "connections"
+        "share",
+        "sharing",
+        "forward",
+        "send",
+        "social",
+        "connection",
+        "distribution"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Share functionality",
+        "Social sharing buttons",
+        "Content distribution"
+      ]
     }
   }
 }

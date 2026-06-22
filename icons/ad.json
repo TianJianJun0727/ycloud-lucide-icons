@@ -1,22 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "标记内容为赞助内容",
+    "标记赞助内容",
     "链接到广告合作页面"
   ],
   "name": "广告",
   "tags": [
     "广告",
-    "附属机构",
-    "品牌",
-    "活动",
-    "商业",
     "营销",
-    "货币化",
-    "付费的",
-    "合伙人",
-    "促销",
-    "赞助商"
+    "赞助",
+    "商业",
+    "推广",
+    "付费内容",
+    "品牌合作"
   ],
   "categories": [
     "multimedia",
@@ -26,17 +22,13 @@
     "en": {
       "name": "ad",
       "tags": [
-        "advert",
-        "affiliate",
-        "brand",
-        "campaign",
-        "commercial",
+        "ad",
         "marketing",
-        "monetize",
+        "sponsor",
+        "commercial",
+        "promotion",
         "paid",
-        "partner",
-        "promo",
-        "sponsor"
+        "partner"
       ],
       "use-cases": [
         "marking content as sponsored",

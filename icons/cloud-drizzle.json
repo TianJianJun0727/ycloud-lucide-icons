@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "小雨天气预报",
+    "毛毛雨状况指示器",
+    "天气应用降水图标"
+  ],
   "name": "云毛毛雨",
   "tags": [
+    "小雨",
+    "毛毛雨",
+    "降水",
     "天气",
-    "淋浴"
+    "阴雨",
+    "潮湿"
   ],
   "categories": [
     "weather"
@@ -13,10 +21,18 @@
     "en": {
       "name": "cloud drizzle",
       "tags": [
+        "drizzle",
+        "light rain",
+        "precipitation",
         "weather",
-        "shower"
+        "rainy",
+        "damp"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Light rain weather forecast",
+        "Drizzle condition indicator",
+        "Weather app precipitation icon"
+      ]
     }
   }
 }

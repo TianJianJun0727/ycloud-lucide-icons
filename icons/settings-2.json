@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "高级设置面板",
+    "用户偏好设置",
+    "配置选项"
+  ],
   "name": "设置2",
   "tags": [
     "设置",
-    "编辑",
-    "齿轮",
+    "配置",
     "偏好",
-    "滑块"
+    "调整",
+    "控制",
+    "选项",
+    "自定义"
   ],
   "categories": [
     "account"
@@ -16,13 +22,19 @@
     "en": {
       "name": "settings 2",
       "tags": [
-        "cog",
-        "edit",
-        "gear",
+        "settings",
+        "configuration",
         "preferences",
-        "slider"
+        "adjustment",
+        "control",
+        "options",
+        "customization"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Advanced settings panel",
+        "User preferences",
+        "Configuration options"
+      ]
     }
   }
 }

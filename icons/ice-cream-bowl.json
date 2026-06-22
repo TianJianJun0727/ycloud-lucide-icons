@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "甜点菜单",
+    "冰淇淋店",
+    "外卖应用",
+    "食谱应用"
+  ],
   "name": "冰冰淇淋碗",
   "tags": [
     "冰淇淋",
-    "食物",
     "甜点",
-    "菜",
-    "餐厅",
-    "课程",
-    "餐"
+    "碗装",
+    "冷饮",
+    "美食"
   ],
   "categories": [
     "food-beverage"
@@ -26,15 +29,18 @@
     "en": {
       "name": "ice cream bowl",
       "tags": [
-        "gelato",
-        "food",
+        "ice cream",
         "dessert",
-        "dish",
-        "restaurant",
-        "course",
-        "meal"
+        "bowl",
+        "cold treat",
+        "food"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dessert menu",
+        "Ice cream shop",
+        "Food delivery",
+        "Recipe app"
+      ]
     }
   }
 }

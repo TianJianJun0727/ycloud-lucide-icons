@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家装应用",
+    "工具库存",
+    "建筑项目"
+  ],
   "name": "锤子",
   "tags": [
-    "木槌",
-    "指甲",
-    "DIY",
-    "工具箱",
+    "锤子",
+    "工具",
+    "维修",
     "建造",
-    "建筑"
+    "DIY"
   ],
   "categories": [
     "tools",
@@ -18,14 +21,17 @@
     "en": {
       "name": "hammer",
       "tags": [
-        "mallet",
-        "nails",
-        "diy",
-        "toolbox",
-        "build",
-        "construction"
+        "hammer",
+        "tool",
+        "repair",
+        "construction",
+        "DIY"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home improvement apps",
+        "Tool inventory",
+        "Construction projects"
+      ]
     }
   }
 }

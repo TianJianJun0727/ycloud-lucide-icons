@@ -1,31 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "展示排名或排行榜",
-    "展示游戏或比赛后的优胜者"
+    "排行榜显示",
+    "比赛结果",
+    "成就认可"
   ],
   "name": "领奖台",
   "tags": [
-    "奖项",
-    "舞台",
-    "获胜者",
-    "庆祝活动",
-    "表现",
-    "奖章",
-    "成功",
-    "成就",
-    "突出显示",
+    "领奖台",
     "排名",
-    "获胜",
-    "地方",
-    "放置",
-    "排行榜",
-    "第一",
-    "第二",
-    "第三",
-    "黄金",
-    "银",
-    "青铜"
+    "获胜者",
+    "奖项",
+    "比赛"
   ],
   "categories": [
     "sports",
@@ -35,30 +21,16 @@
     "en": {
       "name": "podium",
       "tags": [
-        "award",
-        "stage",
-        "winner",
-        "celebration",
-        "performance",
-        "medal",
-        "success",
-        "achievement",
-        "highlight",
+        "podium",
         "ranking",
-        "winning",
-        "place",
-        "placing",
-        "leaderboard",
-        "first",
-        "second",
-        "third",
-        "gold",
-        "silver",
-        "bronze"
+        "winner",
+        "award",
+        "competition"
       ],
       "use-cases": [
-        "show rankings or leaderboards",
-        "display top winners after a game or competition"
+        "Leaderboard display",
+        "Competition results",
+        "Achievement recognition"
       ]
     }
   }

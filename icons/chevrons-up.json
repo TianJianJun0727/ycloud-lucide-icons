@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "增加音量或速度",
+    "滚动到顶部",
+    "游戏向上移动控制"
+  ],
   "name": "双折角箭头上",
   "tags": [
+    "向上",
+    "提升",
+    "加速",
     "前进",
-    "前面",
-    "更快",
-    "速度",
-    "提升"
+    "双箭头",
+    "游戏控制"
   ],
   "categories": [
     "arrows",
@@ -17,13 +22,18 @@
     "en": {
       "name": "chevrons up",
       "tags": [
+        "up",
+        "boost",
+        "accelerate",
         "forward",
-        "ahead",
-        "faster",
-        "speed",
-        "boost"
+        "double arrow",
+        "gaming control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Increase volume or speed",
+        "Scroll to top",
+        "Game upward movement control"
+      ]
     }
   }
 }

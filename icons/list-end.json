@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "导航到列表末尾",
+    "指示队列中的最后一项",
+    "显示播放列表底部"
+  ],
   "name": "列表末端",
   "tags": [
-    "队列",
+    "列表",
+    "末尾",
     "底部",
     "结束",
+    "队列",
     "播放列表"
   ],
   "categories": [
@@ -16,12 +22,17 @@
     "en": {
       "name": "list end",
       "tags": [
-        "queue",
-        "bottom",
+        "list",
         "end",
+        "bottom",
+        "queue",
         "playlist"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Navigate to the end of a list",
+        "Indicate the last item in a queue",
+        "Show bottom of a playlist"
+      ]
     }
   }
 }

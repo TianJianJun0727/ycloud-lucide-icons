@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "合并代码分支",
+    "组合文件或数据",
+    "打包模块",
+    "聚合资源"
+  ],
   "name": "合并",
   "tags": [
-    "立方体",
-    "包",
-    "零件",
-    "单位",
-    "收藏",
-    "集群",
-    "联合起来",
-    "聚集",
-    "合并"
+    "合并",
+    "组合",
+    "聚合",
+    "打包",
+    "模块",
+    "集合",
+    "整合",
+    "开发"
   ],
   "categories": [
     "development",
@@ -21,17 +25,21 @@
     "en": {
       "name": "combine",
       "tags": [
-        "cubes",
-        "packages",
-        "parts",
-        "units",
-        "collection",
-        "cluster",
+        "merge",
         "combine",
-        "gather",
-        "merge"
+        "aggregate",
+        "package",
+        "modules",
+        "collection",
+        "integrate",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Merge code branches",
+        "Combine files or data",
+        "Package modules together",
+        "Aggregate resources"
+      ]
     }
   }
 }

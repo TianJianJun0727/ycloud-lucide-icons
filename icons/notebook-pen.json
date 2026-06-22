@@ -1,33 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "笔记记录",
+    "写作应用",
+    "学习资料",
+    "草稿创建"
+  ],
   "name": "笔记本笔",
   "tags": [
-    "铅笔",
-    "记事本",
+    "笔记本",
     "笔记",
-    "注意到",
+    "书写",
     "文具",
-    "素描本",
-    "组织者",
-    "组织者",
-    "规划师",
-    "日记",
-    "日记",
-    "写作",
-    "写",
-    "书面的",
-    "阅读",
-    "高中",
-    "大学",
-    "学院",
-    "学院",
-    "学生",
     "学习",
-    "研究",
-    "作业",
-    "橡皮擦",
-    "橡胶"
+    "写作",
+    "草稿",
+    "记录"
   ],
   "categories": [
     "text",
@@ -37,33 +25,20 @@
     "en": {
       "name": "notebook pen",
       "tags": [
-        "pencil",
-        "notepad",
+        "notebook",
         "notes",
-        "noted",
-        "stationery",
-        "sketchbook",
-        "organizer",
-        "organiser",
-        "planner",
-        "diary",
-        "journal",
         "writing",
-        "write",
-        "written",
-        "reading",
-        "high school",
-        "university",
-        "college",
-        "academy",
-        "student",
+        "stationery",
         "study",
-        "research",
-        "homework",
-        "eraser",
-        "rubber"
+        "drafting",
+        "recording"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Note taking",
+        "Writing app",
+        "Study materials",
+        "Draft creation"
+      ]
     }
   }
 }

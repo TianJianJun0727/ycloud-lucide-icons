@@ -1,14 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "餐厅菜单图标",
+    "食品配送应用",
+    "食谱应用"
+  ],
   "name": "牛肉",
   "tags": [
-    "食物",
-    "菜",
-    "餐厅",
-    "课程",
-    "餐",
-    "肉",
+    "牛肉",
+    "肉类",
+    "餐饮",
     "烧烤",
     "牛排"
   ],
@@ -19,16 +20,17 @@
     "en": {
       "name": "beef",
       "tags": [
-        "food",
-        "dish",
-        "restaurant",
-        "course",
-        "meal",
+        "beef",
         "meat",
+        "dining",
         "bbq",
         "steak"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Restaurant menu icon",
+        "Food delivery app",
+        "Recipe application"
+      ]
     }
   }
 }

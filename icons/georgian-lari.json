@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "格鲁吉亚货币的金融应用",
+    "多币种支付选择器",
+    "旅行费用跟踪"
+  ],
   "name": "格鲁吉亚拉里",
   "tags": [
+    "格鲁吉亚拉里",
     "货币",
     "钱",
-    "付款"
+    "支付",
+    "格鲁吉亚"
   ],
   "categories": [
     "finance"
@@ -14,11 +20,17 @@
     "en": {
       "name": "georgian lari",
       "tags": [
+        "Georgian lari",
         "currency",
         "money",
-        "payment"
+        "payment",
+        "Georgia"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Financial app for Georgian currency",
+        "Multi-currency payment selector",
+        "Travel expense tracking"
+      ]
     }
   }
 }

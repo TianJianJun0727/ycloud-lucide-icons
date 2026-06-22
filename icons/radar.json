@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "目标探测界面",
+    "导航系统",
+    "安全监控面板"
+  ],
   "name": "雷达",
   "tags": [
+    "雷达",
     "扫描",
-    "声纳",
-    "检测",
-    "找到",
-    "定位"
+    "探测",
+    "定位",
+    "导航",
+    "监测"
   ],
   "categories": [
     "navigation",
@@ -18,13 +23,18 @@
     "en": {
       "name": "radar",
       "tags": [
+        "radar",
         "scan",
-        "sonar",
         "detect",
-        "find",
-        "locate"
+        "locate",
+        "navigation",
+        "monitor"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Target detection interface",
+        "Navigation system",
+        "Security monitoring panel"
+      ]
     }
   }
 }

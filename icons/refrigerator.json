@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "智能家居应用中的食物存储设置",
+    "厨房电器清单",
+    "生鲜配送温度偏好设置"
+  ],
   "name": "冰箱",
   "tags": [
     "冰箱",
-    "冰箱",
-    "冰柜",
-    "冷却器",
-    "冰箱",
-    "冷水机",
-    "冷库"
+    "冷藏",
+    "冷冻",
+    "保鲜",
+    "厨房",
+    "家电"
   ],
   "categories": [
     "food-beverage",
@@ -19,15 +22,18 @@
     "en": {
       "name": "refrigerator",
       "tags": [
-        "frigerator",
+        "refrigerator",
         "fridge",
         "freezer",
-        "cooler",
-        "icebox",
-        "chiller",
-        "cold storage"
+        "cooling",
+        "kitchen",
+        "appliance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food storage settings in a smart home app",
+        "Kitchen appliance inventory",
+        "Grocery delivery temperature preference"
+      ]
     }
   }
 }

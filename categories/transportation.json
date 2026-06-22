@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "交通",
-  "icon": "train-front",
   "i18n": {
     "en": {
       "title": "Transportation"

@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "库存管理系统",
+    "物品分类界面",
+    "批量包装图标"
+  ],
   "name": "盒子组",
   "tags": [
-    "立方体",
-    "包",
-    "零件",
-    "分组",
-    "单位",
-    "收藏",
-    "集群",
-    "几何学"
+    "多个盒子",
+    "容器组",
+    "物品集合",
+    "库存管理",
+    "分组存储"
   ],
   "categories": [
     "shapes",
@@ -21,16 +22,17 @@
     "en": {
       "name": "boxes",
       "tags": [
-        "cubes",
-        "packages",
-        "parts",
-        "group",
-        "units",
-        "collection",
-        "cluster",
-        "geometry"
+        "boxes",
+        "container group",
+        "item collection",
+        "inventory management",
+        "grouped storage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Inventory management system",
+        "Item categorization interface",
+        "Bulk packaging icon"
+      ]
     }
   }
 }

@@ -2,25 +2,18 @@
   "$schema": "../icon.schema.json",
   "use-cases": [
     "表示 AI 辅助写作或编辑功能",
-    "表示自动写作或内容生成工具"
+    "表示自动内容生成工具"
   ],
   "name": "铅笔闪光",
   "tags": [
     "编辑",
     "AI",
-    "工具",
-    "聪明的",
-    "创建",
-    "画",
-    "素描",
-    "草稿",
-    "作家",
+    "智能",
     "写作",
-    "文具",
-    "艺术家",
+    "创作",
     "魔法",
-    "向导",
-    "魔术师"
+    "自动生成",
+    "内容生成"
   ],
   "categories": [
     "design",
@@ -35,23 +28,16 @@
       "tags": [
         "edit",
         "ai",
-        "tools",
         "smart",
-        "create",
-        "draw",
-        "sketch",
-        "draft",
-        "writer",
         "writing",
-        "stationery",
-        "artist",
+        "create",
         "magic",
-        "wizard",
-        "magician"
+        "auto-generate",
+        "content generation"
       ],
       "use-cases": [
-        "indicating AI-assisted writing or editing features",
-        "representing automated writing or content generation tools"
+        "AI-assisted writing or editing features",
+        "Automated content generation tools"
       ]
     }
   }

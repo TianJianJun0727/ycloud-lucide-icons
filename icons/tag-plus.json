@@ -7,13 +7,12 @@
   "name": "标签加号",
   "tags": [
     "标签",
-    "徽章",
-    "票",
+    "添加标签",
+    "新建标签",
     "标记",
-    "新建",
-    "添加",
+    "加号",
     "创建",
-    "+"
+    "徽章"
   ],
   "categories": [
     "account"
@@ -22,14 +21,13 @@
     "en": {
       "name": "tag plus",
       "tags": [
+        "tag",
         "label",
+        "add tag",
+        "new tag",
         "badge",
-        "ticket",
-        "mark",
-        "new",
-        "add",
         "create",
-        "+"
+        "plus"
       ],
       "use-cases": [
         "adding a tag to an item",

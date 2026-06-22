@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "指示严重错误或系统崩溃",
+    "表示安全漏洞或威胁"
+  ],
   "name": "炸弹",
   "tags": [
-    "致命的",
+    "炸弹",
     "错误",
     "崩溃",
-    "重磅炸弹",
-    "我的",
-    "爆炸",
-    "爆炸",
-    "爆炸物"
+    "致命",
+    "危险",
+    "安全",
+    "漏洞"
   ],
   "categories": [
     "security",
@@ -20,16 +22,18 @@
     "en": {
       "name": "bomb",
       "tags": [
-        "fatal",
+        "bomb",
         "error",
         "crash",
-        "blockbuster",
-        "mine",
-        "explosion",
-        "explode",
-        "explosive"
+        "fatal",
+        "danger",
+        "security",
+        "bug"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Indicate a critical error or system crash",
+        "Represent a security vulnerability or threat"
+      ]
     }
   }
 }

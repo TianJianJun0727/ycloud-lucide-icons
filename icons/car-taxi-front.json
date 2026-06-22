@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网约车应用",
+    "出租车服务预订",
+    "交通方式选择",
+    "出行与移动应用"
+  ],
   "name": "汽车出租车正面",
   "tags": [
-    "驾驶室",
-    "车辆",
-    "开车",
-    "旅行",
-    "旅程"
+    "出租车",
+    "网约车",
+    "汽车",
+    "出行",
+    "交通",
+    "叫车"
   ],
   "categories": [
     "transportation"
@@ -16,13 +22,19 @@
     "en": {
       "name": "car taxi front",
       "tags": [
+        "taxi",
         "cab",
-        "vehicle",
-        "drive",
-        "trip",
-        "journey"
+        "ride-hailing",
+        "car",
+        "transportation",
+        "travel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Ride-hailing app",
+        "Taxi service booking",
+        "Transportation selection",
+        "Travel and mobility apps"
+      ]
     }
   }
 }

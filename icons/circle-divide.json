@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "计算器功能",
+    "数学运算",
+    "除号符号"
+  ],
   "name": "圆形除号",
   "tags": [
-    "计算",
+    "除号",
     "数学",
-    "÷",
-    "/"
+    "计算",
+    "除法"
   ],
   "categories": [
     "math"
@@ -23,12 +27,16 @@
     "en": {
       "name": "circle divide",
       "tags": [
-        "calculate",
+        "divide",
         "math",
-        "÷",
-        "/"
+        "calculate",
+        "division"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Calculator function",
+        "Math operation",
+        "Division symbol"
+      ]
     }
   }
 }

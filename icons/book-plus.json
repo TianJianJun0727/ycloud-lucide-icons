@@ -1,28 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加新文档",
+    "创建仓库",
+    "发布指南"
+  ],
   "name": "书籍加号",
   "tags": [
     "代码",
-    "编码",
     "版本控制",
     "Git",
-    "存储库",
-    "移除",
-    "删除",
-    "读",
-    "写",
-    "作者",
+    "添加",
+    "创建",
     "发布",
-    "通知",
-    "毕业生",
-    "再教育",
     "学习",
-    "学习",
-    "研究",
     "知识",
-    "改善",
-    "升级",
     "升级"
   ],
   "categories": [
@@ -35,28 +27,20 @@
       "name": "book plus",
       "tags": [
         "code",
-        "coding",
         "version control",
         "git",
-        "repository",
-        "remove",
-        "delete",
-        "read",
-        "write",
-        "author",
+        "add",
+        "create",
         "publish",
-        "inform",
-        "graduate",
-        "re-educate",
         "study",
-        "learn",
-        "research",
         "knowledge",
-        "improve",
-        "upgrade",
-        "level up"
+        "upgrade"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add new documentation",
+        "Create a repository",
+        "Publish a guide"
+      ]
     }
   }
 }

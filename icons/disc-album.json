@@ -1,26 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "专辑收藏展示",
+    "音乐库整理",
+    "媒体目录"
+  ],
   "name": "光盘相册",
   "tags": [
-    "专辑",
+    "光盘专辑",
     "音乐",
-    "歌曲",
-    "格式",
-    "光盘",
-    "DVD",
-    "乙烯基",
-    "袖子",
+    "唱片",
     "封面",
-    "铂金",
-    "编译",
-    "EP",
-    "录音",
-    "回放",
-    "旋转",
-    "旋转",
-    "转速",
-    "DJ"
+    "收藏"
   ],
   "categories": [
     "devices",
@@ -30,26 +21,17 @@
     "en": {
       "name": "disc album",
       "tags": [
-        "album",
+        "disc album",
         "music",
-        "songs",
-        "format",
-        "cd",
-        "dvd",
-        "vinyl",
-        "sleeve",
+        "record",
         "cover",
-        "platinum",
-        "compilation",
-        "ep",
-        "recording",
-        "playback",
-        "spin",
-        "rotate",
-        "rpm",
-        "dj"
+        "collection"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Album collection display",
+        "Music library organization",
+        "Media catalog"
+      ]
     }
   }
 }

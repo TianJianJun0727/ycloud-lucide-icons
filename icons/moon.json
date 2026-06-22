@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "深色主题切换",
+    "夜间模式设置",
+    "时间指示器"
+  ],
   "name": "月亮",
   "tags": [
-    "黑暗",
-    "晚上"
+    "月亮",
+    "夜晚",
+    "黑暗模式",
+    "夜间"
   ],
   "categories": [
     "accessibility"
@@ -13,10 +19,16 @@
     "en": {
       "name": "moon",
       "tags": [
-        "dark",
-        "night"
+        "moon",
+        "night",
+        "dark mode",
+        "evening"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dark theme toggle",
+        "Night mode setting",
+        "Time of day indicator"
+      ]
     }
   }
 }

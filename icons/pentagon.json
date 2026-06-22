@@ -1,9 +1,14 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "几何形状选择",
+    "设计或图表元素"
+  ],
   "name": "五边形",
   "tags": [
-    "形状"
+    "五边形",
+    "形状",
+    "几何"
   ],
   "categories": [
     "shapes"
@@ -12,9 +17,14 @@
     "en": {
       "name": "pentagon",
       "tags": [
-        "shape"
+        "pentagon",
+        "shape",
+        "geometry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Geometric shape selection",
+        "Design or diagram elements"
+      ]
     }
   }
 }

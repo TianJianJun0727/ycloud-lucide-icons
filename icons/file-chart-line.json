@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "趋势分析报表",
+    "折线图文件",
+    "数据趋势图表",
+    "统计分析文档"
+  ],
   "name": "文件图表线条",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图",
-    "演示"
+    "数据分析",
+    "统计图表",
+    "折线图",
+    "趋势分析",
+    "报表文件"
   ],
   "categories": [
     "files"
@@ -24,13 +29,18 @@
     "en": {
       "name": "file chart line",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "presentation"
+        "data analysis",
+        "statistical chart",
+        "line chart",
+        "trend analysis",
+        "report file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Trend analysis reports",
+        "Line chart files",
+        "Data trend charts",
+        "Statistical analysis documents"
+      ]
     }
   }
 }

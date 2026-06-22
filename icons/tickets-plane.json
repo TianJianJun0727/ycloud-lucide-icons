@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "航班预订和电子机票",
+    "旅行行程单和登机牌",
+    "机场值机和旅行规划"
+  ],
   "name": "票券飞机",
   "tags": [
-    "飞机",
+    "机票",
+    "航班",
     "旅行",
-    "飞机",
-    "飞行",
-    "旅行",
-    "飞",
-    "起飞",
-    "假期",
-    "乘客",
-    "通过",
-    "办理登机手续",
-    "机场"
+    "登机",
+    "飞机票",
+    "航空"
   ],
   "categories": [
     "transportation",
@@ -24,20 +22,18 @@
     "en": {
       "name": "tickets plane",
       "tags": [
-        "plane",
-        "trip",
-        "airplane",
+        "airplane ticket",
         "flight",
         "travel",
-        "fly",
-        "takeoff",
-        "vacation",
-        "passenger",
-        "pass",
-        "check-in",
-        "airport"
+        "boarding",
+        "airfare",
+        "aviation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Flight booking and e-tickets",
+        "Travel itinerary and boarding passes",
+        "Airport check-in and travel planning"
+      ]
     }
   }
 }

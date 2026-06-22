@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "占星应用星座符号",
+    "社交媒体个人资料星座",
+    "星座运势网站图标"
+  ],
   "name": "星座狮子座",
   "tags": [
+    "狮子座",
+    "星座",
+    "占星",
     "狮子",
-    "皇冠",
+    "火象",
     "领导力",
-    "火",
     "信心",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "星座运势"
   ],
   "categories": [
     "social",
@@ -22,18 +24,20 @@
     "en": {
       "name": "zodiac leo",
       "tags": [
-        "lion",
-        "crown",
-        "leadership",
-        "fire",
-        "confidence",
+        "leo",
+        "zodiac",
         "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "lion",
+        "fire sign",
+        "leadership",
+        "confidence",
+        "horoscope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app zodiac sign",
+        "Social media profile birth sign",
+        "Horoscope website icon"
+      ]
     }
   }
 }

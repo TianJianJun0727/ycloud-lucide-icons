@@ -1,22 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计应用中的草图工具",
+    "草稿模式指示器",
+    "手绘图标"
+  ],
   "name": "铅笔线条",
   "tags": [
     "铅笔",
-    "改变",
-    "创建",
-    "画",
     "素描",
-    "草稿",
-    "作家",
-    "写作",
-    "比罗",
-    "墨水",
-    "标记",
-    "毡尖",
-    "文具",
-    "艺术家"
+    "草图",
+    "绘图",
+    "手绘",
+    "草稿"
   ],
   "categories": [
     "text",
@@ -28,21 +24,17 @@
       "name": "pencil line",
       "tags": [
         "pencil",
-        "change",
-        "create",
-        "draw",
         "sketch",
         "draft",
-        "writer",
-        "writing",
-        "biro",
-        "ink",
-        "marker",
-        "felt tip",
-        "stationery",
-        "artist"
+        "drawing",
+        "hand-drawn",
+        "rough"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sketching tool in design app",
+        "Drafting mode indicator",
+        "Freehand drawing icon"
+      ]
     }
   }
 }

@@ -1,29 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁止指示器",
+    "取消操作",
+    "错误状态",
+    "无效输入标记"
+  ],
   "name": "圆形斜杠",
   "tags": [
-    "直径",
-    "零",
-    "Ø",
-    "什么都没有",
-    "空",
-    "无效",
+    "禁止",
     "取消",
-    "禁止",
-    "不",
+    "错误",
+    "无效",
     "停止",
-    "禁止的",
-    "禁止",
-    "错误",
-    "不正确",
-    "错误",
-    "错误的",
-    "失败",
-    "划分",
-    "师",
-    "或",
-    "/"
+    "否定"
   ],
   "categories": [
     "development",
@@ -33,29 +23,19 @@
     "en": {
       "name": "circle slash",
       "tags": [
-        "diameter",
-        "zero",
-        "Ø",
-        "nothing",
-        "null",
-        "void",
+        "prohibit",
         "cancel",
-        "ban",
-        "no",
-        "stop",
-        "forbidden",
-        "prohibited",
         "error",
-        "incorrect",
-        "mistake",
-        "wrong",
-        "failure",
-        "divide",
-        "division",
-        "or",
-        "/"
+        "invalid",
+        "stop",
+        "negation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Prohibition indicator",
+        "Cancel operation",
+        "Error state",
+        "Invalid input marker"
+      ]
     }
   }
 }

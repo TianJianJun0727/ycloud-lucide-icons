@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在照片编辑器中向右旋转图片",
+    "调整布局中元素的方向",
+    "媒体播放器快进控制"
+  ],
   "name": "旋转顺时针方形",
   "tags": [
-    "右",
-    "顺时针",
-    "旋转",
-    "图片",
-    "90",
-    "45",
-    "度",
-    "°"
+    "顺时针旋转",
+    "图片旋转",
+    "向右旋转",
+    "90度旋转",
+    "图像编辑",
+    "布局调整"
   ],
   "categories": [
     "layout",
@@ -23,16 +25,18 @@
     "en": {
       "name": "rotate cw square",
       "tags": [
-        "right",
-        "clockwise",
-        "rotate",
-        "image",
-        "90",
-        "45",
-        "degrees",
-        "°"
+        "rotate clockwise",
+        "image rotation",
+        "rotate right",
+        "90 degrees",
+        "photo edit",
+        "layout adjustment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Rotate an image right in a photo editor",
+        "Adjust element orientation in a layout",
+        "Media player fast-forward"
+      ]
     }
   }
 }

@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打印设置",
+    "文档打印",
+    "办公设备管理"
+  ],
   "name": "打印机",
   "tags": [
-    "传真",
-    "办公室",
-    "装置"
+    "打印",
+    "设备",
+    "办公",
+    "文档",
+    "输出"
   ],
   "categories": [
     "devices"
@@ -14,11 +20,17 @@
     "en": {
       "name": "printer",
       "tags": [
-        "fax",
+        "print",
+        "device",
         "office",
-        "device"
+        "document",
+        "output"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Print settings",
+        "Document printing",
+        "Office device management"
+      ]
     }
   }
 }

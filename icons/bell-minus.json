@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用特定通知",
+    "移除警报订阅",
+    "静音通知频道"
+  ],
   "name": "铃铛减少",
   "tags": [
-    "闹钟",
     "通知",
-    "沉默的",
+    "静音",
     "提醒",
     "删除",
     "移除",
-    "擦除"
+    "关闭通知"
   ],
   "categories": [
     "notifications"
@@ -18,15 +21,18 @@
     "en": {
       "name": "bell minus",
       "tags": [
-        "alarm",
         "notification",
         "silent",
         "reminder",
         "delete",
         "remove",
-        "erase"
+        "mute"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable a specific notification",
+        "Remove an alert subscription",
+        "Mute a notification channel"
+      ]
     }
   }
 }

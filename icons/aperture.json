@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相机或照片编辑应用设置",
+    "摄影教程内容",
+    "图像质量控制面板"
+  ],
   "name": "光圈",
   "tags": [
+    "光圈",
     "相机",
-    "照片",
-    "图片",
-    "快门",
-    "曝光"
+    "摄影",
+    "曝光",
+    "镜头",
+    "景深",
+    "焦距"
   ],
   "categories": [
     "photography"
@@ -16,13 +22,19 @@
     "en": {
       "name": "aperture",
       "tags": [
+        "aperture",
         "camera",
-        "photo",
-        "pictures",
-        "shutter",
-        "exposure"
+        "photography",
+        "exposure",
+        "lens",
+        "depth of field",
+        "focus"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Camera or photo editing app settings",
+        "Photography tutorial content",
+        "Image quality control panel"
+      ]
     }
   }
 }

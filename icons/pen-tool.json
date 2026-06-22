@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "矢量图形编辑器工具",
+    "设计软件中的路径创建",
+    "精确绘图光标"
+  ],
   "name": "笔工具",
   "tags": [
+    "钢笔工具",
     "矢量",
-    "绘图",
-    "路径"
+    "路径",
+    "贝塞尔曲线",
+    "设计",
+    "绘图"
   ],
   "categories": [
     "text",
@@ -16,11 +23,18 @@
     "en": {
       "name": "pen tool",
       "tags": [
+        "pen tool",
         "vector",
-        "drawing",
-        "path"
+        "path",
+        "bezier",
+        "design",
+        "drawing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vector graphics editor tool",
+        "Path creation in design software",
+        "Precision drawing cursor"
+      ]
     }
   }
 }

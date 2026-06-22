@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数组操作界面",
+    "代码编辑器符号",
+    "数据结构展示",
+    "配置文件语法"
+  ],
   "name": "方括号",
   "tags": [
     "代码",
-    "代币",
+    "方括号",
     "数组",
     "列表",
-    "正方形",
-    "[",
-    "]"
+    "编程",
+    "开发"
   ],
   "categories": [
     "development",
@@ -20,14 +24,18 @@
       "name": "brackets",
       "tags": [
         "code",
-        "token",
+        "brackets",
         "array",
         "list",
-        "square",
-        "[",
-        "]"
+        "programming",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Array operation interface",
+        "Code editor symbols",
+        "Data structure display",
+        "Configuration file syntax"
+      ]
     }
   }
 }

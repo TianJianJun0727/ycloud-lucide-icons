@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "从团队中移除用户",
+    "取消关注个人资料",
+    "取消订阅",
+    "删除账户"
+  ],
   "name": "用户减少",
   "tags": [
-    "删除",
-    "移除",
+    "删除用户",
+    "移除用户",
     "取消关注",
-    "取消订阅"
+    "取消订阅",
+    "用户管理"
   ],
   "categories": [
     "account"
@@ -18,9 +24,15 @@
         "delete",
         "remove",
         "unfollow",
-        "unsubscribe"
+        "unsubscribe",
+        "user management"
       ],
-      "use-cases": []
+      "use-cases": [
+        "removing a user from a team",
+        "unfollowing a profile",
+        "canceling a subscription",
+        "deleting an account"
+      ]
     }
   }
 }

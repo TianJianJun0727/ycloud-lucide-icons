@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "安全",
-  "icon": "shield",
   "i18n": {
     "en": {
       "title": "Security"

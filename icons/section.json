@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档分节符",
+    "法律文件标记",
+    "文本格式设置"
+  ],
   "name": "分节",
   "tags": [
-    "标记",
-    "版式",
-    "标点符号",
-    "合法的",
-    "类型",
+    "章节",
+    "段落",
+    "分节符",
     "文本",
-    "散文",
-    "符号"
+    "排版",
+    "标记"
   ],
   "categories": [
     "text"
@@ -19,16 +21,18 @@
     "en": {
       "name": "section",
       "tags": [
-        "mark",
-        "typography",
-        "punctuation",
-        "legal",
-        "type",
+        "chapter",
+        "paragraph",
+        "section break",
         "text",
-        "prose",
-        "symbol"
+        "typography",
+        "mark"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document section break",
+        "Legal document marker",
+        "Text formatting"
+      ]
     }
   }
 }

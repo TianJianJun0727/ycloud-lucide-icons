@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "壁挂式向上灯控制",
+    "间接照明设置",
+    "室内设计应用"
+  ],
   "name": "灯墙上",
   "tags": [
-    "照明",
-    "家庭",
-    "墙",
-    "首页",
-    "家具"
+    "向上壁灯",
+    "壁灯",
+    "墙灯",
+    "间接照明",
+    "装饰灯"
   ],
   "categories": [
     "home"
@@ -16,13 +20,17 @@
     "en": {
       "name": "lamp wall up",
       "tags": [
-        "lighting",
-        "household",
-        "wall",
-        "home",
-        "furniture"
+        "uplight",
+        "wall sconce",
+        "wall lamp",
+        "indirect lighting",
+        "decorative light"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Wall-mounted uplight control",
+        "Indirect lighting settings",
+        "Interior design app"
+      ]
     }
   }
 }

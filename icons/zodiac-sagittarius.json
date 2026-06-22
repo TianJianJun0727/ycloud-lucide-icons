@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "占星应用星座符号",
+    "社交媒体个人资料星座",
+    "星座运势网站图标"
+  ],
   "name": "星座射手座",
   "tags": [
+    "射手座",
+    "星座",
+    "占星",
     "弓箭手",
-    "箭头",
+    "火象",
     "探索",
-    "火",
     "哲学",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "星座运势"
   ],
   "categories": [
     "social",
@@ -22,18 +24,20 @@
     "en": {
       "name": "zodiac sagittarius",
       "tags": [
-        "archer",
-        "arrow",
-        "exploration",
-        "fire",
-        "philosophy",
+        "sagittarius",
+        "zodiac",
         "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "archer",
+        "fire sign",
+        "exploration",
+        "philosophy",
+        "horoscope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app zodiac sign",
+        "Social media profile birth sign",
+        "Horoscope website icon"
+      ]
     }
   }
 }

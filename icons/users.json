@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "管理用户",
+    "团队概览",
+    "群组设置",
+    "受众图标"
+  ],
   "name": "用户组",
   "tags": [
-    "分组",
-    "人"
+    "用户组",
+    "团队",
+    "群组",
+    "成员",
+    "多人",
+    "集体"
   ],
   "categories": [
     "account"
@@ -13,10 +22,19 @@
     "en": {
       "name": "users",
       "tags": [
+        "user group",
+        "team",
         "group",
-        "people"
+        "members",
+        "multiple people",
+        "collective"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Manage users",
+        "Team overview",
+        "Group settings",
+        "Audience icon"
+      ]
     }
   }
 }

@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "窗口最小化操作",
+    "退出全屏模式",
+    "收起面板控制"
+  ],
   "name": "最小化2",
   "tags": [
+    "最小化",
+    "收缩",
     "退出全屏",
-    "箭头",
-    "关闭",
-    "收缩"
+    "向下箭头",
+    "收起"
   ],
   "categories": [
     "arrows",
@@ -17,12 +22,17 @@
     "en": {
       "name": "minimize 2",
       "tags": [
+        "minimize",
+        "shrink",
         "exit fullscreen",
-        "arrows",
-        "close",
-        "shrink"
+        "down arrow",
+        "collapse"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Window minimize action",
+        "Exit fullscreen mode",
+        "Collapse panel control"
+      ]
     }
   }
 }

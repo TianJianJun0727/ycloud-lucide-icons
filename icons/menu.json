@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网站导航切换",
+    "移动应用侧边栏",
+    "设置或选项列表"
+  ],
   "name": "菜单",
   "tags": [
-    "酒吧",
     "导航",
-    "汉堡包",
-    "选项"
+    "汉堡菜单",
+    "选项",
+    "列表",
+    "展开"
   ],
   "categories": [
     "layout",
@@ -16,12 +21,17 @@
     "en": {
       "name": "menu",
       "tags": [
-        "bars",
         "navigation",
         "hamburger",
-        "options"
+        "options",
+        "list",
+        "expand"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Website navigation toggle",
+        "Mobile app sidebar",
+        "Settings or options list"
+      ]
     }
   }
 }

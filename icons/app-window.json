@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用应用窗口表示",
+    "界面布局设计工具",
+    "软件开发环境图标"
+  ],
   "name": "应用窗口",
   "tags": [
-    "应用",
-    "菜单栏",
+    "应用窗口",
+    "界面",
+    "设计",
+    "开发",
     "窗格",
-    "可执行文件"
+    "软件",
+    "桌面",
+    "UI"
   ],
   "categories": [
     "layout",
@@ -18,12 +26,20 @@
     "en": {
       "name": "app window",
       "tags": [
-        "application",
-        "menu bar",
+        "app window",
+        "interface",
+        "design",
+        "development",
         "pane",
-        "executable"
+        "software",
+        "desktop",
+        "UI"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Generic application window representation",
+        "UI layout design tools",
+        "Software development environment icons"
+      ]
     }
   }
 }

@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭对话框或窗口",
+    "取消当前操作",
+    "删除或清除内容"
+  ],
   "name": "关闭",
   "tags": [
-    "取消",
     "关闭",
-    "十字",
+    "取消",
     "删除",
-    "前",
-    "移除",
-    "次",
     "清除",
-    "数学",
-    "乘以",
+    "错误",
     "乘法"
   ],
   "categories": [
@@ -23,19 +22,18 @@
     "en": {
       "name": "X",
       "tags": [
-        "cancel",
         "close",
-        "cross",
+        "cancel",
         "delete",
-        "ex",
-        "remove",
-        "times",
         "clear",
-        "math",
-        "multiply",
+        "error",
         "multiplication"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Closing a dialog or window",
+        "Canceling the current action",
+        "Deleting or clearing content"
+      ]
     }
   }
 }

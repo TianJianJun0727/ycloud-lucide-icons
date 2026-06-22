@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示货币金额",
+    "支付方式选择",
+    "财务摘要"
+  ],
   "name": "纸币",
   "tags": [
     "货币",
-    "钱",
-    "付款"
+    "现金",
+    "钞票",
+    "付款",
+    "资金",
+    "交易",
+    "金融"
   ],
   "categories": [
     "finance"
@@ -15,10 +23,18 @@
       "name": "banknote",
       "tags": [
         "currency",
-        "money",
-        "payment"
+        "cash",
+        "banknote",
+        "payment",
+        "funds",
+        "transaction",
+        "finance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display currency amount",
+        "Payment method selection",
+        "Financial summary"
+      ]
     }
   }
 }

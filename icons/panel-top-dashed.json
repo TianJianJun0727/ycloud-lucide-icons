@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "顶部面板布局参考线",
+    "顶栏间距指示器",
+    "界面设计线框图"
+  ],
   "name": "面板顶部虚线",
   "tags": [
-    "菜单栏",
-    "抽屉",
-    "显示",
-    "揭示",
-    "填充",
-    "保证金",
-    "指南",
+    "顶栏",
     "布局",
-    "流血"
+    "参考线",
+    "边距",
+    "填充",
+    "设计",
+    "分隔",
+    "虚线",
+    "顶部"
   ],
   "categories": [
     "layout"
@@ -28,17 +32,21 @@
     "en": {
       "name": "panel top dashed",
       "tags": [
-        "menu bar",
-        "drawer",
-        "show",
-        "reveal",
-        "padding",
-        "margin",
-        "guide",
+        "header",
         "layout",
-        "bleed"
+        "guide",
+        "margin",
+        "padding",
+        "design",
+        "separator",
+        "dashed",
+        "top"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Layout guides for top panel",
+        "Header spacing indicators",
+        "UI design wireframe"
+      ]
     }
   }
 }

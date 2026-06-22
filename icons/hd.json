@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频质量设置",
+    "显示分辨率指示",
+    "媒体播放器控制"
+  ],
   "name": "高清",
   "tags": [
-    "电视",
+    "高清",
     "分辨率",
     "视频",
-    "高清晰度",
-    "720p",
-    "1080p"
+    "电视",
+    "1080p",
+    "720p"
   ],
   "categories": [
     "devices",
@@ -18,14 +22,18 @@
     "en": {
       "name": "hd",
       "tags": [
-        "tv",
+        "hd",
         "resolution",
         "video",
-        "high definition",
-        "720p",
-        "1080p"
+        "tv",
+        "1080p",
+        "720p"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video quality setting",
+        "Display resolution indicator",
+        "Media player controls"
+      ]
     }
   }
 }

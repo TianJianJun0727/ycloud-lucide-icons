@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相关性分析",
+    "数据点分布"
+  ],
   "name": "图表散点",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "图"
+    "散点图",
+    "相关性"
   ],
   "categories": [
     "charts"
@@ -25,10 +29,14 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph"
+        "chart",
+        "scatter plot",
+        "correlation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Correlation analysis",
+        "Data point distribution"
+      ]
     }
   }
 }

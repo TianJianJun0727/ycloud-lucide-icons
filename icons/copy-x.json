@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "复制并关闭操作",
+    "取消复制操作",
+    "乘法或乘号符号",
+    "清除已复制内容"
+  ],
   "name": "复制关闭",
   "tags": [
-    "取消",
+    "复制",
     "关闭",
+    "取消",
     "删除",
-    "移除",
     "清除",
-    "多个",
-    "乘以",
     "乘法",
-    "次"
+    "乘以"
   ],
   "categories": [
     "notifications",
@@ -21,17 +24,21 @@
     "en": {
       "name": "copy X",
       "tags": [
-        "cancel",
+        "copy",
         "close",
+        "cancel",
         "delete",
-        "remove",
         "clear",
-        "multiple",
         "multiply",
         "multiplication",
         "times"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Copy and close action",
+        "Cancel a copy operation",
+        "Multiply or times symbol",
+        "Clear copied content"
+      ]
     }
   }
 }

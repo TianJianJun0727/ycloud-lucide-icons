@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电池充电指示器",
+    "移动设备状态",
+    "电源管理"
+  ],
   "name": "智能手机充电",
   "tags": [
-    "电话",
-    "手机",
-    "装置",
+    "智能手机",
+    "充电",
+    "电池",
+    "移动设备",
     "电源",
-    "屏幕"
+    "充电状态"
   ],
   "categories": [
     "connectivity",
@@ -17,13 +22,18 @@
     "en": {
       "name": "smartphone charging",
       "tags": [
-        "phone",
-        "cellphone",
-        "device",
+        "smartphone",
+        "charging",
+        "battery",
+        "mobile device",
         "power",
-        "screen"
+        "charging status"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Battery charging indicator",
+        "Mobile device status",
+        "Power management"
+      ]
     }
   }
 }

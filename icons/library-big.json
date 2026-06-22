@@ -1,31 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体库浏览器",
+    "代码仓库导航",
+    "文档收藏管理器"
+  ],
   "name": "图书馆大",
   "tags": [
-    "书籍",
-    "阅读",
-    "书面的",
-    "作者",
-    "故事",
-    "小说",
-    "小说",
-    "信息",
-    "知识",
-    "教育",
-    "高中",
-    "大学",
-    "学院",
-    "学院",
-    "学习",
-    "学习",
-    "研究",
+    "图书馆",
+    "资料库",
+    "媒体库",
     "收藏",
-    "乙烯基",
-    "记录",
+    "书籍",
     "专辑",
-    "音乐",
-    "包裹"
+    "代码库"
   ],
   "categories": [
     "text",
@@ -38,31 +26,19 @@
     "en": {
       "name": "library big",
       "tags": [
-        "books",
-        "reading",
-        "written",
-        "authors",
-        "stories",
-        "fiction",
-        "novels",
-        "information",
-        "knowledge",
-        "education",
-        "high school",
-        "university",
-        "college",
-        "academy",
-        "learning",
-        "study",
-        "research",
+        "library",
+        "repository",
+        "media library",
         "collection",
-        "vinyl",
-        "records",
+        "books",
         "albums",
-        "music",
-        "package"
+        "code library"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media library browser",
+        "Code repository navigation",
+        "Document collection manager"
+      ]
     }
   }
 }

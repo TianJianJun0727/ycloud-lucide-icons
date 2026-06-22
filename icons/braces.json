@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "JSON文件图标",
+    "代码编辑器中的括号高亮",
+    "数据结构可视化",
+    "API文档中的语法示例"
+  ],
   "name": "花括号",
   "tags": [
     "JSON",
     "代码",
-    "代币",
     "大括号",
     "数据",
-    "{",
-    "}"
+    "编程",
+    "开发"
   ],
   "categories": [
     "development",
@@ -29,13 +33,17 @@
       "tags": [
         "json",
         "code",
-        "token",
         "curly brackets",
         "data",
-        "{",
-        "}"
+        "programming",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "JSON file icon",
+        "Bracket highlighting in code editor",
+        "Data structure visualization",
+        "Syntax examples in API documentation"
+      ]
     }
   }
 }

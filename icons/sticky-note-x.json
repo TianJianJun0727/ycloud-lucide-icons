@@ -1,28 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭或取消笔记",
+    "删除有误的评论",
+    "拒绝或取消操作"
+  ],
   "name": "便签便签关闭",
   "tags": [
     "便利贴",
-    "评论",
-    "注释",
-    "反应",
-    "备忘录",
-    "提醒",
-    "待办事项",
-    "任务",
-    "想法",
-    "头脑风暴",
-    "文档",
-    "页面",
-    "纸",
-    "片材",
-    "固定式",
-    "办公室",
     "关闭",
-    "取消",
     "删除",
-    "移除"
+    "取消",
+    "错误",
+    "移除",
+    "拒绝"
   ],
   "categories": [
     "text",
@@ -32,28 +23,19 @@
     "en": {
       "name": "sticky note X",
       "tags": [
-        "post-it",
-        "comment",
-        "annotation",
-        "reaction",
-        "memo",
-        "reminder",
-        "todo",
-        "task",
-        "idea",
-        "brainstorm",
-        "document",
-        "page",
-        "paper",
-        "sheet",
-        "stationary",
-        "office",
+        "sticky note",
         "close",
-        "cancel",
         "delete",
-        "remove"
+        "cancel",
+        "error",
+        "remove",
+        "reject"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Close or dismiss a note",
+        "Delete a comment with error",
+        "Reject or cancel action"
+      ]
     }
   }
 }

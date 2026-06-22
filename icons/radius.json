@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "圆形测量工具",
+    "设计软件半径控制",
+    "几何计算器"
+  ],
   "name": "半径",
   "tags": [
-    "形状",
-    "圆形",
-    "几何学",
-    "三角学",
     "半径",
-    "计算",
+    "圆形",
+    "几何",
     "测量",
-    "尺寸"
+    "尺寸",
+    "设计"
   ],
   "categories": [
     "shapes",
@@ -22,16 +24,18 @@
     "en": {
       "name": "radius",
       "tags": [
-        "shape",
+        "radius",
         "circle",
         "geometry",
-        "trigonometry",
-        "radii",
-        "calculate",
         "measure",
-        "size"
+        "size",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Circle measurement tool",
+        "Design software radius control",
+        "Geometry calculator"
+      ]
     }
   }
 }

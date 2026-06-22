@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带有左侧导航栏的应用",
+    "分栏编辑器界面",
+    "带有侧边菜单的仪表盘"
+  ],
   "name": "布局面板左",
   "tags": [
-    "应用",
-    "首页",
-    "开始",
-    "网格"
+    "左侧面板",
+    "布局",
+    "侧边栏",
+    "应用布局",
+    "分栏",
+    "导航"
   ],
   "categories": [
     "design",
@@ -16,12 +22,18 @@
     "en": {
       "name": "layout panel left",
       "tags": [
-        "app",
-        "home",
-        "start",
-        "grid"
+        "left panel",
+        "layout",
+        "sidebar",
+        "app layout",
+        "column",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Application with a left navigation sidebar",
+        "Split-panel editor interface",
+        "Dashboard with a side menu"
+      ]
     }
   }
 }

@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图位置取消固定",
+    "聊天消息取消置顶",
+    "文档取消保存"
+  ],
   "name": "图钉关闭",
   "tags": [
     "取消固定",
-    "地图",
-    "解锁",
-    "取消修复",
     "取消保存",
-    "移除"
+    "移除",
+    "解锁",
+    "导航"
   ],
   "categories": [
     "navigation"
@@ -18,13 +21,16 @@
       "name": "pin off",
       "tags": [
         "unpin",
-        "map",
-        "unlock",
-        "unfix",
         "unsave",
-        "remove"
+        "remove",
+        "unlock",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Map location unpinning",
+        "Chat message unpinning",
+        "Document unsaving"
+      ]
     }
   }
 }

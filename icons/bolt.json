@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示硬件设置或紧固工具",
+    "指示DIY或施工功能"
+  ],
   "name": "螺栓",
   "tags": [
-    "坚果",
+    "螺栓",
     "螺丝",
-    "设置",
-    "偏好",
-    "配置",
-    "控制",
-    "编辑",
+    "螺母",
+    "紧固",
+    "工具",
+    "维修",
     "DIY",
-    "固定的",
-    "建造",
-    "建筑",
     "零件"
   ],
   "categories": [
@@ -24,20 +23,19 @@
     "en": {
       "name": "bolt",
       "tags": [
-        "nut",
+        "bolt",
         "screw",
-        "settings",
-        "preferences",
-        "configuration",
-        "controls",
-        "edit",
+        "nut",
+        "fastener",
+        "tool",
+        "repair",
         "diy",
-        "fixed",
-        "build",
-        "construction",
-        "parts"
+        "hardware"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Represent hardware settings or fastening tools",
+        "Indicate DIY or construction features"
+      ]
     }
   }
 }

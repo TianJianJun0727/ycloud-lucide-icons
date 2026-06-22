@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "几何设计",
+    "导航符号",
+    "UI元素",
+    "教育材料"
+  ],
   "name": "三角形",
   "tags": [
-    "等边的",
-    "三角洲",
+    "三角形",
+    "几何",
     "形状",
-    "金字塔",
-    "等级制度"
+    "指示",
+    "符号"
   ],
   "categories": [
     "shapes"
@@ -16,13 +21,18 @@
     "en": {
       "name": "triangle",
       "tags": [
-        "equilateral",
-        "delta",
+        "triangle",
+        "geometry",
         "shape",
-        "pyramid",
-        "hierarchy"
+        "indicator",
+        "symbol"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Geometric design",
+        "Navigation symbol",
+        "UI element",
+        "Educational material"
+      ]
     }
   }
 }

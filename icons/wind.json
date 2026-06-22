@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气预报和风力状况",
+    "可再生能源风力发电指示器"
+  ],
   "name": "风",
   "tags": [
-    "天气",
-    "空气",
-    "吹"
+    "风",
+    "风力",
+    "风速",
+    "气流",
+    "天气"
   ],
   "categories": [
     "weather",
@@ -15,11 +20,16 @@
     "en": {
       "name": "wind",
       "tags": [
-        "weather",
-        "air",
-        "blow"
+        "wind",
+        "wind power",
+        "wind speed",
+        "airflow",
+        "weather"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather forecasts and wind conditions",
+        "Renewable energy wind power indicators"
+      ]
     }
   }
 }

@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电子表格文件图标",
+    "数据表格界面",
+    "Excel文档浏览器"
+  ],
   "name": "文件电子表格",
   "tags": [
     "电子表格",
-    "片材",
-    "表格"
+    "表格",
+    "数据表",
+    "Excel",
+    "工作表"
   ],
   "categories": [
     "files"
@@ -15,10 +21,16 @@
       "name": "file spreadsheet",
       "tags": [
         "spreadsheet",
-        "sheet",
-        "table"
+        "table",
+        "worksheet",
+        "Excel",
+        "data sheet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Spreadsheet file icon",
+        "Data table interface",
+        "Excel document browser"
+      ]
     }
   }
 }

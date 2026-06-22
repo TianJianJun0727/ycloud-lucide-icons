@@ -1,20 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示设备规格",
+    "硬件设置页面",
+    "技术或计算上下文"
+  ],
   "name": "芯片",
   "tags": [
+    "芯片",
     "处理器",
-    "核心",
+    "硬件",
     "技术",
     "电脑",
-    "芯片",
     "集成电路",
-    "记忆",
-    "内存",
-    "规格",
-    "GPU",
-    "千兆赫",
-    "吉赫兹"
+    "CPU",
+    "GPU"
   ],
   "categories": [
     "devices"
@@ -23,20 +23,20 @@
     "en": {
       "name": "microchip",
       "tags": [
+        "chip",
         "processor",
-        "cores",
+        "hardware",
         "technology",
         "computer",
-        "chip",
         "integrated circuit",
-        "memory",
-        "ram",
-        "specs",
-        "gpu",
-        "gigahertz",
-        "ghz"
+        "CPU",
+        "GPU"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display device specifications",
+        "Hardware settings page",
+        "Technology or computing context"
+      ]
     }
   }
 }

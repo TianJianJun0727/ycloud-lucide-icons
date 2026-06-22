@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "纸牌花色符号",
+    "几何形状选择",
+    "宝石或钻石图形",
+    "游戏棋盘元素"
+  ],
   "name": "菱形",
   "tags": [
-    "正方形",
-    "长方形",
-    "斜的",
     "菱形",
     "形状",
-    "西装",
-    "玩",
-    "卡片"
+    "方块",
+    "纸牌",
+    "游戏",
+    "钻石",
+    "斜方形"
   ],
   "categories": [
     "shapes",
@@ -20,16 +24,20 @@
     "en": {
       "name": "diamond",
       "tags": [
-        "square",
-        "rectangle",
-        "oblique",
-        "rhombus",
+        "diamond",
         "shape",
-        "suit",
-        "playing",
-        "cards"
+        "square",
+        "cards",
+        "gaming",
+        "gem",
+        "rhombus"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Playing card suit symbol",
+        "Geometric shape selection",
+        "Gem or diamond graphic",
+        "Game board element"
+      ]
     }
   }
 }

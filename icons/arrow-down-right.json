@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "导航至右下方",
+    "对角线方向指示",
+    "打开或前进操作"
+  ],
   "name": "箭头下右",
   "tags": [
     "方向",
-    "东南",
-    "对角线"
+    "右下",
+    "对角线",
+    "前进",
+    "打开",
+    "导航"
   ],
   "categories": [
     "arrows"
@@ -15,10 +22,17 @@
       "name": "arrow down right",
       "tags": [
         "direction",
-        "south-east",
-        "diagonal"
+        "southeast",
+        "diagonal",
+        "forward",
+        "open",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Navigate to bottom-right",
+        "Diagonal direction indicator",
+        "Open or forward action"
+      ]
     }
   }
 }

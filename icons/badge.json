@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户验证状态",
+    "账户徽章显示",
+    "成就或状态指示器"
+  ],
   "name": "徽章",
   "tags": [
-    "勾选",
+    "徽章",
     "已验证",
-    "未经验证"
+    "状态",
+    "标识",
+    "成就"
   ],
   "categories": [
     "account",
@@ -16,11 +22,17 @@
     "en": {
       "name": "badge",
       "tags": [
-        "check",
+        "badge",
         "verified",
-        "unverified"
+        "status",
+        "identifier",
+        "achievement"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User verification status",
+        "Account badge display",
+        "Achievement or status indicator"
+      ]
     }
   }
 }

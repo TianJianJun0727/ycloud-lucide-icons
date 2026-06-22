@@ -1,25 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家庭储物整理",
+    "零售商品展示",
+    "仓库库存管理"
+  ],
   "name": "货架单元",
   "tags": [
-    "壁架",
-    "架子",
-    "存储",
-    "库存",
-    "家具",
-    "窗台",
     "货架",
-    "架子",
+    "存储",
+    "家具",
+    "展示",
     "组织",
-    "显示",
-    "商店",
-    "安排",
-    "单位",
-    "柜子",
-    "夹具",
-    "零售",
-    "仓库"
+    "仓库",
+    "零售"
   ],
   "categories": [
     "home"
@@ -28,25 +22,19 @@
     "en": {
       "name": "shelving unit",
       "tags": [
-        "ledge",
-        "rack",
+        "shelving",
         "storage",
-        "inventory",
         "furniture",
-        "sill",
-        "shelves",
-        "shelf",
-        "organize",
         "display",
-        "store",
-        "arrange",
-        "unit",
-        "cabinet",
-        "fixture",
-        "retail",
-        "warehouse"
+        "organize",
+        "warehouse",
+        "retail"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home storage organization",
+        "Retail product display",
+        "Warehouse inventory management"
+      ]
     }
   }
 }

@@ -1,28 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用或隐藏的笔记",
+    "已归档或静音的评论",
+    "不活跃的提醒"
+  ],
   "name": "便签便签关闭",
   "tags": [
     "便利贴",
-    "评论",
-    "注释",
-    "反应",
-    "备忘录",
-    "提醒",
-    "待办事项",
-    "任务",
-    "想法",
-    "头脑风暴",
-    "文档",
-    "页面",
-    "纸",
-    "片材",
-    "固定式",
-    "办公室",
-    "残疾人",
-    "隐藏的",
+    "禁用",
+    "隐藏",
+    "关闭",
+    "无效",
     "静音",
-    "不活跃的"
+    "不活跃"
   ],
   "categories": [
     "text",
@@ -32,28 +23,19 @@
     "en": {
       "name": "sticky note off",
       "tags": [
-        "post-it",
-        "comment",
-        "annotation",
-        "reaction",
-        "memo",
-        "reminder",
-        "todo",
-        "task",
-        "idea",
-        "brainstorm",
-        "document",
-        "page",
-        "paper",
-        "sheet",
-        "stationary",
-        "office",
+        "sticky note",
         "disabled",
         "hidden",
+        "off",
+        "inactive",
         "mute",
-        "inactive"
+        "invisible"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disabled or hidden note",
+        "Archived or muted comment",
+        "Inactive reminder"
+      ]
     }
   }
 }

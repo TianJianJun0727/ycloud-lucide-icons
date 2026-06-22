@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游乐园位置标记",
+    "娱乐场所图标",
+    "旅游景点标识"
+  ],
   "name": "摩天轮轮",
   "tags": [
-    "大轮子",
-    "菊花轮",
-    "观察",
+    "摩天轮",
+    "游乐场",
     "景点",
     "娱乐",
-    "游乐园",
-    "主题公园",
-    "游乐场"
+    "观景",
+    "主题公园"
   ],
   "categories": [
     "navigation"
@@ -19,16 +21,18 @@
     "en": {
       "name": "ferris wheel",
       "tags": [
-        "big wheel",
-        "daisy wheel",
-        "observation",
+        "ferris wheel",
+        "amusement park",
         "attraction",
         "entertainment",
-        "amusement park",
-        "theme park",
-        "funfair"
+        "observation",
+        "theme park"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Amusement park location pin",
+        "Entertainment venue icon",
+        "Tourist attraction marker"
+      ]
     }
   }
 }

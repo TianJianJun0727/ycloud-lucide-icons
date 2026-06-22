@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家居家具目录",
+    "客厅设计工具",
+    "放松模式切换",
+    "座位安排规划器"
+  ],
   "name": "沙发",
   "tags": [
-    "扶手椅",
+    "沙发",
     "家具",
-    "休闲",
-    "休息室",
-    "双人沙发",
-    "沙发"
+    "客厅",
+    "休息",
+    "座椅",
+    "家居",
+    "休闲"
   ],
   "categories": [
     "home"
@@ -17,14 +23,20 @@
     "en": {
       "name": "sofa",
       "tags": [
-        "armchair",
+        "sofa",
         "furniture",
-        "leisure",
-        "lounge",
-        "loveseat",
-        "couch"
+        "living room",
+        "rest",
+        "seat",
+        "home",
+        "lounge"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home furniture catalog",
+        "Living room design tool",
+        "Relaxation mode toggle",
+        "Seating arrangement planner"
+      ]
     }
   }
 }

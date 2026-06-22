@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "配置文件",
+    "可执行设置",
+    "系统偏好"
+  ],
   "name": "文件齿轮",
   "tags": [
+    "设置",
+    "配置",
     "可执行文件",
-    "设置",
-    "设置",
-    "编辑",
-    "齿轮"
+    "系统文件"
   ],
   "categories": [
     "files"
@@ -24,13 +27,16 @@
     "en": {
       "name": "file cog",
       "tags": [
-        "executable",
         "settings",
-        "cog",
-        "edit",
-        "gear"
+        "config",
+        "executable",
+        "system file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Configuration file",
+        "Executable settings",
+        "System preferences"
+      ]
     }
   }
 }

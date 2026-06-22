@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐库图标",
+    "播放列表指示器",
+    "声音设置开关"
+  ],
   "name": "音乐",
   "tags": [
-    "注释",
-    "颤抖",
-    "八分音符"
+    "音乐",
+    "音符",
+    "八分音符",
+    "乐谱",
+    "旋律",
+    "播放"
   ],
   "categories": [
     "multimedia",
@@ -15,11 +22,18 @@
     "en": {
       "name": "music",
       "tags": [
+        "music",
         "note",
+        "eighth note",
         "quaver",
-        "eighth note"
+        "melody",
+        "play"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music library icon",
+        "Playlist indicator",
+        "Sound settings toggle"
+      ]
     }
   }
 }

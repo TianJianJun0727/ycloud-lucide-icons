@@ -41,8 +41,12 @@ async function loadCategories() {
 
   const categories = await Promise.all(
     files.map(async (file) => {
-      const { title } = JSON.parse(await fs.readFile(path.join(categoriesDir, file), 'utf-8'));
-      return { name: path.basename(file, '.json'), title };
+      const metadata = JSON.parse(await fs.readFile(path.join(categoriesDir, file), 'utf-8'));
+      return {
+        name: path.basename(file, '.json'),
+        title: metadata.title,
+        englishTitle: metadata.i18n?.en?.title ?? '',
+      };
     }),
   );
 
@@ -80,6 +84,7 @@ async function loadReferenceExamples(count = 8) {
           'use-cases': metadata['use-cases'],
           i18n: {
             en: {
+              tags: metadata.i18n?.en?.tags ?? [],
               'use-cases': metadata.i18n?.en?.['use-cases'] ?? [],
             },
           },
@@ -95,6 +100,7 @@ async function loadReferenceExamples(count = 8) {
 
 const categories = await loadCategories();
 const categoryNames = categories.map((category) => category.name);
+const categoryByName = new Map(categories.map((category) => [category.name, category]));
 const referenceExamples = await loadReferenceExamples();
 
 const { data: files } = await octokit.pulls.listFiles({
@@ -162,7 +168,12 @@ if (changedFiles.length === 0) {
 
 console.log(`Using ${ai.provider} for metadata suggestions with model ${ai.model}.`);
 
-const categoriesContext = categories.map(({ name, title }) => `- ${name}: ${title}`).join('\n');
+const categoriesContext = categories
+  .map(({ name, title, englishTitle }) => {
+    const suffix = englishTitle ? ` / ${englishTitle}` : '';
+    return `- ${name}: ${title}${suffix}`;
+  })
+  .join('\n');
 
 // Render an array property exactly as it should appear in the metadata JSON,
 // preserving the repo's 2-space indentation and the original trailing comma.
@@ -245,16 +256,27 @@ function getUseCasesState(metadata: any) {
   };
 }
 
+function getCategoryContext(metadata: any) {
+  if (!Array.isArray(metadata.categories)) {
+    return [];
+  }
+
+  return metadata.categories.map((categoryName: string) => {
+    const category = categoryByName.get(categoryName);
+    return {
+      name: categoryName,
+      title: category?.title ?? '',
+      englishTitle: category?.englishTitle ?? '',
+    };
+  });
+}
+
 function shouldSuggestField(metadata: any, field: MetadataField) {
   if (field !== 'use-cases' && field !== 'i18n.en.use-cases') {
     return true;
   }
 
   const { hasChineseUseCases, hasEnglishUseCases } = getUseCasesState(metadata);
-
-  if (!hasChineseUseCases && !hasEnglishUseCases) {
-    return false;
-  }
 
   if (!hasChineseUseCases) {
     return field === 'use-cases';
@@ -287,11 +309,15 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
   const metadata = JSON.parse(fileContent);
 
   const currentMetadata = {
+    libraryContext:
+      'This item is one icon in the YCloud Icons library, a general-purpose SVG icon set based on Lucide-style icon names. Suggest metadata for icon search and display, not as standalone dictionary entries.',
     tags: metadata.tags ?? [],
     categories: metadata.categories ?? [],
+    categoryContext: getCategoryContext(metadata),
     'use-cases': metadata['use-cases'] ?? [],
     i18n: {
       en: {
+        tags: metadata.i18n?.en?.tags ?? [],
         'use-cases': metadata.i18n?.en?.['use-cases'] ?? [],
       },
     },
@@ -299,11 +325,27 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
 
   const input = `You are maintaining the metadata for the YCloud icon library. Suggest additional metadata for the \`${iconName}\` icon.
 
+Library context:
+- YCloud Icons is a general-purpose SVG icon library based on Lucide-style icon names.
+- The icon name \`${iconName}\` is the canonical English symbol name and is often more important than individual legacy tags.
+- Categories are coarse semantic buckets. Use them to resolve ambiguous English words and decide the primary meaning.
+- Existing tags and use-cases may contain literal translations, old aliases, typos, or weak secondary meanings. Treat them as hints, not as facts that must be preserved.
+- Use-cases describe product/UI scenarios and must follow the icon's primary meaning in this icon library.
+
 Guidelines:
-- tags: Simplified Chinese search terms for the default Chinese metadata. Keep them short. Technical proper nouns are allowed when they are the common UI term. Never include the word "icon" or the icon's own name ("${iconName}").
+- tags: Simplified Chinese search terms for the default Chinese metadata. Treat English metadata as the source of truth: icon name, i18n.en.name, i18n.en.tags, and i18n.en.use-cases. Use Chinese metadata only as wording reference.
+- tags: Generate Chinese tags by translating from English source metadata, using selected category context and use-cases to resolve ambiguity. Do not translate English tags word by word.
+- tags: If an English tag has multiple meanings, choose the Chinese term that fits the category and use-cases. Prefer natural Chinese UI/product search terms, such as "排列", "下载", "筛选", "急救", "波形". Avoid awkward dictionary words, machine translation, and rare transliterations.
+- tags: Chinese tags do not need to match English tags one-to-one. Translate English tags into natural Chinese concepts, then merge duplicates and remove weak secondary meanings.
+- tags: Prefer the icon's primary library meaning over secondary literal meanings. For example, if "bug" is in development context, suggest "错误", "缺陷", "调试", "排查"; do not suggest animal terms just because "bug" can mean insect.
+- tags: If categories contain development, software, debugging, or code context, prioritize the software meaning of "bug"; do not suggest "昆虫" or "甲虫" unless the animal meaning is the primary icon usage.
+- tags: Keep common technical proper nouns as-is when Chinese users search for them that way, such as API, CSS, JSON, SVG, GitHub. Never include the word "icon" or the icon's own name ("${iconName}").
 - categories: ${isPortalPullRequest ? 'do not suggest categories. This PR comes from the Figma submission flow, where categories are explicitly selected by the designer.' : 'only use values from the allowed categories listed below. Lowercase. Keep them relevant to the icon.'}
-- use-cases: Simplified Chinese phrases describing concrete situations the icon represents (e.g. "表示摄像头已禁用"). No trailing punctuation.
-- i18n.en.use-cases: English lowercase phrases describing the same concrete situations (e.g. "indicating a disabled webcam"). No trailing punctuation.
+- use-cases: Simplified Chinese phrases describing concrete product/UI situations for this icon's primary library meaning (e.g. "表示摄像头已禁用"). No trailing punctuation.
+- i18n.en.use-cases: English lowercase phrases describing the same concrete product/UI situations for this icon's primary library meaning (e.g. "indicating a disabled webcam"). No trailing punctuation.
+- use-cases: If both languages have empty use-cases, suggest English use-cases first from the icon's English source meaning, then translate them into Chinese.
+- use-cases: If i18n.en.use-cases exists, treat it as source and translate/polish top-level use-cases from it. If only top-level use-cases exists, translate it into English first, then polish Chinese from that English source.
+- use-cases: Do not suggest use-cases from weak secondary meanings unless categories or current use-cases clearly make that meaning primary.
 Only suggest NEW values that build on the current metadata, and prefer quality over quantity.
 
 Allowed categories:

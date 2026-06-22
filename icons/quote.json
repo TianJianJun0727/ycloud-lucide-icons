@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文章引用标注",
+    "名言展示",
+    "文本格式设置"
+  ],
   "name": "引用",
   "tags": [
-    "报价"
+    "引用",
+    "引文",
+    "语录",
+    "文本",
+    "标注"
   ],
   "categories": [
     "text"
@@ -12,9 +20,17 @@
     "en": {
       "name": "quote",
       "tags": [
-        "quotation"
+        "quote",
+        "quotation",
+        "citation",
+        "text",
+        "annotation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Article citation markup",
+        "Famous quote display",
+        "Text formatting settings"
+      ]
     }
   }
 }

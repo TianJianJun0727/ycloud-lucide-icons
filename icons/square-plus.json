@@ -1,27 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "新建项目",
+    "添加按钮",
+    "计算器界面",
+    "工具栏操作"
+  ],
   "name": "方形加号",
   "tags": [
     "添加",
     "新建",
     "增加",
-    "增量",
-    "积极的",
-    "计算",
-    "计算器",
+    "创建",
     "按钮",
-    "键盘",
-    "工具栏",
-    "最大",
-    "升级",
-    "额外的",
-    "操作员",
-    "加入",
-    "连接",
-    "代码",
-    "编码",
-    "+"
+    "操作符",
+    "合并",
+    "扩展"
   ],
   "categories": [
     "math",
@@ -44,24 +38,18 @@
         "add",
         "new",
         "increase",
-        "increment",
-        "positive",
-        "calculate",
-        "calculator",
+        "create",
         "button",
-        "keyboard",
-        "toolbar",
-        "maximum",
-        "upgrade",
-        "extra",
         "operator",
-        "join",
-        "concatenate",
-        "code",
-        "coding",
-        "+"
+        "merge",
+        "expand"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Create new item",
+        "Add button",
+        "Calculator interface",
+        "Toolbar action"
+      ]
     }
   }
 }

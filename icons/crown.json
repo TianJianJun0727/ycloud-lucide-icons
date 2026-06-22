@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏成就",
+    "排行榜",
+    "VIP标识",
+    "胜利奖励"
+  ],
   "name": "皇冠",
   "tags": [
-    "王冠",
     "皇冠",
-    "圆环",
-    "电晕",
-    "国王",
-    "尺子",
-    "获胜者",
-    "最喜欢的"
+    "王者",
+    "胜利",
+    "冠军",
+    "特权"
   ],
   "categories": [
     "gaming"
@@ -19,16 +21,18 @@
     "en": {
       "name": "crown",
       "tags": [
-        "diadem",
-        "tiara",
-        "circlet",
-        "corona",
+        "crown",
         "king",
-        "ruler",
-        "winner",
-        "favourite"
+        "victory",
+        "champion",
+        "privilege"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game achievement",
+        "Leaderboard",
+        "VIP标识",
+        "Victory reward"
+      ]
     }
   }
 }

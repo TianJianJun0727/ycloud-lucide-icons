@@ -1,39 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "点餐应用",
+    "餐厅菜单",
+    "快餐服务"
+  ],
   "name": "汉堡",
   "tags": [
     "汉堡",
-    "芝士汉堡",
-    "肉",
-    "牛肉",
-    "小馅饼",
-    "发髻",
     "快餐",
-    "垃圾食品",
-    "外卖",
-    "外卖",
-    "小吃",
-    "菜",
+    "食品",
     "餐厅",
-    "午餐",
-    "餐",
-    "咸味的",
-    "咸味的",
-    "烹饪",
-    "烹饪",
-    "烤的",
-    "烧烤",
-    "烧烤",
-    "烧烤",
-    "生菜",
-    "番茄",
-    "津津有味",
-    "泡菜",
-    "洋葱",
-    "番茄酱",
-    "芥末",
-    "蛋黄酱"
+    "美食"
   ],
   "categories": [
     "food-beverage"
@@ -43,38 +21,16 @@
       "name": "hamburger",
       "tags": [
         "burger",
-        "cheeseburger",
-        "meat",
-        "beef",
-        "patty",
-        "bun",
         "fast food",
-        "junk food",
-        "takeaway",
-        "takeout",
-        "snack",
-        "dish",
+        "food",
         "restaurant",
-        "lunch",
-        "meal",
-        "savory",
-        "savoury",
-        "cookery",
-        "cooking",
-        "grilled",
-        "barbecue",
-        "barbeque",
-        "bbq",
-        "lettuce",
-        "tomato",
-        "relish",
-        "pickles",
-        "onions",
-        "ketchup",
-        "mustard",
-        "mayonnaise"
+        "meal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food ordering apps",
+        "Restaurant menus",
+        "Fast food services"
+      ]
     }
   }
 }

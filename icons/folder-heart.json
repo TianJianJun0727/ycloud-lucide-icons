@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收藏文件夹",
+    "书签目录",
+    "快速访问文件夹"
+  ],
   "name": "文件夹爱心",
   "tags": [
     "目录",
-    "心",
-    "最喜欢的",
+    "收藏",
     "书签",
-    "快速链接"
+    "喜爱",
+    "快速访问"
   ],
   "categories": [
     "files"
@@ -17,12 +21,16 @@
       "name": "folder heart",
       "tags": [
         "directory",
-        "heart",
-        "favourite",
+        "favorite",
         "bookmark",
-        "quick link"
+        "liked",
+        "quick access"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Favorite folder",
+        "Bookmarked directory",
+        "Quick link folder"
+      ]
     }
   }
 }

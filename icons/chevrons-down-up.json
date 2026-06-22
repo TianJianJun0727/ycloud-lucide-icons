@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "垂直折叠展开切换",
+    "区域折叠控制",
+    "上下方向切换"
+  ],
   "name": "双折角箭头下上",
   "tags": [
-    "折叠",
-    "折叠",
-    "垂直"
+    "折叠展开",
+    "垂直方向",
+    "上下切换",
+    "收缩"
   ],
   "categories": [
     "arrows"
@@ -14,11 +19,16 @@
     "en": {
       "name": "chevrons down up",
       "tags": [
-        "collapse",
-        "fold",
-        "vertical"
+        "collapse expand",
+        "vertical",
+        "toggle up down",
+        "contract"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertical collapse/expand toggle",
+        "Section folding control",
+        "Up-down direction switching"
+      ]
     }
   }
 }

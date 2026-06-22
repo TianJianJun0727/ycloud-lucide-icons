@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "单一事件日期选择器",
+    "预约安排",
+    "每日议程视图"
+  ],
   "name": "日历1",
   "tags": [
+    "日历",
     "日期",
-    "月",
-    "年",
     "事件",
-    "单身",
-    "单数",
-    "一次",
-    "1",
-    "第一"
+    "日程",
+    "月历",
+    "单日",
+    "计划"
   ],
   "categories": [
     "time"
@@ -20,17 +22,19 @@
     "en": {
       "name": "calendar 1",
       "tags": [
+        "calendar",
         "date",
-        "month",
-        "year",
         "event",
-        "single",
-        "singular",
-        "once",
-        "1",
-        "first"
+        "schedule",
+        "month",
+        "single day",
+        "planning"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Single event date picker",
+        "Appointment scheduling",
+        "Daily agenda view"
+      ]
     }
   }
 }

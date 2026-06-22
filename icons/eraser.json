@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本或绘图擦除工具",
+    "内容移除操作",
+    "编辑模式控件",
+    "撤销功能"
+  ],
   "name": "橡皮擦",
   "tags": [
-    "铅笔",
-    "绘图",
-    "撤销",
-    "删除",
+    "橡皮擦",
     "清除",
-    "废弃",
-    "移除"
+    "删除",
+    "撤销",
+    "绘图",
+    "编辑"
   ],
   "categories": [
     "text"
@@ -18,15 +22,19 @@
     "en": {
       "name": "eraser",
       "tags": [
-        "pencil",
-        "drawing",
-        "undo",
-        "delete",
+        "eraser",
         "clear",
-        "trash",
-        "remove"
+        "delete",
+        "undo",
+        "drawing",
+        "edit"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text or drawing erasure tools",
+        "Content removal actions",
+        "Edit mode controls",
+        "Undo functionality"
+      ]
     }
   }
 }

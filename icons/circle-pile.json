@@ -1,25 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件或图层堆叠可视化",
+    "库存堆积指示器",
+    "UI中的分组项目"
+  ],
   "name": "圆形堆",
   "tags": [
-    "关闭",
-    "零",
-    "记录",
-    "形状",
-    "圆桩",
-    "圆形",
-    "堆",
-    "堆栈",
-    "层",
-    "结构",
-    "形式",
+    "堆叠",
+    "图层",
+    "集合",
+    "库存",
     "分组",
-    "收藏",
-    "库存",
-    "库存",
-    "材料",
-    "仓库"
+    "圆形",
+    "结构",
+    "材料"
   ],
   "categories": [
     "shapes"
@@ -28,25 +23,20 @@
     "en": {
       "name": "circle pile",
       "tags": [
-        "off",
-        "zero",
-        "record",
-        "shape",
-        "circle-pile",
-        "circle",
-        "pile",
         "stack",
-        "layer",
-        "structure",
-        "form",
-        "group",
+        "layers",
         "collection",
-        "stock",
         "inventory",
-        "materials",
-        "warehouse"
+        "group",
+        "circles",
+        "structure",
+        "materials"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File or layer stack visualization",
+        "Inventory stockpile indicator",
+        "Grouped items in UI"
+      ]
     }
   }
 }

@@ -1,26 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据备份到云端",
+    "文件同步与保存",
+    "系统还原点"
+  ],
   "name": "云备份",
   "tags": [
-    "存储",
-    "记忆",
-    "字节",
-    "服务器",
     "备份",
-    "时间机器",
-    "旋转",
-    "同步",
-    "同步",
-    "刷新",
-    "重新连接",
-    "转移",
+    "存储",
     "数据",
-    "安全",
+    "同步",
     "上传",
     "保存",
-    "远程",
-    "安全"
+    "恢复",
+    "归档"
   ],
   "categories": [
     "arrows",
@@ -30,26 +24,20 @@
     "en": {
       "name": "cloud backup",
       "tags": [
-        "storage",
-        "memory",
-        "bytes",
-        "servers",
         "backup",
-        "timemachine",
-        "rotate",
-        "synchronize",
-        "synchronise",
-        "refresh",
-        "reconnect",
-        "transfer",
+        "storage",
         "data",
-        "security",
+        "sync",
         "upload",
         "save",
-        "remote",
-        "safety"
+        "restore",
+        "archive"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data backup to cloud",
+        "File sync and save",
+        "System restore point"
+      ]
     }
   }
 }

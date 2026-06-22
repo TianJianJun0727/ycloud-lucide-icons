@@ -1,35 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "安全扫描进行中",
+    "防护加载状态",
+    "更多安全选项菜单"
+  ],
   "name": "盾牌省略号",
   "tags": [
-    "网络安全",
-    "固定",
-    "保护",
-    "守护",
-    "装甲",
-    "装甲",
-    "捍卫",
-    "阻塞",
-    "预防",
-    "防病毒软件",
-    "检测",
-    "扫描",
-    "发现",
-    "审计",
-    "管理员",
-    "验证",
-    "波峰",
-    "升级",
-    "装载机",
-    "加载",
-    "悸动者",
-    "进展",
-    "点",
-    "更多",
-    "等",
-    "...",
-    "……"
+    "安全加载",
+    "防护进行中",
+    "更多选项",
+    "等待扫描",
+    "进度指示"
   ],
   "categories": [
     "account",
@@ -41,35 +23,17 @@
     "en": {
       "name": "shield ellipsis",
       "tags": [
-        "cybersecurity",
-        "securing",
-        "protecting",
-        "guarding",
-        "armoring",
-        "armouring",
-        "defending",
-        "blocking",
-        "preventing",
-        "antivirus",
-        "detecting",
-        "scanning",
-        "finding",
-        "auditing",
-        "admin",
-        "verifying",
-        "crest",
-        "upgrading",
-        "loader",
-        "loading",
-        "throbber",
-        "progress",
-        "dots",
-        "more",
-        "etc",
-        "...",
-        "…"
+        "security loading",
+        "protection in progress",
+        "more options",
+        "scan pending",
+        "progress indicator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Security scan in progress",
+        "Protection loading state",
+        "Additional security options menu"
+      ]
     }
   }
 }

@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "百分比折扣徽章",
+    "促销价格指示器",
+    "数学百分比符号"
+  ],
   "name": "徽章百分比",
   "tags": [
-    "已验证",
-    "未经验证",
-    "销售",
     "折扣",
-    "报价",
-    "营销",
-    "贴纸",
-    "价格标签"
+    "百分比",
+    "优惠",
+    "促销",
+    "价格",
+    "数学"
   ],
   "categories": [
     "social",
@@ -22,16 +24,18 @@
     "en": {
       "name": "badge percent",
       "tags": [
-        "verified",
-        "unverified",
-        "sale",
         "discount",
+        "percent",
         "offer",
-        "marketing",
-        "sticker",
-        "price tag"
+        "sale",
+        "price",
+        "math"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Percentage discount badge",
+        "Sale price indicator",
+        "Mathematical percentage symbol"
+      ]
     }
   }
 }

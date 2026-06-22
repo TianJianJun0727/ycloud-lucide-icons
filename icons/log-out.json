@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户登出按钮",
+    "结束当前会话",
+    "切换账户选项"
+  ],
   "name": "日志外部",
   "tags": [
+    "登出",
     "退出",
-    "箭头",
-    "退出",
-    "授权"
+    "账号",
+    "注销",
+    "离开",
+    "关闭会话"
   ],
   "categories": [
     "arrows",
@@ -16,12 +22,18 @@
     "en": {
       "name": "log out",
       "tags": [
+        "logout",
         "sign out",
-        "arrow",
+        "account",
         "exit",
-        "auth"
+        "leave",
+        "end session"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User logout button",
+        "End current session",
+        "Switch account option"
+      ]
     }
   }
 }

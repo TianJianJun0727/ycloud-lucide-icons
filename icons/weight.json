@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "重量输入字段",
+    "测量仪表盘",
+    "平衡指示器",
+    "运费计算器"
+  ],
   "name": "重量",
   "tags": [
+    "重量",
     "质量",
-    "重",
-    "铅",
-    "金属",
     "测量",
-    "几何学",
-    "鳞片",
-    "平衡"
+    "平衡",
+    "秤",
+    "物理",
+    "负载"
   ],
   "categories": [
     "math"
@@ -19,16 +23,20 @@
     "en": {
       "name": "weight",
       "tags": [
+        "weight",
         "mass",
-        "heavy",
-        "lead",
-        "metal",
         "measure",
-        "geometry",
-        "scales",
-        "balance"
+        "balance",
+        "scale",
+        "physics",
+        "load"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weight input field",
+        "Measurement dashboard",
+        "Balance indicator",
+        "Shipping cost calculator"
+      ]
     }
   }
 }

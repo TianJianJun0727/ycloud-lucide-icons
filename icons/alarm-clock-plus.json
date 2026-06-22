@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加新闹钟",
+    "安排提醒",
+    "设置额外计时器"
+  ],
   "name": "闹钟时钟加号",
   "tags": [
-    "添加"
+    "闹钟",
+    "添加",
+    "新建",
+    "设置",
+    "时间",
+    "提醒",
+    "加号"
   ],
   "categories": [
     "devices",
@@ -22,9 +32,19 @@
     "en": {
       "name": "alarm clock plus",
       "tags": [
-        "add"
+        "alarm",
+        "add",
+        "new",
+        "set",
+        "time",
+        "reminder",
+        "plus"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add a new alarm",
+        "Schedule a reminder",
+        "Set an additional timer"
+      ]
     }
   }
 }

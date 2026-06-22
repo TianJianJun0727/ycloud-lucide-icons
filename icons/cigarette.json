@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "吸烟区指示器",
+    "烟草产品表示",
+    "健康风险警告图标"
+  ],
   "name": "香烟",
   "tags": [
-    "吸烟"
+    "香烟",
+    "吸烟",
+    "烟草",
+    "习惯",
+    "健康风险",
+    "物品"
   ],
   "categories": [
     "travel",
@@ -14,9 +23,18 @@
     "en": {
       "name": "cigarette",
       "tags": [
-        "smoking"
+        "cigarette",
+        "smoking",
+        "tobacco",
+        "habit",
+        "health risk",
+        "item"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Smoking area indicator",
+        "Tobacco product representation",
+        "Health risk warning icon"
+      ]
     }
   }
 }

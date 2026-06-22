@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "人物",
-  "icon": "person-standing",
   "i18n": {
     "en": {
       "title": "People"

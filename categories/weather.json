@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "天气",
-  "icon": "cloud-sun",
   "i18n": {
     "en": {
       "title": "Weather"

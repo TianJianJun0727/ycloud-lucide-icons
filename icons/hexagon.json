@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "几何设计元素",
+    "Node.js 标志",
+    "UI 装饰",
+    "形状工具"
+  ],
   "name": "六边形",
   "tags": [
+    "六边形",
     "形状",
-    "节点.js",
-    "标志"
+    "几何",
+    "Node.js",
+    "标志",
+    "UI"
   ],
   "categories": [
     "shapes",
@@ -15,11 +23,19 @@
     "en": {
       "name": "hexagon",
       "tags": [
+        "hexagon",
         "shape",
-        "node.js",
-        "logo"
+        "geometry",
+        "Node.js",
+        "logo",
+        "UI"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Geometric design element",
+        "Node.js logo",
+        "UI decoration",
+        "Shape tool"
+      ]
     }
   }
 }

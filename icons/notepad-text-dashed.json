@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "草稿创建",
+    "模板设计",
+    "临时笔记",
+    "大纲起草"
+  ],
   "name": "记事本文本虚线",
   "tags": [
-    "笔记本",
-    "笔记",
-    "页面",
-    "纸",
-    "文具",
-    "日记",
-    "日记",
-    "写作",
-    "写",
-    "书面的",
-    "草稿",
+    "草稿本",
     "模板",
-    "线"
+    "虚线",
+    "草案",
+    "写作",
+    "草稿",
+    "临时笔记"
   ],
   "categories": [
     "text",
@@ -25,21 +24,19 @@
     "en": {
       "name": "notepad text dashed",
       "tags": [
-        "notebook",
-        "notes",
-        "pages",
-        "paper",
-        "stationery",
-        "diary",
-        "journal",
-        "writing",
-        "write",
-        "written",
-        "draft",
+        "draft pad",
         "template",
-        "lines"
+        "dashed",
+        "draft",
+        "writing",
+        "temporary notes"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Draft creation",
+        "Template design",
+        "Temporary notes",
+        "Outline drafting"
+      ]
     }
   }
 }

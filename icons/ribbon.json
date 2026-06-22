@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "公益活动宣传丝带",
+    "医疗 awareness 标志",
+    "礼品包装装饰丝带"
+  ],
   "name": "丝带",
   "tags": [
-    "意识",
-    "条带",
-    "乐队",
-    "胶带",
-    "表带",
-    "警戒线"
+    "丝带",
+    "awareness",
+    "装饰",
+    "纪念",
+    "医疗丝带"
   ],
   "categories": [
     "social",
@@ -19,14 +22,17 @@
     "en": {
       "name": "ribbon",
       "tags": [
+        "ribbon",
         "awareness",
-        "strip",
-        "band",
-        "tape",
-        "strap",
-        "cordon"
+        "decorative",
+        "memorial",
+        "medical ribbon"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Awareness ribbon for social causes",
+        "Medical awareness symbol",
+        "Gift wrapping decorative ribbon"
+      ]
     }
   }
 }

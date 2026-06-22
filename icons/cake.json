@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户生日指示器",
+    "庆祝或活动图标",
+    "外卖应用分类"
+  ],
   "name": "蛋糕",
   "tags": [
+    "蛋糕",
     "生日",
-    "出生日期",
-    "庆祝活动",
-    "聚会",
-    "惊喜",
-    "糕点",
+    "庆祝",
     "甜点",
-    "软糖",
-    "糖粉",
-    "甜甜的",
-    "烘焙"
+    "糕点",
+    "聚会",
+    "纪念日"
   ],
   "categories": [
     "food-beverage",
@@ -24,19 +24,19 @@
     "en": {
       "name": "cake",
       "tags": [
+        "cake",
         "birthday",
-        "birthdate",
         "celebration",
-        "party",
-        "surprise",
-        "gateaux",
         "dessert",
-        "fondant",
-        "icing sugar",
-        "sweet",
-        "baking"
+        "pastry",
+        "party",
+        "anniversary"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User birthday indicator",
+        "Celebration or event icon",
+        "Food delivery app category"
+      ]
     }
   }
 }

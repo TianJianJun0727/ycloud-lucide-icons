@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下拉菜单触发器",
+    "可展开内容指示器",
+    "导航控件"
+  ],
   "name": "方形折角箭头下",
   "tags": [
-    "返回",
+    "下拉",
+    "展开",
     "菜单",
-    "面板"
+    "导航",
+    "箭头"
   ],
   "categories": [
     "arrows",
@@ -23,11 +29,17 @@
     "en": {
       "name": "square chevron down",
       "tags": [
-        "back",
+        "dropdown",
+        "expand",
         "menu",
-        "panel"
+        "navigation",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dropdown menu triggers",
+        "Expandable content indicators",
+        "Navigation controls"
+      ]
     }
   }
 }

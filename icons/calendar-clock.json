@@ -1,15 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "安排具体时间",
+    "设置活动提醒",
+    "预约时间",
+    "有时间限制的日历条目"
+  ],
   "name": "日历时钟",
   "tags": [
     "日期",
-    "日",
-    "月",
-    "年",
-    "事件",
+    "日历",
+    "时间",
     "时钟",
-    "小时"
+    "日程",
+    "事件",
+    "提醒",
+    "约会"
   ],
   "categories": [
     "time"
@@ -19,14 +25,20 @@
       "name": "calendar clock",
       "tags": [
         "date",
-        "day",
-        "month",
-        "year",
-        "event",
+        "calendar",
+        "time",
         "clock",
-        "hour"
+        "schedule",
+        "event",
+        "reminder",
+        "appointment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Schedule with specific time",
+        "Set event reminder",
+        "Appointment time",
+        "Time-bound calendar entry"
+      ]
     }
   }
 }

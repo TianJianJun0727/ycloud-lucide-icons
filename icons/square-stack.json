@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "版本控制界面",
+    "文件堆叠视图",
+    "备份指示器"
+  ],
   "name": "方形堆叠",
   "tags": [
-    "版本",
-    "克隆",
-    "复制",
-    "重复的",
-    "多个",
-    "修订",
     "版本控制",
+    "堆叠",
+    "复制",
     "备份",
-    "历史"
+    "历史记录",
+    "多个文件"
   ],
   "categories": [
     "text",
@@ -22,17 +23,18 @@
     "en": {
       "name": "square stack",
       "tags": [
-        "versions",
-        "clone",
-        "copy",
-        "duplicate",
-        "multiple",
-        "revisions",
         "version control",
+        "stack",
+        "copy",
         "backup",
-        "history"
+        "history",
+        "multiple files"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Version control interface",
+        "File stack view",
+        "Backup indicator"
+      ]
     }
   }
 }

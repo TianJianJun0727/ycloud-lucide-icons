@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "比例分析报表",
+    "饼图文件",
+    "数据占比图表",
+    "统计分析文档"
+  ],
   "name": "文件图表饼图",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图",
-    "演示"
+    "数据分析",
+    "统计图表",
+    "饼图",
+    "比例分析",
+    "报表文件"
   ],
   "categories": [
     "files"
@@ -24,13 +29,18 @@
     "en": {
       "name": "file chart pie",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "presentation"
+        "data analysis",
+        "statistical chart",
+        "pie chart",
+        "proportion analysis",
+        "report file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Proportion analysis reports",
+        "Pie chart files",
+        "Data proportion charts",
+        "Statistical analysis documents"
+      ]
     }
   }
 }

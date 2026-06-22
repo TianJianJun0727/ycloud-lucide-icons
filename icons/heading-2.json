@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档格式化工具栏",
+    "HTML编辑器",
+    "内容层级显示"
+  ],
   "name": "标题2",
   "tags": [
+    "标题",
     "H2",
     "HTML",
-    "标记",
-    "Markdown"
+    "Markdown",
+    "二级标题"
   ],
   "categories": [
     "text"
@@ -15,12 +20,17 @@
     "en": {
       "name": "heading 2",
       "tags": [
+        "heading",
         "h2",
         "html",
-        "markup",
-        "markdown"
+        "markdown",
+        "level 2 heading"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document formatting toolbar",
+        "HTML editor",
+        "Content hierarchy display"
+      ]
     }
   }
 }

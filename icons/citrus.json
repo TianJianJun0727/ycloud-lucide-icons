@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食品或饮料菜单",
+    "营养/健康应用",
+    "购物清单"
+  ],
   "name": "柑橘",
   "tags": [
+    "柑橘",
+    "水果",
     "柠檬",
-    "橙色",
+    "橙子",
     "柚子",
-    "水果"
+    "维生素C"
   ],
   "categories": [
     "food-beverage"
@@ -15,12 +21,18 @@
     "en": {
       "name": "citrus",
       "tags": [
+        "citrus",
+        "fruit",
         "lemon",
         "orange",
         "grapefruit",
-        "fruit"
+        "vitamin C"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food or beverage menu",
+        "Nutrition/health app",
+        "Grocery shopping list"
+      ]
     }
   }
 }

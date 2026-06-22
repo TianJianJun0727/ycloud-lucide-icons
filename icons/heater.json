@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家庭温控器",
+    "供暖控制",
+    "家电图标",
+    "旅行便利设施"
+  ],
   "name": "加热器",
   "tags": [
+    "加热器",
     "供暖",
     "温暖",
-    "舒适度",
-    "火",
-    "炉子",
-    "电动的",
-    "电子产品",
-    "便利设施"
+    "暖气",
+    "设备",
+    "家居"
   ],
   "categories": [
     "home",
@@ -21,16 +24,19 @@
     "en": {
       "name": "heater",
       "tags": [
+        "heater",
         "heating",
         "warmth",
-        "comfort",
-        "fire",
-        "stove",
-        "electric",
-        "electronics",
-        "amenities"
+        "radiator",
+        "device",
+        "home"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home thermostat",
+        "Heating control",
+        "Appliance icon",
+        "Travel amenity"
+      ]
     }
   }
 }

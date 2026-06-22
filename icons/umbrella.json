@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用",
+    "防晒提示",
+    "保护状态显示"
+  ],
   "name": "雨伞",
   "tags": [
-    "雨",
-    "天气"
+    "雨伞",
+    "雨天",
+    "保护",
+    "天气",
+    "遮阳"
   ],
   "categories": [
     "weather"
@@ -13,10 +20,17 @@
     "en": {
       "name": "umbrella",
       "tags": [
-        "rain",
-        "weather"
+        "umbrella",
+        "rainy",
+        "protection",
+        "weather",
+        "sunshade"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app",
+        "Sun protection reminder",
+        "Protection status display"
+      ]
     }
   }
 }

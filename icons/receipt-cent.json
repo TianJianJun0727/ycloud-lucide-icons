@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "支付确认",
+    "费用跟踪",
+    "货币转换"
+  ],
   "name": "收据美分",
   "tags": [
-    "账单",
-    "优惠券",
-    "滑倒",
-    "勾选",
-    "存根",
-    "货币",
+    "收据",
     "美分",
-    "美元",
-    "美元",
-    "$",
-    "¢"
+    "账单",
+    "支付",
+    "货币",
+    "交易"
   ],
   "categories": [
     "finance",
@@ -23,19 +22,18 @@
     "en": {
       "name": "receipt cent",
       "tags": [
+        "receipt",
+        "cent",
         "bill",
-        "voucher",
-        "slip",
-        "check",
-        "counterfoil",
+        "payment",
         "currency",
-        "cents",
-        "dollar",
-        "usd",
-        "$",
-        "¢"
+        "transaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Payment confirmation",
+        "Expense tracking",
+        "Currency conversion"
+      ]
     }
   }
 }

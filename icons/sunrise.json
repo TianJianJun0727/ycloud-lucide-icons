@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气预报",
+    "早晨时间指示",
+    "闹钟应用",
+    "日出时间显示"
+  ],
   "name": "日出",
   "tags": [
+    "日出",
     "天气",
+    "早晨",
     "时间",
-    "早上",
-    "日"
+    "黎明",
+    "箭头",
+    "上升"
   ],
   "categories": [
     "arrows",
@@ -17,12 +25,20 @@
     "en": {
       "name": "sunrise",
       "tags": [
+        "sunrise",
         "weather",
-        "time",
         "morning",
-        "day"
+        "time",
+        "dawn",
+        "arrow",
+        "rise"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather forecast",
+        "Morning time indicator",
+        "Alarm clock app",
+        "Sunrise time display"
+      ]
     }
   }
 }

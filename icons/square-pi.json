@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学公式编辑器",
+    "科学计算器",
+    "编程文档",
+    "教育平台"
+  ],
   "name": "方形圆周率",
   "tags": [
+    "圆周率",
+    "数学",
     "常数",
-    "代码",
-    "编码",
-    "编程",
+    "计算",
+    "几何",
     "符号",
-    "三角学",
-    "几何学",
+    "编程",
     "公式"
   ],
   "categories": [
@@ -28,16 +33,21 @@
     "en": {
       "name": "square pi",
       "tags": [
+        "pi",
+        "math",
         "constant",
-        "code",
-        "coding",
-        "programming",
-        "symbol",
-        "trigonometry",
+        "calculate",
         "geometry",
+        "symbol",
+        "programming",
         "formula"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Math equation editor",
+        "Scientific calculator",
+        "Coding documentation",
+        "Education platform"
+      ]
     }
   }
 }

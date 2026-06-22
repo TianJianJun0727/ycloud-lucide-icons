@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "仪表盘中的数据表格",
+    "电子表格应用图标",
+    "网格布局切换"
+  ],
   "name": "表格2",
   "tags": [
+    "表格",
     "电子表格",
-    "网格"
+    "网格",
+    "数据表"
   ],
   "categories": [
     "text",
@@ -15,9 +21,15 @@
       "name": "table 2",
       "tags": [
         "spreadsheet",
-        "grid"
+        "grid",
+        "table",
+        "datasheet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data table in a dashboard",
+        "Spreadsheet application icon",
+        "Grid layout toggle"
+      ]
     }
   }
 }

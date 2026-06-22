@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器工具栏",
+    "文档格式控制",
+    "UI设计对齐工具"
+  ],
   "name": "文本对齐居中",
   "tags": [
-    "文本",
-    "对准",
-    "中心"
+    "文本居中",
+    "对齐",
+    "排版",
+    "文字格式"
   ],
   "categories": [
     "text"
@@ -22,11 +27,16 @@
     "en": {
       "name": "text align center",
       "tags": [
-        "text",
+        "text align center",
         "alignment",
-        "center"
+        "typography",
+        "text formatting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor toolbar",
+        "Document formatting controls",
+        "UI design alignment tool"
+      ]
     }
   }
 }

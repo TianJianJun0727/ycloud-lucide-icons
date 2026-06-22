@@ -1,19 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示升高的音频电平或音量",
+    "指示上升的水位或高潮",
+    "表示信号强度增强"
+  ],
   "name": "波浪箭头上",
   "tags": [
-    "水",
-    "海",
-    "水平",
-    "声音",
-    "赫兹",
-    "波长",
-    "振动",
-    "高",
-    "潮汐",
-    "海洋",
-    "上升"
+    "波浪上升",
+    "水位上升",
+    "声波增强",
+    "信号增强",
+    "高潮"
   ],
   "categories": [
     "weather",
@@ -23,19 +21,17 @@
     "en": {
       "name": "waves arrow up",
       "tags": [
-        "water",
-        "sea",
-        "level",
-        "sound",
-        "hertz",
-        "wavelength",
-        "vibrate",
-        "high",
-        "tide",
-        "ocean",
-        "rising"
+        "waves up",
+        "water level rising",
+        "sound increasing",
+        "signal boost",
+        "high tide"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Showing increasing audio levels or volume",
+        "Indicating rising water levels or high tide",
+        "Representing signal strength improvement"
+      ]
     }
   }
 }

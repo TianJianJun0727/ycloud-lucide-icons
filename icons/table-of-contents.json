@@ -1,21 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档侧边栏导航",
+    "电子书或手册目录",
+    "知识库章节索引"
+  ],
   "name": "表格的目录",
   "tags": [
     "目录",
-    "概要",
+    "大纲",
     "导航",
-    "文件结构",
-    "指数",
-    "概述",
-    "部分",
-    "章节",
-    "内容",
-    "文档",
-    "手册",
-    "知识库",
-    "常见问题解答"
+    "文档结构",
+    "索引"
   ],
   "categories": [
     "text"
@@ -24,21 +20,18 @@
     "en": {
       "name": "table of contents",
       "tags": [
+        "table of contents",
         "toc",
         "outline",
         "navigation",
         "document structure",
-        "index",
-        "overview",
-        "sections",
-        "chapters",
-        "content",
-        "documentation",
-        "manual",
-        "knowledge base",
-        "faq"
+        "index"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document sidebar navigation",
+        "E-book or manual contents",
+        "Knowledge base section index"
+      ]
     }
   }
 }

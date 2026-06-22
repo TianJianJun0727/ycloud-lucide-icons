@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "发送消息按钮",
+    "邮件提交操作",
+    "聊天界面发送"
+  ],
   "name": "发送水平",
   "tags": [
-    "邮箱",
+    "发送",
     "消息",
     "邮件",
+    "提交",
     "纸飞机",
-    "纸飞机",
-    "提交"
+    "水平"
   ],
   "categories": [
     "mail",
@@ -27,14 +31,18 @@
     "en": {
       "name": "send horizontal",
       "tags": [
-        "email",
+        "send",
         "message",
         "mail",
+        "submit",
         "paper airplane",
-        "paper aeroplane",
-        "submit"
+        "horizontal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Send message button",
+        "Email submit action",
+        "Chat interface send"
+      ]
     }
   }
 }

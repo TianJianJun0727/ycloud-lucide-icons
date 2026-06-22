@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在地图上标记位置",
+    "固定当前位置",
+    "设置地图标记"
+  ],
   "name": "地图图钉",
   "tags": [
     "位置",
-    "航路点",
     "标记",
-    "掉落"
+    "图钉",
+    "定位",
+    "地点",
+    "坐标"
   ],
   "categories": [
     "navigation",
@@ -18,11 +24,17 @@
       "name": "map pin",
       "tags": [
         "location",
-        "waypoint",
         "marker",
-        "drop"
+        "pin",
+        "position",
+        "place",
+        "coordinates"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mark location on map",
+        "Pin current position",
+        "Set map marker"
+      ]
     }
   }
 }

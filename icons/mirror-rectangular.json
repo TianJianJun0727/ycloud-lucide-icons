@@ -1,21 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "浴室梳妆镜图标",
+    "反射模拟",
+    "家居装饰物品",
+    "光学工具"
+  ],
   "name": "镜像矩形",
   "tags": [
-    "反思",
-    "光学",
-    "玻璃",
-    "表面",
-    "图片",
-    "物理学",
-    "科学",
-    "浴室",
-    "装饰",
-    "化妆品",
-    "有光泽",
-    "潜望镜",
-    "虚荣心"
+    "镜子",
+    "反射",
+    "矩形镜",
+    "梳妆镜",
+    "光学"
   ],
   "categories": [
     "science",
@@ -26,21 +23,18 @@
     "en": {
       "name": "mirror rectangular",
       "tags": [
+        "mirror",
         "reflection",
-        "optics",
-        "glass",
-        "surface",
-        "image",
-        "physics",
-        "science",
-        "bathroom",
-        "decor",
-        "cosmetic",
-        "shiny",
-        "periscope",
-        "vanity"
+        "rectangular mirror",
+        "vanity mirror",
+        "optics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bathroom vanity icon",
+        "Reflection simulation",
+        "Home decor item",
+        "Optics tool"
+      ]
     }
   }
 }

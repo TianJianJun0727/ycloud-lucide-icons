@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "箭头",
-  "icon": "arrow-left-right",
   "i18n": {
     "en": {
       "title": "Arrows"

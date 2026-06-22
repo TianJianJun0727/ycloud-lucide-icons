@@ -1,19 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "顶栏/底栏布局参考线",
+    "水平间距指示器",
+    "页面结构规划"
+  ],
   "name": "面板顶部底部虚线",
   "tags": [
-    "侧边栏",
-    "小学",
-    "抽屉",
-    "显示",
-    "揭示",
-    "填充",
-    "保证金",
-    "指南",
+    "顶栏",
+    "底栏",
     "布局",
-    "水平的",
-    "流血"
+    "参考线",
+    "边距",
+    "填充",
+    "设计",
+    "分隔",
+    "虚线",
+    "水平"
   ],
   "categories": [
     "layout"
@@ -22,19 +25,22 @@
     "en": {
       "name": "panel top bottom dashed",
       "tags": [
-        "sidebar",
-        "primary",
-        "drawer",
-        "show",
-        "reveal",
-        "padding",
-        "margin",
-        "guide",
+        "header",
+        "footer",
         "layout",
-        "horizontal",
-        "bleed"
+        "guide",
+        "margin",
+        "padding",
+        "design",
+        "separator",
+        "dashed",
+        "horizontal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Layout guides for header/footer",
+        "Horizontal spacing indicators",
+        "Page structure planning"
+      ]
     }
   }
 }

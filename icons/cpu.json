@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备规格显示",
+    "系统信息",
+    "性能监控",
+    "硬件配置"
+  ],
   "name": "处理器",
   "tags": [
     "处理器",
-    "核心",
-    "技术",
-    "电脑",
     "芯片",
-    "电路",
-    "记忆",
-    "内存",
-    "规格",
-    "千兆赫",
-    "吉赫兹"
+    "核心",
+    "计算机",
+    "硬件",
+    "性能"
   ],
   "categories": [
     "devices"
@@ -23,18 +23,18 @@
       "name": "cpu",
       "tags": [
         "processor",
-        "cores",
-        "technology",
-        "computer",
         "chip",
-        "circuit",
-        "memory",
-        "ram",
-        "specs",
-        "gigahertz",
-        "ghz"
+        "core",
+        "computer",
+        "hardware",
+        "performance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device specifications",
+        "System information",
+        "Performance monitoring",
+        "Hardware configuration"
+      ]
     }
   }
 }

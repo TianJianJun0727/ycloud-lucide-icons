@@ -1,12 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电商购物车",
+    "零售商店购买",
+    "订单摘要显示",
+    "商品结账流程"
+  ],
   "name": "购物包",
   "tags": [
-    "电子商务",
-    "购物车",
+    "购物袋",
+    "购物",
+    "电商",
     "购买",
-    "商店"
+    "商品",
+    "订单",
+    "零售",
+    "结账",
+    "商店",
+    "包裹"
   ],
   "categories": [
     "shopping"
@@ -15,12 +26,23 @@
     "en": {
       "name": "shopping bag",
       "tags": [
+        "shopping bag",
+        "shopping",
         "ecommerce",
-        "cart",
         "purchase",
-        "store"
+        "product",
+        "order",
+        "retail",
+        "checkout",
+        "store",
+        "package"
       ],
-      "use-cases": []
+      "use-cases": [
+        "E-commerce shopping cart",
+        "Retail store purchase",
+        "Order summary display",
+        "Product checkout process"
+      ]
     }
   }
 }

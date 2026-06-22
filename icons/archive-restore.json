@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "恢复已归档的邮件",
+    "从备份中解压文件",
+    "从存储中恢复已删除的项目"
+  ],
   "name": "归档恢复",
   "tags": [
-    "取消存档",
-    "指数",
+    "恢复",
+    "解压",
     "备份",
-    "盒子",
     "存储",
-    "记录"
+    "文件",
+    "邮件",
+    "归档"
   ],
   "categories": [
     "files",
@@ -18,14 +23,19 @@
     "en": {
       "name": "archive restore",
       "tags": [
-        "unarchive",
-        "index",
+        "restore",
+        "extract",
         "backup",
-        "box",
         "storage",
-        "records"
+        "file",
+        "mail",
+        "archive"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Restoring archived emails",
+        "Extracting files from a backup",
+        "Recovering deleted items from storage"
+      ]
     }
   }
 }

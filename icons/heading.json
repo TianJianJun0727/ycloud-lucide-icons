@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档编辑器中的一级标题",
+    "网页内容层级结构",
+    "Markdown 标题标记"
+  ],
   "name": "标题",
   "tags": [
     "H1",
     "HTML",
     "标记",
-    "Markdown"
+    "Markdown",
+    "标题",
+    "文档",
+    "编辑"
   ],
   "categories": [
     "text"
@@ -18,9 +25,16 @@
         "h1",
         "html",
         "markup",
-        "markdown"
+        "markdown",
+        "heading",
+        "document",
+        "editor"
       ],
-      "use-cases": []
+      "use-cases": [
+        "First-level heading in document editor",
+        "Web content hierarchy",
+        "Markdown heading markup"
+      ]
     }
   }
 }

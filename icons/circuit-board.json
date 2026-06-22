@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "硬件设置",
+    "电子项目",
+    "计算机组件可视化"
+  ],
   "name": "电路面板",
   "tags": [
+    "电路板",
+    "硬件",
+    "电子",
     "计算",
-    "电力",
-    "电子产品"
+    "主板",
+    "芯片"
   ],
   "categories": [
     "science",
@@ -15,11 +22,18 @@
     "en": {
       "name": "circuit board",
       "tags": [
+        "circuit board",
+        "hardware",
+        "electronics",
         "computing",
-        "electricity",
-        "electronics"
+        "motherboard",
+        "chip"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hardware settings",
+        "Electronics project",
+        "Computer component visualization"
+      ]
     }
   }
 }

@@ -1,11 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "国际象棋游戏界面",
+    "王车易位移动",
+    "策略应用",
+    "中世纪堡垒主题"
+  ],
   "name": "国际象棋城堡",
   "tags": [
+    "国际象棋",
     "城堡",
-    "一块",
-    "棋盘游戏"
+    "车",
+    "棋子",
+    "棋盘游戏",
+    "策略",
+    "塔楼",
+    "游戏"
   ],
   "categories": [
     "gaming",
@@ -15,11 +25,21 @@
     "en": {
       "name": "chess rook",
       "tags": [
+        "chess",
+        "rook",
         "castle",
         "piece",
-        "board game"
+        "board game",
+        "strategy",
+        "tower",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chess game interface",
+        "Castling move",
+        "Strategy app",
+        "Medieval fortress theme"
+      ]
     }
   }
 }

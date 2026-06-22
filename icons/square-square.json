@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "嵌套容器布局",
+    "居中元素",
+    "浮动面板"
+  ],
   "name": "方形方形",
   "tags": [
-    "浮动",
+    "嵌套",
     "中心",
-    "长方形"
+    "浮动",
+    "矩形",
+    "框内框"
   ],
   "categories": [
     "layout"
@@ -14,11 +20,17 @@
     "en": {
       "name": "square square",
       "tags": [
-        "float",
+        "nested",
         "center",
-        "rectangle"
+        "float",
+        "rectangle",
+        "box in box"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Nested container layout",
+        "Centered element",
+        "Floating panel"
+      ]
     }
   }
 }

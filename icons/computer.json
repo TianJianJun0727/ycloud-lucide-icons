@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "台式计算机设备",
+    "开发工作站",
+    "GitHub代码空间",
+    "硬件或设置图标"
+  ],
   "name": "电脑",
   "tags": [
     "电脑",
-    "底盘",
-    "代码空间",
-    "GitHub"
+    "台式机",
+    "设备",
+    "主机",
+    "开发",
+    "GitHub",
+    "工作站"
   ],
   "categories": [
     "devices",
@@ -17,12 +25,20 @@
     "en": {
       "name": "computer",
       "tags": [
-        "pc",
-        "chassis",
-        "codespaces",
-        "github"
+        "computer",
+        "desktop",
+        "device",
+        "PC",
+        "development",
+        "GitHub",
+        "workstation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Desktop computer device",
+        "Development workstation",
+        "GitHub Codespaces",
+        "Hardware or setup icon"
+      ]
     }
   }
 }

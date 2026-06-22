@@ -1,20 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用用户交互",
+    "显示非活动状态",
+    "指示不可点击元素"
+  ],
   "name": "鼠标指针2关闭",
   "tags": [
     "指针",
     "鼠标",
     "光标",
-    "关闭",
     "禁用",
-    "箭头",
-    "导航",
-    "选择",
-    "选择",
-    "点击",
-    "无点击",
-    "互动"
+    "关闭",
+    "不可点击",
+    "非活动",
+    "禁用交互"
   ],
   "categories": [
     "arrows",
@@ -27,17 +27,17 @@
         "pointer",
         "mouse",
         "cursor",
+        "disabled",
         "off",
-        "disable",
-        "arrow",
-        "navigation",
-        "selection",
-        "select",
-        "click",
         "no-click",
-        "interaction"
+        "inactive",
+        "non-interactive"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable user interaction",
+        "Show inactive state",
+        "Indicate non-clickable element"
+      ]
     }
   }
 }

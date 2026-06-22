@@ -1,22 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "前进导航按钮",
+    "下一页控件",
+    "命令行提示符"
+  ],
   "name": "方形折角箭头右",
   "tags": [
     "前进",
-    "下一个",
-    "超过",
-    "更大",
-    "菜单",
-    "面板",
-    "代码",
-    "编码",
-    "命令行",
-    "终端",
-    "提示",
-    "外壳",
-    "控制台",
-    ">"
+    "下一页",
+    "导航",
+    "箭头",
+    "终端"
   ],
   "categories": [
     "arrows",
@@ -37,20 +32,15 @@
       "tags": [
         "forward",
         "next",
-        "more than",
-        "greater",
-        "menu",
-        "panel",
-        "code",
-        "coding",
-        "command line",
-        "terminal",
-        "prompt",
-        "shell",
-        "console",
-        ">"
+        "navigation",
+        "arrow",
+        "terminal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Forward navigation buttons",
+        "Next page controls",
+        "Command line prompts"
+      ]
     }
   }
 }

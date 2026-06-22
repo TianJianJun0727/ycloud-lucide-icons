@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "餐厅菜单分类",
+    "食谱食材图标",
+    "外卖食品项",
+    "餐点选择器"
+  ],
   "name": "汤",
   "tags": [
+    "汤",
     "食物",
-    "菜",
-    "餐厅",
-    "课程",
-    "餐",
+    "菜肴",
     "碗",
+    "餐饮",
+    "热食",
     "开胃菜"
   ],
   "categories": [
@@ -18,15 +23,20 @@
     "en": {
       "name": "soup",
       "tags": [
+        "soup",
         "food",
         "dish",
-        "restaurant",
-        "course",
-        "meal",
         "bowl",
+        "meal",
+        "hot food",
         "starter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Restaurant menu category",
+        "Recipe ingredient icon",
+        "Food delivery item",
+        "Meal course selector"
+      ]
     }
   }
 }

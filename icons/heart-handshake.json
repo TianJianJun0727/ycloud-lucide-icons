@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "合作协议确认",
+    "慈善活动标识",
+    "情感连接象征"
+  ],
   "name": "爱心握手",
   "tags": [
+    "爱心握手",
     "协议",
-    "慈善事业",
-    "帮助",
-    "交易",
-    "条款",
+    "合作",
+    "慈善",
     "情感",
-    "在一起",
-    "握手"
+    "互助"
   ],
   "categories": [
     "emoji",
@@ -21,16 +23,18 @@
     "en": {
       "name": "heart handshake",
       "tags": [
+        "heart handshake",
         "agreement",
+        "cooperation",
         "charity",
-        "help",
-        "deal",
-        "terms",
         "emotion",
-        "together",
-        "handshake"
+        "mutual aid"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cooperation agreement confirmation",
+        "Charity event identifier",
+        "Emotional connection symbol"
+      ]
     }
   }
 }

@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "字体文件图标",
+    "排版设置",
+    "文本样式配置"
+  ],
   "name": "文件文字角落",
   "tags": [
     "字体",
-    "文本",
-    "版式",
-    "类型"
+    "排版",
+    "文字",
+    "类型",
+    "样式",
+    "格式"
   ],
   "categories": [
     "files",
@@ -25,11 +31,17 @@
       "name": "file type corner",
       "tags": [
         "font",
-        "text",
         "typography",
-        "type"
+        "text",
+        "type",
+        "style",
+        "format"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Font file icon",
+        "Typography settings",
+        "Text style configuration"
+      ]
     }
   }
 }

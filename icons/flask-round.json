@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "实验室圆底烧瓶",
+    "化学实验工具",
+    "科学设备图标"
+  ],
   "name": "烧瓶圆形",
   "tags": [
-    "烧杯",
+    "烧瓶",
+    "圆底烧瓶",
     "实验室",
     "化学",
-    "实验",
-    "测试"
+    "实验"
   ],
   "categories": [
     "science",
@@ -17,13 +21,17 @@
     "en": {
       "name": "flask round",
       "tags": [
-        "beaker",
+        "flask",
+        "round-bottom",
         "lab",
         "chemistry",
-        "experiment",
-        "test"
+        "experiment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Round flask in lab setup",
+        "Chemistry experiment tool",
+        "Scientific equipment icon"
+      ]
     }
   }
 }

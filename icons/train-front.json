@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "铁路预订界面",
+    "公共交通应用",
+    "交通服务标识"
+  ],
   "name": "火车正面",
   "tags": [
+    "火车",
     "铁路",
+    "列车",
     "地铁",
-    "地铁",
-    "地下",
-    "高速",
-    "子弹",
-    "快",
-    "轨道",
-    "线条"
+    "高速铁路",
+    "车头"
   ],
   "categories": [
     "transportation"
@@ -20,17 +21,18 @@
     "en": {
       "name": "train front",
       "tags": [
+        "train",
         "railway",
-        "metro",
+        "locomotive",
         "subway",
-        "underground",
-        "high-speed",
-        "bullet",
-        "fast",
-        "track",
-        "line"
+        "high-speed rail",
+        "front"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Railway booking interface",
+        "Public transit app",
+        "Transportation service logo"
+      ]
     }
   }
 }

@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "减少数量",
+    "移除项目",
+    "交通限制"
+  ],
   "name": "八边形减少",
   "tags": [
-    "停止",
-    "禁止的",
-    "减去",
+    "减少",
     "移除",
-    "减少",
-    "减少",
-    "-",
-    "交通",
-    "停止",
-    "受限的"
+    "减去",
+    "禁止",
+    "交通标志"
   ],
   "categories": [
     "transportation"
@@ -21,18 +20,17 @@
     "en": {
       "name": "octagon minus",
       "tags": [
-        "stop",
-        "forbidden",
-        "subtract",
-        "remove",
         "decrease",
-        "reduce",
-        "-",
-        "traffic",
-        "halt",
-        "restricted"
+        "remove",
+        "subtract",
+        "forbidden",
+        "traffic sign"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Decrease quantity",
+        "Remove items",
+        "Traffic restrictions"
+      ]
     }
   }
 }

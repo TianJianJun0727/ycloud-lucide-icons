@@ -1,20 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电源开关切换",
+    "设备控制面板"
+  ],
   "name": "电源",
   "tags": [
-    "上",
-    "关闭",
-    "装置",
+    "电源",
     "开关",
-    "切换",
-    "二进制",
-    "布尔值",
-    "重新启动",
-    "重新启动",
-    "按钮",
-    "键盘",
-    "排除故障"
+    "重启",
+    "设备"
   ],
   "categories": [
     "connectivity"
@@ -23,20 +18,15 @@
     "en": {
       "name": "power",
       "tags": [
-        "on",
-        "off",
-        "device",
+        "power",
         "switch",
-        "toggle",
-        "binary",
-        "boolean",
         "reboot",
-        "restart",
-        "button",
-        "keyboard",
-        "troubleshoot"
+        "device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Power on/off toggle",
+        "Device control panel"
+      ]
     }
   }
 }

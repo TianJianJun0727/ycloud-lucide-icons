@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电源连接指示器",
+    "设备连接状态",
+    "电气接口"
+  ],
   "name": "插头2",
   "tags": [
-    "电力",
-    "能量",
+    "插头",
+    "电源",
+    "连接",
     "插座",
-    "插座"
+    "设备"
   ],
   "categories": [
     "devices",
@@ -16,12 +21,17 @@
     "en": {
       "name": "plug 2",
       "tags": [
-        "electricity",
-        "energy",
+        "plug",
+        "power",
+        "connect",
         "socket",
-        "outlet"
+        "device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Power connection indicator",
+        "Device connectivity status",
+        "Electrical interface"
+      ]
     }
   }
 }

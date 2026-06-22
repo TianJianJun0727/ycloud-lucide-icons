@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用屏幕键盘",
+    "切换物理键盘连接",
+    "输入法禁用状态",
+    "无障碍功能设置"
+  ],
   "name": "键盘关闭",
   "tags": [
-    "解锁",
-    "布局",
-    "咒语",
-    "设置",
-    "鼠标"
+    "键盘禁用",
+    "关闭键盘",
+    "输入法关闭",
+    "虚拟键盘隐藏",
+    "硬件断开"
   ],
   "categories": [
     "devices",
@@ -18,13 +23,18 @@
     "en": {
       "name": "keyboard off",
       "tags": [
-        "unkeys",
-        "layout",
-        "spell",
-        "settings",
-        "mouse"
+        "keyboard disabled",
+        "keyboard off",
+        "input method off",
+        "virtual keyboard hidden",
+        "hardware disconnected"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable on-screen keyboard",
+        "Toggle physical keyboard connection",
+        "Input method disabled state",
+        "Accessibility settings"
+      ]
     }
   }
 }

@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "返回按钮",
+    "导航指示",
+    "撤销操作",
+    "上一步"
+  ],
   "name": "角落上左",
   "tags": [
-    "箭头"
+    "箭头",
+    "方向",
+    "返回",
+    "后退",
+    "左上角"
   ],
   "categories": [
     "arrows"
@@ -12,9 +21,18 @@
     "en": {
       "name": "corner up left",
       "tags": [
-        "arrow"
+        "arrow",
+        "direction",
+        "back",
+        "return",
+        "top-left"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back button",
+        "Navigation indicator",
+        "Undo action",
+        "Previous step"
+      ]
     }
   }
 }

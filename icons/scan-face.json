@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移动设备解锁",
+    "安全登录系统",
+    "身份验证"
+  ],
   "name": "扫描表情",
   "tags": [
-    "脸",
-    "生物识别",
-    "识别",
-    "认证",
+    "人脸识别",
+    "面部扫描",
+    "生物认证",
+    "身份验证",
     "2FA",
-    "访问",
-    "登录",
-    "虚线"
+    "登录安全"
   ],
   "categories": [
     "account",
@@ -22,16 +24,18 @@
     "en": {
       "name": "scan face",
       "tags": [
-        "face",
-        "biometric",
-        "identification",
-        "authentication",
-        "2fa",
-        "access",
-        "login",
-        "dashed"
+        "facial recognition",
+        "face scan",
+        "biometric authentication",
+        "identity verification",
+        "2FA",
+        "login security"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mobile device unlock",
+        "Secure login systems",
+        "Identity verification"
+      ]
     }
   }
 }

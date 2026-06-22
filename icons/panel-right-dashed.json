@@ -1,18 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "右侧边栏布局参考线",
+    "设计间距指示器",
+    "界面线框图元素"
+  ],
   "name": "面板右虚线",
   "tags": [
     "侧边栏",
-    "中学",
-    "抽屉",
-    "显示",
-    "揭示",
-    "填充",
-    "保证金",
-    "指南",
     "布局",
-    "流血"
+    "参考线",
+    "边距",
+    "填充",
+    "设计",
+    "分隔",
+    "虚线",
+    "右侧"
   ],
   "categories": [
     "layout"
@@ -30,17 +33,20 @@
       "name": "panel right dashed",
       "tags": [
         "sidebar",
-        "secondary",
-        "drawer",
-        "show",
-        "reveal",
-        "padding",
-        "margin",
-        "guide",
         "layout",
-        "bleed"
+        "guide",
+        "margin",
+        "padding",
+        "design",
+        "separator",
+        "dashed",
+        "right"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Layout guides for right sidebar",
+        "Design spacing indicators",
+        "UI wireframe element"
+      ]
     }
   }
 }

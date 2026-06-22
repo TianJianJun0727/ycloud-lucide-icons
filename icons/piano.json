@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐播放器界面",
+    "声音设置",
+    "乐器选择"
+  ],
   "name": "钢琴",
   "tags": [
+    "钢琴",
     "音乐",
+    "乐器",
+    "键盘",
+    "演奏",
     "音频",
-    "声音",
-    "噪音",
-    "笔记",
-    "和弦",
-    "键",
-    "八度",
-    "声学的",
-    "仪器",
-    "播放",
-    "钢琴家",
-    "表现",
-    "音乐会"
+    "声音"
   ],
   "categories": [
     "multimedia",
@@ -26,22 +23,19 @@
     "en": {
       "name": "piano",
       "tags": [
+        "piano",
         "music",
-        "audio",
-        "sound",
-        "noise",
-        "notes",
-        "chord",
-        "keys",
-        "octave",
-        "acoustic",
         "instrument",
+        "keyboard",
         "play",
-        "pianist",
-        "performance",
-        "concert"
+        "audio",
+        "sound"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music player interface",
+        "Sound settings",
+        "Instrument selection"
+      ]
     }
   }
 }

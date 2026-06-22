@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "匿名或隐身模式切换",
+    "游戏头像或角色定制",
+    "化装舞会活动策划",
+    "隐私和安全功能"
+  ],
   "name": "威尼斯面具",
   "tags": [
+    "威尼斯面具",
     "面具",
+    "伪装",
+    "匿名",
     "化装舞会",
-    "冒充",
-    "秘密",
-    "隐姓埋名"
+    "隐私"
   ],
   "categories": [
     "account",
@@ -18,12 +24,18 @@
       "name": "venetian mask",
       "tags": [
         "mask",
+        "venetian",
+        "disguise",
+        "anonymous",
         "masquerade",
-        "impersonate",
-        "secret",
-        "incognito"
+        "privacy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Anonymous or incognito mode toggle",
+        "Gaming avatar or character customization",
+        "Event planning for masquerade balls",
+        "Privacy and security features"
+      ]
     }
   }
 }

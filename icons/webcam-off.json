@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "表示摄像头已禁用或关闭",
-    "表示摄像头画面不可用或因隐私被阻止"
+    "视频通话中为隐私关闭摄像头",
+    "指示摄像头已关闭或不可用",
+    "隐私设置与控制"
   ],
   "name": "摄像头关闭",
   "tags": [
-    "相机",
-    "安全"
+    "摄像头关闭",
+    "相机禁用",
+    "隐私保护",
+    "视频关闭",
+    "镜头遮挡"
   ],
   "categories": [
     "connectivity",
@@ -18,12 +22,16 @@
     "en": {
       "name": "webcam off",
       "tags": [
-        "camera",
-        "security"
+        "webcam off",
+        "camera disabled",
+        "privacy",
+        "video off",
+        "lens covered"
       ],
       "use-cases": [
-        "indicating that a webcam is disabled or turned off",
-        "showing a camera feed is unavailable or blocked for privacy"
+        "Disabling camera for privacy in video calls",
+        "Indicating camera is turned off or unavailable",
+        "Privacy settings and controls"
       ]
     }
   }

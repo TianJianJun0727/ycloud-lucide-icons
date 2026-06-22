@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带有顶部工具栏的窗口或应用",
+    "网页标题区域布局",
+    "带有固定顶部区域的模板"
+  ],
   "name": "布局面板顶部",
   "tags": [
-    "窗户",
-    "网页",
-    "屏蔽",
-    "部分",
-    "网格",
-    "模板",
-    "结构"
+    "顶部面板",
+    "布局",
+    "标题栏",
+    "页眉",
+    "窗口",
+    "区块"
   ],
   "categories": [
     "layout"
@@ -18,15 +21,18 @@
     "en": {
       "name": "layout panel top",
       "tags": [
+        "top panel",
+        "layout",
+        "header",
+        "top bar",
         "window",
-        "webpage",
-        "block",
-        "section",
-        "grid",
-        "template",
-        "structure"
+        "block"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Window or application with a top toolbar",
+        "Webpage header section layout",
+        "Template with a fixed top section"
+      ]
     }
   }
 }

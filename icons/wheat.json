@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食物成分标签",
+    "农业或农场界面",
+    "饮食信息显示",
+    "烘焙或食谱应用"
+  ],
   "name": "小麦",
   "tags": [
-    "玉米",
+    "小麦",
     "谷物",
-    "谷物",
-    "麸质"
+    "麸质",
+    "农业",
+    "粮食",
+    "食物",
+    "原料"
   ],
   "categories": [
     "food-beverage"
@@ -15,12 +23,20 @@
     "en": {
       "name": "wheat",
       "tags": [
-        "corn",
-        "cereal",
+        "wheat",
         "grain",
-        "gluten"
+        "gluten",
+        "agriculture",
+        "cereal",
+        "food",
+        "ingredient"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food ingredient label",
+        "Agriculture or farming UI",
+        "Dietary information display",
+        "Bakery or recipe app"
+      ]
     }
   }
 }

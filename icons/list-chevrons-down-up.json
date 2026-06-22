@@ -1,23 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "可折叠列表",
+    "垂直导航",
+    "内容展开",
+    "界面扩展"
+  ],
   "name": "列表双折角箭头下上",
   "tags": [
-    "选项",
-    "项目",
+    "列表",
     "折叠",
     "展开",
-    "详情",
-    "披露",
-    "显示",
-    "隐藏",
-    "切换",
     "手风琴",
-    "更多",
-    "少",
-    "折叠",
-    "展开",
-    "垂直"
+    "垂直",
+    "切换",
+    "显示隐藏"
   ],
   "categories": [
     "text",
@@ -27,23 +24,20 @@
     "en": {
       "name": "list chevrons down up",
       "tags": [
-        "options",
-        "items",
+        "list",
         "collapse",
         "expand",
-        "details",
-        "disclosure",
-        "show",
-        "hide",
-        "toggle",
         "accordion",
-        "more",
-        "less",
-        "fold",
-        "unfold",
-        "vertical"
+        "vertical",
+        "toggle",
+        "show hide"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Collapsible lists",
+        "Vertical navigation",
+        "Content disclosure",
+        "UI expansion"
+      ]
     }
   }
 }

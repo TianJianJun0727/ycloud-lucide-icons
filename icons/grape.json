@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外卖应用分类",
+    "酒庄或葡萄园网站",
+    "健康饮食博客",
+    "杂货购物清单"
+  ],
   "name": "葡萄",
   "tags": [
     "水果",
-    "酒",
-    "食物"
+    "葡萄酒",
+    "食物",
+    "浆果",
+    "健康",
+    "零食"
   ],
   "categories": [
     "food-beverage"
@@ -16,9 +24,17 @@
       "tags": [
         "fruit",
         "wine",
-        "food"
+        "food",
+        "berry",
+        "healthy",
+        "snack"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food delivery app category",
+        "Winery or vineyard website",
+        "Healthy eating blog",
+        "Grocery shopping list"
+      ]
     }
   }
 }

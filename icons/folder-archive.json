@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件压缩界面",
+    "备份存储位置",
+    "下载归档文件夹"
+  ],
   "name": "文件夹归档",
   "tags": [
     "归档",
-    "邮编",
-    "包裹"
+    "压缩",
+    "打包",
+    "备份",
+    "文件管理"
   ],
   "categories": [
     "files"
@@ -16,9 +22,15 @@
       "tags": [
         "archive",
         "zip",
-        "package"
+        "package",
+        "backup",
+        "file management"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File compression interface",
+        "Backup storage location",
+        "Download archive folder"
+      ]
     }
   }
 }

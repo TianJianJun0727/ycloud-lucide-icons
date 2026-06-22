@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加另一个副本",
+    "复制并添加到列表",
+    "扩展复制的部分"
+  ],
   "name": "复制加号",
   "tags": [
-    "克隆",
-    "重复的",
-    "添加",
-    "多个",
-    "展开",
-    "+"
+    "复制添加",
+    "复制增加",
+    "克隆添加",
+    "重复添加",
+    "添加副本",
+    "扩展复制"
   ],
   "categories": [
     "text",
@@ -18,14 +22,18 @@
     "en": {
       "name": "copy plus",
       "tags": [
-        "clone",
-        "duplicate",
-        "add",
-        "multiple",
-        "expand",
-        "+"
+        "copy add",
+        "copy increase",
+        "clone add",
+        "duplicate add",
+        "add copy",
+        "expand copy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add another copy",
+        "Duplicate and add to list",
+        "Expand a copied section"
+      ]
     }
   }
 }

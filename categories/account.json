@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "账号与访问",
-  "icon": "user",
   "i18n": {
     "en": {
       "title": "Accounts & access"

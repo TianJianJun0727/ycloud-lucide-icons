@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频文件",
+    "音乐曲目",
+    "录音文件"
+  ],
   "name": "文件耳机",
   "tags": [
-    "音乐",
     "音频",
-    "声音",
-    "耳机"
+    "音乐",
+    "声音文件",
+    "媒体"
   ],
   "categories": [
     "files"
@@ -29,12 +33,16 @@
     "en": {
       "name": "file headphone",
       "tags": [
-        "music",
         "audio",
-        "sound",
-        "headphones"
+        "music",
+        "sound file",
+        "media"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio file",
+        "Music track",
+        "Sound recording"
+      ]
     }
   }
 }

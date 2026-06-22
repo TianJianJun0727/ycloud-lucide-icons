@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "渔具展示",
+    "运动与爱好图标",
+    "户外休闲界面"
+  ],
   "name": "钓鱼鱼竿",
   "tags": [
     "钓鱼",
-    "杆",
-    "爱好",
-    "设备",
-    "卷轴"
+    "鱼竿",
+    "渔具",
+    "户外",
+    "运动",
+    "卷线器"
   ],
   "categories": [
     "sports",
@@ -19,11 +24,16 @@
       "tags": [
         "fishing",
         "rod",
-        "hobby",
-        "equipment",
+        "tackle",
+        "outdoors",
+        "sports",
         "reel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Fishing equipment display",
+        "Sports and hobby icon",
+        "Outdoor recreation UI"
+      ]
     }
   }
 }

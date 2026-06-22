@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "园艺或施工工具",
+    "游戏中的挖掘动作",
+    "寻宝界面"
+  ],
   "name": "铲子",
   "tags": [
-    "挖",
     "铲子",
-    "宝藏"
+    "挖掘",
+    "工具",
+    "园艺",
+    "施工",
+    "宝藏",
+    "游戏"
   ],
   "categories": [
     "nature",
@@ -16,11 +24,19 @@
     "en": {
       "name": "shovel",
       "tags": [
+        "shovel",
         "dig",
-        "spade",
-        "treasure"
+        "tool",
+        "gardening",
+        "construction",
+        "treasure",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gardening or construction tool",
+        "Digging action in games",
+        "Treasure hunting interface"
+      ]
     }
   }
 }

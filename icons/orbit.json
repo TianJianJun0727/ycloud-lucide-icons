@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天文应用",
+    "物理教育",
+    "空间科学"
+  ],
   "name": "轨道",
   "tags": [
+    "轨道",
     "行星",
-    "空间",
+    "太空",
     "物理学",
-    "卫星",
     "卫星"
   ],
   "categories": [
@@ -16,13 +20,17 @@
     "en": {
       "name": "orbit",
       "tags": [
+        "orbit",
         "planet",
         "space",
         "physics",
-        "satellites",
-        "moons"
+        "satellite"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astronomy apps",
+        "Physics education",
+        "Space science"
+      ]
     }
   }
 }

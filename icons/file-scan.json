@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件扫描功能",
+    "二维码扫描",
+    "文档验证"
+  ],
   "name": "文件扫描",
   "tags": [
     "扫描",
-    "代码",
-    "二维码"
+    "二维码",
+    "条码",
+    "检测",
+    "验证"
   ],
   "categories": [
     "files"
@@ -15,10 +21,16 @@
       "name": "file scan",
       "tags": [
         "scan",
-        "code",
-        "qr-code"
+        "QR code",
+        "barcode",
+        "detect",
+        "verify"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File scanning feature",
+        "QR code scanning",
+        "Document verification"
+      ]
     }
   }
 }

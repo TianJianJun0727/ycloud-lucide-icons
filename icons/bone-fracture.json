@@ -2,26 +2,18 @@
   "$schema": "../icon.schema.json",
   "use-cases": [
     "在健康或健身追踪中表示受伤或骨折状态",
-    "在医疗 UI 流程中显示错误或失败状态"
+    "在医疗UI流程中显示错误或失败状态"
   ],
   "name": "骨头骨折",
   "tags": [
-    "骨",
     "骨折",
-    "受伤",
-    "骨科的",
+    "骨头",
+    "损伤",
     "医疗",
-    "解剖学",
-    "骨骼的",
-    "坏了",
-    "X射线",
-    "外伤",
+    "骨科",
+    "受伤",
     "健康",
-    "兽医",
-    "兽医的",
-    "裂纹",
-    "打破",
-    "损害"
+    "断裂"
   ],
   "categories": [
     "medical",
@@ -31,26 +23,18 @@
     "en": {
       "name": "bone fracture",
       "tags": [
-        "bone",
         "fracture",
+        "bone",
         "injury",
-        "orthopedic",
         "medical",
-        "anatomy",
-        "skeletal",
-        "broken",
-        "xray",
-        "trauma",
-        "health",
-        "vet",
-        "veterinary",
-        "crack",
+        "orthopedic",
         "break",
+        "health",
         "damage"
       ],
       "use-cases": [
-        "indicate injury or fracture status in health/fitness tracking",
-        "show an error or failed state in healthcare UI flows"
+        "Indicate injury or fracture status in health/fitness tracking",
+        "Show an error or failed state in healthcare UI flows"
       ]
     }
   }

@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "沙特阿拉伯货币选择",
+    "显示沙特里亚尔的金融仪表板",
+    "国际支付表单"
+  ],
   "name": "沙特里亚尔",
   "tags": [
     "货币",
-    "钱",
-    "付款"
+    "沙特里亚尔",
+    "金融",
+    "支付",
+    "外汇",
+    "沙特"
   ],
   "categories": [
     "finance"
@@ -15,10 +22,17 @@
       "name": "saudi riyal",
       "tags": [
         "currency",
-        "money",
-        "payment"
+        "saudi riyal",
+        "finance",
+        "payment",
+        "forex",
+        "saudi"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Currency selection for Saudi Arabia",
+        "Financial dashboard showing SAR",
+        "International payment form"
+      ]
     }
   }
 }

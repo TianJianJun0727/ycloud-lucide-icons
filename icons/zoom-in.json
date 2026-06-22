@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图界面缩放控制",
+    "图片编辑器放大工具",
+    "文档查看器缩放功能"
+  ],
   "name": "缩放进入",
   "tags": [
+    "放大",
+    "缩放",
     "放大镜",
-    "加号"
+    "加号",
+    "查看细节",
+    "聚焦",
+    "搜索"
   ],
   "categories": [
     "accessibility",
@@ -17,10 +26,19 @@
     "en": {
       "name": "zoom in",
       "tags": [
+        "zoom",
+        "magnify",
         "magnifying glass",
-        "plus"
+        "plus",
+        "enlarge",
+        "focus",
+        "search"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Map interface zoom control",
+        "Image editor magnification tool",
+        "Document viewer zoom feature"
+      ]
     }
   }
 }

@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收起顶部面板或顶栏",
+    "隐藏顶部导航抽屉",
+    "关闭下拉菜单"
+  ],
   "name": "面板顶部关闭",
   "tags": [
-    "菜单栏",
+    "顶栏",
+    "收起",
     "抽屉",
     "隐藏",
-    "雪佛龙",
+    "菜单栏",
+    "布局",
+    "箭头",
     "向上"
   ],
   "categories": [
@@ -17,13 +24,20 @@
     "en": {
       "name": "panel top close",
       "tags": [
-        "menu bar",
+        "header",
+        "collapse",
         "drawer",
         "hide",
+        "menu bar",
+        "layout",
         "chevron",
         "up"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Collapse top panel or header",
+        "Hide top navigation drawer",
+        "Close dropdown menu"
+      ]
     }
   }
 }

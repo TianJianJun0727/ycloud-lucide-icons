@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件上传按钮",
+    "云存储界面",
+    "数据导入功能"
+  ],
   "name": "上传",
   "tags": [
-    "文件"
+    "上传",
+    "文件上传",
+    "数据导入",
+    "云上传",
+    "提交文件"
   ],
   "categories": [
     "arrows",
@@ -13,9 +21,17 @@
     "en": {
       "name": "upload",
       "tags": [
-        "file"
+        "upload",
+        "file upload",
+        "data import",
+        "cloud upload",
+        "submit file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File upload button",
+        "Cloud storage interface",
+        "Data import feature"
+      ]
     }
   }
 }

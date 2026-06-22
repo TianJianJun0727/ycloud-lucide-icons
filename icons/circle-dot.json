@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "单选按钮选择",
+    "进度指示器",
+    "状态标记"
+  ],
   "name": "圆形点",
   "tags": [
-    "待定",
-    "点",
-    "进展",
-    "问题",
-    "代码",
-    "编码",
-    "版本控制",
-    "选择",
-    "多项选择",
-    "选择"
+    "选中",
+    "进度",
+    "状态",
+    "开发",
+    "单选"
   ],
   "categories": [
     "development",
@@ -22,18 +21,17 @@
     "en": {
       "name": "circle dot",
       "tags": [
-        "pending",
-        "dot",
+        "selected",
         "progress",
-        "issue",
-        "code",
-        "coding",
-        "version control",
-        "choices",
-        "multiple choice",
-        "choose"
+        "status",
+        "development",
+        "radio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Radio button selection",
+        "Progress indicator",
+        "Status marker"
+      ]
     }
   }
 }

@@ -1,28 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移动运营商设置",
+    "设备连接设置",
+    "网络选择界面",
+    "手机激活或eSIM管理"
+  ],
   "name": "卡片SIM卡",
   "tags": [
-    "手机",
-    "智能手机",
-    "移动",
+    "SIM卡",
+    "手机卡",
+    "通信",
     "网络",
-    "细胞的",
-    "服务",
-    "提供者",
-    "信号",
-    "覆盖范围",
-    "磁盘",
-    "数据",
-    "格式",
-    "存储",
-    "闪光",
-    "数字化",
-    "联系人",
-    "电话簿",
-    "契约性的",
-    "电路板",
-    "芯片"
+    "芯片",
+    "移动数据"
   ],
   "categories": [
     "connectivity",
@@ -34,28 +25,19 @@
     "en": {
       "name": "card sim",
       "tags": [
-        "cellphone",
-        "smartphone",
-        "mobile",
-        "network",
+        "SIM card",
+        "mobile network",
         "cellular",
-        "service",
-        "provider",
-        "signal",
-        "coverage",
-        "disk",
-        "data",
-        "format",
-        "storage",
-        "flash",
-        "digital",
-        "contacts",
-        "phone book",
-        "contractual",
-        "circuit board",
-        "chip"
+        "chip",
+        "connectivity",
+        "data"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mobile carrier settings",
+        "Device connectivity setup",
+        "Network selection UI",
+        "Phone activation or eSIM management"
+      ]
     }
   }
 }

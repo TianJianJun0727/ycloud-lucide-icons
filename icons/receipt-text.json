@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带条款的详细发票",
+    "合同或协议摘要",
+    "附带条件的支付收据"
+  ],
   "name": "收据文本",
   "tags": [
+    "收据",
     "账单",
-    "优惠券",
-    "滑倒",
-    "勾选",
-    "存根",
     "详情",
-    "小字",
     "条款",
-    "条件",
-    "合同"
+    "合同",
+    "文本",
+    "发票",
+    "细则"
   ],
   "categories": [
     "finance",
@@ -22,18 +24,20 @@
     "en": {
       "name": "receipt text",
       "tags": [
+        "receipt",
         "bill",
-        "voucher",
-        "slip",
-        "check",
-        "counterfoil",
         "details",
-        "small print",
         "terms",
-        "conditions",
-        "contract"
+        "contract",
+        "text",
+        "invoice",
+        "fine print"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Detailed invoice with terms",
+        "Contract or agreement summary",
+        "Payment receipt with conditions"
+      ]
     }
   }
 }

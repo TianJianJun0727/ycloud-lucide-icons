@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据库表格属性编辑器",
+    "配置或设置表格",
+    "开发工具中的对象属性查看器"
+  ],
   "name": "表格属性",
   "tags": [
-    "财产清单",
-    "列表",
-    "电子表格",
-    "网格",
-    "字典",
+    "表格属性",
+    "属性列表",
+    "数据字典",
     "对象",
-    "散列"
+    "键值对"
   ],
   "categories": [
     "text",
@@ -20,15 +22,18 @@
     "en": {
       "name": "table properties",
       "tags": [
+        "table properties",
         "property list",
         "plist",
-        "spreadsheet",
-        "grid",
-        "dictionary",
+        "data dictionary",
         "object",
-        "hash"
+        "key-value"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Database table property editor",
+        "Configuration or settings table",
+        "Object property viewer in development tools"
+      ]
     }
   }
 }

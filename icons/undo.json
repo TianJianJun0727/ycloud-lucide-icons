@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑操作撤销",
+    "操作历史管理",
+    "错误操作恢复"
+  ],
   "name": "撤销",
   "tags": [
+    "撤销",
     "重做",
-    "重新运行",
-    "历史"
+    "历史",
+    "回退"
   ],
   "categories": [
     "text",
@@ -15,11 +20,16 @@
     "en": {
       "name": "undo",
       "tags": [
+        "undo",
         "redo",
-        "rerun",
-        "history"
+        "history",
+        "rollback"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Edit operation undo",
+        "Action history management",
+        "Error operation recovery"
+      ]
     }
   }
 }

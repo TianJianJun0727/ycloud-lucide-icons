@@ -2,16 +2,16 @@
   "$schema": "../icon.schema.json",
   "use-cases": [
     "表示自动保存已开启",
-    "表示文件或文档已自动保存"
+    "确认文档已保存",
+    "保存操作成功完成"
   ],
   "name": "保存勾选",
   "tags": [
-    "保存",
-    "保存检查",
-    "软盘",
+    "保存成功",
     "已保存",
-    "勾选",
-    "保存成功"
+    "确认保存",
+    "自动保存",
+    "完成保存"
   ],
   "categories": [
     "text",
@@ -22,16 +22,16 @@
     "en": {
       "name": "save check",
       "tags": [
-        "save",
-        "save-check",
-        "floppy-disk",
+        "save success",
         "saved",
-        "check",
-        "save-success"
+        "save confirmed",
+        "autosave",
+        "save complete"
       ],
       "use-cases": [
-        "indicates that autosave is active",
-        "indicates that file/document has been saved automatically"
+        "Indicates autosave is active",
+        "Confirms a document has been saved",
+        "Save operation completed successfully"
       ]
     }
   }

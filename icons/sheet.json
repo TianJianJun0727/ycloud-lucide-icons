@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电子表格应用",
+    "数据表格",
+    "财务报表"
+  ],
   "name": "表格",
   "tags": [
-    "电子表格",
     "表格",
-    "卓越"
+    "电子表格",
+    "数据表",
+    "Excel",
+    "计算",
+    "统计",
+    "报表"
   ],
   "categories": [
     "text",
@@ -15,11 +23,19 @@
     "en": {
       "name": "sheet",
       "tags": [
-        "spreadsheets",
+        "sheet",
+        "spreadsheet",
         "table",
-        "excel"
+        "Excel",
+        "calculation",
+        "statistics",
+        "report"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Spreadsheet applications",
+        "Data tables",
+        "Financial reports"
+      ]
     }
   }
 }

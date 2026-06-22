@@ -1,25 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "访问控制系统",
+    "眼球追踪软件",
+    "安全认证"
+  ],
   "name": "扫描眼睛",
   "tags": [
-    "预览",
-    "缩放",
-    "展开",
-    "全屏",
-    "画廊",
-    "图片",
-    "相机",
-    "手表",
-    "监视",
-    "视网膜",
-    "焦点",
-    "镜头",
-    "生物识别",
-    "识别",
-    "认证",
-    "访问",
-    "登录"
+    "眼球追踪",
+    "视觉识别",
+    "生物特征",
+    "监控",
+    "焦点检测",
+    "视网膜扫描"
   ],
   "categories": [
     "photography",
@@ -33,25 +26,18 @@
     "en": {
       "name": "scan eye",
       "tags": [
-        "preview",
-        "zoom",
-        "expand",
-        "fullscreen",
-        "gallery",
-        "image",
-        "camera",
-        "watch",
-        "surveillance",
-        "retina",
-        "focus",
-        "lens",
+        "eye tracking",
+        "visual recognition",
         "biometric",
-        "identification",
-        "authentication",
-        "access",
-        "login"
+        "surveillance",
+        "focus detection",
+        "retina scan"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Access control systems",
+        "Eye tracking software",
+        "Security authentication"
+      ]
     }
   }
 }

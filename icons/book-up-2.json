@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git强制推送操作",
+    "代码仓库更新",
+    "版本控制冲突解决"
+  ],
   "name": "书籍上2",
   "tags": [
     "代码",
-    "编码",
     "版本控制",
     "Git",
-    "存储库",
     "推送",
-    "力"
+    "强制推送",
+    "仓库",
+    "开发"
   ],
   "categories": [
     "development"
@@ -19,14 +23,18 @@
       "name": "book up 2",
       "tags": [
         "code",
-        "coding",
         "version control",
         "git",
-        "repository",
         "push",
-        "force"
+        "force push",
+        "repository",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git force push operation",
+        "Code repository update",
+        "Version control conflict resolution"
+      ]
     }
   }
 }

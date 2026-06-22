@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑固定位置",
+    "修改地图标记",
+    "标注位置信息"
+  ],
   "name": "地图图钉笔",
   "tags": [
     "位置",
-    "航路点",
     "标记",
-    "掉落",
-    "编辑"
+    "编辑",
+    "修改",
+    "标注",
+    "书写"
   ],
   "categories": [
     "navigation",
@@ -27,12 +32,17 @@
       "name": "map pin pen",
       "tags": [
         "location",
-        "waypoint",
         "marker",
-        "drop",
-        "edit"
+        "edit",
+        "modify",
+        "annotate",
+        "write"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Edit pinned location",
+        "Modify map marker",
+        "Annotate position"
+      ]
     }
   }
 }

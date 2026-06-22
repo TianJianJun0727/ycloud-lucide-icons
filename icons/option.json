@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "键盘快捷键",
+    "软件选项",
+    "菜单选择"
+  ],
   "name": "选项",
   "tags": [
-    "键盘",
-    "钥匙",
-    "麦克",
-    "替代",
-    "按钮"
+    "选项",
+    "键盘键",
+    "Alt键",
+    "选择",
+    "设置"
   ],
   "categories": [
     "development"
@@ -16,13 +20,17 @@
     "en": {
       "name": "option",
       "tags": [
-        "keyboard",
-        "key",
-        "mac",
-        "alt",
-        "button"
+        "option",
+        "keyboard key",
+        "alt key",
+        "choice",
+        "settings"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Keyboard shortcuts",
+        "Software options",
+        "Menu selections"
+      ]
     }
   }
 }

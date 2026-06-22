@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示8点时间",
+    "工作日开始或黄金时间",
+    "时间跟踪应用"
+  ],
   "name": "时钟8",
   "tags": [
     "时间",
-    "手表",
-    "闹钟"
+    "时钟",
+    "时刻",
+    "8点",
+    "早上",
+    "晚上"
   ],
   "categories": [
     "time"
@@ -15,10 +22,17 @@
       "name": "clock 8",
       "tags": [
         "time",
-        "watch",
-        "alarm"
+        "clock",
+        "hour",
+        "8",
+        "eight",
+        "o'clock"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Time display for 8:00",
+        "Start of business day or prime time",
+        "Time tracking applications"
+      ]
     }
   }
 }

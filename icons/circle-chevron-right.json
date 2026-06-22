@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "分页下一页按钮",
+    "可展开菜单项",
+    "前进导航"
+  ],
   "name": "圆形折角箭头右",
   "tags": [
-    "返回",
-    "超过",
-    "更大",
+    "右箭头",
+    "前进",
+    "下一步",
+    "展开",
     "菜单",
-    ">"
+    "大于"
   ],
   "categories": [
     "arrows"
@@ -24,13 +29,18 @@
     "en": {
       "name": "circle chevron right",
       "tags": [
-        "back",
-        "more than",
-        "greater",
+        "right arrow",
+        "forward",
+        "next",
+        "expand",
         "menu",
-        ">"
+        "greater than"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Pagination next button",
+        "Expandable menu item",
+        "Forward navigation"
+      ]
     }
   }
 }

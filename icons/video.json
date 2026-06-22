@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "开始视频通话",
+    "录制视频",
+    "直播指示"
+  ],
   "name": "视频",
   "tags": [
-    "相机",
-    "电影",
-    "电影",
-    "录音",
-    "电影",
-    "摄像机",
-    "卷轴"
+    "视频",
+    "摄像头",
+    "录制",
+    "通话",
+    "直播",
+    "电影"
   ],
   "categories": [
     "devices",
@@ -21,15 +24,18 @@
     "en": {
       "name": "video",
       "tags": [
+        "video",
         "camera",
-        "movie",
-        "film",
         "recording",
-        "motion picture",
-        "camcorder",
-        "reel"
+        "call",
+        "stream",
+        "movie"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Start video call",
+        "Record video",
+        "Live streaming indicator"
+      ]
     }
   }
 }

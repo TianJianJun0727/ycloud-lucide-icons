@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "帮助与支持页面",
+    "紧急联系按钮",
+    "安全功能指示器"
+  ],
   "name": "救生浮标",
   "tags": [
-    "保护者",
-    "救生带",
-    "救生员",
-    "帮助",
+    "救生圈",
     "救援",
-    "船",
-    "戒指",
-    "木筏",
-    "充气的",
-    "轮子",
-    "甜甜圈"
+    "安全",
+    "紧急",
+    "帮助",
+    "支持",
+    "无障碍"
   ],
   "categories": [
     "accessibility",
@@ -23,19 +23,19 @@
     "en": {
       "name": "life buoy",
       "tags": [
-        "preserver",
-        "life belt",
-        "lifesaver",
-        "help",
+        "life buoy",
         "rescue",
-        "ship",
-        "ring",
-        "raft",
-        "inflatable",
-        "wheel",
-        "donut"
+        "safety",
+        "emergency",
+        "help",
+        "support",
+        "accessibility"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Help and support page",
+        "Emergency contact button",
+        "Safety feature indicator"
+      ]
     }
   }
 }

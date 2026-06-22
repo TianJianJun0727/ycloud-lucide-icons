@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "大数据展示",
+    "对比分析界面",
+    "报表可视化"
+  ],
   "name": "图表列大",
   "tags": [
     "统计",
     "分析",
-    "图表",
-    "图"
+    "柱状图",
+    "数据对比",
+    "大型图表"
   ],
   "categories": [
     "charts"
@@ -25,10 +30,15 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph"
+        "column chart",
+        "data comparison",
+        "large chart"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Big data display",
+        "Comparative analysis interface",
+        "Report visualization"
+      ]
     }
   }
 }

@@ -1,25 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "价格显示界面",
+    "折扣促销",
+    "购物车徽章",
+    "金融优惠"
+  ],
   "name": "徽章美分",
   "tags": [
+    "价格徽章",
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
+    "优惠",
+    "价格标签",
+    "促销",
+    "购物",
     "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
-    "美分",
-    "美元",
-    "美元",
-    "$",
-    "¢"
+    "货币"
   ],
   "categories": [
     "shopping",
@@ -29,25 +25,21 @@
     "en": {
       "name": "badge cent",
       "tags": [
+        "price badge",
         "discount",
         "offer",
-        "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
+        "price tag",
+        "promotion",
+        "shopping",
         "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
-        "cents",
-        "dollar",
-        "usd",
-        "$",
-        "¢"
+        "currency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Price display interfaces",
+        "Discount promotions",
+        "Shopping cart badges",
+        "Financial offers"
+      ]
     }
   }
 }

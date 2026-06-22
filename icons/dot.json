@@ -1,24 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "列表项指示器",
+    "状态点",
+    "分页",
+    "焦点"
+  ],
   "name": "点",
   "tags": [
-    "间断",
-    "间点",
-    "中点",
-    "步骤",
-    "标点符号",
-    "期间",
-    "句号",
-    "结束",
-    "完成",
-    "决赛",
-    "人物",
-    "字体",
-    "版式",
-    "类型",
-    "中心",
-    "。"
+    "点",
+    "圆点",
+    "标记",
+    "指示器",
+    "项目符号",
+    "句号"
   ],
   "categories": [
     "shapes",
@@ -28,24 +23,19 @@
     "en": {
       "name": "dot",
       "tags": [
-        "interpunct",
-        "interpoint",
-        "middot",
-        "step",
-        "punctuation",
-        "period",
-        "full stop",
-        "end",
-        "finish",
-        "final",
-        "characters",
-        "font",
-        "typography",
-        "type",
-        "center",
-        "."
+        "dot",
+        "point",
+        "marker",
+        "indicator",
+        "bullet",
+        "period"
       ],
-      "use-cases": []
+      "use-cases": [
+        "List item indicator",
+        "Status dot",
+        "Pagination",
+        "Focus point"
+      ]
     }
   }
 }

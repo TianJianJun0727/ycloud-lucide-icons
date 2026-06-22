@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电动汽车配送服务",
+    "可持续物流仪表板",
+    "电动货车车队管理"
+  ],
   "name": "卡车电动",
   "tags": [
-    "交货",
+    "电动卡车",
     "货车",
     "运输",
-    "运输",
-    "卡车",
-    "电动的"
+    "配送",
+    "物流",
+    "新能源"
   ],
   "categories": [
     "transportation"
@@ -20,11 +24,16 @@
         "delivery",
         "van",
         "shipping",
-        "haulage",
         "lorry",
-        "electric"
+        "electric",
+        "vehicle",
+        "transport"
       ],
-      "use-cases": []
+      "use-cases": [
+        "EV delivery service",
+        "Sustainable logistics dashboard",
+        "Fleet management for electric vans"
+      ]
     }
   }
 }

@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外部链接指示器",
+    "内容分享操作",
+    "网站导航元素",
+    "跨平台引用"
+  ],
   "name": "外部链接",
   "tags": [
-    "出境",
+    "外部链接",
     "打开",
-    "分享"
+    "分享",
+    "跳转",
+    "网页"
   ],
   "categories": [
     "arrows",
@@ -16,11 +23,18 @@
     "en": {
       "name": "external link",
       "tags": [
-        "outbound",
+        "external link",
         "open",
-        "share"
+        "share",
+        "redirect",
+        "webpage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Outbound link indicators",
+        "Content sharing actions",
+        "Website navigation elements",
+        "Cross-platform references"
+      ]
     }
   }
 }

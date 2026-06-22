@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据统计界面",
+    "业务分析图表",
+    "报表展示"
+  ],
   "name": "图表列",
   "tags": [
     "统计",
     "分析",
-    "图表",
-    "图"
+    "柱状图",
+    "数据可视化",
+    "比较分析"
   ],
   "categories": [
     "charts"
@@ -25,10 +30,15 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph"
+        "column chart",
+        "data visualization",
+        "comparative analysis"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data statistics interface",
+        "Business analysis chart",
+        "Report display"
+      ]
     }
   }
 }

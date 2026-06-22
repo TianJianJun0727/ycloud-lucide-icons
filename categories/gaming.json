@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "游戏",
-  "icon": "gamepad-2",
   "i18n": {
     "en": {
       "title": "Gaming"

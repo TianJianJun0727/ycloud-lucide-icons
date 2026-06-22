@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用",
+    "傍晚时间指示",
+    "日落时间",
+    "一天结束显示"
+  ],
   "name": "日落",
   "tags": [
+    "日落",
     "天气",
+    "傍晚",
     "时间",
-    "晚上",
-    "晚上"
+    "黄昏",
+    "箭头",
+    "下降"
   ],
   "categories": [
     "arrows",
@@ -16,12 +24,20 @@
     "en": {
       "name": "sunset",
       "tags": [
+        "sunset",
         "weather",
-        "time",
         "evening",
-        "night"
+        "time",
+        "dusk",
+        "arrow",
+        "set"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app",
+        "Evening time indicator",
+        "Sunset timing",
+        "Day end display"
+      ]
     }
   }
 }

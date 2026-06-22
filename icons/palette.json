@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "调色板选择",
+    "主题自定义",
+    "设计工具颜色选择器",
+    "艺术应用"
+  ],
   "name": "调色板",
   "tags": [
-    "颜色",
+    "调色板",
     "颜色",
     "主题",
-    "方案",
-    "油漆",
-    "水彩",
-    "水彩",
-    "艺术家"
+    "设计",
+    "色彩方案",
+    "绘画",
+    "艺术"
   ],
   "categories": [
     "text",
@@ -21,16 +25,20 @@
     "en": {
       "name": "palette",
       "tags": [
+        "palette",
         "colors",
-        "colours",
         "theme",
-        "scheme",
-        "paint",
-        "watercolor",
-        "watercolour",
-        "artist"
+        "design",
+        "color scheme",
+        "painting",
+        "art"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Color palette selection",
+        "Theme customization",
+        "Design tool color picker",
+        "Art application"
+      ]
     }
   }
 }

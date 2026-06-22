@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "方向控制界面",
+    "游戏导航",
+    "移动操控"
+  ],
   "name": "游戏手柄方向",
   "tags": [
-    "方向",
-    "箭头",
+    "方向键",
     "控制器",
     "导航",
-    "按钮",
     "移动",
-    "指针",
-    "箭头",
-    "控制台",
     "游戏",
-    "游戏"
+    "操控"
   ],
   "categories": [
     "gaming",
@@ -23,19 +22,18 @@
     "en": {
       "name": "gamepad directional",
       "tags": [
-        "direction",
-        "arrow",
+        "directional",
         "controller",
         "navigation",
-        "button",
-        "move",
-        "pointer",
-        "arrowhead",
-        "console",
-        "game",
-        "gaming"
+        "movement",
+        "gaming",
+        "control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Directional control interface",
+        "Game navigation",
+        "Movement control"
+      ]
     }
   }
 }

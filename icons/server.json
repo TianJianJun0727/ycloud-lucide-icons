@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "服务器基础设施",
+    "云托管服务",
+    "网络设备"
+  ],
   "name": "服务器",
   "tags": [
-    "云",
-    "存储"
+    "服务器",
+    "主机",
+    "数据中心",
+    "云服务",
+    "网络",
+    "存储",
+    "计算"
   ],
   "categories": [
     "development",
@@ -14,10 +23,19 @@
     "en": {
       "name": "server",
       "tags": [
-        "cloud",
-        "storage"
+        "server",
+        "host",
+        "data center",
+        "cloud service",
+        "network",
+        "storage",
+        "computing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Server infrastructure",
+        "Cloud hosting services",
+        "Network equipment"
+      ]
     }
   }
 }

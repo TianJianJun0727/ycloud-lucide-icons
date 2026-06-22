@@ -1,28 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "3D建模和几何应用",
+    "包装和容器设计",
+    "建筑和施工图表"
+  ],
   "name": "长方体",
   "tags": [
-    "砖",
-    "屏蔽",
+    "长方体",
+    "立方体",
     "盒子",
-    "3D",
-    "固体",
-    "体积",
     "容器",
-    "存储",
-    "运输",
-    "纸箱",
-    "几何学",
-    "长方形",
-    "六面体",
-    "黄油",
-    "豆腐",
-    "肥皂",
-    "奶酪",
-    "包裹",
-    "包裹",
-    "板条箱"
+    "几何",
+    "3D",
+    "砖块",
+    "包装"
   ],
   "categories": [
     "shapes",
@@ -33,28 +25,20 @@
     "en": {
       "name": "cuboid",
       "tags": [
-        "brick",
-        "block",
+        "cuboid",
+        "cube",
         "box",
-        "3d",
-        "solid",
-        "volume",
         "container",
-        "storage",
-        "shipping",
-        "carton",
         "geometry",
-        "rectangular",
-        "hexahedron",
-        "butter",
-        "tofu",
-        "soap",
-        "cheese",
-        "package",
-        "parcel",
-        "crate"
+        "3d",
+        "brick",
+        "package"
       ],
-      "use-cases": []
+      "use-cases": [
+        "3D modeling and geometry applications",
+        "Packaging and container design",
+        "Architectural and construction diagrams"
+      ]
     }
   }
 }

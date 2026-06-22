@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "可持续",
-  "icon": "recycle",
   "i18n": {
     "en": {
       "title": "Sustainability"

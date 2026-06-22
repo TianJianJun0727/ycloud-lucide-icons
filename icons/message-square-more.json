@@ -1,22 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "消息操作菜单",
+    "聊天上下文菜单",
+    "展开评论选项"
+  ],
   "name": "消息方形更多",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
-    "打字",
-    "写作",
-    "回应",
+    "更多",
+    "消息",
     "省略号",
-    "等",
-    "等等",
-    "...",
-    "……"
+    "菜单",
+    "操作",
+    "聊天",
+    "选项",
+    "展开"
   ],
   "categories": [
     "social"
@@ -25,22 +23,20 @@
     "en": {
       "name": "message square more",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "typing",
-        "writing",
-        "responding",
+        "more",
+        "message",
         "ellipsis",
-        "etc",
-        "et cetera",
-        "...",
-        "…"
+        "menu",
+        "actions",
+        "chat",
+        "options",
+        "expand"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Message action menu",
+        "Chat context menu",
+        "Expand comment options"
+      ]
     }
   }
 }

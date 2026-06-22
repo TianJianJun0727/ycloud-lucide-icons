@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏内高级货币或奖励",
+    "珠宝类电子商务产品",
+    "特殊成就徽章"
+  ],
   "name": "宝石",
   "tags": [
+    "宝石",
     "钻石",
     "水晶",
-    "红宝石",
-    "珠宝首饰",
-    "价格",
-    "特别的",
-    "现在",
-    "礼物",
-    "戒指",
-    "婚礼",
-    "提案",
-    "婚姻",
-    "红宝石"
+    "珠宝",
+    "珍贵",
+    "奖励",
+    "稀有",
+    "游戏货币"
   ],
   "categories": [
     "gaming",
@@ -26,21 +25,20 @@
     "en": {
       "name": "gem",
       "tags": [
+        "gem",
         "diamond",
         "crystal",
-        "ruby",
-        "jewellery",
-        "price",
-        "special",
-        "present",
-        "gift",
-        "ring",
-        "wedding",
-        "proposal",
-        "marriage",
-        "rubygems"
+        "jewelry",
+        "precious",
+        "reward",
+        "rare",
+        "currency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "In-game premium currency or reward",
+        "E-commerce product for jewelry",
+        "Special achievement badge"
+      ]
     }
   }
 }

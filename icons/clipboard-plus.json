@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加医疗报告",
+    "新建文档项目",
+    "创建剪贴板内容"
+  ],
   "name": "剪贴板加号",
   "tags": [
-    "复制",
-    "粘贴",
     "添加",
-    "创建",
     "新建",
+    "创建",
     "文档",
     "医疗",
     "报告",
@@ -21,17 +23,19 @@
     "en": {
       "name": "clipboard plus",
       "tags": [
-        "copy",
-        "paste",
         "add",
-        "create",
         "new",
+        "create",
         "document",
         "medical",
         "report",
         "doctor"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add medical report",
+        "Create new document item",
+        "Create clipboard content"
+      ]
     }
   }
 }

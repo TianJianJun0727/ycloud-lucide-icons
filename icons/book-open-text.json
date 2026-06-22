@@ -1,37 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打开带文本的文档",
+    "阅读参考资料",
+    "内容预览"
+  ],
   "name": "书籍打开文本",
   "tags": [
     "阅读",
-    "页面",
-    "小册子",
-    "杂志",
-    "传单",
-    "小册子",
-    "图书馆",
-    "写作",
-    "书面的",
-    "作家",
-    "作者",
-    "故事",
-    "脚本",
-    "小说",
-    "小说",
-    "信息",
-    "知识",
-    "教育",
-    "高中",
-    "大学",
-    "学院",
-    "学院",
-    "学生",
-    "学习",
-    "学习",
-    "作业",
-    "研究",
     "文档",
-    "透露"
+    "文本",
+    "内容",
+    "参考",
+    "学习",
+    "信息",
+    "知识"
   ],
   "categories": [
     "text",
@@ -42,36 +25,19 @@
       "name": "book open text",
       "tags": [
         "reading",
-        "pages",
-        "booklet",
-        "magazine",
-        "leaflet",
-        "pamphlet",
-        "library",
-        "writing",
-        "written",
-        "writer",
-        "author",
-        "story",
-        "script",
-        "fiction",
-        "novel",
-        "information",
-        "knowledge",
-        "education",
-        "high school",
-        "university",
-        "college",
-        "academy",
-        "student",
-        "study",
-        "learning",
-        "homework",
-        "research",
         "documentation",
-        "revealed"
+        "text",
+        "content",
+        "reference",
+        "study",
+        "information",
+        "knowledge"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Open documentation with text",
+        "Reading reference material",
+        "Content preview"
+      ]
     }
   }
 }

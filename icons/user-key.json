@@ -1,21 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "密码管理界面",
+    "身份验证设置",
+    "访问权限配置"
+  ],
   "name": "用户钥匙",
   "tags": [
-    "密钥",
-    "密码",
-    "登录",
-    "认证",
-    "授权",
-    "角色",
-    "权限",
-    "私人的",
-    "公开的",
-    "安全",
-    "人",
-    "帐户",
-    "联系方式"
+    "用户密钥",
+    "密码管理",
+    "身份认证",
+    "安全登录",
+    "访问权限"
   ],
   "categories": [
     "account"
@@ -24,21 +20,17 @@
     "en": {
       "name": "user key",
       "tags": [
-        "passkey",
-        "password",
-        "login",
+        "user key",
+        "password management",
         "authentication",
-        "authorization",
-        "roles",
-        "permissions",
-        "private",
-        "public",
-        "security",
-        "person",
-        "account",
-        "contact"
+        "secure login",
+        "access permissions"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Password management interface",
+        "Authentication setup",
+        "Access control configuration"
+      ]
     }
   }
 }

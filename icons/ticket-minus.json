@@ -1,20 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "取消门票预订",
+    "移除活动条目",
+    "退还已购票"
+  ],
   "name": "票券减少",
   "tags": [
-    "条目",
-    "通过",
-    "优惠券",
-    "事件",
-    "音乐会",
-    "显示",
-    "移除",
-    "取消",
+    "票务",
+    "退票",
     "取消预订",
-    "减去",
+    "移除",
+    "活动",
     "减少",
-    "-"
+    "删除"
   ],
   "categories": [
     "transportation"
@@ -23,20 +22,19 @@
     "en": {
       "name": "ticket minus",
       "tags": [
-        "entry",
-        "pass",
-        "voucher",
-        "event",
-        "concert",
-        "show",
-        "remove",
+        "ticket",
         "cancel",
-        "unbook",
-        "subtract",
-        "decrease",
-        "-"
+        "remove",
+        "refund",
+        "event",
+        "minus",
+        "delete"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cancel a ticket reservation",
+        "Remove an event entry",
+        "Refund a purchased ticket"
+      ]
     }
   }
 }

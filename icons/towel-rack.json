@@ -1,24 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "卫浴设施",
+    "酒店设备",
+    "水疗器材"
+  ],
   "name": "毛巾架子",
   "tags": [
-    "法兰绒",
-    "浴室",
-    "洗漱用品",
-    "卫生设施",
-    "干净",
-    "新鲜的",
-    "干燥",
-    "洗衣",
-    "自助洗衣店",
-    "款待",
-    "家政服务",
-    "客房服务",
-    "水疗休息",
-    "健身俱乐部",
-    "便利设施",
-    "悬挂"
+    "毛巾架",
+    "浴室配件",
+    "卫浴用品",
+    "悬挂架"
   ],
   "categories": [
     "home",
@@ -28,24 +20,16 @@
     "en": {
       "name": "towel rack",
       "tags": [
-        "flannel",
-        "bathroom",
-        "toiletries",
-        "sanitation",
-        "clean",
-        "fresh",
-        "dry",
-        "laundry",
-        "laundrette",
-        "hospitality",
-        "housekeeping",
-        "room service",
-        "spa break",
-        "health club",
-        "amenities",
-        "hanging"
+        "towel rack",
+        "bathroom accessory",
+        "bathroom fixture",
+        "hanging rack"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bathroom amenities",
+        "Hotel facilities",
+        "Spa equipment"
+      ]
     }
   }
 }

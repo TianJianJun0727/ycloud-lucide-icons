@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示数据库或数据存储",
+    "服务器或后端服务图标"
+  ],
   "name": "数据库",
   "tags": [
+    "数据库",
     "存储",
-    "记忆",
+    "服务器",
+    "数据",
     "容器",
-    "锡",
-    "锅",
-    "字节",
-    "服务器"
+    "字节"
   ],
   "categories": [
     "devices",
@@ -19,15 +21,17 @@
     "en": {
       "name": "database",
       "tags": [
+        "database",
         "storage",
-        "memory",
+        "server",
+        "data",
         "container",
-        "tin",
-        "pot",
-        "bytes",
-        "servers"
+        "bytes"
       ],
-      "use-cases": []
+      "use-cases": [
+        "representing a database or data storage",
+        "icon for server or backend services"
+      ]
     }
   }
 }

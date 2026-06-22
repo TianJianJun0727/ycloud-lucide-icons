@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "酒吧应用图标",
+    "活动策划工具",
+    "饮料菜单"
+  ],
   "name": "啤酒",
   "tags": [
+    "啤酒",
     "酒精",
     "酒吧",
     "饮料",
-    "啤酒厂",
-    "喝"
+    "聚会"
   ],
   "categories": [
     "food-beverage"
@@ -16,13 +20,17 @@
     "en": {
       "name": "beer",
       "tags": [
+        "beer",
         "alcohol",
         "bar",
         "beverage",
-        "brewery",
-        "drink"
+        "party"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bar app icon",
+        "Event planning tool",
+        "Beverage menu"
+      ]
     }
   }
 }

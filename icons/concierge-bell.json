@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "酒店前台服务",
+    "呼叫帮助",
+    "接待或礼宾界面",
+    "客户服务按钮"
+  ],
   "name": "礼宾铃铛",
   "tags": [
-    "接待处",
+    "礼宾",
     "铃铛",
-    "搬运工"
+    "服务",
+    "前台",
+    "酒店",
+    "呼叫",
+    "接待"
   ],
   "categories": [
     "travel"
@@ -14,11 +23,20 @@
     "en": {
       "name": "concierge bell",
       "tags": [
-        "reception",
+        "concierge",
         "bell",
-        "porter"
+        "service",
+        "front desk",
+        "hotel",
+        "call",
+        "reception"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hotel front desk service",
+        "Call for assistance",
+        "Reception or concierge UI",
+        "Customer service button"
+      ]
     }
   }
 }

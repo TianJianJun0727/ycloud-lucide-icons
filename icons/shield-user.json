@@ -1,15 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "具有安全角色的管理员用户",
+    "受保护的用户账户",
+    "访问控制设置",
+    "用户身份验证"
+  ],
   "name": "盾牌用户",
   "tags": [
-    "盾牌",
+    "安全",
     "用户",
     "管理员",
+    "权限",
+    "账户",
     "保护",
-    "受保护的",
-    "安全",
-    "守卫"
+    "角色",
+    "访问控制",
+    "身份",
+    "验证"
   ],
   "categories": [
     "account",
@@ -20,15 +28,23 @@
     "en": {
       "name": "shield user",
       "tags": [
-        "shield",
+        "security",
         "user",
         "admin",
+        "permission",
+        "account",
         "protection",
-        "protected",
-        "safety",
-        "guard"
+        "role",
+        "access control",
+        "identity",
+        "authentication"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Admin user with security role",
+        "Protected user account",
+        "Access control settings",
+        "User identity verification"
+      ]
     }
   }
 }

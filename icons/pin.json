@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图位置固定",
+    "聊天消息置顶",
+    "文档保存"
+  ],
   "name": "图钉",
   "tags": [
+    "固定",
     "保存",
-    "地图",
     "锁定",
-    "修复"
+    "地图",
+    "导航"
   ],
   "categories": [
     "navigation",
@@ -16,12 +21,17 @@
     "en": {
       "name": "pin",
       "tags": [
+        "pin",
         "save",
-        "map",
         "lock",
-        "fix"
+        "map",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Map location pinning",
+        "Chat message pinning",
+        "Document saving"
+      ]
     }
   }
 }

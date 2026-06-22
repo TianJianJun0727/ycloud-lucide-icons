@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "自然主题设计",
+    "可持续产品标识",
+    "季节装饰"
+  ],
   "name": "花2",
   "tags": [
-    "可持续性",
+    "花朵",
+    "植物",
     "自然",
-    "植物"
+    "可持续",
+    "装饰"
   ],
   "categories": [
     "nature",
@@ -16,11 +22,17 @@
     "en": {
       "name": "flower 2",
       "tags": [
-        "sustainability",
+        "flower",
+        "plant",
         "nature",
-        "plant"
+        "sustainability",
+        "decoration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Nature themed design",
+        "Sustainable product badge",
+        "Seasonal decoration"
+      ]
     }
   }
 }

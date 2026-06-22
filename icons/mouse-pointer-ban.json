@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "阻止用户操作",
+    "加载状态",
+    "忙碌指示器"
+  ],
   "name": "鼠标指针禁止",
   "tags": [
+    "指针",
+    "鼠标",
+    "光标",
+    "禁止",
+    "阻止",
     "等待",
-    "忙",
     "加载",
-    "被阻止",
-    "冷冻的",
-    "冻结"
+    "忙"
   ],
   "categories": [
     "arrows",
@@ -18,14 +24,20 @@
     "en": {
       "name": "mouse pointer ban",
       "tags": [
-        "wait",
-        "busy",
-        "loading",
+        "pointer",
+        "mouse",
+        "cursor",
+        "ban",
         "blocked",
-        "frozen",
-        "freeze"
+        "wait",
+        "loading",
+        "busy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Blocked user actions",
+        "Loading states",
+        "Busy indicators"
+      ]
     }
   }
 }

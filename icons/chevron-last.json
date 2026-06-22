@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器最后一首",
+    "导航到最终位置",
+    "列表末尾指示器"
+  ],
   "name": "折角箭头最后一个",
   "tags": [
-    "跳过",
-    "下一个",
-    "音乐"
+    "最后一个",
+    "末尾",
+    "最后",
+    "结束",
+    "音乐播放",
+    "多媒体控制"
   ],
   "categories": [
     "arrows",
@@ -15,11 +22,17 @@
     "en": {
       "name": "chevron last",
       "tags": [
-        "skip",
-        "next",
-        "music"
+        "last",
+        "end",
+        "final",
+        "music",
+        "media control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player last track",
+        "Navigation to final position",
+        "End of list indicator"
+      ]
     }
   }
 }

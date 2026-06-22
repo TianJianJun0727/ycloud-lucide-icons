@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频会议禁用摄像头",
+    "隐私保护设置",
+    "直播平台控制",
+    "相机权限管理"
+  ],
   "name": "相机关闭",
   "tags": [
-    "照片",
-    "网络摄像头",
-    "视频"
+    "摄像头关闭",
+    "禁用相机",
+    "隐私保护",
+    "视频通话",
+    "直播"
   ],
   "categories": [
     "photography",
@@ -16,11 +23,18 @@
     "en": {
       "name": "camera off",
       "tags": [
-        "photo",
-        "webcam",
-        "video"
+        "camera disabled",
+        "privacy",
+        "video call",
+        "live streaming",
+        "webcam off"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video conference camera disabled",
+        "Privacy protection settings",
+        "Live streaming platform controls",
+        "Camera permission management"
+      ]
     }
   }
 }

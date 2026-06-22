@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "云数据同步",
+    "自动备份功能",
+    "连接状态刷新"
+  ],
   "name": "云同步",
   "tags": [
     "同步",
-    "同步",
-    "刷新",
-    "重新连接",
-    "转移",
+    "云同步",
+    "数据同步",
     "备份",
-    "存储",
-    "上传",
-    "下载",
-    "连接",
-    "网络",
-    "数据"
+    "刷新",
+    "连接"
   ],
   "categories": [
     "arrows",
@@ -24,20 +22,18 @@
     "en": {
       "name": "cloud sync",
       "tags": [
-        "synchronize",
-        "synchronise",
-        "refresh",
-        "reconnect",
-        "transfer",
+        "sync",
+        "cloud sync",
+        "data synchronization",
         "backup",
-        "storage",
-        "upload",
-        "download",
-        "connection",
-        "network",
-        "data"
+        "refresh",
+        "connection"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloud data synchronization",
+        "Auto backup feature",
+        "Connection status refresh"
+      ]
     }
   }
 }

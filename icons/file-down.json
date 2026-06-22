@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件下载按钮",
+    "导入文档",
+    "导出数据"
+  ],
   "name": "文件下",
   "tags": [
     "下载",
     "导入",
-    "导出"
+    "导出",
+    "保存"
   ],
   "categories": [
     "files",
@@ -17,9 +22,14 @@
       "tags": [
         "download",
         "import",
-        "export"
+        "export",
+        "save"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File download button",
+        "Import document",
+        "Export data"
+      ]
     }
   }
 }

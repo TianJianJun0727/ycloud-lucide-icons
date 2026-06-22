@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图形设计取色",
+    "科学测量工具",
+    "UI设计颜色采样"
+  ],
   "name": "吸管",
   "tags": [
-    "滴管",
+    "吸管",
     "颜色选择器",
-    "实验室",
-    "化学"
+    "取色",
+    "设计工具",
+    "实验室"
   ],
   "categories": [
     "text",
@@ -17,12 +22,17 @@
     "en": {
       "name": "pipette",
       "tags": [
-        "eye dropper",
+        "pipette",
         "color picker",
-        "lab",
-        "chemistry"
+        "color selection",
+        "design tool",
+        "laboratory"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Graphic design color picking",
+        "Scientific measurement tool",
+        "UI design color sampling"
+      ]
     }
   }
 }

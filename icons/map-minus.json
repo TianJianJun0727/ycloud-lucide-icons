@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "从地图移除位置",
+    "删除地图标记",
+    "导航点移除"
+  ],
   "name": "地图减少",
   "tags": [
-    "位置",
-    "导航",
-    "旅行",
-    "掉落",
-    "删除",
-    "移除",
-    "擦除"
+    "地图删除",
+    "移除位置",
+    "删除标记",
+    "减少地点",
+    "导航移除"
   ],
   "categories": [
     "navigation",
@@ -19,15 +21,17 @@
     "en": {
       "name": "map minus",
       "tags": [
-        "location",
-        "navigation",
-        "travel",
-        "drop",
-        "delete",
-        "remove",
-        "erase"
+        "map delete",
+        "remove location",
+        "delete marker",
+        "reduce place",
+        "navigation remove"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove location from map",
+        "Delete map marker",
+        "Navigation point removal"
+      ]
     }
   }
 }

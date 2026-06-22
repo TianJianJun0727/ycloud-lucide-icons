@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI组件库",
+    "设计系统元素",
+    "代码模块或包",
+    "拖放构建器"
+  ],
   "name": "组件",
   "tags": [
-    "设计",
-    "元素",
-    "分组",
+    "组件",
     "模块",
-    "部分",
-    "符号"
+    "元素",
+    "设计系统",
+    "UI",
+    "部件",
+    "开发"
   ],
   "categories": [
     "design",
@@ -18,14 +24,20 @@
     "en": {
       "name": "component",
       "tags": [
-        "design",
-        "element",
-        "group",
+        "component",
         "module",
+        "element",
+        "design system",
+        "UI",
         "part",
-        "symbol"
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI component library",
+        "Design system element",
+        "Code module or package",
+        "Drag-and-drop builder"
+      ]
     }
   }
 }

@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示数据库快速操作或缓存刷新",
+    "数据库性能监控或重启功能"
+  ],
   "name": "数据库闪电",
   "tags": [
-    "缓存清除",
+    "数据库",
     "存储",
-    "记忆",
-    "字节",
     "服务器",
-    "电源",
-    "崩溃"
+    "闪电",
+    "快速",
+    "缓存",
+    "性能",
+    "刷新",
+    "重启"
   ],
   "categories": [
     "devices",
@@ -19,15 +24,20 @@
     "en": {
       "name": "database zap",
       "tags": [
-        "cache busting",
+        "database",
         "storage",
-        "memory",
-        "bytes",
-        "servers",
-        "power",
-        "crash"
+        "server",
+        "lightning",
+        "fast",
+        "cache",
+        "performance",
+        "refresh",
+        "restart"
       ],
-      "use-cases": []
+      "use-cases": [
+        "indicating fast database operations or cache refresh",
+        "database performance monitoring or restart functionality"
+      ]
     }
   }
 }

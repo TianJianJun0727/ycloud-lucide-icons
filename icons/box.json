@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "物品包装图标",
+    "3D建模工具",
+    "游戏物品栏"
+  ],
   "name": "盒子",
   "tags": [
-    "立方体",
-    "包裹",
+    "盒子",
     "容器",
-    "存储",
-    "几何学",
-    "3D",
-    "等距"
+    "立方体",
+    "包装",
+    "3D图形"
   ],
   "categories": [
     "shapes",
@@ -21,15 +23,17 @@
     "en": {
       "name": "box",
       "tags": [
+        "box",
+        "container",
         "cube",
         "package",
-        "container",
-        "storage",
-        "geometry",
-        "3d",
-        "isometric"
+        "3D graphics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Item packaging icon",
+        "3D modeling tool",
+        "Game inventory"
+      ]
     }
   }
 }

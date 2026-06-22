@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "最小化应用窗口",
+    "收起侧边栏",
+    "UI元素收缩"
+  ],
   "name": "最小化",
   "tags": [
-    "退出全屏",
+    "最小化",
+    "收缩",
     "关闭",
-    "收缩"
+    "收起",
+    "窗口控制"
   ],
   "categories": [
     "layout",
@@ -15,11 +21,17 @@
     "en": {
       "name": "minimize",
       "tags": [
-        "exit fullscreen",
+        "minimize",
+        "shrink",
         "close",
-        "shrink"
+        "collapse",
+        "window control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Minimize application window",
+        "Collapse sidebar",
+        "UI element reduction"
+      ]
     }
   }
 }

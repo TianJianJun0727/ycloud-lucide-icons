@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电脑硬件规格",
+    "游戏机组装",
+    "设备存储容量"
+  ],
   "name": "内存手杖",
   "tags": [
     "内存",
-    "随机访问",
-    "技术",
+    "RAM",
+    "硬件",
     "电脑",
-    "芯片",
-    "电路",
-    "规格",
+    "存储",
     "容量",
-    "千兆字节",
-    "国标"
+    "GB"
   ],
   "categories": [
     "devices",
@@ -23,17 +24,18 @@
       "name": "memory stick",
       "tags": [
         "ram",
-        "random access",
-        "technology",
+        "memory",
+        "hardware",
         "computer",
-        "chip",
-        "circuit",
-        "specs",
+        "storage",
         "capacity",
-        "gigabytes",
         "gb"
       ],
-      "use-cases": []
+      "use-cases": [
+        "PC hardware specs",
+        "Gaming rig component",
+        "Device storage capacity"
+      ]
     }
   }
 }

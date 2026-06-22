@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换视频的隐藏式字幕",
+    "为听障人士指示无障碍功能",
+    "显示转录对话可用"
+  ],
   "name": "关闭字幕",
   "tags": [
-    "电视",
-    "电影",
-    "视频",
-    "隐藏式字幕",
     "字幕",
-    "小标题",
+    "隐藏字幕",
+    "视频字幕",
+    "无障碍",
     "转录",
-    "转录",
-    "对话",
-    "可达性"
+    "CC"
   ],
   "categories": [
     "accessibility",
@@ -22,18 +22,18 @@
     "en": {
       "name": "closed caption",
       "tags": [
-        "tv",
-        "movie",
-        "video",
-        "closed captions",
         "subtitles",
-        "subhead",
+        "closed captions",
+        "video captions",
+        "accessibility",
         "transcription",
-        "transcribe",
-        "dialogue",
-        "accessibility"
+        "CC"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle closed captions for a video",
+        "Indicate accessibility features for hearing impaired",
+        "Show transcribed dialogue is available"
+      ]
     }
   }
 }

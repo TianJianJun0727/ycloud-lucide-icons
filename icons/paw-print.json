@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "宠物护理应用图标",
+    "动物收容所网站",
+    "兽医服务标识"
+  ],
   "name": "爪印打印",
   "tags": [
+    "爪印",
     "宠物",
-    "兽医",
-    "兽医",
-    "驯化的",
+    "动物",
     "猫",
     "狗",
-    "熊"
+    "脚印"
   ],
   "categories": [
     "animals"
@@ -18,15 +21,18 @@
     "en": {
       "name": "paw print",
       "tags": [
-        "pets",
-        "vets",
-        "veterinarian",
-        "domesticated",
+        "paw print",
+        "pet",
+        "animal",
         "cat",
         "dog",
-        "bear"
+        "footprint"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Pet care app icon",
+        "Animal shelter website",
+        "Veterinary service branding"
+      ]
     }
   }
 }

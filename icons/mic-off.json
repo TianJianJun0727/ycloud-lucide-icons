@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通话中静音麦克风",
+    "禁用音频输入",
+    "停止录音"
+  ],
   "name": "麦克风关闭",
   "tags": [
-    "记录",
-    "声音",
+    "麦克风",
     "静音",
-    "麦克风"
+    "关闭",
+    "禁用",
+    "录音",
+    "音频",
+    "通话"
   ],
   "categories": [
     "devices",
@@ -18,12 +25,19 @@
     "en": {
       "name": "mic off",
       "tags": [
-        "record",
-        "sound",
+        "microphone",
         "mute",
-        "microphone"
+        "off",
+        "disable",
+        "record",
+        "audio",
+        "call"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mute microphone during a call",
+        "Disable audio input",
+        "Stop recording"
+      ]
     }
   }
 }

@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑工具",
+    "绘图或素描应用",
+    "内容创建界面"
+  ],
   "name": "铅笔",
   "tags": [
-    "橡胶",
     "编辑",
-    "创建",
-    "画",
+    "写作",
+    "绘图",
     "素描",
     "草稿",
-    "作家",
-    "写作",
-    "文具",
-    "艺术家"
+    "创建",
+    "设计"
   ],
   "categories": [
     "design",
@@ -24,18 +25,19 @@
     "en": {
       "name": "pencil",
       "tags": [
-        "rubber",
         "edit",
-        "create",
+        "writing",
         "draw",
         "sketch",
         "draft",
-        "writer",
-        "writing",
-        "stationery",
-        "artist"
+        "create",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editing tools",
+        "Drawing or sketching applications",
+        "Content creation interfaces"
+      ]
     }
   }
 }

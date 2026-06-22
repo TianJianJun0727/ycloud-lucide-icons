@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "社交媒体点赞",
+    "表达情感",
+    "关怀支持功能"
+  ],
   "name": "手爱心",
   "tags": [
-    "爱",
+    "爱心",
     "喜欢",
-    "情感"
+    "情感",
+    "社交",
+    "关怀"
   ],
   "categories": [
     "social"
@@ -14,11 +20,17 @@
     "en": {
       "name": "hand heart",
       "tags": [
-        "love",
+        "heart",
         "like",
-        "emotion"
+        "emotion",
+        "social",
+        "care"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Social media likes",
+        "Expressing affection",
+        "Care and support features"
+      ]
     }
   }
 }

@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "开始语音录音",
+    "为通话启用麦克风",
+    "选择音频输入"
+  ],
   "name": "麦克风",
   "tags": [
-    "记录",
-    "声音",
-    "听",
-    "收音机",
+    "麦克风",
+    "录音",
+    "音频",
+    "通话",
+    "语音",
     "播客",
-    "麦克风"
+    "输入"
   ],
   "categories": [
     "devices",
@@ -20,14 +25,19 @@
     "en": {
       "name": "mic",
       "tags": [
+        "microphone",
         "record",
-        "sound",
-        "listen",
-        "radio",
+        "audio",
+        "call",
+        "voice",
         "podcast",
-        "microphone"
+        "input"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Start voice recording",
+        "Enable microphone for call",
+        "Audio input selection"
+      ]
     }
   }
 }

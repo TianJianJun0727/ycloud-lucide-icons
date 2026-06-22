@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "远程工作任务完成",
+    "设备设置成功屏幕",
+    "批准的家庭办公状态",
+    "完成的在线任务"
+  ],
   "name": "笔记本电脑极简勾选",
   "tags": [
-    "电脑",
-    "屏幕",
-    "远程",
+    "笔记本电脑",
     "成功",
     "完成",
-    "待办事项",
-    "勾选",
-    "完成",
-    "任务"
+    "远程工作",
+    "任务完成",
+    "验证",
+    "设备状态"
   ],
   "categories": [
     "devices",
@@ -21,17 +24,20 @@
     "en": {
       "name": "laptop minimal check",
       "tags": [
-        "computer",
-        "screen",
-        "remote",
+        "laptop",
         "success",
         "done",
-        "todo",
-        "tick",
-        "complete",
-        "task"
+        "remote work",
+        "task complete",
+        "verification",
+        "device status"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remote work task completion",
+        "Device setup success screen",
+        "Approved work-from-home status",
+        "Completed online task"
+      ]
     }
   }
 }

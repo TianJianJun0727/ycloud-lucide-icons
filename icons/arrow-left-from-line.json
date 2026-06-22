@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "返回导航",
+    "上一个项目",
+    "展开侧边栏"
+  ],
   "name": "箭头左从线条",
   "tags": [
-    "上一个",
     "返回",
+    "上一个",
     "方向",
     "西",
     "展开",
-    "折叠",
-    "水平的",
-    "<-|"
+    "水平"
   ],
   "categories": [
     "arrows"
@@ -19,16 +21,18 @@
     "en": {
       "name": "arrow left from line",
       "tags": [
-        "previous",
         "back",
+        "previous",
         "direction",
         "west",
         "expand",
-        "fold",
-        "horizontal",
-        "<-|"
+        "horizontal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back navigation",
+        "Previous item",
+        "Expand sidebar"
+      ]
     }
   }
 }

@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档签名",
+    "编辑批准",
+    "签名字段"
+  ],
   "name": "文件笔",
   "tags": [
-    "签名"
+    "签名",
+    "编辑",
+    "文件",
+    "书写",
+    "批准"
   ],
   "categories": [
     "files"
@@ -20,9 +28,17 @@
     "en": {
       "name": "file pen",
       "tags": [
-        "signature"
+        "signature",
+        "edit",
+        "file",
+        "writing",
+        "approval"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document signing",
+        "Edit approval",
+        "Signature field"
+      ]
     }
   }
 }

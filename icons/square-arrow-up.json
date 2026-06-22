@@ -1,14 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向上滚动",
+    "上箭头键",
+    "前进导航"
+  ],
   "name": "方形箭头上",
   "tags": [
     "前进",
     "方向",
-    "北",
-    "标志",
-    "键盘",
-    "按钮"
+    "按钮",
+    "向上"
   ],
   "categories": [
     "arrows"
@@ -27,12 +29,14 @@
       "tags": [
         "forward",
         "direction",
-        "north",
-        "sign",
-        "keyboard",
-        "button"
+        "button",
+        "up"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Scroll up",
+        "Up arrow key",
+        "Forward navigation"
+      ]
     }
   }
 }

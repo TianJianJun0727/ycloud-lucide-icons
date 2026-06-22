@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户界面中的固定顶部面板",
+    "浏览器顶部栏表示",
+    "网页标题布局"
+  ],
   "name": "面板顶部",
   "tags": [
+    "顶部面板",
     "抽屉",
     "浏览器",
-    "网页"
+    "网页",
+    "布局"
   ],
   "categories": [
     "layout",
@@ -16,11 +22,17 @@
     "en": {
       "name": "panel top",
       "tags": [
+        "top panel",
         "drawer",
         "browser",
-        "webpage"
+        "webpage",
+        "layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Fixed top panel in a UI",
+        "Browser top bar representation",
+        "Webpage header layout"
+      ]
     }
   }
 }

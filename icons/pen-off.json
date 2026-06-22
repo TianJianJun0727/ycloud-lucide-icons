@@ -1,28 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "只读文档模式",
+    "禁用的绘图工具",
+    "锁定的批注状态"
+  ],
   "name": "笔关闭",
   "tags": [
-    "残疾人",
-    "不活跃的",
+    "画笔禁用",
     "不可编辑",
-    "锁定",
     "只读",
-    "不可修改的",
-    "冷冻的",
-    "受限的",
-    "铅笔",
-    "改变",
-    "创建",
-    "画",
-    "作家",
-    "写作",
-    "比罗",
-    "墨水",
-    "标记",
-    "毡尖",
-    "文具",
-    "艺术家"
+    "锁定",
+    "禁用编辑",
+    "编辑关闭"
   ],
   "categories": [
     "text",
@@ -33,28 +23,18 @@
     "en": {
       "name": "pen off",
       "tags": [
-        "disabled",
-        "inactive",
+        "pen disabled",
         "non-editable",
-        "locked",
         "read-only",
-        "unmodifiable",
-        "frozen",
-        "restricted",
-        "pencil",
-        "change",
-        "create",
-        "draw",
-        "writer",
-        "writing",
-        "biro",
-        "ink",
-        "marker",
-        "felt tip",
-        "stationery",
-        "artist"
+        "locked",
+        "edit off",
+        "no edit"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Read-only document mode",
+        "Disabled drawing tool",
+        "Locked annotation state"
+      ]
     }
   }
 }

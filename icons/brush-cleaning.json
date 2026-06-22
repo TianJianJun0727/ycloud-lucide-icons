@@ -1,39 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家庭清洁",
+    "工具维护",
+    "卫生任务"
+  ],
   "name": "刷子清洁",
   "tags": [
-    "清洁",
-    "器皿",
-    "家政服务",
-    "工具",
-    "扫地",
-    "擦洗",
+    "刷子清洁",
+    "清洁工具",
+    "打扫",
     "卫生",
-    "维护",
-    "家庭",
-    "清洁工",
-    "家务事",
-    "设备",
-    "卫生设施",
-    "鬃毛",
-    "手柄",
-    "家庭护理",
-    "消毒",
-    "净化",
-    "洗",
-    "消毒",
-    "消毒",
-    "磨砂膏",
-    "波兰语",
-    "去污",
-    "擦拭",
-    "一尘不染",
-    "移除",
-    "空的",
-    "擦除",
-    "清除",
-    "消除"
+    "维护"
   ],
   "categories": [
     "home",
@@ -44,39 +22,17 @@
     "en": {
       "name": "brush cleaning",
       "tags": [
-        "cleaning",
-        "utensil",
-        "housekeeping",
-        "tool",
+        "brush cleaning",
+        "cleaning tool",
         "sweeping",
-        "scrubbing",
         "hygiene",
-        "maintenance",
-        "household",
-        "cleaner",
-        "chores",
-        "equipment",
-        "sanitation",
-        "bristles",
-        "handle",
-        "home care",
-        "sanitize",
-        "purify",
-        "wash",
-        "disinfect",
-        "sterilize",
-        "scrub",
-        "polish",
-        "decontaminate",
-        "wipe",
-        "spotless",
-        "remove",
-        "empty",
-        "erase",
-        "purge",
-        "eliminate"
+        "maintenance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Household cleaning",
+        "Tool maintenance",
+        "Sanitation tasks"
+      ]
     }
   }
 }

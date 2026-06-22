@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "全局搜索栏",
+    "查找内容",
+    "网站搜索功能"
+  ],
   "name": "搜索",
   "tags": [
-    "找到",
-    "扫描",
+    "搜索",
+    "查找",
     "放大镜",
-    "放大镜",
-    "镜头",
-    "定位",
     "探索",
-    "发现",
-    "放大",
-    "缩放"
+    "定位",
+    "查询"
   ],
   "categories": [
     "text",
@@ -22,18 +22,18 @@
     "en": {
       "name": "search",
       "tags": [
+        "search",
         "find",
-        "scan",
         "magnifier",
-        "magnifying glass",
-        "lens",
-        "locate",
         "explore",
-        "discover",
-        "enlarge",
-        "zoom"
+        "locate",
+        "query"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Global search bar",
+        "Find content",
+        "Website search function"
+      ]
     }
   }
 }

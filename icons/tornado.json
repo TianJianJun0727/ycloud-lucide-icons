@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气警报",
+    "风暴预警",
+    "气象显示"
+  ],
   "name": "龙卷风",
   "tags": [
-    "天气",
-    "风",
+    "龙卷风",
+    "飓风",
     "风暴",
-    "飓风"
+    "恶劣天气",
+    "自然灾害"
   ],
   "categories": [
     "weather"
@@ -15,12 +20,17 @@
     "en": {
       "name": "tornado",
       "tags": [
-        "weather",
-        "wind",
+        "tornado",
+        "hurricane",
         "storm",
-        "hurricane"
+        "severe weather",
+        "natural disaster"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather alerts",
+        "Storm warnings",
+        "Meteorological displays"
+      ]
     }
   }
 }

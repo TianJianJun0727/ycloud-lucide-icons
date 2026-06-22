@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示6点时间",
+    "晚餐时间或日出指示",
+    "每日日程可视化"
+  ],
   "name": "时钟6",
   "tags": [
     "时间",
-    "手表",
-    "闹钟"
+    "时钟",
+    "时刻",
+    "6点",
+    "傍晚",
+    "清晨"
   ],
   "categories": [
     "time"
@@ -15,10 +22,17 @@
       "name": "clock 6",
       "tags": [
         "time",
-        "watch",
-        "alarm"
+        "clock",
+        "hour",
+        "6",
+        "six",
+        "o'clock"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Time display for 6:00",
+        "Dinner time or sunrise indicator",
+        "Daily schedule visualization"
+      ]
     }
   }
 }

@@ -1,27 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "测量工具界面",
+    "设计比例参考",
+    "长度测量显示",
+    "单位转换工具"
+  ],
   "name": "尺子",
   "tags": [
+    "尺子",
     "测量",
-    "厘米",
-    "厘米",
-    "毫米",
-    "毫米",
-    "米",
-    "脚",
-    "脚",
-    "英寸",
-    "单位",
-    "尺寸",
     "长度",
-    "宽度",
-    "高度",
-    "尺寸",
-    "深度",
-    "广度",
-    "范围",
-    "文具"
+    "设计",
+    "工具",
+    "刻度",
+    "单位",
+    "尺寸"
   ],
   "categories": [
     "tools",
@@ -32,27 +26,21 @@
     "en": {
       "name": "ruler",
       "tags": [
-        "measurements",
-        "centimeters",
-        "cm",
-        "millimeters",
-        "mm",
-        "metre",
-        "foot",
-        "feet",
-        "inches",
-        "units",
-        "size",
+        "ruler",
+        "measurement",
         "length",
-        "width",
-        "height",
-        "dimensions",
-        "depth",
-        "breadth",
-        "extent",
-        "stationery"
+        "design",
+        "tool",
+        "scale",
+        "units",
+        "dimension"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Measurement tool interface",
+        "Design scale reference",
+        "Length measurement display",
+        "Unit conversion tool"
+      ]
     }
   }
 }

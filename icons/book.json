@@ -1,37 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "阅读应用界面",
+    "文档库浏览器",
+    "教育内容展示"
+  ],
   "name": "书籍",
   "tags": [
+    "书籍",
     "阅读",
-    "平装本",
-    "小册子",
-    "杂志",
-    "传单",
-    "小册子",
-    "多美",
-    "图书馆",
-    "写作",
-    "书面的",
-    "作家",
-    "作者",
-    "故事",
-    "脚本",
-    "小说",
-    "小说",
-    "信息",
+    "文档",
     "知识",
+    "学习",
+    "图书馆",
     "教育",
-    "高中",
-    "大学",
-    "学院",
-    "学院",
-    "学生",
-    "学习",
-    "学习",
-    "作业",
-    "研究",
-    "文档"
+    "文本"
   ],
   "categories": [
     "text",
@@ -42,37 +25,20 @@
     "en": {
       "name": "book",
       "tags": [
+        "book",
         "reading",
-        "paperback",
-        "booklet",
-        "magazine",
-        "leaflet",
-        "pamphlet",
-        "tome",
-        "library",
-        "writing",
-        "written",
-        "writer",
-        "author",
-        "story",
-        "script",
-        "fiction",
-        "novel",
-        "information",
+        "document",
         "knowledge",
-        "education",
-        "high school",
-        "university",
-        "college",
-        "academy",
-        "student",
         "study",
-        "learning",
-        "homework",
-        "research",
-        "documentation"
+        "library",
+        "education",
+        "text"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Reading app interface",
+        "Document library browser",
+        "Educational content display"
+      ]
     }
   }
 }

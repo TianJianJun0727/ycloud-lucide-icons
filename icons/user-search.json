@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "搜索用户",
+    "查找团队成员",
+    "查询联系人",
+    "发现人员"
+  ],
   "name": "用户搜索",
   "tags": [
-    "人",
-    "帐户",
-    "联系方式",
-    "找到",
-    "扫描",
-    "放大镜",
-    "放大镜",
-    "镜头"
+    "用户",
+    "账号",
+    "查找",
+    "搜索",
+    "联系人",
+    "发现",
+    "人员"
   ],
   "categories": [
     "account",
@@ -20,16 +24,20 @@
     "en": {
       "name": "user search",
       "tags": [
-        "person",
+        "user",
         "account",
-        "contact",
         "find",
-        "scan",
-        "magnifier",
-        "magnifying glass",
-        "lens"
+        "search",
+        "contact",
+        "discover",
+        "person"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search for a user",
+        "Find team member",
+        "Lookup contact",
+        "Discover people"
+      ]
     }
   }
 }

@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "刷新网页或数据流",
+    "在设备间同步数据",
+    "重新加载应用内容"
+  ],
   "name": "刷新顺时针",
   "tags": [
-    "旋转",
+    "刷新",
     "重新加载",
-    "重新运行",
     "同步",
-    "同步",
-    "箭头",
-    "圆形",
-    "循环"
+    "旋转",
+    "循环",
+    "更新"
   ],
   "categories": [
     "arrows"
@@ -19,16 +21,18 @@
     "en": {
       "name": "refresh cw",
       "tags": [
-        "rotate",
+        "refresh",
         "reload",
-        "rerun",
-        "synchronise",
         "synchronize",
-        "arrows",
-        "circular",
-        "cycle"
+        "rotate",
+        "loop",
+        "update"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Refresh a web page or data feed",
+        "Sync data between devices",
+        "Reload application content"
+      ]
     }
   }
 }

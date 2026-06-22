@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下载进度指示器",
+    "文件传输界面",
+    "数据下载屏幕"
+  ],
   "name": "显示器下",
   "tags": [
-    "电视",
-    "屏幕",
-    "显示",
-    "桌面",
-    "下载"
+    "下载",
+    "桌面下载",
+    "屏幕下载",
+    "文件下载",
+    "数据传输"
   ],
   "categories": [
     "connectivity",
@@ -17,13 +21,17 @@
     "en": {
       "name": "monitor down",
       "tags": [
-        "tv",
-        "screen",
-        "display",
-        "desktop",
-        "download"
+        "download",
+        "desktop download",
+        "screen download",
+        "file download",
+        "data transfer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Download progress indicator",
+        "File transfer interface",
+        "Data download screen"
+      ]
     }
   }
 }

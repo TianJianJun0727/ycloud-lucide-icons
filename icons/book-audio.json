@@ -1,22 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "有声读物播放器或库",
+    "语言学习应用",
+    "播客或朗读内容",
+    "阅读辅助功能"
+  ],
   "name": "书籍音频",
   "tags": [
     "有声读物",
-    "阅读",
-    "倾听",
-    "声音",
+    "音频书",
+    "听书",
+    "朗读",
     "故事",
-    "小说",
-    "小说",
-    "信息",
-    "知识",
     "教育",
-    "学生",
     "学习",
-    "学习",
-    "研究"
+    "多媒体"
   ],
   "categories": [
     "multimedia",
@@ -27,21 +26,20 @@
       "name": "book audio",
       "tags": [
         "audiobook",
-        "reading",
-        "listening",
-        "sound",
+        "audio book",
+        "listen to book",
+        "narration",
         "story",
-        "fiction",
-        "novel",
-        "information",
-        "knowledge",
         "education",
-        "student",
         "study",
-        "learning",
-        "research"
+        "multimedia"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audiobook player or library",
+        "Language learning app",
+        "Podcast or narration content",
+        "Accessibility feature for reading"
+      ]
     }
   }
 }

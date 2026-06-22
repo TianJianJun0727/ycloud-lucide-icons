@@ -21,7 +21,7 @@
 
 - `icons/*.svg`：图标 SVG 源文件
 - `icons/*.json`：图标元数据，主字段为中文展示信息，`i18n.en` 为英文展示信息
-- `categories/*.json`：分类定义，决定左侧分类展示、分类标题和分类图标
+- `categories/*.json`：分类定义，决定左侧分类展示、分类标题和英文标题
 - `docs/`：文档站点，图标详情页、分类页和搜索数据都由构建脚本自动生成
 
 一个图标必须同时具备：
@@ -65,7 +65,7 @@ pnpm optimize
 ### 删除图标
 
 - 同时删除 `icons/<name>.svg` 和 `icons/<name>.json`
-- 检查分类图标、别名、文档示例是否仍引用该图标
+- 检查别名、弃用迁移信息、文档示例是否仍引用该图标
 
 ### 修改图标
 
@@ -160,13 +160,12 @@ pnpm optimize
 - 已存在于 `categories/*.json`
 - 或者在本次改动里同步新增对应的 `categories/<category>.json`
 
-如果需要新增分类，除了增加分类文件，还要保证 `icon` 指向一个已存在的图标，例如：
+如果需要新增分类，同步增加分类文件即可，例如：
 
 ```json
 {
   "$schema": "../category.schema.json",
   "title": "导航与地点",
-  "icon": "compass",
   "i18n": {
     "en": {
       "title": "Navigation & Places"
@@ -210,7 +209,6 @@ icons/<icon-name>.json
 然后继续检查：
 
 - 其他图标的 `aliases`、弃用迁移信息是否还引用它
-- `categories/*.json` 的 `icon` 字段是否把它当作分类图标
 - 文档里的示例代码是否还在使用这个图标
 
 建议额外执行：
@@ -222,11 +220,8 @@ rg -n "<icon-name>" docs icons categories packages
 这样可以尽量避免遗漏：
 
 - 文档示例
-- 分类图标引用
 - 旧别名
 - 包级示例导入
-
-如果删除的是分类图标，先把对应分类切换到别的已存在图标，否则分类页会直接报错。
 
 ## 修改一个图标
 
@@ -283,7 +278,7 @@ icons/<icon-name>.json
 - `icons/<old-name>.svg` -> `icons/<new-name>.svg`
 - `icons/<old-name>.json` -> `icons/<new-name>.json`
 - 如果要兼容旧名字，在新 JSON 里补 `aliases`
-- 相关文档示例、分类图标引用、包导入示例一起更新
+- 相关文档示例、别名引用、包导入示例一起更新
 
 如果只是保留旧名字兼容，建议用 `aliases` 标记，而不是继续保留两份图标源。
 

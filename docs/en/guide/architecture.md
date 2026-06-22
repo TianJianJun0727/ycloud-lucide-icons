@@ -36,7 +36,7 @@ categories/
 
 - `icons/*.svg`: the icon artwork
 - `icons/*.json`: icon metadata, such as categories, tags, and localized display data
-- `categories/*.json`: category definitions, labels, and category icons
+- `categories/*.json`: category definitions, Chinese titles, and English titles
 
 The icon shape and the icon meaning are both stored in source control instead of being scattered through documentation or framework components.
 

@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "应用通知角标",
+    "未读消息提示",
+    "新提醒界面"
+  ],
   "name": "铃铛点",
   "tags": [
-    "闹钟",
-    "通知",
-    "声音",
-    "提醒",
-    "未读"
+    "未读通知",
+    "新提醒",
+    "消息提示",
+    "红点提醒"
   ],
   "categories": [
     "account",
@@ -17,13 +20,16 @@
     "en": {
       "name": "bell dot",
       "tags": [
-        "alarm",
-        "notification",
-        "sound",
-        "reminder",
-        "unread"
+        "unread notification",
+        "new alert",
+        "message prompt",
+        "red dot reminder"
       ],
-      "use-cases": []
+      "use-cases": [
+        "App notification badge",
+        "Unread message prompt",
+        "New alert interface"
+      ]
     }
   }
 }

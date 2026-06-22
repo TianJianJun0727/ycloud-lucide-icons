@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "时间显示",
+    "时钟界面",
+    "特定时刻指示"
+  ],
   "name": "时钟十",
   "tags": [
     "时间",
-    "手表",
-    "闹钟"
+    "时钟",
+    "计时",
+    "时刻",
+    "十点钟"
   ],
   "categories": [
     "time"
@@ -15,10 +21,16 @@
       "name": "clock 10",
       "tags": [
         "time",
-        "watch",
-        "alarm"
+        "clock",
+        "timing",
+        "moment",
+        "ten o'clock"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Time display",
+        "Clock interface",
+        "Specific time indication"
+      ]
     }
   }
 }

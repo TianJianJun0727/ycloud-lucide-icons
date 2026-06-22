@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除文件",
+    "移除项目",
+    "减法操作"
+  ],
   "name": "文件减少",
   "tags": [
     "删除",
     "移除",
-    "擦除",
-    "文档"
+    "文件",
+    "减少",
+    "操作"
   ],
   "categories": [
     "files"
@@ -17,10 +22,15 @@
       "tags": [
         "delete",
         "remove",
-        "erase",
-        "document"
+        "file",
+        "minus",
+        "action"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Delete file",
+        "Remove item",
+        "Subtraction operation"
+      ]
     }
   }
 }

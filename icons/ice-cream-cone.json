@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "冰淇淋摊",
+    "夏季促销",
+    "餐车",
+    "零食菜单"
+  ],
   "name": "冰冰淇淋圆锥",
   "tags": [
     "冰淇淋",
-    "食物"
+    "甜筒",
+    "冷饮",
+    "零食",
+    "甜品"
   ],
   "categories": [
     "food-beverage"
@@ -21,10 +29,18 @@
     "en": {
       "name": "ice cream cone",
       "tags": [
-        "gelato",
-        "food"
+        "ice cream",
+        "cone",
+        "cold treat",
+        "snack",
+        "dessert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Ice cream stand",
+        "Summer promotion",
+        "Food truck",
+        "Snack menu"
+      ]
     }
   }
 }

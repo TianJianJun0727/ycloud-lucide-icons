@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本格式化工具栏",
+    "代码编辑器大小写切换",
+    "排版设置",
+    "输入字段验证指示器"
+  ],
   "name": "箱包小写",
   "tags": [
+    "小写",
     "文本",
     "字母",
-    "人物",
     "字体",
-    "版式"
+    "排版",
+    "转换"
   ],
   "categories": [
     "text",
@@ -17,13 +23,19 @@
     "en": {
       "name": "case lower",
       "tags": [
+        "lowercase",
         "text",
         "letters",
-        "characters",
         "font",
-        "typography"
+        "typography",
+        "convert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text formatting toolbar",
+        "Code editor case toggle",
+        "Typography settings",
+        "Input field validation indicator"
+      ]
     }
   }
 }

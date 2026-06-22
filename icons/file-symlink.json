@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "符号链接指示器",
+    "快捷方式文件图标",
+    "链接资源引用"
+  ],
   "name": "文件符号链接",
   "tags": [
     "符号链接",
-    "象征性的",
-    "链接"
+    "快捷方式",
+    "链接",
+    "引用",
+    "文件链接"
   ],
   "categories": [
     "files"
@@ -15,10 +21,16 @@
       "name": "file symlink",
       "tags": [
         "symlink",
-        "symbolic",
-        "link"
+        "shortcut",
+        "link",
+        "reference",
+        "file link"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Symbolic link indicator",
+        "Shortcut file icon",
+        "Linked resource reference"
+      ]
     }
   }
 }

@@ -1,25 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多个笔记或评论视图",
+    "批注集合",
+    "分组提醒或任务"
+  ],
   "name": "便签便签",
   "tags": [
     "便利贴",
-    "注释",
-    "备忘录",
-    "提醒",
-    "待办事项",
-    "任务",
-    "想法",
-    "头脑风暴",
-    "文件",
-    "笔记",
     "多个",
-    "收藏",
+    "笔记集",
+    "集合",
     "分组",
-    "堆栈",
-    "克隆",
-    "重复的",
-    "复制"
+    "堆叠",
+    "文档"
   ],
   "categories": [
     "text",
@@ -29,25 +23,19 @@
     "en": {
       "name": "sticky notes",
       "tags": [
-        "post-it",
-        "annotation",
-        "memo",
-        "reminder",
-        "todo",
-        "tasks",
-        "ideas",
-        "brainstorm",
-        "documents",
-        "notes",
+        "sticky notes",
         "multiple",
         "collection",
         "group",
         "stack",
-        "clone",
-        "duplicate",
-        "copy"
+        "documents",
+        "notes"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multiple notes or comments view",
+        "Collection of annotations",
+        "Grouped reminders or tasks"
+      ]
     }
   }
 }

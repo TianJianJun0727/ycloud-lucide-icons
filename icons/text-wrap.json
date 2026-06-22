@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑器中的文本换行切换",
+    "控制容器中的文本溢出",
+    "格式化长文本行"
+  ],
   "name": "文本换行",
   "tags": [
-    "话",
-    "线",
-    "打破",
-    "段落"
+    "换行",
+    "文本",
+    "自动换行",
+    "段落",
+    "排版",
+    "格式",
+    "溢出"
   ],
   "categories": [
     "text",
@@ -24,12 +31,19 @@
     "en": {
       "name": "text wrap",
       "tags": [
-        "words",
-        "lines",
-        "break",
-        "paragraph"
+        "wrap",
+        "text",
+        "word wrap",
+        "paragraph",
+        "typography",
+        "format",
+        "overflow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text wrapping toggle in editors",
+        "Controlling text overflow in containers",
+        "Formatting long lines of text"
+      ]
     }
   }
 }

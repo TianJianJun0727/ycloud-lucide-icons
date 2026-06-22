@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "货币转换器",
+    "银行应用",
+    "金融交易",
+    "汇率显示"
+  ],
   "name": "瑞士法郎",
   "tags": [
+    "瑞士法郎",
     "货币",
-    "钱",
-    "付款"
+    "金融",
+    "CHF",
+    "外汇",
+    "支付"
   ],
   "categories": [
     "finance"
@@ -14,11 +22,19 @@
     "en": {
       "name": "swiss franc",
       "tags": [
+        "swiss franc",
         "currency",
-        "money",
+        "finance",
+        "CHF",
+        "foreign exchange",
         "payment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Currency converter",
+        "Banking app",
+        "Financial transactions",
+        "Exchange rates"
+      ]
     }
   }
 }

@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI设计工具",
+    "CSS弹性盒间距",
+    "均匀元素分布",
+    "布局配置"
+  ],
   "name": "对齐水平间距环绕",
   "tags": [
-    "中心",
-    "项目",
-    "弯曲",
-    "证明合理",
-    "分发",
-    "之间"
+    "水平分布",
+    "环绕间距",
+    "均匀分布",
+    "布局",
+    "Flex",
+    "对齐",
+    "设计工具"
   ],
   "categories": [
     "layout"
@@ -17,14 +23,20 @@
     "en": {
       "name": "align horizontal space around",
       "tags": [
-        "center",
-        "items",
+        "horizontal distribute",
+        "space around",
+        "even distribution",
+        "layout",
         "flex",
-        "justify",
-        "distribute",
-        "between"
+        "alignment",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI design tools",
+        "CSS flexbox spacing",
+        "Even element distribution",
+        "Layout configuration"
+      ]
     }
   }
 }

@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "增加列表缩进级别",
+    "在编辑器中增加文本缩进",
+    "在大纲视图中右移列表项"
+  ],
   "name": "列表缩进增加",
   "tags": [
+    "列表",
+    "缩进",
+    "增加",
+    "右移",
     "文本",
-    "选项卡"
+    "代码"
   ],
   "categories": [
     "text",
@@ -28,10 +36,17 @@
     "en": {
       "name": "list indent increase",
       "tags": [
+        "list",
+        "indent",
+        "increase",
         "text",
-        "tab"
+        "code"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Increase indent level in a list",
+        "Indent text in an editor",
+        "Move list item right in outline view"
+      ]
     }
   }
 }

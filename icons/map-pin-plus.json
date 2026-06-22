@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加位置图钉",
+    "创建地图标记",
+    "固定新位置"
+  ],
   "name": "地图图钉加号",
   "tags": [
     "位置",
-    "航路点",
     "标记",
-    "掉落",
     "添加",
     "创建",
-    "新建"
+    "新增",
+    "固定位置"
   ],
   "categories": [
     "navigation",
@@ -21,14 +24,17 @@
       "name": "map pin plus",
       "tags": [
         "location",
-        "waypoint",
         "marker",
-        "drop",
         "add",
         "create",
-        "new"
+        "new",
+        "pin"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add location pin",
+        "Create map marker",
+        "Pin new location"
+      ]
     }
   }
 }

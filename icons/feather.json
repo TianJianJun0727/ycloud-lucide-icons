@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏库存物品",
+    "轻量功能指示器",
+    "装饰性标志元素"
+  ],
   "name": "羽毛",
   "tags": [
-    "标志"
+    "轻盈",
+    "羽毛",
+    "装饰",
+    "游戏道具",
+    "标志",
+    "柔和"
   ],
   "categories": [
     "gaming"
@@ -12,9 +21,18 @@
     "en": {
       "name": "feather",
       "tags": [
-        "logo"
+        "light",
+        "feather",
+        "decoration",
+        "gaming item",
+        "logo",
+        "soft"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game inventory item",
+        "Lightweight feature indicator",
+        "Decorative logo element"
+      ]
     }
   }
 }

@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件资源管理器导航",
+    "文档组织",
+    "云存储界面"
+  ],
   "name": "文件夹",
   "tags": [
-    "目录"
+    "文件夹",
+    "目录",
+    "文件管理",
+    "存储"
   ],
   "categories": [
     "files"
@@ -12,9 +19,16 @@
     "en": {
       "name": "folder",
       "tags": [
-        "directory"
+        "folder",
+        "directory",
+        "file-management",
+        "storage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File explorer navigation",
+        "Document organization",
+        "Cloud storage interface"
+      ]
     }
   }
 }

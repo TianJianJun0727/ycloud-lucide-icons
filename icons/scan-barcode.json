@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收银系统",
+    "库存管理",
+    "商品扫描"
+  ],
   "name": "扫描条码",
   "tags": [
-    "结账",
-    "直到",
-    "购物车",
-    "交易",
-    "购买",
-    "买",
-    "产品",
-    "包装",
+    "条码扫描",
+    "二维码",
+    "收银",
     "零售",
-    "消费者"
+    "商品识别",
+    "支付"
   ],
   "categories": [
     "shopping",
@@ -22,18 +22,18 @@
     "en": {
       "name": "scan barcode",
       "tags": [
+        "barcode scan",
+        "QR code",
         "checkout",
-        "till",
-        "cart",
-        "transaction",
-        "purchase",
-        "buy",
-        "product",
-        "packaging",
         "retail",
-        "consumer"
+        "product identification",
+        "payment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Point of sale systems",
+        "Inventory management",
+        "Product scanning"
+      ]
     }
   }
 }

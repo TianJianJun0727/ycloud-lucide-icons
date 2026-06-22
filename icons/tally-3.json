@@ -1,20 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏计分",
+    "简单计数或正字标记",
+    "进度指示器"
+  ],
   "name": "计数3",
   "tags": [
     "计数",
-    "分数",
-    "列举",
-    "天",
-    "三",
+    "正字计数",
+    "计分",
     "3",
+    "三",
     "第三",
-    "三重",
-    "酒吧",
-    "监狱",
-    "细胞",
-    "句子"
+    "三重"
   ],
   "categories": [
     "math",
@@ -24,20 +23,19 @@
     "en": {
       "name": "tally 3",
       "tags": [
+        "tally",
         "count",
         "score",
-        "enumerate",
-        "days",
         "three",
         "3",
         "third",
-        "triple",
-        "bars",
-        "prison",
-        "cell",
-        "sentence"
+        "triple"
       ],
-      "use-cases": []
+      "use-cases": [
+        "scorekeeping in games",
+        "simple counting or tally marks",
+        "progress indicator"
+      ]
     }
   }
 }

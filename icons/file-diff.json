@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码差异视图",
+    "文件比较",
+    "补丁文件"
+  ],
   "name": "文件差异",
   "tags": [
     "差异",
-    "补丁"
+    "对比",
+    "补丁",
+    "版本比较"
   ],
   "categories": [
     "files",
@@ -15,9 +21,15 @@
       "name": "file diff",
       "tags": [
         "diff",
-        "patch"
+        "compare",
+        "patch",
+        "version compare"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code difference view",
+        "File comparison",
+        "Patch file"
+      ]
     }
   }
 }

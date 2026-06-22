@@ -1,28 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网络中断指示",
+    "离线模式状态",
+    "连接问题显示"
+  ],
   "name": "地球关闭",
   "tags": [
-    "地球仪",
     "地球",
-    "行星",
-    "禁用",
-    "静音",
-    "关闭",
-    "隐藏",
-    "避免",
-    "世界",
-    "浏览器",
-    "语言",
-    "翻译",
-    "互联网",
     "离线",
-    "断开连接",
-    "网络",
-    "连接",
-    "没有连接",
-    "网络故障",
-    "信号关闭"
+    "断开",
+    "无网络",
+    "不可用",
+    "禁用",
+    "关闭",
+    "连接失败"
   ],
   "categories": [
     "navigation",
@@ -34,27 +26,19 @@
       "name": "globe off",
       "tags": [
         "globe",
-        "earth",
-        "planet",
-        "disable",
-        "mute",
-        "off",
-        "hide",
-        "avoid",
-        "world",
-        "browser",
-        "language",
-        "translate",
-        "internet",
         "offline",
         "disconnected",
-        "network",
-        "connection",
-        "no connection",
-        "network failure",
-        "signal off"
+        "no network",
+        "unavailable",
+        "disabled",
+        "off",
+        "connection failure"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Network outage indication",
+        "Offline mode status",
+        "Connectivity issues display"
+      ]
     }
   }
 }

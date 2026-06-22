@@ -1,22 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "物业管理界面",
+    "土地测量图",
+    "高尔夫球场地图",
+    "施工规划工具"
+  ],
   "name": "土地图",
   "tags": [
+    "地块",
+    "土地",
+    "平面图",
     "面积",
-    "表面",
-    "平方米",
-    "分配",
-    "包裹",
-    "财产",
-    "飞机",
-    "英亩",
     "测量",
-    "距离",
-    "等距",
-    "旗帜",
-    "高尔夫球场",
-    "洞"
+    "房产",
+    "规划",
+    "高尔夫球场"
   ],
   "categories": [
     "design",
@@ -29,22 +28,21 @@
     "en": {
       "name": "land plot",
       "tags": [
+        "plot",
+        "land",
+        "floor plan",
         "area",
-        "surface",
-        "square metres",
-        "allotment",
-        "parcel",
+        "measurement",
         "property",
-        "plane",
-        "acres",
-        "measure",
-        "distance",
-        "isometric",
-        "flag",
-        "golf course",
-        "hole"
+        "planning",
+        "golf course"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Property management interface",
+        "Land survey diagram",
+        "Golf course map",
+        "Construction planning tool"
+      ]
     }
   }
 }

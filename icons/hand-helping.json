@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "支持功能",
+    "慈善活动",
+    "协议确认"
+  ],
   "name": "手帮扶",
   "tags": [
-    "协议",
     "帮助",
-    "提案",
-    "慈善事业",
-    "乞讨",
-    "条款"
+    "支持",
+    "慈善",
+    "援助",
+    "协议"
   ],
   "categories": [
     "emoji"
@@ -25,14 +28,17 @@
     "en": {
       "name": "hand helping",
       "tags": [
-        "agreement",
         "help",
-        "proposal",
+        "support",
         "charity",
-        "begging",
-        "terms"
+        "assistance",
+        "agreement"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Support features",
+        "Charity campaigns",
+        "Agreement confirmation"
+      ]
     }
   }
 }

@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相册下载",
+    "图片导出功能",
+    "保存到设备",
+    "媒体下载"
+  ],
   "name": "图片下",
   "tags": [
-    "图片",
-    "照片",
-    "下载",
-    "保存",
-    "导出"
+    "图片下载",
+    "保存图片",
+    "导出图像",
+    "下载照片"
   ],
   "categories": [
     "photography",
@@ -19,13 +23,17 @@
     "en": {
       "name": "image down",
       "tags": [
-        "picture",
-        "photo",
-        "download",
-        "save",
-        "export"
+        "image download",
+        "save picture",
+        "export image",
+        "download photo"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Photo gallery download",
+        "Image export feature",
+        "Save to device",
+        "Media download"
+      ]
     }
   }
 }

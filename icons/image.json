@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在页面中插入图片",
+    "查看照片",
+    "代表媒体文件"
+  ],
   "name": "图片",
   "tags": [
     "图片",
-    "照片"
+    "照片",
+    "图像",
+    "媒体"
   ],
   "categories": [
     "photography",
@@ -17,9 +23,15 @@
       "name": "image",
       "tags": [
         "picture",
-        "photo"
+        "photo",
+        "graphic",
+        "media"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Insert an image into a page",
+        "View a photo",
+        "Represent a media file"
+      ]
     }
   }
 }

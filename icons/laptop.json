@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用电脑表示",
+    "工作设备图标",
+    "技术板块",
+    "硬件列表"
+  ],
   "name": "笔记本电脑",
   "tags": [
+    "笔记本电脑",
     "电脑",
-    "屏幕",
-    "远程"
+    "设备",
+    "工作",
+    "技术"
   ],
   "categories": [
     "devices"
@@ -14,11 +21,18 @@
     "en": {
       "name": "laptop",
       "tags": [
+        "laptop",
         "computer",
-        "screen",
-        "remote"
+        "device",
+        "work",
+        "technology"
       ],
-      "use-cases": []
+      "use-cases": [
+        "General computer representation",
+        "Work device icon",
+        "Technology section",
+        "Hardware listing"
+      ]
     }
   }
 }

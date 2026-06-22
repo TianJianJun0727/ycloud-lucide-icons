@@ -1,31 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "厨房应用",
+    "食谱软件",
+    "家电控制界面"
+  ],
   "name": "搅拌机",
   "tags": [
     "搅拌机",
-    "电器",
+    "厨房电器",
     "食物",
-    "液体",
-    "榨汁机",
-    "维他命",
     "混合",
-    "乳化",
-    "冰沙",
-    "喝",
-    "刀片",
-    "容器",
-    "厨房",
-    "奶昔",
-    "鸡尾酒",
-    "饮料",
-    "烹饪的",
-    "碎纸机",
-    "处理器",
-    "烹饪",
-    "食谱",
-    "厨师",
-    "餐厅"
+    "饮料"
   ],
   "categories": [
     "food-beverage",
@@ -35,31 +21,17 @@
     "en": {
       "name": "blender",
       "tags": [
-        "mixer",
-        "appliances",
+        "blender",
+        "kitchen appliance",
         "food",
-        "liquid",
-        "juicer",
-        "vitamizer",
         "mix",
-        "emulsify",
-        "smoothie",
-        "drink",
-        "blade",
-        "container",
-        "kitchen",
-        "milkshake",
-        "cocktail",
-        "beverage",
-        "culinary",
-        "shredder",
-        "processor",
-        "cooking",
-        "recipe",
-        "chef",
-        "restaurant"
+        "beverage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Kitchen app",
+        "Recipe software",
+        "Appliance control interface"
+      ]
     }
   }
 }

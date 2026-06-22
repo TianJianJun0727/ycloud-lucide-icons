@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "页面加载指示器",
+    "数据处理等待",
+    "操作进行中状态"
+  ],
   "name": "加载器圆形",
   "tags": [
     "加载",
     "等待",
-    "忙",
-    "进展",
-    "旋转器",
-    "纺纱",
-    "悸动者",
-    "圆形"
+    "进度",
+    "旋转",
+    "圆形",
+    "缓冲",
+    "处理中"
   ],
   "categories": [
     "cursors",
@@ -31,14 +34,17 @@
       "tags": [
         "loading",
         "wait",
-        "busy",
         "progress",
-        "spinner",
         "spinning",
-        "throbber",
-        "circle"
+        "circle",
+        "buffering",
+        "processing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "page loading indicator",
+        "data processing wait",
+        "operation in progress status"
+      ]
     }
   }
 }

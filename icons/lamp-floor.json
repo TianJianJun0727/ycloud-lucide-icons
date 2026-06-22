@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "客厅灯光控制",
+    "氛围灯设置",
+    "家具装饰应用"
+  ],
   "name": "灯地板",
   "tags": [
-    "照明",
-    "家庭",
-    "地板",
-    "首页",
-    "家具"
+    "落地灯",
+    "立灯",
+    "客厅灯",
+    "氛围灯",
+    "装饰灯"
   ],
   "categories": [
     "home"
@@ -16,13 +20,17 @@
     "en": {
       "name": "lamp floor",
       "tags": [
-        "lighting",
-        "household",
-        "floor",
-        "home",
-        "furniture"
+        "floor lamp",
+        "standing lamp",
+        "living room light",
+        "ambient light",
+        "decorative light"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Living room lighting control",
+        "Ambient lighting settings",
+        "Furniture and decor app"
+      ]
     }
   }
 }

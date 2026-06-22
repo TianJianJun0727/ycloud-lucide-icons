@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "社交",
-  "icon": "thumbs-up",
   "i18n": {
     "en": {
       "title": "Social"

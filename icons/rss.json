@@ -1,29 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "RSS源订阅",
+    "新闻内容更新",
+    "博客文章聚合",
+    "播客节目提醒"
+  ],
   "name": "RSS订阅",
   "tags": [
-    "饲料",
+    "RSS",
     "订阅",
     "新闻",
     "更新",
-    "通知",
     "内容",
     "博客",
-    "文章",
-    "广播",
-    "联合组织",
-    "读者",
-    "渠道",
-    "帖子",
-    "出版",
-    "摘要",
-    "告警",
-    "正在关注",
-    "收件箱",
-    "时事通讯",
-    "博客",
-    "播客"
+    "播客",
+    "资讯",
+    "源"
   ],
   "categories": [
     "development",
@@ -33,29 +26,22 @@
     "en": {
       "name": "rss",
       "tags": [
-        "feed",
+        "RSS",
         "subscribe",
         "news",
         "updates",
-        "notifications",
         "content",
         "blog",
-        "articles",
-        "broadcast",
-        "syndication",
-        "reader",
-        "channels",
-        "posts",
-        "publishing",
-        "digest",
-        "alert",
-        "following",
-        "inbox",
-        "newsletter",
-        "weblog",
-        "podcast"
+        "podcast",
+        "feed",
+        "syndication"
       ],
-      "use-cases": []
+      "use-cases": [
+        "RSS feed subscription",
+        "News content updates",
+        "Blog post syndication",
+        "Podcast episode alerts"
+      ]
     }
   }
 }

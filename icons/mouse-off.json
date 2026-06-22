@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "鼠标禁用状态",
+    "无障碍设置",
+    "输入设备控制"
+  ],
   "name": "鼠标关闭",
   "tags": [
-    "装置",
-    "滚动",
-    "点击",
-    "残疾人"
+    "鼠标",
+    "禁用",
+    "关闭",
+    "无鼠标",
+    "辅助功能",
+    "输入设备"
   ],
   "categories": [
     "devices"
@@ -15,12 +21,18 @@
     "en": {
       "name": "mouse off",
       "tags": [
-        "device",
-        "scroll",
-        "click",
-        "disabled"
+        "mouse",
+        "disabled",
+        "off",
+        "no mouse",
+        "accessibility",
+        "input device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mouse disabled state",
+        "Accessibility settings",
+        "Input device control"
+      ]
     }
   }
 }

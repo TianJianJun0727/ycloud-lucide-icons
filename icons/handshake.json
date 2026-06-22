@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "协议确认",
+    "商业合作",
+    "安全交易"
+  ],
   "name": "握手",
   "tags": [
+    "握手",
     "协议",
-    "伙伴关系",
-    "交易",
-    "商业",
-    "援助",
     "合作",
-    "友谊",
-    "联盟",
-    "条款"
+    "商业",
+    "安全"
   ],
   "categories": [
     "account",
@@ -24,17 +24,17 @@
     "en": {
       "name": "handshake",
       "tags": [
+        "handshake",
         "agreement",
-        "partnership",
-        "deal",
-        "business",
-        "assistance",
         "cooperation",
-        "friendship",
-        "union",
-        "terms"
+        "business",
+        "security"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Agreement confirmation",
+        "Business partnerships",
+        "Secure transactions"
+      ]
     }
   }
 }

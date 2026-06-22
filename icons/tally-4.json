@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏计分",
+    "简单计数或正字标记",
+    "进度指示器"
+  ],
   "name": "计数4",
   "tags": [
     "计数",
-    "分数",
-    "列举",
-    "天",
+    "正字计数",
+    "计分",
     "4",
+    "四",
     "第四",
-    "四倍",
-    "酒吧",
-    "监狱",
-    "细胞",
-    "句子"
+    "四倍"
   ],
   "categories": [
     "math",
@@ -23,19 +23,19 @@
     "en": {
       "name": "tally 4",
       "tags": [
+        "tally",
         "count",
         "score",
-        "enumerate",
-        "days",
+        "four",
         "4",
         "fourth",
-        "quadruple",
-        "bars",
-        "prison",
-        "cell",
-        "sentence"
+        "quadruple"
       ],
-      "use-cases": []
+      "use-cases": [
+        "scorekeeping in games",
+        "simple counting or tally marks",
+        "progress indicator"
+      ]
     }
   }
 }

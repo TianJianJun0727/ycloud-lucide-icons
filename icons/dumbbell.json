@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "健身应用锻炼",
+    "健身房设备选择",
+    "锻炼计划",
+    "体育设施导航"
+  ],
   "name": "哑铃",
   "tags": [
-    "杠铃",
-    "重量",
+    "哑铃",
+    "健身",
     "锻炼",
-    "健身房"
+    "重量训练",
+    "健身房",
+    "运动器材",
+    "举重"
   ],
   "categories": [
     "navigation",
@@ -16,12 +24,20 @@
     "en": {
       "name": "dumbbell",
       "tags": [
-        "barbell",
-        "weight",
-        "workout",
-        "gym"
+        "dumbbell",
+        "fitness",
+        "exercise",
+        "weight training",
+        "gym",
+        "sports equipment",
+        "weightlifting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Fitness app workouts",
+        "Gym equipment selection",
+        "Exercise routines",
+        "Sports facility navigation"
+      ]
     }
   }
 }

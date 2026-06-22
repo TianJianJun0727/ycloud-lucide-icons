@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "富文本编辑器工具栏",
+    "移除超链接操作",
+    "文档编辑界面"
+  ],
   "name": "取消链接2",
   "tags": [
-    "网址",
-    "解开束缚"
+    "取消链接",
+    "断开连接",
+    "移除超链接",
+    "文本编辑",
+    "网址移除"
   ],
   "categories": [
     "text"
@@ -13,10 +20,17 @@
     "en": {
       "name": "unlink 2",
       "tags": [
-        "url",
-        "unchain"
+        "unlink",
+        "disconnect",
+        "remove hyperlink",
+        "text editing",
+        "URL remove"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Rich text editor toolbar",
+        "Remove hyperlink action",
+        "Document editing interface"
+      ]
     }
   }
 }

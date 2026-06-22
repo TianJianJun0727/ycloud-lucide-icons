@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "车辆仪表盘显示",
+    "速度或压力监控",
+    "测量仪器面板"
+  ],
   "name": "仪表",
   "tags": [
-    "仪表板",
-    "拨号",
-    "米",
-    "速度",
-    "压力",
+    "仪表",
+    "仪表盘",
+    "速度表",
+    "压力表",
     "测量",
+    "刻度",
     "水平"
   ],
   "categories": [
@@ -20,15 +24,20 @@
     "en": {
       "name": "gauge",
       "tags": [
+        "gauge",
         "dashboard",
-        "dial",
         "meter",
-        "speed",
+        "speedometer",
         "pressure",
-        "measure",
+        "measurement",
+        "dial",
         "level"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vehicle dashboard display",
+        "Speed or pressure monitoring",
+        "Measurement instrument panel"
+      ]
     }
   }
 }

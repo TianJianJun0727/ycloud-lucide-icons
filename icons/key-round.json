@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "登录或认证屏幕",
+    "密码管理器图标",
+    "安全设置访问"
+  ],
   "name": "钥匙圆形",
   "tags": [
+    "钥匙",
     "密码",
     "登录",
     "认证",
     "安全",
-    "解锁"
+    "解锁",
+    "圆形"
   ],
   "categories": [
     "security",
@@ -17,13 +23,19 @@
     "en": {
       "name": "key round",
       "tags": [
+        "key",
         "password",
         "login",
         "authentication",
-        "secure",
-        "unlock"
+        "security",
+        "unlock",
+        "round"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Login or authentication screen",
+        "Password manager icon",
+        "Security settings access"
+      ]
     }
   }
 }

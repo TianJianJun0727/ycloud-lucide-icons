@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "投票界面",
+    "创建投票",
+    "调查选项"
+  ],
   "name": "投票",
   "tags": [
     "投票",
+    "选举",
+    "表决",
     "民意调查",
-    "选票",
-    "政治的",
-    "社会的",
-    "勾选",
-    "勾选"
+    "选择",
+    "社会"
   ],
   "categories": [
     "social"
@@ -19,14 +22,17 @@
       "name": "vote",
       "tags": [
         "vote",
+        "election",
         "poll",
         "ballot",
-        "political",
-        "social",
-        "check",
-        "tick"
+        "choice",
+        "social"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Voting interface",
+        "Poll creation",
+        "Survey options"
+      ]
     }
   }
 }

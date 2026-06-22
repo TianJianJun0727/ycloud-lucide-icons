@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频播放器静音按钮",
+    "收音机应用禁用状态",
+    "信号关闭指示器"
+  ],
   "name": "收音机关闭",
   "tags": [
+    "收音机",
+    "关闭",
     "信号",
     "广播",
-    "连接性",
-    "直播",
-    "频率"
+    "静音",
+    "断开"
   ],
   "categories": [
     "devices",
@@ -18,13 +23,18 @@
     "en": {
       "name": "radio off",
       "tags": [
+        "radio",
+        "off",
         "signal",
         "broadcast",
-        "connectivity",
-        "live",
-        "frequency"
+        "mute",
+        "disconnect"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio player mute button",
+        "Radio app disabled state",
+        "Signal off indicator"
+      ]
     }
   }
 }

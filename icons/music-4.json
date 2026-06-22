@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "高级乐谱标注",
+    "快速节奏指示器",
+    "音乐教育应用"
+  ],
   "name": "音乐4",
   "tags": [
+    "音乐",
+    "音符",
     "十六分音符",
-    "十六分音符",
-    "注释"
+    "乐谱",
+    "快速节奏",
+    "旋律"
   ],
   "categories": [
     "multimedia",
@@ -15,11 +22,18 @@
     "en": {
       "name": "music 4",
       "tags": [
-        "semiquaver",
+        "music",
+        "note",
         "sixteenth note",
-        "note"
+        "semiquaver",
+        "sheet music",
+        "fast rhythm"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Advanced music notation",
+        "Fast tempo indicator",
+        "Music education app"
+      ]
     }
   }
 }

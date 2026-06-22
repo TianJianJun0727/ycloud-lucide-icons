@@ -1,35 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "无效或过期票券",
+    "已取消的入场通行证",
+    "拒绝入场或禁止进入"
+  ],
   "name": "票券斜杠",
   "tags": [
-    "条目",
-    "通过",
-    "优惠券",
-    "事件",
-    "音乐会",
-    "显示",
-    "赎回",
-    "使用过的",
-    "标记的",
-    "检查过",
-    "已验证",
-    "被宠坏的",
-    "无效的",
+    "票务",
     "无效",
-    "被拒绝",
-    "拒绝",
-    "禁止",
-    "禁止的",
-    "禁止的",
-    "禁止",
-    "取消",
-    "取消",
-    "已退款",
-    "删除",
-    "移除",
-    "清除",
-    "错误"
+    "作废",
+    "禁用",
+    "活动",
+    "错误",
+    "拒绝入场"
   ],
   "categories": [
     "transportation"
@@ -38,35 +22,19 @@
     "en": {
       "name": "ticket slash",
       "tags": [
-        "entry",
-        "pass",
-        "voucher",
-        "event",
-        "concert",
-        "show",
-        "redeemed",
-        "used",
-        "marked",
-        "checked",
-        "verified",
-        "spoiled",
-        "invalidated",
+        "ticket",
         "void",
-        "denied",
-        "refused",
-        "banned",
-        "barred",
-        "forbidden",
-        "prohibited",
-        "cancelled",
-        "cancellation",
-        "refunded",
-        "delete",
-        "remove",
-        "clear",
-        "error"
+        "invalid",
+        "disabled",
+        "event",
+        "error",
+        "denied"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Invalid or expired ticket",
+        "Cancelled admission pass",
+        "Entry denied or barred"
+      ]
     }
   }
 }

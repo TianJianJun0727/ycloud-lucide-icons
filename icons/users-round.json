@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "团队管理",
+    "群组成员",
+    "用户集合",
+    "共享账号"
+  ],
   "name": "用户组圆形",
   "tags": [
-    "分组",
-    "人"
+    "用户组",
+    "团队",
+    "群组",
+    "成员",
+    "多人",
+    "集体"
   ],
   "categories": [
     "account"
@@ -21,10 +30,19 @@
     "en": {
       "name": "users round",
       "tags": [
+        "user group",
+        "team",
         "group",
-        "people"
+        "members",
+        "multiple people",
+        "collective"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Team management",
+        "Group members",
+        "User collection",
+        "Shared account"
+      ]
     }
   }
 }

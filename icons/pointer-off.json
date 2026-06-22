@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在界面中禁用鼠标光标",
+    "切换光标可见性"
+  ],
   "name": "指针关闭",
   "tags": [
-    "鼠标"
+    "鼠标",
+    "光标",
+    "禁用",
+    "关闭"
   ],
   "categories": [
     "cursors"
@@ -12,9 +18,15 @@
     "en": {
       "name": "pointer off",
       "tags": [
-        "mouse"
+        "mouse",
+        "cursor",
+        "disabled",
+        "off"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable mouse cursor in UI",
+        "Toggle cursor visibility"
+      ]
     }
   }
 }

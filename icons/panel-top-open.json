@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "可展开的顶部面板控件",
+    "顶部导航抽屉的开关",
+    "显示/隐藏顶部菜单栏"
+  ],
   "name": "面板顶部打开",
   "tags": [
-    "菜单栏",
+    "展开",
     "抽屉",
+    "菜单栏",
     "显示",
-    "揭示",
-    "雪佛龙",
-    "向下"
+    "向下箭头",
+    "布局"
   ],
   "categories": [
     "layout",
@@ -18,14 +22,18 @@
     "en": {
       "name": "panel top open",
       "tags": [
-        "menu bar",
+        "expand",
         "drawer",
+        "menu bar",
         "show",
-        "reveal",
-        "chevron",
-        "down"
+        "chevron down",
+        "layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Expandable top panel control",
+        "Toggle for a top navigation drawer",
+        "Show/hide a top menu bar"
+      ]
     }
   }
 }

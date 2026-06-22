@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件保护",
+    "安全锁定",
+    "访问限制"
+  ],
   "name": "文件锁定",
   "tags": [
     "锁定",
-    "密码",
-    "安全"
+    "安全",
+    "保护",
+    "文件",
+    "加密"
   ],
   "categories": [
     "files",
@@ -24,10 +30,16 @@
       "name": "file lock",
       "tags": [
         "lock",
-        "password",
-        "security"
+        "security",
+        "protection",
+        "file",
+        "encryption"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File protection",
+        "Security lock",
+        "Access restriction"
+      ]
     }
   }
 }

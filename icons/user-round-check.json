@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "确认用户关注状态",
+    "验证订阅",
+    "批准用户账户",
+    "完成用户相关任务"
+  ],
   "name": "用户圆形勾选",
   "tags": [
-    "已关注",
-    "已订阅",
-    "完成",
-    "待办事项",
-    "勾选",
-    "完成",
-    "任务"
+    "用户验证",
+    "关注完成",
+    "订阅确认",
+    "用户批准",
+    "任务完成"
   ],
   "categories": [
     "account"
@@ -26,15 +29,18 @@
     "en": {
       "name": "user round check",
       "tags": [
-        "followed",
-        "subscribed",
-        "done",
-        "todo",
-        "tick",
-        "complete",
-        "task"
+        "user verification",
+        "follow confirmed",
+        "subscription approved",
+        "user approved",
+        "task completed"
       ],
-      "use-cases": []
+      "use-cases": [
+        "confirming user follow status",
+        "verifying subscription",
+        "approving user account",
+        "completing user-related task"
+      ]
     }
   }
 }

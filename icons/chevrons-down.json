@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向下导航",
+    "反向移动",
+    "减速控制",
+    "游戏向下移动"
+  ],
   "name": "双折角箭头下",
   "tags": [
-    "向后",
+    "向下",
+    "后退",
     "反向",
-    "较慢"
+    "减速",
+    "游戏控制"
   ],
   "categories": [
     "arrows",
@@ -15,11 +22,18 @@
     "en": {
       "name": "chevrons down",
       "tags": [
-        "backwards",
+        "down",
+        "backward",
         "reverse",
-        "slower"
+        "slow down",
+        "gaming control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Downward navigation",
+        "Reverse direction",
+        "Speed reduction control",
+        "Game downward movement"
+      ]
     }
   }
 }

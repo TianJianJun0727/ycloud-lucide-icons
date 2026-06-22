@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏死亡指示器",
+    "警告符号",
+    "恐怖主题设计"
+  ],
   "name": "头骨",
   "tags": [
+    "骷髅",
     "死亡",
     "危险",
-    "骨"
+    "游戏角色",
+    "恐怖",
+    "警告"
   ],
   "categories": [
     "gaming"
@@ -14,11 +21,18 @@
     "en": {
       "name": "skull",
       "tags": [
+        "skull",
         "death",
         "danger",
-        "bone"
+        "game character",
+        "horror",
+        "warning"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game death indicator",
+        "Warning symbol",
+        "Horror theme design"
+      ]
     }
   }
 }

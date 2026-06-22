@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在文档编辑器中替换所有匹配项",
+    "批量更新数据集中的值",
+    "在多个文件中查找并替换"
+  ],
   "name": "替换全部",
   "tags": [
-    "搜索",
-    "替代品",
-    "交换",
-    "改变"
+    "全部替换",
+    "批量替换",
+    "查找替换",
+    "文本编辑"
   ],
   "categories": [
     "text"
@@ -15,12 +19,16 @@
     "en": {
       "name": "replace all",
       "tags": [
-        "search",
-        "substitute",
-        "swap",
-        "change"
+        "replace all",
+        "batch replace",
+        "find and replace",
+        "text editing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Replace all occurrences in a document editor",
+        "Batch update values in a dataset",
+        "Find and replace across multiple files"
+      ]
     }
   }
 }

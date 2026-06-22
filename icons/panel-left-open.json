@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "展开左侧边栏",
+    "打开导航面板",
+    "显示抽屉菜单"
+  ],
   "name": "面板左打开",
   "tags": [
-    "小学",
+    "侧边栏",
+    "展开",
     "抽屉",
     "显示",
-    "揭示",
-    "雪佛龙",
-    "右",
-    ">"
+    "导航",
+    "布局",
+    "箭头",
+    "向右"
   ],
   "categories": [
     "layout",
@@ -27,15 +32,20 @@
     "en": {
       "name": "panel left open",
       "tags": [
-        "primary",
+        "sidebar",
+        "expand",
         "drawer",
         "show",
-        "reveal",
+        "navigation",
+        "layout",
         "chevron",
-        "right",
-        ">"
+        "right"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Expand left sidebar",
+        "Open navigation panel",
+        "Show drawer menu"
+      ]
     }
   }
 }

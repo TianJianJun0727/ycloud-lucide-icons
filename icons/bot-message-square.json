@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "聊天机器人界面",
+    "自动客服消息",
+    "AI助手对话"
+  ],
   "name": "机器人消息方形",
   "tags": [
     "机器人",
-    "AI",
-    "聊天",
-    "助手"
+    "AI聊天",
+    "智能助手",
+    "自动回复",
+    "消息框"
   ],
   "categories": [
     "development",
@@ -16,12 +21,17 @@
     "en": {
       "name": "bot message square",
       "tags": [
-        "robot",
-        "ai",
-        "chat",
-        "assistant"
+        "bot",
+        "AI chat",
+        "smart assistant",
+        "auto reply",
+        "message box"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chatbot interface",
+        "Automated customer service",
+        "AI assistant conversation"
+      ]
     }
   }
 }

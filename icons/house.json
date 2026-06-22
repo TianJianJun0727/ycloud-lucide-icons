@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "首页导航",
+    "房产列表",
+    "物业管理",
+    "地址选择"
+  ],
   "name": "房屋",
   "tags": [
     "首页",
-    "生活",
-    "建筑物",
-    "居住地",
-    "建筑学"
+    "房屋",
+    "住宅",
+    "建筑",
+    "家"
   ],
   "categories": [
     "buildings",
@@ -27,12 +32,17 @@
       "name": "house",
       "tags": [
         "home",
-        "living",
-        "building",
+        "house",
         "residence",
+        "building",
         "architecture"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Homepage navigation",
+        "Real estate listing",
+        "Property management",
+        "Address selection"
+      ]
     }
   }
 }

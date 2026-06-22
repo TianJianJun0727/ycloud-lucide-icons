@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向上移动或向上滚动按钮",
+    "增加或提升控制",
+    "游戏手柄上键控制"
+  ],
   "name": "圆形箭头上",
   "tags": [
+    "向上",
     "前进",
     "方向",
     "北",
-    "标志",
-    "按钮"
+    "按钮",
+    "提升",
+    "游戏控制"
   ],
   "categories": [
     "arrows",
@@ -25,13 +31,19 @@
     "en": {
       "name": "circle arrow up",
       "tags": [
+        "up",
         "forward",
         "direction",
         "north",
-        "sign",
-        "button"
+        "button",
+        "increase",
+        "game control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Move up or scroll up button",
+        "Increase or boost control",
+        "Gamepad up control"
+      ]
     }
   }
 }

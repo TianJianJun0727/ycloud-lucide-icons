@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI设计工具形状选择",
+    "文档格式图标",
+    "图形构图元素"
+  ],
   "name": "矩形圆形",
   "tags": [
-    "作曲",
-    "键盘",
-    "钥匙",
-    "按钮"
+    "形状",
+    "矩形",
+    "圆形",
+    "几何",
+    "设计",
+    "布局",
+    "UI元素",
+    "占位符"
   ],
   "categories": [
     "development",
@@ -16,12 +24,20 @@
     "en": {
       "name": "rectangle circle",
       "tags": [
-        "compose",
-        "keyboard",
-        "key",
-        "button"
+        "shape",
+        "rectangle",
+        "circle",
+        "geometry",
+        "design",
+        "layout",
+        "UI element",
+        "placeholder"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI design tool shape selection",
+        "Document formatting icon",
+        "Graphic composition element"
+      ]
     }
   }
 }

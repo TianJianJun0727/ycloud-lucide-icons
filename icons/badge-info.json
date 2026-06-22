@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "账户信息徽章",
+    "帮助提示指示器",
+    "状态信息图标"
+  ],
   "name": "徽章信息",
   "tags": [
-    "已验证",
-    "未经验证",
-    "帮助"
+    "信息",
+    "帮助",
+    "详情",
+    "提示",
+    "账户",
+    "状态"
   ],
   "categories": [
     "account",
@@ -16,11 +23,18 @@
     "en": {
       "name": "badge info",
       "tags": [
-        "verified",
-        "unverified",
-        "help"
+        "info",
+        "help",
+        "details",
+        "tip",
+        "account",
+        "status"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Account information badge",
+        "Help tooltip indicator",
+        "Status information icon"
+      ]
     }
   }
 }

@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件树导航",
+    "目录层级显示",
+    "文件夹结构浏览器"
+  ],
   "name": "文件夹树",
   "tags": [
-    "目录",
-    "树",
-    "浏览器"
+    "目录树",
+    "文件夹树",
+    "树形结构",
+    "文件浏览器",
+    "层级"
   ],
   "categories": [
     "files"
@@ -14,11 +20,17 @@
     "en": {
       "name": "folder tree",
       "tags": [
-        "directory",
-        "tree",
-        "browser"
+        "directory tree",
+        "folder tree",
+        "tree structure",
+        "file browser",
+        "hierarchy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File tree navigation",
+        "Directory hierarchy display",
+        "Folder structure browser"
+      ]
     }
   }
 }

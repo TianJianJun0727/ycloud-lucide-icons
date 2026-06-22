@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "复制粘贴功能",
+    "内容暂存",
+    "数据中转"
+  ],
   "name": "剪贴板",
   "tags": [
     "复制",
-    "粘贴"
+    "粘贴",
+    "内容",
+    "数据",
+    "临时存储"
   ],
   "categories": [
     "text"
@@ -14,9 +21,16 @@
       "name": "clipboard",
       "tags": [
         "copy",
-        "paste"
+        "paste",
+        "content",
+        "data",
+        "temporary storage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Copy paste functionality",
+        "Content temporary storage",
+        "Data transfer"
+      ]
     }
   }
 }

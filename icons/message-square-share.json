@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "分享消息",
+    "转发聊天",
+    "导出对话"
+  ],
   "name": "消息方形分享",
   "tags": [
-    "评论",
+    "分享",
+    "转发",
+    "消息",
     "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
-    "网络",
-    "前进"
+    "发送",
+    "传播",
+    "导出",
+    "网络"
   ],
   "categories": [
     "social"
@@ -19,16 +23,20 @@
     "en": {
       "name": "message square share",
       "tags": [
-        "comment",
+        "share",
+        "forward",
+        "message",
         "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "network",
-        "forward"
+        "send",
+        "broadcast",
+        "export",
+        "network"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sharing a message",
+        "Forwarding a chat",
+        "Exporting conversation"
+      ]
     }
   }
 }

@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "锁定文件夹",
+    "安全目录",
+    "受保护文件夹"
+  ],
   "name": "文件夹锁定",
   "tags": [
     "目录",
     "锁定",
-    "私人的",
+    "私有",
     "安全",
-    "受保护的"
+    "保护"
   ],
   "categories": [
     "files",
@@ -23,7 +27,11 @@
         "security",
         "protected"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Locked folder",
+        "Secure directory",
+        "Protected folder"
+      ]
     }
   }
 }

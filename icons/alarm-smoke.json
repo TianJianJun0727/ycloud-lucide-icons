@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家庭安全设置",
+    "火灾报警指示器",
+    "烟雾探测器状态"
+  ],
   "name": "闹钟烟雾",
   "tags": [
-    "火",
-    "告警",
-    "警告",
-    "探测器",
-    "一氧化碳",
+    "烟雾报警器",
+    "火灾报警",
     "安全",
-    "设备",
-    "便利设施"
+    "探测器",
+    "警报",
+    "家庭安全"
   ],
   "categories": [
     "home",
@@ -21,16 +23,18 @@
     "en": {
       "name": "alarm smoke",
       "tags": [
-        "fire",
-        "alert",
-        "warning",
-        "detector",
-        "carbon monoxide",
+        "smoke alarm",
+        "fire alarm",
         "safety",
-        "equipment",
-        "amenities"
+        "detector",
+        "alert",
+        "home security"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home safety settings",
+        "Fire alarm indicator",
+        "Smoke detector status"
+      ]
     }
   }
 }

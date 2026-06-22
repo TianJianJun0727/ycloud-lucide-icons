@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学求和符号",
+    "统计总和计算",
+    "公式编辑器"
+  ],
   "name": "方形西格玛",
   "tags": [
     "总和",
-    "计算",
-    "公式",
+    "求和",
     "数学",
-    "枚举",
-    "列举"
+    "公式",
+    "计算",
+    "统计"
   ],
   "categories": [
     "text",
@@ -27,13 +31,17 @@
       "name": "square sigma",
       "tags": [
         "sum",
-        "calculate",
-        "formula",
+        "sigma",
         "math",
-        "enumeration",
-        "enumerate"
+        "formula",
+        "calculation",
+        "statistics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mathematical summation symbol",
+        "Statistics total calculation",
+        "Formula editor"
+      ]
     }
   }
 }

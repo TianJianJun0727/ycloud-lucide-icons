@@ -1,22 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电脑硬件规格面板",
+    "软件中的图形设置",
+    "挖矿设备状态指示器",
+    "3D渲染应用程序"
+  ],
   "name": "图形处理器",
   "tags": [
-    "处理器",
-    "核心",
-    "技术",
-    "电脑",
+    "显卡",
     "芯片",
-    "电路",
-    "规格",
-    "图形处理单元",
-    "视频卡",
-    "显示适配器",
-    "民主德国",
+    "处理器",
     "渲染",
-    "数字图像处理",
-    "加密货币挖矿"
+    "计算",
+    "硬件",
+    "游戏",
+    "图形"
   ],
   "categories": [
     "devices",
@@ -26,22 +25,21 @@
     "en": {
       "name": "gpu",
       "tags": [
-        "processor",
-        "cores",
-        "technology",
-        "computer",
+        "graphics card",
         "chip",
-        "circuit",
-        "specs",
-        "graphics processing unit",
-        "video card",
-        "display adapter",
-        "gddr",
+        "processor",
         "rendering",
-        "digital image processing",
-        "crypto mining"
+        "computing",
+        "hardware",
+        "gaming",
+        "graphics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "PC hardware specification panel",
+        "Graphics settings in software",
+        "Mining rig status indicator",
+        "3D rendering application"
+      ]
     }
   }
 }

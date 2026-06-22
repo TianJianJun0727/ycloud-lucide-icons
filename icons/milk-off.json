@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "乳制品过敏指示器",
+    "无乳糖产品筛选",
+    "饮食偏好设置"
+  ],
   "name": "牛奶关闭",
   "tags": [
-    "不含乳糖",
-    "瓶子",
-    "饮料",
-    "喝",
-    "水",
+    "无乳糖",
     "过敏",
-    "不宽容",
-    "饮食"
+    "不含牛奶",
+    "饮食限制",
+    "饮料禁用"
   ],
   "categories": [
     "food-beverage"
@@ -20,15 +21,16 @@
       "name": "milk off",
       "tags": [
         "lactose free",
-        "bottle",
-        "beverage",
-        "drink",
-        "water",
         "allergy",
-        "intolerance",
-        "diet"
+        "dairy free",
+        "dietary restriction",
+        "beverage off"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dairy allergy indicator",
+        "Lactose-free product filter",
+        "Dietary preference setting"
+      ]
     }
   }
 }

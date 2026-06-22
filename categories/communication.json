@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "沟通",
-  "icon": "message-circle",
   "i18n": {
     "en": {
       "title": "Communication"

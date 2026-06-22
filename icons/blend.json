@@ -1,26 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计软件",
+    "图片编辑工具",
+    "透明度调节界面"
+  ],
   "name": "混合",
   "tags": [
-    "模式",
-    "覆盖",
-    "乘以",
-    "屏幕",
-    "不透明度",
+    "混合",
     "透明度",
-    "阿尔法",
-    "过滤器",
-    "镜片",
-    "混合的",
-    "色调",
-    "色调",
-    "色调",
-    "饱和度",
-    "亮度",
-    "重叠",
     "颜色",
-    "颜色"
+    "设计",
+    "滤镜"
   ],
   "categories": [
     "design",
@@ -32,26 +23,17 @@
     "en": {
       "name": "blend",
       "tags": [
-        "mode",
-        "overlay",
-        "multiply",
-        "screen",
-        "opacity",
+        "blend",
         "transparency",
-        "alpha",
-        "filters",
-        "lenses",
-        "mixed",
-        "shades",
-        "tints",
-        "hues",
-        "saturation",
-        "brightness",
-        "overlap",
-        "colors",
-        "colours"
+        "color",
+        "design",
+        "filter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Design software",
+        "Image editing tool",
+        "Transparency adjustment interface"
+      ]
     }
   }
 }

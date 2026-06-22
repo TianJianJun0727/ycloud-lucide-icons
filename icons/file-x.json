@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除文件",
+    "关闭出错文档",
+    "移除附件"
+  ],
   "name": "文件关闭",
   "tags": [
-    "迷失了",
     "删除",
     "移除",
-    "文档"
+    "关闭",
+    "错误",
+    "无效"
   ],
   "categories": [
     "files"
@@ -15,12 +20,17 @@
     "en": {
       "name": "file X",
       "tags": [
-        "lost",
         "delete",
         "remove",
-        "document"
+        "close",
+        "error",
+        "invalid"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Deleting a file",
+        "Closing a document with an error",
+        "Removing an attachment"
+      ]
     }
   }
 }

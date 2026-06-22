@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学公式编辑器",
+    "几何图形绘制工具",
+    "曲线设计软件"
+  ],
   "name": "切线",
   "tags": [
-    "切向的",
-    "形状",
+    "切线",
+    "几何",
+    "数学",
     "圆形",
-    "几何学",
-    "三角学",
+    "设计",
     "贝塞尔曲线"
   ],
   "categories": [
@@ -20,14 +24,18 @@
     "en": {
       "name": "tangent",
       "tags": [
-        "tangential",
-        "shape",
-        "circle",
+        "tangent",
         "geometry",
-        "trigonometry",
+        "mathematics",
+        "circle",
+        "design",
         "bezier curve"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Math equation editor",
+        "Geometry diagram tool",
+        "Design software for curves"
+      ]
     }
   }
 }

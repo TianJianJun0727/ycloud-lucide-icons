@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件分组",
+    "对象集合",
+    "批量操作"
+  ],
   "name": "组合",
   "tags": [
-    "立方体",
-    "包",
-    "零件",
-    "单位",
-    "收藏",
-    "集群",
-    "聚集",
-    "虚线"
+    "组合",
+    "集合",
+    "分组",
+    "文件组",
+    "集群"
   ],
   "categories": [
     "files"
@@ -19,16 +20,17 @@
     "en": {
       "name": "group",
       "tags": [
-        "cubes",
-        "packages",
-        "parts",
-        "units",
+        "group",
         "collection",
         "cluster",
-        "gather",
-        "dashed"
+        "file group",
+        "bundle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File grouping",
+        "Object collection",
+        "Batch operations"
+      ]
     }
   }
 }

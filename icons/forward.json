@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "转发电子邮件",
+    "通过邮件分享内容",
+    "邮件客户端操作按钮"
+  ],
   "name": "前进",
   "tags": [
-    "发送",
+    "转发",
+    "发送邮件",
     "分享",
-    "邮箱"
+    "邮件操作"
   ],
   "categories": [
     "mail"
@@ -14,11 +19,16 @@
     "en": {
       "name": "forward",
       "tags": [
-        "send",
+        "forward",
+        "send-email",
         "share",
-        "email"
+        "email-action"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Forwarding an email message",
+        "Sharing content via email",
+        "Email client action buttons"
+      ]
     }
   }
 }

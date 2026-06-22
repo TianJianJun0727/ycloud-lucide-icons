@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设置目录",
+    "配置文件",
+    "系统偏好文件夹"
+  ],
   "name": "文件夹齿轮",
   "tags": [
-    "目录",
     "设置",
-    "控制",
+    "配置",
     "偏好",
-    "设置",
-    "编辑",
-    "齿轮"
+    "系统",
+    "管理"
   ],
   "categories": [
     "files"
@@ -26,15 +28,17 @@
     "en": {
       "name": "folder cog",
       "tags": [
-        "directory",
         "settings",
-        "control",
+        "configuration",
         "preferences",
-        "cog",
-        "edit",
-        "gear"
+        "system",
+        "management"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Settings directory",
+        "Configuration files",
+        "System preferences folder"
+      ]
     }
   }
 }

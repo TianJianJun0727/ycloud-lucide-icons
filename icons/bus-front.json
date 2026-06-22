@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "公共交通预订",
+    "旅行行程",
+    "车队管理"
+  ],
   "name": "公交车正面",
   "tags": [
-    "教练",
+    "公交车",
+    "巴士",
     "车辆",
+    "交通",
+    "客运",
     "旅行",
-    "路"
+    "正面"
   ],
   "categories": [
     "transportation"
@@ -15,12 +22,19 @@
     "en": {
       "name": "bus front",
       "tags": [
+        "bus",
         "coach",
         "vehicle",
-        "trip",
-        "road"
+        "transportation",
+        "public transit",
+        "travel",
+        "front"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Public transport booking",
+        "Travel itinerary",
+        "Vehicle fleet management"
+      ]
     }
   }
 }

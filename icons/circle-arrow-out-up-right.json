@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在新窗口中打开链接",
+    "向右上角展开面板",
+    "指向东北的方向指示器"
+  ],
   "name": "圆形箭头外部上右",
   "tags": [
     "向外",
     "方向",
     "东北",
-    "对角线"
+    "对角线",
+    "箭头",
+    "扩展",
+    "新窗口"
   ],
   "categories": [
     "arrows"
@@ -25,10 +32,17 @@
       "tags": [
         "outwards",
         "direction",
-        "north-east",
-        "diagonal"
+        "northeast",
+        "diagonal",
+        "arrow",
+        "expand",
+        "new window"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Open link in a new window",
+        "Expand a panel to the top right",
+        "Directional indicator for northeast"
+      ]
     }
   }
 }

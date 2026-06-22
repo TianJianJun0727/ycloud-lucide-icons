@@ -1,26 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学符号",
+    "零值指示器",
+    "直径符号",
+    "除法运算"
+  ],
   "name": "圆形斜杠2",
   "tags": [
     "直径",
     "零",
-    "Ø",
-    "什么都没有",
-    "空",
-    "无效",
-    "禁止",
+    "空值",
     "数学",
-    "划分",
-    "师",
-    "一半",
-    "分裂",
-    "/",
-    "平均",
-    "平均",
-    "意思是",
-    "中位数",
-    "正常"
+    "除法",
+    "平均值"
   ],
   "categories": [
     "shapes",
@@ -41,24 +34,17 @@
       "tags": [
         "diameter",
         "zero",
-        "ø",
-        "nothing",
         "null",
-        "void",
-        "ban",
         "math",
-        "divide",
         "division",
-        "half",
-        "split",
-        "/",
-        "average",
-        "avg",
-        "mean",
-        "median",
-        "normal"
+        "average"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mathematical notation",
+        "Zero value indicator",
+        "Diameter symbol",
+        "Division operation"
+      ]
     }
   }
 }

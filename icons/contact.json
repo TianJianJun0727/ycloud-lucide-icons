@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "联系人详情页",
+    "添加新联系人",
+    "用户目录",
+    "客户支持"
+  ],
   "name": "联系人",
   "tags": [
+    "联系人",
     "用户",
-    "人",
-    "家庭",
-    "朋友",
-    "相识",
-    "上市",
-    "网络"
+    "个人",
+    "社交",
+    "通讯录",
+    "好友",
+    "人脉"
   ],
   "categories": [
     "account",
@@ -21,15 +26,20 @@
     "en": {
       "name": "contact",
       "tags": [
+        "contact",
         "user",
         "person",
-        "family",
+        "social",
+        "address book",
         "friend",
-        "acquaintance",
-        "listing",
-        "networking"
+        "network"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Contact details page",
+        "Add new contact",
+        "User directory",
+        "Customer support"
+      ]
     }
   }
 }

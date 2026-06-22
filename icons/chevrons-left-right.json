@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "水平扩展控制",
+    "全屏切换",
+    "左右面板调整大小"
+  ],
   "name": "双折角箭头左右",
   "tags": [
-    "展开",
-    "水平的",
-    "展开"
+    "水平展开",
+    "左右扩展",
+    "全屏",
+    "缩放"
   ],
   "categories": [
     "arrows"
@@ -14,11 +19,16 @@
     "en": {
       "name": "chevrons left right",
       "tags": [
-        "expand",
-        "horizontal",
-        "unfold"
+        "horizontal expand",
+        "left right expansion",
+        "full screen",
+        "zoom"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Horizontal expansion control",
+        "Full screen toggle",
+        "Left-right panel resizing"
+      ]
     }
   }
 }

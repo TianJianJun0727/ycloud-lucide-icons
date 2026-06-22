@@ -1,36 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "防护等级降低",
+    "安全功能移除",
+    "防御降级通知"
+  ],
   "name": "盾牌减少",
   "tags": [
-    "取消屏蔽",
-    "网络安全",
-    "不安全的",
-    "解除戒备",
-    "解锁",
-    "防病毒软件",
-    "干净",
-    "清除",
-    "消毒",
-    "补丁",
-    "修复",
-    "停止",
-    "取消",
-    "移除",
-    "放松",
-    "管理员",
-    "波峰",
-    "勇敢",
-    "削弱",
-    "损坏的",
-    "击中",
-    "解除武装",
-    "禁用",
-    "停用",
-    "退役",
-    "降级",
-    "最小值",
-    "-"
+    "减少防护",
+    "安全降级",
+    "解除保护",
+    "禁用安全",
+    "削弱防御"
   ],
   "categories": [
     "account",
@@ -42,36 +23,17 @@
     "en": {
       "name": "shield minus",
       "tags": [
-        "unshield",
-        "cybersecurity",
-        "unsecure",
-        "unguard",
-        "unblock",
-        "antivirus",
-        "clean",
-        "clear",
-        "disinfect",
-        "patch",
-        "fix",
-        "stop",
-        "cancel",
-        "remove",
-        "relax",
-        "admin",
-        "crest",
-        "bravery",
-        "weakened",
-        "damaged",
-        "hit",
-        "unarm",
-        "disable",
-        "deactivate",
-        "decommission",
-        "downgraded",
-        "minimum",
-        "-"
+        "reduce protection",
+        "security downgrade",
+        "remove protection",
+        "disable security",
+        "weaken defense"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Protection level decreased",
+        "Security feature removed",
+        "Defense downgrade notification"
+      ]
     }
   }
 }

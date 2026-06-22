@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "交通服务选择",
+    "路线规划界面",
+    "旅行预订系统"
+  ],
   "name": "公交车",
   "tags": [
+    "公交车",
     "巴士",
     "车辆",
+    "交通",
     "运输",
-    "旅行"
+    "旅行",
+    "公共交通"
   ],
   "categories": [
     "transportation"
@@ -18,9 +25,15 @@
         "bus",
         "vehicle",
         "transport",
-        "trip"
+        "transportation",
+        "travel",
+        "public transit"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Transportation service selection",
+        "Route planning interface",
+        "Travel booking system"
+      ]
     }
   }
 }

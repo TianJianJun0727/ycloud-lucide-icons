@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据库备份恢复系统",
+    "基于时间的数据恢复",
+    "灾难恢复规划"
+  ],
   "name": "数据库备份",
   "tags": [
-    "存储",
-    "记忆",
-    "字节",
-    "服务器",
+    "数据库",
     "备份",
-    "时间机器",
-    "旋转",
-    "箭头",
-    "左"
+    "恢复",
+    "时间点",
+    "数据保护",
+    "容灾"
   ],
   "categories": [
     "devices",
@@ -24,17 +25,18 @@
     "en": {
       "name": "database backup",
       "tags": [
-        "storage",
-        "memory",
-        "bytes",
-        "servers",
+        "database",
         "backup",
-        "timemachine",
-        "rotate",
-        "arrow",
-        "left"
+        "restore",
+        "point in time",
+        "data protection",
+        "disaster recovery"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Database backup and recovery systems",
+        "Time-based data restoration",
+        "Disaster recovery planning"
+      ]
     }
   }
 }

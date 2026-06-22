@@ -1,29 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在表格右侧插入列",
+    "在网格布局中添加间距",
+    "将元素对齐到右边缘"
+  ],
   "name": "两端水平起始",
   "tags": [
+    "布局",
     "插入",
-    "添加",
-    "右",
-    "插槽",
-    "挤压",
-    "空间",
-    "垂直",
+    "右侧",
+    "间距",
     "网格",
     "表格",
-    "行",
-    "细胞",
-    "卓越",
-    "电子表格",
-    "会计",
-    "数据",
-    "输入",
-    "条目",
-    "条目",
-    "块",
-    "矩形",
-    "雪佛龙"
+    "单元格",
+    "对齐"
   ],
   "categories": [
     "layout",
@@ -42,29 +33,20 @@
     "en": {
       "name": "between horizontal start",
       "tags": [
+        "layout",
         "insert",
-        "add",
         "right",
-        "slot",
-        "squeeze",
-        "space",
-        "vertical",
+        "spacing",
         "grid",
         "table",
-        "rows",
-        "cells",
-        "excel",
-        "spreadsheet",
-        "accountancy",
-        "data",
-        "enter",
-        "entry",
-        "entries",
-        "blocks",
-        "rectangles",
-        "chevron"
+        "cell",
+        "alignment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Insert column to the right in a table",
+        "Add space in a grid layout",
+        "Align elements to the right edge"
+      ]
     }
   }
 }

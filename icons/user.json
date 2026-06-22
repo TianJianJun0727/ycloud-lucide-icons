@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户登录",
+    "账号图标",
+    "个人资料图片",
+    "联系信息"
+  ],
   "name": "用户",
   "tags": [
-    "人",
-    "帐户",
-    "联系方式"
+    "用户",
+    "账号",
+    "个人",
+    "头像",
+    "资料",
+    "联系人"
   ],
   "categories": [
     "account"
@@ -14,11 +22,19 @@
     "en": {
       "name": "user",
       "tags": [
-        "person",
+        "user",
         "account",
+        "person",
+        "avatar",
+        "profile",
         "contact"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User login",
+        "Account icon",
+        "Profile picture",
+        "Contact information"
+      ]
     }
   }
 }

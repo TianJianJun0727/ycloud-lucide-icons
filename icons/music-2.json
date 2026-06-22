@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐播放器界面",
+    "音频文件指示器",
+    "乐谱编辑器"
+  ],
   "name": "音乐2",
   "tags": [
-    "颤抖",
+    "音乐",
+    "音符",
     "八分音符",
-    "注释"
+    "乐谱",
+    "音频",
+    "声音"
   ],
   "categories": [
     "multimedia",
@@ -15,11 +22,18 @@
     "en": {
       "name": "music 2",
       "tags": [
-        "quaver",
+        "music",
+        "note",
         "eighth note",
-        "note"
+        "quaver",
+        "sheet music",
+        "audio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music player interface",
+        "Audio file indicator",
+        "Sheet music editor"
+      ]
     }
   }
 }

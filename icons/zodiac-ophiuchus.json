@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "包含第十三个星座的占星应用",
+    "星座教育内容",
+    "另类星座运势图标"
+  ],
   "name": "星座蛇夫座",
   "tags": [
+    "蛇夫座",
+    "星座",
+    "占星",
     "蛇",
-    "蛇架",
     "治愈",
     "知识",
     "天文学",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "星座运势"
   ],
   "categories": [
     "social",
@@ -22,18 +24,20 @@
     "en": {
       "name": "zodiac ophiuchus",
       "tags": [
+        "ophiuchus",
+        "zodiac",
+        "astrology",
         "serpent",
-        "snake holder",
         "healing",
         "knowledge",
         "astronomy",
-        "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "horoscope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app for the 13th sign",
+        "Educational content on constellations",
+        "Alternative horoscope icon"
+      ]
     }
   }
 }

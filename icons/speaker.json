@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频设备开关或设置",
+    "多媒体播放器控制",
+    "音响系统配置",
+    "音量调节界面"
+  ],
   "name": "扬声器",
   "tags": [
     "声音",
     "音频",
+    "扬声器",
     "音乐",
-    "高音扬声器",
-    "低音炮",
-    "低音",
-    "生产",
-    "制片人",
-    "DJ"
+    "音响",
+    "设备",
+    "播放",
+    "音量"
   ],
   "categories": [
     "multimedia",
@@ -23,15 +27,19 @@
       "tags": [
         "sound",
         "audio",
+        "speaker",
         "music",
-        "tweeter",
-        "subwoofer",
-        "bass",
-        "production",
-        "producer",
-        "dj"
+        "sound system",
+        "device",
+        "playback",
+        "volume"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio device toggle or settings",
+        "Multimedia player controls",
+        "Sound system configuration",
+        "Volume adjustment UI"
+      ]
     }
   }
 }

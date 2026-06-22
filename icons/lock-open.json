@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "解锁功能或设置",
+    "显示可访问状态",
+    "禁用安全限制"
+  ],
   "name": "锁定打开",
   "tags": [
-    "安全"
+    "解锁",
+    "安全",
+    "打开",
+    "访问",
+    "未锁定",
+    "启用"
   ],
   "categories": [
     "security"
@@ -20,9 +29,18 @@
     "en": {
       "name": "lock open",
       "tags": [
-        "security"
+        "unlock",
+        "security",
+        "open",
+        "access",
+        "unlocked",
+        "enable"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Unlock a feature or setting",
+        "Show accessible state",
+        "Disable security restriction"
+      ]
     }
   }
 }

@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "邮件订阅服务",
+    "邮件列表管理",
+    "新闻通讯分发"
+  ],
   "name": "邮箱",
   "tags": [
-    "电子邮件",
-    "消息",
-    "字母",
+    "邮箱",
     "邮件列表",
-    "时事通讯"
+    "通讯录",
+    "订阅",
+    "新闻邮件"
   ],
   "categories": [
     "mail"
@@ -16,13 +20,17 @@
     "en": {
       "name": "mailbox",
       "tags": [
-        "emails",
-        "messages",
-        "letters",
+        "mailbox",
         "mailing list",
+        "address book",
+        "subscription",
         "newsletter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Email subscription service",
+        "Mailing list management",
+        "Newsletter distribution"
+      ]
     }
   }
 }

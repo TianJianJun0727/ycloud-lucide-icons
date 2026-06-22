@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学或科学符号",
+    "统计与求和功能",
+    "公式编辑器工具栏"
+  ],
   "name": "西格玛",
   "tags": [
-    "总和",
-    "计算",
-    "公式",
+    "西格玛",
+    "求和",
     "数学",
-    "枚举",
-    "列举"
+    "公式",
+    "计算",
+    "统计",
+    "科学"
   ],
   "categories": [
     "text",
@@ -19,14 +24,19 @@
     "en": {
       "name": "sigma",
       "tags": [
+        "sigma",
         "sum",
-        "calculate",
+        "mathematics",
         "formula",
-        "math",
-        "enumeration",
-        "enumerate"
+        "calculate",
+        "statistics",
+        "science"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mathematical or scientific notation",
+        "Statistics and summation functions",
+        "Formula editor toolbar"
+      ]
     }
   }
 }

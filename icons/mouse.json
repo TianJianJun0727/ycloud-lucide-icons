@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "计算机外设",
+    "输入设备",
+    "指向设备"
+  ],
   "name": "鼠标",
   "tags": [
-    "装置",
+    "鼠标",
+    "设备",
+    "点击",
     "滚动",
-    "点击"
+    "输入设备",
+    "指针"
   ],
   "categories": [
     "devices"
@@ -14,11 +21,18 @@
     "en": {
       "name": "mouse",
       "tags": [
+        "mouse",
         "device",
+        "click",
         "scroll",
-        "click"
+        "input-device",
+        "pointer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Computer peripherals",
+        "Input devices",
+        "Pointing devices"
+      ]
     }
   }
 }

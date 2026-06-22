@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用",
+    "亮色模式切换",
+    "夏季指示器",
+    "太阳能显示"
+  ],
   "name": "太阳",
   "tags": [
-    "亮度",
+    "太阳",
     "天气",
-    "光",
-    "夏天"
+    "亮度",
+    "夏天",
+    "阳光",
+    "白天",
+    "热",
+    "可持续"
   ],
   "categories": [
     "accessibility",
@@ -18,12 +27,21 @@
     "en": {
       "name": "sun",
       "tags": [
-        "brightness",
+        "sun",
         "weather",
-        "light",
-        "summer"
+        "brightness",
+        "summer",
+        "sunlight",
+        "day",
+        "heat",
+        "sustainability"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app",
+        "Light mode toggle",
+        "Summer season indicator",
+        "Solar energy display"
+      ]
     }
   }
 }

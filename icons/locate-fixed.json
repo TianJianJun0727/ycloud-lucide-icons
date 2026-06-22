@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在地图上显示当前位置",
+    "GPS跟踪界面",
+    "位置共享功能"
+  ],
   "name": "定位固定",
   "tags": [
     "地图",
-    "全球定位系统",
+    "GPS",
+    "定位",
     "位置",
-    "十字"
+    "固定",
+    "坐标",
+    "导航"
   ],
   "categories": [
     "navigation"
@@ -18,9 +25,16 @@
         "map",
         "gps",
         "location",
-        "cross"
+        "pin",
+        "fixed",
+        "coordinates",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Show current location on a map",
+        "GPS tracking interface",
+        "Location sharing feature"
+      ]
     }
   }
 }

@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "存储设备状态",
+    "服务器硬件指示器",
+    "数据容量显示"
+  ],
   "name": "硬盘驱动器",
   "tags": [
-    "电脑",
-    "服务器",
-    "记忆",
-    "数据",
-    "固态硬盘",
-    "磁盘",
     "硬盘",
     "存储",
+    "数据",
+    "服务器",
     "硬件",
     "备份",
-    "媒体"
+    "固态硬盘",
+    "磁盘"
   ],
   "categories": [
     "development",
@@ -23,19 +24,20 @@
     "en": {
       "name": "hard drive",
       "tags": [
-        "computer",
-        "server",
-        "memory",
-        "data",
-        "ssd",
-        "disk",
-        "hard disk",
+        "hard drive",
         "storage",
+        "data",
+        "server",
         "hardware",
         "backup",
-        "media"
+        "ssd",
+        "disk"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Storage device status",
+        "Server hardware indicator",
+        "Data capacity display"
+      ]
     }
   }
 }

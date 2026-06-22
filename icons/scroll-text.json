@@ -1,20 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏对话框文本",
+    "代码编辑器滚动视图",
+    "文档阅读器界面",
+    "日志文件显示"
+  ],
   "name": "滚动文本",
   "tags": [
-    "纸",
-    "日志",
-    "经文",
-    "文档",
-    "笔记",
-    "羊皮纸",
-    "列表",
-    "长",
-    "脚本",
-    "故事",
-    "代码",
-    "编码"
+    "滚动文本",
+    "卷轴文本",
+    "长文本",
+    "文档滚动",
+    "代码日志",
+    "游戏对话"
   ],
   "categories": [
     "gaming",
@@ -25,20 +24,19 @@
     "en": {
       "name": "scroll text",
       "tags": [
-        "paper",
-        "log",
-        "scripture",
-        "document",
-        "notes",
-        "parchment",
-        "list",
-        "long",
-        "script",
-        "story",
-        "code",
-        "coding"
+        "scroll text",
+        "scroll document",
+        "long text",
+        "document scroll",
+        "code log",
+        "game dialogue"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game dialogue box text",
+        "Code editor scroll view",
+        "Document reader interface",
+        "Log file display"
+      ]
     }
   }
 }

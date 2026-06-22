@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "糖果商店标识",
+    "甜品菜单",
+    "食品包装设计",
+    "儿童应用界面"
+  ],
   "name": "糖果",
   "tags": [
-    "糖",
-    "食物",
-    "甜甜的"
+    "糖果",
+    "甜食",
+    "零食",
+    "甜品"
   ],
   "categories": [
     "food-beverage"
@@ -14,11 +20,17 @@
     "en": {
       "name": "candy",
       "tags": [
-        "sugar",
-        "food",
-        "sweet"
+        "candy",
+        "sweets",
+        "snack",
+        "dessert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Candy store branding",
+        "Dessert menu",
+        "Food packaging design",
+        "Children's app interface"
+      ]
     }
   }
 }

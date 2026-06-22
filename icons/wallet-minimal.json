@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "简约钱包界面",
+    "支付概览",
+    "金融应用图标"
+  ],
   "name": "钱包极简",
   "tags": [
+    "钱包",
+    "简约",
+    "支付",
     "金融",
-    "口袋"
+    "货币"
   ],
   "categories": [
     "account",
@@ -22,10 +29,17 @@
     "en": {
       "name": "wallet minimal",
       "tags": [
+        "wallet",
+        "minimal",
+        "payment",
         "finance",
-        "pocket"
+        "currency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Simple wallet interface",
+        "Payment overview",
+        "Financial app icon"
+      ]
     }
   }
 }

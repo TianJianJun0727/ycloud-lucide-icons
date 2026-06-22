@@ -1,14 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "喜欢按钮",
+    "收藏指示器",
+    "爱心表情",
+    "健康应用",
+    "纸牌花色",
+    "装饰形状"
+  ],
   "name": "爱心",
   "tags": [
     "喜欢",
     "爱",
     "情感",
-    "西装",
-    "玩",
-    "卡片"
+    "收藏",
+    "健康",
+    "纸牌",
+    "形状"
   ],
   "categories": [
     "medical",
@@ -25,11 +33,19 @@
         "like",
         "love",
         "emotion",
-        "suit",
-        "playing",
-        "cards"
+        "favorite",
+        "health",
+        "cards",
+        "shape"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Like button",
+        "Favorite indicator",
+        "Love emotion",
+        "Health app",
+        "Playing card suit",
+        "Decorative shape"
+      ]
     }
   }
 }

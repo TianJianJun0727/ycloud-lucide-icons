@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "活动通知警报",
+    "新消息提示音",
+    "闹钟响铃"
+  ],
   "name": "铃铛响铃",
   "tags": [
-    "闹钟",
     "通知",
+    "响铃",
+    "提醒",
+    "警报",
     "声音",
-    "提醒"
+    "新消息"
   ],
   "categories": [
     "notifications"
@@ -15,12 +21,18 @@
     "en": {
       "name": "bell ring",
       "tags": [
-        "alarm",
         "notification",
+        "ringing",
+        "reminder",
+        "alarm",
         "sound",
-        "reminder"
+        "new message"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Active notification alert",
+        "Incoming message sound",
+        "Alarm clock ringing"
+      ]
     }
   }
 }

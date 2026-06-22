@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "导入文件夹",
+    "输入目录",
+    "上传位置"
+  ],
   "name": "文件夹输入",
   "tags": [
     "目录",
     "导入",
-    "导出"
+    "输入",
+    "上传"
   ],
   "categories": [
     "files",
@@ -17,9 +22,14 @@
       "tags": [
         "directory",
         "import",
-        "export"
+        "input",
+        "upload"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Import folder",
+        "Input directory",
+        "Upload location"
+      ]
     }
   }
 }

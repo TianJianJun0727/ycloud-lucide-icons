@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在版本控制界面中删除Git分支",
+    "代码仓库管理操作",
+    "移除功能分支"
+  ],
   "name": "Git分支减少",
   "tags": [
+    "Git分支删除",
+    "版本控制",
     "代码",
-    "版本控制",
-    "版本控制",
-    "存储库",
+    "分支",
     "删除",
     "移除",
-    "-"
+    "合并"
   ],
   "categories": [
     "development"
@@ -18,15 +22,19 @@
     "en": {
       "name": "git branch minus",
       "tags": [
-        "code",
+        "Git branch delete",
         "version control",
-        "vcs",
-        "repository",
+        "code",
+        "branch",
         "delete",
         "remove",
-        "-"
+        "merge"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Delete a Git branch in version control UI",
+        "Code repository management action",
+        "Remove a feature branch"
+      ]
     }
   }
 }

@@ -1,21 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学教育",
+    "物理符号",
+    "工程图表"
+  ],
   "name": "欧米伽",
   "tags": [
-    "希腊语",
-    "符号",
-    "数学",
-    "教育",
-    "物理学",
-    "工程",
-    "欧姆",
+    "希腊字母",
+    "数学符号",
+    "科学",
     "电阻",
-    "角频率",
-    "动力系统",
-    "天文学",
-    "星座",
-    "哲学"
+    "角频率"
   ],
   "categories": [
     "math",
@@ -27,21 +23,17 @@
     "en": {
       "name": "omega",
       "tags": [
-        "greek",
-        "symbol",
-        "mathematics",
-        "education",
-        "physics",
-        "engineering",
-        "ohms",
-        "electrical resistance",
-        "angular frequency",
-        "dynamical systems",
-        "astronomy",
-        "constellations",
-        "philosophy"
+        "greek letter",
+        "mathematical symbol",
+        "science",
+        "resistance",
+        "angular frequency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mathematics education",
+        "Physics notation",
+        "Engineering diagrams"
+      ]
     }
   }
 }

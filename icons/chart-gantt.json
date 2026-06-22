@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "项目管理界面",
+    "任务进度跟踪",
+    "时间线可视化"
+  ],
   "name": "图表甘特图",
   "tags": [
-    "图表",
-    "图",
+    "甘特图",
+    "项目计划",
     "时间线",
-    "规划"
+    "进度管理",
+    "任务规划"
   ],
   "categories": [
     "charts"
@@ -15,12 +20,17 @@
     "en": {
       "name": "chart gantt",
       "tags": [
-        "diagram",
-        "graph",
+        "gantt chart",
+        "project planning",
         "timeline",
-        "planning"
+        "progress management",
+        "task scheduling"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Project management interface",
+        "Task progress tracking",
+        "Timeline visualization"
+      ]
     }
   }
 }

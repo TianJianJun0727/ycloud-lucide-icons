@@ -1,24 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "存款确认",
+    "收入跟踪",
+    "收款通知"
+  ],
   "name": "纸币箭头上",
   "tags": [
-    "账单",
-    "货币",
-    "钱",
-    "付款",
-    "资金",
+    "收入",
+    "存款",
+    "收款",
+    "充值",
+    "资金增加",
     "交易",
     "现金",
-    "金融",
-    "押金",
-    "收益",
-    "收入",
-    "在",
-    "信用",
-    "预付费",
-    "成长",
-    "增加"
+    "收益"
   ],
   "categories": [
     "finance"
@@ -27,24 +23,20 @@
     "en": {
       "name": "banknote arrow up",
       "tags": [
-        "bill",
-        "currency",
-        "money",
-        "payment",
-        "funds",
+        "income",
+        "deposit",
+        "payment received",
+        "top-up",
+        "increase",
         "transaction",
         "cash",
-        "finance",
-        "deposit",
-        "earnings",
-        "income",
-        "in",
-        "credit",
-        "prepaid",
-        "growth",
-        "increase"
+        "earnings"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Deposit confirmation",
+        "Income tracking",
+        "Payment received notification"
+      ]
     }
   }
 }

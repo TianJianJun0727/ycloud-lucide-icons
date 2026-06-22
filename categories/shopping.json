@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "购物",
-  "icon": "shopping-bag",
   "i18n": {
     "en": {
       "title": "Shopping"

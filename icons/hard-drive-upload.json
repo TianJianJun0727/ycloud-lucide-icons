@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件上传进度",
+    "数据备份界面",
+    "服务器存储管理"
+  ],
   "name": "硬盘驱动器上传",
   "tags": [
-    "电脑",
-    "服务器",
-    "记忆",
-    "数据",
-    "固态硬盘",
-    "磁盘",
     "硬盘",
-    "保存"
+    "上传",
+    "数据",
+    "存储",
+    "备份",
+    "服务器",
+    "固态硬盘",
+    "磁盘"
   ],
   "categories": [
     "development",
@@ -22,16 +26,20 @@
     "en": {
       "name": "hard drive upload",
       "tags": [
-        "computer",
-        "server",
-        "memory",
+        "hard drive",
+        "upload",
         "data",
+        "storage",
+        "backup",
+        "server",
         "ssd",
-        "disk",
-        "hard disk",
-        "save"
+        "disk"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File upload progress",
+        "Data backup interface",
+        "Server storage management"
+      ]
     }
   }
 }

@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加新聊天",
+    "创建评论线程",
+    "开始新对话"
+  ],
   "name": "消息圆形加号",
   "tags": [
-    "评论",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "讲话泡泡",
-    "添加"
+    "评论",
+    "添加",
+    "新建",
+    "创建",
+    "发言",
+    "反馈"
   ],
   "categories": [
     "social"
@@ -18,15 +23,20 @@
     "en": {
       "name": "message circle plus",
       "tags": [
-        "comment",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "add"
+        "comment",
+        "add",
+        "new",
+        "create",
+        "message",
+        "feedback"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add a new chat",
+        "Create a comment thread",
+        "Start a new conversation"
+      ]
     }
   }
 }

@@ -9,20 +9,11 @@
   ],
   "name": "用户圆形箭头左",
   "tags": [
-    "人",
-    "分配",
-    "移动",
-    "给予",
-    "设置",
-    "自我",
-    "我",
-    "我自己",
-    "简介",
-    "头像",
-    "传入",
-    "收件人",
-    "受让人",
-    "入境"
+    "用户返回",
+    "分配给我",
+    "接收用户",
+    "传入请求",
+    "用户指派"
   ],
   "categories": [
     "account",
@@ -33,20 +24,11 @@
     "en": {
       "name": "user round arrow left",
       "tags": [
-        "person",
-        "assign",
-        "move",
-        "give",
-        "setup",
-        "self",
-        "me",
-        "myself",
-        "profile",
-        "avatar",
-        "incoming",
+        "assign to me",
+        "user return",
+        "incoming user",
         "recipient",
-        "assignee",
-        "inbound"
+        "user assignment"
       ],
       "use-cases": [
         "assigning a task to the current user",

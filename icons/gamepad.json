@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频游戏界面控制",
+    "游戏配件设置",
+    "设备连接状态"
+  ],
   "name": "游戏手柄",
   "tags": [
-    "控制台"
+    "游戏手柄",
+    "控制器",
+    "游戏",
+    "设备",
+    "控制台",
+    "手柄"
   ],
   "categories": [
     "gaming",
@@ -13,9 +22,17 @@
     "en": {
       "name": "gamepad",
       "tags": [
-        "console"
+        "gamepad",
+        "controller",
+        "gaming",
+        "console",
+        "device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video game UI controls",
+        "Gaming accessory settings",
+        "Device connection status"
+      ]
     }
   }
 }

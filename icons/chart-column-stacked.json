@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多维度数据展示",
+    "分类占比分析",
+    "复合统计图表"
+  ],
   "name": "图表列堆叠",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图",
-    "多变量",
-    "绝对的",
-    "比较"
+    "堆叠柱状图",
+    "多变量分析",
+    "数据对比",
+    "分类统计",
+    "占比分析"
   ],
   "categories": [
     "charts"
@@ -18,15 +20,17 @@
     "en": {
       "name": "chart column stacked",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "multivariate",
-        "categorical",
-        "comparison"
+        "stacked column chart",
+        "multivariate analysis",
+        "data comparison",
+        "categorical statistics",
+        "proportion analysis"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multi-dimensional data display",
+        "Category proportion analysis",
+        "Composite statistical chart"
+      ]
     }
   }
 }

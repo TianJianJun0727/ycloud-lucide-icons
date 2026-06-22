@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码库复刻操作",
+    "Git分支创建",
+    "项目分叉点"
+  ],
   "name": "Git分叉",
   "tags": [
-    "代码",
-    "版本控制"
+    "分支",
+    "复刻",
+    "版本控制",
+    "Git",
+    "代码库"
   ],
   "categories": [
     "development"
@@ -13,10 +20,17 @@
     "en": {
       "name": "git fork",
       "tags": [
-        "code",
-        "version control"
+        "branch",
+        "fork",
+        "version control",
+        "Git",
+        "repository"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Repository forking action",
+        "Branch creation in Git",
+        "Project divergence point"
+      ]
     }
   }
 }

@@ -1,24 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "支付方式选择",
+    "钱包界面",
+    "卡片管理"
+  ],
   "name": "钱包卡片",
   "tags": [
     "钱包",
     "卡片",
-    "银行业",
-    "现金",
-    "借方",
-    "运输",
-    "钱",
-    "金融",
-    "口袋",
-    "信用",
-    "购买",
-    "付款",
-    "购物",
-    "零售",
-    "消费者",
-    "抄送"
+    "支付",
+    "信用卡",
+    "银行卡",
+    "金融"
   ],
   "categories": [
     "account",
@@ -30,22 +24,16 @@
       "tags": [
         "wallet",
         "cards",
-        "banking",
-        "cash",
-        "debit",
-        "transport",
-        "money",
-        "finance",
-        "pocket",
-        "credit",
-        "purchase",
         "payment",
-        "shopping",
-        "retail",
-        "consumer",
-        "cc"
+        "credit card",
+        "bank card",
+        "finance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Payment method selection",
+        "Wallet interface",
+        "Card management"
+      ]
     }
   }
 }

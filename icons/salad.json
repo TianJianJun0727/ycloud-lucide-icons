@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "健康食品选项",
+    "素食餐选择",
+    "餐厅菜单项",
+    "营养显示"
+  ],
   "name": "沙拉",
   "tags": [
+    "沙拉",
     "食物",
-    "素食主义者",
-    "菜",
-    "餐厅",
-    "课程",
-    "餐",
-    "侧面",
+    "健康",
     "蔬菜",
-    "健康"
+    "餐饮",
+    "素食"
   ],
   "categories": [
     "food-beverage",
@@ -21,17 +23,19 @@
     "en": {
       "name": "salad",
       "tags": [
+        "salad",
         "food",
-        "vegetarian",
-        "dish",
-        "restaurant",
-        "course",
-        "meal",
-        "side",
+        "healthy",
         "vegetables",
-        "health"
+        "dining",
+        "vegetarian"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Healthy food option",
+        "Vegetarian meal selection",
+        "Restaurant menu item",
+        "Nutrition display"
+      ]
     }
   }
 }

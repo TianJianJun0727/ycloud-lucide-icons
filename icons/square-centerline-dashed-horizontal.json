@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI设计对齐参考线",
+    "照片构图叠加层",
+    "布局参考标记"
+  ],
   "name": "方形中心线虚线水平",
   "tags": [
-    "反映",
-    "镜子",
-    "对准",
-    "虚线"
+    "对齐",
+    "参考线",
+    "设计",
+    "摄影",
+    "水平",
+    "虚线",
+    "中心线"
   ],
   "categories": [
     "design",
@@ -24,12 +31,19 @@
     "en": {
       "name": "square centerline dashed horizontal",
       "tags": [
-        "reflect",
-        "mirror",
         "alignment",
-        "dashed"
+        "guide",
+        "design",
+        "photography",
+        "horizontal",
+        "dashed",
+        "centerline"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI design alignment guides",
+        "Photo composition overlays",
+        "Layout reference markers"
+      ]
     }
   }
 }

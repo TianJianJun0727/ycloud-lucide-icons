@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器格式工具栏",
+    "富文本编辑器样式切换",
+    "文档格式控制"
+  ],
   "name": "斜体",
   "tags": [
-    "斜的",
+    "斜体",
     "文本",
-    "格式"
+    "格式",
+    "字体",
+    "排版",
+    "强调"
   ],
   "categories": [
     "text"
@@ -14,11 +21,18 @@
     "en": {
       "name": "italic",
       "tags": [
+        "italic",
         "oblique",
         "text",
-        "format"
+        "format",
+        "font",
+        "emphasis"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor formatting toolbar",
+        "Rich text editor style toggle",
+        "Document formatting controls"
+      ]
     }
   }
 }

@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示时间相关的警告或错误",
+    "指示错过截止时间或超时",
+    "为预定事件发出提醒"
+  ],
   "name": "时钟告警",
   "tags": [
     "时间",
-    "手表",
     "闹钟",
     "警告",
-    "错误的"
+    "提醒",
+    "错误",
+    "超时",
+    "延误"
   ],
   "categories": [
     "time"
@@ -17,12 +23,18 @@
       "name": "clock alert",
       "tags": [
         "time",
-        "watch",
         "alarm",
         "warning",
-        "wrong"
+        "alert",
+        "error",
+        "timeout",
+        "delay"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Show a time-related warning or error",
+        "Indicate a missed deadline or timeout",
+        "Alert for a scheduled event"
+      ]
     }
   }
 }

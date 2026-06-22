@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "评分或评价界面",
+    "表示反对的反馈表单",
+    "社交媒体不喜欢按钮"
+  ],
   "name": "反对",
   "tags": [
+    "反对",
     "不喜欢",
-    "坏",
-    "情感"
+    "差评",
+    "否定",
+    "拒绝",
+    "踩",
+    "负面反馈"
   ],
   "categories": [
     "account",
@@ -17,10 +25,18 @@
       "name": "thumbs down",
       "tags": [
         "dislike",
+        "thumbs down",
+        "negative",
+        "reject",
         "bad",
-        "emotion"
+        "downvote",
+        "disapprove"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Rating or review interface",
+        "Feedback form for disapproval",
+        "Social media dislike button"
+      ]
     }
   }
 }

@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加到书签",
+    "新建书签",
+    "保存页面稍后阅读"
+  ],
   "name": "书签加号",
   "tags": [
-    "添加"
+    "添加",
+    "新建",
+    "书签",
+    "保存",
+    "收藏",
+    "标记"
   ],
   "categories": [
     "account"
@@ -12,9 +21,18 @@
     "en": {
       "name": "bookmark plus",
       "tags": [
-        "add"
+        "add",
+        "new",
+        "bookmark",
+        "save",
+        "favorite",
+        "mark"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add to bookmarks",
+        "Create new bookmark",
+        "Save page for later"
+      ]
     }
   }
 }

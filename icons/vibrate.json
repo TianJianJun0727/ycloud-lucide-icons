@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "开启通知振动",
+    "响铃模式指示",
+    "触觉反馈开关"
+  ],
   "name": "振动",
   "tags": [
-    "智能手机",
+    "振动",
     "通知",
-    "隆隆声",
     "触觉反馈",
-    "屏幕"
+    "手机",
+    "设备",
+    "提醒"
   ],
   "categories": [
     "devices",
@@ -19,13 +24,18 @@
     "en": {
       "name": "vibrate",
       "tags": [
-        "smartphone",
+        "vibrate",
         "notification",
-        "rumble",
         "haptic feedback",
-        "screen"
+        "phone",
+        "device",
+        "alert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Enable vibration for notifications",
+        "Ringer mode indicator",
+        "Haptic feedback toggle"
+      ]
     }
   }
 }

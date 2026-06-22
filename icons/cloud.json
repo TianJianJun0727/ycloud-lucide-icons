@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气预报多云",
+    "云服务图标",
+    "云端计算标识"
+  ],
   "name": "云",
   "tags": [
-    "天气"
+    "天气",
+    "云",
+    "多云",
+    "云端",
+    "云计算"
   ],
   "categories": [
     "weather"
@@ -12,9 +20,17 @@
     "en": {
       "name": "cloud",
       "tags": [
-        "weather"
+        "weather",
+        "cloud",
+        "cloudy",
+        "cloud computing",
+        "sky"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloudy weather forecast",
+        "Cloud service icon",
+        "Cloud computing symbol"
+      ]
     }
   }
 }

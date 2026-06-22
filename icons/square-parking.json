@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "停车场位置标记",
+    "停车位可用性",
+    "导航应用停车图标"
+  ],
   "name": "方形停车",
   "tags": [
     "停车场",
-    "停车场"
+    "停车位",
+    "泊车",
+    "交通设施"
   ],
   "categories": [
     "transportation",
@@ -23,9 +29,15 @@
       "name": "square parking",
       "tags": [
         "parking lot",
-        "car park"
+        "parking space",
+        "parking",
+        "transportation facility"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Parking lot location marker",
+        "Parking space availability",
+        "Navigation app parking icon"
+      ]
     }
   }
 }

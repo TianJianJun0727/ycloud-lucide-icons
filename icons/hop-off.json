@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食品应用中的过敏标识",
+    "饮食限制指示",
+    "啤酒酿造应用"
+  ],
   "name": "啤酒花关闭",
   "tags": [
     "啤酒",
-    "啤酒厂",
-    "喝",
-    "自由跳跃",
+    "无啤酒花",
     "过敏",
-    "不宽容",
-    "饮食"
+    "饮食限制",
+    "酿造",
+    "饮品",
+    "不耐受"
   ],
   "categories": [
     "food-beverage"
@@ -19,14 +23,18 @@
       "name": "hop off",
       "tags": [
         "beer",
-        "brewery",
-        "drink",
-        "hop free",
+        "hop-free",
         "allergy",
-        "intolerance",
-        "diet"
+        "dietary restriction",
+        "brewing",
+        "beverage",
+        "intolerance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Allergy labeling in food apps",
+        "Dietary restriction indicators",
+        "Beer brewing applications"
+      ]
     }
   }
 }

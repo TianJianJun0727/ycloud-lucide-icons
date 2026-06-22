@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "早餐菜单项",
+    "食谱应用食材",
+    "食品配送服务",
+    "烹饪教程步骤"
+  ],
   "name": "鸡蛋煎",
   "tags": [
+    "煎蛋",
+    "鸡蛋",
+    "早餐",
     "食物",
-    "早餐"
+    "烹饪",
+    "荷包蛋"
   ],
   "categories": [
     "food-beverage"
@@ -13,10 +22,19 @@
     "en": {
       "name": "egg fried",
       "tags": [
+        "fried egg",
+        "egg",
+        "breakfast",
         "food",
-        "breakfast"
+        "cooking",
+        "sunny side up"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Breakfast menu item",
+        "Recipe app ingredient",
+        "Food delivery service",
+        "Cooking tutorial step"
+      ]
     }
   }
 }

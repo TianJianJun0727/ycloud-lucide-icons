@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "酒店客房选择",
+    "宿舍管理界面",
+    "卧室规划工具"
+  ],
   "name": "床单人",
   "tags": [
-    "睡觉",
+    "单人床",
+    "卧室",
     "酒店",
-    "家具"
+    "家具",
+    "睡眠"
   ],
   "categories": [
     "home"
@@ -14,11 +20,17 @@
     "en": {
       "name": "bed single",
       "tags": [
-        "sleep",
+        "single bed",
+        "bedroom",
         "hotel",
-        "furniture"
+        "furniture",
+        "sleep"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hotel room selection",
+        "Dormitory management interface",
+        "Bedroom planning tool"
+      ]
     }
   }
 }

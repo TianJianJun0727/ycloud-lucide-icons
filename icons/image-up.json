@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "上传图片",
+    "将照片导入文档",
+    "为个人资料添加图片"
+  ],
   "name": "图片上",
   "tags": [
     "图片",
     "照片",
     "上传",
-    "导入"
+    "导入",
+    "文件"
   ],
   "categories": [
     "photography",
@@ -21,9 +26,14 @@
         "picture",
         "photo",
         "upload",
-        "import"
+        "import",
+        "file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Upload an image",
+        "Import a photo into a document",
+        "Add a picture to a profile"
+      ]
     }
   }
 }

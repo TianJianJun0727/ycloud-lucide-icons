@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移动支付系统",
+    "二维码认证",
+    "数字信息传输"
+  ],
   "name": "扫描二维码代码",
   "tags": [
-    "条形码",
-    "扫描",
-    "二维码",
-    "网址",
-    "信息",
-    "数字化",
-    "扫描仪"
+    "二维码扫描",
+    "快速响应码",
+    "数字识别",
+    "移动支付",
+    "网址跳转",
+    "信息读取"
   ],
   "categories": [
     "account",
@@ -21,15 +24,18 @@
     "en": {
       "name": "scan qr code",
       "tags": [
-        "barcode",
-        "scan",
-        "qrcode",
-        "url",
-        "information",
-        "digital",
-        "scanner"
+        "QR code scanning",
+        "quick response code",
+        "digital identification",
+        "mobile payment",
+        "URL redirection",
+        "information reading"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mobile payment systems",
+        "QR code authentication",
+        "Digital information transfer"
+      ]
     }
   }
 }

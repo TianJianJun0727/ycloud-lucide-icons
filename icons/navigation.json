@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "活动导航指示器",
+    "地图方向箭头",
+    "路线规划功能"
+  ],
   "name": "导航",
   "tags": [
-    "位置",
-    "旅行"
+    "导航",
+    "定位",
+    "方向",
+    "指南针",
+    "旅行",
+    "路线",
+    "地图"
   ],
   "categories": [
     "navigation"
@@ -13,10 +22,19 @@
     "en": {
       "name": "navigation",
       "tags": [
+        "navigation",
         "location",
-        "travel"
+        "direction",
+        "compass",
+        "travel",
+        "route",
+        "map"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Active navigation indicator",
+        "Map direction arrow",
+        "Route planning feature"
+      ]
     }
   }
 }

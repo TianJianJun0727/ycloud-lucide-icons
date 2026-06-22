@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "手工项目",
+    "艺术教育",
+    "创意设计"
+  ],
   "name": "折纸",
   "tags": [
-    "纸",
-    "鸟"
+    "折纸",
+    "手工",
+    "艺术",
+    "纸艺",
+    "创意"
   ],
   "categories": [
     "animals",
@@ -14,10 +21,17 @@
     "en": {
       "name": "origami",
       "tags": [
-        "paper",
-        "bird"
+        "origami",
+        "craft",
+        "art",
+        "paper art",
+        "creativity"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Craft projects",
+        "Art education",
+        "Creative design"
+      ]
     }
   }
 }

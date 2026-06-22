@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "布局中的垂直线",
+    "侧边栏分隔线",
+    "列分隔线"
+  ],
   "name": "分隔符垂直",
   "tags": [
-    "移动",
-    "分裂"
+    "分隔线",
+    "垂直线",
+    "分割",
+    "布局",
+    "侧边栏",
+    "装饰"
   ],
   "categories": [
     "text",
@@ -15,10 +23,18 @@
     "en": {
       "name": "separator vertical",
       "tags": [
-        "move",
-        "split"
+        "separator",
+        "vertical line",
+        "divide",
+        "layout",
+        "sidebar",
+        "divider"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertical rule in layouts",
+        "Sidebar separator",
+        "Column divider"
+      ]
     }
   }
 }

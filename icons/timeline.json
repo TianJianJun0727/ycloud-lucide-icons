@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示项目历史或动态流",
+    "可视化事件序列",
+    "展示用户或数据随时间的变化"
+  ],
   "name": "时间线",
   "tags": [
-    "标签",
-    "历史"
+    "时间线",
+    "时间轴",
+    "历史记录",
+    "进度线",
+    "历程"
   ],
   "categories": [
     "time"
@@ -13,10 +20,17 @@
     "en": {
       "name": "timeline",
       "tags": [
-        "tags",
-        "history"
+        "timeline",
+        "chronology",
+        "history",
+        "sequence",
+        "progress line"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Displaying project history or activity feed",
+        "Visualizing a sequence of events",
+        "Showing user or data progression over time"
+      ]
     }
   }
 }

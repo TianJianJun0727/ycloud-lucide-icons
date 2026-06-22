@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图应用的道路显示",
+    "交通导航界面",
+    "物流运输路线图"
+  ],
   "name": "道路",
   "tags": [
-    "路",
-    "街道",
-    "高速公路",
+    "道路",
     "路线",
-    "路径",
-    "运输",
     "交通",
-    "开车",
-    "地图"
+    "地图",
+    "导航"
   ],
   "categories": [
     "transportation"
@@ -21,16 +21,16 @@
       "name": "road",
       "tags": [
         "road",
-        "street",
-        "highway",
         "route",
-        "path",
-        "transport",
         "traffic",
-        "drive",
-        "map"
+        "map",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Road display in map application",
+        "Traffic navigation interface",
+        "Logistics transport route map"
+      ]
     }
   }
 }

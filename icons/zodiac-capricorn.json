@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "占星应用星座符号",
+    "社交媒体个人资料星座",
+    "星座运势网站图标"
+  ],
   "name": "星座摩羯座",
   "tags": [
+    "摩羯座",
+    "星座",
+    "占星",
     "山羊",
-    "山",
+    "土象",
     "野心",
-    "地球",
     "纪律",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "星座运势"
   ],
   "categories": [
     "social",
@@ -22,18 +24,20 @@
     "en": {
       "name": "zodiac capricorn",
       "tags": [
-        "goat",
-        "mountain",
-        "ambition",
-        "earth",
-        "discipline",
+        "capricorn",
+        "zodiac",
         "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "goat",
+        "earth sign",
+        "ambition",
+        "discipline",
+        "horoscope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app zodiac sign",
+        "Social media profile birth sign",
+        "Horoscope website icon"
+      ]
     }
   }
 }

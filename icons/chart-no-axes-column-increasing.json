@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示增长指标的仪表板",
+    "带有正面趋势的性能报告"
+  ],
   "name": "图表无坐标轴列上升",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "图",
+    "柱状图",
+    "上升",
     "趋势上升"
   ],
   "categories": [
@@ -26,11 +30,15 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph",
+        "chart",
+        "column chart",
+        "increasing",
         "trending up"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dashboard showing growth metrics",
+        "Performance report with positive trend"
+      ]
     }
   }
 }

@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频或媒体播放器控件",
+    "图像或文档预览切换",
+    "仪表板或演示文稿视图模式"
+  ],
   "name": "全屏",
   "tags": [
-    "展开",
-    "缩放",
-    "预览",
-    "焦点",
-    "相机",
-    "镜头",
-    "图片"
+    "全屏",
+    "最大化",
+    "展开视图",
+    "沉浸模式",
+    "媒体播放"
   ],
   "categories": [
     "layout",
@@ -21,15 +23,17 @@
     "en": {
       "name": "fullscreen",
       "tags": [
-        "expand",
-        "zoom",
-        "preview",
-        "focus",
-        "camera",
-        "lens",
-        "image"
+        "fullscreen",
+        "maximize",
+        "expand-view",
+        "immersive-mode",
+        "media-playback"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video or media player controls",
+        "Image or document preview toggles",
+        "Dashboard or presentation view modes"
+      ]
     }
   }
 }

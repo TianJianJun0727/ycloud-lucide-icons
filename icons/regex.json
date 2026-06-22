@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "使用模式规则进行输入验证",
+    "高级文本搜索与替换",
+    "代码编辑器语法高亮"
+  ],
   "name": "正则",
   "tags": [
-    "搜索",
-    "文本",
-    "代码"
+    "正则表达式",
+    "模式匹配",
+    "文本搜索",
+    "代码",
+    "开发"
   ],
   "categories": [
     "text",
@@ -15,11 +21,18 @@
     "en": {
       "name": "regex",
       "tags": [
-        "search",
-        "text",
-        "code"
+        "regex",
+        "regular expression",
+        "pattern matching",
+        "text search",
+        "code",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Input validation with pattern rules",
+        "Advanced text search and replace",
+        "Code editor syntax highlighting"
+      ]
     }
   }
 }

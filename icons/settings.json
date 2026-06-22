@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用设置菜单",
+    "应用配置",
+    "系统偏好设置"
+  ],
   "name": "设置",
   "tags": [
     "设置",
-    "编辑",
+    "配置",
+    "偏好",
     "齿轮",
-    "偏好"
+    "调整",
+    "控制",
+    "选项"
   ],
   "categories": [
     "account"
@@ -15,12 +22,19 @@
     "en": {
       "name": "settings",
       "tags": [
-        "cog",
-        "edit",
+        "settings",
+        "configuration",
+        "preferences",
         "gear",
-        "preferences"
+        "adjustment",
+        "control",
+        "options"
       ],
-      "use-cases": []
+      "use-cases": [
+        "General settings menu",
+        "Application configuration",
+        "System preferences"
+      ]
     }
   }
 }

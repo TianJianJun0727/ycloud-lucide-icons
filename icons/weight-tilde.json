@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "近似重量输入",
+    "数学估算控制",
+    "带容差的测量设置",
+    "范围数据可视化"
+  ],
   "name": "重量波浪号",
   "tags": [
-    "测量",
-    "规模",
+    "重量",
+    "近似",
     "估计",
-    "负载",
-    "平衡",
-    "尺寸",
     "测量",
-    "数量",
+    "约等于",
+    "数学符号",
     "质量"
   ],
   "categories": [
@@ -20,17 +23,20 @@
     "en": {
       "name": "weight tilde",
       "tags": [
-        "measure",
-        "scale",
+        "weight",
+        "approximate",
         "estimate",
-        "load",
-        "balance",
-        "size",
-        "measurement",
-        "quantity",
+        "measure",
+        "tilde",
+        "math symbol",
         "mass"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Approximate weight input",
+        "Mathematical estimation controls",
+        "Measurement settings with tolerance",
+        "Data visualization for ranges"
+      ]
     }
   }
 }

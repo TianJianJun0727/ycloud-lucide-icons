@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相机对焦设置",
+    "照片编辑工具",
+    "镜头调整控制"
+  ],
   "name": "聚焦",
   "tags": [
+    "聚焦",
+    "对焦",
     "相机",
     "镜头",
-    "照片",
-    "虚线"
+    "摄影"
   ],
   "categories": [
     "photography"
@@ -15,12 +20,17 @@
     "en": {
       "name": "focus",
       "tags": [
+        "focus",
+        "autofocus",
         "camera",
         "lens",
-        "photo",
-        "dashed"
+        "photography"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Camera focus setting",
+        "Photo editing tool",
+        "Lens adjustment control"
+      ]
     }
   }
 }

@@ -1,19 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "趋势分析可视化",
+    "平滑数据表示"
+  ],
   "name": "图表样条曲线",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "图",
-    "曲线",
-    "连续的",
-    "光滑",
-    "多项式",
-    "二次的",
-    "功能",
-    "插值法"
+    "曲线图",
+    "趋势",
+    "平滑"
   ],
   "categories": [
     "charts"
@@ -24,17 +22,15 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph",
+        "chart",
         "curve",
-        "continuous",
-        "smooth",
-        "polynomial",
-        "quadratic",
-        "function",
-        "interpolation"
+        "trend",
+        "smooth"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Trend analysis visualization",
+        "Smooth data representation"
+      ]
     }
   }
 }

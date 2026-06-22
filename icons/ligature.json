@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "字体编辑器界面",
+    "排版设置面板",
+    "文本样式控件"
+  ],
   "name": "连字",
   "tags": [
-    "文本",
+    "连字",
     "字体",
-    "版式",
-    "替补",
-    "替代品"
+    "排版",
+    "文本",
+    "字形",
+    "替代字形"
   ],
   "categories": [
     "text"
@@ -16,13 +21,18 @@
     "en": {
       "name": "ligature",
       "tags": [
-        "text",
+        "ligature",
         "font",
         "typography",
-        "alternates",
-        "alternatives"
+        "text",
+        "glyph",
+        "alternate glyph"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Font editor interface",
+        "Typography settings panel",
+        "Text styling controls"
+      ]
     }
   }
 }

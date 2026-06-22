@@ -1,13 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "服装店商品",
+    "时尚电商",
+    "衣物尺码选择",
+    "衣柜管理"
+  ],
   "name": "衬衫",
   "tags": [
+    "衬衫",
     "T恤",
-    "购物",
-    "商店",
     "服装",
-    "衣服"
+    "衣物",
+    "时尚",
+    "购物",
+    "穿着",
+    "apparel",
+    "上衣",
+    "款式"
   ],
   "categories": [
     "shopping"
@@ -16,13 +26,23 @@
     "en": {
       "name": "shirt",
       "tags": [
+        "shirt",
         "t-shirt",
-        "shopping",
-        "store",
         "clothing",
-        "clothes"
+        "apparel",
+        "fashion",
+        "shopping",
+        "wear",
+        "garment",
+        "top",
+        "style"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Clothing store product",
+        "Fashion e-commerce",
+        "Apparel size selection",
+        "Wardrobe management"
+      ]
     }
   }
 }

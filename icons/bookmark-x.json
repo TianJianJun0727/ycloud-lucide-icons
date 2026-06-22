@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移除网页书签",
+    "取消收藏项目",
+    "删除保存的链接"
+  ],
   "name": "书签关闭",
   "tags": [
-    "读",
-    "剪辑",
-    "标记",
-    "标签",
-    "取消",
-    "关闭",
-    "删除",
-    "移除",
-    "清除"
+    "取消书签",
+    "移除收藏",
+    "删除标记",
+    "关闭标签",
+    "清除保存"
   ],
   "categories": [
     "account"
@@ -20,17 +20,18 @@
     "en": {
       "name": "bookmark X",
       "tags": [
-        "read",
-        "clip",
-        "marker",
-        "tag",
+        "bookmark",
+        "remove",
+        "delete",
         "cancel",
         "close",
-        "delete",
-        "remove",
         "clear"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove webpage bookmark",
+        "Unfavorite an item",
+        "Delete saved link"
+      ]
     }
   }
 }

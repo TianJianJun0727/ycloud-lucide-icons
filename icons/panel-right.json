@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "右侧边栏面板",
+    "详情或属性面板",
+    "界面布局容器"
+  ],
   "name": "面板右",
   "tags": [
     "侧边栏",
-    "中学",
-    "抽屉"
+    "面板",
+    "布局",
+    "容器",
+    "区域",
+    "右侧"
   ],
   "categories": [
     "layout"
@@ -15,10 +22,17 @@
       "name": "panel right",
       "tags": [
         "sidebar",
-        "secondary",
-        "drawer"
+        "panel",
+        "layout",
+        "container",
+        "area",
+        "right"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Right sidebar panel",
+        "Details or properties panel",
+        "UI layout container"
+      ]
     }
   }
 }

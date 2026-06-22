@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "工具整理",
+    "维护界面",
+    "维修工具包"
+  ],
   "name": "工具箱包",
   "tags": [
-    "工具",
-    "维护",
-    "修理"
+    "工具包",
+    "工具箱",
+    "维修工具",
+    "工具套装",
+    "维护工具"
   ],
   "categories": [
     "tools",
@@ -16,11 +22,17 @@
     "en": {
       "name": "tool case",
       "tags": [
-        "tools",
-        "maintenance",
-        "repair"
+        "tool case",
+        "toolkit",
+        "repair tools",
+        "tool set",
+        "maintenance tools"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Tool organization",
+        "Maintenance interface",
+        "Repair toolkit"
+      ]
     }
   }
 }

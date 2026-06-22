@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相机界面中关闭手电筒",
+    "低光或省电模式",
+    "工具禁用状态"
+  ],
   "name": "手电筒关闭",
   "tags": [
-    "火炬",
-    "光",
-    "梁",
-    "紧急情况",
-    "安全",
-    "工具",
-    "明亮"
+    "手电筒关闭",
+    "关闭灯光",
+    "黑暗",
+    "省电",
+    "工具"
   ],
   "categories": [
     "photography",
@@ -19,15 +21,17 @@
     "en": {
       "name": "flashlight off",
       "tags": [
-        "torch",
-        "light",
-        "beam",
-        "emergency",
-        "safety",
-        "tool",
-        "bright"
+        "flashlight off",
+        "light off",
+        "dark",
+        "power save",
+        "tool"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle flashlight off in camera UI",
+        "Low light or power saving mode",
+        "Tool disabled state"
+      ]
     }
   }
 }

@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "展开/折叠区域",
+    "切换列表视图",
+    "垂直尺寸调整控件"
+  ],
   "name": "上下箭头",
   "tags": [
     "展开",
-    "展开",
-    "垂直"
+    "折叠",
+    "切换",
+    "垂直",
+    "上下",
+    "双向箭头"
   ],
   "categories": [
     "arrows"
@@ -15,10 +22,17 @@
       "name": "chevrons up down",
       "tags": [
         "expand",
-        "unfold",
-        "vertical"
+        "collapse",
+        "toggle",
+        "vertical",
+        "up down",
+        "bidirectional"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Expand/collapse section",
+        "Toggle list view",
+        "Vertical resize control"
+      ]
     }
   }
 }

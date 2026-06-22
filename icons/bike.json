@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "共享单车应用",
+    "运动健身界面",
+    "交通出行图标"
+  ],
   "name": "自行车",
   "tags": [
     "自行车",
-    "运输",
-    "旅行"
+    "骑行",
+    "交通",
+    "出行",
+    "运动"
   ],
   "categories": [
     "transportation"
@@ -16,9 +22,15 @@
       "tags": [
         "bicycle",
         "transport",
-        "trip"
+        "travel",
+        "cycling",
+        "sports"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bike sharing app",
+        "Sports fitness interface",
+        "Transportation icon"
+      ]
     }
   }
 }

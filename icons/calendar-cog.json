@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "日历设置",
+    "配置事件默认值",
+    "管理日程偏好",
+    "设置日历"
+  ],
   "name": "日历齿轮",
   "tags": [
     "日期",
-    "日",
-    "月",
-    "年",
-    "事件",
+    "日历",
     "设置",
+    "配置",
+    "偏好",
+    "事件",
     "齿轮",
-    "设置"
+    "管理"
   ],
   "categories": [
     "time"
@@ -20,15 +25,20 @@
       "name": "calendar cog",
       "tags": [
         "date",
-        "day",
-        "month",
-        "year",
-        "events",
+        "calendar",
         "settings",
+        "configure",
+        "preferences",
+        "event",
         "gear",
-        "cog"
+        "manage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Calendar settings",
+        "Configure event defaults",
+        "Manage schedule preferences",
+        "Set up calendar"
+      ]
     }
   }
 }

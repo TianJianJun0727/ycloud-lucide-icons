@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示导航路径",
+    "展示旅行行程",
+    "规划包含多个站点的路线"
+  ],
   "name": "路线",
   "tags": [
+    "路线",
     "路径",
-    "旅程",
-    "规划师",
-    "点",
-    "停止",
-    "车站"
+    "导航",
+    "行程",
+    "规划",
+    "站点",
+    "方向"
   ],
   "categories": [
     "navigation"
@@ -17,14 +22,19 @@
     "en": {
       "name": "route",
       "tags": [
+        "route",
         "path",
+        "navigation",
         "journey",
-        "planner",
-        "points",
+        "planning",
         "stops",
-        "stations"
+        "directions"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display a navigation path",
+        "Show a travel itinerary",
+        "Plan a route with multiple stops"
+      ]
     }
   }
 }

@@ -1,17 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "植物生长跟踪",
+    "环保产品标签",
+    "园艺应用图标",
+    "可持续性仪表板",
+    "春季主题设计"
+  ],
   "name": "幼苗",
   "tags": [
-    "生态",
-    "绿色",
-    "成长",
-    "叶",
-    "自然",
+    "幼苗",
+    "生长",
     "植物",
-    "种子",
+    "自然",
+    "生态",
     "春天",
-    "可持续性"
+    "可持续",
+    "发芽",
+    "绿色"
   ],
   "categories": [
     "nature",
@@ -22,17 +28,23 @@
     "en": {
       "name": "sprout",
       "tags": [
-        "eco",
-        "green",
+        "sprout",
         "growth",
-        "leaf",
-        "nature",
         "plant",
-        "seed",
+        "nature",
+        "eco",
         "spring",
-        "sustainability"
+        "sustainability",
+        "germination",
+        "green"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Plant growth tracking",
+        "Eco-friendly product labeling",
+        "Gardening app icon",
+        "Sustainability dashboard",
+        "Spring season design"
+      ]
     }
   }
 }

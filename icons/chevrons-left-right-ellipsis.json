@@ -1,33 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网络连接指示器",
+    "设备端口状态",
+    "数据传输接口",
+    "连接管理"
+  ],
   "name": "双折角箭头左右省略号",
   "tags": [
-    "互联网",
-    "网络",
-    "连接",
-    "电缆",
-    "局域网",
-    "港口",
+    "网络连接",
+    "数据接口",
+    "端口",
     "路由器",
-    "开关",
-    "枢纽",
-    "调制解调器",
-    "网络",
-    "在线",
-    "网络",
-    "沟通",
-    "插座",
-    "插头",
-    "插槽",
-    "控制器",
-    "连接器",
-    "接口",
-    "控制台",
     "信号",
-    "数据",
-    "输入",
-    "输出"
+    "输入输出"
   ],
   "categories": [
     "communication",
@@ -39,33 +25,19 @@
     "en": {
       "name": "chevrons left right ellipsis",
       "tags": [
-        "internet",
-        "network",
-        "connection",
-        "cable",
-        "lan",
+        "network connection",
+        "data interface",
         "port",
         "router",
-        "switch",
-        "hub",
-        "modem",
-        "web",
-        "online",
-        "networking",
-        "communication",
-        "socket",
-        "plug",
-        "slot",
-        "controller",
-        "connector",
-        "interface",
-        "console",
         "signal",
-        "data",
-        "input",
-        "output"
+        "input output"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Network connectivity indicator",
+        "Device port status",
+        "Data transfer interface",
+        "Connection management"
+      ]
     }
   }
 }

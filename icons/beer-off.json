@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "酒水菜单标注",
+    "健康饮食应用",
+    "活动禁酒提示"
+  ],
   "name": "啤酒关闭",
   "tags": [
-    "酒精",
-    "酒吧",
+    "无酒精",
+    "禁酒",
     "饮料",
-    "啤酒厂",
-    "喝"
+    "菜单",
+    "健康"
   ],
   "categories": [
     "food-beverage"
@@ -16,13 +20,17 @@
     "en": {
       "name": "beer off",
       "tags": [
-        "alcohol",
-        "bar",
+        "non-alcoholic",
+        "alcohol-free",
         "beverage",
-        "brewery",
-        "drink"
+        "menu",
+        "health"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Beverage menu labeling",
+        "Healthy diet app",
+        "Alcohol-free event alerts"
+      ]
     }
   }
 }

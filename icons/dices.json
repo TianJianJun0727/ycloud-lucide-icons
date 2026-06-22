@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏掷骰子界面",
+    "随机选择界面",
+    "棋盘游戏应用"
+  ],
   "name": "骰子组",
   "tags": [
     "骰子",
-    "随机的",
-    "桌面式",
-    "董事会",
+    "随机",
+    "桌面游戏",
+    "棋盘游戏",
     "游戏"
   ],
   "categories": [
@@ -22,7 +26,11 @@
         "board",
         "game"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game dice roll interface",
+        "Random selection UI",
+        "Board game application"
+      ]
     }
   }
 }

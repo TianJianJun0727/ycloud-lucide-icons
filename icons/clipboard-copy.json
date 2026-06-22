@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "复制到剪贴板操作",
+    "从剪贴板粘贴",
+    "应用程序间数据传输"
+  ],
   "name": "剪贴板复制",
   "tags": [
+    "剪贴板",
     "复制",
-    "粘贴"
+    "粘贴",
+    "内容",
+    "数据",
+    "传输"
   ],
   "categories": [
     "text",
@@ -14,10 +22,18 @@
     "en": {
       "name": "clipboard copy",
       "tags": [
+        "clipboard",
         "copy",
-        "paste"
+        "paste",
+        "content",
+        "data",
+        "transfer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Copy to clipboard action",
+        "Paste from clipboard",
+        "Data transfer between applications"
+      ]
     }
   }
 }

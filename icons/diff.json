@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码差异查看器",
+    "文件比较工具",
+    "版本控制界面"
+  ],
   "name": "差异",
   "tags": [
-    "补丁",
     "差异",
     "比较",
-    "加号",
-    "减号",
-    "正负",
-    "数学"
+    "代码对比",
+    "版本控制",
+    "补丁"
   ],
   "categories": [
     "development",
@@ -19,15 +21,17 @@
     "en": {
       "name": "diff",
       "tags": [
-        "patch",
         "difference",
         "compare",
-        "plus",
-        "minus",
-        "plus-minus",
-        "math"
+        "code diff",
+        "version control",
+        "patch"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code difference viewer",
+        "File comparison tool",
+        "Version control interface"
+      ]
     }
   }
 }

@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "从云存储下载",
+    "从云端导入数据",
+    "恢复备份文件"
+  ],
   "name": "云下载",
   "tags": [
-    "导入"
+    "下载",
+    "导入",
+    "获取",
+    "数据",
+    "云存储",
+    "拉取",
+    "恢复"
   ],
   "categories": [
     "arrows",
@@ -21,9 +31,19 @@
     "en": {
       "name": "cloud download",
       "tags": [
-        "import"
+        "download",
+        "import",
+        "fetch",
+        "data",
+        "cloud",
+        "pull",
+        "retrieve"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Download from cloud storage",
+        "Import data from cloud",
+        "Restore backup files"
+      ]
     }
   }
 }

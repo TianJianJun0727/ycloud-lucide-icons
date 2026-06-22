@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "建筑",
-  "icon": "building",
   "i18n": {
     "en": {
       "title": "Buildings"

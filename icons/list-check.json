@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务完成",
+    "清单项目",
+    "待办列表",
+    "进度跟踪"
+  ],
   "name": "列表勾选",
   "tags": [
-    "完成",
-    "勾选",
-    "勾选",
-    "完成",
     "列表",
+    "勾选",
+    "完成",
     "待办事项",
-    "博姆"
+    "复选框",
+    "任务"
   ],
   "categories": [
     "text"
@@ -18,15 +22,19 @@
     "en": {
       "name": "list check",
       "tags": [
-        "done",
-        "check",
-        "tick",
-        "complete",
         "list",
-        "to-do",
-        "bom"
+        "check",
+        "completed",
+        "todo",
+        "checkbox",
+        "tasks"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Task completion",
+        "Checklist items",
+        "To-do lists",
+        "Progress tracking"
+      ]
     }
   }
 }

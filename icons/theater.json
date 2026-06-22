@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "戏剧或音乐会的活动预订",
+    "表演艺术场馆地图标注",
+    "娱乐与文化类应用图标"
+  ],
   "name": "剧院",
   "tags": [
     "剧院",
-    "剧院",
-    "娱乐",
-    "讲台",
+    "剧场",
     "舞台",
-    "音乐剧"
+    "表演",
+    "娱乐",
+    "艺术",
+    "演出"
   ],
   "categories": [
     "buildings",
@@ -20,12 +25,17 @@
       "tags": [
         "theater",
         "theatre",
-        "entertainment",
-        "podium",
         "stage",
-        "musical"
+        "performance",
+        "entertainment",
+        "arts",
+        "show"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Event booking for plays or concerts",
+        "Performing arts venue mapping",
+        "Entertainment and culture app icons"
+      ]
     }
   }
 }

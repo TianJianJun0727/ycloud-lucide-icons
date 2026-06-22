@@ -1,22 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "船舶导航控制",
+    "海事应用",
+    "方向设置界面",
+    "航行或游轮应用"
+  ],
   "name": "船轮",
   "tags": [
-    "转向",
-    "舵",
-    "船",
-    "结",
-    "海里",
-    "海事的",
+    "轮船",
+    "舵轮",
     "航行",
-    "游艇",
-    "巡航",
-    "远洋客轮",
-    "油轮",
-    "容器",
-    "海军",
-    "旅行"
+    "导航",
+    "海事",
+    "方向",
+    "控制",
+    "驾驶",
+    "航海",
+    "船舶"
   ],
   "categories": [
     "transportation",
@@ -27,22 +28,23 @@
     "en": {
       "name": "ship wheel",
       "tags": [
+        "ship",
+        "wheel",
         "steering",
-        "rudder",
-        "boat",
-        "knots",
-        "nautical mile",
+        "navigation",
         "maritime",
+        "direction",
+        "control",
+        "drive",
         "sailing",
-        "yacht",
-        "cruise",
-        "ocean liner",
-        "tanker",
-        "vessel",
-        "navy",
-        "trip"
+        "vessel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Ship navigation control",
+        "Maritime application",
+        "Direction setting interface",
+        "Sailing or cruise app"
+      ]
     }
   }
 }

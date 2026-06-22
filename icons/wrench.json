@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打开设置或配置菜单",
+    "表示维护或工具功能",
+    "用户账户管理入口"
+  ],
   "name": "扳手",
   "tags": [
-    "帐户",
     "设置",
+    "工具",
+    "维护",
+    "配置",
+    "账户",
     "扳手",
-    "DIY",
-    "工具箱",
-    "建造",
-    "建筑"
+    "调整"
   ],
   "categories": [
     "account",
@@ -20,15 +24,19 @@
     "en": {
       "name": "wrench",
       "tags": [
-        "account",
         "settings",
-        "spanner",
-        "diy",
-        "toolbox",
-        "build",
-        "construction"
+        "tool",
+        "maintenance",
+        "configuration",
+        "account",
+        "wrench",
+        "adjust"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Opening settings or configuration menu",
+        "Representing maintenance or tool functionality",
+        "User account management entry point"
+      ]
     }
   }
 }

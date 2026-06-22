@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "酒店房间设施列表",
+    "浴室设施指示",
+    "清洁服务"
+  ],
   "name": "浴缸",
   "tags": [
-    "便利设施",
-    "服务",
+    "浴缸",
     "浴室",
-    "淋浴"
+    "淋浴",
+    "设施",
+    "酒店",
+    "卫浴",
+    "清洁"
   ],
   "categories": [
     "travel"
@@ -15,12 +22,19 @@
     "en": {
       "name": "bath",
       "tags": [
-        "amenities",
-        "services",
+        "bathtub",
         "bathroom",
-        "shower"
+        "shower",
+        "amenity",
+        "hotel",
+        "bath",
+        "clean"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hotel room amenities listing",
+        "Bathroom facility indicator",
+        "Cleaning service"
+      ]
     }
   }
 }

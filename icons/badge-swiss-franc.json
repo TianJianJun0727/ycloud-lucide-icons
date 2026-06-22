@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "瑞士货币折扣标签",
+    "带法郎符号的价格徽章",
+    "金融促销标记"
+  ],
   "name": "徽章瑞士法郎",
   "tags": [
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
+    "价格",
+    "法郎",
+    "促销",
+    "徽章",
     "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
-    "瑞士法郎",
-    "₣"
+    "货币"
   ],
   "categories": [
     "shopping",
@@ -27,21 +24,18 @@
       "name": "badge swiss franc",
       "tags": [
         "discount",
-        "offer",
+        "price",
+        "franc",
         "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
+        "badge",
         "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
-        "chf",
-        "₣"
+        "currency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Swiss currency discount tag",
+        "Price badge with franc symbol",
+        "Financial promotion marker"
+      ]
     }
   }
 }

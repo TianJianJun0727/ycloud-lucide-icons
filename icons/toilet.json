@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "卫浴设施",
+    "卫生间位置",
+    "卫生服务"
+  ],
   "name": "马桶",
   "tags": [
+    "马桶",
+    "卫生间",
+    "洗手间",
     "厕所",
-    "便盆",
-    "浴室",
-    "洗手间"
+    "卫浴"
   ],
   "categories": [
     "devices",
@@ -17,11 +22,16 @@
       "name": "toilet",
       "tags": [
         "toilet",
-        "potty",
         "bathroom",
-        "washroom"
+        "restroom",
+        "washroom",
+        "lavatory"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bathroom facilities",
+        "Restroom location",
+        "Sanitation services"
+      ]
     }
   }
 }

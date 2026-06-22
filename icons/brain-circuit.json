@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "AI功能入口",
+    "机器学习平台",
+    "智能系统控制面板",
+    "神经网络可视化"
+  ],
   "name": "大脑电路",
   "tags": [
-    "头脑",
-    "智力",
     "人工智能",
     "AI",
     "深度学习",
     "机器学习",
-    "计算"
+    "神经网络",
+    "智能计算"
   ],
   "categories": [
     "science",
@@ -19,15 +23,19 @@
     "en": {
       "name": "brain circuit",
       "tags": [
-        "mind",
-        "intellect",
         "artificial intelligence",
         "ai",
         "deep learning",
         "machine learning",
-        "computing"
+        "neural network",
+        "intelligent computing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "AI feature entry",
+        "Machine learning platform",
+        "Intelligent system control panel",
+        "Neural network visualization"
+      ]
     }
   }
 }

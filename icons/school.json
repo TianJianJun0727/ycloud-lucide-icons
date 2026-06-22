@@ -1,31 +1,24 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "教育平台学校选择",
+    "校园导航地图",
+    "学生资料图标",
+    "学习管理系统",
+    "学术机构网站"
+  ],
   "name": "学校",
   "tags": [
-    "建筑物",
+    "学校",
     "教育",
-    "童年",
-    "大学",
     "学习",
     "校园",
-    "学者",
-    "学生",
-    "讲座",
-    "学位",
-    "课程",
-    "学术界",
-    "学习",
-    "知识",
+    "大学",
     "课堂",
-    "研究",
-    "文凭",
+    "学术",
+    "学生",
     "毕业",
-    "教授",
-    "教程",
-    "作业",
-    "作业",
-    "考试"
+    "课程"
   ],
   "categories": [
     "buildings",
@@ -35,31 +28,24 @@
     "en": {
       "name": "school",
       "tags": [
-        "building",
+        "school",
         "education",
-        "childhood",
-        "university",
         "learning",
         "campus",
-        "scholar",
-        "student",
-        "lecture",
-        "degree",
-        "course",
-        "academia",
-        "study",
-        "knowledge",
+        "university",
         "classroom",
-        "research",
-        "diploma",
+        "academia",
+        "student",
         "graduation",
-        "professor",
-        "tutorial",
-        "homework",
-        "assignment",
-        "exam"
+        "course"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Education platform school selection",
+        "Campus navigation map",
+        "Student profile icon",
+        "Learning management system",
+        "Academic institution website"
+      ]
     }
   }
 }

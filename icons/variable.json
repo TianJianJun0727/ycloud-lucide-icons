@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码编辑器或IDE功能",
+    "函数参数设置",
+    "数学公式编辑器",
+    "编程教程内容"
+  ],
   "name": "变量",
   "tags": [
+    "变量",
     "代码",
-    "编码",
     "编程",
-    "符号",
-    "计算",
-    "代数",
-    "关闭",
-    "括号",
-    "括号",
-    "括号",
     "参数",
-    "（",
-    "）"
+    "代数",
+    "数学",
+    "符号"
   ],
   "categories": [
     "development",
@@ -25,21 +24,20 @@
     "en": {
       "name": "variable",
       "tags": [
+        "variable",
         "code",
-        "coding",
         "programming",
-        "symbol",
-        "calculate",
-        "algebra",
-        "x",
-        "parentheses",
-        "parenthesis",
-        "brackets",
         "parameter",
-        "(",
-        ")"
+        "algebra",
+        "math",
+        "symbol"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code editor or IDE features",
+        "Function parameter settings",
+        "Mathematical equation editors",
+        "Programming tutorial content"
+      ]
     }
   }
 }

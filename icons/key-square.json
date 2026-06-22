@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "访问控制界面",
+    "API密钥管理",
+    "数字安全设置"
+  ],
   "name": "钥匙方形",
   "tags": [
+    "钥匙",
     "密码",
     "登录",
     "认证",
     "安全",
     "解锁",
-    "车钥匙"
+    "方形"
   ],
   "categories": [
     "security",
@@ -18,14 +23,19 @@
     "en": {
       "name": "key square",
       "tags": [
+        "key",
         "password",
         "login",
         "authentication",
-        "secure",
+        "security",
         "unlock",
-        "car key"
+        "square"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Access control interface",
+        "API key management",
+        "Digital security settings"
+      ]
     }
   }
 }

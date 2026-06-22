@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在Flex容器中设置垂直分布为末端对齐",
+    "在布局中将元素底部对齐"
+  ],
   "name": "对齐垂直分布末端",
   "tags": [
-    "底部",
-    "项目",
-    "弯曲",
-    "证明合理"
+    "垂直分布",
+    "底部对齐",
+    "Flex布局",
+    "CSS布局",
+    "垂直对齐",
+    "UI设计"
   ],
   "categories": [
     "layout"
@@ -15,12 +20,17 @@
     "en": {
       "name": "align vertical distribute end",
       "tags": [
-        "bottom",
-        "items",
-        "flex",
-        "justify"
+        "vertical distribute",
+        "bottom align",
+        "flexbox",
+        "CSS layout",
+        "vertical alignment",
+        "UI design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Setting vertical distribution to end in a flex container",
+        "Aligning elements to the bottom in a layout"
+      ]
     }
   }
 }

@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户个人资料或账户表示",
+    "无障碍功能",
+    "人物图标"
+  ],
   "name": "人员站立",
   "tags": [
-    "人",
-    "人类的",
-    "可达性",
+    "人物",
+    "用户",
+    "个人资料",
+    "无障碍",
     "简笔画"
   ],
   "categories": [
@@ -16,12 +21,17 @@
     "en": {
       "name": "person standing",
       "tags": [
-        "people",
-        "human",
+        "person",
+        "user",
+        "profile",
         "accessibility",
         "stick figure"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile or account representation",
+        "Accessibility features",
+        "People or person icons"
+      ]
     }
   }
 }

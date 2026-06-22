@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "能源发电系统",
+    "水利管理基础设施",
+    "环境可持续项目"
+  ],
   "name": "大坝",
   "tags": [
-    "电力",
-    "能量",
-    "水"
+    "大坝",
+    "水电",
+    "能源",
+    "水利",
+    "发电",
+    "水库"
   ],
   "categories": [
     "buildings",
@@ -16,11 +23,18 @@
     "en": {
       "name": "dam",
       "tags": [
-        "electricity",
+        "dam",
+        "hydroelectric",
         "energy",
-        "water"
+        "water management",
+        "power generation",
+        "reservoir"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Energy and power generation systems",
+        "Water management infrastructure",
+        "Environmental and sustainability projects"
+      ]
     }
   }
 }

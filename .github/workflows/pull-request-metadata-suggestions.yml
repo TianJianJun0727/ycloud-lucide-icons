@@ -27,7 +27,9 @@ jobs:
       - name: Generate comment markup
         run: node ./scripts/suggestMetaData.mts
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          BASE_URL: https://openrouter.ai/api/v1
+          AI_MODEL: deepseek/deepseek-chat-v3.1
           PULL_REQUEST_NUMBER: ${{ github.event.number }}
           COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多步骤向导的下一步",
+    "任务进度继续",
+    "分步操作指示"
+  ],
   "name": "重做点",
   "tags": [
     "重做",
-    "历史",
-    "步骤",
-    "结束",
-    "前进"
+    "下一步",
+    "继续",
+    "步骤指示",
+    "进度前进"
   ],
   "categories": [
     "text",
@@ -18,12 +22,16 @@
       "name": "redo dot",
       "tags": [
         "redo",
-        "history",
-        "step",
-        "over",
-        "forward"
+        "next step",
+        "continue",
+        "step indicator",
+        "progress forward"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Next step in multi-step wizard",
+        "Task progress continuation",
+        "Step-by-step operation indicator"
+      ]
     }
   }
 }

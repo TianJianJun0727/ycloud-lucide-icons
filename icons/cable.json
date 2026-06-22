@@ -1,37 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备连接状态",
+    "音频/视频设置",
+    "网络连接设置"
+  ],
   "name": "线缆",
   "tags": [
-    "绳索",
+    "线缆",
     "电线",
-    "连接器",
     "连接",
-    "链接",
-    "信号",
-    "控制台",
-    "电脑",
-    "设备",
-    "电力",
-    "能量",
-    "电子产品",
-    "充电",
-    "充电器",
-    "电源",
-    "供应",
-    "断开连接",
-    "拔掉插头",
-    "插头",
+    "连接器",
+    "数据线",
+    "电源线",
     "接口",
-    "输入",
-    "输出",
-    "音频视频",
-    "影音",
-    "RCA",
-    "斯卡特",
-    "电视",
-    "电视",
-    "光学"
+    "信号"
   ],
   "categories": [
     "connectivity",
@@ -42,37 +25,21 @@
     "en": {
       "name": "cable",
       "tags": [
-        "cord",
+        "cable",
         "wire",
+        "cord",
         "connector",
         "connection",
-        "link",
-        "signal",
-        "console",
-        "computer",
-        "equipment",
-        "electricity",
-        "energy",
-        "electronics",
-        "recharging",
-        "charger",
-        "power",
-        "supply",
-        "disconnected",
-        "unplugged",
-        "plugs",
+        "data cable",
+        "power cord",
         "interface",
-        "input",
-        "output",
-        "audio video",
-        "av",
-        "rca",
-        "scart",
-        "tv",
-        "television",
-        "optical"
+        "signal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device connection status",
+        "Audio/video setup",
+        "Network connectivity settings"
+      ]
     }
   }
 }

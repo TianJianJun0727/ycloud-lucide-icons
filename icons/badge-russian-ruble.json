@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "俄罗斯货币折扣标签",
+    "带卢布符号的价格徽章",
+    "金融促销标记"
+  ],
   "name": "徽章俄罗斯卢布",
   "tags": [
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
+    "价格",
+    "卢布",
+    "促销",
+    "徽章",
     "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
-    "擦",
-    "₽"
+    "货币"
   ],
   "categories": [
     "shopping",
@@ -27,21 +24,18 @@
       "name": "badge russian ruble",
       "tags": [
         "discount",
-        "offer",
+        "price",
+        "ruble",
         "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
+        "badge",
         "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
-        "rub",
-        "₽"
+        "currency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Russian currency discount tag",
+        "Price badge with ruble symbol",
+        "Financial promotion marker"
+      ]
     }
   }
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "金融",
-  "icon": "piggy-bank",
   "i18n": {
     "en": {
       "title": "Finance"

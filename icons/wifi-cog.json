@@ -1,18 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Wi-Fi网络配置",
+    "高级连接设置",
+    "网络管理面板",
+    "设备连接偏好设置"
+  ],
   "name": "无线网络齿轮",
   "tags": [
+    "Wi-Fi",
+    "无线网络",
+    "设置",
+    "配置",
+    "齿轮",
+    "管理",
     "连接",
-    "信号",
-    "无线",
-    "目录",
-    "设置",
-    "控制",
-    "偏好",
-    "设置",
-    "编辑",
-    "齿轮"
+    "信号"
   ],
   "categories": [
     "connectivity",
@@ -23,18 +26,21 @@
     "en": {
       "name": "wifi cog",
       "tags": [
-        "connection",
-        "signal",
+        "Wi-Fi",
         "wireless",
-        "directory",
         "settings",
-        "control",
-        "preferences",
+        "configure",
         "cog",
-        "edit",
-        "gear"
+        "manage",
+        "connection",
+        "signal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Wi-Fi network configuration",
+        "Advanced connection settings",
+        "Network management panel",
+        "Device preferences for connectivity"
+      ]
     }
   }
 }

@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示地理地图",
+    "展示用户位置",
+    "指示导航或方向"
+  ],
   "name": "地图",
   "tags": [
+    "地图",
     "位置",
     "导航",
-    "旅行"
+    "地理",
+    "路线",
+    "地点"
   ],
   "categories": [
     "text",
@@ -15,11 +22,18 @@
     "en": {
       "name": "map",
       "tags": [
+        "map",
         "location",
         "navigation",
-        "travel"
+        "geography",
+        "route",
+        "place"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display a geographical map",
+        "Show user location",
+        "Indicate navigation or directions"
+      ]
     }
   }
 }

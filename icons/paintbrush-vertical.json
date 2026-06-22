@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计工具选择",
+    "垂直画笔工具",
+    "颜色选择器界面",
+    "绘图应用工具栏"
+  ],
   "name": "画笔垂直",
   "tags": [
-    "刷子",
     "画笔",
+    "垂直",
     "设计",
     "颜色",
-    "颜色",
-    "装饰",
-    "DIY"
+    "绘画",
+    "工具",
+    "装饰"
   ],
   "categories": [
     "text",
@@ -32,13 +37,19 @@
       "tags": [
         "brush",
         "paintbrush",
+        "vertical",
         "design",
         "color",
-        "colour",
-        "decoration",
-        "diy"
+        "painting",
+        "tool",
+        "decoration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Design tool selection",
+        "Vertical brush tool",
+        "Color picker interface",
+        "Drawing application toolbar"
+      ]
     }
   }
 }

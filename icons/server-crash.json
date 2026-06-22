@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "服务器错误状态",
+    "系统故障警报",
+    "事件报告"
+  ],
   "name": "服务器崩溃",
   "tags": [
-    "云",
-    "存储",
-    "问题",
-    "错误"
+    "服务器",
+    "故障",
+    "错误",
+    "宕机",
+    "崩溃",
+    "问题诊断",
+    "运维"
   ],
   "categories": [
     "development",
@@ -16,12 +23,19 @@
     "en": {
       "name": "server crash",
       "tags": [
-        "cloud",
-        "storage",
-        "problem",
-        "error"
+        "server",
+        "failure",
+        "error",
+        "downtime",
+        "crash",
+        "troubleshooting",
+        "maintenance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Server error status",
+        "System failure alerts",
+        "Incident reporting"
+      ]
     }
   }
 }

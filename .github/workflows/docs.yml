@@ -1,20 +1,22 @@
 name: Deploy Docs
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/actions/setup-pnpm/**'
-      - '.github/workflows/docs.yml'
-      - 'categories/**'
-      - 'changelogs/releases/**'
-      - 'docs/**'
-      - 'icons/**'
-      - 'packages/**'
-      - 'pnpm-lock.yaml'
-      - 'pnpm-workspace.yaml'
-      - 'scripts/writeChangelog.mts'
+  # Temporarily disable automatic docs deployment from main pushes.
+  # Keep this block for quick restoration when automatic docs publishing is needed again.
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - '.github/actions/setup-pnpm/**'
+  #     - '.github/workflows/docs.yml'
+  #     - 'categories/**'
+  #     - 'changelogs/releases/**'
+  #     - 'docs/**'
+  #     - 'icons/**'
+  #     - 'packages/**'
+  #     - 'pnpm-lock.yaml'
+  #     - 'pnpm-workspace.yaml'
+  #     - 'scripts/writeChangelog.mts'
   workflow_call:
     inputs:
       ref:

@@ -1,21 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "露营装备电商",
+    "旅行住宿选择器",
+    "可持续与户外生活"
+  ],
   "name": "帐篷",
   "tags": [
     "帐篷",
-    "圆锥形帐篷",
-    "棚屋",
-    "小屋",
     "露营",
-    "露营地",
-    "假期",
-    "撤退",
-    "游牧的",
-    "美洲原住民",
-    "印度人",
-    "荒野",
-    "户外"
+    "户外",
+    "旅行",
+    "原住民",
+    "可持续"
   ],
   "categories": [
     "travel",
@@ -26,21 +23,18 @@
     "en": {
       "name": "tent",
       "tags": [
-        "tipi",
-        "teepee",
-        "wigwam",
-        "lodge",
+        "tent",
         "camping",
-        "campsite",
-        "holiday",
-        "retreat",
-        "nomadic",
-        "native american",
-        "indian",
-        "wilderness",
-        "outdoors"
+        "outdoors",
+        "travel",
+        "tipi",
+        "sustainability"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Camping gear e-commerce",
+        "Travel accommodation selector",
+        "Sustainability and outdoor living"
+      ]
     }
   }
 }

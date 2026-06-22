@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "海鲜菜单分类",
+    "钓鱼游戏素材",
+    "宠物店或水族馆区域"
+  ],
   "name": "鱼",
   "tags": [
-    "菜",
-    "餐厅",
-    "课程",
-    "餐",
+    "鱼",
     "海鲜",
-    "宠物",
-    "海",
-    "海洋"
+    "钓鱼",
+    "水生动物",
+    "宠物"
   ],
   "categories": [
     "food-beverage",
@@ -20,16 +21,17 @@
     "en": {
       "name": "fish",
       "tags": [
-        "dish",
-        "restaurant",
-        "course",
-        "meal",
+        "fish",
         "seafood",
-        "pet",
-        "sea",
-        "marine"
+        "fishing",
+        "aquatic",
+        "pet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Seafood menu category",
+        "Fishing game asset",
+        "Pet store or aquarium section"
+      ]
     }
   }
 }

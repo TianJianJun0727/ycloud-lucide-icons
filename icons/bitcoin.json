@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "加密货币交易平台",
+    "区块链应用",
+    "金融科技界面"
+  ],
   "name": "比特币",
   "tags": [
+    "比特币",
     "加密货币",
-    "数字化",
     "区块链",
     "金融",
-    "硬币",
-    "市场",
-    "去中心化",
-    "投资",
-    "加密货币",
-    "货币",
-    "钱",
-    "付款"
+    "数字资产"
   ],
   "categories": [
     "development",
@@ -24,20 +21,17 @@
     "en": {
       "name": "bitcoin",
       "tags": [
+        "bitcoin",
         "cryptocurrency",
-        "digital",
         "blockchain",
         "finance",
-        "coin",
-        "market",
-        "decentralized",
-        "investment",
-        "crypto",
-        "currency",
-        "money",
-        "payment"
+        "digital asset"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cryptocurrency exchange",
+        "Blockchain application",
+        "Fintech interface"
+      ]
     }
   }
 }

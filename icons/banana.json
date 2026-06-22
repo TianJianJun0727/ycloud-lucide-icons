@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食物或营养应用图标",
+    "杂货购物商品",
+    "健康零食指示器"
+  ],
   "name": "香蕉",
   "tags": [
+    "香蕉",
     "水果",
-    "食物"
+    "食物",
+    "健康",
+    "零食"
   ],
   "categories": [
     "food-beverage"
@@ -13,10 +20,17 @@
     "en": {
       "name": "banana",
       "tags": [
+        "banana",
         "fruit",
-        "food"
+        "food",
+        "healthy",
+        "snack"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food or nutrition app icon",
+        "Grocery shopping item",
+        "Healthy snack indicator"
+      ]
     }
   }
 }

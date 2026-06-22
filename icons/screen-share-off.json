@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频会议停止共享",
+    "远程桌面断开连接",
+    "演示结束屏幕共享",
+    "协作工具共享控制"
+  ],
   "name": "屏幕分享关闭",
   "tags": [
-    "桌面",
-    "断开连接",
-    "显示器"
+    "屏幕共享关闭",
+    "停止分享",
+    "断开屏幕",
+    "结束共享",
+    "屏幕断开"
   ],
   "categories": [
     "connectivity",
@@ -16,11 +23,18 @@
     "en": {
       "name": "screen share off",
       "tags": [
-        "desktop",
-        "disconnect",
-        "monitor"
+        "screen share off",
+        "stop sharing",
+        "disconnect screen",
+        "end share",
+        "screen disconnect"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video conference stop sharing",
+        "Remote desktop disconnect",
+        "Presentation end screen share",
+        "Collaboration tool sharing control"
+      ]
     }
   }
 }

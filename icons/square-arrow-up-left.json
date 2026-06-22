@@ -1,14 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "对角线导航",
+    "键盘快捷键",
+    "界面方向指示"
+  ],
   "name": "方形箭头上左",
   "tags": [
     "方向",
-    "西北",
     "对角线",
-    "标志",
-    "键盘",
-    "按钮"
+    "按钮",
+    "导航"
   ],
   "categories": [
     "arrows"
@@ -26,13 +28,15 @@
       "name": "square arrow up left",
       "tags": [
         "direction",
-        "north-west",
         "diagonal",
-        "sign",
-        "keyboard",
-        "button"
+        "button",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Diagonal navigation",
+        "Keyboard shortcut",
+        "UI direction indicator"
+      ]
     }
   }
 }

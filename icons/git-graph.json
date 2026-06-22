@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git提交图谱可视化",
+    "版本历史时间线",
+    "代码仓库分析"
+  ],
   "name": "Git图形",
   "tags": [
-    "代码",
-    "版本控制",
     "提交图",
-    "提交",
-    "吉特伦斯"
+    "版本历史",
+    "Git",
+    "代码图谱",
+    "可视化"
   ],
   "categories": [
     "development"
@@ -16,13 +20,17 @@
     "en": {
       "name": "git graph",
       "tags": [
-        "code",
-        "version control",
         "commit graph",
-        "commits",
-        "gitlens"
+        "version history",
+        "Git",
+        "code graph",
+        "visualization"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git commit graph visualization",
+        "Version history timeline",
+        "Code repository analytics"
+      ]
     }
   }
 }

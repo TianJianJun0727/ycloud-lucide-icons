@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "界面中拆分表格列",
+    "数据列分离工具",
+    "电子表格列管理"
+  ],
   "name": "表格列拆分",
   "tags": [
+    "拆分列",
+    "表格",
     "电子表格",
-    "网格",
-    "切",
-    "打破",
-    "划分",
-    "分开",
-    "段"
+    "列操作",
+    "分割"
   ],
   "categories": [
     "text",
@@ -19,15 +21,17 @@
     "en": {
       "name": "table columns split",
       "tags": [
+        "split columns",
+        "table",
         "spreadsheet",
-        "grid",
-        "cut",
-        "break",
-        "divide",
-        "separate",
-        "segment"
+        "column operation",
+        "divide"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Split a table column in a UI",
+        "Data column separation tool",
+        "Spreadsheet column management"
+      ]
     }
   }
 }

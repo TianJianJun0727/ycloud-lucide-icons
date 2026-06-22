@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件搜索界面",
+    "目录浏览器搜索",
+    "文件夹内查找功能"
+  ],
   "name": "文件夹搜索2",
   "tags": [
-    "目录",
+    "文件夹搜索",
+    "目录查找",
+    "文件检索",
     "搜索",
-    "找到",
-    "迷失了",
-    "浏览器",
-    "镜头"
+    "查找"
   ],
   "categories": [
     "files"
@@ -17,14 +20,17 @@
     "en": {
       "name": "folder search 2",
       "tags": [
-        "directory",
+        "folder search",
+        "directory find",
+        "file search",
         "search",
-        "find",
-        "lost",
-        "browser",
-        "lens"
+        "find"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File search interface",
+        "Directory browser search",
+        "Find in folder feature"
+      ]
     }
   }
 }

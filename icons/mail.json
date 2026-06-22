@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "邮件应用图标",
+    "消息收件箱",
+    "未读邮件指示器"
+  ],
   "name": "邮件",
   "tags": [
-    "邮箱",
+    "邮件",
+    "电子邮件",
     "消息",
-    "信",
-    "未读"
+    "信件",
+    "未读邮件"
   ],
   "categories": [
     "text",
@@ -17,12 +22,17 @@
     "en": {
       "name": "mail",
       "tags": [
+        "mail",
         "email",
         "message",
         "letter",
         "unread"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Email application icon",
+        "Message inbox",
+        "Unread mail indicator"
+      ]
     }
   }
 }

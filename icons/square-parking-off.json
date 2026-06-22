@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "停车限制标志",
+    "关闭停车场指示",
+    "交通禁止标记"
+  ],
   "name": "方形停车关闭",
   "tags": [
-    "停车场",
-    "停车场",
-    "没有停车位"
+    "禁止停车",
+    "停车场关闭",
+    "无停车位",
+    "交通禁止"
   ],
   "categories": [
     "transportation",
@@ -23,11 +28,16 @@
     "en": {
       "name": "square parking off",
       "tags": [
-        "parking lot",
-        "car park",
-        "no parking"
+        "no parking",
+        "parking closed",
+        "no parking space",
+        "traffic prohibition"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Parking restriction sign",
+        "Closed parking lot indicator",
+        "Traffic prohibition marker"
+      ]
     }
   }
 }

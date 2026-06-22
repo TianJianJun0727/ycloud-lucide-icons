@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表格列降序排序",
+    "数据筛选降序",
+    "文本大小减少控制"
+  ],
   "name": "箭头上宽窄",
   "tags": [
-    "筛选",
     "排序",
-    "上升",
-    "下降",
-    "增加",
+    "降序",
+    "筛选",
     "减少",
-    "上升",
-    "坠落"
+    "文本格式",
+    "布局"
   ],
   "categories": [
     "text",
@@ -21,16 +23,18 @@
     "en": {
       "name": "arrow up wide narrow",
       "tags": [
-        "filter",
         "sort",
-        "ascending",
         "descending",
-        "increasing",
+        "filter",
         "decreasing",
-        "rising",
-        "falling"
+        "text formatting",
+        "layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Table column sort descending",
+        "Data filter descending order",
+        "Text size decrease control"
+      ]
     }
   }
 }

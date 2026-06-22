@@ -21,7 +21,7 @@ icons/<icon-name>.json
 
 除此之外，还有一类文件与图标展示有关：
 
-- `categories/*.json`：定义分类名称、分类图标和中文分类标题
+- `categories/*.json`：定义分类名称、中文分类标题和英文分类标题
 - `docs/`：文档站点，图标详情页、搜索和分类页都由构建脚本自动生成
 
 ## 图标规范
@@ -95,7 +95,6 @@ icons/<icon-name>.json
 
 然后确认下面几类引用是否也要一起调整：
 
-- `categories/*.json` 是否把它用作分类图标
 - 其他图标的 `aliases` 或弃用迁移是否还引用它
 - 文档示例是否还在使用这个图标
 
@@ -145,7 +144,6 @@ icons/<icon-name>.json
 {
   "$schema": "../category.schema.json",
   "title": "导航与地点",
-  "icon": "compass",
   "i18n": {
     "en": {
       "title": "Navigation & Places"

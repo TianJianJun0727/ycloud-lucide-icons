@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电信基础设施",
+    "广播电台",
+    "信号传输"
+  ],
   "name": "收音机塔",
   "tags": [
-    "信号",
-    "广播",
-    "连接性",
-    "直播",
-    "频率"
+    "广播塔",
+    "信号塔",
+    "发射塔",
+    "通信",
+    "天线",
+    "基站"
   ],
   "categories": [
     "devices",
@@ -18,13 +23,18 @@
     "en": {
       "name": "radio tower",
       "tags": [
-        "signal",
-        "broadcast",
-        "connectivity",
-        "live",
-        "frequency"
+        "radio tower",
+        "signal tower",
+        "transmitter",
+        "communication",
+        "antenna",
+        "base station"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Telecom infrastructure",
+        "Broadcast station",
+        "Signal transmission"
+      ]
     }
   }
 }

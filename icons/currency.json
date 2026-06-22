@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "金融应用和银行",
+    "货币兑换服务",
+    "支付处理系统"
+  ],
   "name": "货币",
   "tags": [
+    "货币",
+    "金钱",
     "金融",
-    "钱"
+    "支付",
+    "汇率",
+    "现金"
   ],
   "categories": [
     "finance"
@@ -13,10 +21,18 @@
     "en": {
       "name": "currency",
       "tags": [
+        "currency",
+        "money",
         "finance",
-        "money"
+        "payment",
+        "exchange rate",
+        "cash"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Financial applications and banking",
+        "Currency exchange services",
+        "Payment processing systems"
+      ]
     }
   }
 }

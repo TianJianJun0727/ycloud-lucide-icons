@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "表示视频、直播或音频文件已禁用播放",
-    "表示视频、直播或音频文件无法播放"
+    "禁用的媒体播放器按钮",
+    "内容限制指示器",
+    "播放被阻止状态"
   ],
   "name": "播放关闭",
   "tags": [
-    "音频",
-    "视频",
-    "音乐",
-    "开始",
-    "跑",
-    "关闭",
-    "残疾人",
-    "被阻止",
-    "禁止的"
+    "播放禁用",
+    "暂停",
+    "阻止",
+    "不可用",
+    "媒体控制"
   ],
   "categories": [
     "multimedia"
@@ -23,19 +20,16 @@
     "en": {
       "name": "play off",
       "tags": [
-        "audio",
-        "video",
-        "music",
-        "start",
-        "run",
-        "off",
-        "disabled",
+        "playback disabled",
+        "pause",
         "blocked",
-        "forbidden"
+        "unavailable",
+        "media control"
       ],
       "use-cases": [
-        "Indicates that playback is disabled for video, live stream, or audio file",
-        "Indicates that video, live stream, or audio file cannot be played."
+        "Disabled media player button",
+        "Content restriction indicator",
+        "Playback blocked state"
       ]
     }
   }

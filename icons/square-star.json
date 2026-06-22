@@ -1,21 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "成就徽章显示",
+    "游戏评级系统",
+    "荣誉指示器"
+  ],
   "name": "方形星标",
   "tags": [
     "徽章",
     "奖章",
+    "成就",
+    "评级",
     "荣誉",
-    "装饰",
-    "订单",
-    "针",
-    "月桂树",
-    "奖杯",
-    "奖章",
-    "徽章",
-    "青铜",
-    "银",
-    "黄金"
+    "游戏奖励"
   ],
   "categories": [
     "sports",
@@ -27,19 +24,16 @@
       "tags": [
         "badge",
         "medal",
-        "honour",
-        "decoration",
-        "order",
-        "pin",
-        "laurel",
-        "trophy",
-        "medallion",
-        "insignia",
-        "bronze",
-        "silver",
-        "gold"
+        "achievement",
+        "rating",
+        "honor",
+        "game reward"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Achievement badge display",
+        "Game rating system",
+        "Honor indicator"
+      ]
     }
   }
 }

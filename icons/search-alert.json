@@ -1,23 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "搜索结果错误状态",
+    "未找到结果警告",
+    "搜索系统警报",
+    "数据查找失败"
+  ],
   "name": "搜索告警",
   "tags": [
-    "找到",
-    "扫描",
-    "放大镜",
-    "放大镜",
-    "停止",
-    "警告",
-    "告警",
-    "错误",
-    "异常",
-    "镜头",
-    "定位",
-    "探索",
-    "发现",
-    "放大",
-    "缩放"
+    "搜索警告",
+    "搜索错误",
+    "查找异常",
+    "搜索警报",
+    "未找到",
+    "搜索问题"
   ],
   "categories": [
     "text",
@@ -27,23 +23,19 @@
     "en": {
       "name": "search alert",
       "tags": [
-        "find",
-        "scan",
-        "magnifier",
-        "magnifying glass",
-        "stop",
-        "warning",
-        "alert",
-        "error",
-        "anomaly",
-        "lens",
-        "locate",
-        "explore",
-        "discover",
-        "enlarge",
-        "zoom"
+        "search warning",
+        "search error",
+        "find anomaly",
+        "search alert",
+        "not found",
+        "search issue"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search result error state",
+        "No results found warning",
+        "Search system alert",
+        "Data lookup failure"
+      ]
     }
   }
 }

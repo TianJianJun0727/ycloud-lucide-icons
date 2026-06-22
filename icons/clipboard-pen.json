@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档签名确认",
+    "批准剪贴板内容",
+    "书写确认"
+  ],
   "name": "剪贴板笔",
   "tags": [
-    "粘贴",
-    "签名"
+    "签名",
+    "批准",
+    "确认",
+    "文档",
+    "书写"
   ],
   "categories": [
     "text"
@@ -21,10 +28,17 @@
     "en": {
       "name": "clipboard pen",
       "tags": [
-        "paste",
-        "signature"
+        "signature",
+        "approve",
+        "confirm",
+        "document",
+        "write"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document signature confirmation",
+        "Approve clipboard content",
+        "Write confirmation"
+      ]
     }
   }
 }

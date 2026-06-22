@@ -1,33 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "工具存储界面",
+    "维护仪表板",
+    "维修工具包展示"
+  ],
   "name": "工具箱",
   "tags": [
-    "工具包",
-    "工具",
-    "树干",
-    "胸部",
-    "盒子",
-    "存储",
-    "效用",
-    "公用事业",
-    "容器",
-    "套件",
-    "设置",
-    "修理",
-    "修复",
-    "服务",
-    "维护",
-    "机械师",
-    "车间",
-    "建筑",
-    "硬件",
-    "设备",
-    "齿轮",
-    "勤杂工",
-    "工程",
-    "工艺",
-    "DIY"
+    "工具箱",
+    "工具盒",
+    "维修箱",
+    "工具容器",
+    "工具套装"
   ],
   "categories": [
     "tools",
@@ -37,33 +21,17 @@
     "en": {
       "name": "toolbox",
       "tags": [
-        "toolkit",
-        "tools",
-        "trunk",
-        "chest",
-        "box",
-        "storage",
-        "utility",
-        "utilities",
-        "container",
-        "kit",
-        "set",
-        "repair",
-        "fix",
-        "service",
-        "maintenance",
-        "mechanic",
-        "workshop",
-        "construction",
-        "hardware",
-        "equipment",
-        "gear",
-        "handyman",
-        "engineering",
-        "craft",
-        "diy"
+        "toolbox",
+        "tool container",
+        "repair kit",
+        "tool storage",
+        "tool set"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Tool storage interface",
+        "Maintenance dashboard",
+        "Repair toolkit display"
+      ]
     }
   }
 }

@@ -1,20 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "前进导航",
+    "下一个项目选择",
+    "数学大于符号",
+    "命令行提示符",
+    "代码编辑器导航"
+  ],
   "name": "折角箭头右",
   "tags": [
+    "右箭头",
     "前进",
     "下一个",
-    "超过",
-    "更大",
+    "大于",
     "菜单",
     "代码",
-    "编码",
-    "命令行",
-    "终端",
-    "提示",
-    "外壳",
-    ">"
+    "命令行"
   ],
   "categories": [
     "arrows",
@@ -25,20 +26,21 @@
     "en": {
       "name": "chevron right",
       "tags": [
+        "right arrow",
         "forward",
         "next",
-        "more than",
-        "greater",
+        "greater than",
         "menu",
         "code",
-        "coding",
-        "command line",
-        "terminal",
-        "prompt",
-        "shell",
-        ">"
+        "command line"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Forward navigation",
+        "Next item selection",
+        "Mathematical greater than symbol",
+        "Command line prompt",
+        "Code editor navigation"
+      ]
     }
   }
 }

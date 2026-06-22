@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "编码与开发",
-  "icon": "code-xml",
   "i18n": {
     "en": {
       "title": "Coding & development"

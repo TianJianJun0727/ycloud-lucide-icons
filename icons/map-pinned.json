@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "固定位置显示",
+    "固定地图标记",
+    "选定位置"
+  ],
   "name": "地图定位",
   "tags": [
     "位置",
-    "航路点",
-    "标记",
-    "掉落"
+    "固定",
+    "已标记",
+    "已定位",
+    "选定",
+    "锚点"
   ],
   "categories": [
     "navigation",
@@ -18,11 +24,17 @@
       "name": "map pinned",
       "tags": [
         "location",
-        "waypoint",
-        "marker",
-        "drop"
+        "pinned",
+        "marked",
+        "positioned",
+        "selected",
+        "anchor"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Pinned location display",
+        "Fixed map marker",
+        "Selected position"
+      ]
     }
   }
 }

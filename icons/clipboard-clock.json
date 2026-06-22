@@ -1,26 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "时间追踪的剪贴板历史",
+    "计划复制任务",
+    "带时间戳的日志条目"
+  ],
   "name": "剪贴板时钟",
   "tags": [
-    "复制",
-    "粘贴",
+    "剪贴板",
+    "时间",
     "历史",
     "日志",
-    "时钟",
-    "时间",
-    "手表",
-    "闹钟",
-    "小时",
-    "分钟",
-    "提醒",
-    "预定的",
-    "截止日期",
-    "待定",
-    "时间追踪",
-    "时间表",
-    "预约",
-    "航海日志"
+    "计划",
+    "截止日期"
   ],
   "categories": [
     "time",
@@ -30,26 +22,18 @@
     "en": {
       "name": "clipboard clock",
       "tags": [
-        "copy",
-        "paste",
+        "clipboard",
+        "time",
         "history",
         "log",
-        "clock",
-        "time",
-        "watch",
-        "alarm",
-        "hour",
-        "minute",
-        "reminder",
-        "scheduled",
-        "deadline",
-        "pending",
-        "time tracking",
-        "timesheets",
-        "appointment",
-        "logbook"
+        "schedule",
+        "deadline"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Time-tracked clipboard history",
+        "Scheduled copy task",
+        "Log entry with timestamp"
+      ]
     }
   }
 }

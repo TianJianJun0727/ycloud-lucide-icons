@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "喜欢帖子",
+    "添加到收藏夹",
+    "增加健康指标",
+    "授予账号访问权限",
+    "表示支持"
+  ],
   "name": "爱心加号",
   "tags": [
-    "加号",
     "喜欢",
-    "收藏",
-    "添加",
-    "健康",
-    "支持"
+    "添加收藏",
+    "加号",
+    "健康增加",
+    "支持",
+    "账号添加"
   ],
   "categories": [
     "medical",
@@ -21,14 +27,20 @@
     "en": {
       "name": "heart plus",
       "tags": [
-        "plus",
         "like",
         "favorite",
         "add",
         "health",
-        "support"
+        "support",
+        "account"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Like a post",
+        "Add to favorites",
+        "Increase health metric",
+        "Grant account access",
+        "Show support"
+      ]
     }
   }
 }

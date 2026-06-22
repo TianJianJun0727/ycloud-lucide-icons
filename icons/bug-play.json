@@ -1,14 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "调试工具中的播放按钮",
+    "重现错误的操作",
+    "测试用例执行"
+  ],
   "name": "缺陷播放",
   "tags": [
-    "问题",
-    "测试",
-    "调试",
-    "再现",
-    "代码",
-    "昆虫"
+    "调试播放",
+    "错误重现",
+    "测试执行",
+    "代码调试"
   ],
   "categories": [
     "development",
@@ -18,14 +20,16 @@
     "en": {
       "name": "bug play",
       "tags": [
-        "issue",
-        "testing",
-        "debug",
-        "reproduce",
-        "code",
-        "insect"
+        "debug play",
+        "error reproduction",
+        "test execution",
+        "code debugging"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Play button in debugging tools",
+        "Action to reproduce an error",
+        "Test case execution"
+      ]
     }
   }
 }

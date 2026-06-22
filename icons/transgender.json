@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户资料性别选择",
+    "多样性与包容性内容",
+    "医疗保健表单选项"
+  ],
   "name": "跨性别",
   "tags": [
-    "性别",
-    "包容性"
+    "跨性别",
+    "性别认同",
+    "多样性",
+    "包容性",
+    "平等"
   ],
   "categories": [
     "medical",
@@ -14,10 +21,17 @@
     "en": {
       "name": "transgender",
       "tags": [
-        "gender",
-        "inclusive"
+        "transgender",
+        "gender identity",
+        "diversity",
+        "inclusion",
+        "equality"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile gender selection",
+        "Diversity and inclusion content",
+        "Healthcare form options"
+      ]
     }
   }
 }

@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "活动票务或入场",
+    "优惠券或代金券展示",
+    "访问通行证或入场许可"
+  ],
   "name": "票券",
   "tags": [
-    "条目",
-    "通过",
+    "票券",
+    "门票",
+    "入场券",
     "优惠券",
-    "事件",
-    "音乐会",
-    "显示",
-    "穿孔的",
-    "虚线"
+    "通行证",
+    "活动"
   ],
   "categories": [
     "account",
@@ -20,16 +22,18 @@
     "en": {
       "name": "ticket",
       "tags": [
-        "entry",
-        "pass",
+        "ticket",
+        "admission",
         "voucher",
-        "event",
-        "concert",
-        "show",
-        "perforated",
-        "dashed"
+        "pass",
+        "coupon",
+        "event"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Event ticketing or admission",
+        "Coupon or voucher display",
+        "Access pass or entry permit"
+      ]
     }
   }
 }

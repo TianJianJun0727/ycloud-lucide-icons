@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气预报夜间多云",
+    "夜间天气应用",
+    "月亮天气图标"
+  ],
   "name": "云月亮",
   "tags": [
     "天气",
-    "晚上"
+    "夜晚",
+    "多云",
+    "月亮",
+    "夜间"
   ],
   "categories": [
     "weather"
@@ -14,9 +21,16 @@
       "name": "cloud moon",
       "tags": [
         "weather",
-        "night"
+        "night",
+        "cloudy",
+        "moon",
+        "evening"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather forecast for cloudy night",
+        "Night weather app",
+        "Moon weather icon"
+      ]
     }
   }
 }

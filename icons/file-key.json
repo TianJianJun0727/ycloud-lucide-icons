@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "加密文件访问",
+    "安全设置",
+    "权限管理"
+  ],
   "name": "文件钥匙",
   "tags": [
-    "钥匙",
-    "私人的",
-    "公开的",
-    "安全"
+    "密钥",
+    "加密",
+    "安全",
+    "文件",
+    "权限"
   ],
   "categories": [
     "files",
@@ -25,11 +30,16 @@
       "name": "file key",
       "tags": [
         "key",
-        "private",
-        "public",
-        "security"
+        "encryption",
+        "security",
+        "file",
+        "access"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Encrypted file access",
+        "Security settings",
+        "Permission management"
+      ]
     }
   }
 }

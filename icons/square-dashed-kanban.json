@@ -1,25 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "看板或卡片图标",
+    "项目管理仪表板",
+    "任务或问题模板"
+  ],
   "name": "方形虚线看板",
   "tags": [
-    "项目",
-    "管理",
-    "概述",
-    "董事会",
-    "门票",
-    "问题",
-    "路线图",
-    "计划",
-    "意图",
-    "生产力",
-    "工作",
-    "敏捷的",
-    "草稿",
-    "模板",
-    "样板文件",
-    "代码",
-    "编码"
+    "看板",
+    "项目管理",
+    "任务板",
+    "敏捷开发",
+    "方形",
+    "虚线",
+    "模板"
   ],
   "categories": [
     "charts",
@@ -38,25 +32,19 @@
     "en": {
       "name": "square dashed kanban",
       "tags": [
-        "projects",
-        "manage",
-        "overview",
-        "board",
-        "tickets",
-        "issues",
-        "roadmap",
-        "plan",
-        "intentions",
-        "productivity",
-        "work",
+        "kanban",
+        "project management",
+        "task board",
         "agile",
-        "draft",
-        "template",
-        "boilerplate",
-        "code",
-        "coding"
+        "square",
+        "dashed",
+        "template"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Kanban board or card icon",
+        "Project management dashboard",
+        "Task or issue template"
+      ]
     }
   }
 }

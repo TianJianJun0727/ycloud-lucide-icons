@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务完成状态",
+    "复选框选择状态",
+    "批准确认指示器"
+  ],
   "name": "方形勾选",
   "tags": [
     "完成",
-    "待办事项",
-    "勾选",
-    "完成",
-    "任务"
+    "确认",
+    "选中",
+    "任务",
+    "待办事项"
   ],
   "categories": [
     "notifications"
@@ -24,13 +28,17 @@
     "en": {
       "name": "square check",
       "tags": [
-        "done",
-        "todo",
-        "tick",
         "complete",
-        "task"
+        "confirm",
+        "selected",
+        "task",
+        "todo"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Task completion status",
+        "Checkbox selection states",
+        "Approval confirmation indicators"
+      ]
     }
   }
 }

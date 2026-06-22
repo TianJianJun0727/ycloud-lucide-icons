@@ -1,6 +1,10 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下一页",
+    "导出操作",
+    "展开菜单"
+  ],
   "name": "箭头右从线条",
   "tags": [
     "下一个",
@@ -8,10 +12,7 @@
     "方向",
     "东",
     "导出",
-    "展开",
-    "折叠",
-    "水平的",
-    "|->"
+    "展开"
   ],
   "categories": [
     "arrows"
@@ -25,12 +26,13 @@
         "direction",
         "east",
         "export",
-        "expand",
-        "fold",
-        "horizontal",
-        "|->"
+        "expand"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Next page",
+        "Export action",
+        "Expand menu"
+      ]
     }
   }
 }

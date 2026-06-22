@@ -1,27 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "建筑安全平面图",
+    "应急设备位置",
+    "消防安全说明"
+  ],
   "name": "火焰灭火器",
   "tags": [
-    "火焰",
-    "抽烟",
-    "泡沫",
-    "水",
-    "喷雾",
-    "软管",
-    "消防员",
-    "消防员",
-    "部门",
-    "旅",
-    "车站",
-    "紧急情况",
-    "抑制",
-    "压缩的",
-    "坦克",
-    "气缸",
-    "安全",
-    "设备",
-    "便利设施"
+    "灭火器",
+    "消防",
+    "安全设备",
+    "应急",
+    "防火"
   ],
   "categories": [
     "home",
@@ -32,27 +22,17 @@
     "en": {
       "name": "fire extinguisher",
       "tags": [
-        "flames",
-        "smoke",
-        "foam",
-        "water",
-        "spray",
-        "hose",
-        "firefighter",
-        "fireman",
-        "department",
-        "brigade",
-        "station",
+        "fire extinguisher",
+        "fire safety",
         "emergency",
-        "suppress",
-        "compressed",
-        "tank",
-        "cylinder",
-        "safety",
         "equipment",
-        "amenities"
+        "safety"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Building safety plan",
+        "Emergency equipment location",
+        "Fire safety instructions"
+      ]
     }
   }
 }

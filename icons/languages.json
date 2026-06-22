@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "语言选择菜单",
+    "翻译功能开关",
+    "国际化设置",
+    "内容本地化指示器"
+  ],
   "name": "语言",
   "tags": [
-    "翻译"
+    "语言",
+    "翻译",
+    "国际化",
+    "本地化",
+    "多语言"
   ],
   "categories": [
     "text"
@@ -12,9 +21,18 @@
     "en": {
       "name": "languages",
       "tags": [
-        "translate"
+        "language",
+        "translate",
+        "internationalization",
+        "localization",
+        "multilingual"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Language selection menu",
+        "Translation feature toggle",
+        "Internationalization settings",
+        "Content localization indicator"
+      ]
     }
   }
 }

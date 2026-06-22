@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "表示时间范围的开始",
-    "分配时间信息",
-    "打开时间设置"
+    "指示时间范围的开始",
+    "分配开始时间",
+    "导航到上一个时间段"
   ],
   "name": "时钟箭头左",
   "tags": [
     "时间",
-    "手表",
-    "闹钟",
-    "分配",
-    "范围"
+    "开始时间",
+    "时间范围",
+    "分配时间",
+    "返回",
+    "上一项"
   ],
   "categories": [
     "time"
@@ -21,15 +22,16 @@
       "name": "clock arrow left",
       "tags": [
         "time",
-        "watch",
-        "alarm",
-        "assign",
-        "range"
+        "start time",
+        "time range",
+        "assign time",
+        "back",
+        "previous"
       ],
       "use-cases": [
-        "indicating the start of a time range",
-        "assign timing information",
-        "open time settings"
+        "Indicate the start of a time range",
+        "Assign a start time",
+        "Navigate to a previous time slot"
       ]
     }
   }

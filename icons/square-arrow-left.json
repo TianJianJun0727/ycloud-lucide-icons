@@ -1,16 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "界面返回按钮",
+    "上一个项目导航",
+    "键盘左箭头键",
+    "方向移动",
+    "西方方向指示器"
+  ],
   "name": "方形箭头左",
   "tags": [
-    "上一个",
-    "返回",
+    "向左箭头",
     "方向",
-    "西",
-    "标志",
+    "返回",
+    "上一个",
     "键盘",
     "按钮",
-    "<-"
+    "西",
+    "导航"
   ],
   "categories": [
     "arrows"
@@ -27,16 +33,22 @@
     "en": {
       "name": "square arrow left",
       "tags": [
-        "previous",
-        "back",
+        "left arrow",
         "direction",
-        "west",
-        "sign",
+        "back",
+        "previous",
         "keyboard",
         "button",
-        "<-"
+        "west",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back button in UI",
+        "Previous item navigation",
+        "Keyboard left arrow key",
+        "Directional movement",
+        "West direction indicator"
+      ]
     }
   }
 }

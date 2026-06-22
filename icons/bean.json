@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食物或食材图标",
+    "豆类产品标签",
+    "烹饪或食谱界面"
+  ],
   "name": "豆子",
   "tags": [
+    "豆子",
     "豆类",
     "大豆",
     "食物",
-    "种子"
+    "种子",
+    "食材"
   ],
   "categories": [
     "food-beverage"
@@ -15,12 +21,18 @@
     "en": {
       "name": "bean",
       "tags": [
+        "bean",
         "legume",
         "soy",
         "food",
-        "seed"
+        "seed",
+        "ingredient"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food or ingredient icon",
+        "Legume-based product label",
+        "Cooking or recipe UI"
+      ]
     }
   }
 }

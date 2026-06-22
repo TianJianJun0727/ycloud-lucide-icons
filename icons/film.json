@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频播放器界面",
+    "电影库分类",
+    "多媒体编辑工具"
+  ],
   "name": "胶片",
   "tags": [
     "电影",
     "视频",
-    "卷轴",
-    "相机",
-    "电影院",
-    "娱乐"
+    "胶片",
+    "摄像机",
+    "影院",
+    "多媒体"
   ],
   "categories": [
     "photography",
@@ -20,12 +24,16 @@
       "tags": [
         "movie",
         "video",
-        "reel",
+        "film",
         "camera",
         "cinema",
-        "entertainment"
+        "multimedia"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video player interface",
+        "Movie library category",
+        "Multimedia editing tool"
+      ]
     }
   }
 }

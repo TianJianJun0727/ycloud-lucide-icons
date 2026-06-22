@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "管理多个标签或分类",
+    "显示标签云或集合"
+  ],
   "name": "标签组",
   "tags": [
-    "标签",
-    "徽章",
-    "门票",
+    "标签组",
+    "多个标签",
+    "标签集合",
     "标记",
-    "复制",
-    "多个"
+    "分类",
+    "徽章"
   ],
   "categories": [
     "account"
@@ -17,14 +20,17 @@
     "en": {
       "name": "tags",
       "tags": [
+        "tags",
+        "multiple tags",
         "labels",
         "badges",
-        "tickets",
-        "marks",
-        "copy",
-        "multiple"
+        "categories",
+        "group"
       ],
-      "use-cases": []
+      "use-cases": [
+        "managing multiple tags or categories",
+        "displaying tag clouds or collections"
+      ]
     }
   }
 }

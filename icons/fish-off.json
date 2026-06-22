@@ -1,21 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "菜单无鱼类标识",
+    "饮食偏好筛选",
+    "过敏警告标签"
+  ],
   "name": "鱼关闭",
   "tags": [
-    "食物",
-    "菜",
-    "餐厅",
-    "课程",
-    "餐",
-    "海鲜",
-    "动物",
-    "宠物",
-    "海",
-    "海洋",
-    "过敏",
-    "不宽容",
-    "饮食"
+    "无鱼",
+    "鱼类禁用",
+    "海鲜过敏",
+    "素食",
+    "饮食限制"
   ],
   "categories": [
     "food-beverage",
@@ -25,21 +21,17 @@
     "en": {
       "name": "fish off",
       "tags": [
-        "food",
-        "dish",
-        "restaurant",
-        "course",
-        "meal",
-        "seafood",
-        "animal",
-        "pet",
-        "sea",
-        "marine",
-        "allergy",
-        "intolerance",
-        "diet"
+        "no fish",
+        "fish disabled",
+        "seafood allergy",
+        "vegetarian",
+        "dietary restriction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Menu item indicating no fish",
+        "Dietary preference filter",
+        "Allergy warning label"
+      ]
     }
   }
 }

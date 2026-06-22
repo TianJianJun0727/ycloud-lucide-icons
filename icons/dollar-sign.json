@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "价格标签",
+    "支付按钮",
+    "金融仪表盘",
+    "电商结账"
+  ],
   "name": "美元标志",
   "tags": [
+    "美元",
     "货币",
-    "钱",
-    "付款"
+    "金钱",
+    "支付",
+    "价格",
+    "金融"
   ],
   "categories": [
     "finance"
@@ -14,11 +22,19 @@
     "en": {
       "name": "dollar sign",
       "tags": [
+        "dollar",
         "currency",
         "money",
-        "payment"
+        "payment",
+        "price",
+        "finance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Price tag",
+        "Payment button",
+        "Financial dashboard",
+        "E-commerce checkout"
+      ]
     }
   }
 }

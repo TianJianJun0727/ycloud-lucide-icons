@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户资料",
+    "实名认证",
+    "访问控制",
+    "身份确认"
+  ],
   "name": "ID卡片",
   "tags": [
-    "卡片",
-    "徽章",
-    "身份",
+    "身份证",
+    "证件",
     "认证",
+    "身份验证",
     "安全"
   ],
   "categories": [
@@ -17,13 +22,18 @@
     "en": {
       "name": "id card",
       "tags": [
-        "card",
-        "badge",
-        "identity",
+        "ID card",
+        "identification",
         "authentication",
-        "secure"
+        "verification",
+        "security"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile",
+        "KYC verification",
+        "Access control",
+        "Identity confirmation"
+      ]
     }
   }
 }

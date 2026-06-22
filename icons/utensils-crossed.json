@@ -1,20 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "餐厅列表",
+    "餐饮服务",
+    "用餐选项",
+    "餐食图标"
+  ],
   "name": "餐具交叉",
   "tags": [
-    "叉子",
-    "刀",
     "餐具",
-    "餐具",
-    "餐具",
-    "银器",
-    "食物",
+    "刀叉",
     "餐厅",
-    "餐",
-    "早餐",
-    "晚餐",
-    "晚餐"
+    "美食",
+    "餐饮",
+    "用餐",
+    "西餐"
   ],
   "categories": [
     "food-beverage",
@@ -33,20 +33,20 @@
     "en": {
       "name": "utensils crossed",
       "tags": [
-        "fork",
-        "knife",
-        "cutlery",
-        "flatware",
-        "tableware",
-        "silverware",
-        "food",
+        "utensils",
+        "fork and knife",
         "restaurant",
+        "food",
+        "dining",
         "meal",
-        "breakfast",
-        "dinner",
-        "supper"
+        "cutlery"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Restaurant listing",
+        "Food service",
+        "Dining options",
+        "Meal icon"
+      ]
     }
   }
 }

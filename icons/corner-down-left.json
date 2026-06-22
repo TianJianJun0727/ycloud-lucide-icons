@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "返回或后退导航",
+    "左下方向指示",
+    "界面中的角落箭头"
+  ],
   "name": "角落下左",
   "tags": [
     "箭头",
-    "返回"
+    "返回",
+    "左下",
+    "角落",
+    "方向"
   ],
   "categories": [
     "arrows"
@@ -14,9 +21,16 @@
       "name": "corner down left",
       "tags": [
         "arrow",
-        "return"
+        "return",
+        "down left",
+        "corner",
+        "direction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Return or back navigation",
+        "Down-left directional indicator",
+        "Corner arrow in UI"
+      ]
     }
   }
 }

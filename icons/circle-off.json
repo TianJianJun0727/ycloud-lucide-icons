@@ -1,25 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换开关关闭状态",
+    "无效或缺失数据指示器",
+    "取消或停止操作按钮"
+  ],
   "name": "圆形关闭",
   "tags": [
-    "直径",
-    "零",
-    "Ø",
-    "什么都没有",
-    "空",
+    "禁用",
+    "关闭",
     "无效",
     "取消",
     "禁止",
-    "不",
+    "错误",
     "停止",
-    "禁止的",
-    "禁止",
-    "错误",
-    "不正确",
-    "错误",
-    "错误的",
-    "失败"
+    "空值",
+    "零"
   ],
   "categories": [
     "shapes"
@@ -28,25 +24,21 @@
     "en": {
       "name": "circle off",
       "tags": [
-        "diameter",
-        "zero",
-        "Ø",
-        "nothing",
-        "null",
-        "void",
+        "disabled",
+        "off",
+        "invalid",
         "cancel",
-        "ban",
-        "no",
-        "stop",
         "forbidden",
-        "prohibited",
         "error",
-        "incorrect",
-        "mistake",
-        "wrong",
-        "failure"
+        "stop",
+        "null",
+        "zero"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle switch off state",
+        "Invalid or missing data indicator",
+        "Cancel or stop action button"
+      ]
     }
   }
 }

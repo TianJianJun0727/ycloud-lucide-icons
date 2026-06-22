@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用药提醒",
+    "药房产品图标",
+    "健康应用药物追踪"
+  ],
   "name": "药丸",
   "tags": [
-    "医学",
-    "药物治疗",
+    "药丸",
     "药物",
     "处方",
-    "平板电脑",
-    "药房"
+    "医疗",
+    "药片"
   ],
   "categories": [
     "medical"
@@ -17,14 +20,17 @@
     "en": {
       "name": "pill",
       "tags": [
+        "pill",
         "medicine",
-        "medication",
-        "drug",
         "prescription",
-        "tablet",
-        "pharmacy"
+        "medical",
+        "tablet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Medication reminder",
+        "Pharmacy product icon",
+        "Health app medication tracking"
+      ]
     }
   }
 }

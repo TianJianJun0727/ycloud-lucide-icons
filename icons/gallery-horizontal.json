@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "水平图片轮播",
+    "相册展示",
+    "作品集浏览"
+  ],
   "name": "图库水平",
   "tags": [
-    "旋转木马",
+    "轮播图",
     "图片",
-    "图片",
+    "相册",
     "滚动",
     "滑动",
-    "专辑",
-    "投资组合"
+    "作品集"
   ],
   "categories": [
     "layout",
@@ -23,14 +26,17 @@
       "name": "gallery horizontal",
       "tags": [
         "carousel",
-        "pictures",
         "images",
+        "album",
         "scroll",
         "swipe",
-        "album",
         "portfolio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Horizontal image carousel",
+        "Album display",
+        "Portfolio browsing"
+      ]
     }
   }
 }

@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户个人资料文档",
+    "简历文件图标",
+    "联系人信息表单"
+  ],
   "name": "文件用户",
   "tags": [
-    "人",
-    "个人信息",
-    "人",
-    "上市",
-    "网络",
-    "文档",
-    "联系方式",
-    "求职信",
+    "用户",
+    "个人资料",
     "简历",
-    "简历",
-    "简历",
-    "申请表"
+    "申请表",
+    "联系人",
+    "文档"
   ],
   "categories": [
     "account",
@@ -24,20 +22,18 @@
     "en": {
       "name": "file user",
       "tags": [
-        "person",
-        "personal information",
-        "people",
-        "listing",
-        "networking",
-        "document",
-        "contact",
-        "cover letter",
+        "user",
+        "profile",
         "resume",
-        "cv",
-        "curriculum vitae",
-        "application form"
+        "application form",
+        "contact",
+        "document"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile document",
+        "Resume file icon",
+        "Contact information form"
+      ]
     }
   }
 }

@@ -1,18 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "浏览器历史导航",
+    "版本控制界面",
+    "撤销/重做功能",
+    "时间筛选功能"
+  ],
   "name": "历史",
   "tags": [
     "时间",
-    "重做",
+    "历史记录",
     "撤销",
-    "倒回",
+    "重做",
     "时间线",
-    "版本",
-    "时间机器",
+    "版本控制",
     "备份",
+    "回退",
     "旋转",
-    "特定常规武器公约"
+    "逆时针"
   ],
   "categories": [
     "arrows",
@@ -23,17 +28,22 @@
       "name": "history",
       "tags": [
         "time",
-        "redo",
+        "history",
         "undo",
-        "rewind",
+        "redo",
         "timeline",
-        "version",
-        "time machine",
+        "version control",
         "backup",
+        "rewind",
         "rotate",
-        "ccw"
+        "counterclockwise"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Browser history navigation",
+        "Version control interface",
+        "Undo/redo functionality",
+        "Time-based filtering"
+      ]
     }
   }
 }

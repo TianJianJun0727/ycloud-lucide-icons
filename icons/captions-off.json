@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频播放器控制",
+    "无障碍设置界面",
+    "多媒体应用设置",
+    "字幕开关控制"
+  ],
   "name": "字幕关闭",
   "tags": [
-    "隐藏式字幕",
-    "字幕",
-    "小标题",
-    "转录",
-    "转录",
-    "对话",
-    "可达性"
+    "关闭字幕",
+    "隐藏字幕",
+    "无障碍功能",
+    "视频设置"
   ],
   "categories": [
     "multimedia"
@@ -18,15 +20,17 @@
     "en": {
       "name": "captions off",
       "tags": [
-        "closed captions",
-        "subtitles",
-        "subhead",
-        "transcription",
-        "transcribe",
-        "dialogue",
-        "accessibility"
+        "captions off",
+        "subtitles disabled",
+        "accessibility",
+        "video settings"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video player controls",
+        "Accessibility settings interface",
+        "Multimedia app settings",
+        "Caption toggle control"
+      ]
     }
   }
 }

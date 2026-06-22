@@ -6,16 +6,14 @@
   ],
   "name": "数据库加号",
   "tags": [
+    "数据库",
     "存储",
-    "记忆",
-    "字节",
     "服务器",
-    "加号",
     "添加",
     "创建",
-    "插入",
     "新建",
-    "展开"
+    "插入",
+    "扩展"
   ],
   "categories": [
     "devices",
@@ -25,15 +23,13 @@
     "en": {
       "name": "database plus",
       "tags": [
+        "database",
         "storage",
-        "memory",
-        "bytes",
         "server",
-        "plus",
         "add",
         "create",
-        "insert",
         "new",
+        "insert",
         "expand"
       ],
       "use-cases": [

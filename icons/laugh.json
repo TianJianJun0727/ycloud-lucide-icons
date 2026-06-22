@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户满意度评分",
+    "积极反馈表情",
+    "聊天中的开心反应",
+    "心情指示器"
+  ],
   "name": "笑脸",
   "tags": [
-    "表情符号",
-    "脸",
+    "大笑",
+    "笑脸",
+    "开心",
+    "表情",
     "快乐",
-    "好",
-    "情感"
+    "积极反馈"
   ],
   "categories": [
     "emoji"
@@ -16,13 +22,19 @@
     "en": {
       "name": "laugh",
       "tags": [
-        "emoji",
-        "face",
+        "laugh",
+        "smile",
         "happy",
-        "good",
-        "emotion"
+        "emoji",
+        "joy",
+        "positive feedback"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User satisfaction rating",
+        "Positive feedback emoji",
+        "Happy reaction in chat",
+        "Mood indicator"
+      ]
     }
   }
 }

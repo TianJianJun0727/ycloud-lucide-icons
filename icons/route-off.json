@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用导航路线",
+    "取消行程计划",
+    "指示路径被阻止或不可用"
+  ],
   "name": "路线关闭",
   "tags": [
-    "路径",
-    "旅程",
-    "规划师",
-    "点",
-    "停止",
-    "车站",
-    "重置",
-    "清除",
-    "取消",
-    "关闭",
-    "被阻止"
+    "路线关闭",
+    "路径禁用",
+    "导航取消",
+    "行程中断",
+    "无路线",
+    "阻止"
   ],
   "categories": [
     "navigation"
@@ -22,19 +21,18 @@
     "en": {
       "name": "route off",
       "tags": [
-        "path",
-        "journey",
-        "planner",
-        "points",
-        "stops",
-        "stations",
-        "reset",
-        "clear",
-        "cancelled",
-        "closed",
+        "route disabled",
+        "path off",
+        "navigation cancelled",
+        "journey interrupted",
+        "no route",
         "blocked"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable navigation route",
+        "Cancel a trip plan",
+        "Indicate a blocked or unavailable path"
+      ]
     }
   }
 }

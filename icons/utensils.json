@@ -1,20 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "餐厅菜单项",
+    "食品配送服务",
+    "用餐预订系统",
+    "厨房与烹饪应用"
+  ],
   "name": "餐具",
   "tags": [
-    "叉子",
-    "刀",
     "餐具",
-    "餐具",
-    "餐具",
-    "银器",
-    "食物",
+    "刀叉",
     "餐厅",
-    "餐",
-    "早餐",
-    "晚餐",
-    "晚餐"
+    "食物",
+    "餐饮",
+    "用餐",
+    "银器"
   ],
   "categories": [
     "food-beverage",
@@ -36,17 +36,18 @@
         "fork",
         "knife",
         "cutlery",
-        "flatware",
-        "tableware",
         "silverware",
         "food",
         "restaurant",
         "meal",
-        "breakfast",
-        "dinner",
-        "supper"
+        "dining"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Restaurant menu items",
+        "Food delivery service",
+        "Dining reservation system",
+        "Kitchen and cooking apps"
+      ]
     }
   }
 }

@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户资料状态",
+    "反馈确认",
+    "正面评价指示器",
+    "聊天机器人情绪"
+  ],
   "name": "笑脸",
   "tags": [
-    "表情符号",
-    "脸",
+    "表情",
+    "笑脸",
+    "开心",
     "快乐",
-    "好",
-    "情感"
+    "愉悦",
+    "友好",
+    "积极",
+    "情绪"
   ],
   "categories": [
     "emoji",
@@ -20,10 +28,17 @@
         "emoji",
         "face",
         "happy",
-        "good",
+        "joy",
+        "friendly",
+        "positive",
         "emotion"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile status",
+        "Feedback confirmation",
+        "Positive review indicator",
+        "Chatbot mood"
+      ]
     }
   }
 }

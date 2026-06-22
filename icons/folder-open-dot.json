@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "活跃项目文件夹",
+    "当前目录",
+    "固定文件夹"
+  ],
   "name": "文件夹打开点",
   "tags": [
     "目录",
-    "根",
     "项目",
-    "活跃的",
+    "活跃",
     "当前",
-    "固定的"
+    "固定"
   ],
   "categories": [
     "files",
@@ -19,13 +22,16 @@
       "name": "folder open dot",
       "tags": [
         "directory",
-        "root",
         "project",
         "active",
         "current",
         "pinned"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Active project folder",
+        "Current directory",
+        "Pinned folder"
+      ]
     }
   }
 }

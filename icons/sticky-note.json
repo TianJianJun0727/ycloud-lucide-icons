@@ -1,24 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加评论或批注",
+    "创建快速提醒",
+    "笔记功能"
+  ],
   "name": "便签便签",
   "tags": [
     "便利贴",
-    "评论",
+    "笔记",
     "注释",
-    "反应",
     "备忘录",
     "提醒",
-    "待办事项",
-    "任务",
     "想法",
-    "头脑风暴",
-    "文档",
-    "页面",
-    "纸",
-    "片材",
-    "固定式",
-    "办公室"
+    "批注"
   ],
   "categories": [
     "text",
@@ -28,24 +23,19 @@
     "en": {
       "name": "sticky note",
       "tags": [
-        "post-it",
-        "comment",
+        "sticky note",
+        "note",
         "annotation",
-        "reaction",
         "memo",
         "reminder",
-        "todo",
-        "task",
         "idea",
-        "brainstorm",
-        "document",
-        "page",
-        "paper",
-        "sheet",
-        "stationary",
-        "office"
+        "comment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add a comment or annotation",
+        "Create a quick reminder",
+        "Note-taking feature"
+      ]
     }
   }
 }

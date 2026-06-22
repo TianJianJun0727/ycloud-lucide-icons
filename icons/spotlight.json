@@ -1,30 +1,24 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "舞台灯光控制",
+    "突出显示特色内容",
+    "剧院表演界面",
+    "演唱会活动设计",
+    "摄影灯光设置"
+  ],
   "name": "聚光灯",
   "tags": [
-    "获胜者",
-    "肥皂盒",
+    "聚光灯",
     "舞台",
-    "娱乐",
-    "戏剧",
-    "讲台",
-    "演员",
-    "女演员",
-    "歌手",
-    "光",
-    "梁",
-    "播放",
-    "剧院",
-    "显示",
+    "表演",
     "焦点",
-    "音乐会",
-    "表现",
-    "镜头",
-    "排行榜",
-    "跟随点",
-    "最好的",
-    "突出显示"
+    "灯光",
+    "剧院",
+    "娱乐",
+    "突出显示",
+    "演唱会",
+    "镜头"
   ],
   "categories": [
     "devices",
@@ -36,30 +30,24 @@
     "en": {
       "name": "spotlight",
       "tags": [
-        "winner",
-        "soapbox",
+        "spotlight",
         "stage",
-        "entertainment",
-        "drama",
-        "podium",
-        "actor",
-        "actress",
-        "singer",
-        "light",
-        "beam",
-        "play",
-        "theatre",
-        "show",
-        "focus",
-        "concert",
         "performance",
-        "lens",
-        "leaderboard",
-        "followspot",
-        "best",
-        "highlight"
+        "focus",
+        "light",
+        "theatre",
+        "entertainment",
+        "highlight",
+        "concert",
+        "lens"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Stage lighting control",
+        "Highlighting featured content",
+        "Theater performance UI",
+        "Concert event design",
+        "Photography lighting setup"
+      ]
     }
   }
 }

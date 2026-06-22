@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "系统事件历史查看器",
+    "应用程序调试控制台",
+    "审计追踪显示"
+  ],
   "name": "日志",
   "tags": [
-    "选项",
-    "列表",
-    "菜单",
-    "订单",
-    "队列",
-    "任务",
-    "日志"
+    "日志",
+    "记录",
+    "历史",
+    "控制台",
+    "调试",
+    "事件"
   ],
   "categories": [
     "text"
@@ -18,15 +21,18 @@
     "en": {
       "name": "logs",
       "tags": [
-        "options",
-        "list",
-        "menu",
-        "order",
-        "queue",
-        "tasks",
-        "logs"
+        "logs",
+        "records",
+        "history",
+        "console",
+        "debug",
+        "events"
       ],
-      "use-cases": []
+      "use-cases": [
+        "System event history viewer",
+        "Application debug console",
+        "Audit trail display"
+      ]
     }
   }
 }

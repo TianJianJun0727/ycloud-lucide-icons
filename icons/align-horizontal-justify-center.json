@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI设计工具",
+    "CSS弹性盒对齐",
+    "元素居中",
+    "布局配置"
+  ],
   "name": "对齐水平对齐居中",
   "tags": [
-    "中心",
-    "项目",
-    "弯曲",
-    "证明合理"
+    "居中对齐",
+    "水平对齐",
+    "布局",
+    "Flex",
+    "居中",
+    "对齐",
+    "设计工具",
+    "UI布局"
   ],
   "categories": [
     "layout"
@@ -15,12 +24,21 @@
     "en": {
       "name": "align horizontal justify center",
       "tags": [
-        "center",
-        "items",
+        "center align",
+        "horizontal justify",
+        "layout",
         "flex",
-        "justify"
+        "center",
+        "alignment",
+        "design",
+        "UI layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI design tools",
+        "CSS flexbox alignment",
+        "Element centering",
+        "Layout configuration"
+      ]
     }
   }
 }

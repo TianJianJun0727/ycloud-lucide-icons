@@ -1,29 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "水平更多操作菜单",
+    "加载进度指示器",
+    "文本截断指示器",
+    "代码展开操作符符号"
+  ],
   "name": "省略号",
   "tags": [
-    "等等",
-    "等",
-    "装载机",
-    "加载",
-    "进展",
-    "待定",
-    "悸动者",
-    "菜单",
-    "选项",
-    "操作员",
-    "代码",
-    "编码",
-    "传播",
-    "休息",
     "更多",
-    "进一步",
-    "额外的",
-    "溢出",
-    "点",
-    "……",
-    "..."
+    "菜单",
+    "加载中",
+    "省略",
+    "操作",
+    "选项",
+    "展开",
+    "代码操作符"
   ],
   "categories": [
     "layout",
@@ -41,29 +33,21 @@
     "en": {
       "name": "ellipsis",
       "tags": [
-        "et cetera",
-        "etc",
-        "loader",
-        "loading",
-        "progress",
-        "pending",
-        "throbber",
-        "menu",
-        "options",
-        "operator",
-        "code",
-        "coding",
-        "spread",
-        "rest",
         "more",
-        "further",
-        "extra",
-        "overflow",
-        "dots",
-        "…",
-        "..."
+        "menu",
+        "loading",
+        "ellipsis",
+        "actions",
+        "options",
+        "expand",
+        "spread operator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Horizontal more actions menu",
+        "Loading progress indicator",
+        "Text truncation indicator",
+        "Code spread operator symbol"
+      ]
     }
   }
 }

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "组织资料图标",
+    "地图中的建筑选择",
+    "公司目录"
+  ],
   "name": "建筑",
   "tags": [
+    "建筑",
     "组织",
-    "组织"
+    "公司",
+    "大楼",
+    "机构"
   ],
   "categories": [
     "account",
@@ -14,10 +21,17 @@
     "en": {
       "name": "building",
       "tags": [
-        "organisation",
-        "organization"
+        "building",
+        "organization",
+        "company",
+        "structure",
+        "institution"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Organization profile icon",
+        "Building selection in maps",
+        "Company directory"
+      ]
     }
   }
 }

@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户个人资料中的星座显示",
+    "占星或运势应用",
+    "代表创新或未来概念"
+  ],
   "name": "星座水瓶座",
   "tags": [
-    "运水者",
+    "水瓶座",
+    "星座",
+    "占星",
     "波浪",
     "创新",
-    "空气",
-    "未来",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "未来"
   ],
   "categories": [
     "social",
@@ -22,18 +22,18 @@
     "en": {
       "name": "zodiac aquarius",
       "tags": [
-        "water bearer",
+        "aquarius",
+        "zodiac",
+        "astrology",
         "waves",
         "innovation",
-        "air",
-        "future",
-        "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "future"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Zodiac sign display in user profiles",
+        "Astrology or horoscope applications",
+        "Representing innovation or future concepts"
+      ]
     }
   }
 }

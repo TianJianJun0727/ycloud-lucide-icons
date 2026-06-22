@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用闹钟",
+    "静音通知",
+    "关闭计时器"
+  ],
   "name": "闹钟时钟关闭",
   "tags": [
-    "早上",
-    "关闭"
+    "闹钟",
+    "关闭",
+    "静音",
+    "禁用",
+    "停止",
+    "时间",
+    "提醒"
   ],
   "categories": [
     "devices",
@@ -15,10 +24,19 @@
     "en": {
       "name": "alarm clock off",
       "tags": [
-        "morning",
-        "turn-off"
+        "alarm",
+        "off",
+        "mute",
+        "disable",
+        "stop",
+        "time",
+        "reminder"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable an alarm",
+        "Silence a notification",
+        "Turn off a timer"
+      ]
     }
   }
 }

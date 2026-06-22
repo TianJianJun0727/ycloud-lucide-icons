@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "评分或评价界面",
+    "表示赞同的反馈表单",
+    "社交媒体点赞按钮"
+  ],
   "name": "赞同",
   "tags": [
+    "赞同",
     "喜欢",
-    "好",
-    "情感"
+    "好评",
+    "肯定",
+    "支持",
+    "赞",
+    "正面反馈"
   ],
   "categories": [
     "account",
@@ -17,10 +25,18 @@
       "name": "thumbs up",
       "tags": [
         "like",
+        "thumbs up",
+        "positive",
+        "approve",
         "good",
-        "emotion"
+        "upvote",
+        "endorse"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Rating or review interface",
+        "Feedback form for approval",
+        "Social media like button"
+      ]
     }
   }
 }

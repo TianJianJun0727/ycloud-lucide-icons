@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在文档内搜索",
+    "查找参考资料",
+    "研究某个主题"
+  ],
   "name": "书籍搜索",
   "tags": [
-    "阅读",
-    "图书馆",
-    "学习",
-    "教育",
+    "搜索",
+    "查找",
+    "文档",
     "研究",
     "知识",
-    "发现",
     "浏览",
-    "查找",
-    "发现",
-    "扫描"
+    "查询",
+    "图书馆"
   ],
   "categories": [
     "text",
@@ -24,19 +25,20 @@
     "en": {
       "name": "book search",
       "tags": [
-        "reading",
-        "library",
-        "study",
-        "education",
+        "search",
+        "find",
+        "documentation",
         "research",
         "knowledge",
-        "discover",
-        "browsing",
-        "lookup",
-        "finding",
-        "scanning"
+        "browse",
+        "query",
+        "library"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search within documentation",
+        "Look up a reference",
+        "Research a topic"
+      ]
     }
   }
 }

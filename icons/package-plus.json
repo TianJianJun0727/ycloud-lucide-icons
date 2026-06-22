@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加新包裹",
+    "创建软件包",
+    "增加库存"
+  ],
   "name": "包加号",
   "tags": [
-    "新建",
     "添加",
-    "创建"
+    "新建",
+    "创建",
+    "增加",
+    "安装"
   ],
   "categories": [
     "development"
@@ -14,11 +20,17 @@
     "en": {
       "name": "package plus",
       "tags": [
-        "new",
         "add",
-        "create"
+        "new",
+        "create",
+        "plus",
+        "install"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add new package",
+        "Create software package",
+        "Increase inventory"
+      ]
     }
   }
 }

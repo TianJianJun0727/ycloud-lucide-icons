@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除归档项目",
+    "关闭归档文件夹",
+    "从存储中移除文件"
+  ],
   "name": "归档关闭",
   "tags": [
-    "指数",
-    "备份",
-    "盒子",
+    "删除",
+    "关闭",
+    "归档",
     "存储",
-    "记录",
-    "垃圾"
+    "文件",
+    "邮件",
+    "移除"
   ],
   "categories": [
     "files",
@@ -18,14 +23,19 @@
     "en": {
       "name": "archive X",
       "tags": [
-        "index",
-        "backup",
-        "box",
+        "delete",
+        "close",
+        "archive",
         "storage",
-        "records",
-        "junk"
+        "file",
+        "mail",
+        "remove"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Deleting an archived item",
+        "Closing an archive folder",
+        "Removing a file from storage"
+      ]
     }
   }
 }

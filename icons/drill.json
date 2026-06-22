@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "建筑设备选择",
+    "DIY项目工具",
+    "五金店库存",
+    "工具租赁服务"
+  ],
   "name": "电钻",
   "tags": [
-    "电源",
-    "一点",
-    "头",
-    "洞",
+    "电钻",
+    "工具",
+    "钻孔",
     "DIY",
-    "工具箱",
-    "建造",
-    "建筑"
+    "建筑",
+    "装修",
+    "电动工具",
+    "工具箱"
   ],
   "categories": [
     "tools",
@@ -21,16 +26,21 @@
     "en": {
       "name": "drill",
       "tags": [
-        "power",
-        "bit",
-        "head",
-        "hole",
-        "diy",
-        "toolbox",
-        "build",
-        "construction"
+        "drill",
+        "tool",
+        "drilling",
+        "DIY",
+        "construction",
+        "renovation",
+        "power tool",
+        "toolbox"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Construction equipment selection",
+        "DIY project tools",
+        "Hardware store inventory",
+        "Tool rental service"
+      ]
     }
   }
 }

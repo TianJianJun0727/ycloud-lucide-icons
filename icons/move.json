@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "拖放交互界面",
+    "移动光标指示器",
+    "重新定位界面元素"
+  ],
   "name": "移动",
   "tags": [
-    "箭头"
+    "移动",
+    "拖拽",
+    "光标",
+    "箭头",
+    "方向",
+    "调整位置"
   ],
   "categories": [
     "arrows",
@@ -13,9 +22,18 @@
     "en": {
       "name": "move",
       "tags": [
-        "arrows"
+        "move",
+        "drag",
+        "cursor",
+        "arrow",
+        "direction",
+        "reposition"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Drag and drop interface",
+        "Move cursor indicator",
+        "Reposition UI element"
+      ]
     }
   }
 }

@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "不喜欢按钮",
+    "关闭喜欢功能",
+    "情感状态关闭",
+    "拒绝喜爱"
+  ],
   "name": "爱心关闭",
   "tags": [
-    "不像",
     "不喜欢",
+    "关闭喜欢",
+    "情感关闭",
     "讨厌",
-    "情感"
+    "取消"
   ],
   "categories": [
     "social",
@@ -16,12 +22,18 @@
     "en": {
       "name": "heart off",
       "tags": [
-        "unlike",
         "dislike",
+        "unlike",
+        "emotion off",
         "hate",
-        "emotion"
+        "cancel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dislike button",
+        "Turn off likes",
+        "Emotional state off",
+        "Reject affection"
+      ]
     }
   }
 }

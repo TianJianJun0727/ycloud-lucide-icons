@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在照片编辑器中向左旋转图片",
+    "调整布局中元素的方向",
+    "媒体播放器倒回控制"
+  ],
   "name": "旋转逆时针方形",
   "tags": [
-    "左",
-    "逆时针",
-    "旋转",
-    "图片",
-    "90",
-    "45",
-    "度",
-    "°"
+    "逆时针旋转",
+    "图片旋转",
+    "向左旋转",
+    "90度旋转",
+    "图像编辑",
+    "布局调整"
   ],
   "categories": [
     "layout",
@@ -23,16 +25,18 @@
     "en": {
       "name": "rotate ccw square",
       "tags": [
-        "left",
-        "counter-clockwise",
-        "rotate",
-        "image",
-        "90",
-        "45",
-        "degrees",
-        "°"
+        "rotate counterclockwise",
+        "image rotation",
+        "rotate left",
+        "90 degrees",
+        "photo edit",
+        "layout adjustment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Rotate an image left in a photo editor",
+        "Adjust element orientation in a layout",
+        "Media player rewind control"
+      ]
     }
   }
 }

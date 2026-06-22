@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "除法运算符号",
+    "代码注释语法",
+    "选项分隔符"
+  ],
   "name": "斜杠",
   "tags": [
-    "划分",
-    "师",
+    "斜杠",
+    "除号",
     "或",
-    "/"
+    "分隔符",
+    "代码符号",
+    "数学运算"
   ],
   "categories": [
     "development",
@@ -16,12 +22,18 @@
     "en": {
       "name": "slash",
       "tags": [
+        "slash",
         "divide",
-        "division",
         "or",
-        "/"
+        "separator",
+        "code symbol",
+        "mathematical operation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Division operation symbol",
+        "Code comment syntax",
+        "Option separator"
+      ]
     }
   }
 }

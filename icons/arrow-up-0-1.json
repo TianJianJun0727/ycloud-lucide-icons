@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "按数字升序排序表格",
+    "从低到高筛选",
+    "增加优先级指示器"
+  ],
   "name": "箭头上01",
   "tags": [
-    "筛选",
     "排序",
-    "上升",
-    "下降",
-    "增加",
-    "减少",
-    "上升",
-    "坠落",
-    "数值"
+    "升序",
+    "降序",
+    "数字排序",
+    "筛选",
+    "增加"
   ],
   "categories": [
     "text",
@@ -30,17 +31,18 @@
     "en": {
       "name": "arrow up 0 1",
       "tags": [
-        "filter",
         "sort",
         "ascending",
         "descending",
-        "increasing",
-        "decreasing",
-        "rising",
-        "falling",
-        "numerical"
+        "numerical sort",
+        "filter",
+        "increase"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sort table by number ascending",
+        "Filter low to high",
+        "Increase priority indicator"
+      ]
     }
   }
 }

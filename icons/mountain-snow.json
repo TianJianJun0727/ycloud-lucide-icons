@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "冬季运动应用",
+    "山区天气",
+    "探险旅行"
+  ],
   "name": "山雪",
   "tags": [
+    "雪山",
     "高山",
-    "攀登",
-    "雪"
+    "雪景",
+    "冬季",
+    "登山"
   ],
   "categories": [
     "nature"
@@ -14,11 +20,17 @@
     "en": {
       "name": "mountain snow",
       "tags": [
+        "snow mountain",
         "alpine",
-        "climb",
-        "snow"
+        "snowscape",
+        "winter",
+        "mountaineering"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Winter sports app",
+        "Mountain weather",
+        "Adventure travel"
+      ]
     }
   }
 }

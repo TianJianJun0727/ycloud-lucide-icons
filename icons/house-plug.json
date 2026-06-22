@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "智能家居能源管理",
+    "可持续生活应用",
+    "家庭自动化界面"
+  ],
   "name": "房屋插头",
   "tags": [
-    "首页",
-    "生活",
-    "建筑物",
-    "居住地",
-    "建筑学",
+    "房屋插头",
+    "智能家居",
+    "能源",
+    "电力",
     "自给自足",
-    "能量"
+    "可持续"
   ],
   "categories": [
     "buildings",
@@ -20,15 +23,18 @@
     "en": {
       "name": "house plug",
       "tags": [
-        "home",
-        "living",
-        "building",
-        "residence",
-        "architecture",
-        "autarky",
-        "energy"
+        "house plug",
+        "smart home",
+        "energy",
+        "electricity",
+        "self-sufficiency",
+        "sustainability"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Smart home energy management",
+        "Sustainable living apps",
+        "Home automation interfaces"
+      ]
     }
   }
 }

@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "生物识别登录界面",
+    "设备安全设置",
+    "身份验证步骤"
+  ],
   "name": "指纹图案",
   "tags": [
-    "2FA",
-    "认证",
+    "指纹",
     "生物识别",
-    "身份",
-    "安全"
+    "安全",
+    "身份验证",
+    "解锁",
+    "隐私"
   ],
   "categories": [
     "account",
@@ -27,13 +32,18 @@
     "en": {
       "name": "fingerprint pattern",
       "tags": [
-        "2fa",
-        "authentication",
+        "fingerprint",
         "biometric",
-        "identity",
-        "security"
+        "security",
+        "authentication",
+        "unlock",
+        "privacy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Biometric login screen",
+        "Device security settings",
+        "Identity verification step"
+      ]
     }
   }
 }

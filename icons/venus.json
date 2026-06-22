@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "资料中的女性性别选择",
+    "女性健康应用图标",
+    "女性产品分类",
+    "表单中的生理性别指定"
+  ],
   "name": "金星",
   "tags": [
-    "性别",
+    "金星",
+    "女性",
     "性别",
     "女",
-    "女性化的",
-    "女人",
-    "女孩"
+    "符号",
+    "医疗"
   ],
   "categories": [
     "medical"
@@ -17,14 +22,19 @@
     "en": {
       "name": "venus",
       "tags": [
-        "gender",
-        "sex",
         "female",
-        "feminine",
         "woman",
-        "girl"
+        "gender",
+        "venus",
+        "symbol",
+        "medical"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Female gender selection in profiles",
+        "Women's health app icons",
+        "Feminine product categories",
+        "Biological sex designation in forms"
+      ]
     }
   }
 }

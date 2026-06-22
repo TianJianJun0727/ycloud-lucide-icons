@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频文件图标",
+    "媒体库中的电影剪辑",
+    "摄像机录制文件"
+  ],
   "name": "文件视频相机",
   "tags": [
-    "电影",
     "视频",
-    "电影"
+    "电影",
+    "媒体文件",
+    "摄像机",
+    "录像"
   ],
   "categories": [
     "files"
@@ -22,11 +28,17 @@
     "en": {
       "name": "file video camera",
       "tags": [
-        "movie",
         "video",
-        "film"
+        "movie",
+        "media file",
+        "camera",
+        "recording"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video file icon",
+        "Movie clip in media library",
+        "Camera recording file"
+      ]
     }
   }
 }

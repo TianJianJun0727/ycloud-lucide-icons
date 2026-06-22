@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "娱乐应用",
+    "剧院网站",
+    "演出排期",
+    "艺术分类"
+  ],
   "name": "戏剧",
   "tags": [
     "戏剧",
     "面具",
-    "剧院",
-    "剧院",
+    "表演",
     "娱乐",
-    "显示"
+    "剧院"
   ],
   "categories": [
     "multimedia"
@@ -19,12 +23,16 @@
       "tags": [
         "drama",
         "masks",
-        "theater",
-        "theatre",
+        "performance",
         "entertainment",
-        "show"
+        "theater"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Entertainment app",
+        "Theater website",
+        "Performance schedule",
+        "Arts category"
+      ]
     }
   }
 }

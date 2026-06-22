@@ -1,25 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "看板项目文件夹",
+    "任务管理目录",
+    "敏捷工作流文件夹"
+  ],
   "name": "文件夹看板",
   "tags": [
-    "项目",
-    "管理",
-    "概述",
-    "董事会",
-    "门票",
-    "问题",
-    "路线图",
-    "计划",
-    "意图",
-    "生产力",
-    "工作",
-    "敏捷的",
-    "代码",
-    "编码",
     "目录",
-    "项目",
-    "根"
+    "看板",
+    "项目管理",
+    "任务",
+    "敏捷",
+    "工作流"
   ],
   "categories": [
     "charts",
@@ -31,25 +24,18 @@
     "en": {
       "name": "folder kanban",
       "tags": [
-        "projects",
-        "manage",
-        "overview",
-        "board",
-        "tickets",
-        "issues",
-        "roadmap",
-        "plan",
-        "intentions",
-        "productivity",
-        "work",
-        "agile",
-        "code",
-        "coding",
         "directory",
-        "project",
-        "root"
+        "kanban",
+        "project management",
+        "tasks",
+        "agile",
+        "workflow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Kanban project folder",
+        "Task management directory",
+        "Agile workflow folder"
+      ]
     }
   }
 }

@@ -1,13 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "三维建模工具的旋转控制",
+    "视口导航小工具",
+    "设计软件中的物体变换"
+  ],
   "name": "旋转三维",
   "tags": [
-    "小发明",
+    "三维旋转",
+    "3D旋转",
     "变换",
     "方向",
+    "轴",
     "轨道",
-    "轴"
+    "视图控制",
+    "模型操作"
   ],
   "categories": [
     "design"
@@ -24,13 +31,19 @@
     "en": {
       "name": "rotate 3d",
       "tags": [
-        "gizmo",
+        "3d rotation",
         "transform",
         "orientation",
+        "axis",
         "orbit",
-        "axis"
+        "view control",
+        "model manipulation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "3D modeling tool rotation controls",
+        "Viewport navigation gizmo",
+        "Object transformation in design software"
+      ]
     }
   }
 }

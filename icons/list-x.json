@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "从播放列表移除项目",
+    "删除列表项",
+    "取消队列中的项目"
+  ],
   "name": "列表关闭",
   "tags": [
-    "播放列表",
-    "减去",
-    "移除",
     "删除",
-    "取消队列"
+    "移除",
+    "关闭",
+    "取消",
+    "播放列表",
+    "清除"
   ],
   "categories": [
     "multimedia",
@@ -17,13 +22,18 @@
     "en": {
       "name": "list X",
       "tags": [
-        "playlist",
-        "subtract",
-        "remove",
         "delete",
-        "unqueue"
+        "remove",
+        "close",
+        "cancel",
+        "playlist",
+        "clear"
       ],
-      "use-cases": []
+      "use-cases": [
+        "removing items from playlist",
+        "deleting list items",
+        "canceling queued items"
+      ]
     }
   }
 }

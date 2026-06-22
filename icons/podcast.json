@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "播客应用图标",
+    "音频内容平台",
+    "订阅服务指示器"
+  ],
   "name": "播客",
   "tags": [
+    "播客",
     "音频",
-    "音乐",
-    "麦克风",
-    "谈话",
-    "声音",
+    "节目",
     "订阅",
-    "订阅",
-    "流"
+    "广播"
   ],
   "categories": [
     "multimedia",
@@ -20,16 +21,17 @@
     "en": {
       "name": "podcast",
       "tags": [
+        "podcast",
         "audio",
-        "music",
-        "mic",
-        "talk",
-        "voice",
+        "program",
         "subscribe",
-        "subscription",
-        "stream"
+        "broadcast"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Podcast app icon",
+        "Audio content platform",
+        "Subscription service indicator"
+      ]
     }
   }
 }

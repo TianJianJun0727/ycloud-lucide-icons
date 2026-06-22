@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "发起拉取请求工作流",
+    "代码审查发起",
+    "仓库贡献按钮"
+  ],
   "name": "Git拉取请求创建",
   "tags": [
+    "Git",
+    "拉取请求",
+    "创建",
     "代码",
     "版本控制",
-    "打开",
-    "加号",
+    "合并",
     "添加",
-    "+"
+    "新建"
   ],
   "categories": [
     "development"
@@ -17,14 +23,20 @@
     "en": {
       "name": "git pull request create",
       "tags": [
+        "Git",
+        "pull request",
+        "create",
         "code",
         "version control",
-        "open",
-        "plus",
+        "merge",
         "add",
-        "+"
+        "new"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Initiate pull request workflow",
+        "Code review initiation",
+        "Repository contribution button"
+      ]
     }
   }
 }

@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频通话中关闭摄像头",
+    "禁用视频录制",
+    "视频隐私模式"
+  ],
   "name": "视频关闭",
   "tags": [
-    "相机",
-    "电影",
-    "电影"
+    "视频",
+    "摄像头",
+    "关闭",
+    "禁用",
+    "通话",
+    "直播"
   ],
   "categories": [
     "devices",
@@ -17,11 +24,18 @@
     "en": {
       "name": "video off",
       "tags": [
+        "video",
         "camera",
-        "movie",
-        "film"
+        "off",
+        "disable",
+        "call",
+        "stream"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Turn off camera in a video call",
+        "Disable video recording",
+        "Privacy mode for video"
+      ]
     }
   }
 }

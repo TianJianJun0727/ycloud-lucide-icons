@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "业绩增长展示",
+    "数据上升分析",
+    "趋势监控面板"
+  ],
   "name": "图表列上升",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图",
-    "趋势上升"
+    "上升趋势",
+    "数据增长",
+    "柱状图",
+    "统计分析",
+    "正增长"
   ],
   "categories": [
     "charts"
@@ -24,13 +28,17 @@
     "en": {
       "name": "chart column increasing",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "trending up"
+        "increasing trend",
+        "data growth",
+        "column chart",
+        "statistical analysis",
+        "positive growth"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Performance growth display",
+        "Data increase analysis",
+        "Trend monitoring dashboard"
+      ]
     }
   }
 }

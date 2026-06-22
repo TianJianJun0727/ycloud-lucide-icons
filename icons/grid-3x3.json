@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据表格布局",
+    "仪表板网格设计",
+    "内容管理系统"
+  ],
   "name": "网格3x3",
   "tags": [
+    "网格",
+    "布局",
     "表格",
-    "行",
-    "列"
+    "行列",
+    "设计",
+    "排版"
   ],
   "categories": [
     "text",
@@ -30,11 +37,18 @@
     "en": {
       "name": "grid 3x3",
       "tags": [
+        "grid",
+        "layout",
         "table",
         "rows",
-        "columns"
+        "columns",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data table layout",
+        "Dashboard grid design",
+        "Content management system"
+      ]
     }
   }
 }

@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "棋盘游戏界面元素",
+    "随机数生成器显示",
+    "游戏或概率指示器",
+    "桌面游戏配件"
+  ],
   "name": "骰子2",
   "tags": [
     "骰子",
-    "随机的",
-    "桌面式",
-    "2",
-    "董事会",
-    "游戏"
+    "随机",
+    "桌游",
+    "2点",
+    "棋盘游戏",
+    "概率",
+    "赌博"
   ],
   "categories": [
     "gaming"
@@ -20,11 +26,17 @@
         "dice",
         "random",
         "tabletop",
-        "2",
-        "board",
-        "game"
+        "two",
+        "board game",
+        "probability",
+        "gambling"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Board game interface element",
+        "Random number generator display",
+        "Gaming or chance indicator",
+        "Tabletop game accessory"
+      ]
     }
   }
 }

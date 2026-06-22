@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用图片",
+    "低带宽模式",
+    "隐藏媒体",
+    "图片切换"
+  ],
   "name": "图片关闭",
   "tags": [
-    "图片",
-    "照片"
+    "图片禁用",
+    "隐藏图片",
+    "无图模式",
+    "图像关闭"
   ],
   "categories": [
     "photography",
@@ -15,10 +22,17 @@
     "en": {
       "name": "image off",
       "tags": [
-        "picture",
-        "photo"
+        "image disabled",
+        "hide image",
+        "no image mode",
+        "image off"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable images",
+        "Low bandwidth mode",
+        "Hide media",
+        "Image toggle"
+      ]
     }
   }
 }

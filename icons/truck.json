@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "运输物流仪表板",
+    "配送跟踪状态",
+    "车队管理界面"
+  ],
   "name": "卡车",
   "tags": [
-    "交货",
+    "卡车",
     "货车",
     "运输",
-    "运输",
-    "卡车"
+    "配送",
+    "物流"
   ],
   "categories": [
     "transportation"
@@ -19,10 +23,15 @@
         "delivery",
         "van",
         "shipping",
-        "haulage",
-        "lorry"
+        "lorry",
+        "transport",
+        "vehicle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Shipping and logistics dashboard",
+        "Delivery tracking status",
+        "Fleet management interface"
+      ]
     }
   }
 }

@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "实验室结果显示",
+    "化学分析工具",
+    "医学检测界面"
+  ],
   "name": "测试管",
   "tags": [
-    "管",
-    "小瓶",
-    "小瓶",
-    "烧瓶",
-    "安瓿",
-    "安瓿",
-    "实验室",
-    "化学",
+    "试管",
     "实验",
-    "测试"
+    "化学",
+    "科学",
+    "测试",
+    "实验室"
   ],
   "categories": [
     "science"
@@ -21,18 +21,18 @@
     "en": {
       "name": "test tube",
       "tags": [
-        "tube",
-        "vial",
-        "phial",
-        "flask",
-        "ampoule",
-        "ampule",
-        "lab",
-        "chemistry",
+        "test tube",
         "experiment",
-        "test"
+        "chemistry",
+        "science",
+        "test",
+        "lab"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Lab results display",
+        "Chemical analysis tool",
+        "Medical testing interface"
+      ]
     }
   }
 }

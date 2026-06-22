@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电商网站导航",
+    "实体店定位",
+    "购物车图标",
+    "零售应用界面"
+  ],
   "name": "商店",
   "tags": [
     "商店",
     "超市",
-    "站",
-    "精品店",
-    "建筑物"
+    "商铺",
+    "零售",
+    "购物",
+    "建筑"
   ],
   "categories": [
     "buildings",
@@ -20,11 +26,17 @@
       "tags": [
         "shop",
         "supermarket",
-        "stand",
-        "boutique",
+        "store",
+        "retail",
+        "shopping",
         "building"
       ],
-      "use-cases": []
+      "use-cases": [
+        "E-commerce website navigation",
+        "Physical store locator",
+        "Shopping cart icon",
+        "Retail app interface"
+      ]
     }
   }
 }

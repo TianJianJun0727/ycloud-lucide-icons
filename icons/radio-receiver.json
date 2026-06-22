@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收音机调谐器界面",
+    "音频接收设备",
+    "广播设备"
+  ],
   "name": "收音机接收器",
   "tags": [
-    "装置",
-    "音乐",
-    "连接"
+    "收音机",
+    "接收器",
+    "设备",
+    "音频",
+    "调频",
+    "广播"
   ],
   "categories": [
     "devices"
@@ -14,11 +21,18 @@
     "en": {
       "name": "radio receiver",
       "tags": [
+        "radio",
+        "receiver",
         "device",
-        "music",
-        "connect"
+        "audio",
+        "FM",
+        "broadcast"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Radio tuner interface",
+        "Audio receiver device",
+        "Broadcast equipment"
+      ]
     }
   }
 }

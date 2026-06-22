@@ -1,21 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带有虚线顶部边框的UI元素",
+    "设计或布局组件",
+    "样式或边框设置"
+  ],
   "name": "方形虚线顶部实心",
   "tags": [
-    "正方形",
+    "方形",
     "边框",
-    "宽度",
-    "布局",
-    "风格",
+    "顶部虚线",
     "设计",
-    "长方形",
-    "帐篷",
-    "虚线",
-    "盒子",
-    "长方形",
-    "纵横比",
-    "1:1"
+    "布局",
+    "样式",
+    "UI元素"
   ],
   "categories": [
     "design",
@@ -28,19 +26,17 @@
       "tags": [
         "square",
         "border",
-        "width",
+        "top dashed",
+        "design",
         "layout",
         "style",
-        "design",
-        "rectangular",
-        "marquee",
-        "dashed",
-        "box",
-        "rectangle",
-        "aspect ratio",
-        "1:1"
+        "UI element"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI element with a dashed top border",
+        "Design or layout component",
+        "Style or border setting"
+      ]
     }
   }
 }

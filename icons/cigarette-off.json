@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁烟区指示器",
+    "吸烟禁止开关",
+    "健康政策合规图标"
+  ],
   "name": "香烟关闭",
   "tags": [
-    "吸烟",
-    "禁止吸烟"
+    "禁烟",
+    "无烟区",
+    "禁止吸烟",
+    "健康",
+    "关闭",
+    "禁用"
   ],
   "categories": [
     "travel",
@@ -15,10 +23,18 @@
     "en": {
       "name": "cigarette off",
       "tags": [
-        "smoking",
-        "no-smoking"
+        "no smoking",
+        "smoke-free",
+        "smoking ban",
+        "health",
+        "off",
+        "disabled"
       ],
-      "use-cases": []
+      "use-cases": [
+        "No smoking zone indicator",
+        "Smoking prohibition toggle",
+        "Health policy compliance icon"
+      ]
     }
   }
 }

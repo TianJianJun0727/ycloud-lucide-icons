@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "安防系统界面",
+    "实时摄像头画面",
+    "监控仪表盘"
+  ],
   "name": "监控",
   "tags": [
-    "相机",
+    "监控",
+    "摄像头",
+    "安防",
     "监视",
-    "录音",
-    "电影",
-    "录像带",
-    "犯罪",
-    "观看"
+    "录像"
   ],
   "categories": [
     "security",
@@ -22,15 +24,17 @@
     "en": {
       "name": "cctv",
       "tags": [
+        "cctv",
         "camera",
         "surveillance",
-        "recording",
-        "film",
-        "videotape",
-        "crime",
-        "watching"
+        "security",
+        "recording"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Security system UI",
+        "Live camera feed",
+        "Monitoring dashboard"
+      ]
     }
   }
 }

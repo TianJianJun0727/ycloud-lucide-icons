@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用界面",
+    "季节转换",
+    "温度显示",
+    "气候信息"
+  ],
   "name": "太阳雪",
   "tags": [
     "天气",
-    "空调",
-    "温度",
-    "热",
-    "冷",
-    "季节"
+    "季节",
+    "温度变化",
+    "冷暖交替",
+    "气象",
+    "气候"
   ],
   "categories": [
     "weather"
@@ -18,13 +23,18 @@
       "name": "sun snow",
       "tags": [
         "weather",
-        "air conditioning",
-        "temperature",
-        "hot",
-        "cold",
-        "seasons"
+        "seasons",
+        "temperature change",
+        "hot cold transition",
+        "meteorology",
+        "climate"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app interface",
+        "Seasonal transitions",
+        "Temperature display",
+        "Climate information"
+      ]
     }
   }
 }

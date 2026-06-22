@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户头像",
+    "账户设置",
+    "登录/认证界面"
+  ],
   "name": "圆形用户",
   "tags": [
-    "人",
-    "帐户",
-    "联系方式"
+    "用户",
+    "账户",
+    "个人资料",
+    "头像",
+    "登录",
+    "联系人"
   ],
   "categories": [
     "account"
@@ -22,11 +29,18 @@
     "en": {
       "name": "circle user",
       "tags": [
-        "person",
+        "user",
         "account",
+        "profile",
+        "avatar",
+        "login",
         "contact"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile picture",
+        "Account settings",
+        "Login/authentication UI"
+      ]
     }
   }
 }

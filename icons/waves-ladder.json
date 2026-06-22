@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游泳池或水上设施界面",
+    "水上安全与救生服务",
+    "健身或游泳活动追踪"
+  ],
   "name": "波浪梯子",
   "tags": [
+    "泳池扶梯",
     "游泳",
-    "水",
-    "泳池",
-    "救生员",
-    "海洋",
-    "🌊",
-    "🏊‍♂️",
-    "🏊‍♀️",
-    "🏊",
-    "🥽"
+    "水上安全",
+    "救生",
+    "泳道"
   ],
   "categories": [
     "sports",
@@ -22,18 +21,17 @@
     "en": {
       "name": "waves ladder",
       "tags": [
+        "pool ladder",
         "swimming",
-        "water",
-        "pool",
-        "lifeguard",
-        "ocean",
-        "🌊",
-        "🏊‍♂️",
-        "🏊‍♀️",
-        "🏊",
-        "🥽"
+        "water safety",
+        "lifesaving",
+        "swim lane"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Swimming pool or aquatic facility interfaces",
+        "Water safety and lifeguard services",
+        "Fitness or swimming activity tracking"
+      ]
     }
   }
 }

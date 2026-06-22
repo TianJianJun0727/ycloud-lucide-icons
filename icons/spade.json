@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "纸牌游戏界面",
+    "扑克手牌指示器",
+    "游戏花色选择器",
+    "纸牌显示"
+  ],
   "name": "黑桃",
   "tags": [
+    "黑桃",
+    "扑克",
+    "花色",
+    "纸牌",
+    "游戏",
     "形状",
-    "西装",
-    "玩",
-    "卡片"
+    "梅花"
   ],
   "categories": [
     "shapes",
@@ -16,12 +24,20 @@
     "en": {
       "name": "spade",
       "tags": [
-        "shape",
+        "spade",
+        "poker",
         "suit",
-        "playing",
-        "cards"
+        "playing card",
+        "gaming",
+        "shape",
+        "club"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Card game interface",
+        "Poker hand indicator",
+        "Gaming suit selector",
+        "Deck of cards display"
+      ]
     }
   }
 }

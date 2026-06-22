@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "页面内查找功能",
+    "在文档或PDF中搜索",
+    "文本密集型应用中的内容查找"
+  ],
   "name": "文本搜索",
   "tags": [
-    "找到",
-    "数据",
-    "复制",
-    "文本文件",
-    "PDF",
+    "搜索",
+    "查找",
+    "文本",
+    "内容",
     "文档",
-    "扫描",
-    "放大镜",
-    "放大镜",
-    "镜头"
+    "PDF",
+    "关键字"
   ],
   "categories": [
     "text"
@@ -21,18 +22,19 @@
     "en": {
       "name": "text search",
       "tags": [
+        "search",
         "find",
-        "data",
-        "copy",
-        "txt",
-        "pdf",
+        "text",
+        "content",
         "document",
-        "scan",
-        "magnifier",
-        "magnifying glass",
-        "lens"
+        "PDF",
+        "keyword"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Find-in-page functionality",
+        "Searching within a document or PDF",
+        "Content lookup in text-heavy applications"
+      ]
     }
   }
 }

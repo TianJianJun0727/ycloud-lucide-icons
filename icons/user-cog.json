@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户个人设置",
+    "账号管理界面",
+    "偏好设置配置"
+  ],
   "name": "用户齿轮",
   "tags": [
-    "设置",
-    "编辑",
-    "设置",
-    "齿轮"
+    "用户设置",
+    "账号配置",
+    "个人偏好",
+    "用户管理",
+    "权限设置"
   ],
   "categories": [
     "account"
@@ -15,12 +20,17 @@
     "en": {
       "name": "user cog",
       "tags": [
-        "settings",
-        "edit",
-        "cog",
-        "gear"
+        "user settings",
+        "account configuration",
+        "personal preferences",
+        "user management",
+        "permissions setup"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile settings",
+        "Account management interface",
+        "Preferences configuration"
+      ]
     }
   }
 }

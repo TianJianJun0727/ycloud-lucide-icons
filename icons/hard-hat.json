@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "建筑工地安全",
+    "工人防护指示",
+    "工业安全协议"
+  ],
   "name": "硬盘帽子",
   "tags": [
-    "头盔",
+    "安全帽",
     "建筑",
     "安全",
-    "萨维提"
+    "工地",
+    "防护",
+    "头盔"
   ],
   "categories": [
     "tools"
@@ -15,12 +21,18 @@
     "en": {
       "name": "hard hat",
       "tags": [
-        "helmet",
+        "hard hat",
         "construction",
         "safety",
-        "savety"
+        "site",
+        "protection",
+        "helmet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Construction site safety",
+        "Worker protection indicator",
+        "Industrial safety protocols"
+      ]
     }
   }
 }

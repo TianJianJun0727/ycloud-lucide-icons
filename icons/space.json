@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器间距控制",
+    "排版设计工具",
+    "CSS字距属性",
+    "文档格式化选项"
+  ],
   "name": "间距",
   "tags": [
+    "间距",
+    "字距",
+    "排版",
     "文本",
-    "选择",
-    "字母",
-    "人物",
-    "字体",
-    "版式"
+    "空白",
+    "字符间隔",
+    "字体"
   ],
   "categories": [
     "text"
@@ -17,14 +23,20 @@
     "en": {
       "name": "space",
       "tags": [
+        "spacing",
+        "kerning",
+        "typography",
         "text",
-        "selection",
-        "letters",
-        "characters",
-        "font",
-        "typography"
+        "whitespace",
+        "character spacing",
+        "font"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor spacing control",
+        "Typography design tool",
+        "CSS letter-spacing property",
+        "Document formatting option"
+      ]
     }
   }
 }

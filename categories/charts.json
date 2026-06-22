@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "图表",
-  "icon": "chart-pie",
   "i18n": {
     "en": {
       "title": "Charts"

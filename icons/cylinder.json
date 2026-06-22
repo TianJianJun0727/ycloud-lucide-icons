@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "几何数学图表",
+    "容器存储设计",
+    "3D建模应用"
+  ],
   "name": "圆柱",
   "tags": [
-    "形状",
-    "椭圆形的",
-    "几何学",
+    "圆柱体",
+    "几何",
     "容器",
-    "存储",
-    "锡",
-    "锅"
+    "罐子",
+    "3D",
+    "形状"
   ],
   "categories": [
     "shapes",
@@ -20,15 +23,18 @@
     "en": {
       "name": "cylinder",
       "tags": [
-        "shape",
-        "elliptical",
+        "cylinder",
         "geometry",
         "container",
-        "storage",
-        "tin",
-        "pot"
+        "can",
+        "3d",
+        "shape"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Geometric and mathematical diagrams",
+        "Container and storage design",
+        "3D modeling applications"
+      ]
     }
   }
 }

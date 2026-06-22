@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移除个人资料徽章",
+    "删除项目指示器",
+    "减法操作"
+  ],
   "name": "徽章减少",
   "tags": [
-    "已验证",
-    "未经验证",
-    "删除",
     "移除",
-    "擦除"
+    "删除",
+    "减少",
+    "撤销",
+    "取消"
   ],
   "categories": [
     "social"
@@ -16,13 +20,17 @@
     "en": {
       "name": "badge minus",
       "tags": [
-        "verified",
-        "unverified",
-        "delete",
         "remove",
-        "erase"
+        "delete",
+        "subtract",
+        "undo",
+        "cancel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove badge from profile",
+        "Delete item indicator",
+        "Subtraction operation"
+      ]
     }
   }
 }

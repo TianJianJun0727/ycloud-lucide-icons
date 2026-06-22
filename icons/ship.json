@@ -1,21 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "货运或物流",
+    "海上旅行预订",
+    "货物运输状态",
+    "舰队管理"
+  ],
   "name": "船",
   "tags": [
-    "船",
-    "结",
-    "海里",
-    "海事的",
+    "轮船",
+    "船舶",
     "航行",
-    "游艇",
-    "巡航",
-    "远洋客轮",
-    "油轮",
-    "容器",
-    "海军",
+    "运输",
+    "海运",
+    "货物",
     "旅行",
-    "发布"
+    "航海",
+    "舰队",
+    "出发"
   ],
   "categories": [
     "transportation",
@@ -26,21 +28,23 @@
     "en": {
       "name": "ship",
       "tags": [
-        "boat",
-        "knots",
-        "nautical mile",
-        "maritime",
-        "sailing",
-        "yacht",
-        "cruise",
-        "ocean liner",
-        "tanker",
+        "ship",
         "vessel",
-        "navy",
-        "trip",
-        "releases"
+        "sailing",
+        "transport",
+        "shipping",
+        "cargo",
+        "travel",
+        "navigation",
+        "fleet",
+        "departure"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Shipping or logistics",
+        "Maritime travel booking",
+        "Cargo transport status",
+        "Fleet management"
+      ]
     }
   }
 }

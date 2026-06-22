@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "货币显示",
+    "游戏奖励",
+    "金融界面"
+  ],
   "name": "硬币",
   "tags": [
-    "钱",
-    "现金",
+    "硬币",
+    "货币",
+    "游戏",
     "金融",
-    "赌博"
+    "奖励"
   ],
   "categories": [
     "gaming"
@@ -15,12 +20,17 @@
     "en": {
       "name": "coins",
       "tags": [
-        "money",
-        "cash",
+        "coins",
+        "currency",
+        "gaming",
         "finance",
-        "gamble"
+        "reward"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Currency display",
+        "Gaming rewards",
+        "Financial UI"
+      ]
     }
   }
 }

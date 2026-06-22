@@ -1,21 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "聊天中被点赞或喜爱的评论",
+    "积极反馈消息",
+    "社交媒体互动"
+  ],
   "name": "消息圆形爱心",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "积极的",
-    "喜欢",
-    "爱",
-    "兴趣",
-    "情人节",
-    "约会",
-    "日期",
-    "讲话泡泡"
+    "点赞消息",
+    "喜欢评论",
+    "爱心回复",
+    "积极反馈",
+    "社交互动"
   ],
   "categories": [
     "social"
@@ -24,21 +20,17 @@
     "en": {
       "name": "message circle heart",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "positive",
-        "like",
-        "love",
-        "interest",
-        "valentine",
-        "dating",
-        "date",
-        "speech bubble"
+        "liked message",
+        "favorite comment",
+        "heart reply",
+        "positive feedback",
+        "social interaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Liked or loved comment in chat",
+        "Positive feedback message",
+        "Social media interaction"
+      ]
     }
   }
 }

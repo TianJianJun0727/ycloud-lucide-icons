@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学图表",
+    "几何形状显示",
+    "星形图标"
+  ],
   "name": "星形线",
   "tags": [
-    "星标",
+    "星形",
     "数学",
     "形状",
     "曲线",
-    "锋利的",
-    "四尖的",
-    "内摆线",
-    "AI",
-    "人工智能"
+    "几何"
   ],
   "categories": [
     "shapes",
@@ -25,13 +25,13 @@
         "math",
         "shape",
         "curve",
-        "sharp",
-        "four-pointed",
-        "hypocycloid",
-        "ai",
-        "artificial intelligence"
+        "geometry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mathematical diagram",
+        "Geometric shape display",
+        "Star-like icon"
+      ]
     }
   }
 }

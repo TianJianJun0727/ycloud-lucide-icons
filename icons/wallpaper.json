@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "壁纸选择",
+    "背景自定义",
+    "主题设置"
+  ],
   "name": "壁纸",
   "tags": [
+    "壁纸",
     "背景",
-    "纹理",
-    "图片",
-    "艺术",
-    "设计",
-    "视觉的",
-    "装饰",
-    "图案",
+    "桌面",
     "屏幕",
-    "封面",
-    "锁屏"
+    "装饰",
+    "个性化"
   ],
   "categories": [
     "account",
@@ -23,19 +22,18 @@
     "en": {
       "name": "wallpaper",
       "tags": [
+        "wallpaper",
         "background",
-        "texture",
-        "image",
-        "art",
-        "design",
-        "visual",
-        "decor",
-        "pattern",
+        "desktop",
         "screen",
-        "cover",
-        "lock screen"
+        "decoration",
+        "personalization"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Wallpaper selection",
+        "Background customization",
+        "Theme settings"
+      ]
     }
   }
 }

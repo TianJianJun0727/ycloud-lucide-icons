@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相机闪光灯禁用",
+    "表示电源或能量已断开",
+    "快速功能关闭"
+  ],
   "name": "闪电关闭",
   "tags": [
-    "闪光",
-    "相机",
-    "闪电",
-    "电力",
-    "能量",
-    "电源"
+    "闪光灯关闭",
+    "电源断开",
+    "能量关闭",
+    "快速禁用",
+    "闪电禁用"
   ],
   "categories": [
     "connectivity",
@@ -20,14 +23,17 @@
     "en": {
       "name": "zap off",
       "tags": [
-        "flash",
-        "camera",
-        "lightning",
-        "electricity",
-        "energy",
-        "power"
+        "flash off",
+        "power off",
+        "energy disabled",
+        "quick disabled",
+        "lightning disabled"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Camera flash disabled",
+        "Indicating power or energy is disconnected",
+        "Quick function turned off"
+      ]
     }
   }
 }

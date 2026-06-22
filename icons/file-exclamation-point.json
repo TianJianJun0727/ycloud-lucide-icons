@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "警告文件",
+    "受保护文档",
+    "错误日志"
+  ],
   "name": "文件感叹号点",
   "tags": [
-    "隐藏的",
     "警告",
-    "告警",
+    "错误",
     "危险",
-    "受保护的",
-    "感叹号"
+    "受保护",
+    "重要"
   ],
   "categories": [
     "files",
@@ -26,14 +29,17 @@
     "en": {
       "name": "file exclamation point",
       "tags": [
-        "hidden",
         "warning",
-        "alert",
+        "error",
         "danger",
         "protected",
-        "exclamation mark"
+        "important"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Warning file",
+        "Protected document",
+        "Error log"
+      ]
     }
   }
 }

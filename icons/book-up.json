@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git推送操作",
+    "代码仓库更新",
+    "版本控制提交"
+  ],
   "name": "书籍上",
   "tags": [
     "代码",
-    "编码",
     "版本控制",
     "Git",
-    "存储库",
-    "推送"
+    "推送",
+    "仓库",
+    "开发"
   ],
   "categories": [
     "development"
@@ -18,13 +22,17 @@
       "name": "book up",
       "tags": [
         "code",
-        "coding",
         "version control",
         "git",
+        "push",
         "repository",
-        "push"
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git push operation",
+        "Code repository update",
+        "Version control commit"
+      ]
     }
   }
 }

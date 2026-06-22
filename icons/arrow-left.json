@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "返回按钮",
+    "上一步",
+    "向左导航"
+  ],
   "name": "箭头左",
   "tags": [
-    "上一个",
     "返回",
+    "上一个",
     "方向",
     "西",
-    "<-"
+    "后退"
   ],
   "categories": [
     "arrows"
@@ -16,13 +20,17 @@
     "en": {
       "name": "arrow left",
       "tags": [
-        "previous",
         "back",
+        "previous",
         "direction",
         "west",
-        "<-"
+        "backward"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back button",
+        "Previous step",
+        "Left navigation"
+      ]
     }
   }
 }

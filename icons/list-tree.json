@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件目录树",
+    "层级菜单导航",
+    "组织结构展示"
+  ],
   "name": "列表树",
   "tags": [
-    "树",
+    "树形结构",
+    "层级列表",
+    "文件夹",
+    "目录",
+    "导航",
     "浏览器"
   ],
   "categories": [
@@ -15,10 +23,18 @@
     "en": {
       "name": "list tree",
       "tags": [
-        "tree",
+        "tree structure",
+        "hierarchical list",
+        "folders",
+        "directory",
+        "navigation",
         "browser"
       ],
-      "use-cases": []
+      "use-cases": [
+        "file directory tree",
+        "hierarchical menu navigation",
+        "organizational structure display"
+      ]
     }
   }
 }

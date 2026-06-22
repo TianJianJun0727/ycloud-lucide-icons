@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "减少小数位数或精度",
+    "数值格式化控件中的左调整功能"
+  ],
   "name": "小数箭头左",
   "tags": [
-    "数值",
     "小数",
-    "减少",
-    "少",
-    "更少",
     "精度",
-    "四舍五入",
+    "减少",
+    "左箭头",
     "数字",
-    "分数",
-    "浮动",
-    "数量"
+    "舍入",
+    "数值"
   ],
   "categories": [
     "design",
@@ -25,19 +24,18 @@
     "en": {
       "name": "decimals arrow left",
       "tags": [
-        "numerical",
         "decimal",
-        "decrease",
-        "less",
-        "fewer",
         "precision",
+        "decrease",
+        "left arrow",
+        "number",
         "rounding",
-        "digits",
-        "fraction",
-        "float",
-        "number"
+        "numerical"
       ],
-      "use-cases": []
+      "use-cases": [
+        "decreasing decimal places or precision",
+        "left adjustment in number formatting controls"
+      ]
     }
   }
 }

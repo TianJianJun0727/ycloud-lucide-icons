@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用信号或连接图标",
+    "网络状态切换",
+    "连接设置"
+  ],
   "name": "信号",
   "tags": [
-    "连接",
+    "信号",
     "无线",
-    "GSM",
-    "电话",
-    "2克",
-    "3克",
-    "4克",
-    "5克"
+    "连接",
+    "网络",
+    "强度",
+    "蜂窝网络",
+    "移动网络",
+    "Wi-Fi",
+    "天线"
   ],
   "categories": [
     "connectivity"
@@ -19,16 +24,21 @@
     "en": {
       "name": "signal",
       "tags": [
-        "connection",
+        "signal",
         "wireless",
-        "gsm",
-        "phone",
-        "2g",
-        "3g",
-        "4g",
-        "5g"
+        "connection",
+        "network",
+        "strength",
+        "cellular",
+        "mobile",
+        "wifi",
+        "antenna"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Generic signal or connectivity icon",
+        "Network status toggle",
+        "Connection settings"
+      ]
     }
   }
 }

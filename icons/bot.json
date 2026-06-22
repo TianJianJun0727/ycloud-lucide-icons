@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "自动化流程界面",
+    "AI助手功能",
+    "机器人控制面板"
+  ],
   "name": "机器人",
   "tags": [
     "机器人",
     "AI",
-    "聊天",
-    "助手"
+    "自动化",
+    "智能助手",
+    "聊天机器人"
   ],
   "categories": [
     "development",
@@ -16,12 +21,17 @@
     "en": {
       "name": "bot",
       "tags": [
-        "robot",
-        "ai",
-        "chat",
-        "assistant"
+        "bot",
+        "AI",
+        "automation",
+        "smart assistant",
+        "chatbot"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Automation workflow interface",
+        "AI assistant functionality",
+        "Bot control panel"
+      ]
     }
   }
 }

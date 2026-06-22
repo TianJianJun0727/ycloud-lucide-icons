@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "房地产列表创建",
+    "医疗机构管理",
+    "房地产开发界面"
+  ],
   "name": "房屋加号",
   "tags": [
-    "首页",
-    "生活",
-    "医疗",
-    "新建",
-    "加法",
-    "建筑物",
-    "居住地",
-    "建筑学"
+    "添加房屋",
+    "新建住宅",
+    "建筑",
+    "医疗设施",
+    "增加",
+    "扩展"
   ],
   "categories": [
     "buildings",
@@ -20,16 +22,18 @@
     "en": {
       "name": "house plus",
       "tags": [
-        "home",
-        "living",
-        "medical",
-        "new",
-        "addition",
+        "add house",
+        "new residence",
         "building",
-        "residence",
-        "architecture"
+        "medical facility",
+        "add",
+        "expansion"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Real estate listing creation",
+        "Healthcare facility management",
+        "Property development interfaces"
+      ]
     }
   }
 }

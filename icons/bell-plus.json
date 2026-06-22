@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "创建新通知规则",
+    "订阅警报",
+    "添加提醒"
+  ],
   "name": "铃铛加号",
   "tags": [
     "通知",
-    "沉默的",
     "提醒",
     "添加",
     "创建",
-    "新建"
+    "订阅",
+    "新提醒"
   ],
   "categories": [
     "notifications"
@@ -18,13 +22,17 @@
       "name": "bell plus",
       "tags": [
         "notification",
-        "silent",
         "reminder",
         "add",
         "create",
-        "new"
+        "subscribe",
+        "new alert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Create a new notification rule",
+        "Subscribe to alerts",
+        "Add a reminder"
+      ]
     }
   }
 }

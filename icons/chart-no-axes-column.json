@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据可视化仪表板",
+    "统计分析界面"
+  ],
   "name": "图表无坐标轴列",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "图"
+    "柱状图",
+    "数据"
   ],
   "categories": [
     "charts"
@@ -25,10 +29,14 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph"
+        "chart",
+        "column chart",
+        "data"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data visualization dashboard",
+        "Statistical analysis interface"
+      ]
     }
   }
 }

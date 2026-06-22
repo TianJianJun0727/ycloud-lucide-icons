@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "医疗应用",
+    "疫苗接种记录",
+    "医院界面",
+    "科学实验室设备"
+  ],
   "name": "注射器",
   "tags": [
-    "医学",
+    "注射器",
     "医疗",
-    "针",
-    "泵",
-    "柱塞",
-    "喷嘴",
-    "血"
+    "注射",
+    "疫苗",
+    "医药",
+    "科学"
   ],
   "categories": [
     "science",
@@ -19,15 +23,19 @@
     "en": {
       "name": "syringe",
       "tags": [
-        "medicine",
+        "syringe",
         "medical",
-        "needle",
-        "pump",
-        "plunger",
-        "nozzle",
-        "blood"
+        "injection",
+        "vaccine",
+        "medicine",
+        "science"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Medical app",
+        "Vaccination records",
+        "Hospital interface",
+        "Science lab equipment"
+      ]
     }
   }
 }

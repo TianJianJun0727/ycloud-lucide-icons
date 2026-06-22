@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电子邮件地址字段",
+    "社交媒体提及",
+    "用户账号引用"
+  ],
   "name": "@标志",
   "tags": [
-    "提及",
-    "在",
     "邮箱",
-    "消息",
-    "@"
+    "提及",
+    "账号",
+    "社交媒体",
+    "电子邮件"
   ],
   "categories": [
     "text",
@@ -17,13 +21,17 @@
     "en": {
       "name": "at sign",
       "tags": [
-        "mention",
-        "at",
         "email",
-        "message",
-        "@"
+        "mention",
+        "account",
+        "social media",
+        "email address"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Email address field",
+        "Social media mention",
+        "User account reference"
+      ]
     }
   }
 }

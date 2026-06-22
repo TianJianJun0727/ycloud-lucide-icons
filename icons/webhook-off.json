@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用Webhook集成",
+    "API连接状态",
+    "通知设置",
+    "第三方服务开关"
+  ],
   "name": "Webhook回调关闭",
   "tags": [
-    "推送API",
-    "接口",
-    "回调"
+    "Webhook",
+    "回调",
+    "API",
+    "推送",
+    "禁用",
+    "断开",
+    "集成"
   ],
   "categories": [
     "development",
@@ -16,11 +25,20 @@
     "en": {
       "name": "webhook off",
       "tags": [
-        "push api",
-        "interface",
-        "callback"
+        "webhook",
+        "callback",
+        "API",
+        "push",
+        "disabled",
+        "disconnected",
+        "integration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable webhook integration",
+        "API connection status",
+        "Notification settings",
+        "Third-party service toggle"
+      ]
     }
   }
 }

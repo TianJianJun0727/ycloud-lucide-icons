@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "科学研究界面",
+    "医疗分析工具",
+    "实验室设备设置"
+  ],
   "name": "显微镜",
   "tags": [
-    "医疗",
-    "教育",
+    "显微镜",
     "科学",
-    "成像",
-    "研究"
+    "研究",
+    "实验",
+    "医疗",
+    "检测",
+    "分析"
   ],
   "categories": [
     "science",
@@ -17,13 +23,19 @@
     "en": {
       "name": "microscope",
       "tags": [
-        "medical",
-        "education",
+        "microscope",
         "science",
-        "imaging",
-        "research"
+        "research",
+        "experiment",
+        "medical",
+        "inspection",
+        "analysis"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Scientific research interface",
+        "Medical analysis tool",
+        "Laboratory equipment setting"
+      ]
     }
   }
 }

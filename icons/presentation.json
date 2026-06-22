@@ -1,22 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "幻灯片界面",
+    "商务会议演示"
+  ],
   "name": "演示",
   "tags": [
-    "屏幕",
-    "白板",
-    "记号笔",
-    "标记",
-    "黑板",
-    "粉笔",
-    "画架",
-    "学校",
-    "学习",
-    "教训",
-    "办公室",
+    "演示",
+    "幻灯片",
     "会议",
-    "项目",
-    "规划"
+    "教育"
   ],
   "categories": [
     "multimedia",
@@ -29,22 +22,15 @@
     "en": {
       "name": "presentation",
       "tags": [
-        "screen",
-        "whiteboard",
-        "marker pens",
-        "markers",
-        "blackboard",
-        "chalk",
-        "easel",
-        "school",
-        "learning",
-        "lesson",
-        "office",
+        "presentation",
+        "slides",
         "meeting",
-        "project",
-        "planning"
+        "education"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Slide deck interface",
+        "Business meeting presentation"
+      ]
     }
   }
 }

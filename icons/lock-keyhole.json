@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "安全设置或账户",
+    "密码保护指示器",
+    "私密内容锁定"
+  ],
   "name": "锁定钥匙孔",
   "tags": [
+    "锁定",
     "安全",
+    "钥匙孔",
+    "保护",
     "密码",
-    "安全",
-    "管理员"
+    "隐私"
   ],
   "categories": [
     "security"
@@ -15,12 +21,18 @@
     "en": {
       "name": "lock keyhole",
       "tags": [
+        "lock",
         "security",
+        "keyhole",
+        "protect",
         "password",
-        "secure",
-        "admin"
+        "privacy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Secure settings or account",
+        "Password protection indicator",
+        "Private content lock"
+      ]
     }
   }
 }

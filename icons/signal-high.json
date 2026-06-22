@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移动网络信号指示器",
+    "Wi-Fi 强度显示",
+    "应用内连接状态"
+  ],
   "name": "信号高",
   "tags": [
-    "连接",
+    "信号",
     "无线",
-    "GSM",
-    "电话",
-    "2克",
-    "3克",
-    "4克",
-    "5克"
+    "连接",
+    "网络",
+    "强度",
+    "满格",
+    "蜂窝网络",
+    "移动网络",
+    "Wi-Fi"
   ],
   "categories": [
     "connectivity"
@@ -19,16 +24,21 @@
     "en": {
       "name": "signal high",
       "tags": [
-        "connection",
+        "signal",
         "wireless",
-        "gsm",
-        "phone",
-        "2g",
-        "3g",
-        "4g",
-        "5g"
+        "connection",
+        "network",
+        "strength",
+        "full",
+        "cellular",
+        "mobile",
+        "wifi"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mobile network signal indicator",
+        "Wi-Fi strength display",
+        "Connection status in apps"
+      ]
     }
   }
 }

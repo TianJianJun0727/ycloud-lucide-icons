@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "缝纫或手工艺应用图标",
+    "社交应用中表示线程或对话",
+    "连续信息流或时间线可视化",
+    "手工艺和DIY项目界面"
+  ],
   "name": "线轴",
   "tags": [
     "线轴",
-    "主轴",
-    "纱线",
     "线程",
-    "字符串",
+    "纱线",
     "缝纫",
-    "针线活"
+    "编织",
+    "社交动态",
+    "连续"
   ],
   "categories": [
     "communication",
@@ -20,15 +25,20 @@
     "en": {
       "name": "spool",
       "tags": [
-        "bobbin",
-        "spindle",
-        "yarn",
+        "spool",
         "thread",
-        "string",
+        "yarn",
         "sewing",
-        "needlework"
+        "weaving",
+        "social feed",
+        "continuity"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sewing or crafting application icon",
+        "Representing threads or conversations in social apps",
+        "Continuous feed or timeline visualization",
+        "Crafting and DIY project interfaces"
+      ]
     }
   }
 }

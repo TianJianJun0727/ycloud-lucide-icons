@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "充电站指示器",
+    "快速充电状态",
+    "电源供应接口"
+  ],
   "name": "插头闪电",
   "tags": [
-    "电力",
-    "能量",
-    "电子产品",
-    "收费",
     "充电",
-    "电池",
-    "连接"
+    "电源",
+    "闪电",
+    "快速充电",
+    "能量"
   ],
   "categories": [
     "devices"
@@ -26,15 +28,17 @@
     "en": {
       "name": "plug zap",
       "tags": [
-        "electricity",
-        "energy",
-        "electronics",
-        "charge",
         "charging",
-        "battery",
-        "connect"
+        "power",
+        "lightning",
+        "fast charge",
+        "energy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Charging station indicator",
+        "Fast charging status",
+        "Power supply interface"
+      ]
     }
   }
 }

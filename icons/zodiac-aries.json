@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户个人资料中的星座显示",
+    "占星或运势应用",
+    "代表活力或主动性"
+  ],
   "name": "星座白羊座",
   "tags": [
-    "内存",
-    "喇叭",
-    "火",
-    "能量",
-    "倡议",
-    "占星学",
+    "白羊座",
     "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "占星",
+    "公羊",
+    "火象",
+    "活力"
   ],
   "categories": [
     "social",
@@ -22,18 +22,18 @@
     "en": {
       "name": "zodiac aries",
       "tags": [
-        "ram",
-        "horns",
-        "fire",
-        "energy",
-        "initiative",
+        "aries",
+        "zodiac",
         "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "ram",
+        "fire sign",
+        "energy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Zodiac sign display in user profiles",
+        "Astrology or horoscope applications",
+        "Representing energy or initiative"
+      ]
     }
   }
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "文本格式",
-  "icon": "type",
   "i18n": {
     "en": {
       "title": "Text formatting"

@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "洗衣房或洗衣服务界面",
+    "家用电器控制",
+    "酒店或租赁物业设施"
+  ],
   "name": "洗衣机器",
   "tags": [
-    "滚筒式烘干机",
-    "便利设施",
-    "电子产品",
-    "循环",
-    "衣服",
-    "冲洗",
-    "旋转",
-    "鼓"
+    "洗衣机",
+    "洗衣",
+    "洗涤",
+    "家电",
+    "清洁",
+    "滚筒"
   ],
   "categories": [
     "home",
@@ -21,16 +23,18 @@
     "en": {
       "name": "washing machine",
       "tags": [
-        "tumble dryer",
-        "amenities",
-        "electronics",
-        "cycle",
-        "clothes",
-        "rinse",
-        "spin",
+        "washing machine",
+        "laundry",
+        "wash",
+        "appliance",
+        "clean",
         "drum"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Laundry room or service interfaces",
+        "Home appliance controls",
+        "Hotel or rental property amenities"
+      ]
     }
   }
 }

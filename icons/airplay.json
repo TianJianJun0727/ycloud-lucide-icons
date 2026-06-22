@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频投屏功能",
+    "无线显示设置",
+    "屏幕共享选项"
+  ],
   "name": "隔空播放",
   "tags": [
-    "流",
-    "演员表",
-    "镜像",
-    "屏幕",
-    "显示器",
-    "macOS",
-    "OS X"
+    "投屏",
+    "屏幕镜像",
+    "无线显示",
+    "流媒体",
+    "屏幕共享",
+    "AirPlay"
   ],
   "categories": [
     "multimedia",
@@ -19,15 +22,18 @@
     "en": {
       "name": "airplay",
       "tags": [
-        "stream",
-        "cast",
-        "mirroring",
-        "screen",
-        "monitor",
-        "macos",
-        "osx"
+        "screen mirroring",
+        "casting",
+        "wireless display",
+        "streaming",
+        "display sharing",
+        "AirPlay"
       ],
-      "use-cases": []
+      "use-cases": [
+        "video casting feature",
+        "wireless display settings",
+        "screen sharing options"
+      ]
     }
   }
 }

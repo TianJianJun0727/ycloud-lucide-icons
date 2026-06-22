@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "有雾天气状况",
+    "低能见度警告",
+    "雾蒙蒙的预报显示"
+  ],
   "name": "云雾",
   "tags": [
+    "雾",
+    "薄雾",
+    "能见度低",
     "天气",
-    "薄雾"
+    "朦胧",
+    "阴霾"
   ],
   "categories": [
     "weather"
@@ -13,10 +21,18 @@
     "en": {
       "name": "cloud fog",
       "tags": [
+        "fog",
+        "mist",
+        "low visibility",
         "weather",
-        "mist"
+        "haze",
+        "overcast"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Foggy weather condition",
+        "Low visibility warning",
+        "Misty forecast display"
+      ]
     }
   }
 }

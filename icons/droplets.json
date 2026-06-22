@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多水滴指示",
+    "高湿度显示",
+    "降水强度",
+    "液体收集界面"
+  ],
   "name": "水滴",
   "tags": [
-    "水",
-    "天气",
+    "水滴",
+    "多个水滴",
+    "水珠",
     "液体",
-    "流体",
-    "湿的",
-    "水分",
-    "潮湿",
-    "珠子",
-    "小球"
+    "湿度",
+    "降水",
+    "湿润"
   ],
   "categories": [
     "weather"
@@ -20,17 +23,20 @@
     "en": {
       "name": "droplets",
       "tags": [
-        "water",
-        "weather",
+        "droplets",
+        "multiple droplets",
+        "water beads",
         "liquid",
-        "fluid",
-        "wet",
-        "moisture",
-        "damp",
-        "bead",
-        "globule"
+        "humidity",
+        "precipitation",
+        "moisture"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multiple water drop indicators",
+        "High humidity displays",
+        "Precipitation intensity",
+        "Liquid collection interfaces"
+      ]
     }
   }
 }

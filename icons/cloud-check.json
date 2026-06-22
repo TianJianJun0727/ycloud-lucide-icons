@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "云同步完成",
+    "上传成功确认",
+    "服务就绪状态"
+  ],
   "name": "云勾选",
   "tags": [
-    "同步",
-    "网络",
     "成功",
     "完成",
-    "已完成",
-    "已保存",
-    "坚持"
+    "同步",
+    "确认",
+    "云服务",
+    "就绪",
+    "已验证"
   ],
   "categories": [
     "development"
@@ -18,15 +22,19 @@
     "en": {
       "name": "cloud check",
       "tags": [
-        "sync",
-        "network",
         "success",
         "done",
-        "completed",
-        "saved",
-        "persisted"
+        "sync",
+        "confirm",
+        "cloud",
+        "ready",
+        "verified"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloud sync completed",
+        "Upload success confirmation",
+        "Service ready status"
+      ]
     }
   }
 }

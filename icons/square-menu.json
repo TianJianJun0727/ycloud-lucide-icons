@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移动应用导航菜单",
+    "设置面板切换",
+    "网站汉堡菜单"
+  ],
   "name": "方形菜单",
   "tags": [
-    "酒吧",
+    "菜单",
     "导航",
-    "汉堡包",
     "选项",
-    "菜单栏",
-    "面板"
+    "面板",
+    "汉堡菜单"
   ],
   "categories": [
     "layout"
@@ -25,14 +28,17 @@
     "en": {
       "name": "square menu",
       "tags": [
-        "bars",
+        "menu",
         "navigation",
-        "hamburger",
         "options",
-        "menu bar",
-        "panel"
+        "panel",
+        "hamburger menu"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mobile app navigation menu",
+        "Settings panel toggle",
+        "Website hamburger menu"
+      ]
     }
   }
 }

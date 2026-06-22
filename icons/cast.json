@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频投屏到电视",
+    "共享屏幕到设备",
+    "无线显示控制"
+  ],
   "name": "投屏",
   "tags": [
-    "铬铸",
-    "播放",
-    "屏幕"
+    "投屏",
+    "屏幕共享",
+    "无线显示",
+    "Chromecast",
+    "AirPlay"
   ],
   "categories": [
     "devices",
@@ -17,9 +23,15 @@
       "tags": [
         "chromecast",
         "airplay",
-        "screen"
+        "screen",
+        "display",
+        "wireless"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Stream video to TV",
+        "Share screen to device",
+        "Wireless display control"
+      ]
     }
   }
 }

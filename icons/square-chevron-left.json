@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "返回导航按钮",
+    "上一页控件",
+    "左箭头指示器"
+  ],
   "name": "方形折角箭头左",
   "tags": [
     "返回",
-    "上一个",
-    "小于",
-    "更少",
-    "菜单",
-    "面板",
-    "按钮",
-    "键盘",
-    "<"
+    "上一页",
+    "导航",
+    "箭头",
+    "按钮"
   ],
   "categories": [
     "arrows",
@@ -31,15 +31,15 @@
       "tags": [
         "back",
         "previous",
-        "less than",
-        "fewer",
-        "menu",
-        "panel",
-        "button",
-        "keyboard",
-        "<"
+        "navigation",
+        "arrow",
+        "button"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back navigation buttons",
+        "Previous page controls",
+        "Left arrow indicators"
+      ]
     }
   }
 }

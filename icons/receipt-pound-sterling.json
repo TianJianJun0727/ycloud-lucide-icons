@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "英国费用报销",
+    "英镑支付确认",
+    "带英镑符号的金融交易"
+  ],
   "name": "收据英镑英镑",
   "tags": [
+    "收据",
     "账单",
-    "优惠券",
-    "滑倒",
-    "勾选",
-    "存根",
-    "英国人",
-    "货币",
     "英镑",
-    "英镑"
+    "货币",
+    "支付",
+    "发票",
+    "财务",
+    "旅行"
   ],
   "categories": [
     "finance",
@@ -21,17 +24,20 @@
     "en": {
       "name": "receipt pound sterling",
       "tags": [
+        "receipt",
         "bill",
-        "voucher",
-        "slip",
-        "check",
-        "counterfoil",
-        "british",
+        "pound sterling",
         "currency",
-        "gbp",
-        "£"
+        "payment",
+        "invoice",
+        "finance",
+        "travel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UK expense report",
+        "Payment confirmation in GBP",
+        "Financial transaction with pound"
+      ]
     }
   }
 }

@@ -1,27 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐练习工具",
+    "设置播放速度",
+    "音频制作定时"
+  ],
   "name": "节拍器",
   "tags": [
     "节拍器",
     "节奏",
-    "节奏",
-    "击败",
-    "节拍数",
+    "节拍",
     "音乐",
-    "音频",
-    "声音",
     "练习",
-    "时机",
-    "定时器",
-    "时间",
-    "脉冲",
-    "同步",
-    "节奏",
-    "控制",
-    "回放",
-    "工作室",
-    "工具"
+    "定时",
+    "速度",
+    "音频"
   ],
   "categories": [
     "multimedia",
@@ -33,25 +26,18 @@
       "tags": [
         "metronome",
         "tempo",
-        "rhythm",
         "beat",
-        "bpm",
         "music",
-        "audio",
-        "sound",
         "practice",
         "timing",
-        "timer",
-        "time",
-        "pulse",
-        "sync",
-        "cadence",
-        "control",
-        "playback",
-        "studio",
-        "tool"
+        "bpm",
+        "audio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music practice tool",
+        "Setting playback tempo",
+        "Audio production timing"
+      ]
     }
   }
 }

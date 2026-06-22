@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户搜索界面",
+    "查找联系人",
+    "账号查找",
+    "人员目录"
+  ],
   "name": "用户圆形搜索",
   "tags": [
-    "人",
-    "帐户",
-    "联系方式",
-    "找到",
-    "扫描",
-    "放大镜",
-    "放大镜",
-    "镜头"
+    "用户",
+    "账号",
+    "查找",
+    "搜索",
+    "联系人",
+    "发现",
+    "人员"
   ],
   "categories": [
     "account",
@@ -20,16 +24,20 @@
     "en": {
       "name": "user round search",
       "tags": [
-        "person",
+        "user",
         "account",
-        "contact",
         "find",
-        "scan",
-        "magnifier",
-        "magnifying glass",
-        "lens"
+        "search",
+        "contact",
+        "discover",
+        "person"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User search interface",
+        "Find a contact",
+        "Account lookup",
+        "People directory"
+      ]
     }
   }
 }

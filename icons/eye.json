@@ -1,20 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换密码可见",
+    "预览内容",
+    "查看详情",
+    "监控状态"
+  ],
   "name": "眼睛",
   "tags": [
     "查看",
-    "手表",
-    "看到",
+    "可见",
     "显示",
-    "暴露",
-    "揭示",
-    "显示",
-    "可见的",
-    "能见度",
-    "愿景",
     "预览",
-    "读"
+    "监控",
+    "阅读"
   ],
   "categories": [
     "accessibility",
@@ -27,19 +26,18 @@
       "name": "eye",
       "tags": [
         "view",
-        "watch",
-        "see",
-        "show",
-        "expose",
-        "reveal",
-        "display",
         "visible",
-        "visibility",
-        "vision",
+        "show",
         "preview",
+        "monitor",
         "read"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle password visibility",
+        "Preview content",
+        "View details",
+        "Monitor status"
+      ]
     }
   }
 }

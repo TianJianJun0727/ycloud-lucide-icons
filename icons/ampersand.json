@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编程中的文本连接",
+    "在文本或公司名称中表示“和”"
+  ],
   "name": "与号",
   "tags": [
-    "和",
-    "版式",
-    "操作员",
-    "加入",
-    "连接",
-    "代码",
-    "&"
+    "与符号",
+    "&",
+    "连接符",
+    "编程运算符",
+    "文本格式",
+    "代码"
   ],
   "categories": [
     "text",
@@ -19,15 +21,17 @@
     "en": {
       "name": "ampersand",
       "tags": [
-        "and",
-        "typography",
-        "operator",
-        "join",
-        "concatenate",
-        "code",
-        "&"
+        "ampersand",
+        "&",
+        "concatenation",
+        "programming operator",
+        "text formatting",
+        "code"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text concatenation in programming",
+        "Representing 'and' in text or company names"
+      ]
     }
   }
 }

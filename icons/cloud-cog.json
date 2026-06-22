@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "云服务配置",
+    "服务器管理设置",
+    "自动化控制面板"
+  ],
   "name": "云齿轮",
   "tags": [
-    "计算",
-    "AI",
-    "集群",
-    "网络"
+    "设置",
+    "配置",
+    "管理",
+    "云服务",
+    "服务器",
+    "控制",
+    "自动化"
   ],
   "categories": [
     "development"
@@ -15,12 +22,19 @@
     "en": {
       "name": "cloud cog",
       "tags": [
-        "computing",
-        "ai",
-        "cluster",
-        "network"
+        "settings",
+        "configure",
+        "manage",
+        "cloud",
+        "server",
+        "control",
+        "automation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloud service configuration",
+        "Server management settings",
+        "Automation control panel"
+      ]
     }
   }
 }

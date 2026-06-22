@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示增长指标",
+    "正面趋势可视化",
+    "性能提升"
+  ],
   "name": "图表条形上升",
   "tags": [
-    "统计",
-    "分析",
+    "上升柱状图",
     "图表",
-    "图",
-    "趋势上升"
+    "增长",
+    "趋势上升",
+    "数据"
   ],
   "categories": [
     "charts"
@@ -16,13 +20,17 @@
     "en": {
       "name": "chart bar increasing",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "trending up"
+        "increasing bar chart",
+        "chart",
+        "growth",
+        "trend up",
+        "data"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Show growth metrics",
+        "Positive trend visualization",
+        "Performance improvement"
+      ]
     }
   }
 }

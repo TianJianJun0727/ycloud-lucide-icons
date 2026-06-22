@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "基因研究界面",
+    "生物学教育",
+    "医学诊断"
+  ],
   "name": "DNA链",
   "tags": [
+    "DNA",
     "基因",
-    "转基因生物",
-    "螺旋",
-    "遗传",
-    "染色体",
-    "核酸"
+    "遗传学",
+    "生物",
+    "科学"
   ],
   "categories": [
     "medical"
@@ -17,14 +20,17 @@
     "en": {
       "name": "dna",
       "tags": [
+        "dna",
         "gene",
-        "gmo",
-        "helix",
-        "heredity",
-        "chromosome",
-        "nucleic acid"
+        "genetics",
+        "biology",
+        "science"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Genetic research interface",
+        "Biology education",
+        "Medical diagnostics"
+      ]
     }
   }
 }

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户资料验证徽章",
+    "社交媒体认证账户",
+    "身份确认"
+  ],
   "name": "徽章勾选",
   "tags": [
     "已验证",
-    "勾选"
+    "认证",
+    "勾选",
+    "确认",
+    "社交认证"
   ],
   "categories": [
     "social"
@@ -22,9 +29,15 @@
       "name": "badge check",
       "tags": [
         "verified",
-        "check"
+        "check",
+        "confirmation",
+        "social"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile verification badge",
+        "Social media verified account",
+        "Identity confirmation"
+      ]
     }
   }
 }

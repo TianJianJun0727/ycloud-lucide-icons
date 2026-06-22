@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "辅助侧边栏或面板",
+    "右下方工具面板",
+    "附加信息抽屉"
+  ],
   "name": "面板右底部",
   "tags": [
-    "抽屉",
     "侧边栏",
-    "中学"
+    "抽屉",
+    "辅助面板",
+    "布局",
+    "右下方"
   ],
   "categories": [
     "layout"
@@ -14,11 +20,17 @@
     "en": {
       "name": "panels right bottom",
       "tags": [
-        "drawers",
         "sidebar",
-        "secondary"
+        "drawer",
+        "secondary panel",
+        "layout",
+        "bottom right"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Secondary sidebar or panel",
+        "Right-bottom utility panel",
+        "Additional information drawer"
+      ]
     }
   }
 }

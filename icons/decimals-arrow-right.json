@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "增加小数位数或精度",
+    "数值格式化控件中的右调整功能"
+  ],
   "name": "小数箭头右",
   "tags": [
-    "数值",
     "小数",
-    "增加",
-    "更多",
     "精度",
-    "四舍五入",
+    "增加",
+    "右箭头",
     "数字",
-    "分数",
-    "浮动",
-    "数量"
+    "舍入",
+    "数值"
   ],
   "categories": [
     "design",
@@ -24,18 +24,18 @@
     "en": {
       "name": "decimals arrow right",
       "tags": [
-        "numerical",
         "decimal",
-        "increase",
-        "more",
         "precision",
+        "increase",
+        "right arrow",
+        "number",
         "rounding",
-        "digits",
-        "fraction",
-        "float",
-        "number"
+        "numerical"
       ],
-      "use-cases": []
+      "use-cases": [
+        "increasing decimal places or precision",
+        "right adjustment in number formatting controls"
+      ]
     }
   }
 }

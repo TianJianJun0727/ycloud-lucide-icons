@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设置无限播放",
+    "表示无限滚动",
+    "象征无限可能"
+  ],
   "name": "无限",
   "tags": [
     "无限",
-    "永远",
+    "无穷",
     "循环",
-    "数学"
+    "永久"
   ],
   "categories": [
     "multimedia"
@@ -15,12 +19,16 @@
     "en": {
       "name": "infinity",
       "tags": [
+        "infinity",
         "unlimited",
-        "forever",
-        "loop",
-        "math"
+        "endless",
+        "loop"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Set unlimited playback",
+        "Indicate endless scrolling",
+        "Symbol for infinite possibilities"
+      ]
     }
   }
 }

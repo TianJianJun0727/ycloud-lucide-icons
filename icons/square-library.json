@@ -1,31 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数字图书馆界面",
+    "资源收藏浏览器",
+    "媒体库管理器"
+  ],
   "name": "方形图书馆",
   "tags": [
+    "图书馆",
     "书籍",
-    "阅读",
-    "书面的",
-    "作者",
-    "故事",
-    "小说",
-    "小说",
-    "信息",
-    "知识",
-    "教育",
-    "高中",
-    "大学",
-    "学院",
-    "学院",
-    "学习",
-    "学习",
-    "研究",
     "收藏",
-    "乙烯基",
-    "记录",
-    "专辑",
-    "音乐",
-    "包裹"
+    "资源",
+    "资料库",
+    "多媒体"
   ],
   "categories": [
     "text",
@@ -46,31 +33,18 @@
     "en": {
       "name": "square library",
       "tags": [
+        "library",
         "books",
-        "reading",
-        "written",
-        "authors",
-        "stories",
-        "fiction",
-        "novels",
-        "information",
-        "knowledge",
-        "education",
-        "high school",
-        "university",
-        "college",
-        "academy",
-        "learning",
-        "study",
-        "research",
         "collection",
-        "vinyl",
-        "records",
-        "albums",
-        "music",
-        "package"
+        "resources",
+        "repository",
+        "multimedia"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Digital library interface",
+        "Resource collection browser",
+        "Media library organizer"
+      ]
     }
   }
 }

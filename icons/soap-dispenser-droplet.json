@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "洗手间设施指示器",
+    "手部卫生站",
+    "清洁产品选择",
+    "液体分配器控制"
+  ],
   "name": "肥皂分配器水滴",
   "tags": [
-    "洗",
-    "洗澡",
-    "水",
+    "洗手液",
+    "清洁",
+    "水滴",
     "液体",
-    "流体",
-    "湿的",
-    "水分",
-    "潮湿",
-    "珠子",
-    "小球"
+    "洗涤",
+    "卫生",
+    "皂液"
   ],
   "categories": [
     "home",
@@ -22,18 +24,20 @@
     "en": {
       "name": "soap dispenser droplet",
       "tags": [
-        "wash",
-        "bath",
-        "water",
+        "soap dispenser",
+        "clean",
+        "droplet",
         "liquid",
-        "fluid",
-        "wet",
-        "moisture",
-        "damp",
-        "bead",
-        "globule"
+        "wash",
+        "hygiene",
+        "sanitizer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Restroom facility indicator",
+        "Hand hygiene station",
+        "Cleaning product selection",
+        "Liquid dispenser control"
+      ]
     }
   }
 }

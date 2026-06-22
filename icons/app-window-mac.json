@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "macOS应用界面原型",
+    "窗口管理功能图标",
+    "桌面应用的设计系统组件"
+  ],
   "name": "应用窗口Mac",
   "tags": [
-    "应用",
-    "菜单栏",
-    "窗格",
-    "偏好",
+    "应用窗口",
     "macOS",
-    "OS X",
-    "可执行文件"
+    "界面",
+    "设计",
+    "开发",
+    "桌面",
+    "操作系统",
+    "UI"
   ],
   "categories": [
     "layout",
@@ -21,15 +26,20 @@
     "en": {
       "name": "app window mac",
       "tags": [
-        "application",
-        "menu bar",
-        "pane",
-        "preferences",
-        "macos",
-        "osx",
-        "executable"
+        "app window",
+        "macOS",
+        "interface",
+        "design",
+        "development",
+        "desktop",
+        "operating system",
+        "UI"
       ],
-      "use-cases": []
+      "use-cases": [
+        "macOS application UI mockups",
+        "Window management feature icons",
+        "Design system components for desktop apps"
+      ]
     }
   }
 }

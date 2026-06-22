@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "版权声明",
+    "许可证信息",
+    "所有权利保留符号"
+  ],
   "name": "版权",
   "tags": [
+    "版权",
+    "著作权",
     "许可证",
-    "许可证"
+    "所有权利保留"
   ],
   "categories": [
     "text"
@@ -13,10 +19,15 @@
     "en": {
       "name": "copyright",
       "tags": [
-        "licence",
-        "license"
+        "copyright",
+        "license",
+        "all rights reserved"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Copyright notice",
+        "License information",
+        "All rights reserved symbol"
+      ]
     }
   }
 }

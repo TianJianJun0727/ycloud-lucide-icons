@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Shift键指示器",
+    "向上移动或增加控制",
+    "文本大写功能"
+  ],
   "name": "箭头大上",
   "tags": [
-    "转变",
+    "Shift键",
     "键盘",
     "按钮",
-    "麦克",
-    "大写",
-    "大写",
-    "前进",
     "方向",
-    "北"
+    "向上",
+    "大写",
+    "快捷键"
   ],
   "categories": [
     "arrows",
@@ -26,14 +28,16 @@
         "shift",
         "keyboard",
         "button",
-        "mac",
-        "capitalize",
-        "capitalise",
-        "forward",
         "direction",
-        "north"
+        "up",
+        "capitalize",
+        "shortcut"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Shift key indicator",
+        "Move up or increase control",
+        "Capitalize text function"
+      ]
     }
   }
 }

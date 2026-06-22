@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器控制",
+    "开始操作按钮",
+    "音频/视频播放触发器"
+  ],
   "name": "播放",
   "tags": [
-    "音乐",
-    "音频",
-    "视频",
+    "播放",
     "开始",
-    "跑"
+    "媒体",
+    "音频",
+    "视频"
   ],
   "categories": [
     "arrows",
@@ -17,13 +21,17 @@
     "en": {
       "name": "play",
       "tags": [
-        "music",
-        "audio",
-        "video",
+        "play",
         "start",
-        "run"
+        "media",
+        "audio",
+        "video"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player controls",
+        "Start action button",
+        "Audio/video playback trigger"
+      ]
     }
   }
 }

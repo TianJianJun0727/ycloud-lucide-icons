@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本消息预览",
+    "聊天内容视图",
+    "评论详情"
+  ],
   "name": "消息方形文本",
   "tags": [
-    "评论",
+    "消息",
+    "文本",
     "聊天",
-    "谈话",
+    "内容",
     "对话",
-    "反馈",
-    "讲话泡泡"
+    "评论",
+    "详情",
+    "文档"
   ],
   "categories": [
     "social"
@@ -17,14 +23,20 @@
     "en": {
       "name": "message square text",
       "tags": [
-        "comment",
+        "message",
+        "text",
         "chat",
+        "content",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble"
+        "comment",
+        "details",
+        "document"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text message preview",
+        "Chat content view",
+        "Comment details"
+      ]
     }
   }
 }

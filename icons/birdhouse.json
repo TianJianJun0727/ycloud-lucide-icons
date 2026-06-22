@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "花园设计应用",
+    "家居装饰",
+    "自然保护网站"
+  ],
   "name": "鸟屋",
   "tags": [
+    "鸟屋",
     "鸟舍",
-    "鸟",
     "花园",
-    "首页",
-    "房子",
-    "木制品"
+    "家居",
+    "自然"
   ],
   "categories": [
     "nature",
@@ -21,13 +24,16 @@
       "name": "birdhouse",
       "tags": [
         "birdhouse",
-        "bird",
+        "aviary",
         "garden",
         "home",
-        "house",
-        "woodwork"
+        "nature"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Garden design app",
+        "Home decoration",
+        "Nature conservation website"
+      ]
     }
   }
 }

@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器控制",
+    "音频暂停按钮",
+    "视频播放"
+  ],
   "name": "八边形暂停",
   "tags": [
-    "音乐",
-    "音频",
-    "停止"
+    "暂停",
+    "停止",
+    "媒体控制",
+    "音频"
   ],
   "categories": [
     "multimedia",
@@ -23,11 +28,16 @@
     "en": {
       "name": "octagon pause",
       "tags": [
-        "music",
-        "audio",
-        "stop"
+        "pause",
+        "stop",
+        "media control",
+        "audio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player controls",
+        "Audio pause button",
+        "Video playback"
+      ]
     }
   }
 }

@@ -8,12 +8,14 @@ import { type IconMetadata } from '../tools/build-icons/types.ts';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = await readAllMetadata(ICONS_DIR) as Record<string, IconMetadata>;
+const icons = (await readAllMetadata(ICONS_DIR)) as Record<string, IconMetadata>;
 const CATEGORIES_DIR = path.resolve(currentDir, '../categories');
-const categories = await readAllMetadata(CATEGORIES_DIR) as Record<string, {
-  icon: string;
-  name: string;
-}>;;
+const categories = (await readAllMetadata(CATEGORIES_DIR)) as Record<
+  string,
+  {
+    name: string;
+  }
+>;
 
 console.log('Reading all icons');
 
@@ -41,17 +43,6 @@ Object.keys(icons).forEach((iconName) => {
       error = true;
     }
   });
-});
-
-Object.keys(categories).forEach((categoryName) => {
-  const category = categories[categoryName];
-  if (!category?.icon) {
-    console.error(`Category '${categoryName}' does not use an icon '${category.icon}'.`);
-    error = true;
-  } else if (typeof icons[category.icon] === 'undefined') {
-    console.error(`Category '${categoryName}' uses the non-existing icon '${category.icon}'.`);
-    error = true;
-  }
 });
 
 if (error) {

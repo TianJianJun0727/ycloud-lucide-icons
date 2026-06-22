@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用",
+    "预报显示",
+    "气候仪表板"
+  ],
   "name": "多云",
   "tags": [
     "天气",
-    "云"
+    "多云",
+    "云",
+    "气象",
+    "阴天"
   ],
   "categories": [
     "weather"
@@ -14,9 +21,16 @@
       "name": "cloudy",
       "tags": [
         "weather",
-        "clouds"
+        "clouds",
+        "cloudy",
+        "meteorology",
+        "overcast"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app",
+        "Forecast display",
+        "Climate dashboard"
+      ]
     }
   }
 }

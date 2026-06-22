@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气状况显示",
+    "空气质量指示",
+    "能见度警告"
+  ],
   "name": "雾霾",
   "tags": [
+    "雾霾",
     "薄雾",
-    "雾"
+    "天气",
+    "能见度低",
+    "污染"
   ],
   "categories": [
     "weather"
@@ -13,10 +20,17 @@
     "en": {
       "name": "haze",
       "tags": [
+        "haze",
         "mist",
-        "fog"
+        "weather",
+        "low visibility",
+        "pollution"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather condition display",
+        "Air quality indicator",
+        "Visibility warning"
+      ]
     }
   }
 }

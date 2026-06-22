@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示风速下降或下降气流",
+    "天气应用中的风向指示器"
+  ],
   "name": "风箭头下",
   "tags": [
-    "天气",
-    "空气",
-    "压力",
-    "吹"
+    "风向向下",
+    "风速下降",
+    "风力减弱",
+    "下降气流",
+    "气压下降"
   ],
   "categories": [
     "weather",
@@ -16,12 +20,16 @@
     "en": {
       "name": "wind arrow down",
       "tags": [
-        "weather",
-        "air",
-        "pressure",
-        "blow"
+        "wind direction down",
+        "wind speed decreasing",
+        "downdraft",
+        "decreasing wind",
+        "air pressure drop"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Showing decreasing wind speed or downdrafts",
+        "Weather app wind direction indicators"
+      ]
     }
   }
 }

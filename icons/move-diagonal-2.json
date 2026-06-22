@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "对角线移动控制",
+    "调整大小手柄",
+    "双向调整"
+  ],
   "name": "移动对角线2",
   "tags": [
-    "双",
-    "箭头"
+    "对角线移动",
+    "双向箭头",
+    "方向",
+    "调整大小",
+    "拉伸"
   ],
   "categories": [
     "arrows",
@@ -14,10 +21,17 @@
     "en": {
       "name": "move diagonal 2",
       "tags": [
-        "double",
-        "arrow"
+        "diagonal-move",
+        "double-arrow",
+        "direction",
+        "resize",
+        "stretch"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Diagonal movement controls",
+        "Resize handles",
+        "Bidirectional adjustments"
+      ]
     }
   }
 }

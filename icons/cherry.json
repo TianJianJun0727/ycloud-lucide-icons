@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "水果市场列表",
+    "甜品菜单项",
+    "夏季促销",
+    "健康食品图标"
+  ],
   "name": "樱桃",
   "tags": [
+    "樱桃",
     "水果",
-    "食物"
+    "甜品",
+    "食物",
+    "夏季",
+    "红色"
   ],
   "categories": [
     "food-beverage"
@@ -13,10 +22,19 @@
     "en": {
       "name": "cherry",
       "tags": [
+        "cherry",
         "fruit",
-        "food"
+        "dessert",
+        "food",
+        "summer",
+        "red"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Fruit market listing",
+        "Dessert menu item",
+        "Summer promotion",
+        "Healthy food icon"
+      ]
     }
   }
 }

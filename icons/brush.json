@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数字绘画工具",
+    "颜色应用",
+    "设计软件"
+  ],
   "name": "刷子",
   "tags": [
-    "干净",
-    "扫",
-    "重构",
-    "移除",
-    "画",
+    "刷子",
+    "绘画",
     "油漆",
     "颜色",
-    "艺术家"
+    "设计"
   ],
   "categories": [
     "text",
@@ -21,16 +22,17 @@
     "en": {
       "name": "brush",
       "tags": [
-        "clean",
-        "sweep",
-        "refactor",
-        "remove",
-        "draw",
+        "brush",
+        "painting",
         "paint",
         "color",
-        "artist"
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Digital painting tools",
+        "Color application",
+        "Design software"
+      ]
     }
   }
 }

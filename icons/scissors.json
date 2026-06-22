@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器剪切功能",
+    "设计软件裁剪工具",
+    "手工艺应用图标",
+    "内容管理剪切选项"
+  ],
   "name": "剪刀",
   "tags": [
-    "切",
-    "剪断",
-    "砍",
-    "文具",
-    "工艺品"
+    "剪刀",
+    "剪切",
+    "裁剪",
+    "剪裁",
+    "设计工具",
+    "文本编辑"
   ],
   "categories": [
     "text",
@@ -18,13 +24,19 @@
     "en": {
       "name": "scissors",
       "tags": [
+        "scissors",
         "cut",
-        "snip",
-        "chop",
-        "stationery",
-        "crafts"
+        "trim",
+        "crop",
+        "design tool",
+        "text editing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor cut function",
+        "Design software crop tool",
+        "Craft application icon",
+        "Content management cut option"
+      ]
     }
   }
 }

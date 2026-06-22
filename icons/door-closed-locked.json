@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "门禁控制面板",
+    "安全设置",
+    "私密房间指示",
+    "锁定状态"
+  ],
   "name": "门关闭锁定",
   "tags": [
-    "入口",
-    "条目",
-    "退出",
-    "入口",
-    "出口",
     "门",
-    "网关",
-    "紧急出口",
-    "锁定"
+    "关闭",
+    "锁定",
+    "安全",
+    "入口",
+    "私密"
   ],
   "categories": [
     "home",
@@ -22,17 +24,19 @@
     "en": {
       "name": "door closed locked",
       "tags": [
+        "door",
+        "closed",
+        "locked",
+        "security",
         "entrance",
-        "entry",
-        "exit",
-        "ingress",
-        "egress",
-        "gate",
-        "gateway",
-        "emergency exit",
-        "lock"
+        "private"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Access control panel",
+        "Security settings",
+        "Private room indicator",
+        "Locked state"
+      ]
     }
   }
 }

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "粘贴文本内容",
+    "复制粘贴操作",
+    "插入剪贴板数据"
+  ],
   "name": "剪贴板粘贴",
   "tags": [
+    "粘贴",
     "复制",
-    "粘贴"
+    "内容",
+    "文本",
+    "插入"
   ],
   "categories": [
     "text",
@@ -14,10 +21,17 @@
     "en": {
       "name": "clipboard paste",
       "tags": [
+        "paste",
         "copy",
-        "paste"
+        "content",
+        "text",
+        "insert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Paste text content",
+        "Copy paste operation",
+        "Insert clipboard data"
+      ]
     }
   }
 }

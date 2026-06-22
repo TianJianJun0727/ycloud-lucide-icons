@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计工具中的字体样式预览",
+    "文本效果选择界面",
+    "排版编辑界面"
+  ],
   "name": "文字轮廓",
   "tags": [
-    "文本",
+    "文字轮廓",
     "字体",
-    "版式",
-    "剪影",
-    "简介",
-    "轮廓",
-    "中风",
-    "线条"
+    "排版",
+    "文本",
+    "描边",
+    "字形"
   ],
   "categories": [
     "text"
@@ -22,13 +24,15 @@
         "text",
         "font",
         "typography",
-        "silhouette",
-        "profile",
-        "contour",
+        "outline",
         "stroke",
-        "line"
+        "glyph"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Font style preview in design tool",
+        "Text effect selection UI",
+        "Typography editing interface"
+      ]
     }
   }
 }

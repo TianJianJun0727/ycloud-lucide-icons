@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器两端对齐按钮",
+    "新闻稿或文章格式化",
+    "创建间距均匀的文本块"
+  ],
   "name": "文本对齐对齐",
   "tags": [
     "文本",
-    "对准",
-    "有道理的",
-    "菜单",
-    "列表"
+    "对齐",
+    "两端对齐",
+    "排版",
+    "格式",
+    "段落"
   ],
   "categories": [
     "text"
@@ -26,11 +31,16 @@
       "tags": [
         "text",
         "alignment",
+        "justify",
         "justified",
-        "menu",
-        "list"
+        "typography",
+        "paragraph"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor justify alignment button",
+        "Newsletter or article formatting",
+        "Creating evenly spaced text blocks"
+      ]
     }
   }
 }

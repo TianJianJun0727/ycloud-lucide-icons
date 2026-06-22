@@ -1,36 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本密集的文档",
+    "内容页面",
+    "故事或脚本查看器"
+  ],
   "name": "书籍文本",
   "tags": [
     "阅读",
-    "小册子",
-    "杂志",
-    "传单",
-    "小册子",
-    "多美",
-    "图书馆",
+    "文档",
+    "文本",
+    "内容",
     "写作",
-    "书面的",
-    "作家",
-    "作者",
     "故事",
-    "脚本",
-    "小说",
-    "小说",
     "信息",
-    "知识",
-    "教育",
-    "高中",
-    "大学",
-    "学院",
-    "学院",
-    "学生",
-    "学习",
-    "学习",
-    "作业",
-    "研究",
-    "文档"
+    "参考"
   ],
   "categories": [
     "text",
@@ -41,35 +25,19 @@
       "name": "book text",
       "tags": [
         "reading",
-        "booklet",
-        "magazine",
-        "leaflet",
-        "pamphlet",
-        "tome",
-        "library",
+        "documentation",
+        "text",
+        "content",
         "writing",
-        "written",
-        "writer",
-        "author",
         "story",
-        "script",
-        "fiction",
-        "novel",
         "information",
-        "knowledge",
-        "education",
-        "high school",
-        "university",
-        "college",
-        "academy",
-        "student",
-        "study",
-        "learning",
-        "homework",
-        "research",
-        "documentation"
+        "reference"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text-heavy documentation",
+        "Content page",
+        "Story or script viewer"
+      ]
     }
   }
 }

@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食品应用中的过敏原过滤",
+    "素食饮食指示",
+    "禁用鸡蛋成分",
+    "饮食限制设置"
+  ],
   "name": "鸡蛋关闭",
   "tags": [
     "无蛋",
-    "素食主义者",
-    "孵化的",
-    "坏蛋"
+    "素食",
+    "过敏原",
+    "禁用",
+    "不含",
+    "排除"
   ],
   "categories": [
     "food-beverage"
@@ -17,10 +24,17 @@
       "tags": [
         "egg free",
         "vegan",
-        "hatched",
-        "bad egg"
+        "allergen",
+        "disabled",
+        "exclude",
+        "no egg"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Allergen filter in food app",
+        "Vegan diet indicator",
+        "Disable egg ingredient",
+        "Dietary restriction setting"
+      ]
     }
   }
 }

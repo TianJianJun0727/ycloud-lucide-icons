@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示2点时间",
+    "下午日程安排",
+    "凌晨时间指示器"
+  ],
   "name": "时钟2",
   "tags": [
     "时间",
-    "手表",
-    "闹钟"
+    "时钟",
+    "时刻",
+    "2点",
+    "下午",
+    "凌晨"
   ],
   "categories": [
     "time"
@@ -15,10 +22,17 @@
       "name": "clock 2",
       "tags": [
         "time",
-        "watch",
-        "alarm"
+        "clock",
+        "hour",
+        "2",
+        "two",
+        "o'clock"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Time display for 2:00",
+        "Afternoon scheduling",
+        "Early morning time indicator"
+      ]
     }
   }
 }

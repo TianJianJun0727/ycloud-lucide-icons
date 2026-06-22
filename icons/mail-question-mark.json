@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "邮件投递失败警告",
+    "邮件支持查询按钮",
+    "消息状态未知指示器"
+  ],
   "name": "邮件问题标记",
   "tags": [
-    "邮箱",
-    "消息",
-    "信",
-    "交货",
-    "未交付的"
+    "邮件问题",
+    "邮件疑问",
+    "未送达",
+    "投递状态",
+    "邮件帮助"
   ],
   "categories": [
     "mail"
@@ -24,13 +28,17 @@
     "en": {
       "name": "mail question mark",
       "tags": [
-        "email",
-        "message",
-        "letter",
-        "delivery",
-        "undelivered"
+        "mail question",
+        "email issue",
+        "undelivered",
+        "delivery status",
+        "mail help"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Email delivery failure warning",
+        "Mail support inquiry button",
+        "Message status unknown indicator"
+      ]
     }
   }
 }

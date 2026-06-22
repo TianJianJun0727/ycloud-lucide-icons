@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "农场管理仪表板",
+    "农产品页面",
+    "可持续发展报告"
+  ],
   "name": "拖拉机",
   "tags": [
     "农业",
-    "农民",
-    "牧场",
+    "农场",
+    "农用机械",
+    "耕作",
     "收获",
-    "设备",
     "车辆"
   ],
   "categories": [
@@ -20,13 +24,17 @@
       "name": "tractor",
       "tags": [
         "farming",
-        "farmer",
-        "ranch",
+        "agriculture",
+        "farm",
         "harvest",
-        "equipment",
-        "vehicle"
+        "vehicle",
+        "equipment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Farm management dashboard",
+        "Agricultural product page",
+        "Sustainability report"
+      ]
     }
   }
 }

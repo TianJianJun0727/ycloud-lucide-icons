@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件删除操作",
+    "邮件垃圾文件夹",
+    "清除列表项"
+  ],
   "name": "删除",
   "tags": [
-    "垃圾",
     "删除",
+    "垃圾箱",
     "移除",
-    "垃圾箱"
+    "清空",
+    "回收站"
   ],
   "categories": [
     "files",
@@ -16,12 +21,17 @@
     "en": {
       "name": "trash 2",
       "tags": [
-        "garbage",
         "delete",
+        "trash",
         "remove",
-        "bin"
+        "empty",
+        "recycle bin"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File deletion action",
+        "Email junk folder",
+        "Clear list item"
+      ]
     }
   }
 }

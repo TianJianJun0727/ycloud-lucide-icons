@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "停车支付应用界面",
+    "街道停车位查找器",
+    "城市交通服务"
+  ],
   "name": "停车仪表",
   "tags": [
-    "驾驶",
-    "停车场",
-    "付钱",
-    "人行道",
-    "人行道"
+    "停车收费器",
+    "停车",
+    "支付",
+    "交通",
+    "街道"
   ],
   "categories": [
     "transportation",
@@ -17,13 +21,17 @@
     "en": {
       "name": "parking meter",
       "tags": [
-        "driving",
-        "car park",
-        "pay",
-        "sidewalk",
-        "pavement"
+        "parking meter",
+        "parking",
+        "payment",
+        "transportation",
+        "street"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Parking payment app interface",
+        "Street parking location finder",
+        "Urban transportation service"
+      ]
     }
   }
 }

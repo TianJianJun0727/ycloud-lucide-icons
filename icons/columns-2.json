@@ -1,30 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多列布局",
+    "内容组织",
+    "界面设计"
+  ],
   "name": "列2",
   "tags": [
-    "线",
-    "列表",
-    "队列",
-    "预览",
-    "面板",
-    "平行",
-    "系列",
-    "分裂",
-    "垂直",
-    "水平的",
-    "一半",
-    "中心",
-    "中",
-    "甚至",
-    "侧边栏",
-    "抽屉",
-    "排水沟",
-    "折叠",
-    "回流焊",
-    "版式",
-    "分页",
-    "页面"
+    "列",
+    "布局",
+    "分栏",
+    "设计",
+    "网格"
   ],
   "categories": [
     "layout",
@@ -43,30 +30,17 @@
     "en": {
       "name": "columns 2",
       "tags": [
-        "lines",
-        "list",
-        "queue",
-        "preview",
-        "panel",
-        "parallel",
-        "series",
+        "columns",
+        "layout",
         "split",
-        "vertical",
-        "horizontal",
-        "half",
-        "center",
-        "middle",
-        "even",
-        "sidebar",
-        "drawer",
-        "gutter",
-        "fold",
-        "reflow",
-        "typography",
-        "pagination",
-        "pages"
+        "design",
+        "grid"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multi-column layout",
+        "Content organization",
+        "UI design"
+      ]
     }
   }
 }

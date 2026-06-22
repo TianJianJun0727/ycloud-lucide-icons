@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器暂停按钮",
+    "临时停止音频播放",
+    "视频流控制"
+  ],
   "name": "圆形暂停",
   "tags": [
+    "暂停",
     "音乐",
     "音频",
+    "视频",
+    "播放器",
     "停止"
   ],
   "categories": [
@@ -22,11 +29,18 @@
     "en": {
       "name": "circle pause",
       "tags": [
+        "pause",
         "music",
         "audio",
+        "video",
+        "player",
         "stop"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player pause button",
+        "Temporarily halt audio playback",
+        "Video streaming control"
+      ]
     }
   }
 }

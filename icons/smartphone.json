@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移动应用界面",
+    "设备表示",
+    "通讯图标"
+  ],
   "name": "智能手机",
   "tags": [
-    "电话",
+    "智能手机",
     "手机",
-    "装置",
-    "屏幕"
+    "移动设备",
+    "通讯",
+    "屏幕",
+    "移动端"
   ],
   "categories": [
     "connectivity",
@@ -16,12 +22,18 @@
     "en": {
       "name": "smartphone",
       "tags": [
+        "smartphone",
         "phone",
-        "cellphone",
-        "device",
-        "screen"
+        "mobile device",
+        "communication",
+        "screen",
+        "mobile"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mobile app interface",
+        "Device representation",
+        "Communication icon"
+      ]
     }
   }
 }

@@ -1,22 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭按钮",
+    "取消操作",
+    "删除确认",
+    "错误状态",
+    "乘法符号"
+  ],
   "name": "圆形关闭",
   "tags": [
-    "取消",
     "关闭",
+    "取消",
     "删除",
-    "移除",
-    "次",
-    "清除",
-    "错误",
-    "不正确",
-    "错误的",
     "错误",
     "失败",
-    "棉绒",
-    "乘以",
-    "乘法"
+    "乘法",
+    "清除"
   ],
   "categories": [
     "math",
@@ -34,22 +33,21 @@
     "en": {
       "name": "circle X",
       "tags": [
-        "cancel",
         "close",
+        "cancel",
         "delete",
-        "remove",
-        "times",
-        "clear",
         "error",
-        "incorrect",
-        "wrong",
-        "mistake",
         "failure",
-        "linter",
         "multiply",
-        "multiplication"
+        "clear"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Close button",
+        "Cancel operation",
+        "Delete confirmation",
+        "Error state",
+        "Multiplication symbol"
+      ]
     }
   }
 }

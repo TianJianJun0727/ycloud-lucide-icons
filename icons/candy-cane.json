@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "圣诞节主题设计",
+    "甜品店标识",
+    "节日促销页面",
+    "食品包装设计"
+  ],
   "name": "糖果手杖",
   "tags": [
-    "糖",
-    "食物",
-    "甜甜的",
-    "圣诞节",
-    "圣诞节"
+    "圣诞糖果",
+    "节日甜点",
+    "拐杖糖",
+    "节日食品"
   ],
   "categories": [
     "food-beverage"
@@ -16,13 +20,17 @@
     "en": {
       "name": "candy cane",
       "tags": [
-        "sugar",
-        "food",
-        "sweet",
-        "christmas",
-        "xmas"
+        "christmas candy",
+        "holiday dessert",
+        "candy cane",
+        "festive food"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Christmas theme design",
+        "Dessert shop branding",
+        "Holiday promotion page",
+        "Food packaging design"
+      ]
     }
   }
 }

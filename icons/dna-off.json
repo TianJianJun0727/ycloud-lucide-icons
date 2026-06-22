@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "基因检测界面",
+    "生物信息学工具",
+    "医学研究展示"
+  ],
   "name": "DNA链关闭",
   "tags": [
+    "DNA关闭",
     "基因",
-    "无转基因",
-    "螺旋",
-    "遗传",
-    "染色体",
-    "核酸"
+    "遗传学",
+    "生物",
+    "禁用"
   ],
   "categories": [
     "medical",
@@ -18,14 +21,17 @@
     "en": {
       "name": "dna off",
       "tags": [
+        "dna off",
         "gene",
-        "gmo free",
-        "helix",
-        "heredity",
-        "chromosome",
-        "nucleic acid"
+        "genetics",
+        "biology",
+        "disabled"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Genetic testing interface",
+        "Bioinformatics tool",
+        "Medical research display"
+      ]
     }
   }
 }

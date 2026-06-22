@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "语音输出的无障碍功能",
+    "语音通信界面",
+    "屏幕阅读器或文本转语音控制",
+    "辅助技术指示器"
+  ],
   "name": "语音",
   "tags": [
-    "残疾",
-    "残疾人",
-    "达达",
-    "人类的",
-    "可达性",
-    "人",
-    "声音"
+    "语音",
+    "无障碍",
+    "沟通",
+    "辅助功能",
+    "发言",
+    "对话",
+    "朗读"
   ],
   "categories": [
     "accessibility",
@@ -19,15 +24,20 @@
     "en": {
       "name": "speech",
       "tags": [
-        "disability",
-        "disabled",
-        "dda",
-        "human",
+        "speech",
         "accessibility",
-        "people",
-        "sound"
+        "communication",
+        "assistive technology",
+        "talk",
+        "conversation",
+        "read aloud"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Accessibility features for speech output",
+        "Voice communication interface",
+        "Screen reader or text-to-speech controls",
+        "Assistive technology indicators"
+      ]
     }
   }
 }

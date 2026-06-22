@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "俄罗斯货币显示",
+    "金融支付系统",
+    "货币转换界面",
+    "资金转账选项"
+  ],
   "name": "俄罗斯卢布",
   "tags": [
+    "卢布",
+    "俄罗斯",
     "货币",
-    "钱",
-    "付款"
+    "金融",
+    "支付",
+    "钱"
   ],
   "categories": [
     "finance"
@@ -14,11 +22,19 @@
     "en": {
       "name": "russian ruble",
       "tags": [
+        "ruble",
+        "Russian",
         "currency",
-        "money",
-        "payment"
+        "finance",
+        "payment",
+        "money"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Russian currency display",
+        "Financial payment systems",
+        "Currency conversion interface",
+        "Money transfer options"
+      ]
     }
   }
 }

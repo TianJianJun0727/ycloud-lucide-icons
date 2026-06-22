@@ -1,27 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计测量工具",
+    "尺寸线标注",
+    "布局间距测量",
+    "单位比例参考"
+  ],
   "name": "尺子尺寸线条",
   "tags": [
+    "尺子",
     "测量",
-    "厘米",
-    "厘米",
-    "毫米",
-    "毫米",
-    "米",
-    "脚",
-    "脚",
-    "英寸",
-    "单位",
     "尺寸",
     "长度",
-    "宽度",
-    "高度",
-    "尺寸",
-    "深度",
-    "广度",
-    "范围",
-    "文具"
+    "设计",
+    "标注",
+    "线条",
+    "单位"
   ],
   "categories": [
     "tools",
@@ -32,27 +26,21 @@
     "en": {
       "name": "ruler dimension line",
       "tags": [
-        "measurements",
-        "centimeters",
-        "cm",
-        "millimeters",
-        "mm",
-        "metre",
-        "foot",
-        "feet",
-        "inches",
-        "units",
-        "size",
+        "ruler",
+        "measurement",
+        "dimension",
         "length",
-        "width",
-        "height",
-        "dimensions",
-        "depth",
-        "breadth",
-        "extent",
-        "stationery"
+        "design",
+        "annotation",
+        "line",
+        "units"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Design measurement tool",
+        "Dimension line annotation",
+        "Layout spacing measurement",
+        "Unit scale reference"
+      ]
     }
   }
 }

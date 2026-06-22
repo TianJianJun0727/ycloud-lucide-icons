@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器拼写和语法检查",
+    "代码检查或静态分析工具",
+    "文档校对功能",
+    "输入验证错误高亮"
+  ],
   "name": "拼写勾选",
   "tags": [
-    "拼写",
+    "拼写检查",
+    "语法",
+    "纠错",
+    "校对",
+    "文本",
     "错误",
-    "错误",
-    "监督",
-    "打字错误",
-    "修正",
-    "代码",
-    "棉绒",
-    "一个"
+    "代码检查",
+    "Lint"
   ],
   "categories": [
     "text",
@@ -21,17 +25,21 @@
     "en": {
       "name": "spell check",
       "tags": [
-        "spelling",
-        "error",
-        "mistake",
-        "oversight",
-        "typo",
+        "spell check",
+        "grammar",
         "correction",
-        "code",
-        "linter",
-        "a"
+        "proofread",
+        "text",
+        "error",
+        "code linting",
+        "linter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor spelling and grammar check",
+        "Code linter or static analysis tool",
+        "Document proofreading feature",
+        "Input validation error highlighting"
+      ]
     }
   }
 }

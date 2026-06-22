@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "创建编号列表",
+    "显示有序步骤",
+    "展示顺序列表"
+  ],
   "name": "列表有序",
   "tags": [
-    "数量",
-    "订单",
-    "队列"
+    "列表",
+    "有序",
+    "编号",
+    "顺序",
+    "数字"
   ],
   "categories": [
     "text"
@@ -14,11 +20,17 @@
     "en": {
       "name": "list ordered",
       "tags": [
-        "number",
-        "order",
-        "queue"
+        "list",
+        "ordered",
+        "numbered",
+        "sequence",
+        "numbers"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Create a numbered list",
+        "Show ordered steps",
+        "Display a sequential list"
+      ]
     }
   }
 }

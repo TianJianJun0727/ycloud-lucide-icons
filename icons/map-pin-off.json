@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用位置图钉",
+    "隐藏地图标记",
+    "关闭图钉显示"
+  ],
   "name": "地图图钉关闭",
   "tags": [
     "位置",
-    "航路点",
     "标记",
-    "移除"
+    "禁用",
+    "隐藏",
+    "关闭",
+    "取消固定"
   ],
   "categories": [
     "navigation",
@@ -17,11 +23,17 @@
       "name": "map pin off",
       "tags": [
         "location",
-        "waypoint",
         "marker",
-        "remove"
+        "disable",
+        "hide",
+        "off",
+        "unpin"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable location pin",
+        "Hide map marker",
+        "Turn off pin display"
+      ]
     }
   }
 }

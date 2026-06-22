@@ -1,35 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带测量的精确绘图工具",
+    "设计软件的测量模式",
+    "建筑制图图标"
+  ],
   "name": "铅笔尺子",
   "tags": [
-    "编辑",
-    "创建",
-    "画",
-    "素描",
-    "草稿",
-    "作家",
-    "写作",
-    "文具",
-    "艺术家",
     "测量",
-    "厘米",
-    "厘米",
-    "毫米",
-    "毫米",
-    "米",
-    "脚",
-    "脚",
-    "英寸",
-    "单位",
-    "尺寸",
-    "长度",
-    "宽度",
-    "高度",
-    "尺寸",
-    "深度",
-    "广度",
-    "范围"
+    "绘图",
+    "设计",
+    "尺子",
+    "草图",
+    "标注尺寸"
   ],
   "categories": [
     "tools",
@@ -41,35 +24,18 @@
     "en": {
       "name": "pencil ruler",
       "tags": [
-        "edit",
-        "create",
-        "draw",
+        "measure",
+        "drawing",
+        "design",
+        "ruler",
         "sketch",
-        "draft",
-        "writer",
-        "writing",
-        "stationery",
-        "artist",
-        "measurements",
-        "centimeters",
-        "cm",
-        "millimeters",
-        "mm",
-        "metre",
-        "foot",
-        "feet",
-        "inches",
-        "units",
-        "size",
-        "length",
-        "width",
-        "height",
-        "dimensions",
-        "depth",
-        "breadth",
-        "extent"
+        "dimension"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Precision drawing tool with measurement",
+        "Design software measurement mode",
+        "Architectural drafting icon"
+      ]
     }
   }
 }

@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "屏幕亮度控制",
+    "默认亮度设置",
+    "无障碍设置",
+    "显示偏好"
+  ],
   "name": "太阳中等",
   "tags": [
-    "亮度",
-    "中等"
+    "亮度中等",
+    "适中亮度",
+    "普通亮度",
+    "亮度调节",
+    "无障碍"
   ],
   "categories": [
     "accessibility",
@@ -14,10 +22,18 @@
     "en": {
       "name": "sun medium",
       "tags": [
-        "brightness",
-        "medium"
+        "medium brightness",
+        "moderate brightness",
+        "normal brightness",
+        "brightness adjustment",
+        "accessibility"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Screen brightness control",
+        "Default brightness setting",
+        "Accessibility settings",
+        "Display preferences"
+      ]
     }
   }
 }

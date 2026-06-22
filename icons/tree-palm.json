@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "旅行预订",
+    "度假村网站",
+    "度假租赁",
+    "旅游推广"
+  ],
   "name": "树棕榈",
   "tags": [
-    "假期",
-    "休闲",
-    "岛"
+    "棕榈树",
+    "度假",
+    "岛屿",
+    "热带",
+    "海滩",
+    "休闲"
   ],
   "categories": [
     "nature",
@@ -25,9 +33,16 @@
       "tags": [
         "vacation",
         "leisure",
-        "island"
+        "island",
+        "tropical",
+        "beach"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Travel booking",
+        "Resort website",
+        "Vacation rental",
+        "Tourism promotion"
+      ]
     }
   }
 }

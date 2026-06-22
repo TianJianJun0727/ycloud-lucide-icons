@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "蒸汽或桑拿控制",
+    "温度或加热指示器",
+    "烹饪或厨房电器界面"
+  ],
   "name": "波浪垂直",
   "tags": [
     "蒸汽",
-    "温暖",
+    "热气",
     "温度",
-    "烧伤",
-    "热",
-    "沸腾",
-    "热",
-    "抽烟",
-    "蒸气",
-    "气味",
-    "香气",
-    "桑拿"
+    "加热",
+    "桑拿",
+    "蒸发"
   ],
   "categories": [
     "weather",
@@ -25,19 +23,17 @@
       "name": "waves vertical",
       "tags": [
         "steam",
-        "warmth",
+        "heat waves",
         "temperature",
-        "burn",
-        "hot",
-        "boiling",
-        "heat",
-        "smoke",
-        "vapor",
-        "smell",
-        "aroma",
-        "sauna"
+        "heating",
+        "sauna",
+        "evaporation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Steam or sauna controls",
+        "Temperature or heating indicators",
+        "Cooking or kitchen appliance interfaces"
+      ]
     }
   }
 }

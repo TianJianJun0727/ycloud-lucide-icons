@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "项目分类",
+    "内容标记或打标签",
+    "徽章展示"
+  ],
   "name": "标签",
   "tags": [
     "标签",
+    "标记",
     "徽章",
-    "票",
-    "标记"
+    "分类",
+    "标识",
+    "票"
   ],
   "categories": [
     "account"
@@ -15,12 +21,18 @@
     "en": {
       "name": "tag",
       "tags": [
+        "tag",
         "label",
         "badge",
+        "mark",
         "ticket",
-        "mark"
+        "category"
       ],
-      "use-cases": []
+      "use-cases": [
+        "item categorization",
+        "labeling or tagging content",
+        "badge display"
+      ]
     }
   }
 }

@@ -1,23 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "调色板选择",
+    "设计工具取色器",
+    "主题定制",
+    "材料样本"
+  ],
   "name": "色板书籍",
   "tags": [
+    "色板",
     "颜色",
-    "颜色",
+    "设计",
+    "调色板",
     "样本",
     "潘通",
-    "色调",
-    "色调",
-    "色相",
-    "饱和度",
-    "亮度",
-    "主题",
-    "方案",
-    "调色板",
-    "样品",
-    "纺织",
-    "地毯"
+    "色彩方案"
   ],
   "categories": [
     "design",
@@ -28,23 +25,20 @@
     "en": {
       "name": "swatch book",
       "tags": [
-        "colors",
-        "colours",
-        "swatches",
-        "pantone",
-        "shades",
-        "tint",
-        "hue",
-        "saturation",
-        "brightness",
-        "theme",
-        "scheme",
+        "swatch",
+        "color",
+        "design",
         "palette",
-        "samples",
-        "textile",
-        "carpet"
+        "sample",
+        "pantone",
+        "color scheme"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Color palette selection",
+        "Design tool color picker",
+        "Theme customization",
+        "Material samples"
+      ]
     }
   }
 }

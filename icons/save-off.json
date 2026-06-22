@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档为只读或已锁定",
+    "保存功能被禁用",
+    "表示不允许未保存的更改"
+  ],
   "name": "保存关闭",
   "tags": [
-    "软盘",
-    "无法挽救的"
+    "保存禁用",
+    "无法保存",
+    "关闭保存",
+    "只读",
+    "保存失败"
   ],
   "categories": [
     "text",
@@ -14,10 +21,17 @@
     "en": {
       "name": "save off",
       "tags": [
-        "floppy disk",
-        "unsalvageable"
+        "save disabled",
+        "cannot save",
+        "save off",
+        "read-only",
+        "save failed"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document is read-only or locked",
+        "Save functionality is disabled",
+        "Indicates unsaved changes are not allowed"
+      ]
     }
   }
 }

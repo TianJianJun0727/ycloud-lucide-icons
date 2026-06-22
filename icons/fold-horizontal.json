@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "面板收起控制",
+    "布局管理",
+    "可展开菜单"
+  ],
   "name": "折叠水平",
   "tags": [
-    "箭头",
-    "折叠",
-    "折叠",
-    "垂直",
-    "虚线"
+    "水平折叠",
+    "收起",
+    "展开",
+    "布局",
+    "箭头"
   ],
   "categories": [
     "arrows",
@@ -17,13 +21,17 @@
     "en": {
       "name": "fold horizontal",
       "tags": [
-        "arrow",
+        "fold horizontal",
         "collapse",
-        "fold",
-        "vertical",
-        "dashed"
+        "expand",
+        "layout",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Panel collapse control",
+        "Layout management",
+        "Expandable menu"
+      ]
     }
   }
 }

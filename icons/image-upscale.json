@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "放大低分辨率图片",
+    "提升照片质量",
+    "AI图像放大工具"
+  ],
   "name": "图片放大",
   "tags": [
+    "图片放大",
+    "提升分辨率",
+    "增强画质",
     "调整大小",
-    "图片",
-    "锐化",
-    "增加"
+    "锐化"
   ],
   "categories": [
     "photography",
@@ -16,12 +21,17 @@
     "en": {
       "name": "image upscale",
       "tags": [
+        "upscale",
+        "enhance",
+        "enlarge",
         "resize",
-        "picture",
-        "sharpen",
-        "increase"
+        "sharpen"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Enlarge a low-resolution image",
+        "Improve photo quality",
+        "AI image upscaling tool"
+      ]
     }
   }
 }

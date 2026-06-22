@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "功能禁用状态",
+    "灵感或想法关闭",
+    "深色模式切换"
+  ],
   "name": "灯泡关闭",
   "tags": [
-    "灯"
+    "灯泡关闭",
+    "灯灭",
+    "关闭",
+    "无灵感",
+    "禁用",
+    "黑暗"
   ],
   "categories": [
     "photography"
@@ -12,9 +21,18 @@
     "en": {
       "name": "lightbulb off",
       "tags": [
-        "lights"
+        "lightbulb off",
+        "light off",
+        "off",
+        "no idea",
+        "disabled",
+        "dark"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Feature disabled state",
+        "Inspiration or idea off",
+        "Dark mode toggle"
+      ]
     }
   }
 }

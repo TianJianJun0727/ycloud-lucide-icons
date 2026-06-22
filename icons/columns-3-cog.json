@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "布局自定义",
+    "设置面板",
+    "网格配置"
+  ],
   "name": "列3齿轮",
   "tags": [
     "列",
     "设置",
-    "定制",
-    "表格",
-    "网格",
-    "调整",
+    "布局",
     "配置",
-    "面板",
-    "布局"
+    "自定义"
   ],
   "categories": [
     "layout",
@@ -37,15 +37,15 @@
       "tags": [
         "columns",
         "settings",
-        "customize",
-        "table",
-        "grid",
-        "adjust",
+        "layout",
         "configuration",
-        "panel",
-        "layout"
+        "customize"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Layout customization",
+        "Settings panel",
+        "Grid configuration"
+      ]
     }
   }
 }

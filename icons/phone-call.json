@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "发起或接听电话",
+    "通话功能按钮"
+  ],
   "name": "电话通话",
   "tags": [
-    "戒指"
+    "电话",
+    "通话",
+    "呼叫",
+    "铃声",
+    "沟通"
   ],
   "categories": [
     "connectivity",
@@ -14,9 +21,15 @@
     "en": {
       "name": "phone call",
       "tags": [
-        "ring"
+        "phone",
+        "call",
+        "ring",
+        "communication"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Initiating or receiving a phone call",
+        "Call feature buttons"
+      ]
     }
   }
 }

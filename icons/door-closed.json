@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "房间状态",
+    "建筑目录",
+    "家居界面",
+    "关闭状态"
+  ],
   "name": "门关闭",
   "tags": [
-    "入口",
-    "条目",
-    "退出",
+    "门",
+    "关闭",
     "入口",
     "出口",
-    "门",
-    "网关",
-    "紧急出口"
+    "房间"
   ],
   "categories": [
     "home",
@@ -21,16 +23,18 @@
     "en": {
       "name": "door closed",
       "tags": [
+        "door",
+        "closed",
         "entrance",
-        "entry",
         "exit",
-        "ingress",
-        "egress",
-        "gate",
-        "gateway",
-        "emergency exit"
+        "room"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Room status",
+        "Building directory",
+        "Home interface",
+        "Closed state"
+      ]
     }
   }
 }

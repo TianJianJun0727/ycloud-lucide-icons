@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电脑组装网站",
+    "硬件配置工具",
+    "游戏主机展示"
+  ],
   "name": "电脑箱包",
   "tags": [
-    "电脑",
-    "底盘"
+    "电脑机箱",
+    "主机",
+    "硬件",
+    "台式机",
+    "机箱",
+    "电脑硬件"
   ],
   "categories": [
     "devices",
@@ -14,10 +22,18 @@
     "en": {
       "name": "pc case",
       "tags": [
-        "computer",
-        "chassis"
+        "pc case",
+        "computer case",
+        "hardware",
+        "desktop",
+        "chassis",
+        "tower"
       ],
-      "use-cases": []
+      "use-cases": [
+        "PC building website",
+        "Hardware configuration tool",
+        "Gaming rig showcase"
+      ]
     }
   }
 }

@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频播放器的画中画模式",
+    "多任务处理界面",
+    "浮动媒体窗口"
+  ],
   "name": "图片进入图片",
   "tags": [
-    "显示",
-    "播放",
+    "画中画",
     "视频",
-    "弹出",
-    "总是在最上面",
-    "窗户",
-    "插图",
-    "多任务"
+    "播放",
+    "窗口",
+    "多任务",
+    "浮动",
+    "小窗"
   ],
   "categories": [
     "multimedia"
@@ -19,16 +22,19 @@
     "en": {
       "name": "picture in picture",
       "tags": [
-        "display",
-        "play",
+        "picture in picture",
         "video",
-        "pop out",
-        "always on top",
+        "play",
         "window",
-        "inset",
-        "multitask"
+        "multitask",
+        "float",
+        "pip"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video player with PiP mode",
+        "Multitasking interface",
+        "Floating media window"
+      ]
     }
   }
 }

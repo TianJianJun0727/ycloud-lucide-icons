@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "法律或司法相关应用",
+    "比较或评估功能",
+    "称重或测量工具"
+  ],
   "name": "比例尺",
   "tags": [
+    "天平",
     "平衡",
-    "合法的",
-    "许可证",
-    "右",
-    "规则",
     "法律",
-    "正义",
-    "重量",
+    "公正",
     "测量",
     "比较",
-    "法官",
-    "公平",
-    "道德",
-    "决定"
+    "权衡"
   ],
   "categories": [
     "navigation",
@@ -27,22 +24,19 @@
     "en": {
       "name": "scale",
       "tags": [
+        "scale",
         "balance",
-        "legal",
-        "license",
-        "right",
-        "rule",
         "law",
         "justice",
-        "weight",
         "measure",
         "compare",
-        "judge",
-        "fair",
-        "ethics",
-        "decision"
+        "weigh"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Legal or justice-related applications",
+        "Comparison or evaluation features",
+        "Weighing or measurement tools"
+      ]
     }
   }
 }

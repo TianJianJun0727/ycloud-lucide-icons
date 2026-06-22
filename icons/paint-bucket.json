@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图形填充颜色",
+    "设置背景色",
+    "油漆工具"
+  ],
   "name": "绘制桶",
   "tags": [
     "填充",
     "油漆",
-    "桶",
     "颜色",
-    "颜色"
+    "桶",
+    "着色",
+    "背景填充"
   ],
   "categories": [
     "design",
@@ -19,11 +24,16 @@
       "tags": [
         "fill",
         "paint",
-        "bucket",
         "color",
-        "colour"
+        "bucket",
+        "tint",
+        "background fill"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Fill shape with color",
+        "Set background color",
+        "Paint tool"
+      ]
     }
   }
 }

@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "打开文件夹",
+    "浏览目录",
+    "展开的文件夹"
+  ],
   "name": "文件夹打开",
   "tags": [
-    "目录"
+    "目录",
+    "打开",
+    "浏览"
   ],
   "categories": [
     "files"
@@ -12,9 +18,15 @@
     "en": {
       "name": "folder open",
       "tags": [
-        "directory"
+        "directory",
+        "open",
+        "browse"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Open folder",
+        "Browse directory",
+        "Expanded folder"
+      ]
     }
   }
 }

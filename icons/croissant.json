@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食品菜单",
+    "烘焙应用",
+    "早餐图标",
+    "餐厅标识"
+  ],
   "name": "可颂",
   "tags": [
-    "面包店",
-    "烹饪",
-    "食物",
-    "糕点"
+    "可颂",
+    "面包",
+    "糕点",
+    "早餐",
+    "烘焙"
   ],
   "categories": [
     "food-beverage"
@@ -15,12 +21,18 @@
     "en": {
       "name": "croissant",
       "tags": [
-        "bakery",
-        "cooking",
-        "food",
-        "pastry"
+        "croissant",
+        "bread",
+        "pastry",
+        "breakfast",
+        "baking"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food menu",
+        "Baking application",
+        "Breakfast icon",
+        "Restaurant标识"
+      ]
     }
   }
 }

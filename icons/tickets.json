@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示多张活动门票",
+    "管理一叠通行证或优惠券",
+    "包含多张票证的旅行预订"
+  ],
   "name": "票券",
   "tags": [
-    "旅行",
-    "旅行",
-    "通过",
-    "条目",
-    "优惠券",
-    "事件",
-    "音乐会",
-    "显示",
-    "穿孔的",
-    "虚线"
+    "票券",
+    "多张票",
+    "门票",
+    "套票",
+    "活动票务",
+    "旅行票证"
   ],
   "categories": [
     "travel",
@@ -23,18 +23,17 @@
     "en": {
       "name": "tickets",
       "tags": [
-        "trip",
-        "travel",
-        "pass",
-        "entry",
-        "voucher",
-        "event",
-        "concert",
-        "show",
-        "perforated",
-        "dashed"
+        "tickets",
+        "multiple tickets",
+        "admissions",
+        "event tickets",
+        "travel tickets"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Displaying multiple event tickets",
+        "Managing a bundle of passes or coupons",
+        "Travel booking with several tickets"
+      ]
     }
   }
 }

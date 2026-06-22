@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件压缩包",
+    "软件模块",
+    "数据归档",
+    "未开封包裹"
+  ],
   "name": "包2",
   "tags": [
     "盒子",
     "容器",
     "存储",
-    "密封的",
-    "包装的",
-    "未开封的",
-    "未交付的",
+    "打包",
+    "压缩",
+    "模块",
     "归档",
-    "邮编"
+    "未开封"
   ],
   "categories": [
     "files",
@@ -24,14 +28,18 @@
         "box",
         "container",
         "storage",
-        "sealed",
         "packed",
-        "unopened",
-        "undelivered",
+        "zip",
+        "module",
         "archive",
-        "zip"
+        "unopened"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File archive",
+        "Software module",
+        "Data storage",
+        "Unopened package"
+      ]
     }
   }
 }

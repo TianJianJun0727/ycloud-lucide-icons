@@ -1,25 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "表示隐私模式已开启",
-    "表示通知已静音或勿扰模式已开启",
-    "标记可通过交互显示的隐藏内容",
-    "表示用户处于非活跃或离开状态",
-    "表示在后台低调运行的隐身模式",
-    "提供面向视觉障碍的无障碍选项"
+    "部分可见或隐私模式",
+    "勿扰状态指示器",
+    "非活跃用户状态",
+    "视觉无障碍设置"
   ],
   "name": "眼睛虚线",
   "tags": [
-    "查看",
-    "手表",
-    "看到",
+    "眼睛虚线",
+    "部分可见",
+    "隐私",
+    "勿扰",
     "隐藏",
-    "隐藏",
-    "面具",
-    "隐藏的",
-    "看不见的",
-    "能见度",
-    "愿景"
+    "状态"
   ],
   "categories": [
     "accessibility",
@@ -31,24 +25,18 @@
     "en": {
       "name": "eye dashed",
       "tags": [
-        "view",
-        "watch",
-        "see",
-        "hide",
-        "conceal",
-        "mask",
+        "eye dashed",
+        "partially visible",
+        "privacy",
+        "do not disturb",
         "hidden",
-        "invisible",
-        "visibility",
-        "vision"
+        "status"
       ],
       "use-cases": [
-        "Indicating that privacy mode is activated",
-        "Showing that notifications are muted or do-not-disturb is on",
-        "Marking hidden content that can be revealed on interaction",
-        "Denoting an inactive or away user status",
-        "Representing a stealth mode running discreetly in the background",
-        "Offering an accessibility option for visual impairments"
+        "Partial visibility or privacy modes",
+        "Do-not-disturb status indicators",
+        "Inactive user states",
+        "Accessibility settings for vision"
       ]
     }
   }

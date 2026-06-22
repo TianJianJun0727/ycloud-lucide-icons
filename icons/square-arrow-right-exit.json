@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "导出数据",
+    "退出应用",
+    "输出结果"
+  ],
   "name": "方形箭头右退出",
   "tags": [
-    "出",
-    "外面",
     "输出",
     "导出",
-    "->"
+    "退出",
+    "方向"
   ],
   "categories": [
     "arrows",
@@ -19,13 +22,16 @@
     "en": {
       "name": "square arrow right exit",
       "tags": [
-        "out",
-        "outside",
         "output",
         "export",
-        "->"
+        "exit",
+        "direction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Export data",
+        "Exit application",
+        "Output result"
+      ]
     }
   }
 }

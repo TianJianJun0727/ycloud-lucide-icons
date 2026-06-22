@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "会议演示",
+    "幻灯片放映",
+    "家庭影院设置"
+  ],
   "name": "投影仪",
   "tags": [
-    "电影院",
-    "电影",
-    "电影",
-    "家庭视频",
+    "投影",
     "演示",
-    "幻灯片",
-    "办公室",
     "会议",
-    "项目",
-    "规划"
+    "多媒体",
+    "设备",
+    "幻灯片"
   ],
   "categories": [
     "multimedia",
@@ -24,18 +24,18 @@
     "en": {
       "name": "projector",
       "tags": [
-        "cinema",
-        "film",
-        "movie",
-        "home video",
+        "projection",
         "presentation",
-        "slideshow",
-        "office",
         "meeting",
-        "project",
-        "planning"
+        "multimedia",
+        "device",
+        "slideshow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Meeting presentation",
+        "Slideshow display",
+        "Home theater setup"
+      ]
     }
   }
 }

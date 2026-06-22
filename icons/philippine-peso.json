@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "菲律宾货币选择",
+    "面向菲律宾的金融应用"
+  ],
   "name": "菲律宾比索",
   "tags": [
+    "菲律宾比索",
     "货币",
-    "比索",
-    "钱",
-    "PHP"
+    "PHP",
+    "金融",
+    "钱"
   ],
   "categories": [
     "finance"
@@ -15,12 +19,16 @@
     "en": {
       "name": "philippine peso",
       "tags": [
+        "Philippine peso",
         "currency",
-        "peso",
-        "money",
-        "php"
+        "PHP",
+        "finance",
+        "money"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Philippine currency selection",
+        "Financial applications for the Philippines"
+      ]
     }
   }
 }

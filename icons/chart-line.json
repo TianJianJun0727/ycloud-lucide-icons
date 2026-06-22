@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "趋势分析面板",
+    "数据走势监控",
+    "时间序列图表"
+  ],
   "name": "图表线条",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图"
+    "折线图",
+    "趋势分析",
+    "数据走势",
+    "统计分析",
+    "时间序列"
   ],
   "categories": [
     "charts"
@@ -23,12 +28,17 @@
     "en": {
       "name": "chart line",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph"
+        "line chart",
+        "trend analysis",
+        "data trend",
+        "statistical analysis",
+        "time series"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Trend analysis dashboard",
+        "Data trend monitoring",
+        "Time series chart"
+      ]
     }
   }
 }

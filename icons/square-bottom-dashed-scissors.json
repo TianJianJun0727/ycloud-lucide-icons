@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑器剪切工具",
+    "代码片段",
+    "图片裁剪"
+  ],
   "name": "方形底部虚线剪刀",
   "tags": [
-    "切",
+    "剪切",
     "片段",
-    "砍",
-    "文具",
-    "工艺品"
+    "裁剪",
+    "工具",
+    "设计"
   ],
   "categories": [
     "text",
@@ -30,11 +34,15 @@
       "tags": [
         "cut",
         "snippet",
-        "chop",
-        "stationery",
-        "crafts"
+        "crop",
+        "tool",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cut tool in editor",
+        "Code snippet",
+        "Image cropping"
+      ]
     }
   }
 }

@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "点击操作",
+    "选择确认",
+    "活动交互状态"
+  ],
   "name": "鼠标指针点击",
   "tags": [
+    "指针",
+    "鼠标",
+    "光标",
     "点击",
-    "选择"
+    "选择",
+    "交互",
+    "激活"
   ],
   "categories": [
     "arrows",
@@ -14,10 +23,19 @@
     "en": {
       "name": "mouse pointer click",
       "tags": [
+        "pointer",
+        "mouse",
+        "cursor",
         "click",
-        "select"
+        "select",
+        "interaction",
+        "active"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Click actions",
+        "Selection confirmation",
+        "Active interaction states"
+      ]
     }
   }
 }

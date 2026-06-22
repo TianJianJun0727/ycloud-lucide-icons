@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文字处理器工具栏",
+    "文本格式菜单",
+    "文档编辑器",
+    "排版界面"
+  ],
   "name": "方形段落标记",
   "tags": [
     "段落",
     "标记",
-    "段落",
-    "盲人",
-    "版式",
-    "类型",
+    "排版",
     "文本",
-    "散文",
-    "符号"
+    "符号",
+    "编辑",
+    "格式",
+    "分隔符"
   ],
   "categories": [
     "text"
@@ -30,15 +34,19 @@
       "tags": [
         "paragraph",
         "mark",
-        "paraph",
-        "blind",
         "typography",
-        "type",
         "text",
-        "prose",
-        "symbol"
+        "symbol",
+        "edit",
+        "format",
+        "separator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Word processor toolbar",
+        "Text formatting menu",
+        "Document editor",
+        "Type setting interface"
+      ]
     }
   }
 }

@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在版本控制界面中创建新Git分支",
+    "代码仓库管理操作",
+    "新建功能分支"
+  ],
   "name": "Git分支加号",
   "tags": [
+    "Git分支添加",
+    "版本控制",
     "代码",
-    "版本控制",
-    "版本控制",
-    "存储库",
-    "添加",
+    "分支",
     "创建",
-    "+"
+    "添加",
+    "新建"
   ],
   "categories": [
     "development"
@@ -18,15 +22,19 @@
     "en": {
       "name": "git branch plus",
       "tags": [
-        "code",
+        "Git branch add",
         "version control",
-        "vcs",
-        "repository",
-        "add",
+        "code",
+        "branch",
         "create",
-        "+"
+        "add",
+        "new"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Create a new Git branch in version control UI",
+        "Code repository management action",
+        "Start a new feature branch"
+      ]
     }
   }
 }

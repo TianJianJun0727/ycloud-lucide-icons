@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "徒步应用",
+    "户外活动",
+    "山区导航"
+  ],
   "name": "山",
   "tags": [
-    "攀登",
-    "远足",
-    "摇滚"
+    "山",
+    "山脉",
+    "登山",
+    "徒步",
+    "自然",
+    "户外"
   ],
   "categories": [
     "nature",
@@ -15,11 +22,18 @@
     "en": {
       "name": "mountain",
       "tags": [
-        "climb",
-        "hike",
-        "rock"
+        "mountain",
+        "mountains",
+        "climbing",
+        "hiking",
+        "nature",
+        "outdoors"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hiking app",
+        "Outdoor activity",
+        "Mountain navigation"
+      ]
     }
   }
 }

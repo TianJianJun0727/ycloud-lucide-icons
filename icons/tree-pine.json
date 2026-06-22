@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "国家公园网站",
+    "冬季运动应用",
+    "森林保护",
+    "户外休闲"
+  ],
   "name": "树松树",
   "tags": [
-    "树",
     "松树",
     "森林",
     "公园",
-    "自然"
+    "自然",
+    "针叶树",
+    "冬季"
   ],
   "categories": [
     "nature",
@@ -21,9 +27,16 @@
         "pine",
         "forest",
         "park",
-        "nature"
+        "nature",
+        "conifer",
+        "winter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "National park website",
+        "Winter sports app",
+        "Forest conservation",
+        "Outdoor recreation"
+      ]
     }
   }
 }

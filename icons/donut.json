@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外卖应用",
+    "烘焙坊网站",
+    "甜点菜单",
+    "咖啡馆图标"
+  ],
   "name": "甜甜圈",
   "tags": [
     "甜甜圈",
-    "洒",
-    "浇头",
-    "快餐",
-    "垃圾食品",
-    "小吃",
-    "对待",
-    "甜甜的",
-    "糖",
     "甜点",
-    "空心的",
-    "戒指"
+    "零食",
+    "糕点",
+    "小吃"
   ],
   "categories": [
     "food-beverage"
@@ -23,20 +21,19 @@
     "en": {
       "name": "donut",
       "tags": [
+        "donut",
         "doughnut",
-        "sprinkles",
-        "topping",
-        "fast food",
-        "junk food",
-        "snack",
-        "treat",
-        "sweet",
-        "sugar",
         "dessert",
-        "hollow",
-        "ring"
+        "snack",
+        "pastry",
+        "sweet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food delivery app",
+        "Bakery website",
+        "Dessert menu",
+        "Cafe icon"
+      ]
     }
   }
 }

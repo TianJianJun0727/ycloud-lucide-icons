@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收藏文档",
+    "书签文件",
+    "重要记录"
+  ],
   "name": "文件爱心",
   "tags": [
-    "心",
-    "最喜欢的",
+    "收藏",
+    "喜欢",
     "书签",
-    "快速链接"
+    "重要文件"
   ],
   "categories": [
     "files"
@@ -15,12 +19,16 @@
     "en": {
       "name": "file heart",
       "tags": [
-        "heart",
-        "favourite",
+        "favorite",
+        "like",
         "bookmark",
-        "quick link"
+        "important file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Favorited document",
+        "Bookmarked file",
+        "Important record"
+      ]
     }
   }
 }

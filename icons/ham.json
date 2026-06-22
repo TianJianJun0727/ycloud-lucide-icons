@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外卖应用",
+    "食谱食材",
+    "食品购物"
+  ],
   "name": "火腿",
   "tags": [
-    "食物",
+    "火腿",
+    "肉类",
+    "食品",
     "猪肉",
-    "猪",
-    "肉",
-    "骨",
-    "飞节",
-    "指关节",
-    "金门",
-    "治愈了"
+    "熟食"
   ],
   "categories": [
     "food-beverage"
@@ -20,17 +20,17 @@
     "en": {
       "name": "ham",
       "tags": [
+        "ham",
+        "meat",
         "food",
         "pork",
-        "pig",
-        "meat",
-        "bone",
-        "hock",
-        "knuckle",
-        "gammon",
-        "cured"
+        "deli"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food delivery apps",
+        "Recipe ingredients",
+        "Grocery shopping"
+      ]
     }
   }
 }

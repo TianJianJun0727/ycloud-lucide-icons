@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "加油站查找或导航应用",
+    "车辆仪表盘油量指示器",
+    "能源或资源管理界面"
+  ],
   "name": "燃料",
   "tags": [
-    "加油站",
-    "气体",
+    "燃料",
     "汽油",
-    "坦克"
+    "加油站",
+    "能源",
+    "油量"
   ],
   "categories": [
     "transportation",
@@ -16,12 +21,17 @@
     "en": {
       "name": "fuel",
       "tags": [
-        "filling-station",
-        "gas",
-        "petrol",
-        "tank"
+        "fuel",
+        "gasoline",
+        "gas-station",
+        "energy",
+        "fuel-level"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gas station finders or navigation apps",
+        "Vehicle dashboard fuel indicators",
+        "Energy or resource management interfaces"
+      ]
     }
   }
 }

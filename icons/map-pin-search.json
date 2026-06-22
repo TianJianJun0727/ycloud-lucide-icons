@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "搜索位置",
+    "查找地图地点",
+    "位置查询"
+  ],
   "name": "地图图钉搜索",
   "tags": [
     "位置",
+    "搜索",
+    "查找",
+    "定位",
     "导航",
-    "旅行",
-    "航路点",
-    "标记",
-    "掉落"
+    "查询"
   ],
   "categories": [
     "text",
@@ -21,13 +25,17 @@
       "name": "map pin search",
       "tags": [
         "location",
-        "navigation",
-        "travel",
-        "waypoint",
-        "marker",
-        "drop"
+        "search",
+        "find",
+        "locate",
+        "navigate",
+        "query"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search for location",
+        "Find place on map",
+        "Location lookup"
+      ]
     }
   }
 }

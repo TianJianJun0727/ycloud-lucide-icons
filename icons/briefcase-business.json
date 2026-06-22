@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "商务应用图标",
+    "工作管理界面",
+    "职业资料展示",
+    "办公工具入口"
+  ],
   "name": "公文包商务",
   "tags": [
+    "商务",
     "工作",
-    "包",
-    "行李",
-    "文件夹",
-    "投资组合"
+    "公文包",
+    "办公",
+    "职业"
   ],
   "categories": [
     "transportation"
@@ -16,13 +21,18 @@
     "en": {
       "name": "briefcase business",
       "tags": [
+        "business",
         "work",
-        "bag",
-        "baggage",
-        "folder",
-        "portfolio"
+        "briefcase",
+        "office",
+        "professional"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Business application icon",
+        "Work management interface",
+        "Professional profile display",
+        "Office tool entry"
+      ]
     }
   }
 }

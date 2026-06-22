@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "旅行预订",
+    "运输服务",
+    "航空应用",
+    "紧急车辆"
+  ],
   "name": "直升机",
   "tags": [
-    "运输",
-    "飞行",
-    "转子",
-    "航空",
-    "直升机停机坪",
-    "齿轮",
-    "传单",
-    "技术",
     "直升机",
-    "飞机",
+    "航空",
+    "飞行",
+    "运输",
+    "旅行",
     "车辆"
   ],
   "categories": [
@@ -23,19 +23,19 @@
     "en": {
       "name": "helicopter",
       "tags": [
-        "transport",
-        "flying",
-        "rotor",
-        "aviation",
-        "helipad",
-        "gear",
-        "flyer",
-        "technology",
         "helicopter",
-        "aircraft",
+        "aviation",
+        "flying",
+        "transport",
+        "travel",
         "vehicle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Travel booking",
+        "Transport service",
+        "Aviation app",
+        "Emergency vehicle"
+      ]
     }
   }
 }

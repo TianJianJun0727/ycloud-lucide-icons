@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "帮助聊天",
+    "线程中的问题",
+    "支持询问"
+  ],
   "name": "消息圆形问题标记",
   "tags": [
-    "评论",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "讲话泡泡",
-    "帮助"
+    "评论",
+    "帮助",
+    "疑问",
+    "询问",
+    "支持",
+    "问题"
   ],
   "categories": [
     "social"
@@ -26,15 +31,20 @@
     "en": {
       "name": "message circle question mark",
       "tags": [
-        "comment",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "help"
+        "comment",
+        "help",
+        "question",
+        "ask",
+        "support",
+        "inquiry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Help chat",
+        "Question in a thread",
+        "Support inquiry"
+      ]
     }
   }
 }

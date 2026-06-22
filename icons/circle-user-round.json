@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户头像",
+    "账户管理",
+    "联系人头像",
+    "登录用户图标"
+  ],
   "name": "圆形用户圆形",
   "tags": [
-    "人",
-    "帐户",
-    "联系方式"
+    "用户",
+    "账户",
+    "个人资料",
+    "联系人",
+    "头像"
   ],
   "categories": [
     "account"
@@ -22,11 +29,18 @@
     "en": {
       "name": "circle user round",
       "tags": [
-        "person",
+        "user",
         "account",
-        "contact"
+        "profile",
+        "contact",
+        "avatar"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile picture",
+        "Account management",
+        "Contact avatar",
+        "Login user icon"
+      ]
     }
   }
 }

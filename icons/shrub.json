@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "园艺或景观设计应用",
+    "自然与环境主题",
+    "公园或户外设施地图"
+  ],
   "name": "灌木",
   "tags": [
-    "森林",
-    "灌木丛",
-    "公园",
-    "自然"
+    "灌木",
+    "植物",
+    "绿化",
+    "园艺",
+    "自然",
+    "景观",
+    "公园"
   ],
   "categories": [
     "nature"
@@ -15,12 +22,19 @@
     "en": {
       "name": "shrub",
       "tags": [
-        "forest",
-        "undergrowth",
-        "park",
-        "nature"
+        "shrub",
+        "bush",
+        "plant",
+        "greenery",
+        "gardening",
+        "nature",
+        "landscape"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gardening or landscaping app",
+        "Nature and environment themes",
+        "Park or outdoor facility maps"
+      ]
     }
   }
 }

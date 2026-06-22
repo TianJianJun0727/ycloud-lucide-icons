@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多指标仪表板",
+    "比较分析视图"
+  ],
   "name": "图表无坐标轴组合",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "图",
-    "趋势上升"
+    "组合图",
+    "趋势"
   ],
   "categories": [
     "charts"
@@ -18,11 +21,14 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph",
-        "trending up"
+        "chart",
+        "combined chart",
+        "trend"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multi-metric dashboard",
+        "Comparative analysis view"
+      ]
     }
   }
 }

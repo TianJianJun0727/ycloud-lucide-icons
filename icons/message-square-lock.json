@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "私密或加密聊天",
+    "安全消息线程",
+    "机密反馈"
+  ],
   "name": "消息方形锁定",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
+    "私密",
+    "加密",
     "安全",
-    "加密的"
+    "消息",
+    "锁定",
+    "保密",
+    "聊天",
+    "保护"
   ],
   "categories": [
     "social"
@@ -19,16 +23,20 @@
     "en": {
       "name": "message square lock",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
+        "private",
+        "encrypted",
         "secure",
-        "encrypted"
+        "message",
+        "lock",
+        "confidential",
+        "chat",
+        "protected"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Private or encrypted chat",
+        "Secure message thread",
+        "Confidential feedback"
+      ]
     }
   }
 }

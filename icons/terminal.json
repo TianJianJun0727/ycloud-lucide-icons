@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "IDE终端面板",
+    "服务器命令界面",
+    "开发者工具仪表盘"
+  ],
   "name": "终端",
   "tags": [
-    "代码",
+    "终端",
     "命令行",
-    "提示",
-    "外壳"
+    "代码",
+    "开发",
+    "Shell"
   ],
   "categories": [
     "development"
@@ -15,12 +20,17 @@
     "en": {
       "name": "terminal",
       "tags": [
-        "code",
+        "terminal",
         "command line",
-        "prompt",
+        "code",
+        "development",
         "shell"
       ],
-      "use-cases": []
+      "use-cases": [
+        "IDE terminal panel",
+        "Server command interface",
+        "Developer tools dashboard"
+      ]
     }
   }
 }

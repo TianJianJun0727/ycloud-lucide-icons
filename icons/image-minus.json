@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "照片删除",
+    "图片库管理",
+    "移除选择",
+    "内容删除"
+  ],
   "name": "图片减少",
   "tags": [
-    "移除",
-    "删除"
+    "删除图片",
+    "移除照片",
+    "图片删除",
+    "取消选择"
   ],
   "categories": [
     "photography",
@@ -15,10 +22,17 @@
     "en": {
       "name": "image minus",
       "tags": [
-        "remove",
-        "delete"
+        "delete image",
+        "remove photo",
+        "image removal",
+        "deselect"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Photo deletion",
+        "Image gallery management",
+        "Remove selection",
+        "Content removal"
+      ]
     }
   }
 }

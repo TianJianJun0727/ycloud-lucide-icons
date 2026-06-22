@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移除文件操作",
+    "删除选项",
+    "文件管理"
+  ],
   "name": "文件减少角落",
   "tags": [
-    "文档"
+    "删除",
+    "移除",
+    "文件",
+    "角落",
+    "操作"
   ],
   "categories": [
     "files"
@@ -20,9 +28,17 @@
     "en": {
       "name": "file minus corner",
       "tags": [
-        "document"
+        "delete",
+        "remove",
+        "file",
+        "corner",
+        "action"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove file action",
+        "Delete option",
+        "File management"
+      ]
     }
   }
 }

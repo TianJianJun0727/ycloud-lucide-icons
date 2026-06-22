@@ -1,23 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档草稿或模板",
+    "未完成的代码仓库",
+    "剧本写作大纲",
+    "草稿的版本控制"
+  ],
   "name": "书籍虚线",
   "tags": [
+    "草稿",
+    "模板",
+    "未完成",
+    "脚本",
+    "写作",
     "代码",
-    "编码",
     "版本控制",
     "Git",
     "存储库",
-    "模板",
-    "草稿",
-    "脚本",
-    "剧本",
-    "写作",
-    "作家",
-    "作者",
-    "不成文的",
-    "未发表",
-    "不为人知的"
+    "大纲"
   ],
   "categories": [
     "development"
@@ -34,23 +34,23 @@
     "en": {
       "name": "book dashed",
       "tags": [
-        "code",
-        "coding",
-        "version control",
-        "git",
-        "repository",
-        "template",
         "draft",
+        "template",
+        "unfinished",
         "script",
-        "screenplay",
         "writing",
-        "writer",
-        "author",
-        "unwritten",
-        "unpublished",
-        "untold"
+        "code",
+        "version control",
+        "Git",
+        "repository",
+        "outline"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document draft or template",
+        "Unfinished code repository",
+        "Scriptwriting outline",
+        "Version control for drafts"
+      ]
     }
   }
 }

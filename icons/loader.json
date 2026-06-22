@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI元素加载指示器",
+    "文件上传进度",
+    "数据获取状态",
+    "应用初始化"
+  ],
   "name": "加载器",
   "tags": [
     "加载",
     "等待",
-    "忙",
-    "进展",
-    "旋转器",
-    "纺纱",
-    "悸动者"
+    "忙碌",
+    "进度",
+    "旋转",
+    "缓冲",
+    "处理中"
   ],
   "categories": [
     "cursors",
@@ -29,7 +34,12 @@
         "spinning",
         "throbber"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Loading indicator for UI elements",
+        "File upload progress",
+        "Data fetching state",
+        "Application initialization"
+      ]
     }
   }
 }

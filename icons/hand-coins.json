@@ -1,22 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "支付处理",
+    "金融交易",
+    "转账应用"
+  ],
   "name": "手硬币",
   "tags": [
-    "储蓄",
-    "银行业",
-    "钱",
+    "硬币",
+    "金钱",
+    "支付",
     "金融",
-    "优惠",
-    "抵押贷款",
-    "付款",
-    "收到",
-    "工资",
-    "工资单",
-    "津贴",
-    "零用钱",
-    "讲义",
-    "便士"
+    "交易"
   ],
   "categories": [
     "finance",
@@ -26,22 +21,17 @@
     "en": {
       "name": "hand coins",
       "tags": [
-        "savings",
-        "banking",
+        "coins",
         "money",
-        "finance",
-        "offers",
-        "mortgage",
         "payment",
-        "received",
-        "wage",
-        "payroll",
-        "allowance",
-        "pocket money",
-        "handout",
-        "pennies"
+        "finance",
+        "transaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Payment processing",
+        "Financial transactions",
+        "Money transfer apps"
+      ]
     }
   }
 }

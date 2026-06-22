@@ -1,25 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "使用 AI 生成摘要",
-    "总结较长的邮件会话",
-    "将会议转录内容转换为摘要",
-    "总结文章"
+    "AI生成摘要",
+    "邮件线程摘要",
+    "会议记录摘要",
+    "文章摘要"
   ],
   "name": "摘要",
   "tags": [
-    "简要",
     "摘要",
-    "概要",
-    "报告",
-    "摘要",
-    "概要",
-    "回顾",
-    "凝结",
     "总结",
-    "AI",
-    "文本",
-    "概述"
+    "概要",
+    "概述",
+    "AI摘要",
+    "文本摘要"
   ],
   "categories": [
     "text"
@@ -28,24 +22,18 @@
     "en": {
       "name": "summary",
       "tags": [
-        "brief",
+        "summary",
         "abstract",
         "synopsis",
-        "report",
-        "digest",
-        "outline",
-        "recap",
-        "condensation",
-        "summary",
-        "ai",
-        "text",
-        "overview"
+        "overview",
+        "AI summary",
+        "text summary"
       ],
       "use-cases": [
-        "summarizing with ai",
-        "summarizing long email threads",
-        "turning meeting transcripts into summaries",
-        "summarizing articles"
+        "AI-generated summaries",
+        "Email thread summarization",
+        "Meeting transcript summaries",
+        "Article summarization"
       ]
     }
   }

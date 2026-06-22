@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "引用消息",
+    "聊天中的块引用",
+    "引用之前的评论"
+  ],
   "name": "消息方形引用",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
-    "块引用",
-    "报价",
-    "缩进",
+    "引用",
     "回复",
-    "反应"
+    "消息",
+    "块引用",
+    "聊天",
+    "引述",
+    "文本",
+    "标注"
   ],
   "categories": [
     "social",
@@ -23,19 +24,20 @@
     "en": {
       "name": "message square quote",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "blockquote",
-        "quotation",
-        "indent",
+        "quote",
         "reply",
-        "response"
+        "message",
+        "blockquote",
+        "chat",
+        "citation",
+        "text",
+        "reference"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Quoting a message",
+        "Block quote in chat",
+        "Referencing previous comment"
+      ]
     }
   }
 }

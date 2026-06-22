@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "隐私模式指示器",
+    "内容隐藏切换",
+    "安全功能控件",
+    "不可见状态"
+  ],
   "name": "眼睛关闭",
   "tags": [
-    "查看",
-    "手表",
-    "看到",
+    "眼睛关闭",
     "隐藏",
-    "隐藏",
-    "面具",
-    "隐藏的",
-    "能见度",
-    "愿景"
+    "不可见",
+    "隐私",
+    "安全",
+    "屏蔽"
   ],
   "categories": [
     "accessibility",
@@ -23,17 +25,19 @@
     "en": {
       "name": "eye closed",
       "tags": [
-        "view",
-        "watch",
-        "see",
+        "eye closed",
         "hide",
-        "conceal",
-        "mask",
-        "hidden",
-        "visibility",
-        "vision"
+        "invisible",
+        "privacy",
+        "security",
+        "block"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Privacy mode indicators",
+        "Content hiding toggles",
+        "Security feature controls",
+        "Visibility off states"
+      ]
     }
   }
 }

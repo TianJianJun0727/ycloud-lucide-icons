@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "欧元折扣徽章",
+    "欧洲价格标签",
+    "欧元区购物促销"
+  ],
   "name": "徽章欧元",
   "tags": [
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
+    "优惠",
+    "价格",
+    "欧元",
+    "促销",
     "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
-    "欧元"
+    "购物",
+    "交易"
   ],
   "categories": [
     "shopping",
@@ -27,19 +26,18 @@
       "tags": [
         "discount",
         "offer",
+        "price",
+        "euro",
         "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
         "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
-        "€"
+        "shopping",
+        "transaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Discount badge with euro symbol",
+        "European price tag",
+        "Eurozone shopping promotion"
+      ]
     }
   }
 }

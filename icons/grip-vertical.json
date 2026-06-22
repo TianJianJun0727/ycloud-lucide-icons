@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "垂直调整手柄",
+    "滚动条抓柄",
+    "UI拖拽控制"
+  ],
   "name": "握柄垂直",
   "tags": [
-    "抢",
-    "点",
+    "拖拽",
     "手柄",
     "移动",
-    "拖动"
+    "调整",
+    "控制点"
   ],
   "categories": [
     "layout"
@@ -16,13 +20,17 @@
     "en": {
       "name": "grip vertical",
       "tags": [
-        "grab",
-        "dots",
+        "drag",
         "handle",
         "move",
-        "drag"
+        "adjust",
+        "control points"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertical resize handles",
+        "Scrollbar grips",
+        "UI dragging controls"
+      ]
     }
   }
 }

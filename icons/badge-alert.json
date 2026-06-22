@@ -1,14 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "安全警告系统",
+    "验证状态显示",
+    "账户安全警报",
+    "通知徽章"
+  ],
   "name": "徽章告警",
   "tags": [
-    "勾选",
-    "已验证",
-    "未经验证",
-    "安全",
-    "安全",
-    "问题"
+    "徽章警告",
+    "安全提示",
+    "验证状态",
+    "安全问题",
+    "通知",
+    "警报",
+    "身份验证",
+    "状态指示"
   ],
   "categories": [
     "account",
@@ -18,14 +25,21 @@
     "en": {
       "name": "badge alert",
       "tags": [
-        "check",
-        "verified",
-        "unverified",
-        "security",
-        "safety",
-        "issue"
+        "badge alert",
+        "security warning",
+        "verification status",
+        "security issue",
+        "notification",
+        "alert",
+        "authentication",
+        "status indicator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Security warning systems",
+        "Verification status displays",
+        "Account security alerts",
+        "Notification badges"
+      ]
     }
   }
 }

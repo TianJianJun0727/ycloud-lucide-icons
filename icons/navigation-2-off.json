@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭定位服务开关",
+    "地图中GPS关闭状态",
+    "隐私模式指示器"
+  ],
   "name": "导航2关闭",
   "tags": [
-    "位置",
-    "旅行"
+    "导航关闭",
+    "定位禁用",
+    "GPS关闭",
+    "位置服务禁用",
+    "旅行",
+    "方向"
   ],
   "categories": [
     "navigation"
@@ -13,10 +21,18 @@
     "en": {
       "name": "navigation 2 off",
       "tags": [
-        "location",
-        "travel"
+        "navigation off",
+        "location disabled",
+        "GPS off",
+        "positioning disabled",
+        "travel",
+        "direction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable location services toggle",
+        "GPS off state in maps",
+        "Privacy mode indicator"
+      ]
     }
   }
 }

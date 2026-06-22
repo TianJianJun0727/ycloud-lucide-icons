@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI中的特效高亮",
+    "游戏视觉反馈",
+    "晴朗夜晚的天气表示",
+    "多媒体闪烁或闪光叠加"
+  ],
   "name": "闪光",
   "tags": [
     "星星",
-    "效果",
-    "筛选",
-    "晚上",
-    "魔法"
+    "特效",
+    "闪光",
+    "魔法",
+    "夜晚",
+    "滤镜",
+    "装饰",
+    "璀璨"
   ],
   "categories": [
     "cursors",
@@ -29,11 +37,19 @@
       "tags": [
         "stars",
         "effect",
-        "filter",
+        "sparkle",
+        "magic",
         "night",
-        "magic"
+        "filter",
+        "decoration",
+        "glitter"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Highlighting special effects in UI",
+        "Gaming visual feedback",
+        "Weather representation for clear nights",
+        "Multimedia glitter or sparkle overlay"
+      ]
     }
   }
 }

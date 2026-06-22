@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "将对象向左移动",
+    "导航到上一页",
+    "地图上的西方",
+    "媒体快退"
+  ],
   "name": "移动左",
   "tags": [
     "箭头",
     "方向",
+    "向左",
+    "移动",
+    "西",
     "返回",
-    "西"
+    "后退"
   ],
   "categories": [
     "arrows"
@@ -17,10 +25,18 @@
       "tags": [
         "arrow",
         "direction",
+        "left",
+        "move",
+        "west",
         "back",
-        "west"
+        "previous"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Move object left",
+        "Navigate to previous page",
+        "West direction on map",
+        "Rewind media"
+      ]
     }
   }
 }

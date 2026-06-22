@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "能源或公用事业公司网站",
+    "基础设施地图",
+    "户外或施工规划",
+    "服务中断警报"
+  ],
   "name": "公用设施杆",
   "tags": [
-    "电力",
-    "能量",
-    "传输线",
     "电线杆",
-    "电源线",
-    "电话"
+    "电力",
+    "能源",
+    "输电",
+    "基础设施",
+    "公用事业"
   ],
   "categories": [
     "buildings",
@@ -20,13 +25,19 @@
       "name": "utility pole",
       "tags": [
         "electricity",
-        "energy",
-        "transmission line",
+        "power",
+        "transmission",
         "telegraph pole",
         "power lines",
-        "phone"
+        "infrastructure",
+        "utility"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Energy or utility company website",
+        "Infrastructure mapping",
+        "Outdoor or construction planning",
+        "Service outage alerts"
+      ]
     }
   }
 }

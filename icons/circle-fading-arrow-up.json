@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "升级按钮",
+    "上传进度",
+    "改进指示器"
+  ],
   "name": "圆形淡出箭头上",
   "tags": [
-    "北",
-    "向上",
+    "向上箭头",
     "升级",
-    "改善",
-    "圆形",
-    "按钮"
+    "提升",
+    "上传",
+    "开发"
   ],
   "categories": [
     "arrows",
@@ -18,14 +21,17 @@
     "en": {
       "name": "circle fading arrow up",
       "tags": [
-        "north",
-        "up",
+        "up arrow",
         "upgrade",
         "improve",
-        "circle",
-        "button"
+        "upload",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Upgrade button",
+        "Upload progress",
+        "Improvement indicator"
+      ]
     }
   }
 }

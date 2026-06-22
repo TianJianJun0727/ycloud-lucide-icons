@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图界面缩放控制",
+    "图片编辑器缩小工具",
+    "文档查看器缩小功能"
+  ],
   "name": "缩放外部",
   "tags": [
+    "缩小",
+    "缩放",
     "放大镜",
-    "加号"
+    "减号",
+    "全局视图",
+    "概览",
+    "退出放大"
   ],
   "categories": [
     "accessibility",
@@ -17,10 +26,18 @@
     "en": {
       "name": "zoom out",
       "tags": [
+        "zoom",
         "magnifying glass",
-        "plus"
+        "minus",
+        "reduce",
+        "overview",
+        "exit zoom"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Map interface zoom control",
+        "Image editor reduction tool",
+        "Document viewer zoom out feature"
+      ]
     }
   }
 }

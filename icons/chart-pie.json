@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据分布可视化",
+    "市场份额分析"
+  ],
   "name": "图表饼图",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "演示"
+    "饼图",
+    "占比"
   ],
   "categories": [
     "charts",
@@ -26,10 +30,14 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "presentation"
+        "chart",
+        "pie chart",
+        "percentage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data distribution visualization",
+        "Market share analysis"
+      ]
     }
   }
 }

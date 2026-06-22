@@ -1,11 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "育儿应用",
+    "儿童安全功能",
+    "家庭服务",
+    "婴儿护理产品"
+  ],
   "name": "婴儿",
   "tags": [
-    "孩子",
-    "儿童防护",
-    "儿童"
+    "婴儿",
+    "儿童",
+    "育儿",
+    "家庭",
+    "照顾",
+    "安全",
+    "幼儿",
+    "亲子"
   ],
   "categories": [
     "accessibility",
@@ -15,11 +25,21 @@
     "en": {
       "name": "baby",
       "tags": [
+        "baby",
         "child",
-        "childproof",
-        "children"
+        "parenting",
+        "family",
+        "care",
+        "safety",
+        "toddler",
+        "parent-child"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Parenting applications",
+        "Child safety features",
+        "Family services",
+        "Baby care products"
+      ]
     }
   }
 }

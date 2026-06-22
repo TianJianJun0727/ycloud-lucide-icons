@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "沙拉相关的食物或食谱应用",
+    "健康饮食或素食生活方式功能",
+    "杂货店农产品区"
+  ],
   "name": "绿叶绿色",
   "tags": [
+    "绿叶",
+    "蔬菜",
     "沙拉",
     "生菜",
-    "蔬菜",
-    "甜菜",
-    "卷心菜",
-    "白菜"
+    "健康饮食",
+    "素食"
   ],
   "categories": [
     "food-beverage",
@@ -19,14 +23,18 @@
     "en": {
       "name": "leafy green",
       "tags": [
+        "leafy green",
+        "vegetable",
         "salad",
         "lettuce",
-        "vegetable",
-        "chard",
-        "cabbage",
-        "bok choy"
+        "healthy eating",
+        "vegan"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food or recipe app for salads",
+        "Healthy eating or vegan lifestyle feature",
+        "Grocery store produce section"
+      ]
     }
   }
 }

@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图表标注",
+    "设计元素",
+    "导航标记",
+    "视觉指南"
+  ],
   "name": "三角形虚线",
   "tags": [
-    "等边的",
-    "三角洲",
+    "虚线三角形",
     "形状",
-    "金字塔",
-    "等级制度",
-    "虚线"
+    "几何",
+    "指示",
+    "标记"
   ],
   "categories": [
     "shapes"
@@ -17,14 +21,18 @@
     "en": {
       "name": "triangle dashed",
       "tags": [
-        "equilateral",
-        "delta",
+        "dashed",
+        "triangle",
         "shape",
-        "pyramid",
-        "hierarchy",
-        "dashed"
+        "geometry",
+        "indicator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Diagram annotation",
+        "Design element",
+        "Navigation marker",
+        "Visual guide"
+      ]
     }
   }
 }

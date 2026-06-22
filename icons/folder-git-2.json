@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git仓库文件夹",
+    "版本控制目录",
+    "代码库位置"
+  ],
   "name": "文件夹Git2",
   "tags": [
-    "目录",
-    "根",
-    "项目",
     "Git",
-    "回购协议"
+    "版本控制",
+    "仓库",
+    "代码库",
+    "源代码管理"
   ],
   "categories": [
     "files"
@@ -16,13 +20,17 @@
     "en": {
       "name": "folder git 2",
       "tags": [
-        "directory",
-        "root",
-        "project",
         "git",
-        "repo"
+        "version control",
+        "repository",
+        "codebase",
+        "source control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git repository folder",
+        "Version control directory",
+        "Codebase location"
+      ]
     }
   }
 }

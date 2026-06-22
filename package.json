@@ -33,6 +33,7 @@
     "sync:package-versions": "node ./scripts/syncPackageVersions.mts",
     "generate:sponsors": "node scripts/updateSponsors.mts",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
+    "polish:tags": "node ./scripts/polishIconTagsByCategory.mts",
     "suggest:metadata": "node ./scripts/suggestMetaData.mts",
     "suggest:metadata:watch": "node --env-file .env --watch ./scripts/suggestMetaData.mts",
     "postinstall": "husky install",

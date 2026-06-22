@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "无麸质饮食筛选器",
+    "过敏原警告指示器",
+    "食物偏好设置",
+    "成分排除开关"
+  ],
   "name": "小麦关闭",
   "tags": [
-    "玉米",
-    "谷物",
-    "谷物",
+    "小麦",
+    "禁用",
     "无麸质",
     "过敏",
-    "不宽容",
-    "饮食"
+    "饮食限制",
+    "谷物",
+    "不含"
   ],
   "categories": [
     "food-beverage"
@@ -18,15 +23,20 @@
     "en": {
       "name": "wheat off",
       "tags": [
-        "corn",
-        "cereal",
-        "grain",
-        "gluten free",
+        "wheat",
+        "disabled",
+        "gluten-free",
         "allergy",
-        "intolerance",
-        "diet"
+        "dietary restriction",
+        "grain",
+        "excluded"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gluten-free diet filter",
+        "Allergen warning indicator",
+        "Food preference settings",
+        "Ingredient exclusion toggle"
+      ]
     }
   }
 }

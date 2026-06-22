@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "财务分析",
+    "市场波动",
+    "风险评估",
+    "数据监控"
+  ],
   "name": "趋势上下",
   "tags": [
-    "箭头",
-    "估计的",
-    "不确定的",
+    "波动趋势",
     "数据波动",
-    "不确定的",
+    "不确定性",
     "预测",
-    "变量",
-    "预测",
-    "动态",
-    "易挥发的"
+    "变量"
   ],
   "categories": [
     "charts",
@@ -22,18 +22,18 @@
     "en": {
       "name": "trending up down",
       "tags": [
-        "arrows",
-        "estimated",
-        "indeterminate",
-        "data fluctuation",
-        "uncertain",
+        "trending",
+        "fluctuation",
+        "uncertainty",
         "forecast",
-        "variable",
-        "prediction",
-        "dynamic",
-        "volatile"
+        "variable"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Financial analysis",
+        "Market volatility",
+        "Risk assessment",
+        "Data monitoring"
+      ]
     }
   }
 }

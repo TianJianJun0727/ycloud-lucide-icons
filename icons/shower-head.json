@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "浴室或酒店设施部分",
+    "管道服务",
+    "健康或水疗功能"
+  ],
   "name": "淋浴头部",
   "tags": [
+    "淋浴头",
     "淋浴",
     "洗澡",
     "浴室",
-    "便利设施",
-    "服务"
+    "卫浴",
+    "酒店设施",
+    "水"
   ],
   "categories": [
     "home",
@@ -17,13 +23,19 @@
     "en": {
       "name": "shower head",
       "tags": [
+        "showerhead",
         "shower",
         "bath",
         "bathroom",
-        "amenities",
-        "services"
+        "plumbing",
+        "hotel amenities",
+        "water"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bathroom or hotel amenities section",
+        "Plumbing services",
+        "Wellness or spa features"
+      ]
     }
   }
 }

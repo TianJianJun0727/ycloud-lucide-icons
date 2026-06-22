@@ -1,22 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "表示服务或维护模式已禁用",
-    "用于关闭服务或维护模式的按钮或开关"
+    "表示设置或维护功能已禁用",
+    "账户或服务停用状态",
+    "工具功能关闭的开关"
   ],
   "name": "扳手关闭",
   "tags": [
-    "帐户",
-    "设置",
-    "扳手",
-    "DIY",
-    "工具箱",
-    "建造",
-    "建筑",
-    "关闭",
-    "服务",
-    "维护",
-    "残疾人"
+    "设置禁用",
+    "维护关闭",
+    "工具不可用",
+    "账户锁定",
+    "停用"
   ],
   "categories": [
     "account",
@@ -27,21 +22,16 @@
     "en": {
       "name": "wrench off",
       "tags": [
-        "account",
-        "settings",
-        "spanner",
-        "diy",
-        "toolbox",
-        "build",
-        "construction",
-        "off",
-        "service",
-        "maintenance",
-        "disabled"
+        "settings disabled",
+        "maintenance off",
+        "tool unavailable",
+        "account locked",
+        "deactivated"
       ],
       "use-cases": [
-        "Indicates that a service or maintenance mode is disabled",
-        "Used on a button or toggle to turn service/maintenance mode off"
+        "Indicates settings or maintenance features are disabled",
+        "Account or service deactivated state",
+        "Toggle for turning tool functionality off"
       ]
     }
   }

@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "货币选择",
+    "支付方式",
+    "英国价格显示",
+    "金融应用"
+  ],
   "name": "圆形英镑英镑",
   "tags": [
-    "货币化",
-    "硬币",
-    "便士",
-    "营销",
-    "货币",
-    "钱",
-    "付款",
-    "英国人",
     "英镑",
-    "英镑"
+    "货币",
+    "金钱",
+    "支付",
+    "英国货币",
+    "GBP"
   ],
   "categories": [
     "finance"
@@ -21,18 +22,19 @@
     "en": {
       "name": "circle pound sterling",
       "tags": [
-        "monetization",
-        "coin",
-        "penny",
-        "marketing",
+        "pound",
         "currency",
         "money",
         "payment",
-        "british",
-        "gbp",
-        "£"
+        "british currency",
+        "GBP"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Currency selection",
+        "Payment methods",
+        "UK pricing display",
+        "Financial applications"
+      ]
     }
   }
 }

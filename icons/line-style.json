@@ -1,13 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "边框样式",
+    "设计工具",
+    "界面定制",
+    "线条格式"
+  ],
   "name": "线条样式",
   "tags": [
     "线条",
-    "中风",
-    "风格",
+    "样式",
     "虚线",
-    "边框"
+    "边框",
+    "描边",
+    "设计",
+    "工具"
   ],
   "categories": [
     "design",
@@ -18,12 +25,19 @@
       "name": "line style",
       "tags": [
         "line",
-        "stroke",
         "style",
         "dashed",
-        "border"
+        "border",
+        "stroke",
+        "design",
+        "tools"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Border styling",
+        "Design tools",
+        "UI customization",
+        "Line formatting"
+      ]
     }
   }
 }

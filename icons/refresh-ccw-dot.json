@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码仓库同步状态",
+    "数据重新获取",
+    "问题列表刷新",
+    "开发环境更新"
+  ],
   "name": "刷新逆时针点",
   "tags": [
-    "箭头",
-    "旋转",
+    "刷新",
     "重新加载",
     "同步",
-    "同步",
-    "圆形",
     "循环",
-    "问题",
-    "代码",
-    "编码",
-    "版本控制"
+    "代码更新",
+    "版本控制",
+    "问题重试"
   ],
   "categories": [
     "arrows",
@@ -23,19 +24,20 @@
     "en": {
       "name": "refresh ccw dot",
       "tags": [
-        "arrows",
-        "rotate",
+        "refresh",
         "reload",
-        "synchronise",
-        "synchronize",
-        "circular",
+        "sync",
         "cycle",
-        "issue",
-        "code",
-        "coding",
-        "version control"
+        "code update",
+        "version control",
+        "issue retry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code repository sync status",
+        "Data refetch",
+        "Issue list refresh",
+        "Development environment update"
+      ]
     }
   }
 }

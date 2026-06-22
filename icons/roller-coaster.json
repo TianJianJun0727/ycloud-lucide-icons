@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游乐园导航图标",
+    "娱乐设施标识",
+    "旅游景点过山车提示"
+  ],
   "name": "滚筒杯垫",
   "tags": [
-    "景点",
-    "娱乐",
+    "过山车",
     "游乐园",
+    "娱乐设施",
     "主题公园",
-    "游乐场"
+    "刺激"
   ],
   "categories": [
     "navigation"
@@ -16,13 +20,17 @@
     "en": {
       "name": "roller coaster",
       "tags": [
-        "attraction",
-        "entertainment",
+        "roller coaster",
         "amusement park",
+        "entertainment",
         "theme park",
-        "funfair"
+        "thrill"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Amusement park navigation icon",
+        "Entertainment facility marker",
+        "Tourist attraction roller coaster indicator"
+      ]
     }
   }
 }

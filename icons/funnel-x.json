@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "移除筛选条件",
+    "关闭过滤器",
+    "清除筛选"
+  ],
   "name": "漏斗关闭",
   "tags": [
     "筛选",
-    "料斗",
     "移除",
-    "删除"
+    "删除",
+    "关闭",
+    "清除"
   ],
   "categories": [
     "layout"
@@ -24,11 +29,16 @@
       "name": "funnel X",
       "tags": [
         "filter",
-        "hopper",
         "remove",
-        "delete"
+        "delete",
+        "close",
+        "clear"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove filter condition",
+        "Close filter",
+        "Clear filter"
+      ]
     }
   }
 }

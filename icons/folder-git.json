@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git仓库文件夹",
+    "带Git的项目目录",
+    "版本控制文件夹"
+  ],
   "name": "文件夹Git",
   "tags": [
     "目录",
-    "根",
     "项目",
     "Git",
-    "回购协议"
+    "仓库",
+    "版本控制",
+    "代码"
   ],
   "categories": [
     "files"
@@ -17,12 +22,17 @@
       "name": "folder git",
       "tags": [
         "directory",
-        "root",
         "project",
         "git",
-        "repo"
+        "repo",
+        "version control",
+        "code"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git repository folder",
+        "Project directory with Git",
+        "Version controlled folder"
+      ]
     }
   }
 }

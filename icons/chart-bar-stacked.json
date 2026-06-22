@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "比较部分与整体",
+    "多变量数据显示",
+    "类别构成"
+  ],
   "name": "图表条形堆叠",
   "tags": [
-    "统计",
-    "分析",
+    "堆叠柱状图",
     "图表",
-    "图",
-    "多变量",
-    "绝对的",
-    "比较"
+    "多数据",
+    "比较",
+    "组成"
   ],
   "categories": [
     "charts"
@@ -18,15 +20,17 @@
     "en": {
       "name": "chart bar stacked",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
+        "stacked bar chart",
+        "chart",
         "multivariate",
-        "categorical",
-        "comparison"
+        "comparison",
+        "composition"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Compare part-to-whole",
+        "Multivariate data display",
+        "Category composition"
+      ]
     }
   }
 }

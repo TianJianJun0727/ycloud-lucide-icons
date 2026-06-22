@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "水平面板展开",
+    "侧边栏控制",
+    "布局调整"
+  ],
   "name": "展开水平",
   "tags": [
+    "水平展开",
+    "折叠",
+    "布局",
     "箭头",
-    "折叠",
-    "折叠",
-    "垂直",
-    "虚线"
+    "扩展"
   ],
   "categories": [
     "arrows",
@@ -17,13 +21,17 @@
     "en": {
       "name": "unfold horizontal",
       "tags": [
-        "arrow",
+        "horizontal unfold",
         "collapse",
-        "fold",
-        "vertical",
-        "dashed"
+        "layout",
+        "arrow",
+        "expand"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Horizontal panel expansion",
+        "Sidebar control",
+        "Layout adjustment"
+      ]
     }
   }
 }

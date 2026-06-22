@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "社交媒体反应按钮",
+    "即时通讯应用贴纸包",
+    "用户反馈或评分系统"
+  ],
   "name": "贴纸",
   "tags": [
+    "贴纸",
+    "表情",
     "反应",
-    "情感",
-    "微笑",
-    "快乐",
-    "反馈"
+    "社交",
+    "趣味",
+    "装饰",
+    "聊天"
   ],
   "categories": [
     "social"
@@ -16,13 +22,19 @@
     "en": {
       "name": "sticker",
       "tags": [
+        "sticker",
+        "emoji",
         "reaction",
-        "emotion",
-        "smile",
-        "happy",
-        "feedback"
+        "social",
+        "fun",
+        "decorative",
+        "chat"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Social media reaction button",
+        "Messaging app sticker pack",
+        "User feedback or rating system"
+      ]
     }
   }
 }

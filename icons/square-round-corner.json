@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI设计工具",
+    "边框样式选择器",
+    "布局编辑器",
+    "CSS属性显示"
+  ],
   "name": "方形圆形角落",
   "tags": [
+    "圆角",
     "边框",
-    "半径",
-    "风格",
     "设计",
-    "角落",
-    "布局",
-    "圆形",
-    "圆形的"
+    "样式",
+    "矩形",
+    "UI",
+    "角半径",
+    "界面"
   ],
   "categories": [
     "design",
@@ -21,16 +26,21 @@
     "en": {
       "name": "square round corner",
       "tags": [
+        "rounded",
         "border",
-        "radius",
-        "style",
         "design",
-        "corner",
-        "layout",
-        "round",
-        "rounded"
+        "style",
+        "rectangle",
+        "UI",
+        "corner radius",
+        "interface"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI design tool",
+        "Border style selector",
+        "Layout editor",
+        "CSS property display"
+      ]
     }
   }
 }

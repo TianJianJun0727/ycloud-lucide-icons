@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "徒步或步行路线地图",
+    "健身应用中的步数跟踪",
+    "导航和路径指示"
+  ],
   "name": "足迹",
   "tags": [
-    "步骤",
+    "足迹",
+    "脚印",
     "步行",
-    "脚",
-    "脚",
     "踪迹",
-    "鞋"
+    "导航"
   ],
   "categories": [
     "navigation"
@@ -17,14 +20,17 @@
     "en": {
       "name": "footprints",
       "tags": [
-        "steps",
+        "footprints",
+        "footsteps",
         "walking",
-        "foot",
-        "feet",
         "trail",
-        "shoe"
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hiking or walking trail maps",
+        "Step tracking in fitness apps",
+        "Navigation and path indicators"
+      ]
     }
   }
 }

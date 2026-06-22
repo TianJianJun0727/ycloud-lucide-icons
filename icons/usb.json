@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备连接状态",
+    "USB接口指示",
+    "外设设备管理"
+  ],
   "name": "USB接口",
   "tags": [
-    "通用的",
-    "连续剧",
-    "巴士",
-    "控制器",
+    "USB",
+    "接口",
     "连接器",
-    "接口"
+    "数据传输",
+    "外接设备"
   ],
   "categories": [
     "devices",
@@ -19,14 +22,17 @@
     "en": {
       "name": "usb",
       "tags": [
-        "universal",
-        "serial",
-        "bus",
-        "controller",
+        "USB",
+        "interface",
         "connector",
-        "interface"
+        "data transfer",
+        "peripheral device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device connection status",
+        "USB port indicator",
+        "Peripheral device management"
+      ]
     }
   }
 }

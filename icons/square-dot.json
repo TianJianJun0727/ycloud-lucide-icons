@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "已修改文件的Git状态指示器",
+    "版本控制UI",
+    "变更或差异标记"
+  ],
   "name": "方形点",
   "tags": [
     "Git",
-    "差异",
-    "修改过的",
-    "。"
+    "修改状态",
+    "版本控制",
+    "方形点",
+    "变更指示"
   ],
   "categories": [
     "development"
@@ -23,12 +28,17 @@
     "en": {
       "name": "square dot",
       "tags": [
-        "git",
-        "diff",
-        "modified",
-        "."
+        "Git",
+        "modified status",
+        "version control",
+        "square dot",
+        "change indicator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git status indicator for modified files",
+        "Version control UI",
+        "Change or diff marker"
+      ]
     }
   }
 }

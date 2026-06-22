@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "股票市场仪表板",
+    "销售报告",
+    "性能指标",
+    "数据可视化"
+  ],
   "name": "趋势下",
   "tags": [
+    "下降趋势",
+    "下跌",
+    "图表",
+    "数据分析",
     "统计"
   ],
   "categories": [
@@ -13,9 +22,18 @@
     "en": {
       "name": "trending down",
       "tags": [
+        "trending",
+        "down",
+        "chart",
+        "data analysis",
         "statistics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Stock market dashboard",
+        "Sales report",
+        "Performance metrics",
+        "Data visualization"
+      ]
     }
   }
 }

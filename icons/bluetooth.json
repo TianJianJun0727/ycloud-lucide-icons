@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换蓝牙开关",
+    "表示通用的无线连接功能"
+  ],
   "name": "蓝牙",
   "tags": [
-    "无线"
+    "蓝牙",
+    "无线",
+    "连接",
+    "配对",
+    "设备",
+    "传输"
   ],
   "categories": [
     "connectivity",
@@ -13,9 +21,17 @@
     "en": {
       "name": "bluetooth",
       "tags": [
-        "wireless"
+        "bluetooth",
+        "wireless",
+        "connectivity",
+        "pairing",
+        "device",
+        "transfer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle Bluetooth on/off",
+        "Represent general wireless connectivity features"
+      ]
     }
   }
 }

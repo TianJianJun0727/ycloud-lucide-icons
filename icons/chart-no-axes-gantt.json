@@ -1,25 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "项目时间线可视化",
+    "任务调度界面"
+  ],
   "name": "图表无坐标轴甘特图",
   "tags": [
-    "项目",
-    "管理",
-    "概述",
-    "路线图",
-    "计划",
-    "意图",
+    "项目管理",
     "时间线",
-    "截止日期",
-    "日期",
-    "事件",
-    "范围",
-    "期间",
-    "生产力",
-    "工作",
-    "敏捷的",
-    "代码",
-    "编码"
+    "甘特图",
+    "进度",
+    "计划"
   ],
   "categories": [
     "charts",
@@ -39,25 +30,16 @@
     "en": {
       "name": "chart no axes gantt",
       "tags": [
-        "projects",
-        "manage",
-        "overview",
-        "roadmap",
-        "plan",
-        "intentions",
+        "project management",
         "timeline",
-        "deadline",
-        "date",
-        "event",
-        "range",
-        "period",
-        "productivity",
-        "work",
-        "agile",
-        "code",
-        "coding"
+        "gantt chart",
+        "progress",
+        "planning"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Project timeline visualization",
+        "Task scheduling interface"
+      ]
     }
   }
 }

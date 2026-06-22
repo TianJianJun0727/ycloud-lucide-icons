@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑器重做操作",
+    "表单操作恢复",
+    "步骤历史前进"
+  ],
   "name": "重做",
   "tags": [
-    "撤销",
-    "重新运行",
-    "历史"
+    "重做",
+    "恢复",
+    "前进",
+    "历史操作",
+    "撤销重做"
   ],
   "categories": [
     "text",
@@ -15,11 +21,17 @@
     "en": {
       "name": "redo",
       "tags": [
-        "undo",
-        "rerun",
-        "history"
+        "redo",
+        "restore",
+        "forward",
+        "history action",
+        "undo redo"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Editor redo action",
+        "Form action restoration",
+        "Step history forward"
+      ]
     }
   }
 }

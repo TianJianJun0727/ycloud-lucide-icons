@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "部分评分",
+    "半星评价",
+    "未完成收藏",
+    "中等分数"
+  ],
   "name": "星标一半",
   "tags": [
-    "书签",
+    "星标",
+    "一半",
+    "评分",
     "收藏",
-    "喜欢",
-    "评论",
+    "部分",
     "评级"
   ],
   "categories": [
@@ -17,13 +23,19 @@
     "en": {
       "name": "star half",
       "tags": [
-        "bookmark",
+        "star",
+        "half",
+        "rating",
         "favorite",
-        "like",
-        "review",
-        "rating"
+        "partial",
+        "review"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Partial rating",
+        "Half-star review",
+        "Incomplete favorite",
+        "Mid-level score"
+      ]
     }
   }
 }

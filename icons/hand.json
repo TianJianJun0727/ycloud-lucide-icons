@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "光标状态",
+    "无障碍功能",
+    "交互元素"
+  ],
   "name": "手",
   "tags": [
-    "波",
+    "手",
+    "光标",
     "移动",
-    "鼠标",
-    "抢"
+    "交互",
+    "无障碍"
   ],
   "categories": [
     "cursors",
@@ -16,12 +21,17 @@
     "en": {
       "name": "hand",
       "tags": [
-        "wave",
+        "hand",
+        "cursor",
         "move",
-        "mouse",
-        "grab"
+        "interaction",
+        "accessibility"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cursor states",
+        "Accessibility features",
+        "Interactive elements"
+      ]
     }
   }
 }

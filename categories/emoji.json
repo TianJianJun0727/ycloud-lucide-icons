@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "表情",
-  "icon": "smile",
   "i18n": {
     "en": {
       "title": "Emoji"

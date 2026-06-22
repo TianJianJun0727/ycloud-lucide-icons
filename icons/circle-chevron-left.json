@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "导航返回按钮",
+    "轮播图上一个项目",
+    "收起侧边栏菜单"
+  ],
   "name": "圆形折角箭头左",
   "tags": [
+    "向左",
     "返回",
     "上一个",
-    "小于",
-    "更少",
+    "后退",
     "菜单",
-    "<"
+    "小于"
   ],
   "categories": [
     "arrows"
@@ -25,14 +29,18 @@
     "en": {
       "name": "circle chevron left",
       "tags": [
+        "left",
         "back",
         "previous",
-        "less than",
-        "fewer",
+        "return",
         "menu",
-        "<"
+        "less than"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back button in navigation",
+        "Previous item in a carousel",
+        "Collapse a sidebar menu"
+      ]
     }
   }
 }

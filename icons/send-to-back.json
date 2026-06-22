@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计工具中的图层排序",
+    "将对象移至其他对象后方",
+    "界面元素堆叠"
+  ],
   "name": "发送到返回",
   "tags": [
-    "带",
-    "发送",
-    "移动",
-    "下",
-    "返回",
-    "向后",
-    "重叠",
-    "层",
-    "订单"
+    "置于底层",
+    "图层",
+    "顺序",
+    "后移",
+    "设计",
+    "布局"
   ],
   "categories": [
     "design",
@@ -21,17 +22,18 @@
     "en": {
       "name": "send to back",
       "tags": [
-        "bring",
-        "send",
-        "move",
-        "under",
-        "back",
-        "backwards",
-        "overlap",
+        "send to back",
         "layer",
-        "order"
+        "order",
+        "move backward",
+        "design",
+        "layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Layer ordering in design tools",
+        "Move object behind others",
+        "UI element stacking"
+      ]
     }
   }
 }

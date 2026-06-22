@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "访问语音信箱收件箱",
+    "带有留言的未接来电指示",
+    "音频消息播放"
+  ],
   "name": "语音信箱",
   "tags": [
+    "语音信箱",
     "电话",
-    "盒式磁带",
-    "胶带",
-    "卷轴",
-    "录音",
-    "音频"
+    "留言",
+    "音频消息",
+    "未接来电"
   ],
   "categories": [
     "connectivity",
@@ -19,14 +22,17 @@
     "en": {
       "name": "voicemail",
       "tags": [
+        "voicemail",
         "phone",
-        "cassette",
-        "tape",
-        "reel",
-        "recording",
-        "audio"
+        "message",
+        "audio message",
+        "missed call"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Access voicemail inbox",
+        "Missed call with message indicator",
+        "Audio message playback"
+      ]
     }
   }
 }

@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地铁站地图标记",
+    "交通导航图标",
+    "城市交通系统界面"
+  ],
   "name": "方形米",
   "tags": [
     "地铁",
-    "地铁",
-    "地下",
-    "轨道",
-    "线条"
+    "轨道交通",
+    "地铁站",
+    "交通标志"
   ],
   "categories": [
     "transportation",
@@ -27,11 +30,14 @@
       "tags": [
         "metro",
         "subway",
-        "underground",
-        "track",
-        "line"
+        "rail transit",
+        "transportation sign"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Metro station map marker",
+        "Transportation navigation icon",
+        "Urban transit system interface"
+      ]
     }
   }
 }

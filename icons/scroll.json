@@ -1,20 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "角色扮演游戏物品栏",
+    "历史文档界面",
+    "奇幻游戏UI元素",
+    "档案系统图标"
+  ],
   "name": "滚动",
   "tags": [
-    "纸",
-    "日志",
-    "经文",
-    "文档",
-    "笔记",
-    "羊皮纸",
-    "列表",
-    "长",
-    "脚本",
-    "故事",
-    "代码",
-    "编码"
+    "卷轴",
+    "滚动",
+    "羊皮卷",
+    "古代文档",
+    "游戏道具",
+    "历史文献"
   ],
   "categories": [
     "gaming",
@@ -25,20 +24,19 @@
     "en": {
       "name": "scroll",
       "tags": [
-        "paper",
-        "log",
-        "scripture",
-        "document",
-        "notes",
+        "scroll",
         "parchment",
-        "list",
-        "long",
-        "script",
-        "story",
-        "code",
-        "coding"
+        "ancient document",
+        "game item",
+        "historical manuscript",
+        "roll"
       ],
-      "use-cases": []
+      "use-cases": [
+        "RPG game inventory item",
+        "Historical document interface",
+        "Fantasy game UI element",
+        "Archive system icon"
+      ]
     }
   }
 }

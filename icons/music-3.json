@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐作曲工具",
+    "节奏指示器",
+    "音频编辑软件"
+  ],
   "name": "音乐3",
   "tags": [
-    "四分音符",
-    "最小",
+    "音乐",
+    "音符",
     "四分音符",
     "二分音符",
-    "注释"
+    "乐谱",
+    "节奏"
   ],
   "categories": [
     "multimedia",
@@ -17,13 +22,19 @@
     "en": {
       "name": "music 3",
       "tags": [
-        "crotchet",
-        "minim",
+        "music",
+        "note",
         "quarter note",
         "half note",
-        "note"
+        "crotchet",
+        "minim",
+        "rhythm"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music composition tool",
+        "Rhythm indicator",
+        "Audio editing software"
+      ]
     }
   }
 }

@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Docker 容器状态",
+    "货运物流跟踪",
+    "应用运行时环境",
+    "代码部署"
+  ],
   "name": "容器",
   "tags": [
-    "存储",
-    "运输",
-    "货运",
-    "供应链",
-    "泊坞窗",
+    "容器",
+    "Docker",
+    "部署",
     "环境",
-    "开发运营",
-    "代码",
-    "编码"
+    "开发",
+    "运维",
+    "货运",
+    "存储"
   ],
   "categories": [
     "development",
@@ -22,17 +26,21 @@
     "en": {
       "name": "container",
       "tags": [
-        "storage",
-        "shipping",
-        "freight",
-        "supply chain",
-        "docker",
+        "container",
+        "Docker",
+        "deployment",
         "environment",
+        "development",
         "devops",
-        "code",
-        "coding"
+        "shipping",
+        "storage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Docker container status",
+        "Shipping logistics tracking",
+        "Application runtime environment",
+        "Code deployment"
+      ]
     }
   }
 }

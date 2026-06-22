@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多邮件管理",
+    "批量邮件操作",
+    "邮件列表视图"
+  ],
   "name": "邮件",
   "tags": [
-    "电子邮件",
-    "消息",
-    "字母",
-    "多个",
+    "多个邮件",
     "邮件列表",
-    "时事通讯",
-    "复制"
+    "批量邮件",
+    "邮件集合",
+    "复制邮件"
   ],
   "categories": [
     "mail"
@@ -18,15 +20,17 @@
     "en": {
       "name": "mails",
       "tags": [
-        "emails",
-        "messages",
-        "letters",
-        "multiple",
-        "mailing list",
-        "newsletter",
-        "copy"
+        "multiple mails",
+        "mail list",
+        "bulk emails",
+        "email collection",
+        "copy mail"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multiple email management",
+        "Bulk email operations",
+        "Email list view"
+      ]
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "智能家居控制",
+    "室内设计软件",
+    "窗帘控制界面"
+  ],
   "name": "百叶窗",
   "tags": [
-    "色调",
-    "屏幕",
+    "百叶窗",
     "窗帘",
-    "快门",
-    "卷帘",
     "窗户",
-    "照明",
-    "家庭",
-    "首页"
+    "家居",
+    "遮光"
   ],
   "categories": [
     "home"
@@ -20,17 +20,17 @@
     "en": {
       "name": "blinds",
       "tags": [
-        "shades",
-        "screen",
+        "blinds",
         "curtain",
-        "shutter",
-        "roller blind",
         "window",
-        "lighting",
-        "household",
-        "home"
+        "home",
+        "shading"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Smart home control",
+        "Interior design software",
+        "Blind control interface"
+      ]
     }
   }
 }

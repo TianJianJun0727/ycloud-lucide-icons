@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据统计面板",
+    "业务指标展示",
+    "销售业绩图表"
+  ],
   "name": "图表条形",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "图"
+    "条形图",
+    "数据可视化"
   ],
   "categories": [
     "charts"
@@ -25,10 +30,15 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph"
+        "chart",
+        "bar chart",
+        "data visualization"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data statistics dashboard",
+        "Business metrics display",
+        "Sales performance chart"
+      ]
     }
   }
 }

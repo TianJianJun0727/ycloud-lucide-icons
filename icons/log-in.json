@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户登录按钮",
+    "账户验证",
+    "访问受限区域"
+  ],
   "name": "日志进入",
   "tags": [
     "登录",
-    "箭头",
-    "输入",
-    "授权"
+    "登入",
+    "账号",
+    "授权",
+    "访问",
+    "进入",
+    "验证"
   ],
   "categories": [
     "arrows",
@@ -16,12 +23,19 @@
     "en": {
       "name": "log in",
       "tags": [
+        "login",
         "sign in",
-        "arrow",
+        "account",
+        "auth",
+        "access",
         "enter",
-        "auth"
+        "authentication"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User login button",
+        "Account authentication",
+        "Access restricted area"
+      ]
     }
   }
 }

@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "元素水平居中",
+    "设计工具对齐",
+    "用户界面布局"
+  ],
   "name": "对齐居中水平",
   "tags": [
-    "项目",
-    "弯曲",
-    "证明合理"
+    "水平居中",
+    "居中",
+    "对齐",
+    "布局",
+    "中心"
   ],
   "categories": [
     "layout"
@@ -14,11 +20,17 @@
     "en": {
       "name": "align center horizontal",
       "tags": [
-        "items",
-        "flex",
-        "justify"
+        "center horizontal",
+        "center",
+        "align",
+        "layout",
+        "middle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Center an element horizontally",
+        "Design tool alignment",
+        "UI layout"
+      ]
     }
   }
 }

@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "云服务断开",
+    "网络连接状态",
+    "离线模式指示"
+  ],
   "name": "云关闭",
   "tags": [
-    "断开连接"
+    "断开连接",
+    "离线",
+    "不可用",
+    "网络中断",
+    "连接失败"
   ],
   "categories": [
     "connectivity",
@@ -13,9 +21,17 @@
     "en": {
       "name": "cloud off",
       "tags": [
-        "disconnect"
+        "disconnect",
+        "offline",
+        "unavailable",
+        "network down",
+        "connection failed"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloud service disconnected",
+        "Network connection status",
+        "Offline mode indicator"
+      ]
     }
   }
 }

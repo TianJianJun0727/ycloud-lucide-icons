@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "日历应用界面",
+    "活动安排页面",
+    "日期选择器",
+    "日程管理工具"
+  ],
   "name": "日历",
   "tags": [
     "日期",
-    "月",
-    "年",
+    "月份",
+    "年份",
     "事件",
-    "日期",
-    "月",
-    "年",
-    "事件"
+    "日程",
+    "计划"
   ],
   "categories": [
     "time"
@@ -23,12 +26,15 @@
         "month",
         "year",
         "event",
-        "dates",
-        "months",
-        "years",
-        "events"
+        "schedule",
+        "planning"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Calendar app interface",
+        "Event scheduling page",
+        "Date picker",
+        "Schedule management tool"
+      ]
     }
   }
 }

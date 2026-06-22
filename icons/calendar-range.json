@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在日历中选择日期范围",
+    "查看特定期间的事件",
+    "设置事件持续时间"
+  ],
   "name": "日历范围",
   "tags": [
+    "日历",
     "日期",
-    "日",
-    "月",
-    "年",
-    "事件",
     "范围",
-    "期间"
+    "期间",
+    "时间段",
+    "选择",
+    "日程"
   ],
   "categories": [
     "time"
@@ -18,15 +22,19 @@
     "en": {
       "name": "calendar range",
       "tags": [
+        "calendar",
         "date",
-        "day",
-        "month",
-        "year",
-        "event",
         "range",
-        "period"
+        "period",
+        "duration",
+        "select",
+        "schedule"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Select a date range in calendar",
+        "View events for a specific period",
+        "Set a duration for an event"
+      ]
     }
   }
 }

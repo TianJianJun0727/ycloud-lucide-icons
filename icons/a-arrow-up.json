@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "增大文本大小",
+    "字体大小控件",
+    "文本格式化工具栏"
+  ],
   "name": "字号增大",
   "tags": [
-    "信",
     "字体大小",
+    "增大",
     "文本",
-    "格式化",
-    "更大",
-    "更大"
+    "字号",
+    "放大",
+    "格式"
   ],
   "categories": [
     "text",
@@ -18,14 +22,18 @@
     "en": {
       "name": "A arrow up",
       "tags": [
-        "letter",
         "font size",
+        "increase",
         "text",
-        "formatting",
+        "typography",
         "larger",
-        "bigger"
+        "formatting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "increasing text size",
+        "font size controls",
+        "text formatting toolbar"
+      ]
     }
   }
 }

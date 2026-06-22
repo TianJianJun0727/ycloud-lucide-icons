@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "医疗",
-  "icon": "heart",
   "i18n": {
     "en": {
       "title": "Medical"

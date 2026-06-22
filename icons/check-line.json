@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务完成状态",
+    "批准指示器"
+  ],
   "name": "勾选线条",
   "tags": [
     "完成",
-    "待办事项",
+    "确认",
     "勾选",
-    "完成",
-    "任务"
+    "任务",
+    "通过"
   ],
   "categories": [
     "notifications"
@@ -17,12 +20,15 @@
       "name": "check line",
       "tags": [
         "done",
-        "todo",
-        "tick",
-        "complete",
-        "task"
+        "confirmed",
+        "check",
+        "task",
+        "approved"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Task completion status",
+        "Approval indicator"
+      ]
     }
   }
 }

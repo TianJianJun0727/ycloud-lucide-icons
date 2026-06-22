@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "晴雨交替天气",
+    "阵雨预报",
+    "多变天气图标"
+  ],
   "name": "云太阳雨",
   "tags": [
     "天气",
-    "部分地",
-    "降雨量"
+    "晴雨",
+    "太阳雨",
+    "阵雨",
+    "多变天气"
   ],
   "categories": [
     "weather"
@@ -15,10 +21,16 @@
       "name": "cloud sun rain",
       "tags": [
         "weather",
-        "partly",
-        "rainfall"
+        "sun rain",
+        "sunshower",
+        "shower",
+        "changeable weather"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sunny with rain weather",
+        "Shower forecast",
+        "Changeable weather icon"
+      ]
     }
   }
 }

@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表格列排序切换",
+    "数据传输状态",
+    "交换列表中的项目"
+  ],
   "name": "箭头上下",
   "tags": [
-    "双向",
-    "双向",
-    "2路",
-    "交换",
-    "开关",
-    "网络",
-    "移动数据",
-    "互联网",
     "排序",
-    "重新排序",
-    "移动"
+    "交换",
+    "双向",
+    "切换",
+    "网络",
+    "移动数据"
   ],
   "categories": [
     "arrows"
@@ -22,19 +21,18 @@
     "en": {
       "name": "arrow up down",
       "tags": [
-        "bidirectional",
-        "two-way",
-        "2-way",
+        "sort",
         "swap",
+        "bidirectional",
         "switch",
         "network",
-        "mobile data",
-        "internet",
-        "sort",
-        "reorder",
-        "move"
+        "mobile data"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Table column sort toggle",
+        "Data transfer status",
+        "Swap items in list"
+      ]
     }
   }
 }

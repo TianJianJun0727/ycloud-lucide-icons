@@ -177,7 +177,7 @@ interface DraftIcon {
    - 分类 key，使用 kebab-case。
    - 中文分类名。
    - 英文分类名。
-   - 分类图标，必须指向已存在图标或本次同时新增的图标。
+   - 分类标题与英文标题，分类本身不再维护单独的图标字段。
    - 可选分类描述和排序权重。
 6. Portal 运行 SVG 清洗预检和 schema 预检。
 7. Portal 创建 PR，包含 `.svg`、`.json`，以及必要的 `categories/<category>.json`。
@@ -202,7 +202,6 @@ interface DraftIcon {
 {
   "$schema": "../category.schema.json",
   "title": "中文分类名",
-  "icon": "existing-or-new-icon-name",
   "i18n": {
     "en": {
       "title": "English category title"
@@ -238,7 +237,7 @@ Portal 需要在提交前检查：
 
 1. Portal 选择已有图标。
 2. 显示引用检查建议：
-   - 分类图标是否引用。
+   - 分类是否引用。
    - 文档示例是否引用。
    - alias 是否引用。
 3. Portal 创建删除 `.svg` 和 `.json` 的 PR。

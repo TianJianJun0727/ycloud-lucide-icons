@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码审查评论线程",
+    "技术支持聊天",
+    "编程反馈消息"
+  ],
   "name": "消息圆形代码",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
+    "代码讨论",
     "代码审查",
-    "编码"
+    "技术聊天",
+    "编程反馈",
+    "开发交流"
   ],
   "categories": [
     "development",
@@ -20,16 +21,17 @@
     "en": {
       "name": "message circle code",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
+        "code discussion",
         "code review",
-        "coding"
+        "technical chat",
+        "programming feedback",
+        "developer talk"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code review comment thread",
+        "Technical support chat",
+        "Programming feedback message"
+      ]
     }
   }
 }

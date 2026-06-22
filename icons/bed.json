@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家居应用图标",
+    "酒店预订系统",
+    "睡眠追踪应用"
+  ],
   "name": "床",
   "tags": [
-    "睡觉",
+    "床",
+    "卧室",
     "酒店",
-    "家具"
+    "家具",
+    "睡眠"
   ],
   "categories": [
     "home"
@@ -14,11 +20,17 @@
     "en": {
       "name": "bed",
       "tags": [
-        "sleep",
+        "bed",
+        "bedroom",
         "hotel",
-        "furniture"
+        "furniture",
+        "sleep"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home app icon",
+        "Hotel booking system",
+        "Sleep tracking application"
+      ]
     }
   }
 }

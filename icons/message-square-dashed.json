@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "消息草稿",
+    "未保存的评论",
+    "暂存的对话"
+  ],
   "name": "消息方形虚线",
   "tags": [
-    "评论",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "讲话泡泡",
-    "草稿"
+    "评论",
+    "草稿",
+    "未发送",
+    "暂存",
+    "虚线",
+    "未完成"
   ],
   "categories": [
     "social"
@@ -18,15 +23,20 @@
     "en": {
       "name": "message square dashed",
       "tags": [
-        "comment",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "draft"
+        "comment",
+        "draft",
+        "unsent",
+        "stashed",
+        "dashed",
+        "unfinished"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Message draft",
+        "Unsaved comment",
+        "Stashed conversation"
+      ]
     }
   }
 }

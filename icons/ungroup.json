@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计工具取消组合",
+    "元素分离操作",
+    "组管理功能"
+  ],
   "name": "取消组合",
   "tags": [
-    "立方体",
-    "包",
-    "零件",
-    "单位",
-    "收藏",
-    "集群",
-    "分开"
+    "取消组合",
+    "分离",
+    "拆分组",
+    "解散",
+    "元素管理"
   ],
   "categories": [
     "shapes",
@@ -19,15 +21,17 @@
     "en": {
       "name": "ungroup",
       "tags": [
-        "cubes",
-        "packages",
-        "parts",
-        "units",
-        "collection",
-        "cluster",
-        "separate"
+        "ungroup",
+        "separate",
+        "break group",
+        "dissolve",
+        "element management"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Design tool ungroup",
+        "Element separation",
+        "Group management"
+      ]
     }
   }
 }

@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "已完成文件标记",
+    "审核通过文档",
+    "验证完成文件",
+    "任务完成标识"
+  ],
   "name": "文件勾选角落",
   "tags": [
-    "完成",
-    "文档",
-    "待办事项",
-    "勾选",
-    "完成",
-    "任务"
+    "完成文件",
+    "已验证",
+    "审核通过",
+    "确认文件",
+    "任务完成"
   ],
   "categories": [
     "files"
@@ -25,14 +29,18 @@
     "en": {
       "name": "file check corner",
       "tags": [
-        "done",
-        "document",
-        "todo",
-        "tick",
-        "complete",
-        "task"
+        "completed file",
+        "verified",
+        "approved",
+        "confirmed file",
+        "task completed"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Completed file markers",
+        "Approved documents",
+        "Verified completed files",
+        "Task completion identifiers"
+      ]
     }
   }
 }

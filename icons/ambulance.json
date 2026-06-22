@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "医疗紧急服务与联系",
+    "医院与医疗运输"
+  ],
   "name": "救护车",
   "tags": [
     "救护车",
-    "紧急情况",
-    "医疗",
-    "车辆",
-    "塞壬",
-    "医疗保健",
-    "交通",
-    "救援",
-    "紧急的",
-    "急救"
+    "紧急救援",
+    "医疗急救",
+    "医疗服务",
+    "急诊",
+    "120"
   ],
   "categories": [
     "medical",
@@ -24,16 +23,15 @@
       "tags": [
         "ambulance",
         "emergency",
-        "medical",
-        "vehicle",
-        "siren",
+        "medical rescue",
+        "first aid",
         "healthcare",
-        "transportation",
-        "rescue",
-        "urgent",
-        "first aid"
+        "120"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Medical emergency services and contact",
+        "Hospital and healthcare transportation"
+      ]
     }
   }
 }

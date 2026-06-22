@@ -1,15 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "路径查找器相交操作",
+    "矢量形状编辑"
+  ],
   "name": "方块相交",
   "tags": [
-    "正方形",
-    "探路者",
-    "路径",
     "相交",
-    "形状",
-    "包括",
-    "矢量"
+    "交集",
+    "路径查找",
+    "形状运算",
+    "矢量设计"
   ],
   "categories": [
     "design"
@@ -18,15 +19,16 @@
     "en": {
       "name": "squares intersect",
       "tags": [
-        "square",
-        "pathfinder",
-        "path",
         "intersect",
-        "shape",
-        "include",
-        "vector"
+        "intersection",
+        "pathfinder",
+        "shape operation",
+        "vector design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Pathfinder intersect operation",
+        "Vector shape editing"
+      ]
     }
   }
 }

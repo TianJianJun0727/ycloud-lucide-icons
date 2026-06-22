@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "底部面板展开",
+    "UI抽屉打开",
+    "界面最大化",
+    "布局显示"
+  ],
   "name": "面板底部打开",
   "tags": [
-    "抽屉",
-    "码头",
+    "面板",
+    "底部",
+    "打开",
+    "展开",
     "显示",
-    "揭示",
-    "雪佛龙",
-    "向上"
+    "UI控件",
+    "抽屉"
   ],
   "categories": [
     "layout",
@@ -18,14 +24,20 @@
     "en": {
       "name": "panel bottom open",
       "tags": [
-        "drawer",
-        "dock",
+        "panel",
+        "bottom",
+        "open",
+        "expand",
         "show",
-        "reveal",
-        "chevron",
-        "up"
+        "UI control",
+        "drawer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bottom panel expansion",
+        "UI drawer opening",
+        "Interface maximization",
+        "Layout reveal"
+      ]
     }
   }
 }

@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "购买确认",
+    "费用跟踪",
+    "支付凭证"
+  ],
   "name": "收据",
   "tags": [
+    "收据",
     "账单",
-    "优惠券",
-    "滑倒",
-    "勾选",
-    "存根",
-    "货币",
-    "美元",
-    "美元",
-    "$"
+    "支付",
+    "发票",
+    "凭证",
+    "财务",
+    "交易",
+    "购物"
   ],
   "categories": [
     "finance",
@@ -21,17 +24,20 @@
     "en": {
       "name": "receipt",
       "tags": [
+        "receipt",
         "bill",
+        "payment",
+        "invoice",
         "voucher",
-        "slip",
-        "check",
-        "counterfoil",
-        "currency",
-        "dollar",
-        "usd",
-        "$"
+        "finance",
+        "transaction",
+        "shopping"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Purchase confirmation",
+        "Expense tracking",
+        "Payment proof"
+      ]
     }
   }
 }

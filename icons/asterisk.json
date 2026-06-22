@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表单必填字段标记",
+    "代码通配符运算符",
+    "乘法符号"
+  ],
   "name": "星号",
   "tags": [
-    "参考",
-    "次",
-    "乘以",
-    "乘法",
-    "操作员",
-    "代码",
-    "全局模式",
     "通配符",
-    "*"
+    "乘法",
+    "运算符",
+    "代码",
+    "必填字段"
   ],
   "categories": [
     "text",
@@ -22,17 +22,17 @@
     "en": {
       "name": "asterisk",
       "tags": [
-        "reference",
-        "times",
-        "multiply",
+        "wildcard",
         "multiplication",
         "operator",
         "code",
-        "glob pattern",
-        "wildcard",
-        "*"
+        "required field"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Form required field marker",
+        "Code wildcard operator",
+        "Multiplication symbol"
+      ]
     }
   }
 }

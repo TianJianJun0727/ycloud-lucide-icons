@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "最近文件文件夹",
+    "历史记录",
+    "时间戳文档"
+  ],
   "name": "文件夹时钟",
   "tags": [
     "历史",
-    "目录",
-    "时钟"
+    "最近",
+    "时间",
+    "记录",
+    "时间戳"
   ],
   "categories": [
     "files",
@@ -16,10 +22,16 @@
       "name": "folder clock",
       "tags": [
         "history",
-        "directory",
-        "clock"
+        "recent",
+        "time",
+        "records",
+        "timestamp"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Recent files folder",
+        "History records",
+        "Time-stamped documents"
+      ]
     }
   }
 }

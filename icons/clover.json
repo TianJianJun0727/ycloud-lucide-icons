@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏幸运指示器",
+    "象征性装饰",
+    "植物主题界面"
+  ],
   "name": "三叶草",
   "tags": [
-    "叶",
-    "运气",
-    "植物"
+    "三叶草",
+    "幸运",
+    "植物",
+    "游戏",
+    "符号"
   ],
   "categories": [
     "gaming"
@@ -14,11 +20,17 @@
     "en": {
       "name": "clover",
       "tags": [
-        "leaf",
+        "clover",
         "luck",
-        "plant"
+        "plant",
+        "gaming",
+        "symbol"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gaming luck indicator",
+        "Symbolic decoration",
+        "Plant-themed UI"
+      ]
     }
   }
 }

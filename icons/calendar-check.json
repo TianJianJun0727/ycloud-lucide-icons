@@ -1,21 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "确认日历订阅",
+    "预约已确认",
+    "任务已安排并完成",
+    "活动回复确认"
+  ],
   "name": "日历勾选",
   "tags": [
     "日期",
-    "日",
-    "月",
-    "年",
-    "事件",
+    "日历",
     "确认",
-    "订阅",
-    "时间表",
     "完成",
+    "任务",
     "待办事项",
-    "勾选",
-    "完成",
-    "任务"
+    "日程",
+    "订阅"
   ],
   "categories": [
     "time"
@@ -25,20 +25,20 @@
       "name": "calendar check",
       "tags": [
         "date",
-        "day",
-        "month",
-        "year",
-        "event",
+        "calendar",
         "confirm",
-        "subscribe",
-        "schedule",
         "done",
+        "task",
         "todo",
-        "tick",
-        "complete",
-        "task"
+        "schedule",
+        "subscribe"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Confirm calendar subscription",
+        "Appointment confirmed",
+        "Task scheduled and completed",
+        "Event RSVP"
+      ]
     }
   }
 }

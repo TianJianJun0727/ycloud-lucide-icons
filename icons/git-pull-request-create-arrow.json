@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "创建新拉取请求按钮",
+    "版本控制合并操作",
+    "代码仓库协作"
+  ],
   "name": "Git拉取请求创建箭头",
   "tags": [
+    "Git",
+    "拉取请求",
+    "创建",
     "代码",
     "版本控制",
-    "打开",
-    "加号",
-    "添加",
-    "+"
+    "合并",
+    "箭头",
+    "添加"
   ],
   "categories": [
     "development",
@@ -18,14 +24,20 @@
     "en": {
       "name": "git pull request create arrow",
       "tags": [
+        "Git",
+        "pull request",
+        "create",
         "code",
         "version control",
-        "open",
-        "plus",
-        "add",
-        "+"
+        "merge",
+        "arrow",
+        "add"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Create new pull request button",
+        "Version control merge operations",
+        "Code repository collaboration"
+      ]
     }
   }
 }

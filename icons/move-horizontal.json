@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "水平调整大小光标",
+    "左右移动对象",
+    "调整列宽",
+    "水平滚动指示器"
+  ],
   "name": "移动水平",
   "tags": [
-    "双",
-    "箭头"
+    "双箭头",
+    "水平",
+    "左右",
+    "调整大小",
+    "移动",
+    "光标",
+    "拖动"
   ],
   "categories": [
     "arrows",
@@ -14,10 +24,20 @@
     "en": {
       "name": "move horizontal",
       "tags": [
-        "double",
-        "arrow"
+        "double arrow",
+        "horizontal",
+        "left-right",
+        "resize",
+        "move",
+        "cursor",
+        "drag"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Horizontal resize cursor",
+        "Move object left or right",
+        "Adjust column width",
+        "Horizontal scrolling indicator"
+      ]
     }
   }
 }

@@ -1,29 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "待办列表中的已完成任务",
+    "已验证的笔记或评论",
+    "批准或确认指示器"
+  ],
   "name": "便签便签勾选",
   "tags": [
     "便利贴",
-    "评论",
-    "注释",
-    "反应",
-    "备忘录",
-    "提醒",
     "待办事项",
-    "任务",
-    "想法",
-    "头脑风暴",
-    "文档",
-    "页面",
-    "纸",
-    "片材",
-    "固定式",
-    "办公室",
     "完成",
-    "完成",
-    "成功",
     "勾选",
-    "已验证"
+    "任务",
+    "笔记",
+    "已验证",
+    "成功"
   ],
   "categories": [
     "text",
@@ -33,29 +24,20 @@
     "en": {
       "name": "sticky note check",
       "tags": [
-        "post-it",
-        "comment",
-        "annotation",
-        "reaction",
-        "memo",
-        "reminder",
+        "sticky note",
         "todo",
-        "task",
-        "idea",
-        "brainstorm",
-        "document",
-        "page",
-        "paper",
-        "sheet",
-        "stationary",
-        "office",
         "done",
-        "complete",
-        "success",
         "check",
-        "verified"
+        "task",
+        "note",
+        "verified",
+        "success"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Completed task in a to-do list",
+        "Verified note or comment",
+        "Approval or confirmation indicator"
+      ]
     }
   }
 }

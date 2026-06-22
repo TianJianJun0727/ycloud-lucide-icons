@@ -1,31 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频编辑软件",
+    "音乐播放器控制",
+    "声音电平指示器",
+    "广播界面"
+  ],
   "name": "音频线条",
   "tags": [
-    "图形均衡器",
-    "声音",
-    "噪音",
-    "听",
-    "听力",
-    "赫兹",
+    "音频",
+    "声波",
     "频率",
-    "波长",
-    "振动",
-    "正弦",
-    "合成器",
-    "合成器",
-    "级别",
-    "轨道",
+    "均衡器",
+    "音量",
     "音乐",
-    "回放",
-    "收音机",
     "广播",
-    "电波",
-    "声音",
-    "人声",
-    "歌手",
-    "歌曲"
+    "录音"
   ],
   "categories": [
     "multimedia",
@@ -35,31 +25,21 @@
     "en": {
       "name": "audio lines",
       "tags": [
-        "graphic equaliser",
-        "sound",
-        "noise",
-        "listen",
-        "hearing",
-        "hertz",
+        "audio",
+        "sound waves",
         "frequency",
-        "wavelength",
-        "vibrate",
-        "sine",
-        "synthesizer",
-        "synthesiser",
-        "levels",
-        "track",
+        "equalizer",
+        "volume",
         "music",
-        "playback",
-        "radio",
         "broadcast",
-        "airwaves",
-        "voice",
-        "vocals",
-        "singer",
-        "song"
+        "recording"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio editing software",
+        "Music player controls",
+        "Sound level indicators",
+        "Broadcast interfaces"
+      ]
     }
   }
 }

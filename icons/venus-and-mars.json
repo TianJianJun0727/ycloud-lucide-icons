@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表单中的性别选择",
+    "性别特征的医疗记录",
+    "包容性用户资料设置",
+    "占星术或符号学界面"
+  ],
   "name": "金星与火星",
   "tags": [
+    "金星与火星",
     "性别",
-    "性别",
-    "双性人",
-    "雌雄同体的",
-    "雌雄同体"
+    "双性",
+    "中性",
+    "医疗",
+    "符号"
   ],
   "categories": [
     "medical"
@@ -17,12 +23,18 @@
       "name": "venus and mars",
       "tags": [
         "gender",
-        "sex",
         "intersex",
-        "androgynous",
-        "hermaphrodite"
+        "symbol",
+        "medical",
+        "venus and mars",
+        "combined"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gender selection in forms",
+        "Medical records for sex characteristics",
+        "Inclusive user profile settings",
+        "Astrology or symbolism interfaces"
+      ]
     }
   }
 }

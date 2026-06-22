@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "未保存书签状态",
+    "禁用书签功能",
+    "移除书签指示器"
+  ],
   "name": "书签关闭",
   "tags": [
     "未保存",
-    "不喜欢的",
-    "未标记的",
-    "取消标签",
-    "残疾人",
-    "已删除",
-    "取消固定",
-    "未读",
-    "松开",
-    "标记",
-    "取消标签"
+    "取消标记",
+    "禁用",
+    "移除",
+    "关闭",
+    "未读"
   ],
   "categories": [
     "account"
@@ -23,18 +22,17 @@
       "name": "bookmark off",
       "tags": [
         "unsaved",
-        "unfavorite",
         "unmarked",
-        "unlabel",
         "disabled",
         "removed",
-        "unpin",
-        "unread",
-        "unclip",
-        "marker",
-        "untag"
+        "off",
+        "unread"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Unsaved bookmark state",
+        "Disabled bookmark feature",
+        "Remove bookmark indicator"
+      ]
     }
   }
 }

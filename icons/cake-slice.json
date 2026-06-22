@@ -1,21 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "生日提醒或资料",
+    "庆祝活动标记",
+    "甜点菜单项"
+  ],
   "name": "蛋糕切片",
   "tags": [
+    "蛋糕",
+    "切片",
     "生日",
-    "出生日期",
-    "庆祝活动",
-    "聚会",
-    "惊喜",
-    "糕点",
+    "庆祝",
     "甜点",
-    "蜡烛",
-    "愿望",
-    "软糖",
-    "糖粉",
-    "甜甜的",
-    "烘焙"
+    "糕点",
+    "聚会"
   ],
   "categories": [
     "food-beverage",
@@ -25,21 +23,19 @@
     "en": {
       "name": "cake slice",
       "tags": [
+        "cake",
+        "slice",
         "birthday",
-        "birthdate",
         "celebration",
-        "party",
-        "surprise",
-        "gateaux",
         "dessert",
-        "candles",
-        "wish",
-        "fondant",
-        "icing sugar",
-        "sweet",
-        "baking"
+        "pastry",
+        "party"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Birthday reminder or profile",
+        "Celebration event marker",
+        "Dessert menu item"
+      ]
     }
   }
 }

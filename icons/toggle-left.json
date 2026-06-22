@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭某个设置或功能",
+    "在UI控件中禁用某项功能",
+    "显示处于“关”状态的二进制开关"
+  ],
   "name": "开关左",
   "tags": [
-    "上",
-    "关闭",
-    "开关",
-    "布尔值"
+    "开关左",
+    "切换关闭",
+    "禁用",
+    "关",
+    "左拨动"
   ],
   "categories": [
     "layout",
@@ -17,12 +22,17 @@
     "en": {
       "name": "toggle left",
       "tags": [
-        "on",
+        "toggle left",
+        "switch off",
+        "disable",
         "off",
-        "switch",
-        "boolean"
+        "left toggle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Turn a setting or feature off",
+        "Disable a function in UI controls",
+        "Show a binary switch in the 'off' position"
+      ]
     }
   }
 }

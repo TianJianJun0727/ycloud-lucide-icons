@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图片文件预览",
+    "照片库",
+    "图形内容显示"
+  ],
   "name": "文件图片",
   "tags": [
     "图片",
-    "图形",
+    "图像",
     "照片",
-    "图片"
+    "图形",
+    "文件"
   ],
   "categories": [
     "files"
@@ -17,10 +22,13 @@
       "tags": [
         "image",
         "graphics",
-        "photo",
-        "picture"
+        "photo"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Image file preview",
+        "Photo gallery",
+        "Graphic content display"
+      ]
     }
   }
 }

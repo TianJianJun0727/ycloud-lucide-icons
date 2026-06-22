@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务完成",
+    "清单项目",
+    "复制粘贴确认"
+  ],
   "name": "剪贴板勾选",
   "tags": [
-    "复制的",
-    "粘贴的",
+    "剪贴板",
     "完成",
-    "待办事项",
     "勾选",
-    "完成",
-    "任务"
+    "任务",
+    "待办事项",
+    "确认"
   ],
   "categories": [
     "text"
@@ -18,15 +21,18 @@
     "en": {
       "name": "clipboard check",
       "tags": [
-        "copied",
-        "pasted",
+        "clipboard",
         "done",
+        "check",
+        "task",
         "todo",
-        "tick",
-        "complete",
-        "task"
+        "confirm"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Task completion",
+        "Checklist item",
+        "Copy-paste confirmation"
+      ]
     }
   }
 }

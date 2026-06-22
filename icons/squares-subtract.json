@@ -1,17 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "路径查找器减去操作",
+    "矢量形状编辑"
+  ],
   "name": "方块减去",
   "tags": [
-    "正方形",
-    "探路者",
-    "路径",
-    "减号",
     "减去",
     "减法",
-    "形状",
-    "前面",
-    "矢量"
+    "路径查找",
+    "形状运算",
+    "矢量设计"
   ],
   "categories": [
     "design"
@@ -20,17 +19,16 @@
     "en": {
       "name": "squares subtract",
       "tags": [
-        "square",
-        "pathfinder",
-        "path",
-        "minus",
         "subtract",
         "subtraction",
-        "shape",
-        "front",
-        "vector"
+        "pathfinder",
+        "shape operation",
+        "vector design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Pathfinder subtract operation",
+        "Vector shape editing"
+      ]
     }
   }
 }

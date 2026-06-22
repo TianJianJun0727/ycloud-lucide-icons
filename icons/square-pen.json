@@ -1,23 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器工具栏",
+    "文档批注",
+    "绘图应用",
+    "笔记界面"
+  ],
   "name": "方形笔",
   "tags": [
-    "铅笔",
     "编辑",
-    "改变",
-    "创建",
-    "画",
-    "素描",
-    "草稿",
-    "作家",
-    "写作",
-    "比罗",
-    "墨水",
-    "标记",
-    "毡尖",
-    "文具",
-    "艺术家"
+    "铅笔",
+    "书写",
+    "绘制",
+    "草图",
+    "修改",
+    "创作",
+    "标记"
   ],
   "categories": [
     "text"
@@ -46,23 +44,21 @@
     "en": {
       "name": "square pen",
       "tags": [
-        "pencil",
         "edit",
-        "change",
-        "create",
+        "pencil",
+        "writing",
         "draw",
         "sketch",
-        "draft",
-        "writer",
-        "writing",
-        "biro",
-        "ink",
-        "marker",
-        "felt tip",
-        "stationery",
-        "artist"
+        "modify",
+        "create",
+        "marker"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor toolbar",
+        "Document annotation",
+        "Drawing application",
+        "Note-taking interface"
+      ]
     }
   }
 }

@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在地图上添加新地点",
+    "创建自定义地图标记点",
+    "插入导航标记"
+  ],
   "name": "地图加号",
   "tags": [
-    "位置",
-    "导航",
-    "旅行",
-    "新建",
-    "添加",
-    "创建"
+    "添加地点",
+    "新建地图",
+    "标记位置",
+    "创建导航点",
+    "增加位置"
   ],
   "categories": [
     "navigation"
@@ -17,14 +20,17 @@
     "en": {
       "name": "map plus",
       "tags": [
-        "location",
-        "navigation",
-        "travel",
-        "new",
-        "add",
-        "create"
+        "add location",
+        "new map",
+        "mark place",
+        "create pin",
+        "add pin"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add a new location to a map",
+        "Create a custom map point",
+        "Insert a navigation marker"
+      ]
     }
   }
 }

@@ -1,15 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "键盘快捷键指示器",
+    "方向导航控制",
+    "游戏控制器按钮",
+    "对角线移动图标",
+    "界面导航元素"
+  ],
   "name": "方形箭头下左",
   "tags": [
+    "左下箭头",
     "方向",
-    "西南",
     "对角线",
-    "标志",
-    "转",
     "键盘",
-    "按钮"
+    "按钮",
+    "西南",
+    "导航"
   ],
   "categories": [
     "arrows",
@@ -27,15 +33,21 @@
     "en": {
       "name": "square arrow down left",
       "tags": [
+        "down-left arrow",
         "direction",
-        "south-west",
         "diagonal",
-        "sign",
-        "turn",
         "keyboard",
-        "button"
+        "button",
+        "southwest",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Keyboard shortcut indicator",
+        "Directional navigation control",
+        "Game controller button",
+        "Diagonal movement icon",
+        "UI navigation element"
+      ]
     }
   }
 }

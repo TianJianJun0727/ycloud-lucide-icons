@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "魔法效果界面",
+    "特效工具",
+    "游戏增强图标"
+  ],
   "name": "魔法棒",
   "tags": [
     "魔法",
-    "向导",
-    "魔术师"
+    "特效",
+    "闪光",
+    "装饰",
+    "游戏",
+    "设计"
   ],
   "categories": [
     "design",
@@ -26,10 +33,17 @@
       "name": "wand sparkles",
       "tags": [
         "magic",
-        "wizard",
-        "magician"
+        "effects",
+        "sparkles",
+        "decoration",
+        "gaming",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Magic effects interface",
+        "Special effects tool",
+        "Game power-up icon"
+      ]
     }
   }
 }

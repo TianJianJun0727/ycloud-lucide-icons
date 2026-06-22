@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "大风降雨天气",
+    "暴风雨预警",
+    "恶劣天气提示"
+  ],
   "name": "云雨风",
   "tags": [
     "天气",
-    "降雨量"
+    "降雨",
+    "大风",
+    "暴风雨",
+    "恶劣天气"
   ],
   "categories": [
     "weather"
@@ -14,9 +21,16 @@
       "name": "cloud rain wind",
       "tags": [
         "weather",
-        "rainfall"
+        "rain",
+        "windy",
+        "storm",
+        "bad weather"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Windy rainy weather",
+        "Storm warning",
+        "Bad weather alert"
+      ]
     }
   }
 }

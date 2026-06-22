@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "垂直设置控制",
+    "音频电平调节",
+    "参数滑块"
+  ],
   "name": "滑块垂直",
   "tags": [
+    "滑块",
     "设置",
-    "控制"
+    "调节",
+    "控制",
+    "垂直控制",
+    "参数调整"
   ],
   "categories": [
     "account"
@@ -21,10 +29,18 @@
     "en": {
       "name": "sliders vertical",
       "tags": [
+        "sliders",
         "settings",
-        "controls"
+        "adjust",
+        "control",
+        "vertical control",
+        "parameter adjustment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertical settings control",
+        "Audio level adjustment",
+        "Parameter sliders"
+      ]
     }
   }
 }

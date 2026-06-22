@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI元素拖拽",
+    "可调整组件",
+    "布局调整手柄"
+  ],
   "name": "握柄水平",
   "tags": [
-    "抢",
-    "点",
+    "拖拽",
     "手柄",
     "移动",
-    "拖动"
+    "调整",
+    "控制点"
   ],
   "categories": [
     "layout"
@@ -16,13 +20,17 @@
     "en": {
       "name": "grip horizontal",
       "tags": [
-        "grab",
-        "dots",
+        "drag",
         "handle",
         "move",
-        "drag"
+        "adjust",
+        "control points"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI element dragging",
+        "Resizable components",
+        "Layout adjustment handles"
+      ]
     }
   }
 }

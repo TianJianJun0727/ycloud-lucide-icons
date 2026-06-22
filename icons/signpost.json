@@ -1,23 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "导航与寻路界面",
+    "应用中的位置指示器",
+    "UI 中的方向提示"
+  ],
   "name": "路标",
   "tags": [
-    "导航",
+    "路标",
+    "指示牌",
     "方向",
+    "导航",
+    "指引",
     "箭头",
-    "寻路",
-    "指南",
-    "位置",
-    "指针",
-    "路线",
-    "指标",
-    "标记",
-    "双向",
-    "左",
-    "右",
-    "东",
-    "西"
+    "路径",
+    "地点",
+    "标记"
   ],
   "categories": [
     "arrows",
@@ -29,23 +27,21 @@
     "en": {
       "name": "signpost",
       "tags": [
-        "navigation",
+        "signpost",
+        "sign",
         "direction",
-        "arrow",
-        "wayfinding",
+        "navigation",
         "guide",
+        "arrow",
+        "path",
         "location",
-        "pointer",
-        "route",
-        "indicator",
-        "marker",
-        "bidirectional",
-        "left",
-        "right",
-        "east",
-        "west"
+        "marker"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Navigation and wayfinding interface",
+        "Location indicator in apps",
+        "Directional cue in UI"
+      ]
     }
   }
 }

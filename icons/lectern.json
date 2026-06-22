@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "演示文稿软件",
+    "活动管理仪表板",
+    "演讲者个人资料页"
+  ],
   "name": "讲台",
   "tags": [
-    "讲坛",
     "讲台",
-    "站"
+    "演讲台",
+    "主持台",
+    "发言台",
+    "多媒体讲台"
   ],
   "categories": [
     "communication",
@@ -17,9 +23,15 @@
       "tags": [
         "pulpit",
         "podium",
-        "stand"
+        "stand",
+        "speaker",
+        "presentation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Presentation software",
+        "Event management dashboard",
+        "Speaker profile page"
+      ]
     }
   }
 }

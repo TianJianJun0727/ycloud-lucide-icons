@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "动画加载指示器",
+    "系统冻结状态",
+    "创意设计场景等待"
+  ],
   "name": "加载器纸风车",
   "tags": [
     "加载",
     "等待",
-    "忙",
-    "进展",
-    "悸动者",
-    "旋转器",
-    "纺纱",
-    "沙滩球",
-    "冷冻的",
+    "旋转",
+    "风车",
+    "动画",
+    "缓冲",
     "冻结"
   ],
   "categories": [
@@ -24,16 +25,17 @@
       "tags": [
         "loading",
         "wait",
-        "busy",
-        "progress",
-        "throbber",
-        "spinner",
         "spinning",
-        "beach ball",
-        "frozen",
-        "freeze"
+        "pinwheel",
+        "animation",
+        "buffering",
+        "frozen"
       ],
-      "use-cases": []
+      "use-cases": [
+        "animated loading indicator",
+        "system frozen state",
+        "creative design scenario waiting"
+      ]
     }
   }
 }

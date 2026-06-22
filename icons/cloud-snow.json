@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "降雪天气预报",
+    "雪天应用图标",
+    "冬季天气提示"
+  ],
   "name": "云雪",
   "tags": [
     "天气",
-    "暴风雪"
+    "降雪",
+    "下雪",
+    "雪天",
+    "冰雪"
   ],
   "categories": [
     "weather"
@@ -14,9 +21,16 @@
       "name": "cloud snow",
       "tags": [
         "weather",
-        "blizzard"
+        "snow",
+        "snowing",
+        "snowy day",
+        "ice snow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Snowy weather forecast",
+        "Snow day app icon",
+        "Winter weather indicator"
+      ]
     }
   }
 }

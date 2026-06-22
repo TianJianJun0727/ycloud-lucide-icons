@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "危险警告标识",
+    "实验室界面",
+    "安全提示"
+  ],
   "name": "生物危害",
   "tags": [
-    "后果",
-    "废物",
-    "生物学",
-    "化学",
-    "化学",
-    "元素"
+    "生物危害",
+    "危险",
+    "警告",
+    "科学",
+    "安全"
   ],
   "categories": [
     "science"
@@ -17,14 +20,17 @@
     "en": {
       "name": "biohazard",
       "tags": [
-        "fallout",
-        "waste",
-        "biology",
-        "chemistry",
-        "chemical",
-        "element"
+        "biohazard",
+        "danger",
+        "warning",
+        "science",
+        "safety"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hazard warning sign",
+        "Laboratory interface",
+        "Safety alert"
+      ]
     }
   }
 }

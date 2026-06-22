@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "航班状态出发显示",
+    "旅行规划",
+    "机场出发板"
+  ],
   "name": "飞机起飞",
   "tags": [
+    "飞机起飞",
     "出发",
-    "飞机",
+    "航空",
     "旅行",
-    "飞机",
-    "起飞"
+    "交通"
   ],
   "categories": [
     "transportation",
@@ -17,13 +21,17 @@
     "en": {
       "name": "plane takeoff",
       "tags": [
+        "plane takeoff",
         "departure",
-        "plane",
-        "trip",
-        "airplane",
-        "takeoff"
+        "aviation",
+        "travel",
+        "transportation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Flight status departure display",
+        "Travel planning",
+        "Airport departure board"
+      ]
     }
   }
 }

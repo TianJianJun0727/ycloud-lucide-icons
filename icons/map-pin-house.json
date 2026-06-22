@@ -1,26 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家庭位置标记",
+    "住宅地址图钉",
+    "房产位置导航"
+  ],
   "name": "地图图钉房屋",
   "tags": [
-    "位置",
-    "航路点",
-    "标记",
-    "掉落",
-    "首页",
-    "生活",
-    "建筑物",
-    "居住地",
-    "建筑学",
-    "地址",
-    "波伊",
-    "房地产",
-    "财产",
-    "导航",
-    "目的地",
-    "地理定位",
-    "地方",
-    "地标"
+    "家庭位置",
+    "住宅标记",
+    "家庭地址",
+    "房屋定位",
+    "居住地导航"
   ],
   "categories": [
     "navigation",
@@ -31,26 +22,17 @@
     "en": {
       "name": "map pin house",
       "tags": [
-        "location",
-        "waypoint",
-        "marker",
-        "drop",
-        "home",
-        "living",
-        "building",
-        "residence",
-        "architecture",
-        "address",
-        "poi",
-        "real estate",
-        "property",
-        "navigation",
-        "destination",
-        "geolocation",
-        "place",
-        "landmark"
+        "home location",
+        "residence marker",
+        "house address",
+        "property定位",
+        "residence navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Home location marker",
+        "Residential address pin",
+        "Property location navigation"
+      ]
     }
   }
 }

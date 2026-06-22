@@ -1,22 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭聊天窗口",
+    "删除消息或评论",
+    "静音对话"
+  ],
   "name": "消息方形关闭",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
-    "清除",
     "关闭",
     "删除",
-    "移除",
-    "取消",
-    "沉默",
+    "清除",
     "静音",
-    "中等"
+    "聊天",
+    "对话",
+    "评论",
+    "取消",
+    "管理"
   ],
   "categories": [
     "social"
@@ -25,22 +24,21 @@
     "en": {
       "name": "message square X",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "clear",
         "close",
         "delete",
-        "remove",
-        "cancel",
-        "silence",
+        "clear",
         "mute",
+        "chat",
+        "conversation",
+        "comment",
+        "cancel",
         "moderate"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Close a chat window",
+        "Delete a message or comment",
+        "Mute a conversation"
+      ]
     }
   }
 }

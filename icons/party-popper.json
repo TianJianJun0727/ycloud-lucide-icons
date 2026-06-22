@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "成功通知或祝贺消息",
+    "派对活动邀请设计",
+    "社交媒体庆祝反应"
+  ],
   "name": "礼花",
   "tags": [
+    "庆祝",
+    "派对",
+    "礼花",
     "表情符号",
     "恭喜",
-    "庆祝活动",
-    "聚会",
-    "多田",
-    "🎉",
-    "🎊",
-    "兴奋",
-    "令人兴奋的",
-    "兴奋",
     "五彩纸屑"
   ],
   "categories": [
@@ -22,19 +21,18 @@
     "en": {
       "name": "party popper",
       "tags": [
-        "emoji",
-        "congratulations",
         "celebration",
         "party",
-        "tada",
-        "🎉",
-        "🎊",
-        "excitement",
-        "exciting",
-        "excites",
+        "popper",
+        "emoji",
+        "congratulations",
         "confetti"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Success notification or congratulation message",
+        "Party event invitation design",
+        "Social media celebration reaction"
+      ]
     }
   }
 }

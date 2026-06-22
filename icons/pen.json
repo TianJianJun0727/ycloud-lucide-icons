@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本批注工具",
+    "文档签署界面",
+    "笔记应用图标"
+  ],
   "name": "笔",
   "tags": [
-    "铅笔",
-    "改变",
-    "创建",
-    "画",
-    "作家",
-    "写作",
-    "比罗",
-    "墨水",
-    "标记",
-    "毡尖",
-    "文具",
-    "艺术家"
+    "笔",
+    "书写",
+    "编辑",
+    "注释",
+    "签字",
+    "文具"
   ],
   "categories": [
     "text",
@@ -33,20 +31,18 @@
     "en": {
       "name": "pen",
       "tags": [
-        "pencil",
-        "change",
-        "create",
-        "draw",
-        "writer",
-        "writing",
-        "biro",
-        "ink",
-        "marker",
-        "felt tip",
-        "stationery",
-        "artist"
+        "pen",
+        "write",
+        "edit",
+        "annotate",
+        "sign",
+        "stationery"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text annotation tool",
+        "Document signing interface",
+        "Note-taking app icon"
+      ]
     }
   }
 }

@@ -1,33 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网络设备连接",
+    "互联网连接设置",
+    "硬件接口指示器",
+    "数据传输状态"
+  ],
   "name": "以太网接口",
   "tags": [
-    "互联网",
+    "以太网",
     "网络",
     "连接",
-    "电缆",
-    "局域网",
-    "港口",
+    "端口",
     "路由器",
-    "开关",
-    "枢纽",
-    "调制解调器",
-    "网络",
-    "在线",
-    "网络",
-    "沟通",
-    "插座",
-    "插头",
-    "插槽",
-    "控制器",
-    "连接器",
-    "接口",
-    "控制台",
-    "信号",
     "数据",
-    "输入",
-    "输出"
+    "LAN"
   ],
   "categories": [
     "communication",
@@ -39,33 +26,20 @@
     "en": {
       "name": "ethernet port",
       "tags": [
-        "internet",
+        "ethernet",
         "network",
         "connection",
-        "cable",
-        "lan",
         "port",
         "router",
-        "switch",
-        "hub",
-        "modem",
-        "web",
-        "online",
-        "networking",
-        "communication",
-        "socket",
-        "plug",
-        "slot",
-        "controller",
-        "connector",
-        "interface",
-        "console",
-        "signal",
         "data",
-        "input",
-        "output"
+        "LAN"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Network device connections",
+        "Internet connectivity settings",
+        "Hardware interface indicators",
+        "Data transfer status"
+      ]
     }
   }
 }

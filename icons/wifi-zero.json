@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示Wi-Fi信号完全丢失",
+    "网络中断或断开连接状态"
+  ],
   "name": "无线网络零",
   "tags": [
-    "连接",
-    "信号",
-    "无线"
+    "无Wi-Fi信号",
+    "信号丢失",
+    "网络中断",
+    "连接丢失",
+    "零信号"
   ],
   "categories": [
     "connectivity",
@@ -15,11 +20,16 @@
     "en": {
       "name": "wifi zero",
       "tags": [
-        "connection",
-        "signal",
-        "wireless"
+        "no wifi signal",
+        "signal lost",
+        "network outage",
+        "connection lost",
+        "zero signal"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Indicating complete loss of Wi-Fi signal",
+        "Network outage or disconnection state"
+      ]
     }
   }
 }

@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数值比较",
+    "数据可视化",
+    "报表图表"
+  ],
   "name": "图表条形大",
   "tags": [
-    "统计",
-    "分析",
+    "柱状图",
+    "条形图",
     "图表",
-    "图"
+    "数据",
+    "统计"
   ],
   "categories": [
     "charts"
@@ -23,12 +28,17 @@
     "en": {
       "name": "chart bar big",
       "tags": [
+        "bar chart",
+        "chart",
+        "data",
         "statistics",
-        "analytics",
-        "diagram",
         "graph"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Compare values",
+        "Data visualization",
+        "Report charts"
+      ]
     }
   }
 }

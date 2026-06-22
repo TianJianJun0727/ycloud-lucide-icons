@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户头像",
+    "联系人列表条目",
+    "社交媒体头像",
+    "账户管理"
+  ],
   "name": "联系人圆形",
   "tags": [
+    "联系人",
     "用户",
-    "人",
-    "家庭",
-    "朋友",
-    "相识",
-    "上市",
-    "网络"
+    "个人",
+    "社交",
+    "通讯录",
+    "好友",
+    "人脉"
   ],
   "categories": [
     "account",
@@ -29,15 +34,20 @@
     "en": {
       "name": "contact round",
       "tags": [
+        "contact",
         "user",
         "person",
-        "family",
+        "social",
+        "address book",
         "friend",
-        "acquaintance",
-        "listing",
-        "networking"
+        "network"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile picture",
+        "Contact list entry",
+        "Social media avatar",
+        "Account management"
+      ]
     }
   }
 }

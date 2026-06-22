@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学不等式运算",
+    "编程条件检查",
+    "数据筛选界面",
+    "逻辑门表示"
+  ],
   "name": "等于非",
   "tags": [
-    "计算",
-    "关闭",
+    "不等于",
     "数学",
-    "操作员",
+    "运算符",
     "代码",
-    "≠"
+    "比较",
+    "逻辑"
   ],
   "categories": [
     "math",
@@ -18,14 +23,19 @@
     "en": {
       "name": "equal not",
       "tags": [
-        "calculate",
-        "off",
+        "not equal",
         "math",
         "operator",
         "code",
-        "≠"
+        "comparison",
+        "logical"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mathematical inequality operations",
+        "Programming condition checks",
+        "Data filtering interfaces",
+        "Logic gate representations"
+      ]
     }
   }
 }

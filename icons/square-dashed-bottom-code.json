@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带有虚线底部边框的代码片段",
+    "代码文件的文件图标",
+    "代码块的UI元素"
+  ],
   "name": "方形虚线底部代码",
   "tags": [
-    "长方形",
-    "纵横比",
-    "1:1",
-    "形状",
-    "片段",
-    "代码",
-    "编码"
+    "代码片段",
+    "代码块",
+    "方形",
+    "虚线",
+    "底部",
+    "开发",
+    "编程"
   ],
   "categories": [
     "development",
@@ -19,15 +23,19 @@
     "en": {
       "name": "square dashed bottom code",
       "tags": [
-        "rectangle",
-        "aspect ratio",
-        "1:1",
-        "shape",
-        "snippet",
-        "code",
+        "code snippet",
+        "code block",
+        "square",
+        "dashed",
+        "bottom",
+        "development",
         "coding"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code snippet with a dashed bottom border",
+        "File icon for a code file",
+        "UI element for a code block"
+      ]
     }
   }
 }

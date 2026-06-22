@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "账号安全状态",
+    "用户锁定指示",
+    "安全保护功能"
+  ],
   "name": "用户锁定",
   "tags": [
-    "人",
-    "锁定",
-    "锁定",
-    "帐户",
-    "安全"
+    "用户锁定",
+    "账号锁定",
+    "安全保护",
+    "访问限制",
+    "身份保护"
   ],
   "categories": [
     "account",
@@ -17,13 +21,17 @@
     "en": {
       "name": "user lock",
       "tags": [
-        "person",
-        "lock",
-        "locked",
-        "account",
-        "secure"
+        "user lock",
+        "account lock",
+        "security protection",
+        "access restriction",
+        "identity protection"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Account security status",
+        "User lockout indicator",
+        "Security protection feature"
+      ]
     }
   }
 }

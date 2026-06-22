@@ -1,30 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "顶部关闭或取消操作",
+    "表示数学乘法或平均值",
+    "向上的导航或方向指示"
+  ],
   "name": "关闭线条顶部",
   "tags": [
-    "线条",
-    "顶部",
-    "箭头",
-    "导航",
-    "向上",
-    "指针",
-    "方向",
-    "矢量",
-    "符号",
-    "取消",
     "关闭",
+    "取消",
     "删除",
-    "移除",
-    "次",
     "清除",
-    "数学",
-    "乘以",
     "乘法",
-    "意思是",
-    "中位数",
-    "平均",
-    "x̄"
+    "平均值",
+    "向上箭头"
   ],
   "categories": [
     "notifications",
@@ -34,30 +23,19 @@
     "en": {
       "name": "X line top",
       "tags": [
-        "line",
-        "top",
-        "arrow",
-        "navigation",
-        "up",
-        "pointer",
-        "direction",
-        "vector",
-        "symbol",
-        "cancel",
         "close",
+        "cancel",
         "delete",
-        "remove",
-        "times",
         "clear",
-        "math",
-        "multiply",
         "multiplication",
-        "mean",
-        "median",
         "average",
-        "x̄"
+        "up arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Top close or cancel action",
+        "Representing mathematical multiplication or average",
+        "Upward navigation or direction indicator"
+      ]
     }
   }
 }

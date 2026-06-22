@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "占星应用星座符号",
+    "社交媒体个人资料星座",
+    "星座运势网站图标"
+  ],
   "name": "星座巨蟹座",
   "tags": [
+    "巨蟹座",
+    "星座",
+    "占星",
     "螃蟹",
-    "外壳",
-    "保护",
-    "水",
+    "水象",
     "直觉",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "保护",
+    "星座运势"
   ],
   "categories": [
     "social",
@@ -22,18 +24,20 @@
     "en": {
       "name": "zodiac cancer",
       "tags": [
-        "crab",
-        "shell",
-        "protection",
-        "water",
-        "intuition",
+        "cancer",
+        "zodiac",
         "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "crab",
+        "water sign",
+        "intuition",
+        "protection",
+        "horoscope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app zodiac sign",
+        "Social media profile birth sign",
+        "Horoscope website icon"
+      ]
     }
   }
 }

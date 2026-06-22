@@ -1,22 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "已静音的对话或评论",
+    "已删除消息指示器",
+    "被禁用的反馈渠道"
+  ],
   "name": "消息圆形关闭",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
-    "清除",
-    "关闭",
-    "删除",
-    "移除",
-    "取消",
-    "沉默",
-    "静音",
-    "中等"
+    "消息关闭",
+    "静音聊天",
+    "删除评论",
+    "禁用消息",
+    "取消发送"
   ],
   "categories": [
     "social"
@@ -25,22 +20,17 @@
     "en": {
       "name": "message circle off",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "clear",
-        "close",
-        "delete",
-        "remove",
-        "cancel",
-        "silence",
-        "mute",
-        "moderate"
+        "message off",
+        "mute chat",
+        "delete comment",
+        "disable message",
+        "cancel send"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Muted conversation or comment",
+        "Deleted message indicator",
+        "Disabled feedback channel"
+      ]
     }
   }
 }

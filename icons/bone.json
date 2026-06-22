@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示宠物护理或兽医功能",
+    "指示健康或解剖学相关内容"
+  ],
   "name": "骨头",
   "tags": [
-    "健康",
-    "骨架",
-    "头骨",
-    "死亡",
+    "骨头",
+    "骨骼",
     "宠物",
+    "医疗",
+    "解剖",
+    "动物",
     "狗"
   ],
   "categories": [
@@ -19,14 +23,18 @@
     "en": {
       "name": "bone",
       "tags": [
-        "health",
+        "bone",
         "skeleton",
-        "skull",
-        "death",
-        "pets",
+        "pet",
+        "medical",
+        "anatomy",
+        "animal",
         "dog"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Represent pet care or veterinary features",
+        "Indicate health or anatomy-related content"
+      ]
     }
   }
 }

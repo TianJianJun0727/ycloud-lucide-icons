@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学等式运算",
+    "编程赋值语句",
+    "数据匹配界面",
+    "方程表示"
+  ],
   "name": "等于",
   "tags": [
-    "计算",
+    "等于",
     "数学",
-    "操作员",
-    "作业",
+    "运算符",
     "代码",
-    "="
+    "比较",
+    "赋值"
   ],
   "categories": [
     "math",
@@ -18,14 +23,19 @@
     "en": {
       "name": "equal",
       "tags": [
-        "calculate",
+        "equal",
         "math",
         "operator",
-        "assignment",
         "code",
-        "="
+        "comparison",
+        "assignment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mathematical equality operations",
+        "Programming assignment statements",
+        "Data matching interfaces",
+        "Equation representations"
+      ]
     }
   }
 }

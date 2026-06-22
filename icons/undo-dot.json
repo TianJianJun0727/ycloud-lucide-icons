@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "步骤式撤销",
+    "历史记录点",
+    "特定操作回退"
+  ],
   "name": "撤销点",
   "tags": [
-    "重做",
-    "历史",
+    "撤销",
     "步骤",
-    "返回"
+    "历史点",
+    "回退点"
   ],
   "categories": [
     "text",
@@ -16,12 +20,16 @@
     "en": {
       "name": "undo dot",
       "tags": [
-        "redo",
-        "history",
+        "undo",
         "step",
-        "back"
+        "history point",
+        "rollback point"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Step-based undo",
+        "History checkpoint",
+        "Specific action rollback"
+      ]
     }
   }
 }

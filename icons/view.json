@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换视图模式",
+    "预览内容",
+    "显示/隐藏详情"
+  ],
   "name": "视图",
   "tags": [
+    "视图",
+    "查看",
+    "预览",
     "眼睛",
-    "看看"
+    "显示",
+    "可见性"
   ],
   "categories": [
     "design",
@@ -14,10 +22,18 @@
     "en": {
       "name": "view",
       "tags": [
+        "view",
+        "preview",
         "eye",
+        "display",
+        "visibility",
         "look"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle view mode",
+        "Preview content",
+        "Show/hide details"
+      ]
     }
   }
 }

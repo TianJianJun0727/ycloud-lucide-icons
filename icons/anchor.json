@@ -1,9 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "航海或帆船应用界面",
+    "文本编辑器链接锚点功能",
+    "安全或稳定指示器"
+  ],
   "name": "锚点",
   "tags": [
-    "船"
+    "锚",
+    "锚点",
+    "航海",
+    "停泊",
+    "链接",
+    "定位",
+    "稳定",
+    "安全"
   ],
   "categories": [
     "transportation",
@@ -13,9 +24,20 @@
     "en": {
       "name": "anchor",
       "tags": [
-        "ship"
+        "anchor",
+        "nautical",
+        "ship",
+        "mooring",
+        "link",
+        "position",
+        "stability",
+        "security"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Maritime or sailing application UI",
+        "Text editor link anchoring feature",
+        "Security or stability indicator"
+      ]
     }
   }
 }

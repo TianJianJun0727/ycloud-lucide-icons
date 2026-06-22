@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "加载状态和进度指示",
+    "游戏计时显示",
+    "时间管理应用"
+  ],
   "name": "沙漏",
   "tags": [
-    "定时器",
+    "沙漏",
+    "计时器",
     "时间",
-    "沙漏"
+    "倒计时",
+    "等待",
+    "游戏"
   ],
   "categories": [
     "time",
@@ -15,11 +22,18 @@
     "en": {
       "name": "hourglass",
       "tags": [
+        "hourglass",
         "timer",
         "time",
-        "sandglass"
+        "countdown",
+        "waiting",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Loading states and progress indicators",
+        "Game timer displays",
+        "Time management applications"
+      ]
     }
   }
 }

@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "客户服务反馈选项",
+    "表示沮丧的任务状态",
+    "界面中的轻度负面反应"
+  ],
   "name": "烦恼",
   "tags": [
-    "表情符号",
-    "滋扰",
-    "脸",
-    "情感"
+    "烦恼",
+    "不耐烦",
+    "困扰",
+    "表情",
+    "情绪",
+    "轻微不满",
+    "厌烦"
   ],
   "categories": [
     "emoji"
@@ -15,12 +22,19 @@
     "en": {
       "name": "annoyed",
       "tags": [
+        "annoyed",
+        "impatient",
+        "bothered",
         "emoji",
-        "nuisance",
-        "face",
-        "emotion"
+        "emotion",
+        "irritated",
+        "frustrated"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Customer service feedback option",
+        "Task status indicating frustration",
+        "Lightweight negative reaction in UI"
+      ]
     }
   }
 }

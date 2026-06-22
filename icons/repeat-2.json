@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "社交媒体转发功能",
+    "媒体播放器中循环播放列表",
+    "多次分享或转发消息"
+  ],
   "name": "重复2",
   "tags": [
-    "箭头",
-    "转发",
+    "重复",
+    "循环",
     "转发",
     "分享",
-    "重复",
-    "循环"
+    "箭头"
   ],
   "categories": [
     "arrows",
@@ -19,14 +22,17 @@
     "en": {
       "name": "repeat 2",
       "tags": [
-        "arrows",
-        "retweet",
-        "repost",
-        "share",
         "repeat",
-        "loop"
+        "loop",
+        "retweet",
+        "share",
+        "arrows"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Social media retweet or repost function",
+        "Loop a playlist in a media player",
+        "Share or forward a message multiple times"
+      ]
     }
   }
 }

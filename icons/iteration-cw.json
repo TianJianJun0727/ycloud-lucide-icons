@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "重做操作按钮",
+    "流程中的前进步骤",
+    "继续下一步"
+  ],
   "name": "迭代顺时针",
   "tags": [
+    "迭代",
+    "顺时针",
     "箭头",
-    "左"
+    "循环",
+    "前进",
+    "重做",
+    "下一步",
+    "刷新"
   ],
   "categories": [
     "arrows",
@@ -14,10 +24,20 @@
     "en": {
       "name": "iteration cw",
       "tags": [
+        "iteration",
+        "clockwise",
         "arrow",
-        "left"
+        "loop",
+        "forward",
+        "redo",
+        "next",
+        "refresh"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Redo action button",
+        "Step forward in a process",
+        "Proceed to next step"
+      ]
     }
   }
 }

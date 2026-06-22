@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "批量实验跟踪",
+    "实验室样本管理",
+    "研究数据可视化"
+  ],
   "name": "测试管组",
   "tags": [
-    "管",
-    "小瓶",
-    "小瓶",
-    "烧瓶",
-    "安瓿",
-    "安瓿",
-    "实验室",
-    "化学",
+    "试管组",
     "实验",
-    "测试"
+    "化学",
+    "科学",
+    "测试",
+    "实验室"
   ],
   "categories": [
     "science"
@@ -21,18 +21,18 @@
     "en": {
       "name": "test tubes",
       "tags": [
-        "tubes",
-        "vials",
-        "phials",
-        "flasks",
-        "ampoules",
-        "ampules",
-        "lab",
-        "chemistry",
+        "test tubes",
         "experiment",
-        "test"
+        "chemistry",
+        "science",
+        "test",
+        "lab"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Batch experiment tracking",
+        "Lab sample management",
+        "Research data visualization"
+      ]
     }
   }
 }

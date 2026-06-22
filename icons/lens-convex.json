@@ -1,21 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "放大镜工具界面",
+    "光学教育材料",
+    "焦点调节控件"
+  ],
   "name": "镜头凸面",
   "tags": [
-    "凸的",
-    "镜头",
+    "凸透镜",
+    "会聚透镜",
+    "放大镜",
     "光学",
-    "放大倍数",
-    "焦点",
-    "光",
-    "折射",
-    "物理学",
-    "眼镜",
-    "望远镜",
-    "显微镜",
-    "弯曲的",
-    "科学"
+    "物理",
+    "科学",
+    "镜头"
   ],
   "categories": [
     "science",
@@ -26,21 +24,19 @@
     "en": {
       "name": "lens convex",
       "tags": [
-        "convex",
-        "lens",
+        "convex lens",
+        "converging lens",
+        "magnifying glass",
         "optics",
-        "magnification",
-        "focus",
-        "light",
-        "refraction",
         "physics",
-        "eyeglass",
-        "telescope",
-        "microscope",
-        "curved",
-        "science"
+        "science",
+        "lens"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Magnifier tool UI",
+        "Optics education material",
+        "Focus adjustment control"
+      ]
     }
   }
 }

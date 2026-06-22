@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多云天气预报",
+    "晴间多云图标",
+    "部分晴朗天气"
+  ],
   "name": "云太阳",
   "tags": [
     "天气",
-    "部分地"
+    "多云",
+    "晴间多云",
+    "部分晴朗",
+    "阳光云层"
   ],
   "categories": [
     "weather"
@@ -14,9 +21,16 @@
       "name": "cloud sun",
       "tags": [
         "weather",
-        "partly"
+        "cloudy",
+        "partly cloudy",
+        "partly sunny",
+        "sun clouds"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloudy weather forecast",
+        "Partly cloudy icon",
+        "Partly sunny weather"
+      ]
     }
   }
 }

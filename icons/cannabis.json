@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "药用大麻标识",
+    "工业大麻产品",
+    "科普教育材料",
+    "合规产品标签"
+  ],
   "name": "叶片",
   "tags": [
     "大麻",
-    "杂草",
-    "叶"
+    "cannabis",
+    "药用植物",
+    "工业大麻"
   ],
   "categories": [
     "nature"
@@ -15,10 +21,16 @@
       "name": "cannabis",
       "tags": [
         "cannabis",
-        "weed",
-        "leaf"
+        "marijuana",
+        "medicinal plant",
+        "industrial hemp"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Medical cannabis labeling",
+        "Industrial hemp products",
+        "Educational materials",
+        "Compliant product labeling"
+      ]
     }
   }
 }

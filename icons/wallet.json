@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "钱包界面",
+    "支付处理",
+    "财务管理"
+  ],
   "name": "钱包",
   "tags": [
-    "钱",
+    "钱包",
+    "支付",
     "金融",
-    "口袋"
+    "货币",
+    "资金"
   ],
   "categories": [
     "account",
@@ -15,11 +21,17 @@
     "en": {
       "name": "wallet",
       "tags": [
-        "money",
+        "wallet",
+        "payment",
         "finance",
-        "pocket"
+        "currency",
+        "funds"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Wallet interface",
+        "Payment processing",
+        "Financial management"
+      ]
     }
   }
 }

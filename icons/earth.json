@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "语言选择器",
+    "国际化网站",
+    "全局设置",
+    "世界地图功能"
+  ],
   "name": "地球",
   "tags": [
     "世界",
-    "浏览器",
+    "全球",
+    "地球仪",
     "语言",
     "翻译",
-    "地球仪"
+    "国际",
+    "地点",
+    "网络"
   ],
   "categories": [
     "navigation"
@@ -25,12 +33,20 @@
       "name": "earth",
       "tags": [
         "world",
-        "browser",
+        "global",
+        "globe",
         "language",
-        "translate",
-        "globe"
+        "translation",
+        "international",
+        "location",
+        "web"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Language selector",
+        "International website",
+        "Global settings",
+        "World map feature"
+      ]
     }
   }
 }

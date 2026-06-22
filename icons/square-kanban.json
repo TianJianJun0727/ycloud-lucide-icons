@@ -1,24 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "项目管理仪表板",
+    "任务跟踪看板",
+    "敏捷工作流可视化"
+  ],
   "name": "方形看板",
   "tags": [
-    "项目",
-    "管理",
-    "概述",
-    "董事会",
-    "门票",
-    "问题",
-    "路线图",
-    "计划",
-    "意图",
-    "生产力",
-    "工作",
-    "敏捷的",
-    "代码",
-    "编码",
-    "工具栏",
-    "按钮"
+    "看板",
+    "项目管理",
+    "任务",
+    "敏捷开发",
+    "工作流",
+    "面板"
   ],
   "categories": [
     "charts",
@@ -37,24 +31,18 @@
     "en": {
       "name": "square kanban",
       "tags": [
-        "projects",
-        "manage",
-        "overview",
-        "board",
-        "tickets",
-        "issues",
-        "roadmap",
-        "plan",
-        "intentions",
-        "productivity",
-        "work",
+        "kanban",
+        "project management",
+        "tasks",
         "agile",
-        "code",
-        "coding",
-        "toolbar",
-        "button"
+        "workflow",
+        "board"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Project management dashboard",
+        "Task tracking board",
+        "Agile workflow visualization"
+      ]
     }
   }
 }

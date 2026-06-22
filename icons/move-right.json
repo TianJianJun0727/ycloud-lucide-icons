@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "将对象向右移动",
+    "导航到下一页",
+    "地图上的东方",
+    "媒体快进"
+  ],
   "name": "向右移动",
   "tags": [
     "箭头",
     "方向",
-    "趋势平坦",
-    "东"
+    "向右",
+    "移动",
+    "东",
+    "前进",
+    "下一步"
   ],
   "categories": [
     "arrows"
@@ -17,10 +25,18 @@
       "tags": [
         "arrow",
         "direction",
-        "trend flat",
-        "east"
+        "right",
+        "move",
+        "east",
+        "forward",
+        "next"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Move object right",
+        "Navigate to next page",
+        "East direction on map",
+        "Fast-forward media"
+      ]
     }
   }
 }

@@ -1,21 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏计分",
+    "简单计数或正字标记",
+    "进度指示器"
+  ],
   "name": "计数5",
   "tags": [
     "计数",
-    "分数",
-    "列举",
-    "天",
-    "五",
+    "正字计数",
+    "计分",
     "5",
+    "五",
     "第五",
-    "酒吧",
-    "监狱",
-    "细胞",
-    "句子",
-    "斜线",
-    "/"
+    "组"
   ],
   "categories": [
     "math",
@@ -25,21 +23,19 @@
     "en": {
       "name": "tally 5",
       "tags": [
+        "tally",
         "count",
         "score",
-        "enumerate",
-        "days",
         "five",
         "5",
         "fifth",
-        "bars",
-        "prison",
-        "cell",
-        "sentence",
-        "slash",
-        "/"
+        "group"
       ],
-      "use-cases": []
+      "use-cases": [
+        "scorekeeping in games",
+        "simple counting or tally marks",
+        "progress indicator"
+      ]
     }
   }
 }

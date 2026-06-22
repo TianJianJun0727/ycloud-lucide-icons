@@ -1,23 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "取消搜索操作",
+    "禁用搜索过滤器",
+    "清空搜索输入框"
+  ],
   "name": "搜索斜杠",
   "tags": [
-    "找到",
-    "扫描",
-    "放大镜",
-    "放大镜",
+    "搜索",
     "停止",
     "清除",
     "取消",
-    "中止",
-    "/",
-    "镜头",
-    "定位",
-    "探索",
-    "发现",
-    "放大",
-    "缩放"
+    "禁用",
+    "斜杠",
+    "放大镜"
   ],
   "categories": [
     "text",
@@ -27,23 +23,19 @@
     "en": {
       "name": "search slash",
       "tags": [
-        "find",
-        "scan",
-        "magnifier",
-        "magnifying glass",
+        "search",
         "stop",
         "clear",
         "cancel",
-        "abort",
-        "/",
-        "lens",
-        "locate",
-        "explore",
-        "discover",
-        "enlarge",
-        "zoom"
+        "disable",
+        "slash",
+        "magnifier"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cancel search action",
+        "Disable search filter",
+        "Clear search input"
+      ]
     }
   }
 }

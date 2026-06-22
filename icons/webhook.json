@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "配置Webhook端点",
+    "API集成设置",
+    "自动化通知触发器",
+    "第三方服务连接"
+  ],
   "name": "Webhook回调",
   "tags": [
-    "推送API",
-    "接口",
-    "回调"
+    "Webhook",
+    "回调",
+    "API",
+    "推送",
+    "通知",
+    "集成",
+    "自动化"
   ],
   "categories": [
     "development",
@@ -16,11 +25,20 @@
     "en": {
       "name": "webhook",
       "tags": [
-        "push api",
-        "interface",
-        "callback"
+        "webhook",
+        "callback",
+        "API",
+        "push",
+        "notification",
+        "integration",
+        "automation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Configure webhook endpoint",
+        "API integration settings",
+        "Automated notification triggers",
+        "Third-party service connection"
+      ]
     }
   }
 }

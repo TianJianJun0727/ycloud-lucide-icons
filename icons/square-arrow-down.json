@@ -1,15 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下拉菜单触发器",
+    "向下滚动指示器",
+    "键盘导航",
+    "方向控制",
+    "界面展开按钮"
+  ],
   "name": "方形箭头下",
   "tags": [
-    "向后",
-    "反向",
+    "向下箭头",
     "方向",
-    "南",
-    "标志",
     "键盘",
-    "按钮"
+    "按钮",
+    "南",
+    "导航",
+    "下拉"
   ],
   "categories": [
     "arrows",
@@ -27,15 +33,21 @@
     "en": {
       "name": "square arrow down",
       "tags": [
-        "backwards",
-        "reverse",
+        "down arrow",
         "direction",
-        "south",
-        "sign",
         "keyboard",
-        "button"
+        "button",
+        "south",
+        "navigation",
+        "dropdown"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dropdown menu trigger",
+        "Scroll down indicator",
+        "Keyboard navigation",
+        "Directional control",
+        "UI expansion button"
+      ]
     }
   }
 }

@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "低音量设置",
+    "媒体播放控制",
+    "声音级别指示"
+  ],
   "name": "音量1",
   "tags": [
-    "音乐",
+    "音量",
+    "低音量",
     "声音",
-    "扬声器"
+    "音频",
+    "扬声器",
+    "媒体"
   ],
   "categories": [
     "connectivity",
@@ -16,11 +23,18 @@
     "en": {
       "name": "volume 1",
       "tags": [
-        "music",
+        "volume",
+        "low volume",
         "sound",
-        "speaker"
+        "audio",
+        "speaker",
+        "media"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Low volume setting",
+        "Media playback control",
+        "Sound level indicator"
+      ]
     }
   }
 }

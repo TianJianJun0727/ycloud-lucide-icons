@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "危险物质警告",
+    "科学实验界面",
+    "核能相关设置"
+  ],
   "name": "辐射",
   "tags": [
-    "放射性的",
+    "辐射",
+    "放射性",
     "核",
-    "后果",
-    "废物",
-    "原子的",
-    "物理学",
-    "粒子",
-    "元素",
-    "分子"
+    "危险",
+    "警告",
+    "科学"
   ],
   "categories": [
     "science"
@@ -20,17 +21,18 @@
     "en": {
       "name": "radiation",
       "tags": [
+        "radiation",
         "radioactive",
         "nuclear",
-        "fallout",
-        "waste",
-        "atomic",
-        "physics",
-        "particle",
-        "element",
-        "molecule"
+        "danger",
+        "warning",
+        "science"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Hazardous material warning",
+        "Science experiment interface",
+        "Nuclear energy related settings"
+      ]
     }
   }
 }

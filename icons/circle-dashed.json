@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "草稿状态指示器",
+    "进行中任务",
+    "占位符状态"
+  ],
   "name": "圆形虚线",
   "tags": [
     "待定",
-    "点",
-    "进展",
-    "问题",
     "草稿",
-    "代码",
-    "编码",
-    "版本控制"
+    "进度",
+    "占位符",
+    "开发"
   ],
   "categories": [
     "development",
@@ -21,15 +22,16 @@
       "name": "circle dashed",
       "tags": [
         "pending",
-        "dot",
-        "progress",
-        "issue",
         "draft",
-        "code",
-        "coding",
-        "version control"
+        "progress",
+        "placeholder",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Draft status indicator",
+        "In progress task",
+        "Placeholder state"
+      ]
     }
   }
 }

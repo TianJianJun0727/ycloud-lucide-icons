@@ -1,35 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "更多操作按钮",
+    "折叠菜单项",
+    "数据加载状态",
+    "代码编辑器中的展开操作"
+  ],
   "name": "矩形省略号",
   "tags": [
-    "登录",
-    "密码",
-    "验证",
-    "2FA",
-    "领域",
-    "填充",
-    "省略号",
-    "等等",
-    "等",
-    "装载机",
-    "加载",
-    "进展",
-    "待定",
-    "悸动者",
+    "更多",
     "菜单",
     "选项",
-    "操作员",
-    "代码",
-    "传播",
-    "休息",
-    "更多",
-    "进一步",
-    "额外的",
-    "溢出",
-    "点",
-    "……",
-    "..."
+    "省略号",
+    "展开",
+    "加载中",
+    "待处理",
+    "代码展开",
+    "溢出"
   ],
   "categories": [
     "text",
@@ -47,35 +34,22 @@
     "en": {
       "name": "rectangle ellipsis",
       "tags": [
-        "login",
-        "password",
-        "authenticate",
-        "2fa",
-        "field",
-        "fill",
-        "ellipsis",
-        "et cetera",
-        "etc",
-        "loader",
-        "loading",
-        "progress",
-        "pending",
-        "throbber",
+        "more",
         "menu",
         "options",
-        "operator",
-        "code",
-        "spread",
-        "rest",
-        "more",
-        "further",
-        "extra",
-        "overflow",
-        "dots",
-        "…",
-        "..."
+        "ellipsis",
+        "expand",
+        "loading",
+        "pending",
+        "code spread",
+        "overflow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "More actions button",
+        "Collapsed menu items",
+        "Data loading state",
+        "Expand operation in code editor"
+      ]
     }
   }
 }

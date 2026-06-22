@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码编辑器",
+    "编程教程",
+    "计算机科学界面"
+  ],
   "name": "二进制",
   "tags": [
+    "二进制",
     "代码",
+    "编程",
     "数字",
-    "电脑",
-    "零",
-    "一",
-    "布尔值"
+    "计算机"
   ],
   "categories": [
     "text",
@@ -18,14 +21,17 @@
     "en": {
       "name": "binary",
       "tags": [
+        "binary",
         "code",
+        "programming",
         "digits",
-        "computer",
-        "zero",
-        "one",
-        "boolean"
+        "computer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code editor",
+        "Programming tutorial",
+        "Computer science interface"
+      ]
     }
   }
 }

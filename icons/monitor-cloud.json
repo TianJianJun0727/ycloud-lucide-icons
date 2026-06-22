@@ -1,23 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "云桌面服务",
+    "虚拟机管理",
+    "远程工作界面"
+  ],
   "name": "显示器云",
   "tags": [
+    "云桌面",
     "虚拟机",
-    "虚拟桌面",
-    "虚拟机",
-    "维迪",
-    "计算",
+    "远程桌面",
+    "VDI",
+    "云计算",
     "远程工作",
     "监控",
     "基础设施",
-    "软件即服务",
     "SaaS",
-    "工作站",
-    "环境",
-    "电视",
-    "屏幕",
-    "显示"
+    "工作站"
   ],
   "categories": [
     "connectivity",
@@ -30,21 +29,19 @@
       "tags": [
         "virtual machine",
         "virtual desktop",
-        "vm",
-        "vdi",
-        "computing",
+        "VDI",
+        "cloud computing",
         "remote work",
         "monitoring",
         "infrastructure",
-        "software as a service",
-        "saas",
-        "workstation",
-        "environment",
-        "tv",
-        "screen",
-        "display"
+        "SaaS",
+        "workstation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cloud desktop service",
+        "Virtual machine management",
+        "Remote work interface"
+      ]
     }
   }
 }

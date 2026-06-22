@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "日本费用报销",
+    "日元支付收据",
+    "带日元符号的财务文件"
+  ],
   "name": "收据日元日元",
   "tags": [
+    "收据",
     "账单",
-    "优惠券",
-    "滑倒",
-    "勾选",
-    "存根",
-    "货币",
     "日元",
-    "¥"
+    "货币",
+    "支付",
+    "发票",
+    "财务",
+    "旅行"
   ],
   "categories": [
     "finance",
@@ -20,16 +24,20 @@
     "en": {
       "name": "receipt japanese yen",
       "tags": [
+        "receipt",
         "bill",
-        "voucher",
-        "slip",
-        "check",
-        "counterfoil",
+        "japanese yen",
         "currency",
-        "jpy",
-        "¥"
+        "payment",
+        "invoice",
+        "finance",
+        "travel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Expense report for Japan",
+        "Payment receipt in JPY",
+        "Financial document with yen"
+      ]
     }
   }
 }

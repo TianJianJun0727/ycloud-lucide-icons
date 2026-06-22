@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频播放器字幕",
+    "无障碍功能标识",
+    "多语言视频平台",
+    "字幕设置界面"
+  ],
   "name": "字幕",
   "tags": [
-    "隐藏式字幕",
     "字幕",
-    "小标题",
-    "转录",
-    "转录",
-    "对话",
-    "可达性"
+    "closed captions",
+    "无障碍",
+    "视频字幕",
+    "多语言"
   ],
   "categories": [
     "multimedia"
@@ -26,15 +29,18 @@
     "en": {
       "name": "captions",
       "tags": [
-        "closed captions",
+        "captions",
         "subtitles",
-        "subhead",
-        "transcription",
-        "transcribe",
-        "dialogue",
-        "accessibility"
+        "accessibility",
+        "video captions",
+        "multilingual"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video player captions",
+        "Accessibility feature labeling",
+        "Multilingual video platforms",
+        "Caption settings interface"
+      ]
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "粘贴无格式文本",
+    "在富文本编辑器中重置文本样式为默认",
+    "清除所选内容的所有格式"
+  ],
   "name": "移除格式",
   "tags": [
-    "文本",
-    "字体",
-    "版式",
-    "格式",
-    "关闭",
-    "移除",
-    "删除",
-    "次",
-    "清除"
+    "清除格式",
+    "纯文本",
+    "移除样式",
+    "重置",
+    "文本编辑"
   ],
   "categories": [
     "text"
@@ -20,17 +20,17 @@
     "en": {
       "name": "remove formatting",
       "tags": [
-        "text",
-        "font",
-        "typography",
-        "format",
-        "x",
-        "remove",
-        "delete",
-        "times",
-        "clear"
+        "remove formatting",
+        "clear style",
+        "plain text",
+        "reset",
+        "text editing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Paste text without source formatting",
+        "Reset text style to default in a rich text editor",
+        "Clear all formatting from a selection"
+      ]
     }
   }
 }

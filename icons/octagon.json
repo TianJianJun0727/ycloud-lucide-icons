@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "停止标志",
+    "几何形状",
+    "UI指示器"
+  ],
   "name": "八边形",
   "tags": [
     "停止",
-    "形状"
+    "形状",
+    "八边形",
+    "标志"
   ],
   "categories": [
     "shapes"
@@ -14,9 +20,15 @@
       "name": "octagon",
       "tags": [
         "stop",
-        "shape"
+        "shape",
+        "octagon",
+        "sign"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Stop signs",
+        "Geometric shapes",
+        "UI indicators"
+      ]
     }
   }
 }

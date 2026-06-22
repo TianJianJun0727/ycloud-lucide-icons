@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "垂直操作菜单",
+    "移动应用溢出菜单",
+    "表格行上下文菜单",
+    "附加设置下拉菜单"
+  ],
   "name": "省略号垂直",
   "tags": [
-    "菜单",
-    "选项",
-    "传播",
-    "更多",
-    "进一步",
-    "额外的",
-    "溢出",
-    "点",
-    "……",
-    "..."
+    "垂直菜单",
+    "更多选项",
+    "操作菜单",
+    "溢出菜单",
+    "三点菜单",
+    "上下文菜单"
   ],
   "categories": [
     "layout"
@@ -29,18 +30,19 @@
     "en": {
       "name": "ellipsis vertical",
       "tags": [
-        "menu",
-        "options",
-        "spread",
-        "more",
-        "further",
-        "extra",
-        "overflow",
-        "dots",
-        "…",
-        "..."
+        "vertical menu",
+        "more options",
+        "action menu",
+        "overflow menu",
+        "kebab menu",
+        "context menu"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertical kebab menu for actions",
+        "Mobile app overflow menu",
+        "Table row context menu",
+        "Additional settings dropdown"
+      ]
     }
   }
 }

@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "撤销操作按钮",
+    "流程中的后退步骤",
+    "刷新或重新加载数据"
+  ],
   "name": "迭代逆时针",
   "tags": [
+    "迭代",
+    "逆时针",
     "箭头",
-    "右"
+    "循环",
+    "返回",
+    "撤销",
+    "重做",
+    "刷新"
   ],
   "categories": [
     "arrows",
@@ -14,10 +24,20 @@
     "en": {
       "name": "iteration ccw",
       "tags": [
+        "iteration",
+        "counterclockwise",
         "arrow",
-        "right"
+        "loop",
+        "return",
+        "undo",
+        "redo",
+        "refresh"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Undo action button",
+        "Step back in a process",
+        "Refresh or reload data"
+      ]
     }
   }
 }

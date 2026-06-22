@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "欧洲旅行费用报销",
+    "欧元电商结账",
+    "金融交易摘要"
+  ],
   "name": "收据欧元",
   "tags": [
+    "收据",
     "账单",
-    "优惠券",
-    "滑倒",
-    "勾选",
-    "存根",
+    "欧元",
     "货币",
-    "欧元"
+    "支付",
+    "发票",
+    "财务",
+    "旅行"
   ],
   "categories": [
     "finance",
@@ -19,15 +24,20 @@
     "en": {
       "name": "receipt euro",
       "tags": [
+        "receipt",
         "bill",
-        "voucher",
-        "slip",
-        "check",
-        "counterfoil",
+        "euro",
         "currency",
-        "€"
+        "payment",
+        "invoice",
+        "finance",
+        "travel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Expense report for European travel",
+        "E-commerce checkout with EUR",
+        "Financial transaction summary"
+      ]
     }
   }
 }

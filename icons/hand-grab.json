@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "拖放界面",
+    "光标状态",
+    "UI元素选择"
+  ],
   "name": "手抓取",
   "tags": [
-    "手"
+    "抓取",
+    "光标",
+    "拖拽",
+    "选择",
+    "交互设计"
   ],
   "categories": [
     "cursors",
@@ -22,9 +30,17 @@
     "en": {
       "name": "hand grab",
       "tags": [
-        "hand"
+        "grab",
+        "cursor",
+        "drag",
+        "select",
+        "interaction design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Drag and drop interfaces",
+        "Cursor states",
+        "UI element selection"
+      ]
     }
   }
 }

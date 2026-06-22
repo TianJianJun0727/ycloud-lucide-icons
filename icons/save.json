@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑器中的标准保存操作",
+    "文件存储或下载按钮",
+    "将更改保存到文档"
+  ],
   "name": "保存",
   "tags": [
-    "软盘"
+    "保存",
+    "存储",
+    "软盘",
+    "文件",
+    "存档"
   ],
   "categories": [
     "text",
@@ -13,9 +21,17 @@
     "en": {
       "name": "save",
       "tags": [
-        "floppy disk"
+        "save",
+        "storage",
+        "floppy disk",
+        "file",
+        "archive"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Standard save action in editor",
+        "File storage or download button",
+        "Persist changes to a document"
+      ]
     }
   }
 }

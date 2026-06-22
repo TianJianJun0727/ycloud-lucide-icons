@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏应用程序控制",
+    "控制器设置菜单",
+    "设备连接状态"
+  ],
   "name": "摇杆",
   "tags": [
+    "摇杆",
     "游戏",
+    "控制器",
+    "手柄",
     "控制台",
-    "控制杆"
+    "设备"
   ],
   "categories": [
     "gaming",
@@ -15,11 +22,18 @@
     "en": {
       "name": "joystick",
       "tags": [
+        "joystick",
         "game",
+        "controller",
+        "gaming",
         "console",
-        "control stick"
+        "device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gaming application controls",
+        "Controller settings menu",
+        "Device connection status"
+      ]
     }
   }
 }

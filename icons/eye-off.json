@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换密码不可见",
+    "隐藏敏感内容",
+    "禁用预览模式",
+    "隐私设置"
+  ],
   "name": "眼睛关闭",
   "tags": [
-    "查看",
-    "手表",
-    "看到",
     "隐藏",
-    "隐藏",
-    "面具",
-    "隐藏的",
-    "能见度",
-    "愿景"
+    "不可见",
+    "屏蔽",
+    "隐私",
+    "关闭显示",
+    "禁用查看"
   ],
   "categories": [
     "accessibility",
@@ -23,17 +25,19 @@
     "en": {
       "name": "eye off",
       "tags": [
-        "view",
-        "watch",
-        "see",
         "hide",
-        "conceal",
+        "invisible",
         "mask",
-        "hidden",
-        "visibility",
-        "vision"
+        "privacy",
+        "visibility off",
+        "disable view"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle password visibility off",
+        "Hide sensitive content",
+        "Disable preview mode",
+        "Privacy settings"
+      ]
     }
   }
 }

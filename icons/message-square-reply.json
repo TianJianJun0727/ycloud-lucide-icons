@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "回复消息",
+    "评论回复按钮",
+    "回应反馈"
+  ],
   "name": "消息方形回复",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
     "回复",
-    "反应"
+    "消息",
+    "应答",
+    "聊天",
+    "评论",
+    "反馈",
+    "回应",
+    "答复"
   ],
   "categories": [
     "social"
@@ -19,16 +23,20 @@
     "en": {
       "name": "message square reply",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
         "reply",
-        "response"
+        "message",
+        "respond",
+        "chat",
+        "comment",
+        "feedback",
+        "answer",
+        "return"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Replying to a message",
+        "Comment reply button",
+        "Responding to feedback"
+      ]
     }
   }
 }

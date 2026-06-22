@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频文件播放控制",
+    "媒体播放器界面",
+    "音频文件预览"
+  ],
   "name": "文件播放",
   "tags": [
-    "电影",
+    "播放",
     "视频",
-    "电影"
+    "媒体",
+    "电影",
+    "音频"
   ],
   "categories": [
     "files"
@@ -22,11 +28,17 @@
     "en": {
       "name": "file play",
       "tags": [
-        "movie",
+        "play",
         "video",
-        "film"
+        "media",
+        "movie",
+        "audio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video file playback controls",
+        "Media player interface",
+        "Audio file preview"
+      ]
     }
   }
 }

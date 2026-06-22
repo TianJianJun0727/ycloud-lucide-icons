@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "配置文件编辑器",
+    "设置面板",
+    "系统偏好设置"
+  ],
   "name": "文件滑块",
   "tags": [
-    "有齿的",
-    "齿轮",
-    "机械的",
-    "机械",
-    "配置",
-    "控制",
-    "偏好",
+    "配置文件",
     "设置",
-    "系统",
-    "管理员",
-    "编辑",
-    "可执行文件"
+    "选项",
+    "控制",
+    "系统"
   ],
   "categories": [
     "files",
@@ -24,20 +21,17 @@
     "en": {
       "name": "file sliders",
       "tags": [
-        "cogged",
-        "gear",
-        "mechanical",
-        "machinery",
-        "configuration",
-        "controls",
-        "preferences",
+        "configuration file",
         "settings",
-        "system",
-        "admin",
-        "edit",
-        "executable"
+        "options",
+        "controls",
+        "system"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Configuration file editor",
+        "Settings panel",
+        "System preferences"
+      ]
     }
   }
 }

@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐播放器单曲循环模式",
+    "重复播放一次视频片段",
+    "循环播放一次音效"
+  ],
   "name": "重复1",
   "tags": [
-    "重播"
+    "单曲循环",
+    "重复一次",
+    "重播",
+    "媒体播放"
   ],
   "categories": [
     "multimedia"
@@ -12,9 +19,16 @@
     "en": {
       "name": "repeat 1",
       "tags": [
-        "replay"
+        "repeat one",
+        "single loop",
+        "replay",
+        "media playback"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music player single track repeat mode",
+        "Replay a video clip once",
+        "Loop a sound effect one time"
+      ]
     }
   }
 }

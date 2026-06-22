@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "开发者工具中的元素选择器",
+    "点击目标或热点指示器",
+    "DOM节点选择"
+  ],
   "name": "方形虚线鼠标指针",
   "tags": [
-    "检查员",
-    "元素",
-    "鼠标",
-    "点击",
-    "指针",
-    "盒子",
-    "浏览器",
-    "选择器",
-    "目标",
-    "多姆",
-    "节点"
+    "鼠标指针",
+    "元素选择",
+    "DOM检查器",
+    "开发者工具",
+    "方形",
+    "虚线",
+    "点击目标"
   ],
   "categories": [
     "arrows",
@@ -33,19 +33,19 @@
     "en": {
       "name": "square dashed mouse pointer",
       "tags": [
-        "inspector",
-        "element",
-        "mouse",
-        "click",
-        "pointer",
-        "box",
-        "browser",
-        "selector",
-        "target",
-        "dom",
-        "node"
+        "mouse pointer",
+        "element selection",
+        "DOM inspector",
+        "developer tools",
+        "square",
+        "dashed",
+        "click target"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Element selector in developer tools",
+        "Click target or hotspot indicator",
+        "DOM node selection"
+      ]
     }
   }
 }

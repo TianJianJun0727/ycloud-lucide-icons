@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "健康饮食应用",
+    "过敏提示标识",
+    "无糖产品标签",
+    "饮食限制设置"
+  ],
   "name": "糖果关闭",
   "tags": [
     "无糖",
-    "食物",
-    "甜甜的",
-    "过敏",
-    "不宽容",
-    "饮食"
+    "禁糖",
+    "过敏提示",
+    "饮食限制",
+    "健康食品"
   ],
   "categories": [
     "food-beverage"
@@ -18,13 +22,17 @@
       "name": "candy off",
       "tags": [
         "sugar free",
-        "food",
-        "sweet",
-        "allergy",
-        "intolerance",
-        "diet"
+        "no candy",
+        "allergy warning",
+        "diet restriction",
+        "healthy food"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Healthy diet app",
+        "Allergy warning label",
+        "Sugar-free product labeling",
+        "Diet restriction settings"
+      ]
     }
   }
 }

@@ -3,24 +3,18 @@
   "use-cases": [
     "从收藏中移除",
     "取消星标项目",
-    "移除书签",
+    "降低评分",
     "取消收藏选择",
-    "移除精选项目",
-    "降低项目优先级",
-    "移除推荐项",
-    "移除已保存项目"
+    "移除书签"
   ],
   "name": "星标减少",
   "tags": [
-    "书签",
-    "收藏",
-    "喜欢",
-    "评论",
-    "评级",
+    "星标",
     "减号",
     "移除",
-    "取消选择",
-    "星标"
+    "取消收藏",
+    "降低评分",
+    "取消星标"
   ],
   "categories": [
     "account",
@@ -35,25 +29,19 @@
     "en": {
       "name": "star minus",
       "tags": [
-        "bookmark",
-        "favorite",
-        "like",
-        "review",
-        "rating",
+        "star",
         "minus",
         "remove",
-        "deselect",
-        "star"
+        "unfavorite",
+        "lower rating",
+        "unstar"
       ],
       "use-cases": [
-        "remove from favorites",
-        "unstar item",
-        "remove bookmark",
-        "deselect favorite",
-        "remove featured item",
-        "lower priority item",
-        "remove recommendation",
-        "remove saved item"
+        "Remove from favorites",
+        "Unstar item",
+        "Lower rating",
+        "Deselect favorite",
+        "Remove bookmark"
       ]
     }
   }

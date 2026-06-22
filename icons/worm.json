@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示计算机蠕虫病毒",
+    "安全警告或威胁检测",
+    "害虫控制相关应用"
+  ],
   "name": "蠕虫",
   "tags": [
-    "无脊椎动物",
-    "幼虫",
-    "幼虫",
-    "蛇",
-    "爬行",
-    "摆动",
-    "滑行",
-    "害虫防治",
+    "蠕虫",
+    "恶意软件",
     "计算机病毒",
-    "恶意软件"
+    "安全威胁",
+    "爬虫",
+    "害虫"
   ],
   "categories": [
     "animals",
@@ -22,18 +22,18 @@
     "en": {
       "name": "worm",
       "tags": [
-        "invertebrate",
-        "grub",
-        "larva",
-        "snake",
-        "crawl",
-        "wiggle",
-        "slither",
-        "pest control",
+        "worm",
+        "malware",
         "computer virus",
-        "malware"
+        "security threat",
+        "crawl",
+        "pest"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Representing a computer worm virus",
+        "Security warning or threat detection",
+        "Pest control related applications"
+      ]
     }
   }
 }

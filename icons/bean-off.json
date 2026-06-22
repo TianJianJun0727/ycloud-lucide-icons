@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食物过敏或不耐受指示",
+    "无大豆饮食筛选",
+    "禁用豆类成分选项"
+  ],
   "name": "豆子关闭",
   "tags": [
+    "无豆",
     "不含大豆",
-    "豆类",
-    "大豆",
-    "食物",
-    "种子",
     "过敏",
-    "不宽容",
-    "饮食"
+    "饮食限制",
+    "禁用",
+    "豆类关闭"
   ],
   "categories": [
     "food-beverage"
@@ -19,16 +21,18 @@
     "en": {
       "name": "bean off",
       "tags": [
+        "bean off",
         "soy free",
-        "legume",
-        "soy",
-        "food",
-        "seed",
         "allergy",
-        "intolerance",
-        "diet"
+        "dietary restriction",
+        "disable",
+        "no legumes"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food allergy or intolerance indicator",
+        "Soy-free diet filter",
+        "Disable bean ingredient option"
+      ]
     }
   }
 }

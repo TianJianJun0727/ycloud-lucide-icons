@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带密钥的安全文件夹",
+    "私有目录",
+    "加密文件夹"
+  ],
   "name": "文件夹钥匙",
   "tags": [
     "目录",
-    "钥匙",
-    "私人的",
+    "密钥",
+    "私有",
     "安全",
-    "受保护的"
+    "加密"
   ],
   "categories": [
     "files",
@@ -21,9 +25,13 @@
         "key",
         "private",
         "security",
-        "protected"
+        "encrypted"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Secure folder with key",
+        "Private directory",
+        "Encrypted folder"
+      ]
     }
   }
 }

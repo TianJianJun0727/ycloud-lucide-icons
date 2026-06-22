@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向下滚动按钮",
+    "方向指示器",
+    "返回底部操作"
+  ],
   "name": "箭头下",
   "tags": [
-    "向后",
-    "反向",
+    "向下",
     "方向",
-    "南"
+    "南",
+    "返回",
+    "反向"
   ],
   "categories": [
     "arrows"
@@ -15,12 +20,17 @@
     "en": {
       "name": "arrow down",
       "tags": [
-        "backwards",
-        "reverse",
+        "down",
         "direction",
-        "south"
+        "south",
+        "back",
+        "reverse"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Scroll down button",
+        "Direction indicator",
+        "Back to bottom action"
+      ]
     }
   }
 }

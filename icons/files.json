@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多文件上传",
+    "文档集合",
+    "文件批量操作"
+  ],
   "name": "文件组",
   "tags": [
-    "多个",
-    "复制",
-    "文件"
+    "多个文件",
+    "文件组",
+    "文档集",
+    "副本",
+    "批量"
   ],
   "categories": [
     "files"
@@ -14,11 +20,17 @@
     "en": {
       "name": "files",
       "tags": [
-        "multiple",
+        "multiple files",
+        "file group",
+        "documents",
         "copy",
-        "documents"
+        "batch"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multiple file upload",
+        "Document collection",
+        "File batch operations"
+      ]
     }
   }
 }

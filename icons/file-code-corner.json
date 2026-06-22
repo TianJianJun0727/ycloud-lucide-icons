@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "配置文件",
+    "脚本文件",
+    "标记文档"
+  ],
   "name": "文件代码角落",
   "tags": [
     "脚本",
-    "文档",
+    "代码",
+    "配置文件",
     "HTML",
     "XML",
-    "财产清单",
-    "列表"
+    "属性列表"
   ],
   "categories": [
     "files",
@@ -27,13 +31,17 @@
       "name": "file code corner",
       "tags": [
         "script",
-        "document",
-        "html",
-        "xml",
-        "property list",
-        "plist"
+        "code",
+        "config",
+        "HTML",
+        "XML",
+        "property list"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Configuration file",
+        "Script file",
+        "Markup document"
+      ]
     }
   }
 }

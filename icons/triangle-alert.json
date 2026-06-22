@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "错误通知",
+    "安全警告",
+    "系统警报",
+    "调试工具"
+  ],
   "name": "三角告警",
   "tags": [
     "警告",
-    "告警",
     "危险",
-    "感叹号",
-    "棉绒"
+    "警报",
+    "错误",
+    "注意"
   ],
   "categories": [
     "notifications",
@@ -29,10 +34,15 @@
         "warning",
         "alert",
         "danger",
-        "exclamation mark",
-        "linter"
+        "error",
+        "caution"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Error notification",
+        "Security warning",
+        "System alert",
+        "Debugging tool"
+      ]
     }
   }
 }

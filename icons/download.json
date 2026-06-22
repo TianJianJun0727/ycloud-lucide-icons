@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下载按钮",
+    "文件保存操作",
+    "软件更新",
+    "导出数据"
+  ],
   "name": "下载",
   "tags": [
-    "导入",
+    "下载",
+    "保存",
+    "获取",
     "导出",
-    "保存"
+    "箭头"
   ],
   "categories": [
     "arrows",
@@ -15,11 +22,18 @@
     "en": {
       "name": "download",
       "tags": [
-        "import",
+        "download",
+        "save",
+        "get",
         "export",
-        "save"
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Download button",
+        "File save action",
+        "Software update",
+        "Export data"
+      ]
     }
   }
 }

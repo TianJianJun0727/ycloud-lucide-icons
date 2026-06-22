@@ -1,20 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相册或图片库",
+    "产品目录或宣传册",
+    "杂志或数字出版物",
+    "作品集或艺术品收藏"
+  ],
   "name": "书籍图片",
   "tags": [
-    "图片",
-    "图片",
-    "照片",
-    "专辑",
-    "收藏",
-    "事件",
+    "相册",
+    "图片集",
     "杂志",
     "目录",
-    "目录",
-    "小册子",
+    "画册",
     "浏览",
-    "画廊"
+    "画廊",
+    "照片",
+    "收藏",
+    "图库"
   ],
   "categories": [
     "photography",
@@ -29,20 +32,23 @@
     "en": {
       "name": "book image",
       "tags": [
-        "images",
-        "pictures",
-        "photos",
-        "album",
-        "collection",
-        "event",
+        "photo album",
+        "image collection",
         "magazine",
         "catalog",
-        "catalogue",
-        "brochure",
+        "picture book",
         "browse",
-        "gallery"
+        "gallery",
+        "photos",
+        "collection",
+        "image gallery"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Photo album or image gallery",
+        "Product catalog or brochure",
+        "Magazine or digital publication",
+        "Portfolio or artwork collection"
+      ]
     }
   }
 }

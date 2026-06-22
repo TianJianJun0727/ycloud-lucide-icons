@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "分步指南起点",
+    "从某点出发的导航",
+    "从原点出发的方向指示器"
+  ],
   "name": "箭头上从点",
   "tags": [
     "方向",
     "北",
     "步骤",
-    "出"
+    "起点",
+    "出发"
   ],
   "categories": [
     "arrows"
@@ -18,9 +23,14 @@
         "direction",
         "north",
         "step",
-        "out"
+        "starting point",
+        "depart"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Step-by-step guide start",
+        "Navigation from a point",
+        "Direction indicator from origin"
+      ]
     }
   }
 }

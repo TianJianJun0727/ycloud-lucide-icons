@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示音乐播放列表",
+    "显示音频队列",
+    "管理歌曲列表"
+  ],
   "name": "列表音乐",
   "tags": [
     "播放列表",
-    "队列",
     "音乐",
+    "队列",
     "音频",
-    "回放"
+    "歌曲",
+    "曲目"
   ],
   "categories": [
     "multimedia"
@@ -17,12 +22,17 @@
       "name": "list music",
       "tags": [
         "playlist",
-        "queue",
         "music",
+        "queue",
         "audio",
-        "playback"
+        "song",
+        "track"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Represent a music playlist",
+        "Show an audio queue",
+        "Manage song lists"
+      ]
     }
   }
 }

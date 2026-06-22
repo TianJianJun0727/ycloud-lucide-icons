@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "交换项目",
+    "交易流程",
+    "重新排序列表项"
+  ],
   "name": "箭头左右",
   "tags": [
-    "双向",
-    "双向",
-    "2路",
     "交换",
-    "开关",
+    "双向",
     "交易",
     "重新排序",
-    "移动",
-    "<-",
-    "->"
+    "水平移动"
   ],
   "categories": [
     "arrows"
@@ -21,18 +20,17 @@
     "en": {
       "name": "arrow left right",
       "tags": [
-        "bidirectional",
-        "two-way",
-        "2-way",
         "swap",
-        "switch",
+        "bidirectional",
         "transaction",
         "reorder",
-        "move",
-        "<-",
-        "->"
+        "horizontal move"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Swap items",
+        "Transaction flow",
+        "Reorder list items"
+      ]
     }
   }
 }

@@ -1,6 +1,10 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "企业账户资料",
+    "商业地点选择",
+    "企业仪表板标题"
+  ],
   "name": "建筑2",
   "tags": [
     "商业",
@@ -8,8 +12,9 @@
     "企业",
     "摩天大楼",
     "组织",
-    "组织",
-    "城市"
+    "城市",
+    "办公楼",
+    "机构"
   ],
   "categories": [
     "account",
@@ -23,11 +28,16 @@
         "company",
         "enterprise",
         "skyscraper",
-        "organisation",
         "organization",
-        "city"
+        "city",
+        "office",
+        "institution"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Corporate account profile",
+        "Business location selection",
+        "Enterprise dashboard header"
+      ]
     }
   }
 }

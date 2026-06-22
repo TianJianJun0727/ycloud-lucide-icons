@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件夹上传按钮",
+    "导入目录界面",
+    "向上文件传输"
+  ],
   "name": "文件夹上",
   "tags": [
-    "目录",
-    "上传",
-    "导入",
-    "导出"
+    "文件夹上传",
+    "目录导入",
+    "向上传输",
+    "导入文件夹",
+    "上传"
   ],
   "categories": [
     "files",
@@ -16,12 +21,17 @@
     "en": {
       "name": "folder up",
       "tags": [
-        "directory",
-        "upload",
-        "import",
-        "export"
+        "folder upload",
+        "directory import",
+        "up transfer",
+        "import folder",
+        "upload"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Folder upload button",
+        "Import directory interface",
+        "Upward file transfer"
+      ]
     }
   }
 }

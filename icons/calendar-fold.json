@@ -1,15 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "折叠日历视图",
+    "导入/导出ICS文件",
+    "最小化日程表",
+    "基于文件的日历数据"
+  ],
   "name": "日历折叠",
   "tags": [
     "日期",
-    "月",
-    "年",
-    "事件",
-    "生日",
-    "出生日期",
-    "集成电路"
+    "日历",
+    "折叠",
+    "收起",
+    "ICS",
+    "导入",
+    "导出",
+    "文件"
   ],
   "categories": [
     "time",
@@ -20,14 +26,20 @@
       "name": "calendar fold",
       "tags": [
         "date",
-        "month",
-        "year",
-        "event",
-        "birthday",
-        "birthdate",
-        "ics"
+        "calendar",
+        "collapse",
+        "fold",
+        "ICS",
+        "import",
+        "export",
+        "file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Collapse calendar view",
+        "Import/export ICS file",
+        "Minimize schedule",
+        "File-based calendar data"
+      ]
     }
   }
 }

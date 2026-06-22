@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器倒回",
+    "转到上一步",
+    "向后导航",
+    "反向播放"
+  ],
   "name": "步骤返回",
   "tags": [
-    "箭头",
-    "上一个",
+    "后退",
+    "上一步",
+    "返回",
     "音乐",
-    "左",
+    "媒体",
+    "箭头",
     "反向"
   ],
   "categories": [
@@ -17,13 +24,20 @@
     "en": {
       "name": "step back",
       "tags": [
-        "arrow",
+        "back",
         "previous",
+        "return",
         "music",
-        "left",
+        "media",
+        "arrow",
         "reverse"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player rewind",
+        "Go to previous step",
+        "Backward navigation",
+        "Reverse playback"
+      ]
     }
   }
 }

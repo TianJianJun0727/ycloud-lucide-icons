@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "搜索过滤器开关",
+    "代码搜索选项",
+    "密码或输入验证",
+    "文本比较工具"
+  ],
   "name": "箱包敏感",
   "tags": [
-    "文本",
-    "字母",
-    "人物",
-    "字体",
-    "版式"
+    "区分大小写",
+    "文本匹配",
+    "搜索",
+    "代码",
+    "设置"
   ],
   "categories": [
     "text"
@@ -16,13 +21,18 @@
     "en": {
       "name": "case sensitive",
       "tags": [
-        "text",
-        "letters",
-        "characters",
-        "font",
-        "typography"
+        "case-sensitive",
+        "text matching",
+        "search",
+        "code",
+        "settings"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search filter toggle",
+        "Code search option",
+        "Password or input validation",
+        "Text comparison tool"
+      ]
     }
   }
 }

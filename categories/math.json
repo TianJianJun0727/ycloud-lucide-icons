@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "数学",
-  "icon": "divide",
   "i18n": {
     "en": {
       "title": "Mathematics"

@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据筛选界面",
+    "搜索过滤",
+    "内容过滤"
+  ],
   "name": "漏斗",
   "tags": [
     "筛选",
-    "料斗"
+    "过滤",
+    "搜索",
+    "数据"
   ],
   "categories": [
     "layout"
@@ -22,9 +28,15 @@
       "name": "funnel",
       "tags": [
         "filter",
-        "hopper"
+        "funnel",
+        "search",
+        "data"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data filtering interface",
+        "Search filtering",
+        "Content filtering"
+      ]
     }
   }
 }

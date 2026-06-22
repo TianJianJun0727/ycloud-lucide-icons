@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户反馈评分",
+    "聊天中的中性情绪",
+    "情绪选择"
+  ],
   "name": "无表情",
   "tags": [
-    "表情符号",
-    "脸",
-    "中立的",
-    "情感"
+    "表情",
+    "中性",
+    "平淡",
+    "无感",
+    "情绪"
   ],
   "categories": [
     "emoji"
@@ -18,9 +23,14 @@
         "emoji",
         "face",
         "neutral",
+        "indifferent",
         "emotion"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User feedback rating",
+        "Neutral sentiment in chat",
+        "Emotion selection"
+      ]
     }
   }
 }

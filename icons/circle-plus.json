@@ -1,29 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加新项目按钮",
+    "增量计数器界面",
+    "瞄准光标",
+    "代码连接运算符"
+  ],
   "name": "圆形加号",
   "tags": [
     "添加",
     "新建",
     "增加",
-    "增量",
-    "积极的",
-    "计算",
-    "十字线",
+    "加号",
+    "十字准星",
     "目标",
-    "目标",
-    "范围",
-    "视线",
-    "网袋",
-    "最大",
-    "升级",
-    "额外的",
-    "操作员",
-    "加入",
+    "运算符",
     "连接",
-    "代码",
-    "编码",
-    "+"
+    "代码"
   ],
   "categories": [
     "math",
@@ -46,26 +39,19 @@
         "add",
         "new",
         "increase",
-        "increment",
-        "positive",
-        "calculate",
+        "plus",
         "crosshair",
-        "aim",
         "target",
-        "scope",
-        "sight",
-        "reticule",
-        "maximum",
-        "upgrade",
-        "extra",
         "operator",
         "join",
-        "concatenate",
-        "code",
-        "coding",
-        "+"
+        "code"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add new item button",
+        "Increment counter UI",
+        "Targeting cursor",
+        "Code concatenation operator"
+      ]
     }
   }
 }

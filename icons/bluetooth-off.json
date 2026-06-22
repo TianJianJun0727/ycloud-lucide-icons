@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示蓝牙已关闭或不可用",
+    "切换关闭蓝牙连接"
+  ],
   "name": "蓝牙关闭",
   "tags": [
-    "迷失了"
+    "蓝牙",
+    "已关闭",
+    "未连接",
+    "禁用",
+    "无线",
+    "断开"
   ],
   "categories": [
     "connectivity",
@@ -13,9 +21,16 @@
     "en": {
       "name": "bluetooth off",
       "tags": [
-        "lost"
+        "bluetooth",
+        "off",
+        "disabled",
+        "disconnected",
+        "wireless"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Show Bluetooth is turned off or unavailable",
+        "Toggle Bluetooth connectivity off"
+      ]
     }
   }
 }

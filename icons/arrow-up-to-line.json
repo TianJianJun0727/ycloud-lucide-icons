@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件上传按钮",
+    "滚动到顶部",
+    "折叠部分",
+    "垂直对齐"
+  ],
   "name": "箭头上到线条",
   "tags": [
-    "前进",
-    "方向",
-    "北",
     "上传",
+    "方向",
+    "垂直",
     "折叠",
-    "折叠",
-    "垂直"
+    "顶部对齐"
   ],
   "categories": [
     "arrows",
@@ -19,15 +22,18 @@
     "en": {
       "name": "arrow up to line",
       "tags": [
-        "forward",
-        "direction",
-        "north",
         "upload",
+        "direction",
+        "vertical",
         "collapse",
-        "fold",
-        "vertical"
+        "top align"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File upload button",
+        "Scroll to top",
+        "Collapse section",
+        "Vertical alignment"
+      ]
     }
   }
 }

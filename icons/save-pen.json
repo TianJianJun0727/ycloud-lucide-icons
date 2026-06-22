@@ -2,13 +2,16 @@
   "$schema": "../icon.schema.json",
   "use-cases": [
     "以指定名称或位置保存文件",
-    "以不同名称或格式导出或保存当前文档副本"
+    "以不同格式导出文档",
+    "重命名并保存副本"
   ],
   "name": "保存笔",
   "tags": [
-    "软盘",
-    "目录",
-    "重命名"
+    "另存为",
+    "重命名保存",
+    "编辑保存",
+    "指定保存",
+    "导出"
   ],
   "categories": [
     "text",
@@ -18,13 +21,16 @@
     "en": {
       "name": "save pen",
       "tags": [
-        "floppy disk",
-        "directory",
-        "rename"
+        "save as",
+        "rename and save",
+        "edit save",
+        "save specific",
+        "export"
       ],
       "use-cases": [
-        "saving a file with a specific name and/or to a specific location",
-        "exporting or saving a copy of the current document with a different name or format"
+        "Save file with a specific name or location",
+        "Export document with different format",
+        "Rename and save a copy"
       ]
     }
   }

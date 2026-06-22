@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收藏项目",
+    "评价内容",
+    "书签页面",
+    "高亮重要",
+    "喜欢帖子"
+  ],
   "name": "星标",
   "tags": [
-    "书签",
+    "星标",
     "收藏",
     "喜欢",
-    "评论",
-    "评级"
+    "评分",
+    "评级",
+    "书签",
+    "重要"
   ],
   "categories": [
     "account",
@@ -22,13 +30,21 @@
     "en": {
       "name": "star",
       "tags": [
-        "bookmark",
+        "star",
         "favorite",
         "like",
+        "rating",
         "review",
-        "rating"
+        "bookmark",
+        "important"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Favorite item",
+        "Rate content",
+        "Bookmark page",
+        "Highlight important",
+        "Like post"
+      ]
     }
   }
 }

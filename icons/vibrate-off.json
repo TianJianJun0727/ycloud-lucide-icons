@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭通知振动",
+    "静音模式切换",
+    "触觉反馈设置"
+  ],
   "name": "振动关闭",
   "tags": [
-    "智能手机",
+    "振动",
+    "静音",
     "通知",
-    "隆隆声",
     "触觉反馈",
-    "通知",
-    "屏幕"
+    "手机",
+    "设备",
+    "关闭"
   ],
   "categories": [
     "devices",
@@ -19,14 +24,19 @@
     "en": {
       "name": "vibrate off",
       "tags": [
-        "smartphone",
+        "vibrate",
+        "mute",
         "notification",
-        "rumble",
         "haptic feedback",
-        "notifications",
-        "screen"
+        "phone",
+        "device",
+        "off"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable vibration for notifications",
+        "Silent mode toggle",
+        "Haptic feedback settings"
+      ]
     }
   }
 }

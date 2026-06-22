@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码片段指示器",
+    "源代码切换按钮",
+    "编程上下文标记"
+  ],
   "name": "方形代码",
   "tags": [
-    "要点",
-    "来源",
+    "代码",
     "编程",
+    "源代码",
     "HTML",
-    "XML",
-    "编码"
+    "开发"
   ],
   "categories": [
     "text",
@@ -26,14 +29,17 @@
     "en": {
       "name": "square code",
       "tags": [
-        "gist",
-        "source",
+        "code",
         "programming",
-        "html",
-        "xml",
-        "coding"
+        "source",
+        "HTML",
+        "development"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code snippet indicators",
+        "Source code toggle buttons",
+        "Programming context markers"
+      ]
     }
   }
 }

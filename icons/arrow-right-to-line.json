@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器缩进",
+    "下一页导航",
+    "键盘Tab键表示"
+  ],
   "name": "箭头右到线条",
   "tags": [
     "下一个",
     "前进",
-    "方向",
-    "东",
-    "选项卡",
-    "键盘",
-    "麦克",
     "缩进",
-    "折叠",
-    "折叠",
-    "水平的",
-    "->|"
+    "制表符",
+    "键盘快捷键",
+    "方向"
   ],
   "categories": [
     "arrows",
@@ -26,18 +24,16 @@
       "tags": [
         "next",
         "forward",
-        "direction",
-        "east",
-        "tab",
-        "keyboard",
-        "mac",
         "indent",
-        "collapse",
-        "fold",
-        "horizontal",
-        "->|"
+        "tab",
+        "keyboard shortcut",
+        "direction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor indent",
+        "Next page navigation",
+        "Keyboard tab key representation"
+      ]
     }
   }
 }

@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "安全VPN连接",
+    "隐私保护功能",
+    "加密网络访问"
+  ],
   "name": "地球锁定",
   "tags": [
-    "VPN",
-    "私人的",
-    "隐私",
-    "网络",
-    "世界",
-    "浏览器",
+    "地球",
+    "锁定",
     "安全",
+    "VPN",
+    "隐私",
     "加密",
     "保护",
-    "连接"
+    "网络安全"
   ],
   "categories": [
     "security",
@@ -23,18 +25,20 @@
     "en": {
       "name": "globe lock",
       "tags": [
-        "vpn",
-        "private",
-        "privacy",
-        "network",
-        "world",
-        "browser",
+        "globe",
+        "lock",
         "security",
+        "VPN",
+        "privacy",
         "encryption",
         "protection",
-        "connection"
+        "network security"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Secure VPN connection",
+        "Privacy protection features",
+        "Encrypted network access"
+      ]
     }
   }
 }

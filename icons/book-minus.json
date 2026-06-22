@@ -1,24 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "从文档中移除",
+    "删除代码示例",
+    "版本降级"
+  ],
   "name": "书籍减少",
   "tags": [
     "代码",
-    "编码",
     "版本控制",
     "Git",
-    "存储库",
     "移除",
     "删除",
-    "审查员",
-    "取消",
-    "禁止",
-    "禁止",
-    "禁止",
-    "没有受过教育的",
-    "再教育",
-    "忘记",
-    "降级"
+    "撤销",
+    "审查",
+    "降级",
+    "文档"
   ],
   "categories": [
     "development",
@@ -30,23 +27,20 @@
       "name": "book minus",
       "tags": [
         "code",
-        "coding",
         "version control",
         "git",
-        "repository",
         "remove",
         "delete",
+        "undo",
         "censor",
-        "cancel",
-        "forbid",
-        "prohibit",
-        "ban",
-        "uneducated",
-        "re-educate",
-        "unlearn",
-        "downgrade"
+        "downgrade",
+        "documentation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove from documentation",
+        "Delete code example",
+        "Version downgrade"
+      ]
     }
   }
 }

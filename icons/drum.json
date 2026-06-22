@@ -1,26 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐制作软件",
+    "乐队设备选择",
+    "节奏游戏界面",
+    "音频混音控制"
+  ],
   "name": "鼓",
   "tags": [
-    "鼓手",
-    "套件",
-    "棍子",
-    "仪器",
-    "击败",
-    "砰",
-    "低音",
-    "背景音乐",
-    "乐队",
-    "播放",
-    "表现",
-    "音乐会",
-    "进行曲",
+    "鼓",
+    "打击乐器",
     "音乐",
-    "音频",
-    "声音",
-    "噪音",
-    "大声"
+    "节奏",
+    "演奏",
+    "乐队",
+    "打击乐"
   ],
   "categories": [
     "multimedia",
@@ -30,26 +24,20 @@
     "en": {
       "name": "drum",
       "tags": [
-        "drummer",
-        "kit",
-        "sticks",
-        "instrument",
-        "beat",
-        "bang",
-        "bass",
-        "backing track",
-        "band",
-        "play",
-        "performance",
-        "concert",
-        "march",
+        "drum",
+        "percussion",
         "music",
-        "audio",
-        "sound",
-        "noise",
-        "loud"
+        "rhythm",
+        "performance",
+        "band",
+        "percussion instrument"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music production software",
+        "Band equipment selection",
+        "Rhythm game interfaces",
+        "Audio mixing controls"
+      ]
     }
   }
 }

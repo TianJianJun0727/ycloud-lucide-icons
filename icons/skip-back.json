@@ -1,11 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器上一曲按钮",
+    "视频倒退控制",
+    "播放列表中向后跳过"
+  ],
   "name": "跳过返回",
   "tags": [
-    "箭头",
-    "上一个",
-    "音乐"
+    "跳过",
+    "后退",
+    "上一曲",
+    "音乐",
+    "视频",
+    "播放器",
+    "控制",
+    "媒体",
+    "箭头"
   ],
   "categories": [
     "multimedia",
@@ -15,11 +25,21 @@
     "en": {
       "name": "skip back",
       "tags": [
-        "arrow",
+        "skip",
+        "back",
         "previous",
-        "music"
+        "music",
+        "video",
+        "player",
+        "control",
+        "media",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player previous track button",
+        "Video rewind control",
+        "Skip backward in playlist"
+      ]
     }
   }
 }

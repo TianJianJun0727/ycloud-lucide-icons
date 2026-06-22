@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收起部分",
+    "滚动到顶部",
+    "下拉菜单"
+  ],
   "name": "圆形折角箭头上",
   "tags": [
-    "插入符",
-    "前面",
+    "上箭头",
+    "收起",
+    "向上",
     "菜单",
-    "^"
+    "插入符"
   ],
   "categories": [
     "arrows"
@@ -23,12 +28,17 @@
     "en": {
       "name": "circle chevron up",
       "tags": [
-        "caret",
-        "ahead",
+        "up arrow",
+        "collapse",
+        "up",
         "menu",
-        "^"
+        "caret"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Collapse section",
+        "Scroll to top",
+        "Dropdown menu"
+      ]
     }
   }
 }

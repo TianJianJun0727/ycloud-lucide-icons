@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电商界面中的购物车或购物篮",
+    "添加到购物篮按钮",
+    "商品选择界面"
+  ],
   "name": "购物篮子",
   "tags": [
+    "购物篮",
     "购物车",
     "电子商务",
     "商店",
     "购买",
-    "产品",
-    "项目",
-    "成分"
+    "商品",
+    "物品"
   ],
   "categories": [
     "shopping"
@@ -18,15 +22,19 @@
     "en": {
       "name": "shopping basket",
       "tags": [
+        "basket",
         "cart",
         "e-commerce",
         "store",
         "purchase",
         "products",
-        "items",
-        "ingredients"
+        "items"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Shopping cart or basket in e-commerce UI",
+        "Add to basket button",
+        "Product selection interface"
+      ]
     }
   }
 }

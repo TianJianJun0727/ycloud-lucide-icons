@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "将元素垂直对齐到底部",
+    "在Flex布局中将内容垂直对齐到末端"
+  ],
   "name": "对齐垂直对齐末端",
   "tags": [
-    "底部",
-    "项目",
-    "弯曲",
-    "证明合理",
-    "分发",
-    "之间"
+    "垂直对齐",
+    "底部对齐",
+    "Flex布局",
+    "CSS布局",
+    "垂直分布",
+    "UI设计"
   ],
   "categories": [
     "layout"
@@ -17,14 +20,17 @@
     "en": {
       "name": "align vertical justify end",
       "tags": [
-        "bottom",
-        "items",
-        "flex",
-        "justify",
-        "distribute",
-        "between"
+        "vertical alignment",
+        "bottom align",
+        "flexbox",
+        "CSS layout",
+        "vertical distribute",
+        "UI design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertically aligning elements to the bottom",
+        "Justifying content to the end in a flex layout"
+      ]
     }
   }
 }

@@ -1,27 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "从笔记列表中移除项目",
+    "删除评论或批注",
+    "取消任务操作"
+  ],
   "name": "便签便签减少",
   "tags": [
     "便利贴",
-    "评论",
-    "注释",
-    "反应",
-    "备忘录",
-    "提醒",
-    "待办事项",
-    "任务",
-    "想法",
-    "头脑风暴",
-    "文档",
-    "页面",
-    "纸",
-    "片材",
-    "固定式",
-    "办公室",
     "移除",
     "删除",
-    "减号"
+    "减号",
+    "任务",
+    "笔记",
+    "取消"
   ],
   "categories": [
     "text",
@@ -31,27 +23,19 @@
     "en": {
       "name": "sticky note minus",
       "tags": [
-        "post-it",
-        "comment",
-        "annotation",
-        "reaction",
-        "memo",
-        "reminder",
-        "todo",
-        "task",
-        "idea",
-        "brainstorm",
-        "document",
-        "page",
-        "paper",
-        "sheet",
-        "stationary",
-        "office",
+        "sticky note",
         "remove",
         "delete",
-        "minus"
+        "minus",
+        "task",
+        "note",
+        "cancel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Remove an item from a note list",
+        "Delete a comment or annotation",
+        "Cancel a task action"
+      ]
     }
   }
 }

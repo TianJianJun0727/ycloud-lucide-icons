@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计工具面板",
+    "几何应用",
+    "建筑软件",
+    "测量工具"
+  ],
   "name": "绘图指南针",
   "tags": [
-    "几何学",
-    "三角学",
-    "半径",
-    "直径",
-    "周长",
-    "计算",
+    "圆规",
+    "绘图",
+    "几何",
+    "设计",
     "测量",
-    "弧线",
-    "曲线",
-    "画",
-    "素描"
+    "工具"
   ],
   "categories": [
     "math",
@@ -24,19 +24,19 @@
     "en": {
       "name": "drafting compass",
       "tags": [
+        "compass",
+        "drawing",
         "geometry",
-        "trigonometry",
-        "radius",
-        "diameter",
-        "circumference",
-        "calculate",
+        "design",
         "measure",
-        "arc",
-        "curve",
-        "draw",
-        "sketch"
+        "tool"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Design tool palette",
+        "Geometry app",
+        "Architecture software",
+        "Measurement tool"
+      ]
     }
   }
 }

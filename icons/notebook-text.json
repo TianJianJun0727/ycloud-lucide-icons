@@ -1,33 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文档编辑",
+    "笔记记录",
+    "文本内容",
+    "学习笔记"
+  ],
   "name": "笔记本文本",
   "tags": [
-    "记事本",
-    "笔记",
+    "笔记本",
+    "文档",
     "页面",
-    "纸",
-    "文具",
-    "素描本",
-    "组织者",
-    "组织者",
-    "规划师",
-    "日记",
-    "日记",
+    "文本",
     "写作",
-    "写",
-    "书面的",
     "阅读",
-    "高中",
-    "大学",
-    "学院",
-    "学院",
-    "学生",
     "学习",
-    "研究",
-    "作业",
-    "线",
-    "打开"
+    "记录"
   ],
   "categories": [
     "text",
@@ -37,33 +25,21 @@
     "en": {
       "name": "notebook text",
       "tags": [
-        "notepad",
-        "notes",
+        "notebook",
+        "document",
         "pages",
-        "paper",
-        "stationery",
-        "sketchbook",
-        "organizer",
-        "organiser",
-        "planner",
-        "diary",
-        "journal",
+        "text",
         "writing",
-        "write",
-        "written",
         "reading",
-        "high school",
-        "university",
-        "college",
-        "academy",
-        "student",
         "study",
-        "research",
-        "homework",
-        "lines",
-        "opened"
+        "recording"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Document editing",
+        "Note taking",
+        "Text content",
+        "Study notes"
+      ]
     }
   }
 }

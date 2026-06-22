@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git提交历史视图",
+    "版本控制仪表板",
+    "导航航点标记"
+  ],
   "name": "Git提交垂直",
   "tags": [
-    "代码",
+    "提交",
     "版本控制",
-    "航路点",
-    "停止",
-    "车站"
+    "Git",
+    "代码管理",
+    "航点",
+    "站点"
   ],
   "categories": [
     "development",
@@ -17,13 +22,18 @@
     "en": {
       "name": "git commit vertical",
       "tags": [
-        "code",
+        "commit",
         "version control",
+        "Git",
+        "code management",
         "waypoint",
-        "stop",
         "station"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git commit history view",
+        "Version control dashboard",
+        "Navigation waypoint marker"
+      ]
     }
   }
 }

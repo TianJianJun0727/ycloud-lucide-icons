@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "GIF预览",
+    "动态内容",
+    "媒体播放器",
+    "图片幻灯片"
+  ],
   "name": "图片播放",
   "tags": [
-    "图片",
-    "GIF",
-    "照片"
+    "GIF播放",
+    "动态图片",
+    "图片动画",
+    "媒体播放"
   ],
   "categories": [
     "photography",
@@ -17,11 +23,17 @@
     "en": {
       "name": "image play",
       "tags": [
-        "picture",
-        "gif",
-        "photo"
+        "GIF play",
+        "animated image",
+        "image animation",
+        "media play"
       ],
-      "use-cases": []
+      "use-cases": [
+        "GIF preview",
+        "Animated content",
+        "Media player",
+        "Image slideshow"
+      ]
     }
   }
 }

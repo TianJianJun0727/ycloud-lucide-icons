@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外部链接指示器",
+    "对角线导航",
+    "方向指针"
+  ],
   "name": "箭头上右",
   "tags": [
     "方向",
+    "对角线",
     "东北",
-    "对角线"
+    "导航"
   ],
   "categories": [
     "arrows"
@@ -15,10 +20,15 @@
       "name": "arrow up right",
       "tags": [
         "direction",
+        "diagonal",
         "north-east",
-        "diagonal"
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "External link indicator",
+        "Diagonal navigation",
+        "Directional pointer"
+      ]
     }
   }
 }

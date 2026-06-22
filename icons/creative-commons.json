@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "内容授权标识",
+    "版权信息",
+    "共享协议",
+    "许可声明"
+  ],
   "name": "创意共享",
   "tags": [
     "许可证",
-    "许可证"
+    "版权",
+    "共享",
+    "授权",
+    "知识共享"
   ],
   "categories": [
     "text"
@@ -13,10 +21,18 @@
     "en": {
       "name": "creative commons",
       "tags": [
-        "licence",
-        "license"
+        "license",
+        "copyright",
+        "share",
+        "permission",
+        "creative commons"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Content license indicator",
+        "Copyright information",
+        "Sharing agreement",
+        "License declaration"
+      ]
     }
   }
 }

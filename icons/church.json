@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图上的宗教场所",
+    "礼拜场所图标",
+    "文化或历史地标"
+  ],
   "name": "教堂",
   "tags": [
-    "寺庙",
-    "建筑物"
+    "教堂",
+    "宗教",
+    "建筑",
+    "礼拜",
+    "地点",
+    "导航"
   ],
   "categories": [
     "buildings",
@@ -14,10 +22,18 @@
     "en": {
       "name": "church",
       "tags": [
-        "temple",
-        "building"
+        "church",
+        "religion",
+        "building",
+        "worship",
+        "location",
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Religious site on a map",
+        "Place of worship icon",
+        "Cultural or historical landmark"
+      ]
     }
   }
 }

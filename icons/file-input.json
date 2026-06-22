@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件上传按钮",
+    "导入数据",
+    "输入表单"
+  ],
   "name": "文件输入",
   "tags": [
-    "文档"
+    "输入",
+    "上传",
+    "导入",
+    "文件",
+    "箭头"
   ],
   "categories": [
     "files",
@@ -13,9 +21,17 @@
     "en": {
       "name": "file input",
       "tags": [
-        "document"
+        "input",
+        "upload",
+        "import",
+        "file",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File upload button",
+        "Import data",
+        "Input form"
+      ]
     }
   }
 }

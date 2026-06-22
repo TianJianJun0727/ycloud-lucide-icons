@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "批量任务完成",
+    "多项目选择",
+    "任务管理",
+    "进度跟踪"
+  ],
   "name": "列表勾选",
   "tags": [
-    "待办事项",
-    "完成",
-    "勾选",
-    "勾选",
-    "完成",
-    "任务",
+    "列表",
+    "多项勾选",
+    "批量完成",
+    "任务管理",
     "项目",
-    "待定"
+    "待办事项"
   ],
   "categories": [
     "text"
@@ -19,16 +22,19 @@
     "en": {
       "name": "list checks",
       "tags": [
-        "todo",
-        "done",
-        "check",
-        "tick",
-        "complete",
-        "tasks",
+        "list",
+        "multiple checks",
+        "bulk complete",
+        "task management",
         "items",
-        "pending"
+        "todo"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bulk task completion",
+        "Multi-item selection",
+        "Task management",
+        "Progress tracking"
+      ]
     }
   }
 }

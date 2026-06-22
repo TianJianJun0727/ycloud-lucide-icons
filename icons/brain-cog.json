@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "智能系统设置",
+    "AI配置界面",
+    "自动化控制面板",
+    "机器学习参数调整"
+  ],
   "name": "大脑齿轮",
   "tags": [
-    "头脑",
-    "智力",
     "人工智能",
     "AI",
-    "深度学习",
+    "智能系统",
     "机器学习",
-    "计算"
+    "自动化",
+    "智能控制"
   ],
   "categories": [
     "science",
@@ -19,15 +23,19 @@
     "en": {
       "name": "brain cog",
       "tags": [
-        "mind",
-        "intellect",
         "artificial intelligence",
         "ai",
-        "deep learning",
+        "intelligent system",
         "machine learning",
-        "computing"
+        "automation",
+        "smart control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Intelligent system settings",
+        "AI configuration interface",
+        "Automation control panel",
+        "Machine learning parameter adjustment"
+      ]
     }
   }
 }

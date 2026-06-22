@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件搜索功能",
+    "文档查找器",
+    "浏览文件界面"
+  ],
   "name": "文件搜索角落",
   "tags": [
-    "迷失了",
-    "文档",
-    "找到",
-    "浏览器",
-    "镜头"
+    "搜索文件",
+    "查找",
+    "检索",
+    "浏览",
+    "定位"
   ],
   "categories": [
     "files"
@@ -24,13 +28,17 @@
     "en": {
       "name": "file search corner",
       "tags": [
-        "lost",
-        "document",
+        "search file",
         "find",
-        "browser",
-        "lens"
+        "retrieve",
+        "browse",
+        "locate"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File search functionality",
+        "Document finder",
+        "Browse files interface"
+      ]
     }
   }
 }

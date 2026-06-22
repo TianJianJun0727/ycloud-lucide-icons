@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "左侧边栏面板",
+    "固定导航区域",
+    "界面布局容器"
+  ],
   "name": "面板左",
   "tags": [
-    "小学",
-    "抽屉"
+    "侧边栏",
+    "面板",
+    "布局",
+    "容器",
+    "区域",
+    "左侧"
   ],
   "categories": [
     "layout"
@@ -21,10 +29,18 @@
     "en": {
       "name": "panel left",
       "tags": [
-        "primary",
-        "drawer"
+        "sidebar",
+        "panel",
+        "layout",
+        "container",
+        "area",
+        "left"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Left sidebar panel",
+        "Fixed navigation area",
+        "UI layout container"
+      ]
     }
   }
 }

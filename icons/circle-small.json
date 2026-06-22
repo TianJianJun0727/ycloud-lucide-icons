@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "列表项目符号",
+    "性别中立指示器",
+    "医疗图表标记",
+    "小选择点"
+  ],
   "name": "圆形小",
   "tags": [
-    "形状",
-    "子弹",
-    "性别",
-    "无性别的"
+    "圆点",
+    "标记",
+    "无性别",
+    "小圆圈",
+    "医疗标记"
   ],
   "categories": [
     "shapes",
@@ -16,12 +22,18 @@
     "en": {
       "name": "circle small",
       "tags": [
-        "shape",
-        "bullet",
-        "gender",
-        "genderless"
+        "dot",
+        "marker",
+        "genderless",
+        "small circle",
+        "medical marker"
       ],
-      "use-cases": []
+      "use-cases": [
+        "List bullet point",
+        "Gender neutral indicator",
+        "Medical chart marker",
+        "Small selection dot"
+      ]
     }
   }
 }

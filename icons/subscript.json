@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "化学公式符号",
+    "数学表达式",
+    "文档脚注",
+    "科学写作"
+  ],
   "name": "下标",
   "tags": [
-    "文本"
+    "下标",
+    "文本格式",
+    "化学符号",
+    "数学公式",
+    "文字位置"
   ],
   "categories": [
     "text"
@@ -12,9 +21,18 @@
     "en": {
       "name": "subscript",
       "tags": [
-        "text"
+        "subscript",
+        "text formatting",
+        "chemical symbols",
+        "mathematical formulas",
+        "text position"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chemical formula notation",
+        "Mathematical expressions",
+        "Footnotes in documents",
+        "Scientific writing"
+      ]
     }
   }
 }

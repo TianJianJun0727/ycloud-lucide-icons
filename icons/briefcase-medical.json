@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "医疗应急响应",
+    "医疗服务",
+    "急救设备"
+  ],
   "name": "公文包医疗",
   "tags": [
+    "医疗箱",
+    "急救包",
     "医生",
-    "医学",
-    "急救"
+    "医疗设备",
+    "医护",
+    "紧急"
   ],
   "categories": [
     "medical",
@@ -15,11 +22,18 @@
     "en": {
       "name": "briefcase medical",
       "tags": [
+        "medical kit",
+        "first aid kit",
         "doctor",
-        "medicine",
-        "first aid"
+        "medical gear",
+        "healthcare",
+        "emergency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Medical emergency response",
+        "Healthcare services",
+        "First aid equipment"
+      ]
     }
   }
 }

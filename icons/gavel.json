@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "法律或法庭应用",
+    "规则执行的管理面板",
+    "拍卖或决策界面"
+  ],
   "name": "法槌",
   "tags": [
-    "正义",
+    "法槌",
     "法律",
     "法庭",
-    "判断力",
-    "合法的",
-    "手",
-    "处罚",
-    "决定",
+    "判决",
+    "正义",
     "权威",
-    "锤子",
-    "木槌"
+    "裁决"
   ],
   "categories": [
     "navigation",
@@ -23,19 +23,20 @@
     "en": {
       "name": "gavel",
       "tags": [
-        "justice",
+        "gavel",
         "law",
         "court",
         "judgment",
-        "legal",
-        "hands",
-        "penalty",
-        "decision",
+        "justice",
         "authority",
-        "hammer",
-        "mallet"
+        "verdict",
+        "hammer"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Legal or court application",
+        "Admin panel for rule enforcement",
+        "Auction or decision interface"
+      ]
     }
   }
 }

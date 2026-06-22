@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "自然",
-  "icon": "sprout",
   "i18n": {
     "en": {
       "title": "Nature"

@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "分享内容",
+    "打开外部链接",
+    "社交媒体分享"
+  ],
   "name": "方形箭头外部上右",
   "tags": [
-    "向外",
+    "外部",
     "方向",
-    "东北",
     "对角线",
     "分享",
     "打开",
-    "外部的",
     "链接"
   ],
   "categories": [
@@ -30,14 +32,17 @@
       "tags": [
         "outwards",
         "direction",
-        "north-east",
         "diagonal",
         "share",
         "open",
         "external",
         "link"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Share content",
+        "Open external link",
+        "Social media sharing"
+      ]
     }
   }
 }

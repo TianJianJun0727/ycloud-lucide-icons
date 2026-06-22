@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "露营预订网站",
+    "户外活动应用",
+    "旅行与自然网站"
+  ],
   "name": "帐篷树",
   "tags": [
     "露营",
-    "露营地",
-    "假期",
-    "撤退",
-    "游牧的",
-    "荒野",
-    "户外"
+    "帐篷",
+    "户外",
+    "自然",
+    "旅行",
+    "度假"
   ],
   "categories": [
     "travel",
@@ -20,14 +23,17 @@
       "name": "tent tree",
       "tags": [
         "camping",
-        "campsite",
-        "holiday",
-        "retreat",
-        "nomadic",
-        "wilderness",
-        "outdoors"
+        "tent",
+        "outdoors",
+        "nature",
+        "travel",
+        "holiday"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Camping booking site",
+        "Outdoor activity app",
+        "Travel and nature website"
+      ]
     }
   }
 }

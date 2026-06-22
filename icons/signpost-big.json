@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图中的方向指引",
+    "路口或决策点",
+    "游戏 UI 中的路径选择"
+  ],
   "name": "路标大",
   "tags": [
-    "双向",
-    "左",
-    "右",
-    "东",
-    "西"
+    "路标",
+    "指示牌",
+    "方向",
+    "导航",
+    "路口",
+    "指引",
+    "道路",
+    "标志",
+    "箭头"
   ],
   "categories": [
     "arrows",
@@ -19,13 +27,21 @@
     "en": {
       "name": "signpost big",
       "tags": [
-        "bidirectional",
-        "left",
-        "right",
-        "east",
-        "west"
+        "signpost",
+        "sign",
+        "direction",
+        "navigation",
+        "intersection",
+        "guide",
+        "road",
+        "marker",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Directional guidance in maps",
+        "Intersection or decision point",
+        "Game UI for path selection"
+      ]
     }
   }
 }

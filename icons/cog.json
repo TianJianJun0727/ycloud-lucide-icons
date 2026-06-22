@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设置菜单",
+    "配置面板",
+    "控制界面"
+  ],
   "name": "齿轮",
   "tags": [
-    "计算",
-    "设置",
-    "设置",
-    "编辑",
     "齿轮",
-    "偏好",
-    "控制",
+    "设置",
     "配置",
-    "固定的",
-    "建造",
-    "建筑",
-    "零件"
+    "控制",
+    "偏好"
   ],
   "categories": [
     "account"
@@ -23,20 +20,17 @@
     "en": {
       "name": "cog",
       "tags": [
-        "computing",
-        "settings",
         "cog",
-        "edit",
-        "gear",
-        "preferences",
-        "controls",
+        "settings",
         "configuration",
-        "fixed",
-        "build",
-        "construction",
-        "parts"
+        "controls",
+        "preferences"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Settings menu",
+        "Configuration panel",
+        "Control interface"
+      ]
     }
   }
 }

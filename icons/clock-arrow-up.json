@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "按时间升序排列项目",
+    "增加持续时间或延迟",
+    "显示时间前进或延长"
+  ],
   "name": "时钟箭头上",
   "tags": [
     "时间",
-    "手表",
-    "闹钟",
     "排序",
-    "订单",
-    "上升",
-    "下降",
+    "升序",
     "增加",
-    "减少",
-    "上升",
-    "坠落"
+    "上调",
+    "时间正序"
   ],
   "categories": [
     "time"
@@ -23,18 +22,17 @@
       "name": "clock arrow up",
       "tags": [
         "time",
-        "watch",
-        "alarm",
         "sort",
-        "order",
         "ascending",
-        "descending",
-        "increasing",
-        "decreasing",
-        "rising",
-        "falling"
+        "increase",
+        "up",
+        "chronological"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sort items by time in ascending order",
+        "Increase a time duration or delay",
+        "Show time moving forward or being extended"
+      ]
     }
   }
 }

@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器左对齐按钮",
+    "文档中的默认文本对齐方式",
+    "将内容对齐到左侧的用户界面"
+  ],
   "name": "文本对齐起始",
   "tags": [
     "文本",
-    "对准",
-    "左",
-    "列表"
+    "对齐",
+    "左对齐",
+    "起始",
+    "排版",
+    "格式"
   ],
   "categories": [
     "text"
@@ -32,9 +38,15 @@
         "text",
         "alignment",
         "left",
-        "list"
+        "start",
+        "typography",
+        "format"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor left alignment button",
+        "Default text alignment in documents",
+        "UI for aligning content to the left"
+      ]
     }
   }
 }

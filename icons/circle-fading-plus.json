@@ -1,16 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加到故事功能",
+    "社交媒体帖子创建",
+    "新内容指示器"
+  ],
   "name": "圆形淡出加号",
   "tags": [
     "故事",
     "社交媒体",
     "Instagram",
-    "脸书",
-    "元",
-    "快照聊天",
+    "Facebook",
+    "Meta",
+    "Snapchat",
     "分享",
-    "内容"
+    "内容",
+    "新增",
+    "发布"
   ],
   "categories": [
     "communication",
@@ -27,9 +33,15 @@
         "meta",
         "snapchat",
         "sharing",
-        "content"
+        "content",
+        "add",
+        "publish"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add to story feature",
+        "Social media post creation",
+        "New content indicator"
+      ]
     }
   }
 }

@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设计工具对齐网格功能",
+    "磁性附着指示器",
+    "物理模拟界面"
+  ],
   "name": "磁铁",
   "tags": [
-    "马蹄铁",
-    "锁定",
-    "科学",
-    "快照"
+    "磁铁",
+    "磁性",
+    "吸附",
+    "吸引",
+    "磁力",
+    "U型磁铁"
   ],
   "categories": [
     "design"
@@ -15,12 +21,18 @@
     "en": {
       "name": "magnet",
       "tags": [
-        "horseshoe",
-        "lock",
-        "science",
-        "snap"
+        "magnet",
+        "magnetic",
+        "attract",
+        "adhesion",
+        "force",
+        "horseshoe"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Design tool snap-to-grid feature",
+        "Magnetic attachment indicator",
+        "Physics simulation interface"
+      ]
     }
   }
 }

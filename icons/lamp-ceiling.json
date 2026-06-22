@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "房间灯光控制",
+    "家庭自动化界面",
+    "灯具选择"
+  ],
   "name": "灯吊顶",
   "tags": [
-    "照明",
-    "家庭",
-    "首页",
-    "家具"
+    "吊灯",
+    "天花板灯",
+    "顶灯",
+    "室内照明",
+    "家居照明"
   ],
   "categories": [
     "home"
@@ -15,12 +20,17 @@
     "en": {
       "name": "lamp ceiling",
       "tags": [
-        "lighting",
-        "household",
-        "home",
-        "furniture"
+        "ceiling light",
+        "overhead light",
+        "chandelier",
+        "indoor lighting",
+        "home lighting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Room lighting control",
+        "Home automation interface",
+        "Light fixture selection"
+      ]
     }
   }
 }

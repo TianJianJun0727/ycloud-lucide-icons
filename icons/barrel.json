@@ -1,26 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "啤酒厂或酒厂产品",
+    "陈酿过程指示",
+    "饮品菜单项"
+  ],
   "name": "桶",
   "tags": [
-    "小桶",
-    "鼓",
-    "坦克",
-    "酒",
+    "酒桶",
+    "酿造",
     "啤酒",
-    "橡木",
-    "木头",
-    "菲尔金",
-    "霍格黑德",
-    "基尔德金",
-    "巴里克",
-    "索莱拉",
-    "老化",
+    "葡萄酒",
     "威士忌",
-    "啤酒厂",
-    "酿酒厂",
     "酒厂",
-    "葡萄园"
+    "橡木桶",
+    "陈酿"
   ],
   "categories": [
     "food-beverage",
@@ -30,26 +24,20 @@
     "en": {
       "name": "barrel",
       "tags": [
-        "keg",
-        "drum",
-        "tank",
-        "wine",
+        "barrel",
+        "brew",
         "beer",
-        "oak",
-        "wood",
-        "firkin",
-        "hogshead",
-        "kilderkin",
-        "barrique",
-        "solera",
-        "aging",
+        "wine",
         "whiskey",
-        "brewery",
         "distillery",
-        "winery",
-        "vineyard"
+        "oak cask",
+        "aging"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Brewery or distillery product",
+        "Aging process indicator",
+        "Beverage menu item"
+      ]
     }
   }
 }

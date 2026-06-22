@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "科学或化学实验界面",
+    "实验室研究功能",
+    "游戏中的药水或制作"
+  ],
   "name": "烧杯",
   "tags": [
-    "杯子",
-    "实验室",
-    "化学",
+    "烧杯",
     "实验",
-    "测试"
+    "化学",
+    "科学",
+    "实验室",
+    "研究"
   ],
   "categories": [
     "science",
@@ -17,13 +22,18 @@
     "en": {
       "name": "beaker",
       "tags": [
-        "cup",
-        "lab",
-        "chemistry",
+        "beaker",
         "experiment",
-        "test"
+        "chemistry",
+        "science",
+        "lab",
+        "research"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Science or chemistry experiment UI",
+        "Lab research feature",
+        "Potion or crafting in gaming"
+      ]
     }
   }
 }

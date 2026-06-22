@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "取消粘贴操作",
+    "关闭剪贴板",
+    "丢弃内容"
+  ],
   "name": "剪贴板关闭",
   "tags": [
-    "复制",
-    "粘贴",
+    "取消",
+    "关闭",
     "丢弃",
-    "移除"
+    "移除",
+    "错误"
   ],
   "categories": [
     "text"
@@ -15,12 +20,17 @@
     "en": {
       "name": "clipboard X",
       "tags": [
-        "copy",
-        "paste",
+        "cancel",
+        "close",
         "discard",
-        "remove"
+        "remove",
+        "error"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cancel paste operation",
+        "Close clipboard",
+        "Discard content"
+      ]
     }
   }
 }

@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "发送邮件按钮",
+    "提交表单操作",
+    "在聊天中发布消息"
+  ],
   "name": "发送",
   "tags": [
-    "邮箱",
+    "发送",
     "消息",
     "邮件",
-    "纸飞机",
-    "纸飞机",
-    "提交"
+    "提交",
+    "纸飞机"
   ],
   "categories": [
     "mail",
@@ -19,14 +22,17 @@
     "en": {
       "name": "send",
       "tags": [
-        "email",
+        "send",
         "message",
         "mail",
-        "paper airplane",
-        "paper aeroplane",
-        "submit"
+        "submit",
+        "paper airplane"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Send email button",
+        "Submit form action",
+        "Post message in chat"
+      ]
     }
   }
 }

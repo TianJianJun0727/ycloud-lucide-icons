@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "矢量图形编辑器中用于路径编辑的光标",
+    "调整曲线和节点的设计工具",
+    "插图软件中的精确指向",
+    "UI设计工具中的锚点选择"
+  ],
   "name": "样条曲线指针",
   "tags": [
-    "路径",
-    "工具",
+    "样条指针",
+    "路径工具",
     "曲线",
-    "节点",
-    "点击",
-    "指针",
-    "目标",
-    "矢量"
+    "节点编辑",
+    "矢量",
+    "设计工具",
+    "光标",
+    "锚点"
   ],
   "categories": [
     "arrows",
@@ -22,16 +27,21 @@
     "en": {
       "name": "spline pointer",
       "tags": [
-        "path",
-        "tool",
+        "spline pointer",
+        "path tool",
         "curve",
-        "node",
-        "click",
-        "pointer",
-        "target",
-        "vector"
+        "node editing",
+        "vector",
+        "design tool",
+        "cursor",
+        "anchor point"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vector graphic editor cursor for path editing",
+        "Design tool for adjusting curves and nodes",
+        "Precision pointing in illustration software",
+        "Anchor point selection in UI design tools"
+      ]
     }
   }
 }

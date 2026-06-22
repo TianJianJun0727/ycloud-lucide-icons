@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "表示大号和小号文本",
-    "设置文本字号",
-    "表示标题和正文文本"
+    "文本大小对比",
+    "标题和正文文本",
+    "排版控件"
   ],
   "name": "大小写与字号",
   "tags": [
-    "信",
     "字体大小",
+    "对比",
     "文本",
-    "格式化"
+    "字号",
+    "标题正文",
+    "排版"
   ],
   "categories": [
     "text",
@@ -20,15 +22,17 @@
     "en": {
       "name": "A large small",
       "tags": [
-        "letter",
         "font size",
+        "contrast",
         "text",
+        "typography",
+        "heading body",
         "formatting"
       ],
       "use-cases": [
-        "indicating a large and small text size",
-        "formatting text size",
-        "indicating a heading and body text"
+        "text size comparison",
+        "heading and body text",
+        "typography controls"
       ]
     }
   }

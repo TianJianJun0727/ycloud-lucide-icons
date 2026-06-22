@@ -1,19 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "仓库管理系统",
+    "物流运输界面",
+    "工业设备仪表板"
+  ],
   "name": "叉车",
   "tags": [
-    "机械",
-    "工业",
+    "叉车",
+    "物流",
     "仓库",
-    "起重",
-    "存储",
-    "设备",
-    "重型",
-    "移动",
-    "车辆",
-    "运输",
-    "物流"
+    "搬运",
+    "工业车辆"
   ],
   "categories": [
     "transportation"
@@ -22,19 +20,17 @@
     "en": {
       "name": "forklift",
       "tags": [
-        "machinery",
-        "industrial",
+        "forklift",
+        "logistics",
         "warehouse",
-        "lifting",
-        "storage",
-        "equipment",
-        "heavy-duty",
-        "moving",
-        "vehicle",
-        "transport",
-        "logistics"
+        "handling",
+        "industrial-vehicle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Warehouse management systems",
+        "Logistics and shipping interfaces",
+        "Industrial equipment dashboards"
+      ]
     }
   }
 }

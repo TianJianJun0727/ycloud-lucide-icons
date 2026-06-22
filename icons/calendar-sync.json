@@ -1,23 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "跨设备同步日历",
+    "刷新日历数据",
+    "设置重复事件"
+  ],
   "name": "日历同步",
   "tags": [
-    "重复",
+    "日历",
+    "同步",
     "刷新",
-    "重新连接",
-    "转移",
+    "更新",
     "备份",
-    "日期",
-    "月",
-    "年",
-    "事件",
-    "订阅",
-    "反复出现的",
-    "时间表",
-    "提醒",
+    "重复事件",
     "自动",
-    "汽车"
+    "订阅"
   ],
   "categories": [
     "arrows",
@@ -27,23 +24,20 @@
     "en": {
       "name": "calendar sync",
       "tags": [
-        "repeat",
+        "calendar",
+        "sync",
         "refresh",
-        "reconnect",
-        "transfer",
+        "update",
         "backup",
-        "date",
-        "month",
-        "year",
-        "event",
-        "subscribe",
         "recurring",
-        "schedule",
-        "reminder",
         "automatic",
-        "auto"
+        "subscribe"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sync calendar across devices",
+        "Refresh calendar data",
+        "Set up recurring events"
+      ]
     }
   }
 }

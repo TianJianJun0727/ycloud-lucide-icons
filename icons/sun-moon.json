@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "深色/浅色模式切换",
+    "系统主题检测",
+    "外观偏好设置",
+    "无障碍主题"
+  ],
   "name": "太阳月亮",
   "tags": [
-    "黑暗",
-    "光",
-    "月亮",
-    "太阳",
-    "亮度",
-    "主题",
+    "主题切换",
+    "深色模式",
+    "浅色模式",
     "自动主题",
     "系统主题",
-    "外观"
+    "外观设置"
   ],
   "categories": [
     "accessibility"
@@ -20,17 +22,19 @@
     "en": {
       "name": "sun moon",
       "tags": [
-        "dark",
-        "light",
-        "moon",
-        "sun",
-        "brightness",
-        "theme",
+        "theme switch",
+        "dark mode",
+        "light mode",
         "auto theme",
         "system theme",
-        "appearance"
+        "appearance settings"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dark/light mode toggle",
+        "System theme detection",
+        "Appearance preferences",
+        "Accessibility themes"
+      ]
     }
   }
 }

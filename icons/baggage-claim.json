@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "机场行李领取区",
+    "行李提取指示器",
+    "旅行物流"
+  ],
   "name": "行李领取",
   "tags": [
     "行李",
-    "行李",
+    "领取",
+    "机场",
     "旅行",
-    "购物车",
-    "手推车",
-    "手提箱"
+    "手推车"
   ],
   "categories": [
     "transportation",
@@ -19,13 +22,16 @@
       "name": "baggage claim",
       "tags": [
         "baggage",
-        "luggage",
+        "claim",
+        "airport",
         "travel",
-        "cart",
-        "trolley",
-        "suitcase"
+        "cart"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Airport baggage claim area",
+        "Luggage pickup indicator",
+        "Travel logistics"
+      ]
     }
   }
 }

@@ -1,28 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "沐浴和淋浴产品",
+    "清洁用品",
+    "水疗和放松"
+  ],
   "name": "气泡",
   "tags": [
+    "气泡",
     "水",
     "清洁",
     "肥皂",
-    "洗澡",
-    "卫生",
-    "新鲜度",
-    "洗",
-    "泡沫",
-    "清洁度",
-    "洗发水",
-    "纯度",
-    "飞溅",
-    "亮度",
-    "通风的",
-    "放松",
-    "水疗中心",
-    "起泡的",
-    "流体",
-    "浮动",
-    "掉落"
+    "水疗"
   ],
   "categories": [
     "weather"
@@ -31,28 +20,17 @@
     "en": {
       "name": "bubbles",
       "tags": [
+        "bubbles",
         "water",
         "cleaning",
         "soap",
-        "bath",
-        "hygiene",
-        "freshness",
-        "wash",
-        "foam",
-        "cleanliness",
-        "shampoo",
-        "purity",
-        "splash",
-        "lightness",
-        "airy",
-        "relaxation",
-        "spa",
-        "bubbly",
-        "fluid",
-        "floating",
-        "drop"
+        "spa"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Bath and shower products",
+        "Cleaning supplies",
+        "Spa and relaxation"
+      ]
     }
   }
 }

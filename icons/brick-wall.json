@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "建筑应用界面",
+    "施工项目管理",
+    "建材展示",
+    "建筑设计工具"
+  ],
   "name": "砖块墙",
   "tags": [
-    "砖头",
-    "砂浆",
-    "水泥",
-    "材料",
     "建筑",
-    "建设者",
-    "劳工",
-    "工料测量师",
-    "块",
-    "石头"
+    "砖墙",
+    "建筑材料",
+    "施工",
+    "墙体"
   ],
   "categories": [
     "buildings",
@@ -22,18 +22,17 @@
     "en": {
       "name": "brick wall",
       "tags": [
-        "bricks",
-        "mortar",
-        "cement",
-        "materials",
         "construction",
-        "builder",
-        "labourer",
-        "quantity surveyor",
-        "blocks",
-        "stone"
+        "brick wall",
+        "building materials",
+        "wall"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Construction application interface",
+        "Construction project management",
+        "Building materials display",
+        "Architectural design tool"
+      ]
     }
   }
 }

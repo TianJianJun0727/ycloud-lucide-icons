@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "占星应用星座符号",
+    "社交媒体个人资料星座",
+    "星座运势网站图标"
+  ],
   "name": "星座天蝎座",
   "tags": [
+    "天蝎座",
+    "星座",
+    "占星",
     "蝎子",
-    "毒刺",
+    "水象",
     "强度",
-    "水",
     "转变",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "星座运势"
   ],
   "categories": [
     "social",
@@ -22,18 +24,20 @@
     "en": {
       "name": "zodiac scorpio",
       "tags": [
-        "scorpion",
-        "stinger",
-        "intensity",
-        "water",
-        "transformation",
+        "scorpio",
+        "zodiac",
         "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "scorpion",
+        "water sign",
+        "intensity",
+        "transformation",
+        "horoscope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app zodiac sign",
+        "Social media profile birth sign",
+        "Horoscope website icon"
+      ]
     }
   }
 }

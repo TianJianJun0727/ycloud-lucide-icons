@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "竖屏视频标识",
+    "竖版图片占位",
+    "移动端界面设计",
+    "故事板或快拍格式"
+  ],
   "name": "矩形垂直",
   "tags": [
+    "矩形",
     "长方形",
-    "纵横比",
-    "9:16",
     "垂直",
+    "竖屏",
+    "9:16",
+    "竖版",
     "形状"
   ],
   "categories": [
@@ -18,12 +25,18 @@
       "name": "rectangle vertical",
       "tags": [
         "rectangle",
-        "aspect ratio",
-        "9:16",
         "vertical",
+        "portrait",
+        "9:16",
+        "upright",
         "shape"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Portrait video indicator",
+        "Portrait image placeholder",
+        "Mobile interface design",
+        "Story or snapshot format"
+      ]
     }
   }
 }

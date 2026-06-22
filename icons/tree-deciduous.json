@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "公园或花园地图",
+    "环境网站",
+    "自然保护活动"
+  ],
   "name": "树落叶树",
   "tags": [
     "树",
+    "落叶树",
     "森林",
+    "自然",
     "公园",
-    "自然"
+    "植物"
   ],
   "categories": [
     "nature",
@@ -17,11 +23,17 @@
       "name": "tree deciduous",
       "tags": [
         "tree",
+        "deciduous",
         "forest",
+        "nature",
         "park",
-        "nature"
+        "plant"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Park or garden map",
+        "Environmental website",
+        "Nature conservation campaign"
+      ]
     }
   }
 }

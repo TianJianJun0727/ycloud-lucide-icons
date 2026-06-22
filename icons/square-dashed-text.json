@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本选择或页面查找指示器",
+    "搜索结果高亮",
+    "文本编辑UI"
+  ],
   "name": "方形虚线文本",
   "tags": [
-    "找到",
+    "文本选择",
+    "查找",
     "搜索",
-    "选择",
-    "虚线"
+    "虚线框",
+    "高亮"
   ],
   "categories": [
     "text",
@@ -30,12 +35,17 @@
     "en": {
       "name": "square dashed text",
       "tags": [
+        "text selection",
         "find",
         "search",
-        "selection",
-        "dashed"
+        "dashed box",
+        "highlight"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text selection or find-in-page indicator",
+        "Search result highlight",
+        "Text editing UI"
+      ]
     }
   }
 }

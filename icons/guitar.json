@@ -1,24 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐播放控制",
+    "音频设备",
+    "娱乐应用"
+  ],
   "name": "吉他",
   "tags": [
-    "声学的",
-    "仪器",
-    "字符串",
-    "即兴演奏",
-    "摇滚",
-    "乐队",
-    "国家",
-    "音乐会",
-    "表现",
-    "播放",
-    "铅",
-    "大声",
+    "吉他",
     "音乐",
-    "音频",
-    "声音",
-    "噪音"
+    "乐器",
+    "演奏",
+    "音频"
   ],
   "categories": [
     "multimedia"
@@ -27,24 +20,17 @@
     "en": {
       "name": "guitar",
       "tags": [
-        "acoustic",
-        "instrument",
-        "strings",
-        "riff",
-        "rock",
-        "band",
-        "country",
-        "concert",
-        "performance",
-        "play",
-        "lead",
-        "loud",
+        "guitar",
         "music",
-        "audio",
-        "sound",
-        "noise"
+        "instrument",
+        "play",
+        "audio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music player controls",
+        "Audio equipment",
+        "Entertainment apps"
+      ]
     }
   }
 }

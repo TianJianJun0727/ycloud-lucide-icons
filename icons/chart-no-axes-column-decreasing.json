@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示指标下降的仪表板",
+    "带有负面趋势的性能报告"
+  ],
   "name": "图表无坐标轴列下降",
   "tags": [
     "统计",
     "分析",
     "图表",
-    "图",
+    "柱状图",
+    "下降",
     "趋势下降"
   ],
   "categories": [
@@ -18,11 +22,15 @@
       "tags": [
         "statistics",
         "analytics",
-        "diagram",
-        "graph",
+        "chart",
+        "column chart",
+        "decreasing",
         "trending down"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Dashboard showing declining metrics",
+        "Performance report with negative trend"
+      ]
     }
   }
 }

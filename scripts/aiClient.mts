@@ -1,5 +1,4 @@
 import OpenAI from 'openai';
-import { zodTextFormat } from 'openai/helpers/zod';
 import type z from 'zod';
 
 interface AiClient {
@@ -8,25 +7,63 @@ interface AiClient {
   completeJson<T>(input: string, schemaName: string, schema: z.ZodType<T>): Promise<T>;
 }
 
+function parseJsonWithSchema<T>(content: string, schema: z.ZodType<T>) {
+  const jsonContent = content
+    .trim()
+    .replace(/^```(?:json)?\s*/i, '')
+    .replace(/\s*```$/i, '')
+    .trim();
+  const parsedContent = JSON.parse(jsonContent);
+
+  try {
+    return schema.parse(parsedContent);
+  } catch (error) {
+    throw new Error(
+      `AI response did not match the expected schema: ${JSON.stringify(parsedContent).slice(0, 2000)}`,
+      { cause: error },
+    );
+  }
+}
+
 export function createAiClient() {
-  if (process.env.OPENAI_API_KEY) {
+  const openRouterApiKey = process.env.OPENROUTER_API_KEY ?? process.env.API_KEY;
+  const openRouterBaseUrl = process.env.BASE_URL ?? 'https://openrouter.ai/api/v1';
+
+  if (openRouterApiKey) {
     const client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: openRouterApiKey,
+      baseURL: openRouterBaseUrl,
+      defaultHeaders: {
+        'HTTP-Referer': 'https://github.com/TianJianJun0727/ycloud-icons',
+        'X-Title': 'YCloud Icons Metadata',
+      },
     });
 
     return {
-      model: process.env.AI_MODEL ?? 'gpt-5-mini',
-      provider: 'OpenAI',
-      async completeJson<T>(input: string, schemaName: string, schema: z.ZodType<T>) {
-        const response = await client.responses.create({
-          model: process.env.AI_MODEL ?? 'gpt-5-mini',
-          input,
-          text: {
-            format: zodTextFormat(schema, schemaName),
-          },
+      model: process.env.AI_MODEL ?? 'deepseek/deepseek-chat-v3.1',
+      provider: 'OpenRouter',
+      async completeJson<T>(input: string, _schemaName: string, schema: z.ZodType<T>) {
+        const response = await client.chat.completions.create({
+          model: process.env.AI_MODEL ?? 'deepseek/deepseek-chat-v3.1',
+          messages: [
+            {
+              role: 'system',
+              content: 'Return only a valid JSON object. Do not wrap it in Markdown.',
+            },
+            {
+              role: 'user',
+              content: input,
+            },
+          ],
+          temperature: 0,
         });
 
-        return schema.parse(JSON.parse(response.output_text));
+        const content = response.choices[0]?.message?.content;
+        if (!content) {
+          throw new Error('AI response did not include JSON content.');
+        }
+
+        return parseJsonWithSchema(content, schema);
       },
     } satisfies AiClient;
   }
@@ -64,7 +101,7 @@ export function createAiClient() {
           throw new Error('AI response did not include JSON content.');
         }
 
-        return schema.parse(JSON.parse(content));
+        return parseJsonWithSchema(content, schema);
       },
     } satisfies AiClient;
   }

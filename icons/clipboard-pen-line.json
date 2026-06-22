@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑剪贴板内容",
+    "书写笔记",
+    "修改文本"
+  ],
   "name": "剪贴板笔线条",
   "tags": [
-    "粘贴"
+    "编辑",
+    "书写",
+    "笔记",
+    "文本",
+    "修改"
   ],
   "categories": [
     "text"
@@ -20,9 +28,17 @@
     "en": {
       "name": "clipboard pen line",
       "tags": [
-        "paste"
+        "edit",
+        "write",
+        "notes",
+        "text",
+        "modify"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Edit clipboard content",
+        "Write notes",
+        "Modify text"
+      ]
     }
   }
 }

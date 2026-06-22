@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "联系信息",
+    "发起通话",
+    "语音通信功能"
+  ],
   "name": "电话",
   "tags": [
-    "通话"
+    "电话",
+    "通话",
+    "听筒",
+    "设备",
+    "联系",
+    "呼叫"
   ],
   "categories": [
     "text",
@@ -15,9 +24,18 @@
     "en": {
       "name": "phone",
       "tags": [
-        "call"
+        "phone",
+        "call",
+        "receiver",
+        "device",
+        "contact",
+        "telephone"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Contact information",
+        "Initiate a call",
+        "Voice communication feature"
+      ]
     }
   }
 }

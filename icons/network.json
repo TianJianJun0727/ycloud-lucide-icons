@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网络拓扑可视化",
+    "系统架构图",
+    "数据结构节点图"
+  ],
   "name": "网络",
   "tags": [
-    "树"
+    "网络",
+    "拓扑",
+    "节点",
+    "连接",
+    "树状图",
+    "数据结构",
+    "系统架构"
   ],
   "categories": [
     "development"
@@ -12,9 +22,19 @@
     "en": {
       "name": "network",
       "tags": [
-        "tree"
+        "network",
+        "topology",
+        "node",
+        "connection",
+        "tree diagram",
+        "data structure",
+        "system architecture"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Network topology visualization",
+        "System architecture diagram",
+        "Data structure node graph"
+      ]
     }
   }
 }

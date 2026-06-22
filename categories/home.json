@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "家居",
-  "icon": "house",
   "i18n": {
     "en": {
       "title": "Home"

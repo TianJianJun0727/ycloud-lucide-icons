@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "环保或可持续功能",
+    "自然主题的应用板块",
+    "秋季季节指示器"
+  ],
   "name": "叶子",
   "tags": [
-    "可持续性",
+    "叶子",
     "自然",
-    "能量",
     "植物",
+    "环保",
+    "可持续",
     "秋天"
   ],
   "categories": [
@@ -18,13 +23,18 @@
     "en": {
       "name": "leaf",
       "tags": [
-        "sustainability",
+        "leaf",
         "nature",
-        "energy",
         "plant",
+        "eco-friendly",
+        "sustainability",
         "autumn"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Eco-friendly or sustainability feature",
+        "Nature-themed app section",
+        "Fall/autumn season indicator"
+      ]
     }
   }
 }

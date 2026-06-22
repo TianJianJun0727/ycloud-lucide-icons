@@ -1,22 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除文件或文件夹",
+    "清空回收站",
+    "从列表中移除项目"
+  ],
   "name": "垃圾桶",
   "tags": [
-    "空的",
+    "垃圾桶",
     "删除",
-    "清理",
+    "清空",
     "垃圾",
-    "清除",
-    "垃圾",
-    "删除",
-    "移除",
-    "垃圾箱",
-    "废物",
-    "回收",
-    "丢弃",
-    "双筒望远镜",
-    "垃圾"
+    "回收"
   ],
   "categories": [
     "files",
@@ -26,22 +21,17 @@
     "en": {
       "name": "trash",
       "tags": [
-        "empty",
-        "deletion",
-        "cleanup",
-        "junk",
-        "clear",
-        "garbage",
+        "trash can",
         "delete",
-        "remove",
-        "bin",
-        "waste",
-        "recycle",
-        "discard",
-        "binoculars",
-        "rubbish"
+        "empty",
+        "garbage",
+        "recycle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Delete file or folder",
+        "Empty recycle bin",
+        "Remove item from list"
+      ]
     }
   }
 }

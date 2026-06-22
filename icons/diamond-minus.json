@@ -1,31 +1,25 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频编辑关键帧移除",
+    "计算器减法功能",
+    "减少数值的UI按钮",
+    "Markdown水平线元素"
+  ],
   "name": "菱形减少",
   "tags": [
     "关键帧",
     "减去",
     "移除",
     "减少",
-    "减少",
     "计算器",
     "按钮",
-    "键盘",
-    "线条",
     "分隔线",
-    "分隔符",
-    "水平线",
     "水平线",
     "HTML",
     "标记",
-    "Markdown",
-    "---",
     "工具栏",
-    "操作员",
-    "代码",
-    "编码",
-    "最小值",
-    "降级"
+    "运算符"
   ],
   "categories": [
     "multimedia",
@@ -41,27 +35,21 @@
         "subtract",
         "remove",
         "decrease",
-        "reduce",
         "calculator",
         "button",
-        "keyboard",
-        "line",
         "divider",
-        "separator",
         "horizontal rule",
-        "hr",
         "html",
         "markup",
-        "markdown",
-        "---",
         "toolbar",
-        "operator",
-        "code",
-        "coding",
-        "minimum",
-        "downgrade"
+        "operator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video editing keyframe removal",
+        "Calculator subtract function",
+        "UI button for decreasing a value",
+        "Markdown horizontal rule element"
+      ]
     }
   }
 }

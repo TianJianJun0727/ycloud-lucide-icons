@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "返回导航按钮",
+    "上一首媒体曲目",
+    "地图上的方向指示器"
+  ],
   "name": "圆形箭头左",
   "tags": [
-    "上一个",
+    "向左",
     "返回",
+    "上一页",
     "方向",
     "西",
-    "标志",
-    "转",
-    "按钮",
-    "<-"
+    "圆形按钮"
   ],
   "categories": [
     "arrows",
@@ -28,16 +30,18 @@
     "en": {
       "name": "circle arrow left",
       "tags": [
-        "previous",
+        "left",
         "back",
+        "previous",
         "direction",
         "west",
-        "sign",
-        "turn",
-        "button",
-        "<-"
+        "circular button"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back navigation button",
+        "Previous media track",
+        "Directional indicator on a map"
+      ]
     }
   }
 }

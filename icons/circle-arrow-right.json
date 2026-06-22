@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下一页或下一步按钮",
+    "右转或向右方向指示",
+    "游戏手柄右键控制"
+  ],
   "name": "圆形箭头右",
   "tags": [
     "下一个",
     "前进",
     "方向",
     "东",
-    "标志",
-    "转",
+    "向右",
     "按钮",
-    "->"
+    "继续",
+    "游戏控制"
   ],
   "categories": [
     "arrows",
@@ -32,12 +36,16 @@
         "forward",
         "direction",
         "east",
-        "sign",
-        "turn",
+        "right",
         "button",
-        "->"
+        "continue",
+        "game control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Next page or step button",
+        "Right turn or direction indicator",
+        "Gamepad right control"
+      ]
     }
   }
 }

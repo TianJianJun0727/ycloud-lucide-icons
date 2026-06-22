@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据分析报表",
+    "增长趋势图表",
+    "统计报告文件",
+    "业绩增长显示"
+  ],
   "name": "文件图表列上升",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图",
-    "演示",
-    "趋势上升"
+    "数据分析",
+    "统计图表",
+    "增长趋势",
+    "柱状图",
+    "报表文件"
   ],
   "categories": [
     "files"
@@ -25,14 +29,18 @@
     "en": {
       "name": "file chart column increasing",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "presentation",
-        "trending up"
+        "data analysis",
+        "statistical chart",
+        "growth trend",
+        "bar chart",
+        "report file"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data analysis reports",
+        "Growth trend charts",
+        "Statistical report files",
+        "Performance growth display"
+      ]
     }
   }
 }

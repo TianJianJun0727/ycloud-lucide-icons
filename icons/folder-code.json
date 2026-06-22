@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "源代码目录",
+    "开发项目",
+    "编程工作区"
+  ],
   "name": "文件夹代码",
   "tags": [
-    "目录",
-    "编码",
-    "发展",
-    "软件"
+    "代码",
+    "编程",
+    "开发",
+    "源代码",
+    "项目文件"
   ],
   "categories": [
     "files",
@@ -16,12 +21,17 @@
     "en": {
       "name": "folder code",
       "tags": [
-        "directory",
-        "coding",
-        "develop",
-        "software"
+        "code",
+        "programming",
+        "development",
+        "source code",
+        "project files"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Source code directory",
+        "Development projects",
+        "Programming workspace"
+      ]
     }
   }
 }

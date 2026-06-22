@@ -1,13 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "医疗诊断界面",
+    "健康监测仪表盘",
+    "医生资料或诊所应用"
+  ],
   "name": "听诊器",
   "tags": [
-    "语音内窥镜",
+    "听诊器",
     "医疗",
-    "心",
-    "肺",
-    "声音"
+    "诊断",
+    "听诊",
+    "医生",
+    "健康",
+    "心脏",
+    "肺部"
   ],
   "categories": [
     "science",
@@ -17,13 +24,20 @@
     "en": {
       "name": "stethoscope",
       "tags": [
-        "phonendoscope",
+        "stethoscope",
         "medical",
+        "diagnosis",
+        "auscultation",
+        "doctor",
+        "health",
         "heart",
-        "lungs",
-        "sound"
+        "lungs"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Medical diagnosis interface",
+        "Health monitoring dashboard",
+        "Doctor profile or clinic app"
+      ]
     }
   }
 }

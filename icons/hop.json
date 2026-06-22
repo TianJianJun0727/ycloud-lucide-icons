@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "酿造配方界面",
+    "啤酒原料列表",
+    "饮品生产应用"
+  ],
   "name": "啤酒花",
   "tags": [
+    "啤酒花",
+    "酿造",
     "啤酒",
-    "啤酒厂",
-    "喝"
+    "饮品",
+    "原料"
   ],
   "categories": [
     "food-beverage"
@@ -14,11 +20,17 @@
     "en": {
       "name": "hop",
       "tags": [
+        "hops",
+        "brewing",
         "beer",
-        "brewery",
-        "drink"
+        "beverage",
+        "ingredient"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Brewing recipe interfaces",
+        "Beer ingredient lists",
+        "Beverage production apps"
+      ]
     }
   }
 }

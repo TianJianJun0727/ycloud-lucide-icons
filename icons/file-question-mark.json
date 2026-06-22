@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "帮助文件指示器",
+    "文档链接",
+    "FAQ部分图标"
+  ],
   "name": "文件问题标记",
   "tags": [
-    "自述文件",
-    "帮助",
-    "问题"
+    "帮助文档",
+    "说明文件",
+    "问题",
+    "FAQ",
+    "自述"
   ],
   "categories": [
     "files"
@@ -22,11 +28,17 @@
     "en": {
       "name": "file question mark",
       "tags": [
+        "help document",
         "readme",
-        "help",
-        "question"
+        "question",
+        "FAQ",
+        "manual"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Help file indicator",
+        "Documentation link",
+        "FAQ section icon"
+      ]
     }
   }
 }

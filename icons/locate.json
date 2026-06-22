@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在地图上查找我的位置",
+    "GPS激活按钮",
+    "获取路线起点"
+  ],
   "name": "定位",
   "tags": [
     "地图",
-    "全球定位系统",
+    "GPS",
+    "定位",
     "位置",
-    "十字"
+    "坐标",
+    "导航",
+    "查找"
   ],
   "categories": [
     "navigation"
@@ -18,9 +25,16 @@
         "map",
         "gps",
         "location",
-        "cross"
+        "pin",
+        "coordinates",
+        "navigation",
+        "find"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Find my location on a map",
+        "GPS activation button",
+        "Get directions starting point"
+      ]
     }
   }
 }

@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "VR应用图标",
+    "游戏设备设置",
+    "AR功能开关",
+    "可穿戴设备连接"
+  ],
   "name": "矩形护目镜",
   "tags": [
     "虚拟现实",
-    "虚拟的",
-    "增强的",
-    "现实",
-    "耳机",
-    "护目镜"
+    "增强现实",
+    "VR",
+    "AR",
+    "头戴设备",
+    "护目镜",
+    "游戏设备"
   ],
   "categories": [
     "devices",
@@ -20,14 +26,20 @@
     "en": {
       "name": "rectangle goggles",
       "tags": [
-        "vr",
-        "virtual",
-        "augmented",
-        "reality",
+        "virtual reality",
+        "augmented reality",
+        "VR",
+        "AR",
         "headset",
-        "goggles"
+        "goggles",
+        "gaming device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "VR application icon",
+        "Gaming device settings",
+        "AR feature toggle",
+        "Wearable device connection"
+      ]
     }
   }
 }

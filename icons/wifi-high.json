@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网络连接强度指示器",
+    "Wi-Fi状态显示",
+    "设备连接仪表盘",
+    "信号质量监视器"
+  ],
   "name": "无线网络高",
   "tags": [
+    "Wi-Fi",
+    "无线网络",
+    "信号强",
     "连接",
-    "信号",
-    "无线"
+    "满格",
+    "网络状态",
+    "高速"
   ],
   "categories": [
     "connectivity",
@@ -15,11 +24,20 @@
     "en": {
       "name": "wifi high",
       "tags": [
+        "Wi-Fi",
+        "wireless",
+        "strong signal",
         "connection",
-        "signal",
-        "wireless"
+        "full bars",
+        "network status",
+        "high speed"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Network connection strength indicator",
+        "Wi-Fi status display",
+        "Device connectivity dashboard",
+        "Signal quality monitor"
+      ]
     }
   }
 }

@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图像搜索工具",
+    "视觉内容发现",
+    "模式匹配系统"
+  ],
   "name": "扫描搜索",
   "tags": [
-    "预览",
-    "缩放",
-    "展开",
-    "全屏",
-    "画廊",
-    "图片",
-    "焦点",
-    "镜头"
+    "视觉搜索",
+    "图像识别",
+    "内容查找",
+    "视觉检测",
+    "模式识别",
+    "智能搜索"
   ],
   "categories": [
     "photography",
@@ -21,16 +23,18 @@
     "en": {
       "name": "scan search",
       "tags": [
-        "preview",
-        "zoom",
-        "expand",
-        "fullscreen",
-        "gallery",
-        "image",
-        "focus",
-        "lens"
+        "visual search",
+        "image recognition",
+        "content finding",
+        "visual detection",
+        "pattern recognition",
+        "smart search"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Image search tools",
+        "Visual content discovery",
+        "Pattern matching systems"
+      ]
     }
   }
 }

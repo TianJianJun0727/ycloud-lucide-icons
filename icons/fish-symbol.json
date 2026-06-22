@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "海鲜餐厅标志",
+    "钓鱼应用图标",
+    "水族馆或海洋生物分类"
+  ],
   "name": "鱼符号",
   "tags": [
-    "菜",
-    "餐厅",
-    "课程",
-    "餐",
-    "海鲜",
-    "宠物",
-    "海",
-    "海洋"
+    "鱼类符号",
+    "海鲜标识",
+    "钓鱼",
+    "水生生物",
+    "餐饮"
   ],
   "categories": [
     "food-beverage",
@@ -20,16 +21,17 @@
     "en": {
       "name": "fish symbol",
       "tags": [
-        "dish",
-        "restaurant",
-        "course",
-        "meal",
+        "fish symbol",
         "seafood",
-        "pet",
-        "sea",
-        "marine"
+        "fishing",
+        "aquatic",
+        "food"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Seafood restaurant logo",
+        "Fishing app icon",
+        "Aquarium or marine life category"
+      ]
     }
   }
 }

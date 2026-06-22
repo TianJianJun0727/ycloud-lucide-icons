@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "查看月历",
+    "选择日期",
+    "检查事件日程"
+  ],
   "name": "日历",
   "tags": [
+    "日历",
     "日期",
     "月",
     "年",
     "事件",
     "生日",
-    "出生日期"
+    "日程",
+    "时间"
   ],
   "categories": [
     "time"
@@ -17,14 +23,20 @@
     "en": {
       "name": "calendar",
       "tags": [
+        "calendar",
         "date",
         "month",
         "year",
         "event",
         "birthday",
-        "birthdate"
+        "schedule",
+        "time"
       ],
-      "use-cases": []
+      "use-cases": [
+        "View monthly calendar",
+        "Select a date",
+        "Check event schedule"
+      ]
     }
   }
 }

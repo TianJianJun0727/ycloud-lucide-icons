@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下一步按钮",
+    "向右导航箭头",
+    "前进方向指示器"
+  ],
   "name": "箭头右",
   "tags": [
     "前进",
     "下一个",
     "方向",
     "东",
-    "->"
+    "导航"
   ],
   "categories": [
     "arrows"
@@ -20,9 +24,13 @@
         "next",
         "direction",
         "east",
-        "->"
+        "navigation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Next step button",
+        "Right navigation arrow",
+        "Forward direction indicator"
+      ]
     }
   }
 }

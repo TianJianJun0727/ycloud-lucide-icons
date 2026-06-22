@@ -1,33 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除书签项目",
+    "从阅读列表移除",
+    "取消文档操作"
+  ],
   "name": "书籍关闭",
   "tags": [
-    "代码",
-    "编码",
-    "版本控制",
-    "Git",
-    "存储库",
-    "移除",
     "删除",
-    "阅读",
-    "错误信息",
-    "虚假信息",
-    "被误导",
-    "江湖骗子",
-    "诡辩",
-    "假的",
-    "谎言",
-    "谎言",
-    "宣传",
-    "审查的",
+    "移除",
+    "关闭",
+    "错误",
+    "禁止",
     "取消",
-    "禁止的",
-    "禁止",
-    "禁止",
-    "没有受过教育的",
-    "再教育",
-    "忘记"
+    "版本控制"
   ],
   "categories": [
     "text",
@@ -37,33 +23,19 @@
     "en": {
       "name": "book X",
       "tags": [
-        "code",
-        "coding",
-        "version control",
-        "git",
-        "repository",
-        "remove",
         "delete",
-        "reading",
-        "misinformation",
-        "disinformation",
-        "misinformed",
-        "charlatan",
-        "sophistry",
-        "false",
-        "lies",
-        "untruth",
-        "propaganda",
-        "censored",
-        "cancelled",
+        "remove",
+        "close",
+        "error",
         "forbidden",
-        "prohibited",
-        "banned",
-        "uneducated",
-        "re-education",
-        "unlearn"
+        "cancel",
+        "version control"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Delete bookmarked item",
+        "Remove from reading list",
+        "Cancel document operation"
+      ]
     }
   }
 }

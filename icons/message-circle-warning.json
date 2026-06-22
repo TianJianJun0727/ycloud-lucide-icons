@@ -1,22 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "举报滥用内容",
+    "标记危险消息",
+    "聊天中的警报"
+  ],
   "name": "消息圆形警告",
   "tags": [
-    "评论",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "讲话泡泡",
-    "报告",
-    "滥用",
-    "进攻",
-    "告警",
+    "评论",
+    "警告",
     "危险",
-    "小心",
-    "受保护的",
-    "感叹号"
+    "报告",
+    "举报",
+    "注意",
+    "警报"
   ],
   "categories": [
     "social",
@@ -26,22 +25,20 @@
     "en": {
       "name": "message circle warning",
       "tags": [
-        "comment",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "report",
-        "abuse",
-        "offense",
-        "alert",
+        "comment",
+        "warning",
         "danger",
-        "caution",
-        "protected",
-        "exclamation mark"
+        "report",
+        "alert",
+        "caution"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Report abusive content",
+        "Flag a dangerous message",
+        "Alert in a chat"
+      ]
     }
   }
 }

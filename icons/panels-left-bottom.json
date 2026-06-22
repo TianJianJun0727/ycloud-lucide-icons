@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "主侧边栏布局",
+    "编辑器中的左下方面板",
+    "主要内容抽屉配置"
+  ],
   "name": "面板左底部",
   "tags": [
-    "抽屉",
     "侧边栏",
-    "小学"
+    "抽屉",
+    "主面板",
+    "布局",
+    "左下方"
   ],
   "categories": [
     "layout"
@@ -14,11 +20,17 @@
     "en": {
       "name": "panels left bottom",
       "tags": [
-        "drawers",
         "sidebar",
-        "primary"
+        "drawer",
+        "primary panel",
+        "layout",
+        "bottom left"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Primary sidebar layout",
+        "Left-bottom panel in an editor",
+        "Main content drawer configuration"
+      ]
     }
   }
 }

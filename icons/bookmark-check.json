@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "标记文章已读",
+    "完成书签任务",
+    "验证保存项目"
+  ],
   "name": "书签勾选",
   "tags": [
-    "读",
-    "完成",
-    "完成",
-    "剪辑",
+    "已完成",
+    "已读",
     "标记",
-    "标签",
+    "验证",
     "任务",
-    "待办事项"
+    "书签",
+    "确认"
   ],
   "categories": [
     "account"
@@ -19,16 +22,19 @@
     "en": {
       "name": "bookmark check",
       "tags": [
+        "completed",
         "read",
-        "finished",
-        "complete",
-        "clip",
-        "marker",
-        "tag",
+        "marked",
+        "verified",
         "task",
-        "todo"
+        "bookmark",
+        "confirmed"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mark article as read",
+        "Complete bookmarked task",
+        "Verify saved item"
+      ]
     }
   }
 }

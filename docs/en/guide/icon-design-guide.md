@@ -74,7 +74,6 @@ Category files are also Chinese-first:
 {
   "$schema": "../category.schema.json",
   "title": "Simplified Chinese category title",
-  "icon": "compass",
   "i18n": {
     "en": {
       "title": "Navigation & Places"

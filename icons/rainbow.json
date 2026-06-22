@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用降水显示",
+    "调色板选择器",
+    "多样性与包容性"
+  ],
   "name": "彩虹",
   "tags": [
-    "颜色",
+    "彩虹",
     "颜色",
     "光谱",
-    "光",
-    "棱镜",
-    "弧线",
-    "清除",
-    "阳光"
+    "天气",
+    "多彩",
+    "希望"
   ],
   "categories": [
     "weather"
@@ -19,16 +21,18 @@
     "en": {
       "name": "rainbow",
       "tags": [
+        "rainbow",
         "colors",
-        "colours",
         "spectrum",
-        "light",
-        "prism",
-        "arc",
-        "clear",
-        "sunshine"
+        "weather",
+        "colorful",
+        "hope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app precipitation",
+        "Color palette selector",
+        "Diversity and inclusion"
+      ]
     }
   }
 }

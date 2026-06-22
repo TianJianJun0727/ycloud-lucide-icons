@@ -1,35 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "心率监测显示",
+    "健身追踪器界面",
+    "医疗生命体征仪表板",
+    "运动活动指示器",
+    "医院病人监护仪"
+  ],
   "name": "方形活动",
   "tags": [
-    "脉冲",
-    "动作",
-    "运动",
-    "运动",
-    "锻炼",
+    "活动监测",
+    "脉搏",
+    "心率",
+    "医疗",
     "健身",
-    "医疗保健",
-    "心率监测器",
     "生命体征",
-    "生命体征",
-    "急诊室",
-    "急诊室",
-    "重症监护",
-    "医院",
-    "除颤器",
-    "地震",
-    "西斯米克",
-    "震级",
-    "里氏震级",
-    "余震",
-    "震颤",
-    "冲击波",
-    "音频",
-    "波形",
-    "合成器",
-    "合成器",
-    "音乐"
+    "运动",
+    "心电图"
   ],
   "categories": [
     "medical",
@@ -49,35 +36,22 @@
     "en": {
       "name": "square activity",
       "tags": [
+        "activity monitor",
         "pulse",
-        "action",
-        "motion",
-        "movement",
-        "exercise",
+        "heart rate",
+        "medical",
         "fitness",
-        "healthcare",
-        "heart rate monitor",
         "vital signs",
-        "vitals",
-        "emergency room",
-        "er",
-        "intensive care",
-        "hospital",
-        "defibrillator",
-        "earthquake",
-        "siesmic",
-        "magnitude",
-        "richter scale",
-        "aftershock",
-        "tremor",
-        "shockwave",
-        "audio",
-        "waveform",
-        "synthesizer",
-        "synthesiser",
-        "music"
+        "exercise",
+        "ECG"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Heart rate monitoring display",
+        "Fitness tracker interface",
+        "Medical vital signs dashboard",
+        "Exercise activity indicator",
+        "Hospital patient monitor"
+      ]
     }
   }
 }

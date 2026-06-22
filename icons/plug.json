@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电源插座指示器",
+    "充电端口显示",
+    "电气连接点"
+  ],
   "name": "插头",
   "tags": [
-    "电力",
-    "能量",
-    "电子产品",
-    "插座",
-    "插座",
+    "插头",
     "电源",
-    "电压",
-    "当前",
-    "充电器"
+    "充电",
+    "连接",
+    "电器"
   ],
   "categories": [
     "devices",
@@ -21,17 +21,17 @@
     "en": {
       "name": "plug",
       "tags": [
-        "electricity",
-        "energy",
-        "electronics",
-        "socket",
-        "outlet",
+        "plug",
         "power",
-        "voltage",
-        "current",
-        "charger"
+        "charging",
+        "connect",
+        "electrical"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Power outlet indicator",
+        "Charging port display",
+        "Electrical connection point"
+      ]
     }
   }
 }

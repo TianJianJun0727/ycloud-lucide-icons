@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏计分",
+    "简单计数或正字标记",
+    "进度指示器"
+  ],
   "name": "计数1",
   "tags": [
     "计数",
-    "分数",
-    "列举",
-    "天",
-    "一",
+    "正字计数",
+    "计分",
     "1",
+    "一",
     "第一",
-    "酒吧",
-    "监狱",
-    "细胞",
-    "句子"
+    "标记"
   ],
   "categories": [
     "math",
@@ -23,19 +23,19 @@
     "en": {
       "name": "tally 1",
       "tags": [
+        "tally",
         "count",
         "score",
-        "enumerate",
-        "days",
         "one",
         "1",
         "first",
-        "bar",
-        "prison",
-        "cell",
-        "sentence"
+        "mark"
       ],
-      "use-cases": []
+      "use-cases": [
+        "scorekeeping in games",
+        "simple counting or tally marks",
+        "progress indicator"
+      ]
     }
   }
 }

@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "书桌灯光开关",
+    "学习或办公场景",
+    "效率应用"
+  ],
   "name": "灯桌面",
   "tags": [
-    "照明",
-    "家庭",
-    "办公室",
-    "书桌",
-    "首页",
-    "家具"
+    "台灯",
+    "书桌灯",
+    "阅读灯",
+    "工作灯",
+    "学习灯"
   ],
   "categories": [
     "home"
@@ -17,14 +20,17 @@
     "en": {
       "name": "lamp desk",
       "tags": [
-        "lighting",
-        "household",
-        "office",
-        "desk",
-        "home",
-        "furniture"
+        "desk lamp",
+        "table lamp",
+        "reading light",
+        "task light",
+        "study lamp"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Desk lighting toggle",
+        "Study or office scene",
+        "Productivity app"
+      ]
     }
   }
 }

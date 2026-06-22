@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏关卡设计",
+    "地图地标",
+    "奇幻主题界面"
+  ],
   "name": "城堡",
   "tags": [
-    "堡垒",
-    "据点",
-    "宫殿",
     "城堡",
-    "建筑物"
+    "堡垒",
+    "宫殿",
+    "建筑",
+    "游戏",
+    "据点"
   ],
   "categories": [
     "buildings",
@@ -18,13 +23,18 @@
     "en": {
       "name": "castle",
       "tags": [
+        "castle",
         "fortress",
-        "stronghold",
         "palace",
-        "chateau",
-        "building"
+        "building",
+        "gaming",
+        "stronghold"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game level design",
+        "Map landmark",
+        "Fantasy theme UI"
+      ]
     }
   }
 }

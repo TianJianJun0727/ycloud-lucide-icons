@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在设计软件中添加新图层",
+    "在用户界面中创建新堆栈",
+    "增加叠加层级"
+  ],
   "name": "图层加号",
   "tags": [
-    "堆栈",
-    "层数",
+    "图层",
+    "叠加",
     "添加",
     "新建",
     "增加",
-    "创建",
-    "积极的",
-    "复制",
-    "升级"
+    "堆叠",
+    "创建"
   ],
   "categories": [
     "design",
@@ -21,17 +23,19 @@
     "en": {
       "name": "layers plus",
       "tags": [
-        "stack",
         "layers",
+        "stack",
         "add",
         "new",
         "increase",
         "create",
-        "positive",
-        "copy",
-        "upgrade"
+        "plus"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add a new layer in design software",
+        "Create a new stack in a UI",
+        "Increase overlay levels"
+      ]
     }
   }
 }

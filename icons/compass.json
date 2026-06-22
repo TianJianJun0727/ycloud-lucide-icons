@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "地图导航界面",
+    "方向或方位指示器",
+    "旅行或探索应用",
+    "浏览器图标"
+  ],
   "name": "指南针",
   "tags": [
+    "指南针",
     "方向",
-    "北",
-    "东",
-    "南",
-    "西",
-    "游猎",
+    "导航",
+    "定位",
+    "旅行",
+    "地图",
     "浏览器"
   ],
   "categories": [
@@ -19,15 +24,20 @@
     "en": {
       "name": "compass",
       "tags": [
+        "compass",
         "direction",
-        "north",
-        "east",
-        "south",
-        "west",
-        "safari",
+        "navigation",
+        "orientation",
+        "travel",
+        "map",
         "browser"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Map navigation interface",
+        "Direction or bearing indicator",
+        "Travel or exploration app",
+        "Browser icon"
+      ]
     }
   }
 }

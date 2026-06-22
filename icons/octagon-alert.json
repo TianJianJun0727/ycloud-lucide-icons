@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "错误通知",
+    "安全警告",
+    "关键警报"
+  ],
   "name": "八边形告警",
   "tags": [
     "警告",
-    "告警",
     "危险",
-    "感叹号"
+    "警报",
+    "停止",
+    "注意"
   ],
   "categories": [
     "notifications",
@@ -25,11 +30,16 @@
       "name": "octagon alert",
       "tags": [
         "warning",
-        "alert",
         "danger",
-        "exclamation mark"
+        "alert",
+        "stop",
+        "caution"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Error notifications",
+        "Safety warnings",
+        "Critical alerts"
+      ]
     }
   }
 }

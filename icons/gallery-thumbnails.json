@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "缩略图浏览",
+    "图片预览界面",
+    "相册管理"
+  ],
   "name": "图库缩略图",
   "tags": [
-    "旋转木马",
+    "缩略图",
     "图片",
-    "图片",
-    "专辑",
-    "投资组合",
-    "预览"
+    "相册",
+    "预览",
+    "作品集"
   ],
   "categories": [
     "layout",
@@ -21,14 +24,17 @@
     "en": {
       "name": "gallery thumbnails",
       "tags": [
-        "carousel",
-        "pictures",
+        "thumbnails",
         "images",
         "album",
-        "portfolio",
-        "preview"
+        "preview",
+        "portfolio"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Thumbnail browsing",
+        "Image preview interface",
+        "Album management"
+      ]
     }
   }
 }

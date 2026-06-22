@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示快速操作或快捷方式",
+    "电源或能量状态",
+    "相机闪光灯开启"
+  ],
   "name": "闪电",
   "tags": [
-    "闪光",
-    "相机",
     "闪电",
-    "电力",
+    "快速",
     "能量",
     "电源",
-    "快"
+    "闪光灯",
+    "灵感"
   ],
   "categories": [
     "connectivity",
@@ -21,15 +24,18 @@
     "en": {
       "name": "zap",
       "tags": [
-        "flash",
-        "camera",
         "lightning",
-        "electricity",
+        "quick",
         "energy",
         "power",
-        "quick"
+        "flash",
+        "inspiration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Representing a quick action or shortcut",
+        "Power or energy status",
+        "Camera flash turned on"
+      ]
     }
   }
 }

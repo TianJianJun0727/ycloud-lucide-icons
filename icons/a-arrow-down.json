@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "减小文本大小",
+    "字体大小控件",
+    "文本格式化工具栏"
+  ],
   "name": "字号减小",
   "tags": [
-    "信",
     "字体大小",
+    "减小",
     "文本",
-    "格式化",
-    "较小"
+    "字号",
+    "缩小",
+    "格式"
   ],
   "categories": [
     "text",
@@ -17,13 +22,18 @@
     "en": {
       "name": "A arrow down",
       "tags": [
-        "letter",
         "font size",
+        "decrease",
         "text",
-        "formatting",
-        "smaller"
+        "typography",
+        "smaller",
+        "formatting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "decreasing text size",
+        "font size controls",
+        "text formatting toolbar"
+      ]
     }
   }
 }

@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "非接触支付界面",
+    "NFC数据传输",
+    "移动钱包功能"
+  ],
   "name": "智能手机NFC近场通信",
   "tags": [
-    "非接触式",
-    "付款",
+    "智能手机",
+    "NFC",
     "近场通信",
-    "屏幕"
+    "非接触支付",
+    "无线传输",
+    "移动支付"
   ],
   "categories": [
     "communication",
@@ -17,12 +23,18 @@
     "en": {
       "name": "smartphone nfc",
       "tags": [
-        "contactless",
-        "payment",
-        "near-field communication",
-        "screen"
+        "smartphone",
+        "NFC",
+        "near field communication",
+        "contactless payment",
+        "wireless transfer",
+        "mobile payment"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Contactless payment interface",
+        "NFC data transfer",
+        "Mobile wallet feature"
+      ]
     }
   }
 }

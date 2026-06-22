@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "发布公共公告",
+    "发送广播通知",
+    "用声音提醒用户"
+  ],
   "name": "扩音器",
   "tags": [
-    "广告",
+    "广播",
     "公告",
-    "关注",
-    "告警",
+    "通知",
     "扬声器",
-    "扩音器",
-    "通知"
+    "扩音",
+    "提醒"
   ],
   "categories": [
     "multimedia",
@@ -19,15 +22,18 @@
     "en": {
       "name": "megaphone",
       "tags": [
-        "advertisement",
+        "broadcast",
         "announcement",
-        "attention",
-        "alert",
+        "notification",
         "loudspeaker",
         "megaphone",
-        "notification"
+        "alert"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Make a public announcement",
+        "Send a broadcast notification",
+        "Alert users with sound"
+      ]
     }
   }
 }

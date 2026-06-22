@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "俄罗斯费用报销",
+    "卢布支付收据",
+    "带卢布符号的财务记录"
+  ],
   "name": "收据俄罗斯卢布",
   "tags": [
+    "收据",
     "账单",
-    "优惠券",
-    "滑倒",
-    "勾选",
-    "存根",
+    "俄罗斯卢布",
     "货币",
-    "擦",
-    "₽"
+    "支付",
+    "发票",
+    "财务",
+    "旅行"
   ],
   "categories": [
     "finance",
@@ -20,16 +24,20 @@
     "en": {
       "name": "receipt russian ruble",
       "tags": [
+        "receipt",
         "bill",
-        "voucher",
-        "slip",
-        "check",
-        "counterfoil",
+        "russian ruble",
         "currency",
-        "rub",
-        "₽"
+        "payment",
+        "invoice",
+        "finance",
+        "travel"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Expense report for Russia",
+        "Payment receipt in RUB",
+        "Financial record with ruble"
+      ]
     }
   }
 }

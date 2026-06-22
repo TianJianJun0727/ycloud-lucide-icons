@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户资料验证状态",
+    "上下文帮助指示器",
+    "未验证账户徽章"
+  ],
   "name": "徽章问题标记",
   "tags": [
-    "已验证",
-    "未经验证",
-    "帮助"
+    "帮助",
+    "疑问",
+    "徽章",
+    "未验证",
+    "支持",
+    "提示"
   ],
   "categories": [
     "accessibility",
@@ -24,11 +31,18 @@
     "en": {
       "name": "badge question mark",
       "tags": [
-        "verified",
+        "help",
+        "question",
+        "badge",
         "unverified",
-        "help"
+        "support",
+        "hint"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User profile verification status",
+        "Contextual help indicator",
+        "Unverified account badge"
+      ]
     }
   }
 }

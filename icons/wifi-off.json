@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在设置中关闭Wi-Fi",
+    "表示无可用网络连接"
+  ],
   "name": "无线网络关闭",
   "tags": [
-    "残疾人"
+    "无线网络关闭",
+    "Wi-Fi关闭",
+    "断开连接",
+    "禁用网络",
+    "无网络"
   ],
   "categories": [
     "connectivity",
@@ -13,9 +20,16 @@
     "en": {
       "name": "wifi off",
       "tags": [
-        "disabled"
+        "wifi off",
+        "wireless disabled",
+        "disconnected",
+        "network disabled",
+        "no connection"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Turning Wi-Fi off in settings",
+        "Indicating no network connection available"
+      ]
     }
   }
 }

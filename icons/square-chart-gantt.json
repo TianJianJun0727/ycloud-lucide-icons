@@ -1,27 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "项目管理仪表板",
+    "开发时间线视图",
+    "任务调度界面"
+  ],
   "name": "方形图表甘特图",
   "tags": [
-    "项目",
-    "管理",
-    "概述",
-    "路线图",
-    "计划",
-    "意图",
+    "甘特图",
+    "项目管理",
     "时间线",
-    "截止日期",
-    "日期",
-    "事件",
-    "范围",
-    "期间",
-    "生产力",
-    "工作",
-    "敏捷的",
-    "代码",
-    "编码",
-    "工具栏",
-    "按钮"
+    "进度",
+    "计划",
+    "开发",
+    "图表"
   ],
   "categories": [
     "charts",
@@ -47,27 +39,19 @@
     "en": {
       "name": "square chart gantt",
       "tags": [
-        "projects",
-        "manage",
-        "overview",
-        "roadmap",
-        "plan",
-        "intentions",
+        "gantt",
+        "project management",
         "timeline",
-        "deadline",
-        "date",
-        "event",
-        "range",
-        "period",
-        "productivity",
-        "work",
-        "agile",
-        "code",
-        "coding",
-        "toolbar",
-        "button"
+        "progress",
+        "planning",
+        "development",
+        "chart"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Project management dashboards",
+        "Development timeline views",
+        "Task scheduling interfaces"
+      ]
     }
   }
 }

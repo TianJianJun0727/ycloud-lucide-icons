@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "布局参考线",
+    "设计边距指示",
+    "UI间距参考",
+    "线框设计"
+  ],
   "name": "面板底部虚线",
   "tags": [
-    "抽屉",
-    "码头",
-    "显示",
-    "揭示",
-    "填充",
-    "保证金",
-    "指南",
+    "面板",
+    "底部",
+    "虚线",
     "布局",
-    "流血"
+    "参考线",
+    "边距",
+    "设计"
   ],
   "categories": [
     "layout"
@@ -28,17 +31,20 @@
     "en": {
       "name": "panel bottom dashed",
       "tags": [
-        "drawer",
-        "dock",
-        "show",
-        "reveal",
-        "padding",
-        "margin",
-        "guide",
+        "panel",
+        "bottom",
+        "dashed",
         "layout",
-        "bleed"
+        "guide",
+        "margin",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Layout guidelines",
+        "Design margin indicators",
+        "UI spacing reference",
+        "Wireframe design"
+      ]
     }
   }
 }

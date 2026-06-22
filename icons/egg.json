@@ -1,20 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "早餐食谱图标",
+    "复活节节日设计",
+    "农场或动物应用",
+    "杂货购物清单"
+  ],
   "name": "鸡蛋",
   "tags": [
-    "鸟",
-    "鸡",
-    "巢",
-    "孵化",
-    "外壳",
-    "孵化",
-    "软煮",
-    "硬",
+    "鸡蛋",
     "早餐",
-    "早午餐",
-    "早上",
-    "复活节"
+    "复活节",
+    "孵化",
+    "鸟类",
+    "巢",
+    "食物",
+    "食材"
   ],
   "categories": [
     "food-beverage",
@@ -24,20 +25,21 @@
     "en": {
       "name": "egg",
       "tags": [
-        "bird",
-        "chicken",
-        "nest",
-        "hatch",
-        "shell",
-        "incubate",
-        "soft boiled",
-        "hard",
+        "egg",
         "breakfast",
-        "brunch",
-        "morning",
-        "easter"
+        "easter",
+        "hatch",
+        "bird",
+        "nest",
+        "food",
+        "ingredient"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Breakfast recipe icon",
+        "Easter holiday design",
+        "Farm or animal app",
+        "Grocery shopping list"
+      ]
     }
   }
 }

@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本输入框",
+    "键盘快捷键面板",
+    "硬件设置",
+    "连接外部设备"
+  ],
   "name": "键盘",
   "tags": [
-    "布局",
-    "咒语",
-    "设置",
-    "鼠标"
+    "键盘",
+    "输入",
+    "打字",
+    "快捷键",
+    "硬件",
+    "外设"
   ],
   "categories": [
     "text",
@@ -17,12 +24,19 @@
     "en": {
       "name": "keyboard",
       "tags": [
-        "layout",
-        "spell",
-        "settings",
-        "mouse"
+        "keyboard",
+        "input",
+        "typing",
+        "shortcut",
+        "hardware",
+        "peripheral"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text input field",
+        "Keyboard shortcuts panel",
+        "Hardware settings",
+        "Connect external device"
+      ]
     }
   }
 }

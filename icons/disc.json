@@ -1,26 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "光盘驱动器指示器",
+    "媒体存储图标",
+    "播放控制"
+  ],
   "name": "光盘",
   "tags": [
-    "专辑",
-    "音乐",
-    "歌曲",
-    "格式",
     "光盘",
-    "DVD",
-    "乙烯基",
-    "袖子",
-    "封面",
-    "铂金",
-    "编译",
-    "EP",
-    "录音",
-    "回放",
-    "旋转",
-    "旋转",
-    "转速",
-    "DJ"
+    "音乐",
+    "存储",
+    "媒体",
+    "唱片"
   ],
   "categories": [
     "devices",
@@ -30,26 +21,17 @@
     "en": {
       "name": "disc",
       "tags": [
-        "album",
+        "disc",
         "music",
-        "songs",
-        "format",
-        "cd",
-        "dvd",
-        "vinyl",
-        "sleeve",
-        "cover",
-        "platinum",
-        "compilation",
-        "ep",
-        "recording",
-        "playback",
-        "spin",
-        "rotate",
-        "rpm",
-        "dj"
+        "storage",
+        "media",
+        "record"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disc drive indicator",
+        "Media storage icon",
+        "Playback control"
+      ]
     }
   }
 }

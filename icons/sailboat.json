@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "海上交通图标",
+    "航行活动显示",
+    "旅行旅游界面",
+    "水上运动表示"
+  ],
   "name": "帆船",
   "tags": [
+    "帆船",
     "船",
-    "船",
-    "港口",
-    "港口",
-    "码头"
+    "航行",
+    "交通",
+    "旅行",
+    "海洋"
   ],
   "categories": [
     "transportation",
@@ -17,13 +23,19 @@
     "en": {
       "name": "sailboat",
       "tags": [
-        "ship",
+        "sailboat",
         "boat",
-        "harbor",
-        "harbour",
-        "dock"
+        "sailing",
+        "transportation",
+        "travel",
+        "ocean"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Maritime transportation icon",
+        "Sailing activity display",
+        "Travel and tourism interface",
+        "Water sports representation"
+      ]
     }
   }
 }

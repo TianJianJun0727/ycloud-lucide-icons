@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "添加筛选条件",
+    "创建新过滤器",
+    "筛选器管理"
+  ],
   "name": "漏斗加号",
   "tags": [
     "筛选",
-    "料斗",
     "添加",
     "创建",
-    "新建"
+    "新建",
+    "过滤"
   ],
   "categories": [
     "layout"
@@ -17,12 +21,15 @@
       "name": "funnel plus",
       "tags": [
         "filter",
-        "hopper",
         "add",
         "create",
         "new"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add filter condition",
+        "Create new filter",
+        "Filter management"
+      ]
     }
   }
 }

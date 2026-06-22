@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "元素选择工具",
+    "浏览器检查器光标",
+    "点击目标指示器"
+  ],
   "name": "方形鼠标指针",
   "tags": [
-    "检查员",
-    "元素",
-    "鼠标",
+    "鼠标指针",
+    "选择",
     "点击",
-    "指针",
-    "盒子",
-    "浏览器",
-    "选择器",
-    "目标",
-    "多姆",
-    "节点"
+    "元素",
+    "检查器",
+    "DOM"
   ],
   "categories": [
     "arrows",
@@ -33,19 +32,18 @@
     "en": {
       "name": "square mouse pointer",
       "tags": [
-        "inspector",
-        "element",
-        "mouse",
+        "mouse pointer",
+        "selection",
         "click",
-        "pointer",
-        "box",
-        "browser",
-        "selector",
-        "target",
-        "dom",
-        "node"
+        "element",
+        "inspector",
+        "DOM"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Element selection tool",
+        "Browser inspector cursor",
+        "Click target indicator"
+      ]
     }
   }
 }

@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "银行或金融安全",
+    "密码管理器界面",
+    "安全存储功能",
+    "宝藏或游戏战利品界面"
+  ],
   "name": "保险库",
   "tags": [
-    "安全",
-    "密码箱",
-    "押金",
-    "储物柜",
-    "保险箱",
+    "保险库",
     "保险箱",
     "安全",
-    "安全",
+    "银行",
     "存储",
     "贵重物品",
-    "银行"
+    "金库"
   ],
   "categories": [
     "security",
@@ -24,19 +25,20 @@
     "en": {
       "name": "vault",
       "tags": [
+        "vault",
         "safe",
-        "lockbox",
-        "deposit",
-        "locker",
-        "coffer",
-        "strongbox",
-        "safety",
-        "secure",
+        "security",
+        "bank",
         "storage",
         "valuables",
-        "bank"
+        "lockbox"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Banking or financial security",
+        "Password manager UI",
+        "Secure storage features",
+        "Treasure or game loot interfaces"
+      ]
     }
   }
 }

@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向列表添加新筛选器",
+    "创建筛选视图",
+    "在列表中包含额外条件"
+  ],
   "name": "列表筛选加号",
   "tags": [
+    "列表",
     "筛选",
+    "过滤",
+    "添加",
     "加号",
-    "选项",
-    "添加"
+    "选项"
   ],
   "categories": [
     "text",
@@ -16,12 +22,17 @@
     "en": {
       "name": "list filter plus",
       "tags": [
+        "list",
         "filter",
+        "add",
         "plus",
-        "options",
-        "add"
+        "options"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Add a new filter to a list",
+        "Create a filtered view",
+        "Include additional criteria in a list"
+      ]
     }
   }
 }

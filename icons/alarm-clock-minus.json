@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除闹钟设置",
+    "取消日程提醒",
+    "关闭定时任务"
+  ],
   "name": "减少闹钟",
   "tags": [
+    "闹钟",
+    "减少",
+    "删除闹钟",
+    "取消提醒",
+    "关闭闹钟",
     "移除"
   ],
   "categories": [
@@ -22,9 +31,18 @@
     "en": {
       "name": "alarm clock minus",
       "tags": [
-        "remove"
+        "alarm",
+        "decrease",
+        "remove alarm",
+        "cancel reminder",
+        "turn off alarm",
+        "delete"
       ],
-      "use-cases": []
+      "use-cases": [
+        "deleting alarm settings",
+        "canceling schedule reminders",
+        "turning off timed tasks"
+      ]
     }
   }
 }

@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网络设置或状态",
+    "家庭互联网连接",
+    "设备连接仪表板"
+  ],
   "name": "路由器",
   "tags": [
-    "电脑",
-    "服务器",
-    "云"
+    "路由器",
+    "网络",
+    "Wi-Fi",
+    "连接",
+    "网关",
+    "设备",
+    "互联网"
   ],
   "categories": [
     "development",
@@ -17,11 +25,19 @@
     "en": {
       "name": "router",
       "tags": [
-        "computer",
-        "server",
-        "cloud"
+        "router",
+        "network",
+        "Wi-Fi",
+        "connectivity",
+        "gateway",
+        "device",
+        "internet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Network settings or status",
+        "Home internet connectivity",
+        "Device connectivity dashboard"
+      ]
     }
   }
 }

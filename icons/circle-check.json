@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务完成状态",
+    "成功通知徽章",
+    "批准确认"
+  ],
   "name": "圆形勾选",
   "tags": [
     "完成",
-    "待办事项",
+    "成功",
+    "确认",
     "勾选",
-    "完成",
-    "任务"
+    "通过",
+    "批准",
+    "通知"
   ],
   "categories": [
     "notifications"
@@ -25,12 +31,18 @@
       "name": "circle check",
       "tags": [
         "done",
-        "todo",
-        "tick",
-        "complete",
-        "task"
+        "success",
+        "confirm",
+        "checkmark",
+        "pass",
+        "approve",
+        "notification"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Task completion status",
+        "Success notification badge",
+        "Approval confirmation"
+      ]
     }
   }
 }

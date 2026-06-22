@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音量控制滑块",
+    "音频设置",
+    "媒体播放界面"
+  ],
   "name": "音量",
   "tags": [
-    "音乐",
+    "音量",
     "声音",
-    "静音",
-    "扬声器"
+    "扬声器",
+    "音频",
+    "控制",
+    "调节"
   ],
   "categories": [
     "connectivity",
@@ -17,12 +23,18 @@
     "en": {
       "name": "volume",
       "tags": [
-        "music",
+        "volume",
         "sound",
-        "mute",
-        "speaker"
+        "speaker",
+        "audio",
+        "control",
+        "adjust"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Volume control slider",
+        "Audio settings",
+        "Media playback interface"
+      ]
     }
   }
 }

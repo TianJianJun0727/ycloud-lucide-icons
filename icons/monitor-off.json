@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示器关闭状态",
+    "设备关机指示器",
+    "连接终止屏幕"
+  ],
   "name": "显示器关闭",
   "tags": [
-    "分享"
+    "显示器关闭",
+    "屏幕关闭",
+    "设备关闭",
+    "关机",
+    "断开连接"
   ],
   "categories": [
     "connectivity",
@@ -13,9 +21,17 @@
     "en": {
       "name": "monitor off",
       "tags": [
-        "share"
+        "monitor off",
+        "screen off",
+        "device off",
+        "shutdown",
+        "disconnect"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display power off state",
+        "Device shutdown indicator",
+        "Connection terminated screen"
+      ]
     }
   }
 }

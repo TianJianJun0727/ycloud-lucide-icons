@@ -1,25 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "活动项目文件夹",
+    "选中目录",
+    "当前工作区"
+  ],
   "name": "文件夹点",
   "tags": [
-    "目录",
-    "根",
-    "项目",
-    "固定的",
-    "活跃的",
     "当前",
-    "有齿的",
-    "齿轮",
-    "机械的",
-    "机械",
-    "配置",
-    "控制",
-    "偏好",
-    "设置",
-    "系统",
-    "管理员",
-    "编辑"
+    "活动",
+    "选中",
+    "焦点",
+    "状态指示"
   ],
   "categories": [
     "files",
@@ -29,25 +21,17 @@
     "en": {
       "name": "folder dot",
       "tags": [
-        "directory",
-        "root",
-        "project",
-        "pinned",
-        "active",
         "current",
-        "cogged",
-        "gear",
-        "mechanical",
-        "machinery",
-        "configuration",
-        "controls",
-        "preferences",
-        "settings",
-        "system",
-        "admin",
-        "edit"
+        "active",
+        "selected",
+        "focused",
+        "status indicator"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Active project folder",
+        "Selected directory",
+        "Current workspace"
+      ]
     }
   }
 }

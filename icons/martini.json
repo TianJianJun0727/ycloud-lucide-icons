@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代表鸡尾酒或酒吧菜单",
+    "指示饮品或庆祝活动",
+    "夜生活或社交活动的符号"
+  ],
   "name": "马天尼",
   "tags": [
     "鸡尾酒",
-    "酒精",
-    "饮料",
     "酒吧",
-    "喝",
-    "玻璃",
-    "精神",
-    "聚会",
-    "庆祝活动",
-    "搅拌机"
+    "酒精饮料",
+    "饮品",
+    "庆祝"
   ],
   "categories": [
     "food-beverage"
@@ -22,17 +21,16 @@
       "name": "martini",
       "tags": [
         "cocktail",
-        "alcohol",
-        "beverage",
         "bar",
-        "drink",
-        "glass",
-        "spirit",
-        "party",
-        "celebration",
-        "mixer"
+        "alcoholic drink",
+        "beverage",
+        "celebration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Represent a cocktail or bar menu",
+        "Indicate drinks or celebration",
+        "Symbol for nightlife or social events"
+      ]
     }
   }
 }

@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图片编辑工具",
+    "设计对称控制",
+    "照片镜像效果"
+  ],
   "name": "翻转水平2",
   "tags": [
-    "反映",
-    "镜子",
-    "对准",
-    "虚线"
+    "水平翻转",
+    "镜像",
+    "对称",
+    "对齐",
+    "设计"
   ],
   "categories": [
     "design",
@@ -16,12 +21,17 @@
     "en": {
       "name": "flip horizontal 2",
       "tags": [
-        "reflect",
+        "flip horizontal",
         "mirror",
+        "symmetry",
         "alignment",
-        "dashed"
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Image editing tool",
+        "Design symmetry control",
+        "Photo mirror effect"
+      ]
     }
   }
 }

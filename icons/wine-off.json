@@ -1,18 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "无酒精饮品选项",
+    "酒精限制或过敏指示器"
+  ],
   "name": "葡萄酒关闭",
   "tags": [
-    "酒精",
-    "饮料",
-    "喝",
-    "玻璃",
-    "不含酒精",
-    "禁欲",
-    "弃权",
-    "禁酒主义",
-    "过敏",
-    "不宽容"
+    "无酒精",
+    "禁酒",
+    "不含酒精饮料",
+    "酒精过敏",
+    "戒酒"
   ],
   "categories": [
     "food-beverage"
@@ -21,18 +19,16 @@
     "en": {
       "name": "wine off",
       "tags": [
-        "alcohol",
-        "beverage",
-        "drink",
-        "glass",
         "alcohol free",
-        "abstinence",
-        "abstaining",
-        "teetotalism",
-        "allergy",
-        "intolerance"
+        "no alcohol",
+        "non-alcoholic beverage",
+        "alcohol allergy",
+        "abstinence"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Non-alcoholic drink options",
+        "Alcohol restriction or allergy indicators"
+      ]
     }
   }
 }

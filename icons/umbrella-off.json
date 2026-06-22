@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "天气应用无雨状态",
+    "保险状态显示",
+    "保护功能关闭"
+  ],
   "name": "雨伞关闭",
   "tags": [
-    "雨",
+    "雨伞关闭",
+    "无保护",
+    "雨天",
     "天气",
-    "未覆盖的",
-    "没有保险的",
-    "防病毒软件",
-    "不受保护的",
-    "有风险的"
+    "风险"
   ],
   "categories": [
     "weather"
@@ -18,15 +20,17 @@
     "en": {
       "name": "umbrella off",
       "tags": [
-        "rain",
-        "weather",
-        "uncovered",
-        "uninsured",
-        "antivirus",
+        "umbrella off",
         "unprotected",
-        "risky"
+        "rainy",
+        "weather",
+        "risk"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Weather app no rain state",
+        "Insurance status display",
+        "Protection feature off"
+      ]
     }
   }
 }

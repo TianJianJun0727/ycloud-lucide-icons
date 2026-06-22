@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "表示通用文档",
+    "文件上传按钮",
+    "文档库项目"
+  ],
   "name": "文件",
   "tags": [
-    "文档"
+    "文档",
+    "文件",
+    "页面",
+    "文本",
+    "纸张"
   ],
   "categories": [
     "files"
@@ -12,9 +20,17 @@
     "en": {
       "name": "file",
       "tags": [
-        "document"
+        "document",
+        "file",
+        "page",
+        "text",
+        "paper"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Representing a generic document",
+        "File upload button",
+        "Document library item"
+      ]
     }
   }
 }

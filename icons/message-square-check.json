@@ -1,19 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "批准评论",
+    "标记消息为已读/完成",
+    "审核线程"
+  ],
   "name": "消息方形勾选",
   "tags": [
-    "评论",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "讲话泡泡",
-    "中等",
+    "评论",
     "勾选",
     "完成",
-    "待办事项",
-    "完成"
+    "确认",
+    "批准",
+    "审核",
+    "已验证"
   ],
   "categories": [
     "social",
@@ -23,19 +25,21 @@
     "en": {
       "name": "message square check",
       "tags": [
-        "comment",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "moderate",
+        "comment",
         "check",
         "done",
-        "todo",
-        "complete"
+        "confirm",
+        "approve",
+        "moderate",
+        "verified"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Approve a comment",
+        "Mark message as read/done",
+        "Moderate a thread"
+      ]
     }
   }
 }

@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "占星应用星座选择",
+    "运势网站星座展示",
+    "社交媒体个人资料星座徽章"
+  ],
   "name": "星座处女座",
   "tags": [
-    "处女",
-    "少女",
-    "收获",
-    "精度",
-    "地球",
+    "处女座",
+    "星座",
+    "占星",
+    "星象",
+    "运势",
     "分析",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "精确",
+    "大地"
   ],
   "categories": [
     "social",
@@ -23,19 +24,20 @@
     "en": {
       "name": "zodiac virgo",
       "tags": [
-        "virgin",
-        "maiden",
-        "harvest",
-        "precision",
-        "earth",
-        "analysis",
+        "virgo",
+        "zodiac",
         "astrology",
         "star sign",
         "horoscope",
-        "constellation",
-        "celestial"
+        "analysis",
+        "precision",
+        "earth"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app zodiac selection",
+        "Horoscope website sign display",
+        "Social media profile zodiac badge"
+      ]
     }
   }
 }

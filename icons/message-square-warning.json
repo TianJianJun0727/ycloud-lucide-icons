@@ -1,21 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "标记不当聊天消息",
+    "重要未读消息警告",
+    "举报对话中的滥用或垃圾信息"
+  ],
   "name": "消息方形警告",
   "tags": [
-    "评论",
-    "聊天",
-    "谈话",
-    "对话",
-    "反馈",
-    "讲话泡泡",
-    "报告",
-    "滥用",
-    "进攻",
+    "警告",
     "告警",
     "危险",
-    "小心",
-    "受保护的",
+    "反馈",
+    "报告",
+    "聊天",
+    "对话",
+    "评论",
+    "通知",
     "感叹号"
   ],
   "categories": [
@@ -26,22 +26,22 @@
     "en": {
       "name": "message square warning",
       "tags": [
-        "comment",
-        "chat",
-        "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "report",
-        "abuse",
-        "offense",
+        "warning",
         "alert",
         "danger",
-        "caution",
-        "protected",
-        "exclamation mark"
+        "feedback",
+        "report",
+        "chat",
+        "conversation",
+        "comment",
+        "notification",
+        "exclamation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Flagging inappropriate chat messages",
+        "Warning for unread important messages",
+        "Report abuse or spam in a conversation"
+      ]
     }
   }
 }

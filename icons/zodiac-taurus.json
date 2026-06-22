@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "占星应用星座符号",
+    "社交媒体个人资料星座",
+    "星座运势网站图标"
+  ],
   "name": "星座金牛座",
   "tags": [
+    "金牛座",
+    "星座",
+    "占星",
     "公牛",
-    "实力",
-    "稳定性",
-    "地球",
+    "土象",
+    "稳定",
     "耐力",
-    "占星学",
-    "星座",
-    "星座运势",
-    "星座",
-    "天上的"
+    "星座运势"
   ],
   "categories": [
     "social",
@@ -22,18 +24,20 @@
     "en": {
       "name": "zodiac taurus",
       "tags": [
-        "bull",
-        "strength",
-        "stability",
-        "earth",
-        "endurance",
+        "taurus",
+        "zodiac",
         "astrology",
-        "star sign",
-        "horoscope",
-        "constellation",
-        "celestial"
+        "bull",
+        "earth sign",
+        "stability",
+        "endurance",
+        "horoscope"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Astrology app zodiac sign",
+        "Social media profile birth sign",
+        "Horoscope website icon"
+      ]
     }
   }
 }

@@ -1,21 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户登录认证",
+    "管理用户权限",
+    "保护账户访问",
+    "验证用户身份"
+  ],
   "name": "用户圆形钥匙",
   "tags": [
-    "密钥",
-    "密码",
-    "登录",
-    "认证",
-    "授权",
-    "角色",
-    "权限",
-    "私人的",
-    "公开的",
-    "安全",
-    "人",
-    "帐户",
-    "联系方式"
+    "用户认证",
+    "登录安全",
+    "权限管理",
+    "账户保护",
+    "身份验证"
   ],
   "categories": [
     "account"
@@ -24,21 +21,18 @@
     "en": {
       "name": "user round key",
       "tags": [
-        "passkey",
-        "password",
-        "login",
-        "authentication",
-        "authorization",
-        "roles",
-        "permissions",
-        "private",
-        "public",
-        "security",
-        "person",
-        "account",
-        "contact"
+        "user authentication",
+        "login security",
+        "permission management",
+        "account protection",
+        "identity verification"
       ],
-      "use-cases": []
+      "use-cases": [
+        "user login authentication",
+        "managing user permissions",
+        "securing account access",
+        "verifying user identity"
+      ]
     }
   }
 }

@@ -1,16 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器段落指示器",
+    "文档格式化工具",
+    "段落符号显示"
+  ],
   "name": "段落标记",
   "tags": [
     "段落",
     "标记",
-    "段落",
-    "盲人",
-    "版式",
-    "类型",
-    "文本",
-    "散文",
+    "文本格式",
+    "排版",
     "符号"
   ],
   "categories": [
@@ -22,15 +22,15 @@
       "tags": [
         "paragraph",
         "mark",
-        "paraph",
-        "blind",
+        "text formatting",
         "typography",
-        "type",
-        "text",
-        "prose",
         "symbol"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor paragraph indicator",
+        "Document formatting tool",
+        "Paragraph symbol display"
+      ]
     }
   }
 }

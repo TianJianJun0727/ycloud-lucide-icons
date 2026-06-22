@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "输入框焦点指示器",
+    "表单中的文本选择状态",
+    "可编辑内容区域的光标"
+  ],
   "name": "文本光标输入",
   "tags": [
-    "选择"
+    "光标",
+    "输入",
+    "文本",
+    "插入点",
+    "选择",
+    "编辑",
+    "文本框"
   ],
   "categories": [
     "text",
@@ -13,9 +23,19 @@
     "en": {
       "name": "text cursor input",
       "tags": [
-        "select"
+        "cursor",
+        "input",
+        "text",
+        "insertion point",
+        "select",
+        "edit",
+        "text field"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Input field focus indicator",
+        "Text selection state in forms",
+        "Editable content area cursor"
+      ]
     }
   }
 }

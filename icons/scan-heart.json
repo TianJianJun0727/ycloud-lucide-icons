@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "健康监测应用",
+    "医疗设备",
+    "健身追踪器"
+  ],
   "name": "扫描爱心",
   "tags": [
-    "健康",
-    "心率",
-    "脉冲",
-    "监控",
-    "健康",
-    "筛选",
-    "虚线"
+    "心率监测",
+    "心脏扫描",
+    "健康检测",
+    "医疗设备",
+    "脉搏测量",
+    "生命体征"
   ],
   "categories": [
     "medical"
@@ -18,15 +21,18 @@
     "en": {
       "name": "scan heart",
       "tags": [
-        "health",
-        "heart rate",
-        "pulse",
-        "monitoring",
-        "healthiness",
-        "screening",
-        "dashed"
+        "heart rate monitoring",
+        "cardiac scan",
+        "health detection",
+        "medical device",
+        "pulse measurement",
+        "vital signs"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Health monitoring apps",
+        "Medical equipment",
+        "Fitness trackers"
+      ]
     }
   }
 }

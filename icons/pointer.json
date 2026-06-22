@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "界面中的鼠标光标",
+    "可点击元素指示器"
+  ],
   "name": "指针",
   "tags": [
-    "鼠标"
+    "鼠标",
+    "光标",
+    "点击",
+    "选择"
   ],
   "categories": [
     "cursors"
@@ -12,9 +18,15 @@
     "en": {
       "name": "pointer",
       "tags": [
-        "mouse"
+        "mouse",
+        "cursor",
+        "click",
+        "select"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mouse cursor in UI",
+        "Clickable element indicator"
+      ]
     }
   }
 }

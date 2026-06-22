@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "大写锁定指示器",
+    "键盘快捷键按钮",
+    "界面中的加速或前进操作"
+  ],
   "name": "箭头大上短横线",
   "tags": [
     "大写锁定",
-    "首都",
     "键盘",
     "按钮",
-    "麦克",
-    "前进",
     "方向",
-    "北",
-    "更快",
-    "速度",
-    "提升"
+    "加速",
+    "提升",
+    "快捷键"
   ],
   "categories": [
     "arrows",
@@ -26,18 +26,18 @@
       "name": "arrow big up dash",
       "tags": [
         "caps lock",
-        "capitals",
         "keyboard",
         "button",
-        "mac",
-        "forward",
         "direction",
-        "north",
-        "faster",
         "speed",
-        "boost"
+        "boost",
+        "shortcut"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle caps lock indicator",
+        "Keyboard shortcut button",
+        "Speed boost or forward action in UI"
+      ]
     }
   }
 }

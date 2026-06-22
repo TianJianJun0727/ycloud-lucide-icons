@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭按钮",
+    "删除项目",
+    "取消操作",
+    "乘法符号"
+  ],
   "name": "方形关闭",
   "tags": [
     "取消",
     "关闭",
     "删除",
-    "移除",
-    "次",
     "清除",
-    "数学",
-    "乘以",
-    "乘法"
+    "错误",
+    "乘法",
+    "数学"
   ],
   "categories": [
     "math",
@@ -32,14 +35,17 @@
         "cancel",
         "close",
         "delete",
-        "remove",
-        "times",
         "clear",
-        "math",
+        "error",
         "multiply",
-        "multiplication"
+        "math"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Close button",
+        "Delete item",
+        "Cancel operation",
+        "Multiplication symbol"
+      ]
     }
   }
 }

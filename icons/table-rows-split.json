@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "界面中拆分行",
+    "数据行分离工具",
+    "电子表格行管理"
+  ],
   "name": "表格行拆分",
   "tags": [
+    "拆分行",
+    "表格",
     "电子表格",
-    "网格",
-    "切",
-    "打破",
-    "划分",
-    "分开",
-    "段"
+    "行操作",
+    "分割"
   ],
   "categories": [
     "text",
@@ -19,15 +21,17 @@
     "en": {
       "name": "table rows split",
       "tags": [
+        "split rows",
+        "table",
         "spreadsheet",
-        "grid",
-        "cut",
-        "break",
-        "divide",
-        "separate",
-        "segment"
+        "row operation",
+        "divide"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Split a table row in a UI",
+        "Data row separation tool",
+        "Spreadsheet row management"
+      ]
     }
   }
 }

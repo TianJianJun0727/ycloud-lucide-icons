@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "咖啡馆菜单",
+    "饮料选择",
+    "餐饮界面"
+  ],
   "name": "咖啡",
   "tags": [
-    "喝",
-    "杯子",
-    "杯子",
-    "茶",
-    "咖啡馆",
-    "热",
-    "饮料"
+    "咖啡",
+    "饮料",
+    "餐饮",
+    "热饮",
+    "休闲"
   ],
   "categories": [
     "food-beverage"
@@ -18,15 +20,17 @@
     "en": {
       "name": "coffee",
       "tags": [
-        "drink",
-        "cup",
-        "mug",
-        "tea",
-        "cafe",
-        "hot",
-        "beverage"
+        "coffee",
+        "beverage",
+        "food",
+        "hot drink",
+        "cafe"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Cafe menu",
+        "Beverage selection",
+        "Food and drink UI"
+      ]
     }
   }
 }

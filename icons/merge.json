@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git分支合并操作",
+    "合并数据或文件",
+    "工作流汇合点"
+  ],
   "name": "合并",
   "tags": [
-    "联合起来",
-    "加入",
-    "团结起来"
+    "代码合并",
+    "分支合并",
+    "结合",
+    "连接",
+    "Git"
   ],
   "categories": [
     "development",
@@ -15,11 +21,17 @@
     "en": {
       "name": "merge",
       "tags": [
+        "code merge",
+        "branch merge",
         "combine",
         "join",
-        "unite"
+        "git"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git branch merge action",
+        "Combining data or files",
+        "Workflow convergence point"
+      ]
     }
   }
 }

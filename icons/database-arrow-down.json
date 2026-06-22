@@ -1,20 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "从数据库导出或下载数据",
-    "将数据从远程同步到本地环境"
+    "数据库导出备份操作",
+    "数据同步过程",
+    "远程到本地数据传输"
   ],
   "name": "数据库箭头下",
   "tags": [
-    "存储",
-    "记忆",
-    "字节",
-    "服务器",
-    "导出",
+    "数据库",
     "下载",
+    "导出",
     "备份",
-    "拉取",
-    "缩小规模"
+    "同步",
+    "数据迁移"
   ],
   "categories": [
     "devices",
@@ -24,19 +22,17 @@
     "en": {
       "name": "database arrow down",
       "tags": [
-        "storage",
-        "memory",
-        "bytes",
-        "server",
-        "export",
+        "database",
         "download",
+        "export",
         "backup",
-        "pull",
-        "downsize"
+        "sync",
+        "data migration"
       ],
       "use-cases": [
-        "exporting or downloading data from a database",
-        "syncing data from a remote to a local environment"
+        "Database export and backup operations",
+        "Data synchronization processes",
+        "Remote to local data transfer"
       ]
     }
   }

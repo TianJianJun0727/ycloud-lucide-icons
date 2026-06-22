@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI设计工具",
+    "CSS弹性盒对齐",
+    "左侧对齐",
+    "布局配置"
+  ],
   "name": "对齐起始垂直",
   "tags": [
-    "左",
-    "项目",
-    "弯曲",
-    "证明合理"
+    "垂直对齐",
+    "起始对齐",
+    "左侧对齐",
+    "布局",
+    "Flex",
+    "对齐",
+    "设计工具"
   ],
   "categories": [
     "layout"
@@ -15,12 +23,20 @@
     "en": {
       "name": "align start vertical",
       "tags": [
-        "left",
-        "items",
+        "vertical align",
+        "start alignment",
+        "left align",
+        "layout",
         "flex",
-        "justify"
+        "alignment",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI design tools",
+        "CSS flexbox alignment",
+        "Left alignment",
+        "Layout configuration"
+      ]
     }
   }
 }

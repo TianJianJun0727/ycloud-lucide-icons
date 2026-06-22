@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频静音切换",
+    "声音控制界面",
+    "媒体播放器控制"
+  ],
   "name": "音量关闭",
   "tags": [
-    "音乐",
-    "声音",
     "静音",
-    "扬声器"
+    "音量",
+    "声音",
+    "扬声器",
+    "音频",
+    "关闭"
   ],
   "categories": [
     "connectivity",
@@ -17,12 +23,18 @@
     "en": {
       "name": "volume off",
       "tags": [
-        "music",
-        "sound",
         "mute",
-        "speaker"
+        "volume",
+        "sound",
+        "speaker",
+        "audio",
+        "off"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio mute toggle",
+        "Sound control interface",
+        "Media player controls"
+      ]
     }
   }
 }

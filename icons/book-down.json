@@ -1,14 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "Git拉取或下载仓库",
+    "同步文档更新",
+    "下载电子书或手册",
+    "从远程获取代码"
+  ],
   "name": "书籍下",
   "tags": [
+    "下载",
+    "拉取",
+    "获取",
     "代码",
-    "编码",
     "版本控制",
     "Git",
     "存储库",
-    "拉取"
+    "同步"
   ],
   "categories": [
     "development"
@@ -17,14 +24,21 @@
     "en": {
       "name": "book down",
       "tags": [
+        "download",
+        "pull",
+        "fetch",
         "code",
-        "coding",
         "version control",
-        "git",
+        "Git",
         "repository",
-        "pull"
+        "sync"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Git pull or download repository",
+        "Sync documentation updates",
+        "Download an ebook or manual",
+        "Fetch code from remote"
+      ]
     }
   }
 }

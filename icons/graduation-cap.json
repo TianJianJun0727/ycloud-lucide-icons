@@ -1,21 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "教育平台个人资料部分",
+    "毕业典礼公告",
+    "学术成就徽章",
+    "大学网站图标"
+  ],
   "name": "毕业帽子",
   "tags": [
+    "毕业",
+    "学位",
     "学校",
     "大学",
-    "学习",
-    "学习",
-    "学位帽",
     "教育",
-    "仪式",
-    "学术的",
+    "学术",
     "帽子",
-    "文凭",
-    "学士",
-    "硕士",
-    "博士学位"
+    "文凭"
   ],
   "categories": [
     "buildings"
@@ -24,21 +24,21 @@
     "en": {
       "name": "graduation cap",
       "tags": [
+        "graduation",
+        "degree",
         "school",
         "university",
-        "learn",
-        "study",
-        "mortarboard",
         "education",
-        "ceremony",
         "academic",
         "hat",
-        "diploma",
-        "bachlor's",
-        "master's",
-        "doctorate"
+        "diploma"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Education platform profile section",
+        "Graduation ceremony announcement",
+        "Academic achievement badge",
+        "University website icon"
+      ]
     }
   }
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "运动",
-  "icon": "type",
   "i18n": {
     "en": {
       "title": "Sports"

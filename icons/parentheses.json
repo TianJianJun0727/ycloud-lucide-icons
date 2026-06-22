@@ -1,23 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码语法高亮",
+    "函数参数显示",
+    "数学表达式编辑器"
+  ],
   "name": "圆括号",
   "tags": [
+    "括号",
     "代码",
-    "代币",
-    "括号",
-    "帕伦斯",
-    "括号",
+    "函数",
     "参数",
-    "论点",
-    "参数",
-    "输入",
-    "通话",
     "数学",
-    "公式",
-    "功能",
-    "（",
-    "）"
+    "表达式"
   ],
   "categories": [
     "development",
@@ -28,23 +23,18 @@
     "en": {
       "name": "parentheses",
       "tags": [
+        "parentheses",
         "code",
-        "token",
-        "parenthesis",
-        "parens",
-        "brackets",
-        "parameters",
-        "arguments",
-        "args",
-        "input",
-        "call",
-        "math",
-        "formula",
         "function",
-        "(",
-        ")"
+        "parameters",
+        "math",
+        "expression"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code syntax highlighting",
+        "Function parameter display",
+        "Mathematical expression editor"
+      ]
     }
   }
 }

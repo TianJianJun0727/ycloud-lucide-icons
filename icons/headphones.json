@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐播放器界面",
+    "音频设备连接",
+    "个人收听设备"
+  ],
   "name": "耳机",
   "tags": [
-    "音乐",
+    "耳机",
     "音频",
+    "音乐",
+    "设备",
+    "收听",
     "声音"
   ],
   "categories": [
@@ -18,11 +25,18 @@
     "en": {
       "name": "headphones",
       "tags": [
-        "music",
+        "headphones",
         "audio",
+        "music",
+        "device",
+        "listening",
         "sound"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music player interface",
+        "Audio device connection",
+        "Personal listening device"
+      ]
     }
   }
 }

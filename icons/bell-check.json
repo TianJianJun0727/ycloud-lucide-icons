@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "消息已读状态",
+    "任务完成提醒",
+    "通知确认界面"
+  ],
   "name": "铃铛勾选",
   "tags": [
-    "闹钟",
-    "通知",
-    "声音",
-    "提醒"
+    "通知确认",
+    "提醒完成",
+    "已读提醒",
+    "任务完成"
   ],
   "categories": [
     "account",
@@ -16,12 +20,16 @@
     "en": {
       "name": "bell check",
       "tags": [
-        "alarm",
-        "notification",
-        "sound",
-        "reminder"
+        "notification confirmed",
+        "reminder completed",
+        "read alert",
+        "task done"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Message read status",
+        "Task completion reminder",
+        "Notification confirmation interface"
+      ]
     }
   }
 }

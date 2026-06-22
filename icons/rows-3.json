@@ -1,23 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据网格行",
+    "列表项排列",
+    "布局预览面板",
+    "文本格式化行"
+  ],
   "name": "行3",
   "tags": [
-    "线",
+    "行",
     "列表",
-    "队列",
-    "预览",
-    "段落",
-    "平行",
-    "系列",
-    "分裂",
+    "布局",
+    "网格",
+    "排列",
     "垂直",
-    "水平的",
-    "一半",
-    "中心",
-    "中",
-    "甚至",
-    "抽屉"
+    "水平",
+    "分割",
+    "预览",
+    "文本"
   ],
   "categories": [
     "layout",
@@ -36,23 +36,23 @@
     "en": {
       "name": "rows 3",
       "tags": [
-        "lines",
+        "rows",
         "list",
-        "queue",
-        "preview",
-        "paragraphs",
-        "parallel",
-        "series",
-        "split",
+        "layout",
+        "grid",
+        "arrangement",
         "vertical",
         "horizontal",
-        "half",
-        "center",
-        "middle",
-        "even",
-        "drawers"
+        "split",
+        "preview",
+        "text"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data grid rows",
+        "List item arrangement",
+        "Layout preview panels",
+        "Text formatting lines"
+      ]
     }
   }
 }

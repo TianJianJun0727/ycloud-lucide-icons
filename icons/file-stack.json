@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "版本历史面板",
+    "文件备份列表",
+    "文档修订视图"
+  ],
   "name": "文件堆叠",
   "tags": [
-    "版本",
-    "多个",
-    "复制",
     "文件",
-    "修订",
+    "版本",
+    "历史",
+    "多个",
     "版本控制",
-    "历史"
+    "修订",
+    "文档",
+    "备份"
   ],
   "categories": [
     "files",
@@ -19,15 +24,20 @@
     "en": {
       "name": "file stack",
       "tags": [
-        "versions",
+        "file",
+        "version",
+        "history",
         "multiple",
-        "copy",
-        "documents",
-        "revisions",
         "version control",
-        "history"
+        "revision",
+        "document",
+        "backup"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Version history panel",
+        "File backup list",
+        "Document revisions view"
+      ]
     }
   }
 }

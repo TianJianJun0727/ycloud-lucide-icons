@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换面板宽度",
+    "展开/折叠侧边栏",
+    "水平尺寸调整控件"
+  ],
   "name": "双折角箭头右左",
   "tags": [
     "折叠",
-    "折叠",
-    "水平的"
+    "展开",
+    "切换",
+    "水平",
+    "左右",
+    "双向箭头"
   ],
   "categories": [
     "arrows"
@@ -15,10 +22,17 @@
       "name": "chevrons right left",
       "tags": [
         "collapse",
-        "fold",
-        "horizontal"
+        "expand",
+        "toggle",
+        "horizontal",
+        "left right",
+        "bidirectional"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle panel width",
+        "Expand/collapse sidebar",
+        "Horizontal resize control"
+      ]
     }
   }
 }

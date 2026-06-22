@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "多步撤销操作",
+    "编辑历史导航",
+    "操作回退"
+  ],
   "name": "撤销2",
   "tags": [
+    "撤销",
     "重做",
-    "重新运行",
     "历史",
     "返回",
-    "返回",
-    "反向",
-    "恢复",
-    "方向",
-    "掉头"
+    "反向"
   ],
   "categories": [
     "text",
@@ -21,17 +21,17 @@
     "en": {
       "name": "undo 2",
       "tags": [
+        "undo",
         "redo",
-        "rerun",
         "history",
         "back",
-        "return",
-        "reverse",
-        "revert",
-        "direction",
-        "u-turn"
+        "reverse"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Multi-step undo",
+        "Edit history navigation",
+        "Action rollback"
+      ]
     }
   }
 }

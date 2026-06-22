@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "支付页面",
+    "账户设置",
+    "交易记录",
+    "购物车结算"
+  ],
   "name": "信用卡片",
   "tags": [
+    "信用卡",
+    "支付",
     "银行",
-    "购买",
-    "付款",
-    "抄送"
+    "交易",
+    "购物"
   ],
   "categories": [
     "account",
@@ -16,12 +22,18 @@
     "en": {
       "name": "credit card",
       "tags": [
-        "bank",
-        "purchase",
+        "credit card",
         "payment",
-        "cc"
+        "bank",
+        "transaction",
+        "shopping"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Payment page",
+        "Account settings",
+        "Transaction history",
+        "Shopping cart checkout"
+      ]
     }
   }
 }

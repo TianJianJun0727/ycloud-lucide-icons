@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在日历中搜索事件",
+    "查找特定日期",
+    "查询日历可用性"
+  ],
   "name": "日历搜索",
   "tags": [
+    "日历",
     "日期",
-    "日",
-    "月",
-    "年",
-    "事件",
     "搜索",
-    "镜头"
+    "查找",
+    "查询",
+    "事件",
+    "日程"
   ],
   "categories": [
     "time"
@@ -18,15 +22,19 @@
     "en": {
       "name": "calendar search",
       "tags": [
+        "calendar",
         "date",
-        "day",
-        "month",
-        "year",
-        "events",
         "search",
-        "lens"
+        "find",
+        "query",
+        "event",
+        "schedule"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Search for events in calendar",
+        "Find a specific date",
+        "Query calendar availability"
+      ]
     }
   }
 }

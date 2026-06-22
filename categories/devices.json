@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "设备",
-  "icon": "smartphone",
   "i18n": {
     "en": {
       "title": "Devices"

@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏排行榜奖励",
+    "体育竞赛获胜者",
+    "成就解锁徽章"
+  ],
   "name": "奖杯",
   "tags": [
+    "奖杯",
     "奖品",
-    "体育",
-    "获胜者",
+    "冠军",
+    "胜利",
     "成就",
     "奖项",
-    "冠军",
-    "庆祝活动",
-    "胜利"
+    "获胜者",
+    "庆祝"
   ],
   "categories": [
     "sports",
@@ -29,7 +33,11 @@
         "celebration",
         "victory"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Gaming leaderboard reward",
+        "Sports competition winner",
+        "Achievement unlocked badge"
+      ]
     }
   }
 }

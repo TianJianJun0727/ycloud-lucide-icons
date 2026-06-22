@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "前进按钮",
+    "导航指示",
+    "下一步",
+    "确认操作"
+  ],
   "name": "角落上右",
   "tags": [
-    "箭头"
+    "箭头",
+    "方向",
+    "前进",
+    "右上角"
   ],
   "categories": [
     "arrows"
@@ -12,9 +20,17 @@
     "en": {
       "name": "corner up right",
       "tags": [
-        "arrow"
+        "arrow",
+        "direction",
+        "forward",
+        "top-right"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Forward button",
+        "Navigation indicator",
+        "Next step",
+        "Confirm action"
+      ]
     }
   }
 }

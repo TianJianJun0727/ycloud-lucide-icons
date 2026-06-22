@@ -1,15 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "双重确认状态",
+    "已完成任务指示器"
+  ],
   "name": "勾选勾选",
   "tags": [
     "完成",
-    "收到",
-    "双",
-    "待办事项",
-    "勾选",
-    "完成",
-    "任务"
+    "确认",
+    "双勾",
+    "任务",
+    "已验证"
   ],
   "categories": [
     "notifications"
@@ -19,14 +20,15 @@
       "name": "check check",
       "tags": [
         "done",
-        "received",
-        "double",
-        "todo",
-        "tick",
-        "complete",
-        "task"
+        "confirmed",
+        "double check",
+        "task",
+        "verified"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Double confirmation status",
+        "Completed task indicator"
+      ]
     }
   }
 }

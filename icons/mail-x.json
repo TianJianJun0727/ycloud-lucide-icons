@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除邮件操作",
+    "关闭邮件窗口",
+    "从列表中移除邮件"
+  ],
   "name": "邮件关闭",
   "tags": [
-    "邮箱",
-    "消息",
-    "信",
-    "移除",
-    "删除"
+    "邮件删除",
+    "关闭邮件",
+    "移除邮件",
+    "取消邮件",
+    "拒绝邮件"
   ],
   "categories": [
     "mail"
@@ -16,13 +20,17 @@
     "en": {
       "name": "mail X",
       "tags": [
-        "email",
-        "message",
-        "letter",
-        "remove",
-        "delete"
+        "mail delete",
+        "close mail",
+        "remove email",
+        "cancel mail",
+        "reject mail"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Delete email action",
+        "Close mail window",
+        "Remove email from list"
+      ]
     }
   }
 }

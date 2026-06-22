@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "购物车",
+    "时尚应用",
+    "旅行界面"
+  ],
   "name": "手提包",
   "tags": [
-    "包",
-    "行李",
-    "携带",
-    "离合器",
-    "时尚",
-    "行李",
-    "钱包",
     "手提包",
-    "旅行"
+    "购物",
+    "时尚",
+    "旅行",
+    "行李"
   ],
   "categories": [
     "shopping",
@@ -21,17 +21,17 @@
     "en": {
       "name": "handbag",
       "tags": [
-        "bag",
-        "baggage",
-        "carry",
-        "clutch",
+        "handbag",
+        "shopping",
         "fashion",
-        "luggage",
-        "purse",
-        "tote",
-        "travel"
+        "travel",
+        "luggage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Shopping carts",
+        "Fashion apps",
+        "Travel interfaces"
+      ]
     }
   }
 }

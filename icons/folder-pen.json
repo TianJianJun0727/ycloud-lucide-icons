@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件重命名界面",
+    "文档编辑工具栏",
+    "文件夹属性编辑器"
+  ],
   "name": "文件夹笔",
   "tags": [
+    "文件夹",
     "目录",
-    "重命名"
+    "编辑",
+    "重命名",
+    "修改"
   ],
   "categories": [
     "files"
@@ -22,9 +29,15 @@
       "name": "folder pen",
       "tags": [
         "directory",
-        "rename"
+        "edit",
+        "rename",
+        "modify"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File renaming interface",
+        "Document editing toolbar",
+        "Folder properties editor"
+      ]
     }
   }
 }

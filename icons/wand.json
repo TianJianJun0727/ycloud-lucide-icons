@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "魔法选择工具",
+    "设计软件界面",
+    "编辑工具图标"
+  ],
   "name": "魔杖",
   "tags": [
     "魔法",
-    "选择"
+    "选择",
+    "工具",
+    "光标",
+    "设计",
+    "编辑"
   ],
   "categories": [
     "design",
@@ -17,9 +25,17 @@
       "name": "wand",
       "tags": [
         "magic",
-        "selection"
+        "selection",
+        "tool",
+        "cursor",
+        "design",
+        "editing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Magic selection tool",
+        "Design software interface",
+        "Editing tool icon"
+      ]
     }
   }
 }

@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "可排序表格列",
+    "货币兑换界面",
+    "两种状态间切换"
+  ],
   "name": "箭头右左",
   "tags": [
-    "双向",
-    "双向",
-    "2路",
     "交换",
-    "开关",
+    "切换",
+    "双向",
     "交易",
     "重新排序",
-    "移动",
-    "<-",
-    "->"
+    "移动"
   ],
   "categories": [
     "arrows"
@@ -21,18 +21,18 @@
     "en": {
       "name": "arrow right left",
       "tags": [
-        "bidirectional",
-        "two-way",
-        "2-way",
         "swap",
         "switch",
+        "bidirectional",
         "transaction",
         "reorder",
-        "move",
-        "<-",
-        "->"
+        "move"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Sortable table columns",
+        "Currency exchange interface",
+        "Toggle between two states"
+      ]
     }
   }
 }

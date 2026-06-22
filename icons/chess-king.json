@@ -1,13 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "国际象棋游戏界面",
+    "排行榜图标",
+    "策略游戏",
+    "将军指示器"
+  ],
   "name": "国际象棋国王",
   "tags": [
-    "尺子",
-    "皇冠",
-    "一块",
+    "国际象棋",
+    "国王",
+    "棋子",
     "棋盘游戏",
-    "僵局"
+    "策略",
+    "王冠",
+    "游戏"
   ],
   "categories": [
     "gaming",
@@ -17,13 +24,20 @@
     "en": {
       "name": "chess king",
       "tags": [
-        "ruler",
-        "crown",
+        "chess",
+        "king",
         "piece",
         "board game",
-        "stalemate"
+        "strategy",
+        "crown",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chess game interface",
+        "Leaderboard icon",
+        "Strategy game",
+        "Checkmate indicator"
+      ]
     }
   }
 }

@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "编辑文档",
+    "文本修改",
+    "线条编辑"
+  ],
   "name": "文件笔线条",
   "tags": [
-    "编辑"
+    "编辑",
+    "修改",
+    "文件",
+    "线条",
+    "书写"
   ],
   "categories": [
     "files"
@@ -20,9 +28,17 @@
     "en": {
       "name": "file pen line",
       "tags": [
-        "edit"
+        "edit",
+        "modify",
+        "file",
+        "line",
+        "writing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Edit document",
+        "Text modification",
+        "Line editing"
+      ]
     }
   }
 }

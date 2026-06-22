@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码编辑器功能按钮",
+    "数学公式显示",
+    "自动化工具界面"
+  ],
   "name": "方形函数",
   "tags": [
     "编程",
     "代码",
-    "自动化",
-    "数学"
+    "函数",
+    "数学",
+    "计算",
+    "自动化"
   ],
   "categories": [
     "development",
@@ -26,10 +32,16 @@
       "tags": [
         "programming",
         "code",
-        "automation",
-        "math"
+        "function",
+        "math",
+        "calculation",
+        "automation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code editor function button",
+        "Math equation display",
+        "Automation tool interface"
+      ]
     }
   }
 }

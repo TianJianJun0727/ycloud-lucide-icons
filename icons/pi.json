@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数学或科学应用",
+    "计算器功能",
+    "教育内容"
+  ],
   "name": "圆周率",
   "tags": [
+    "圆周率",
+    "π",
+    "数学",
     "常数",
-    "代码",
-    "编码",
-    "编程",
     "符号",
-    "三角学",
-    "几何学",
-    "公式"
+    "计算",
+    "几何"
   ],
   "categories": [
     "development",
@@ -20,16 +23,19 @@
     "en": {
       "name": "pi",
       "tags": [
+        "pi",
+        "π",
+        "math",
         "constant",
-        "code",
-        "coding",
-        "programming",
         "symbol",
-        "trigonometry",
-        "geometry",
-        "formula"
+        "calculation",
+        "geometry"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Math or science application",
+        "Calculator feature",
+        "Educational content"
+      ]
     }
   }
 }

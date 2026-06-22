@@ -1,24 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据表格布局选项",
+    "照片库网格视图",
+    "包含更多小部件的仪表板",
+    "产品网格展示"
+  ],
   "name": "网格3x2",
   "tags": [
+    "网格",
+    "布局",
     "表格",
-    "行",
-    "列",
-    "块",
-    "情节",
-    "土地",
-    "几何学",
-    "测量",
-    "尺寸",
-    "宽度",
-    "高度",
-    "距离",
-    "表面积",
-    "平方米",
-    "英亩",
-    "窗户"
+    "区块",
+    "排列",
+    "设计",
+    "视图",
+    "数据"
   ],
   "categories": [
     "text",
@@ -30,24 +27,21 @@
     "en": {
       "name": "grid 3x2",
       "tags": [
+        "grid",
+        "layout",
         "table",
-        "rows",
-        "columns",
-        "blocks",
-        "plot",
-        "land",
-        "geometry",
-        "measure",
-        "size",
-        "width",
-        "height",
-        "distance",
-        "surface area",
-        "square meter",
-        "acre",
-        "window"
+        "block",
+        "arrange",
+        "design",
+        "view",
+        "data"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data table layout option",
+        "Photo gallery grid view",
+        "Dashboard with more widgets",
+        "Product grid display"
+      ]
     }
   }
 }

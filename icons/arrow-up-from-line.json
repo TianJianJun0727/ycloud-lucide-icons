@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件上传操作",
+    "Git推送到远程仓库",
+    "展开折叠部分"
+  ],
   "name": "箭头上从线条",
   "tags": [
-    "前进",
-    "方向",
-    "北",
     "上传",
-    "Git",
-    "版本控制",
     "推送",
     "展开",
-    "折叠",
-    "垂直"
+    "Git推送",
+    "方向",
+    "北"
   ],
   "categories": [
     "arrows",
@@ -23,18 +23,18 @@
     "en": {
       "name": "arrow up from line",
       "tags": [
-        "forward",
-        "direction",
-        "north",
         "upload",
-        "git",
-        "version control",
         "push",
         "expand",
-        "fold",
-        "vertical"
+        "Git push",
+        "direction",
+        "north"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File upload action",
+        "Git push to remote",
+        "Expand collapsed section"
+      ]
     }
   }
 }

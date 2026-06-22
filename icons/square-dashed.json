@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "选框选择工具",
+    "区域选择指示器",
+    "设计或编辑工具"
+  ],
   "name": "方形虚线",
   "tags": [
-    "选择",
-    "正方形",
-    "长方形",
-    "帐篷",
-    "工具",
-    "虚线",
-    "盒子"
+    "选择框",
+    "虚线框",
+    "方形",
+    "选框工具",
+    "选择区域"
   ],
   "categories": [
     "text",
@@ -27,15 +29,17 @@
     "en": {
       "name": "square dashed",
       "tags": [
-        "selection",
+        "selection box",
+        "dashed box",
         "square",
-        "rectangular",
-        "marquee",
-        "tool",
-        "dashed",
-        "box"
+        "marquee tool",
+        "selection area"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Marquee selection tool",
+        "Area selection indicator",
+        "Design or editing tool"
+      ]
     }
   }
 }

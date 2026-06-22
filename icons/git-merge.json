@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "分支合并操作",
+    "代码集成流程",
+    "版本控制工作流"
+  ],
   "name": "Git合并",
   "tags": [
-    "代码",
-    "版本控制"
+    "合并",
+    "版本控制",
+    "Git",
+    "代码集成",
+    "分支"
   ],
   "categories": [
     "development"
@@ -13,10 +20,17 @@
     "en": {
       "name": "git merge",
       "tags": [
-        "code",
-        "version control"
+        "merge",
+        "version control",
+        "Git",
+        "code integration",
+        "branch"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Branch merging action",
+        "Code integration process",
+        "Version control workflow"
+      ]
     }
   }
 }

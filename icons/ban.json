@@ -1,22 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户账户停用",
+    "内容限制指示器",
+    "错误或无效状态"
+  ],
   "name": "禁止",
   "tags": [
-    "取消",
-    "不",
-    "停止",
-    "禁止的",
     "禁止",
+    "取消",
+    "无效",
     "错误",
-    "不正确",
-    "错误",
-    "错误的",
-    "失败",
-    "圆形",
-    "斜线",
-    "空",
-    "无效"
+    "限制",
+    "停用"
   ],
   "categories": [
     "account"
@@ -25,22 +21,18 @@
     "en": {
       "name": "ban",
       "tags": [
-        "cancel",
-        "no",
-        "stop",
-        "forbidden",
-        "prohibited",
+        "ban",
+        "prohibit",
+        "invalid",
         "error",
-        "incorrect",
-        "mistake",
-        "wrong",
-        "failure",
-        "circle",
-        "slash",
-        "null",
-        "void"
+        "restrict",
+        "disable"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User account suspension",
+        "Content restriction indicator",
+        "Error or invalid state"
+      ]
     }
   }
 }

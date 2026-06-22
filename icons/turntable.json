@@ -1,24 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐制作软件",
+    "复古音频设备界面",
+    "DJ混音应用"
+  ],
   "name": "唱盘",
   "tags": [
-    "电唱机",
+    "唱盘",
+    "黑胶唱片",
     "留声机",
-    "立体声",
-    "留声机",
-    "乙烯基",
-    "LP",
-    "光盘",
-    "拼盘",
-    "切",
+    "DJ",
     "音乐",
-    "模拟",
     "复古",
-    "DJ 台",
-    "唱片骑师",
-    "从头开始",
-    "纺纱"
+    "模拟"
   ],
   "categories": [
     "multimedia",
@@ -29,23 +24,18 @@
       "name": "turntable",
       "tags": [
         "record player",
-        "gramophone",
-        "stereo",
-        "phonograph",
         "vinyl",
-        "lp",
-        "disc",
-        "platter",
-        "cut",
         "music",
+        "dj",
         "analog",
         "retro",
-        "dj deck",
-        "disc jockey",
-        "scratch",
-        "spinning"
+        "stereo"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music production software",
+        "Vintage audio equipment UI",
+        "DJ mixing application"
+      ]
     }
   }
 }

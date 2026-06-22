@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用化学实验功能",
+    "关闭实验室模式",
+    "无毒物质指示器"
+  ],
   "name": "烧瓶圆锥关闭",
   "tags": [
-    "烧杯",
-    "埃伦迈耶",
-    "无毒",
+    "烧瓶",
+    "锥形瓶",
     "实验室",
     "化学",
     "实验",
-    "测试"
+    "禁用",
+    "关闭"
   ],
   "categories": [
     "science",
@@ -19,15 +23,19 @@
     "en": {
       "name": "flask conical off",
       "tags": [
-        "beaker",
+        "flask",
         "erlenmeyer",
-        "non toxic",
         "lab",
         "chemistry",
         "experiment",
-        "test"
+        "disable",
+        "off"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable chemical experiment feature",
+        "Turn off lab mode",
+        "Non-toxic substance indicator"
+      ]
     }
   }
 }

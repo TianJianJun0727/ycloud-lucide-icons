@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "元素底部对齐",
+    "设计工具对齐",
+    "用户界面布局"
+  ],
   "name": "对齐末端水平",
   "tags": [
-    "项目",
-    "底部",
-    "弯曲",
-    "证明合理"
+    "底部对齐",
+    "水平底对齐",
+    "对齐",
+    "布局",
+    "下端"
   ],
   "categories": [
     "layout"
@@ -15,12 +20,17 @@
     "en": {
       "name": "align end horizontal",
       "tags": [
-        "items",
-        "bottom",
-        "flex",
-        "justify"
+        "bottom align",
+        "align bottom",
+        "align",
+        "layout",
+        "end"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Align elements to bottom",
+        "Design tool alignment",
+        "UI layout"
+      ]
     }
   }
 }

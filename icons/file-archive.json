@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下载压缩包",
+    "文件打包操作",
+    "归档文件夹表示"
+  ],
   "name": "文件归档",
   "tags": [
-    "邮编",
-    "包裹",
-    "归档"
+    "压缩文件",
+    "ZIP",
+    "归档",
+    "打包",
+    "存档",
+    "文件包"
   ],
   "categories": [
     "files"
@@ -14,11 +21,18 @@
     "en": {
       "name": "file archive",
       "tags": [
-        "zip",
+        "compressed file",
+        "ZIP",
+        "archive",
         "package",
-        "archive"
+        "storage",
+        "file bundle"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Download compressed archive",
+        "File packaging action",
+        "Archive folder representation"
+      ]
     }
   }
 }

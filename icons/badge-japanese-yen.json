@@ -1,22 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "日元折扣徽章",
+    "日元价格标签",
+    "日本购物促销"
+  ],
   "name": "徽章日元日元",
   "tags": [
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
-    "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
+    "优惠",
+    "价格",
     "日元",
-    "¥"
+    "促销",
+    "金融",
+    "购物",
+    "交易"
   ],
   "categories": [
     "shopping",
@@ -28,20 +26,18 @@
       "tags": [
         "discount",
         "offer",
-        "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
-        "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
+        "price",
         "jpy",
-        "¥"
+        "sale",
+        "finance",
+        "shopping",
+        "transaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Discount badge with yen symbol",
+        "Japanese price tag",
+        "Japan shopping promotion"
+      ]
     }
   }
 }

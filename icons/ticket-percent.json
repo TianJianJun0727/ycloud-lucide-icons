@@ -1,20 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "折扣活动门票",
+    "促销优惠或优惠券",
+    "入场特价"
+  ],
   "name": "票券百分比",
   "tags": [
+    "票务",
     "折扣",
-    "减少",
-    "报价",
     "优惠券",
-    "条目",
-    "通过",
-    "事件",
-    "音乐会",
-    "显示",
-    "书",
-    "购买",
-    "%"
+    "活动",
+    "特价",
+    "促销",
+    "百分比"
   ],
   "categories": [
     "transportation",
@@ -24,20 +23,19 @@
     "en": {
       "name": "ticket percent",
       "tags": [
+        "ticket",
         "discount",
-        "reduced",
-        "offer",
         "voucher",
-        "entry",
-        "pass",
         "event",
-        "concert",
-        "show",
-        "book",
-        "purchase",
-        "%"
+        "offer",
+        "sale",
+        "percent"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Discounted event ticket",
+        "Promotional offer or coupon",
+        "Special sale price for admission"
+      ]
     }
   }
 }

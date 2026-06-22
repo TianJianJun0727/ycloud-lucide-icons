@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图形设计工具选择",
+    "UI元素调整大小手柄",
+    "CAD或矢量编辑软件",
+    "测量和尺寸工具"
+  ],
   "name": "矢量方形",
   "tags": [
+    "矢量方形",
     "形状",
-    "几何学",
-    "艺术",
-    "宽度",
-    "高度",
-    "尺寸",
-    "计算",
-    "测量",
-    "选择",
     "图形",
-    "盒子"
+    "设计",
+    "几何",
+    "选择框",
+    "尺寸"
   ],
   "categories": [
     "shapes",
@@ -25,19 +26,20 @@
     "en": {
       "name": "vector square",
       "tags": [
+        "vector",
+        "square",
         "shape",
-        "geometry",
-        "art",
-        "width",
-        "height",
-        "size",
-        "calculate",
-        "measure",
-        "select",
         "graphics",
-        "box"
+        "design",
+        "geometry",
+        "bounding box"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Graphic design tool selection",
+        "UI element resizing handles",
+        "CAD or vector editing software",
+        "Measurement and dimension tools"
+      ]
     }
   }
 }

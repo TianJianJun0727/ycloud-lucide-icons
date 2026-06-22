@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图形设计工具",
+    "形状库",
+    "教育材料"
+  ],
   "name": "形状",
   "tags": [
-    "三角形",
-    "等边的",
-    "正方形",
-    "圆形",
-    "分类",
-    "不同的",
-    "收藏",
-    "玩具",
-    "块",
-    "学习"
+    "形状",
+    "几何",
+    "图形",
+    "设计",
+    "元素",
+    "集合",
+    "分类"
   ],
   "categories": [
     "shapes",
@@ -22,18 +23,19 @@
     "en": {
       "name": "shapes",
       "tags": [
-        "triangle",
-        "equilateral",
-        "square",
-        "circle",
-        "classification",
-        "different",
+        "shapes",
+        "geometry",
+        "graphics",
+        "design",
+        "elements",
         "collection",
-        "toy",
-        "blocks",
-        "learning"
+        "classification"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Graphic design tools",
+        "Shape libraries",
+        "Educational materials"
+      ]
     }
   }
 }

@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "源代码文件",
+    "代码片段",
+    "Web开发文件"
+  ],
   "name": "文件代码",
   "tags": [
+    "代码",
     "脚本",
-    "文档",
-    "要点",
+    "源代码",
     "HTML",
     "XML",
-    "财产清单",
-    "列表"
+    "Gist"
   ],
   "categories": [
     "files",
@@ -19,15 +22,18 @@
     "en": {
       "name": "file code",
       "tags": [
+        "code",
         "script",
-        "document",
-        "gist",
-        "html",
-        "xml",
-        "property list",
-        "plist"
+        "source",
+        "HTML",
+        "XML",
+        "gist"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Source code file",
+        "Code snippet",
+        "Web development file"
+      ]
     }
   }
 }

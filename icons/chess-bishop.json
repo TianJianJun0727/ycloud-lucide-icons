@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "国际象棋游戏界面",
+    "策略应用",
+    "解谜游戏",
+    "游戏头像"
+  ],
   "name": "国际象棋主教",
   "tags": [
-    "斜接",
-    "斜接",
-    "一块",
+    "国际象棋",
+    "主教",
+    "棋子",
     "棋盘游戏",
-    "宗教"
+    "策略",
+    "游戏"
   ],
   "categories": [
     "gaming",
@@ -17,13 +23,19 @@
     "en": {
       "name": "chess bishop",
       "tags": [
-        "mitre",
-        "miter",
+        "chess",
+        "bishop",
         "piece",
         "board game",
-        "religion"
+        "strategy",
+        "gaming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chess game interface",
+        "Strategy app",
+        "Puzzle game",
+        "Gaming avatar"
+      ]
     }
   }
 }

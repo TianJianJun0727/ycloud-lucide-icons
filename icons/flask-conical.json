@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "化学实验界面",
+    "实验室设备展示",
+    "科学教育应用"
+  ],
   "name": "烧瓶圆锥",
   "tags": [
-    "烧杯",
-    "埃伦迈耶",
+    "烧瓶",
+    "锥形瓶",
     "实验室",
     "化学",
     "实验",
-    "测试"
+    "科学"
   ],
   "categories": [
     "science",
@@ -18,14 +22,18 @@
     "en": {
       "name": "flask conical",
       "tags": [
-        "beaker",
+        "flask",
         "erlenmeyer",
         "lab",
         "chemistry",
         "experiment",
-        "test"
+        "science"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Chemical experiment interface",
+        "Lab equipment display",
+        "Science education app"
+      ]
     }
   }
 }

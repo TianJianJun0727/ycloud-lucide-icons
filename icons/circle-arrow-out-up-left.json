@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "ESC键或关闭按钮",
+    "向左上角最小化或关闭窗口",
+    "指向西北的方向指示器"
+  ],
   "name": "圆形箭头外部上左",
   "tags": [
     "向外",
     "方向",
     "西北",
     "对角线",
+    "退出",
     "键盘",
     "按钮",
-    "逃脱"
+    "ESC"
   ],
   "categories": [
     "arrows",
@@ -29,13 +34,18 @@
       "tags": [
         "outwards",
         "direction",
-        "north-west",
+        "northwest",
         "diagonal",
+        "exit",
         "keyboard",
         "button",
         "escape"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Escape key or close button",
+        "Minimize or close a window to the top left",
+        "Directional indicator for northwest"
+      ]
     }
   }
 }

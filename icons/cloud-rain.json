@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "降雨天气预报",
+    "雨天应用图标",
+    "降水指示"
+  ],
   "name": "云雨",
   "tags": [
     "天气",
-    "降雨量"
+    "降雨",
+    "下雨",
+    "雨天",
+    "降水"
   ],
   "categories": [
     "weather"
@@ -14,9 +21,16 @@
       "name": "cloud rain",
       "tags": [
         "weather",
-        "rainfall"
+        "rain",
+        "raining",
+        "rainy day",
+        "precipitation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Rainy weather forecast",
+        "Rainy day app icon",
+        "Precipitation indicator"
+      ]
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "保存文件或文档的新副本",
-    "通过保存当前工作创建新项目"
+    "保存当前文件的新副本",
+    "从当前工作创建新项目",
+    "添加并保存新条目"
   ],
   "name": "保存加号",
   "tags": [
-    "软盘",
-    "保存",
-    "加号",
-    "添加",
-    "更新",
-    "创建"
+    "保存为新",
+    "创建副本",
+    "添加保存",
+    "新建保存",
+    "增量保存"
   ],
   "categories": [
     "text",
@@ -21,16 +21,16 @@
     "en": {
       "name": "save plus",
       "tags": [
-        "floppy disk",
-        "save",
-        "plus",
-        "add",
-        "update",
-        "create"
+        "save as new",
+        "create copy",
+        "add and save",
+        "new save",
+        "incremental save"
       ],
       "use-cases": [
-        "saving a new copy of a file or document",
-        "creating a new item by saving the current work"
+        "Save a new copy of the current file",
+        "Create a new item from current work",
+        "Add and save a new entry"
       ]
     }
   }

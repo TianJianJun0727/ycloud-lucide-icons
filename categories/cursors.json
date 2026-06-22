@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "光标",
-  "icon": "mouse-pointer-2",
   "i18n": {
     "en": {
       "title": "Cursors"

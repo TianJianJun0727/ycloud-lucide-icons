@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备电池满电状态",
+    "电量水平指示",
+    "已充满状态"
+  ],
   "name": "电池满",
   "tags": [
+    "电池",
+    "满电",
     "电源",
-    "电力",
+    "电量",
     "能量",
-    "累加器",
-    "收费"
+    "充满"
   ],
   "categories": [
     "connectivity",
@@ -17,13 +22,18 @@
     "en": {
       "name": "battery full",
       "tags": [
+        "battery",
+        "full",
         "power",
         "electricity",
         "energy",
-        "accumulator",
-        "charge"
+        "charged"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device battery full status",
+        "Power level indicator",
+        "Fully charged state"
+      ]
     }
   }
 }

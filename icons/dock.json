@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "桌面应用停靠栏",
+    "任务栏界面",
+    "应用启动器设计"
+  ],
   "name": "停靠栏",
   "tags": [
+    "停靠栏",
     "桌面",
-    "应用",
-    "发射",
-    "首页",
+    "应用启动器",
     "菜单栏",
-    "底部",
-    "线条",
-    "macOS",
-    "OS X"
+    "界面布局"
   ],
   "categories": [
     "layout",
@@ -23,17 +23,17 @@
     "en": {
       "name": "dock",
       "tags": [
+        "dock",
         "desktop",
-        "applications",
-        "launch",
-        "home",
+        "application launcher",
         "menu bar",
-        "bottom",
-        "line",
-        "macos",
-        "osx"
+        "interface layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Desktop application dock",
+        "Taskbar interface",
+        "App launcher design"
+      ]
     }
   }
 }

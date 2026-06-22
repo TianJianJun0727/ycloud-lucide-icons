@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "收音机应用图标",
+    "音频流媒体服务",
+    "广播播放器"
+  ],
   "name": "收音机",
   "tags": [
-    "信号",
+    "收音机",
     "广播",
-    "连接性",
-    "直播",
-    "频率"
+    "音频",
+    "调频",
+    "音乐",
+    "电台"
   ],
   "categories": [
     "devices",
@@ -18,13 +23,18 @@
     "en": {
       "name": "radio",
       "tags": [
-        "signal",
+        "radio",
         "broadcast",
-        "connectivity",
-        "live",
-        "frequency"
+        "audio",
+        "FM",
+        "music",
+        "station"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Radio app icon",
+        "Audio streaming service",
+        "Broadcast player"
+      ]
     }
   }
 }

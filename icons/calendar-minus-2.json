@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除日历事件",
+    "移除预约",
+    "取消已安排任务",
+    "从日历中清除日期"
+  ],
   "name": "日历减少2",
   "tags": [
     "日期",
-    "日",
-    "月",
-    "年",
-    "事件",
+    "日历",
     "删除",
-    "移除"
+    "移除",
+    "取消",
+    "事件",
+    "日程"
   ],
   "categories": [
     "time"
@@ -19,14 +24,19 @@
       "name": "calendar minus 2",
       "tags": [
         "date",
-        "day",
-        "month",
-        "year",
-        "event",
+        "calendar",
         "delete",
-        "remove"
+        "remove",
+        "cancel",
+        "event",
+        "schedule"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Delete calendar event",
+        "Remove appointment",
+        "Cancel scheduled task",
+        "Clear date from calendar"
+      ]
     }
   }
 }

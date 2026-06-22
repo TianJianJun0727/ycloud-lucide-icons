@@ -1,27 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "图片裁剪工具",
+    "响应式设计设置",
+    "视频宽高比控制"
+  ],
   "name": "比例",
   "tags": [
-    "屏幕",
-    "尺寸",
-    "旋转",
-    "旋转",
-    "调整",
-    "纵横比",
     "比例",
-    "16:9",
-    "宽银幕",
-    "4:3",
-    "分辨率",
-    "反应灵敏",
-    "移动",
-    "桌面",
+    "宽高比",
     "尺寸",
-    "显示器",
-    "方向",
-    "肖像",
-    "风景"
+    "布局",
+    "响应式",
+    "设计"
   ],
   "categories": [
     "layout",
@@ -32,27 +23,18 @@
     "en": {
       "name": "ratio",
       "tags": [
-        "screens",
-        "sizes",
-        "rotate",
-        "rotation",
-        "adjust",
+        "ratio",
         "aspect ratio",
-        "proportions",
-        "16:9",
-        "widescreen",
-        "4:3",
-        "resolution",
+        "size",
+        "layout",
         "responsive",
-        "mobile",
-        "desktop",
-        "dimensions",
-        "monitor",
-        "orientation",
-        "portrait",
-        "landscape"
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Image cropping tool",
+        "Responsive design settings",
+        "Video aspect ratio control"
+      ]
     }
   }
 }

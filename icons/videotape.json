@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代表旧式视频媒体",
+    "视频存档符号",
+    "复古录制图标"
+  ],
   "name": "录像带",
   "tags": [
     "录像带",
-    "电影",
-    "电影",
-    "录音",
-    "电影",
-    "演出影片",
-    "盒式磁带"
+    "复古",
+    "视频",
+    "录制",
+    "媒体",
+    "存档"
   ],
   "categories": [
     "devices",
@@ -22,15 +25,18 @@
     "en": {
       "name": "videotape",
       "tags": [
-        "vhs",
-        "movie",
-        "film",
+        "videotape",
+        "retro",
+        "video",
         "recording",
-        "motion picture",
-        "showreel",
-        "cassette"
+        "media",
+        "archive"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Represent old video media",
+        "Video archive symbol",
+        "Retro recording icon"
+      ]
     }
   }
 }

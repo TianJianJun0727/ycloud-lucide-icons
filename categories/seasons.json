@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "季节",
-  "icon": "leaf",
   "i18n": {
     "en": {
       "title": "Seasons"

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "基本套索工具图标",
+    "图形软件中的选择模式",
+    "手绘区域选择器"
+  ],
   "name": "套索",
   "tags": [
-    "选择",
-    "光标"
+    "套索",
+    "选择工具",
+    "设计",
+    "选区",
+    "绘图"
   ],
   "categories": [
     "design",
@@ -14,10 +21,17 @@
     "en": {
       "name": "lasso",
       "tags": [
+        "lasso",
+        "selection tool",
+        "design",
         "select",
-        "cursor"
+        "drawing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Basic lasso tool icon",
+        "Selection mode in graphics software",
+        "Freehand area selector"
+      ]
     }
   }
 }

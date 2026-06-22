@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "停车位置查找器",
+    "停车场地图图钉",
+    "启用停车功能切换"
+  ],
   "name": "圆形停车",
   "tags": [
     "停车场",
-    "停车场"
+    "停车位",
+    "泊车",
+    "交通",
+    "地图标记"
   ],
   "categories": [
     "transportation",
@@ -22,10 +29,17 @@
     "en": {
       "name": "circle parking",
       "tags": [
+        "parking",
         "parking lot",
-        "car park"
+        "parking space",
+        "transportation",
+        "map marker"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Parking location finder",
+        "Map pin for parking garage",
+        "Enable parking feature toggle"
+      ]
     }
   }
 }

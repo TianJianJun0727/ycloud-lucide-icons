@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "教育平台导航",
+    "校园信息展示",
+    "学术机构标识"
+  ],
   "name": "大学",
   "tags": [
-    "建筑物",
-    "教育",
-    "童年",
-    "学校",
+    "大学",
+    "教育机构",
     "学院",
-    "学院",
-    "研究所"
+    "学术",
+    "教学楼",
+    "高等教育"
   ],
   "categories": [
     "buildings",
@@ -29,13 +32,16 @@
       "tags": [
         "building",
         "education",
-        "childhood",
         "school",
         "college",
-        "academy",
-        "institute"
+        "institute",
+        "academic"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Education platform navigation",
+        "Campus information display",
+        "Academic institution branding"
+      ]
     }
   }
 }

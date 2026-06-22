@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "将日期标记为忙碌",
+    "删除日历事件",
+    "关闭日期选择器"
+  ],
   "name": "日历关闭",
   "tags": [
+    "日历",
     "日期",
-    "日",
-    "月",
-    "年",
-    "事件",
+    "关闭",
     "移除",
-    "忙"
+    "删除",
+    "取消",
+    "忙碌",
+    "不可用"
   ],
   "categories": [
     "time"
@@ -18,15 +23,20 @@
     "en": {
       "name": "calendar X",
       "tags": [
+        "calendar",
         "date",
-        "day",
-        "month",
-        "year",
-        "event",
+        "close",
         "remove",
-        "busy"
+        "delete",
+        "cancel",
+        "busy",
+        "unavailable"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mark a date as busy",
+        "Delete a calendar event",
+        "Close a date picker"
+      ]
     }
   }
 }

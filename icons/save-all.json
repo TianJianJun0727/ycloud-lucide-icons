@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "保存所有打开的文档",
+    "批量导出或备份功能",
+    "多文件编辑器工具栏"
+  ],
   "name": "保存全部",
   "tags": [
-    "软盘",
-    "复制"
+    "保存全部",
+    "批量保存",
+    "文件",
+    "存储",
+    "备份"
   ],
   "categories": [
     "text",
@@ -14,10 +21,17 @@
     "en": {
       "name": "save all",
       "tags": [
-        "floppy disks",
-        "copy"
+        "save all",
+        "batch save",
+        "file",
+        "storage",
+        "backup"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Save all open documents",
+        "Batch export or backup function",
+        "Multi-file editor toolbar"
+      ]
     }
   }
 }

@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "照片上传",
+    "添加媒体",
+    "创建相册",
+    "图片插入"
+  ],
   "name": "图片加号",
   "tags": [
-    "添加",
-    "创建",
-    "图片"
+    "添加图片",
+    "上传照片",
+    "新建图像",
+    "图片上传"
   ],
   "categories": [
     "photography",
@@ -16,11 +22,17 @@
     "en": {
       "name": "image plus",
       "tags": [
-        "add",
-        "create",
-        "picture"
+        "add image",
+        "upload photo",
+        "new image",
+        "image upload"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Photo upload",
+        "Add media",
+        "Create gallery",
+        "Image insertion"
+      ]
     }
   }
 }

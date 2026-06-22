@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频文件图标",
+    "播放列表中的音乐曲目",
+    "音量设置文件"
+  ],
   "name": "文件音量",
   "tags": [
     "音频",
     "音乐",
-    "体积"
+    "音量",
+    "声音文件",
+    "MP3"
   ],
   "categories": [
     "files"
@@ -16,9 +22,15 @@
       "tags": [
         "audio",
         "music",
-        "volume"
+        "volume",
+        "sound file",
+        "mp3"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio file icon",
+        "Music track in playlist",
+        "Volume settings file"
+      ]
     }
   }
 }

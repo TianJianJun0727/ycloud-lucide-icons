@@ -1,19 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐播放器界面",
+    "专辑展示",
+    "媒体库"
+  ],
   "name": "光盘3",
   "tags": [
-    "专辑",
-    "音乐",
-    "乙烯基",
-    "记录",
     "光盘",
-    "DVD",
-    "格式",
-    "DJ",
-    "旋转",
-    "旋转",
-    "转速"
+    "音乐",
+    "专辑",
+    "唱片",
+    "多媒体"
   ],
   "categories": [
     "devices",
@@ -23,19 +21,17 @@
     "en": {
       "name": "disc 3",
       "tags": [
-        "album",
+        "disc",
         "music",
-        "vinyl",
+        "album",
         "record",
-        "cd",
-        "dvd",
-        "format",
-        "dj",
-        "spin",
-        "rotate",
-        "rpm"
+        "multimedia"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music player interface",
+        "Album display",
+        "Media library"
+      ]
     }
   }
 }

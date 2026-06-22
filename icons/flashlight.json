@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "相机闪光灯开关",
+    "紧急或安全工具",
+    "黑暗环境照明"
+  ],
   "name": "手电筒",
   "tags": [
-    "火炬",
-    "光",
-    "梁",
-    "紧急情况",
-    "安全",
+    "手电筒",
+    "灯光",
+    "照明",
     "工具",
-    "明亮"
+    "紧急",
+    "光束"
   ],
   "categories": [
     "photography",
@@ -19,15 +22,18 @@
     "en": {
       "name": "flashlight",
       "tags": [
-        "torch",
+        "flashlight",
         "light",
-        "beam",
-        "emergency",
-        "safety",
+        "illumination",
         "tool",
-        "bright"
+        "emergency",
+        "beam"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Camera flashlight toggle",
+        "Emergency or safety tool",
+        "Dark environment illumination"
+      ]
     }
   }
 }

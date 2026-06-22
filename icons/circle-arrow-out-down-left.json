@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "向左下角展开面板",
+    "斜向退出或最小化视图",
+    "指向西南的方向指示器"
+  ],
   "name": "圆形箭头外部下左",
   "tags": [
     "向外",
     "方向",
     "西南",
-    "对角线"
+    "对角线",
+    "箭头",
+    "扩展",
+    "离开"
   ],
   "categories": [
     "arrows"
@@ -25,10 +32,17 @@
       "tags": [
         "outwards",
         "direction",
-        "south-west",
-        "diagonal"
+        "southwest",
+        "diagonal",
+        "arrow",
+        "expand",
+        "exit"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Expand a panel to the lower left",
+        "Exit or minimize a view diagonally",
+        "Directional indicator for southwest"
+      ]
     }
   }
 }

@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "增长指标",
+    "收入图表",
+    "性能改进",
+    "商业分析"
+  ],
   "name": "趋势上",
   "tags": [
+    "上升趋势",
+    "增长",
+    "图表",
+    "数据分析",
     "统计"
   ],
   "categories": [
@@ -13,9 +22,18 @@
     "en": {
       "name": "trending up",
       "tags": [
+        "trending",
+        "up",
+        "chart",
+        "data analysis",
         "statistics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Growth metrics",
+        "Revenue chart",
+        "Performance improvement",
+        "Business analytics"
+      ]
     }
   }
 }

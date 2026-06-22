@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "计算器界面",
+    "数学公式编辑器",
+    "编程运算符"
+  ],
   "name": "除号",
   "tags": [
-    "计算",
+    "除法",
     "数学",
-    "师",
-    "操作员",
-    "代码",
-    "÷",
-    "/"
+    "运算符",
+    "计算",
+    "代码"
   ],
   "categories": [
     "math",
@@ -19,15 +21,17 @@
     "en": {
       "name": "divide",
       "tags": [
-        "calculate",
-        "math",
         "division",
+        "math",
         "operator",
-        "code",
-        "÷",
-        "/"
+        "calculation",
+        "code"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Calculator interface",
+        "Math equation editor",
+        "Programming operator"
+      ]
     }
   }
 }

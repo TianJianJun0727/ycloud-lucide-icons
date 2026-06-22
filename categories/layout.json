@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "布局",
-  "icon": "panels-top-left",
   "i18n": {
     "en": {
       "title": "Layout"

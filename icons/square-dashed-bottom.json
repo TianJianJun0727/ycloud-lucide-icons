@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "带有虚线底部边框的UI元素",
+    "选择指示器",
+    "布局或设计元素"
+  ],
   "name": "方形虚线底部",
   "tags": [
-    "长方形",
-    "纵横比",
-    "1:1",
-    "形状",
-    "片段",
-    "代码",
-    "编码"
+    "方形",
+    "虚线",
+    "底部",
+    "边框",
+    "选择框",
+    "布局"
   ],
   "categories": [
     "development",
@@ -19,15 +22,18 @@
     "en": {
       "name": "square dashed bottom",
       "tags": [
-        "rectangle",
-        "aspect ratio",
-        "1:1",
-        "shape",
-        "snippet",
-        "code",
-        "coding"
+        "square",
+        "dashed",
+        "bottom",
+        "border",
+        "selection box",
+        "layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI element with a dashed bottom border",
+        "Selection indicator",
+        "Layout or design element"
+      ]
     }
   }
 }

@@ -1,25 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码差异评论",
+    "Git提交讨论",
+    "线程中对比变更"
+  ],
   "name": "消息方形差异",
   "tags": [
-    "评论",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "讲话泡泡",
-    "添加",
-    "补丁",
+    "评论",
     "差异",
-    "加号",
-    "减号",
-    "正负",
-    "数学",
+    "对比",
     "代码审查",
-    "编码",
+    "Git",
     "版本控制",
-    "Git"
+    "变更"
   ],
   "categories": [
     "development",
@@ -30,25 +26,21 @@
     "en": {
       "name": "message square diff",
       "tags": [
-        "comment",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
-        "add",
-        "patch",
-        "difference",
-        "plus",
-        "minus",
-        "plus-minus",
-        "math",
+        "comment",
+        "diff",
+        "compare",
         "code review",
-        "coding",
+        "Git",
         "version control",
-        "git"
+        "change"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Code diff comments",
+        "Git commit discussion",
+        "Compare changes in a thread"
+      ]
     }
   }
 }

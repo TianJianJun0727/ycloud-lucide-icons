@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "宽屏视频标识",
+    "横版图片占位",
+    "界面布局设计",
+    "宽高比选择"
+  ],
   "name": "矩形水平",
   "tags": [
+    "矩形",
     "长方形",
-    "纵横比",
+    "水平",
+    "宽屏",
     "16:9",
-    "水平的",
+    "横版",
     "形状"
   ],
   "categories": [
@@ -18,12 +25,18 @@
       "name": "rectangle horizontal",
       "tags": [
         "rectangle",
-        "aspect ratio",
-        "16:9",
         "horizontal",
+        "widescreen",
+        "16:9",
+        "landscape",
         "shape"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Widescreen video indicator",
+        "Landscape image placeholder",
+        "UI layout design",
+        "Aspect ratio selection"
+      ]
     }
   }
 }

@@ -1,37 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "直播电视流界面",
+    "频道指南与选择",
+    "信号强度指示器"
+  ],
   "name": "电视",
   "tags": [
     "电视",
-    "流",
-    "显示",
-    "宽银幕",
-    "高清",
-    "高清",
-    "1080p",
-    "4K",
-    "8K",
-    "聪明的",
-    "数字化",
-    "视频",
-    "娱乐",
-    "放映时间",
-    "渠道",
-    "陆地的",
-    "卫星",
-    "电缆",
-    "广播",
+    "广播电视",
+    "频道",
     "直播",
-    "频率",
-    "调",
-    "扫描",
-    "天线",
-    "接收器",
-    "传输",
     "信号",
-    "连接",
-    "连接性"
+    "娱乐",
+    "显示器"
   ],
   "categories": [
     "devices",
@@ -43,36 +25,18 @@
       "name": "tv",
       "tags": [
         "television",
-        "stream",
-        "display",
-        "widescreen",
-        "high-definition",
-        "hd",
-        "1080p",
-        "4k",
-        "8k",
-        "smart",
-        "digital",
-        "video",
-        "entertainment",
-        "showtime",
-        "channels",
-        "terrestrial",
-        "satellite",
-        "cable",
         "broadcast",
+        "channels",
         "live",
-        "frequency",
-        "tune",
-        "scan",
-        "aerial",
-        "receiver",
-        "transmission",
         "signal",
-        "connection",
-        "connectivity"
+        "entertainment",
+        "display"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Live TV streaming interface",
+        "Channel guide and selection",
+        "Signal strength indicator"
+      ]
     }
   }
 }

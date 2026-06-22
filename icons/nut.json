@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "食品标签",
+    "营养应用",
+    "杂货店图标"
+  ],
   "name": "螺母",
   "tags": [
-    "榛子",
-    "橡子",
+    "坚果",
     "食物",
-    "饮食"
+    "零食",
+    "健康食品"
   ],
   "categories": [
     "food-beverage"
@@ -15,12 +19,16 @@
     "en": {
       "name": "nut",
       "tags": [
-        "hazelnut",
-        "acorn",
+        "nut",
         "food",
-        "diet"
+        "snack",
+        "healthy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food product labeling",
+        "Nutrition apps",
+        "Grocery store icons"
+      ]
     }
   }
 }

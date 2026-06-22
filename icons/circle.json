@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "切换关闭状态",
+    "录制按钮",
+    "零值指示器",
+    "几何形状"
+  ],
   "name": "圆形",
   "tags": [
+    "圆形",
     "关闭",
     "零",
     "记录",
-    "形状"
+    "形状",
+    "点"
   ],
   "categories": [
     "shapes"
@@ -15,12 +22,19 @@
     "en": {
       "name": "circle",
       "tags": [
+        "circle",
         "off",
         "zero",
         "record",
-        "shape"
+        "shape",
+        "dot"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Toggle off state",
+        "Record button",
+        "Zero value indicator",
+        "Geometric shape"
+      ]
     }
   }
 }

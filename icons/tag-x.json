@@ -7,12 +7,12 @@
   "name": "标签关闭",
   "tags": [
     "标签",
-    "徽章",
-    "票",
+    "移除标签",
+    "删除标签",
+    "关闭标签",
     "标记",
-    "关闭",
-    "删除",
-    "移除"
+    "清除",
+    "徽章"
   ],
   "categories": [
     "account"
@@ -21,13 +21,13 @@
     "en": {
       "name": "tag X",
       "tags": [
+        "tag",
         "label",
+        "remove tag",
+        "delete tag",
         "badge",
-        "ticket",
-        "mark",
-        "x",
-        "delete",
-        "remove"
+        "clear",
+        "close"
       ],
       "use-cases": [
         "removing a tag from an item",

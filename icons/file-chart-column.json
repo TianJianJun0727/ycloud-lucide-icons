@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据分析报表",
+    "统计图表文件",
+    "数据报告文档",
+    "柱状图显示"
+  ],
   "name": "文件图表列",
   "tags": [
-    "统计",
-    "分析",
-    "图表",
-    "图",
-    "演示"
+    "数据分析",
+    "统计图表",
+    "柱状图",
+    "报表文件",
+    "数据可视化"
   ],
   "categories": [
     "files"
@@ -24,13 +29,18 @@
     "en": {
       "name": "file chart column",
       "tags": [
-        "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "presentation"
+        "data analysis",
+        "statistical chart",
+        "bar chart",
+        "report file",
+        "data visualization"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data analysis reports",
+        "Statistical chart files",
+        "Data report documents",
+        "Bar chart display"
+      ]
     }
   }
 }

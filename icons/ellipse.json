@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI形状元素",
+    "图形设计工具",
+    "几何图示",
+    "图表或图解组件"
+  ],
   "name": "椭圆",
   "tags": [
+    "椭圆",
     "形状",
-    "几何学",
-    "圆形的",
-    "光滑",
-    "概要",
-    "形式",
-    "边界",
-    "曲线",
-    "形状",
-    "椭圆形",
-    "椭圆形"
+    "几何",
+    "圆形",
+    "轮廓",
+    "图形",
+    "设计"
   ],
   "categories": [
     "shapes"
@@ -22,19 +23,20 @@
     "en": {
       "name": "ellipse",
       "tags": [
+        "ellipse",
         "shape",
         "geometry",
-        "rounded",
-        "smooth",
+        "oval",
         "outline",
-        "form",
-        "boundary",
-        "curve",
-        "shapes",
-        "ellipse",
-        "oval"
+        "graphic",
+        "design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI shape element",
+        "Graphic design tool",
+        "Geometry illustration",
+        "Chart or diagram component"
+      ]
     }
   }
 }

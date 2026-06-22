@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "无障碍功能",
+    "辅助技术",
+    "包容性用户界面"
+  ],
   "name": "无障碍",
   "tags": [
-    "残疾",
-    "残疾人",
-    "达达",
-    "轮椅"
+    "无障碍",
+    "辅助功能",
+    "残障",
+    "轮椅",
+    "包容性设计"
   ],
   "categories": [
     "accessibility",
@@ -16,12 +21,17 @@
     "en": {
       "name": "accessibility",
       "tags": [
+        "accessibility",
+        "assistive",
         "disability",
-        "disabled",
-        "dda",
-        "wheelchair"
+        "wheelchair",
+        "inclusive design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "accessibility features",
+        "assistive technology",
+        "inclusive user interfaces"
+      ]
     }
   }
 }

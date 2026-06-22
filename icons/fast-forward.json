@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频播放器快进",
+    "音频播放快进",
+    "媒体控制按钮"
+  ],
   "name": "快速前进",
   "tags": [
-    "音乐"
+    "快进",
+    "跳过",
+    "加速",
+    "下一曲",
+    "媒体控制",
+    "前进"
   ],
   "categories": [
     "multimedia",
@@ -13,9 +22,18 @@
     "en": {
       "name": "fast forward",
       "tags": [
-        "music"
+        "fast forward",
+        "skip",
+        "accelerate",
+        "next track",
+        "media control",
+        "forward"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Skip forward in video player",
+        "Fast forward audio playback",
+        "Media control button"
+      ]
     }
   }
 }

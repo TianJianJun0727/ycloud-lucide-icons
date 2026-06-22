@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "查看新邮件",
+    "查看未读消息",
+    "访问收到的通讯"
+  ],
   "name": "收件箱",
   "tags": [
-    "邮箱"
+    "收件箱",
+    "邮件",
+    "收信",
+    "消息"
   ],
   "categories": [
     "account",
@@ -13,9 +20,16 @@
     "en": {
       "name": "inbox",
       "tags": [
-        "email"
+        "inbox",
+        "email",
+        "messages",
+        "mail"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Check new emails",
+        "View unread messages",
+        "Access received communications"
+      ]
     }
   }
 }

@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "动物收容所网站",
+    "实验室研究",
+    "害虫防治服务"
+  ],
   "name": "老鼠",
   "tags": [
-    "鼠标",
     "老鼠",
-    "沙鼠",
     "啮齿动物",
     "宠物",
+    "实验",
     "害虫",
-    "瘟疫",
-    "疾病"
+    "生肖"
   ],
   "categories": [
     "animals"
@@ -19,16 +21,18 @@
     "en": {
       "name": "rat",
       "tags": [
-        "mouse",
-        "mice",
-        "gerbil",
+        "rat",
         "rodent",
         "pet",
+        "experiment",
         "pest",
-        "plague",
-        "disease"
+        "zodiac"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Animal shelter website",
+        "Laboratory research",
+        "Pest control service"
+      ]
     }
   }
 }

@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "航拍服务",
+    "无人机配送界面",
+    "远程监控",
+    "科技产品展示"
+  ],
   "name": "无人机",
   "tags": [
-    "四轴飞行器",
     "无人机",
-    "天线",
-    "飞行",
-    "飞行",
-    "技术",
-    "空降的",
-    "机器人技术"
+    "航拍",
+    "四轴飞行器",
+    "航空摄影",
+    "遥控",
+    "飞行器",
+    "科技"
   ],
   "categories": [
     "transportation",
@@ -20,16 +24,20 @@
     "en": {
       "name": "drone",
       "tags": [
+        "drone",
+        "aerial photography",
         "quadcopter",
-        "uav",
-        "aerial",
-        "flight",
-        "flying",
-        "technology",
-        "airborne",
-        "robotics"
+        "UAV",
+        "remote control",
+        "aircraft",
+        "technology"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Aerial photography services",
+        "Drone delivery interface",
+        "Remote surveillance",
+        "Tech gadget displays"
+      ]
     }
   }
 }

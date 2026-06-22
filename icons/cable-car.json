@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "旅游目的地特色",
+    "滑雪胜地网站",
+    "山区交通图标"
+  ],
   "name": "线缆汽车",
   "tags": [
+    "缆车",
     "滑雪缆车",
-    "寒假",
-    "高山",
-    "度假村",
-    "山"
+    "登山缆车",
+    "度假",
+    "山区",
+    "旅游",
+    "交通"
   ],
   "categories": [
     "transportation",
@@ -17,13 +23,19 @@
     "en": {
       "name": "cable car",
       "tags": [
+        "cable car",
         "ski lift",
-        "winter holiday",
-        "alpine",
+        "gondola",
         "resort",
-        "mountains"
+        "mountain",
+        "tourism",
+        "transportation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Travel destination feature",
+        "Ski resort website",
+        "Mountain transportation icon"
+      ]
     }
   }
 }

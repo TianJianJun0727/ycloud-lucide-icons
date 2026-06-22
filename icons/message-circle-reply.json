@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "回复消息",
+    "回应评论",
+    "线程中引用"
+  ],
   "name": "消息圆形回复",
   "tags": [
-    "评论",
     "聊天",
-    "谈话",
     "对话",
-    "反馈",
-    "讲话泡泡",
+    "评论",
     "回复",
-    "反应"
+    "回应",
+    "答复",
+    "引用"
   ],
   "categories": [
     "social"
@@ -19,16 +22,19 @@
     "en": {
       "name": "message circle reply",
       "tags": [
-        "comment",
         "chat",
         "conversation",
-        "dialog",
-        "feedback",
-        "speech bubble",
+        "comment",
         "reply",
-        "response"
+        "respond",
+        "answer",
+        "quote"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Reply to a message",
+        "Respond to a comment",
+        "Quote in a thread"
+      ]
     }
   }
 }

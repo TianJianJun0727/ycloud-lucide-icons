@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "来电通知",
+    "接听电话按钮"
+  ],
   "name": "电话呼入",
   "tags": [
-    "通话"
+    "来电",
+    "呼入",
+    "接听",
+    "箭头"
   ],
   "categories": [
     "arrows",
@@ -15,9 +21,15 @@
     "en": {
       "name": "phone incoming",
       "tags": [
-        "call"
+        "phone incoming",
+        "incoming call",
+        "answer",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Incoming call notification",
+        "Answer call button"
+      ]
     }
   }
 }

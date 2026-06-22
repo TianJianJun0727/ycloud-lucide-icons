@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在文件管理器中切换到列表视图",
+    "待办事项应用界面",
+    "相册列表布局"
+  ],
   "name": "布局列表",
   "tags": [
+    "列表",
+    "布局",
+    "列表视图",
     "待办事项",
-    "任务",
     "项目",
-    "待定",
-    "图片",
-    "照片"
+    "图片列表"
   ],
   "categories": [
     "design",
@@ -20,14 +24,18 @@
     "en": {
       "name": "layout list",
       "tags": [
+        "list",
+        "layout",
+        "list view",
         "todo",
-        "tasks",
         "items",
-        "pending",
-        "image",
-        "photo"
+        "image list"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Switch to list view in a file manager",
+        "Todo list application interface",
+        "Photo album list layout"
+      ]
     }
   }
 }

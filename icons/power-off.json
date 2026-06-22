@@ -1,12 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备关机按钮",
+    "电源控制开关"
+  ],
   "name": "关机",
   "tags": [
-    "上",
+    "关机",
+    "电源",
     "关闭",
-    "装置",
-    "开关"
+    "设备"
   ],
   "categories": [
     "connectivity"
@@ -15,12 +18,15 @@
     "en": {
       "name": "power off",
       "tags": [
-        "on",
-        "off",
-        "device",
-        "switch"
+        "power off",
+        "shutdown",
+        "turn off",
+        "device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device shutdown button",
+        "Power control toggle"
+      ]
     }
   }
 }

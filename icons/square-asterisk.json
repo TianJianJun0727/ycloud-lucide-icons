@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "密码字段",
+    "通配符搜索",
+    "必填字段指示"
+  ],
   "name": "方形星号",
   "tags": [
     "密码",
-    "秘密",
-    "访问",
-    "钥匙",
-    "乘以",
-    "乘法",
-    "全局模式",
     "通配符",
-    "*"
+    "乘法",
+    "安全",
+    "必填"
   ],
   "categories": [
     "text",
@@ -32,16 +32,16 @@
       "name": "square asterisk",
       "tags": [
         "password",
-        "secret",
-        "access",
-        "key",
-        "multiply",
-        "multiplication",
-        "glob pattern",
         "wildcard",
-        "*"
+        "multiplication",
+        "security",
+        "required"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Password field",
+        "Wildcard search",
+        "Required field indicator"
+      ]
     }
   }
 }

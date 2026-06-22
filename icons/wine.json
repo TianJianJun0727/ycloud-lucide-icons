@@ -1,16 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "葡萄酒菜单和饮品选择",
+    "餐厅和酒吧界面图标"
+  ],
   "name": "葡萄酒",
   "tags": [
-    "酒精",
-    "饮料",
+    "葡萄酒",
+    "红酒",
+    "酒精饮料",
     "酒吧",
-    "喝",
-    "玻璃",
-    "侍酒师",
-    "葡萄园",
-    "酒厂"
+    "餐饮"
   ],
   "categories": [
     "food-beverage"
@@ -19,16 +19,16 @@
     "en": {
       "name": "wine",
       "tags": [
-        "alcohol",
-        "beverage",
+        "wine",
+        "red wine",
+        "alcoholic beverage",
         "bar",
-        "drink",
-        "glass",
-        "sommelier",
-        "vineyard",
-        "winery"
+        "dining"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Wine menus and beverage selection",
+        "Restaurant and bar interface icons"
+      ]
     }
   }
 }

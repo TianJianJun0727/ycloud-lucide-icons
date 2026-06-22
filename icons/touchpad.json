@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "笔记本电脑界面",
+    "触控板设置",
+    "光标导航"
+  ],
   "name": "触控板",
   "tags": [
     "触控板",
-    "光标"
+    "触摸板",
+    "光标控制",
+    "输入设备"
   ],
   "categories": [
     "devices"
@@ -13,10 +19,16 @@
     "en": {
       "name": "touchpad",
       "tags": [
+        "touchpad",
         "trackpad",
-        "cursor"
+        "cursor control",
+        "input device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Laptop interface",
+        "Touchpad settings",
+        "Cursor navigation"
+      ]
     }
   }
 }

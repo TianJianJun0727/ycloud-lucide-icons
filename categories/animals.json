@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "动物",
-  "icon": "dog",
   "i18n": {
     "en": {
       "title": "Animals"

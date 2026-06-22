@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "航班预订界面",
+    "旅行行程显示",
+    "机场或航空公司应用"
+  ],
   "name": "飞机",
   "tags": [
     "飞机",
+    "飞行",
     "旅行",
-    "飞机"
+    "航空",
+    "交通工具"
   ],
   "categories": [
     "transportation",
@@ -17,10 +23,16 @@
       "name": "plane",
       "tags": [
         "plane",
-        "trip",
-        "airplane"
+        "flight",
+        "travel",
+        "aviation",
+        "transport"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Flight booking interface",
+        "Travel itinerary display",
+        "Airport or airline app"
+      ]
     }
   }
 }

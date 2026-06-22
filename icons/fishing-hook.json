@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "钓鱼应用功能",
+    "户外活动图标",
+    "旅行与爱好内容"
+  ],
   "name": "钓鱼钩子",
   "tags": [
-    "海",
-    "划船",
-    "钓鱼者",
-    "诱饵",
-    "卷轴",
-    "铲球",
-    "海洋",
-    "户外",
-    "鱼",
     "钓鱼",
-    "钩子",
-    "体育",
-    "旅行"
+    "鱼钩",
+    "户外",
+    "运动",
+    "旅行",
+    "渔具",
+    "鱼饵",
+    "海洋"
   ],
   "categories": [
     "sports",
@@ -25,21 +24,20 @@
     "en": {
       "name": "fishing hook",
       "tags": [
-        "sea",
-        "boating",
-        "angler",
-        "bait",
-        "reel",
-        "tackle",
-        "marine",
-        "outdoors",
-        "fish",
         "fishing",
         "hook",
+        "outdoors",
         "sports",
-        "travel"
+        "travel",
+        "tackle",
+        "bait",
+        "marine"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Fishing app feature",
+        "Outdoor activity icon",
+        "Travel and hobby content"
+      ]
     }
   }
 }

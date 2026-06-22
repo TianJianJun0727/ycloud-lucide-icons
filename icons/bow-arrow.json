@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "游戏武器选择",
+    "射箭运动界面",
+    "瞄准功能图标"
+  ],
   "name": "弓箭头",
   "tags": [
-    "弓箭手",
+    "弓箭",
     "射箭",
-    "游戏",
-    "战争",
-    "武器"
+    "武器",
+    "游戏装备",
+    "瞄准"
   ],
   "categories": [
     "gaming",
@@ -17,13 +21,17 @@
     "en": {
       "name": "bow arrow",
       "tags": [
-        "archer",
+        "bow",
+        "arrow",
         "archery",
-        "game",
-        "war",
-        "weapon"
+        "weapon",
+        "aiming"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Game weapon selection",
+        "Archery sports interface",
+        "Aiming function icon"
+      ]
     }
   }
 }

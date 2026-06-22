@@ -1,24 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "餐饮应用中的甜点分类",
+    "食品菜单或食谱图标"
+  ],
   "name": "甜点",
   "tags": [
-    "布丁",
-    "圣诞节",
-    "圣诞节",
-    "奶油冻",
-    "冰包子",
-    "糖衣",
-    "软糖",
+    "甜点",
     "蛋糕",
     "冰淇淋",
-    "冰淇淋",
-    "圣代",
-    "勺子",
-    "多洛普",
+    "布丁",
     "糖",
     "食物",
-    "甜甜的"
+    "甜品"
   ],
   "categories": [
     "food-beverage"
@@ -27,24 +21,18 @@
     "en": {
       "name": "dessert",
       "tags": [
-        "pudding",
-        "christmas",
-        "xmas",
-        "custard",
-        "iced bun",
-        "icing",
-        "fondant",
+        "dessert",
         "cake",
         "ice cream",
-        "gelato",
-        "sundae",
-        "scoop",
-        "dollop",
+        "pudding",
         "sugar",
         "food",
         "sweet"
       ],
-      "use-cases": []
+      "use-cases": [
+        "dessert category in food & beverage apps",
+        "icon for food menus or recipes"
+      ]
     }
   }
 }

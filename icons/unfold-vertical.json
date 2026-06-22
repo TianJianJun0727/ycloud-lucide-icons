@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "垂直面板展开",
+    "下拉菜单",
+    "内容区域扩展"
+  ],
   "name": "展开垂直",
   "tags": [
+    "垂直展开",
+    "折叠",
+    "布局",
     "箭头",
-    "展开",
-    "垂直",
-    "虚线"
+    "扩展"
   ],
   "categories": [
     "arrows",
@@ -16,12 +21,17 @@
     "en": {
       "name": "unfold vertical",
       "tags": [
+        "vertical unfold",
+        "collapse",
+        "layout",
         "arrow",
-        "expand",
-        "vertical",
-        "dashed"
+        "expand"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertical panel expansion",
+        "Dropdown menu",
+        "Content area expansion"
+      ]
     }
   }
 }

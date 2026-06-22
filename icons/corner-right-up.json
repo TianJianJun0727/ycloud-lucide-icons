@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "右上方向箭头",
+    "角落导航指示"
+  ],
   "name": "角落右上",
   "tags": [
-    "箭头"
+    "箭头",
+    "右上",
+    "角落",
+    "方向"
   ],
   "categories": [
     "arrows"
@@ -12,9 +18,15 @@
     "en": {
       "name": "corner right up",
       "tags": [
-        "arrow"
+        "arrow",
+        "right up",
+        "corner",
+        "direction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Right-up directional arrow",
+        "Corner navigation indicator"
+      ]
     }
   }
 }

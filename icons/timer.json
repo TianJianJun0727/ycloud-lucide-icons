@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "启动倒计时或计时器",
+    "跟踪经过时间或持续时间",
+    "设置时间限制或提醒"
+  ],
   "name": "计时器",
   "tags": [
-    "时间",
+    "计时器",
     "定时器",
-    "秒表"
+    "倒计时",
+    "秒表",
+    "时钟"
   ],
   "categories": [
     "time"
@@ -14,11 +20,17 @@
     "en": {
       "name": "timer",
       "tags": [
-        "time",
         "timer",
-        "stopwatch"
+        "countdown",
+        "stopwatch",
+        "clock",
+        "timing"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Start a countdown or timer",
+        "Track elapsed time or duration",
+        "Set a time limit or reminder"
+      ]
     }
   }
 }

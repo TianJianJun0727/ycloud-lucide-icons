@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用灯光控制",
+    "智能家居设备状态",
+    "灯光开关切换"
+  ],
   "name": "灯",
   "tags": [
+    "灯",
+    "灯具",
     "照明",
-    "家庭",
-    "首页",
-    "家具"
+    "灯泡",
+    "光源"
   ],
   "categories": [
     "home"
@@ -15,12 +20,17 @@
     "en": {
       "name": "lamp",
       "tags": [
+        "lamp",
+        "light",
         "lighting",
-        "household",
-        "home",
-        "furniture"
+        "light bulb",
+        "light source"
       ],
-      "use-cases": []
+      "use-cases": [
+        "General lighting control",
+        "Smart home device status",
+        "Light on/off toggle"
+      ]
     }
   }
 }

@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "将对象向上移动",
+    "向上滚动内容",
+    "收起部分内容",
+    "地图上的北方"
+  ],
   "name": "移动上",
   "tags": [
     "箭头",
     "方向",
     "向上",
-    "北"
+    "移动",
+    "北",
+    "收起",
+    "上拉"
   ],
   "categories": [
     "arrows"
@@ -17,10 +25,18 @@
       "tags": [
         "arrow",
         "direction",
-        "upwards",
-        "north"
+        "up",
+        "move",
+        "north",
+        "collapse",
+        "pull-up"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Move object upward",
+        "Scroll up content",
+        "Collapse section",
+        "North direction on map"
+      ]
     }
   }
 }

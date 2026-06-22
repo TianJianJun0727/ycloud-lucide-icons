@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "访问用户设置",
+    "配置账户偏好",
+    "编辑资料选项",
+    "管理用户配置"
+  ],
   "name": "用户圆形齿轮",
   "tags": [
-    "设置",
-    "编辑",
-    "设置",
-    "齿轮"
+    "用户设置",
+    "账户配置",
+    "个人偏好",
+    "用户选项",
+    "资料设置"
   ],
   "categories": [
     "account"
@@ -23,12 +29,18 @@
     "en": {
       "name": "user round cog",
       "tags": [
-        "settings",
-        "edit",
-        "cog",
-        "gear"
+        "user settings",
+        "account configuration",
+        "personal preferences",
+        "user options",
+        "profile settings"
       ],
-      "use-cases": []
+      "use-cases": [
+        "accessing user settings",
+        "configuring account preferences",
+        "editing profile options",
+        "managing user configuration"
+      ]
     }
   }
 }

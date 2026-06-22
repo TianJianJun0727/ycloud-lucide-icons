@@ -1,17 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "餐饮服务界面",
+    "餐厅应用",
+    "用餐体验"
+  ],
   "name": "手餐盘",
   "tags": [
-    "服务员",
-    "女服务员",
-    "餐厅",
-    "餐桌服务",
+    "餐盘",
     "服务",
-    "晚餐",
+    "餐厅",
     "餐饮",
-    "餐",
-    "课程",
     "奢华"
   ],
   "categories": [
@@ -22,18 +21,17 @@
     "en": {
       "name": "hand platter",
       "tags": [
-        "waiter",
-        "waitress",
+        "platter",
+        "service",
         "restaurant",
-        "table service",
-        "served",
-        "dinner",
         "dining",
-        "meal",
-        "course",
         "luxury"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food service UI",
+        "Restaurant apps",
+        "Dining experiences"
+      ]
     }
   }
 }

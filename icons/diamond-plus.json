@@ -1,26 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频编辑关键帧添加",
+    "计算器加法功能",
+    "增加数值的UI按钮",
+    "瞄准十字线或目标"
+  ],
   "name": "菱形加号",
   "tags": [
     "关键帧",
     "添加",
     "新建",
     "增加",
-    "增量",
-    "积极的",
     "计算",
     "工具栏",
     "十字线",
     "目标",
-    "目标",
-    "范围",
-    "视线",
-    "网袋",
-    "最大",
-    "升级",
-    "额外的",
-    "+"
+    "最大值",
+    "升级"
   ],
   "categories": [
     "multimedia",
@@ -36,22 +33,19 @@
         "add",
         "new",
         "increase",
-        "increment",
-        "positive",
         "calculate",
         "toolbar",
         "crosshair",
         "aim",
-        "target",
-        "scope",
-        "sight",
-        "reticule",
         "maximum",
-        "upgrade",
-        "extra",
-        "+"
+        "upgrade"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video editing keyframe addition",
+        "Calculator add function",
+        "UI button for increasing a value",
+        "Aiming reticle or target"
+      ]
     }
   }
 }

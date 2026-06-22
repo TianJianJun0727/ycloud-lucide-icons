@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "数据录入和调查表单",
+    "用户注册或联系页面",
+    "设置和配置面板"
+  ],
   "name": "表单",
   "tags": [
-    "文档",
-    "页面",
-    "文件",
-    "布局",
-    "纸",
-    "存根",
-    "形式",
-    "结构",
-    "模板",
-    "输入",
-    "设计",
-    "组件"
+    "表单",
+    "输入框",
+    "数据录入",
+    "问卷",
+    "UI组件"
   ],
   "categories": [
     "development"
@@ -23,20 +20,17 @@
     "en": {
       "name": "form",
       "tags": [
-        "document",
-        "page",
-        "file",
-        "layout",
-        "paper",
-        "stub",
-        "formality",
-        "structure",
-        "template",
-        "inputs",
-        "design",
-        "components"
+        "form",
+        "input",
+        "data-entry",
+        "questionnaire",
+        "ui-component"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Data entry and survey forms",
+        "User registration or contact pages",
+        "Settings and configuration panels"
+      ]
     }
   }
 }

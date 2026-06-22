@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "心率监测器",
+    "健身追踪器",
+    "医疗仪表盘",
+    "生命体征显示"
+  ],
   "name": "心率",
   "tags": [
+    "心率",
     "心跳",
-    "脉冲",
-    "健康",
+    "脉搏",
+    "健康监测",
     "医疗",
-    "血压",
-    "心脏的",
-    "收缩期",
-    "舒张期"
+    "生命体征"
   ],
   "categories": [
     "medical"
@@ -19,16 +22,19 @@
     "en": {
       "name": "heart pulse",
       "tags": [
+        "heart rate",
         "heartbeat",
         "pulse",
-        "health",
+        "health monitoring",
         "medical",
-        "blood pressure",
-        "cardiac",
-        "systole",
-        "diastole"
+        "vital signs"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Heart rate monitor",
+        "Fitness tracker",
+        "Medical dashboard",
+        "Vital signs display"
+      ]
     }
   }
 }

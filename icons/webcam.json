@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频会议设置",
+    "设备状态指示器",
+    "直播控制",
+    "安全监控面板"
+  ],
   "name": "摄像头",
   "tags": [
-    "相机",
-    "安全"
+    "摄像头",
+    "网络摄像头",
+    "视频通话",
+    "监控",
+    "直播",
+    "设备"
   ],
   "categories": [
     "connectivity",
@@ -16,9 +25,18 @@
       "name": "webcam",
       "tags": [
         "camera",
-        "security"
+        "webcam",
+        "video call",
+        "surveillance",
+        "streaming",
+        "device"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Video conferencing settings",
+        "Device status indicator",
+        "Live streaming controls",
+        "Security monitoring panel"
+      ]
     }
   }
 }

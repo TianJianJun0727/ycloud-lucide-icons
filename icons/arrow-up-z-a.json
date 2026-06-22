@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "字母排序Z-A",
+    "反向字母顺序",
+    "文本降序排序"
+  ],
   "name": "箭头上ZA",
   "tags": [
-    "筛选",
     "排序",
-    "上升",
-    "下降",
-    "增加",
-    "减少",
-    "上升",
-    "坠落",
-    "按字母顺序排列的",
-    "反向"
+    "字母顺序",
+    "降序",
+    "反向",
+    "文本排序"
   ],
   "categories": [
     "text",
@@ -31,18 +30,17 @@
     "en": {
       "name": "arrow up Z A",
       "tags": [
-        "filter",
         "sort",
-        "ascending",
-        "descending",
-        "increasing",
-        "decreasing",
-        "rising",
-        "falling",
         "alphabetical",
-        "reverse"
+        "descending",
+        "reverse",
+        "text sorting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Alphabetical sort Z-A",
+        "Reverse alphabetical order",
+        "Text descending sort"
+      ]
     }
   }
 }

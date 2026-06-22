@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "创建曲线的矢量绘图工具",
+    "图形设计软件中的路径编辑",
+    "贝塞尔曲线操作界面",
+    "插图和形状设计"
+  ],
   "name": "样条曲线",
   "tags": [
+    "样条曲线",
     "路径",
-    "笔",
-    "工具",
-    "形状",
-    "曲线",
-    "画"
+    "贝塞尔曲线",
+    "矢量图形",
+    "设计",
+    "绘图",
+    "形状"
   ],
   "categories": [
     "design"
@@ -17,14 +23,20 @@
     "en": {
       "name": "spline",
       "tags": [
+        "spline",
         "path",
-        "pen",
-        "tool",
-        "shape",
-        "curve",
-        "draw"
+        "bezier curve",
+        "vector graphic",
+        "design",
+        "drawing",
+        "shape"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vector drawing tool for creating curves",
+        "Path editing in graphic design software",
+        "Bezier curve manipulation interface",
+        "Illustration and shape design"
+      ]
     }
   }
 }

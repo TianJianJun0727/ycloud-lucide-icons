@@ -1,13 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "野生动物保护",
+    "动物园网站",
+    "动物主题内容",
+    "中国文化"
+  ],
   "name": "熊猫",
   "tags": [
+    "熊猫",
     "动物",
     "野生动物",
-    "熊",
+    "可爱",
     "动物园",
-    "竹子"
+    "保护动物",
+    "中国"
   ],
   "categories": [
     "animals"
@@ -16,13 +23,20 @@
     "en": {
       "name": "panda",
       "tags": [
+        "panda",
         "animal",
         "wildlife",
-        "bear",
+        "cute",
         "zoo",
-        "bamboo"
+        "conservation",
+        "China"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Wildlife conservation",
+        "Zoo website",
+        "Animal-themed content",
+        "Chinese culture"
+      ]
     }
   }
 }

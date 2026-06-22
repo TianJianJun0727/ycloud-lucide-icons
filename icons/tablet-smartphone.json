@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "响应式设计预览切换",
+    "设备兼容性测试工具",
+    "多屏幕应用仪表盘"
+  ],
   "name": "平板智能手机",
   "tags": [
-    "反应灵敏",
+    "平板手机",
+    "响应式设计",
+    "多设备",
     "屏幕",
-    "浏览器",
-    "测试",
-    "移动"
+    "移动端"
   ],
   "categories": [
     "devices",
@@ -19,13 +23,17 @@
     "en": {
       "name": "tablet smartphone",
       "tags": [
-        "responsive",
+        "tablet smartphone",
+        "responsive design",
+        "multi-device",
         "screens",
-        "browser",
-        "testing",
         "mobile"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Responsive design preview toggle",
+        "Device compatibility testing tool",
+        "Multi-screen application dashboard"
+      ]
     }
   }
 }

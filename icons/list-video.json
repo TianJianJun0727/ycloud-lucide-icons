@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "视频播放列表界面",
+    "媒体库管理",
+    "视频集合展示"
+  ],
   "name": "列表视频",
   "tags": [
+    "视频列表",
     "播放列表",
-    "视频",
+    "视频库",
+    "媒体库",
     "回放"
   ],
   "categories": [
@@ -14,11 +20,17 @@
     "en": {
       "name": "list video",
       "tags": [
+        "video list",
         "playlist",
-        "video",
+        "video library",
+        "media library",
         "playback"
       ],
-      "use-cases": []
+      "use-cases": [
+        "video playlist interface",
+        "media library management",
+        "video collection display"
+      ]
     }
   }
 }

@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "土耳其货币折扣标签",
+    "带里拉符号的价格徽章",
+    "金融促销标记"
+  ],
   "name": "徽章土耳其里拉",
   "tags": [
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
+    "价格",
+    "里拉",
+    "促销",
+    "徽章",
     "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
-    "尝试",
-    "₺"
+    "货币"
   ],
   "categories": [
     "shopping",
@@ -27,21 +24,18 @@
       "name": "badge turkish lira",
       "tags": [
         "discount",
-        "offer",
+        "price",
+        "lira",
         "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
+        "badge",
         "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
-        "try",
-        "₺"
+        "currency"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Turkish currency discount tag",
+        "Price badge with lira symbol",
+        "Financial promotion marker"
+      ]
     }
   }
 }

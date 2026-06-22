@@ -1,22 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音频文件播放",
+    "音乐库",
+    "多媒体内容"
+  ],
   "name": "文件音乐",
   "tags": [
+    "音乐",
     "音频",
-    "声音",
-    "噪音",
-    "轨道",
-    "数字化",
-    "录音",
-    "回放",
-    "钢琴",
-    "键盘",
-    "键",
-    "笔记",
-    "和弦",
-    "迷笛",
-    "八度"
+    "文件",
+    "播放",
+    "多媒体"
   ],
   "categories": [
     "files",
@@ -26,22 +21,17 @@
     "en": {
       "name": "file music",
       "tags": [
+        "music",
         "audio",
-        "sound",
-        "noise",
-        "track",
-        "digital",
-        "recording",
+        "file",
         "playback",
-        "piano",
-        "keyboard",
-        "keys",
-        "notes",
-        "chord",
-        "midi",
-        "octave"
+        "multimedia"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Audio file playback",
+        "Music library",
+        "Multimedia content"
+      ]
     }
   }
 }

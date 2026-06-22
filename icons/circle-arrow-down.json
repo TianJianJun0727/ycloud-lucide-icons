@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "下载操作按钮",
+    "向下滚动控制",
+    "地图上的方向指示器"
+  ],
   "name": "圆形箭头下",
   "tags": [
-    "向后",
-    "反向",
+    "向下",
+    "下载",
+    "下降",
     "方向",
     "南",
-    "标志",
-    "按钮"
+    "圆形按钮"
   ],
   "categories": [
     "arrows",
@@ -26,14 +30,18 @@
     "en": {
       "name": "circle arrow down",
       "tags": [
-        "backwards",
-        "reverse",
+        "down",
+        "download",
+        "descend",
         "direction",
         "south",
-        "sign",
-        "button"
+        "circular button"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Download action button",
+        "Scroll down control",
+        "Directional indicator on a map"
+      ]
     }
   }
 }

@@ -1,15 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "项目路线图标记",
+    "进度跟踪",
+    "版本发布指示器",
+    "导航航点"
+  ],
   "name": "里程碑",
   "tags": [
+    "里程碑",
     "路标",
-    "方向",
-    "右",
-    "东",
-    "前进",
-    "版本控制",
-    "航路点"
+    "进度",
+    "目标",
+    "版本",
+    "航点"
   ],
   "categories": [
     "arrows",
@@ -21,15 +25,19 @@
     "en": {
       "name": "milestone",
       "tags": [
+        "milestone",
         "signpost",
-        "direction",
-        "right",
-        "east",
-        "forward",
-        "version control",
+        "progress",
+        "goal",
+        "version",
         "waypoint"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Project roadmap marker",
+        "Progress tracking",
+        "Version release indicator",
+        "Navigation waypoint"
+      ]
     }
   }
 }

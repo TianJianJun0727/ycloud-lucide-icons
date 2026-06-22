@@ -1,19 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件压缩",
+    "软件包管理",
+    "数据存储",
+    "物流包裹"
+  ],
   "name": "包裹",
   "tags": [
+    "包裹",
     "盒子",
     "容器",
     "存储",
-    "密封的",
-    "交货",
-    "未交付的",
-    "未开封的",
-    "包装的",
+    "压缩",
+    "模块",
     "归档",
-    "邮编",
-    "模块"
+    "交付"
   ],
   "categories": [
     "files",
@@ -23,19 +25,21 @@
     "en": {
       "name": "package",
       "tags": [
+        "package",
         "box",
         "container",
         "storage",
-        "sealed",
-        "delivery",
-        "undelivered",
-        "unopened",
-        "packed",
-        "archive",
         "zip",
-        "module"
+        "module",
+        "archive",
+        "delivery"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File compression",
+        "Software package management",
+        "Data storage",
+        "Shipping package"
+      ]
     }
   }
 }

@@ -1,23 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁用复制功能",
+    "指示复制错误或失败",
+    "取消复制过程"
+  ],
   "name": "复制斜杠",
   "tags": [
-    "克隆",
-    "重复的",
-    "取消",
-    "禁止",
-    "不",
-    "停止",
-    "禁止的",
-    "禁止",
-    "错误",
-    "多个",
-    "划分",
-    "师",
-    "分裂",
-    "或",
-    "/"
+    "复制禁止",
+    "复制取消",
+    "克隆错误",
+    "重复无效",
+    "停止复制",
+    "禁用复制"
   ],
   "categories": [
     "text",
@@ -28,23 +23,18 @@
     "en": {
       "name": "copy slash",
       "tags": [
-        "clone",
-        "duplicate",
-        "cancel",
-        "ban",
-        "no",
-        "stop",
-        "forbidden",
-        "prohibited",
-        "error",
-        "multiple",
-        "divide",
-        "division",
-        "split",
-        "or",
-        "/"
+        "copy forbidden",
+        "copy cancel",
+        "clone error",
+        "duplicate invalid",
+        "stop copy",
+        "disable copy"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Disable copy functionality",
+        "Indicate copy error or failure",
+        "Cancel a duplication process"
+      ]
     }
   }
 }

@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "人声录音模式",
+    "卡拉OK或唱歌应用",
+    "播客录制设置"
+  ],
   "name": "麦克风人声",
   "tags": [
-    "歌词",
-    "声音",
-    "听",
-    "声音",
-    "音乐",
-    "收音机",
-    "播客",
-    "卡拉OK",
+    "麦克风",
+    "人声",
     "唱歌",
-    "麦克风"
+    "录音",
+    "音频",
+    "音乐",
+    "播客",
+    "卡拉OK"
   ],
   "categories": [
     "devices",
@@ -30,18 +32,20 @@
     "en": {
       "name": "mic vocal",
       "tags": [
-        "lyrics",
-        "voice",
-        "listen",
-        "sound",
-        "music",
-        "radio",
-        "podcast",
-        "karaoke",
+        "microphone",
+        "vocal",
         "singing",
-        "microphone"
+        "recording",
+        "audio",
+        "music",
+        "podcast",
+        "karaoke"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Voice recording mode",
+        "Karaoke or singing app",
+        "Podcast recording setup"
+      ]
     }
   }
 }

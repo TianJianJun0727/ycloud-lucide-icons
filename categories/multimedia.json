@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "多媒体",
-  "icon": "circle-play",
   "i18n": {
     "en": {
       "title": "Multimedia"

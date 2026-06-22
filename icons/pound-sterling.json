@@ -1,11 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "英国货币选择",
+    "金融汇率显示"
+  ],
   "name": "英镑英镑",
   "tags": [
+    "英镑",
     "货币",
-    "钱",
-    "付款"
+    "英国",
+    "金融"
   ],
   "categories": [
     "finance"
@@ -14,11 +18,15 @@
     "en": {
       "name": "pound sterling",
       "tags": [
+        "pound",
         "currency",
-        "money",
-        "payment"
+        "UK",
+        "finance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "British currency selection",
+        "Financial exchange rates"
+      ]
     }
   }
 }

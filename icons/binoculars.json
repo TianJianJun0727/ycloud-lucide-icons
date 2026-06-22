@@ -1,26 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "旅游应用",
+    "观察工具",
+    "监控系统界面"
+  ],
   "name": "双筒望远镜",
   "tags": [
-    "野外眼镜",
-    "长矛",
-    "夹鼻眼镜",
+    "望远镜",
     "观察",
-    "观光",
-    "自然",
-    "野生动物",
-    "观鸟",
-    "侦察",
-    "监视",
-    "搜索",
-    "发现",
-    "监控",
-    "了望台",
-    "观点",
-    "旅行",
+    "探索",
     "旅游",
-    "研究"
+    "监控"
   ],
   "categories": [
     "navigation",
@@ -34,26 +25,17 @@
     "en": {
       "name": "binoculars",
       "tags": [
-        "field glasses",
-        "lorgnette",
-        "pince-nez",
+        "binoculars",
         "observation",
-        "sightseeing",
-        "nature",
-        "wildlife",
-        "birdwatching",
-        "scouting",
-        "surveillance",
-        "search",
-        "discovery",
-        "monitoring",
-        "lookout",
-        "viewpoint",
+        "exploration",
         "travel",
-        "tourism",
-        "research"
+        "surveillance"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Travel app",
+        "Observation tool",
+        "Surveillance system interface"
+      ]
     }
   }
 }

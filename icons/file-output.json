@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件下载",
+    "导出数据",
+    "输出操作"
+  ],
   "name": "文件输出",
   "tags": [
-    "文档"
+    "输出",
+    "下载",
+    "导出",
+    "文件",
+    "箭头"
   ],
   "categories": [
     "files",
@@ -13,9 +21,17 @@
     "en": {
       "name": "file output",
       "tags": [
-        "document"
+        "output",
+        "download",
+        "export",
+        "file",
+        "arrow"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File download",
+        "Export data",
+        "Output action"
+      ]
     }
   }
 }

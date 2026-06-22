@@ -1,18 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器光标",
+    "指示可编辑文本区域",
+    "输入框的焦点状态"
+  ],
   "name": "文本光标",
   "tags": [
-    "选择",
+    "光标",
+    "文本",
     "插入符",
-    "类型",
-    "打字",
-    "写",
-    "写作",
-    "编辑",
-    "插入",
     "输入",
-    "文本区域"
+    "编辑",
+    "打字",
+    "选择",
+    "插入点"
   ],
   "categories": [
     "text",
@@ -22,18 +24,20 @@
     "en": {
       "name": "text cursor",
       "tags": [
-        "select",
+        "cursor",
+        "text",
         "caret",
-        "type",
-        "typing",
-        "write",
-        "writing",
-        "edit",
-        "insert",
         "input",
-        "textarea"
+        "edit",
+        "typing",
+        "select",
+        "insertion point"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor cursor",
+        "Indicating editable text area",
+        "Input field focus state"
+      ]
     }
   }
 }

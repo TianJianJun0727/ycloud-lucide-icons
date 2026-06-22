@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本文档图标",
+    "PDF文件预览",
+    "文件资源管理器中的数据文件"
+  ],
   "name": "文本文件",
   "tags": [
-    "数据",
-    "文本文件",
+    "文本",
+    "文档",
+    "TXT",
     "PDF",
-    "文档"
+    "数据",
+    "内容"
   ],
   "categories": [
     "files",
@@ -16,12 +22,18 @@
     "en": {
       "name": "file text",
       "tags": [
-        "data",
+        "text",
+        "document",
         "txt",
         "pdf",
-        "document"
+        "data",
+        "content"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text document icon",
+        "PDF file preview",
+        "Data file in file explorer"
+      ]
     }
   }
 }

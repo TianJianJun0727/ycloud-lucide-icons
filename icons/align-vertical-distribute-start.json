@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在Flex容器中设置垂直分布为起始对齐",
+    "在布局中将元素顶部对齐"
+  ],
   "name": "对齐垂直分布起始",
   "tags": [
-    "顶部",
-    "项目",
-    "弯曲",
-    "证明合理"
+    "垂直分布",
+    "顶部对齐",
+    "Flex布局",
+    "CSS布局",
+    "垂直对齐",
+    "UI设计"
   ],
   "categories": [
     "layout"
@@ -15,12 +20,17 @@
     "en": {
       "name": "align vertical distribute start",
       "tags": [
-        "top",
-        "items",
-        "flex",
-        "justify"
+        "vertical distribute",
+        "top align",
+        "flexbox",
+        "CSS layout",
+        "vertical alignment",
+        "UI design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Setting vertical distribution to start in a flex container",
+        "Aligning elements to the top in a layout"
+      ]
     }
   }
 }

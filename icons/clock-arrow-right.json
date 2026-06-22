@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [
-    "表示时间范围的结束",
-    "取消分配时间信息"
+    "指示时间范围的结束",
+    "取消分配或清空时间段",
+    "导航到下一个或未来的时间段"
   ],
   "name": "时钟箭头右",
   "tags": [
     "时间",
-    "手表",
-    "闹钟",
-    "范围",
-    "取消分配"
+    "结束时间",
+    "时间范围",
+    "取消分配",
+    "下一项",
+    "前进"
   ],
   "categories": [
     "time",
@@ -22,14 +24,16 @@
       "name": "clock arrow right",
       "tags": [
         "time",
-        "watch",
-        "alarm",
-        "range",
-        "unassign"
+        "end time",
+        "time range",
+        "unassign",
+        "next",
+        "forward"
       ],
       "use-cases": [
-        "indicating the end of a time range",
-        "unassign timing information"
+        "Indicate the end of a time range",
+        "Unassign or clear a time slot",
+        "Navigate to a next or future time slot"
       ]
     }
   }

@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "音乐播放控制",
+    "多媒体手势",
+    "表情反应"
+  ],
   "name": "手金属",
   "tags": [
-    "摇滚"
+    "摇滚",
+    "手势",
+    "音乐",
+    "多媒体",
+    "emoji"
   ],
   "categories": [
     "emoji",
@@ -13,9 +21,17 @@
     "en": {
       "name": "hand metal",
       "tags": [
-        "rock"
+        "rock",
+        "gesture",
+        "music",
+        "multimedia",
+        "emoji"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Music player controls",
+        "Multimedia gestures",
+        "Emoji reactions"
+      ]
     }
   }
 }

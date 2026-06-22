@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "家具商店产品",
+    "客厅布局设计",
+    "家居装饰应用"
+  ],
   "name": "扶手椅",
   "tags": [
+    "扶手椅",
     "沙发",
     "家具",
-    "休闲",
-    "休息室",
-    "双人沙发",
-    "沙发"
+    "休息",
+    "客厅",
+    "家居",
+    "座椅"
   ],
   "categories": [
     "home"
@@ -17,14 +22,19 @@
     "en": {
       "name": "armchair",
       "tags": [
+        "armchair",
         "sofa",
         "furniture",
-        "leisure",
-        "lounge",
-        "loveseat",
-        "couch"
+        "rest",
+        "living room",
+        "home",
+        "seat"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Furniture store product",
+        "Living room layout design",
+        "Home decor application"
+      ]
     }
   }
 }

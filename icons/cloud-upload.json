@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件上传到云端",
+    "数据备份上传",
+    "云存储功能"
+  ],
   "name": "云上传",
   "tags": [
-    "文件"
+    "上传",
+    "云上传",
+    "文件上传",
+    "数据上传",
+    "存储"
   ],
   "categories": [
     "arrows",
@@ -21,9 +29,17 @@
     "en": {
       "name": "cloud upload",
       "tags": [
-        "file"
+        "upload",
+        "cloud upload",
+        "file upload",
+        "data upload",
+        "storage"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File upload to cloud",
+        "Data backup upload",
+        "Cloud storage feature"
+      ]
     }
   }
 }

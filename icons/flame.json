@@ -1,27 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "消防或紧急服务界面",
+    "流行或趋势指示",
+    "激情或强度象征"
+  ],
   "name": "火焰",
   "tags": [
-    "热",
-    "烧伤",
-    "光",
-    "发光",
-    "点燃",
-    "激情",
-    "余烬",
+    "火焰",
     "火",
-    "点亮",
+    "热",
     "燃烧",
-    "火花",
-    "余烬",
-    "抽烟",
-    "消防员",
-    "消防员",
-    "部门",
-    "旅",
-    "车站",
-    "紧急情况"
+    "紧急",
+    "激情",
+    "亮点"
   ],
   "categories": [
     "weather",
@@ -32,27 +24,19 @@
     "en": {
       "name": "flame",
       "tags": [
+        "flame",
+        "fire",
         "heat",
         "burn",
-        "light",
-        "glow",
-        "ignite",
+        "emergency",
         "passion",
-        "ember",
-        "fire",
-        "lit",
-        "burning",
-        "spark",
-        "embers",
-        "smoke",
-        "firefighter",
-        "fireman",
-        "department",
-        "brigade",
-        "station",
-        "emergency"
+        "hot"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Fire or emergency service UI",
+        "Popular or trending indicator",
+        "Passion or intensity symbol"
+      ]
     }
   }
 }

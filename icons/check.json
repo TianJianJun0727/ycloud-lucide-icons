@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "任务完成状态",
+    "表单提交成功",
+    "切换选中状态",
+    "批准指示器"
+  ],
   "name": "勾选",
   "tags": [
     "完成",
-    "待办事项",
+    "确认",
+    "选中",
+    "成功",
+    "通过",
     "勾选",
-    "完成",
-    "任务"
+    "任务",
+    "待办事项"
   ],
   "categories": [
     "notifications"
@@ -17,12 +25,20 @@
       "name": "check",
       "tags": [
         "done",
-        "todo",
-        "tick",
-        "complete",
-        "task"
+        "confirm",
+        "selected",
+        "success",
+        "pass",
+        "checkmark",
+        "task",
+        "todo"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Task completion status",
+        "Form submission success",
+        "Toggle selection state",
+        "Approval indicator"
+      ]
     }
   }
 }

@@ -1,17 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "无网络连接状态",
+    "离线模式指示器",
+    "信号丢失警告"
+  ],
   "name": "信号零",
   "tags": [
-    "连接",
+    "信号",
     "无线",
-    "GSM",
-    "电话",
-    "2克",
-    "3克",
-    "4克",
-    "5克",
-    "迷失了"
+    "连接",
+    "网络",
+    "无信号",
+    "丢失",
+    "断开",
+    "离线",
+    "蜂窝网络",
+    "移动网络",
+    "Wi-Fi"
   ],
   "categories": [
     "connectivity"
@@ -20,17 +26,23 @@
     "en": {
       "name": "signal zero",
       "tags": [
-        "connection",
+        "signal",
         "wireless",
-        "gsm",
-        "phone",
-        "2g",
-        "3g",
-        "4g",
-        "5g",
-        "lost"
+        "connection",
+        "network",
+        "no signal",
+        "lost",
+        "disconnected",
+        "offline",
+        "cellular",
+        "mobile",
+        "wifi"
       ],
-      "use-cases": []
+      "use-cases": [
+        "No network connection status",
+        "Offline mode indicator",
+        "Signal lost warning"
+      ]
     }
   }
 }

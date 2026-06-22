@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本对齐设置",
+    "排版设计工具",
+    "编辑器中的格式指示器"
+  ],
   "name": "基线",
   "tags": [
-    "文本",
-    "格式",
-    "颜色"
+    "文本基线",
+    "对齐",
+    "排版",
+    "字体",
+    "设计",
+    "格式"
   ],
   "categories": [
     "text"
@@ -14,11 +21,18 @@
     "en": {
       "name": "baseline",
       "tags": [
-        "text",
-        "format",
-        "color"
+        "text baseline",
+        "alignment",
+        "typography",
+        "font",
+        "design",
+        "formatting"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text alignment settings",
+        "Typography design tool",
+        "Formatting indicator in editor"
+      ]
     }
   }
 }

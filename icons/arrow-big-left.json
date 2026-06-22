@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户界面返回按钮",
+    "方向指示左转",
+    "游戏角色左转"
+  ],
   "name": "箭头大左",
   "tags": [
-    "上一个",
+    "向左",
     "返回",
     "方向",
     "西",
-    "指示转弯"
+    "转弯",
+    "指示",
+    "后退"
   ],
   "categories": [
     "arrows",
@@ -17,13 +23,19 @@
     "en": {
       "name": "arrow big left",
       "tags": [
-        "previous",
+        "left",
         "back",
         "direction",
         "west",
-        "indicate turn"
+        "turn",
+        "indicate",
+        "backwards"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Back button in UI",
+        "Direction indicator left",
+        "Game character turn left"
+      ]
     }
   }
 }

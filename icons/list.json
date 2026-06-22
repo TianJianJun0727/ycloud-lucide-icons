@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "项目列表显示",
+    "选项菜单",
+    "内容目录"
+  ],
   "name": "列表",
   "tags": [
-    "选项"
+    "列表",
+    "项目",
+    "选项",
+    "菜单",
+    "目录",
+    "清单"
   ],
   "categories": [
     "text"
@@ -12,9 +21,18 @@
     "en": {
       "name": "list",
       "tags": [
-        "options"
+        "list",
+        "items",
+        "options",
+        "menu",
+        "directory",
+        "checklist"
       ],
-      "use-cases": []
+      "use-cases": [
+        "item list display",
+        "options menu",
+        "content directory"
+      ]
     }
   }
 }

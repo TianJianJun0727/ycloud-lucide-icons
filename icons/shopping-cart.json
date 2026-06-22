@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "电商购物车图标",
+    "结账流程",
+    "加入购物车功能"
+  ],
   "name": "购物车",
   "tags": [
-    "手推车",
     "购物车",
-    "篮子",
+    "手推车",
     "电子商务",
     "商店",
     "购买",
-    "产品",
-    "项目",
-    "成分"
+    "商品",
+    "结账"
   ],
   "categories": [
     "shopping"
@@ -20,17 +22,19 @@
     "en": {
       "name": "shopping cart",
       "tags": [
-        "trolley",
         "cart",
-        "basket",
+        "trolley",
         "e-commerce",
         "store",
         "purchase",
         "products",
-        "items",
-        "ingredients"
+        "checkout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "E-commerce shopping cart icon",
+        "Checkout process",
+        "Add to cart functionality"
+      ]
     }
   }
 }

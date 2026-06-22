@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "禁毒宣传材料",
+    "合规提示标识",
+    "限制区域标记",
+    "政策说明页面"
+  ],
   "name": "叶片关闭",
   "tags": [
-    "大麻",
-    "杂草",
-    "叶"
+    "禁用大麻",
+    "禁毒",
+    "限制使用",
+    "合规标识"
   ],
   "categories": [
     "nature"
@@ -14,11 +20,17 @@
     "en": {
       "name": "cannabis off",
       "tags": [
-        "cannabis",
-        "weed",
-        "leaf"
+        "cannabis prohibited",
+        "drug free",
+        "restricted use",
+        "compliance label"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Anti-drug campaign materials",
+        "Compliance warning labels",
+        "Restricted area markings",
+        "Policy description pages"
+      ]
     }
   }
 }

@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "用户反馈或评分界面",
+    "社交媒体反应按钮",
+    "消息应用中的情绪选择"
+  ],
   "name": "生气",
   "tags": [
-    "表情符号",
     "愤怒",
-    "脸",
-    "情感"
+    "生气",
+    "表情",
+    "情绪",
+    "不满",
+    "恼火",
+    "暴躁"
   ],
   "categories": [
     "emoji"
@@ -15,12 +22,19 @@
     "en": {
       "name": "angry",
       "tags": [
-        "emoji",
+        "angry",
         "anger",
-        "face",
-        "emotion"
+        "emoji",
+        "emotion",
+        "displeased",
+        "mad",
+        "furious"
       ],
-      "use-cases": []
+      "use-cases": [
+        "User feedback or rating interface",
+        "Social media reaction button",
+        "Emotion selection in messaging apps"
+      ]
     }
   }
 }

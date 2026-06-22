@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网站语言选择器",
+    "国际化设置",
+    "全球网络状态",
+    "世界地图界面"
+  ],
   "name": "地球",
   "tags": [
     "世界",
-    "浏览器",
+    "全球",
+    "网络",
+    "互联网",
     "语言",
-    "翻译"
+    "翻译",
+    "浏览器",
+    "地点"
   ],
   "categories": [
     "navigation"
@@ -16,11 +25,20 @@
       "name": "globe",
       "tags": [
         "world",
-        "browser",
+        "global",
+        "network",
+        "internet",
         "language",
-        "translate"
+        "translate",
+        "browser",
+        "location"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Website language selector",
+        "Internationalization settings",
+        "Global network status",
+        "World map interface"
+      ]
     }
   }
 }

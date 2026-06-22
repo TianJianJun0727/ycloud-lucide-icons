@@ -7,19 +7,15 @@
   ],
   "name": "数据库关闭",
   "tags": [
+    "数据库",
     "存储",
-    "记忆",
-    "字节",
     "服务器",
     "关闭",
     "错误",
-    "失败了",
-    "无效",
-    "被拒绝",
-    "被拒绝",
-    "清除",
+    "失败",
     "移除",
-    "断开连接"
+    "断开",
+    "拒绝"
   ],
   "categories": [
     "devices",
@@ -29,19 +25,15 @@
     "en": {
       "name": "database X",
       "tags": [
+        "database",
         "storage",
-        "memory",
-        "bytes",
         "server",
-        "x",
+        "close",
         "error",
         "failed",
-        "invalid",
-        "rejected",
-        "denied",
-        "clear",
         "remove",
-        "disconnect"
+        "disconnect",
+        "reject"
       ],
       "use-cases": [
         "indicating a failed or lost database connection",

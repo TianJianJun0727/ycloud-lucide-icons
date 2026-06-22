@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器中的查找替换功能",
+    "代码编辑器中的字符串替换",
+    "表单字段的自动填充替换"
+  ],
   "name": "替换",
   "tags": [
-    "搜索",
-    "替代品",
+    "替换",
+    "搜索替换",
+    "文本替换",
     "交换",
-    "改变"
+    "更改"
   ],
   "categories": [
     "text"
@@ -15,12 +20,17 @@
     "en": {
       "name": "replace",
       "tags": [
+        "replace",
         "search",
         "substitute",
         "swap",
         "change"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Find and replace in text editor",
+        "String replacement in code editor",
+        "Auto-fill replacement in form fields"
+      ]
     }
   }
 }

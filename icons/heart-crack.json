@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "情感状态表示",
+    "失恋或悲伤场景",
+    "情绪化内容标记"
+  ],
   "name": "爱心裂纹",
   "tags": [
     "心碎",
     "悲伤",
-    "情感"
+    "情感",
+    "爱心",
+    "破裂",
+    "失落"
   ],
   "categories": [
     "emoji"
@@ -16,9 +23,16 @@
       "tags": [
         "heartbreak",
         "sadness",
-        "emotion"
+        "emotion",
+        "heart",
+        "broken",
+        "loss"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Emotional state representation",
+        "Breakup or sad scenario",
+        "Emotional content marker"
+      ]
     }
   }
 }

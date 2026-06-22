@@ -1,15 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "紧急车辆状态",
+    "安全警报通知",
+    "严重警告指示器"
+  ],
   "name": "警报器",
   "tags": [
-    "警察",
+    "警报器",
+    "警笛",
+    "紧急",
     "救护车",
-    "紧急情况",
+    "警察",
+    "消防",
+    "警告",
     "安全",
-    "告警",
-    "闹钟",
-    "光"
+    "闪光"
   ],
   "categories": [
     "medical"
@@ -18,15 +24,21 @@
     "en": {
       "name": "siren",
       "tags": [
-        "police",
-        "ambulance",
-        "emergency",
-        "security",
-        "alert",
+        "siren",
         "alarm",
+        "emergency",
+        "ambulance",
+        "police",
+        "fire",
+        "warning",
+        "security",
         "light"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Emergency vehicle status",
+        "Security alert notification",
+        "Critical warning indicator"
+      ]
     }
   }
 }

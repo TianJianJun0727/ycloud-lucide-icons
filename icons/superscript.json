@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本编辑器格式",
+    "数学表达式",
+    "化学公式",
+    "脚注"
+  ],
   "name": "上标",
   "tags": [
+    "上标",
     "文本",
-    "指数"
+    "指数",
+    "数学",
+    "格式",
+    "标注"
   ],
   "categories": [
     "text"
@@ -13,10 +22,19 @@
     "en": {
       "name": "superscript",
       "tags": [
+        "superscript",
         "text",
-        "exponent"
+        "exponent",
+        "math",
+        "formatting",
+        "notation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text editor formatting",
+        "Mathematical expressions",
+        "Chemical formulas",
+        "Footnotes"
+      ]
     }
   }
 }

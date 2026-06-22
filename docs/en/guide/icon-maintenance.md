@@ -21,7 +21,7 @@ icons/<icon-name>.json
 
 Related files:
 
-- `categories/*.json`: category titles, category icons, and English category titles.
+- `categories/*.json`: category keys, Chinese titles, and English titles.
 - `docs/`: generated documentation pages, search data, category pages, and icon detail pages.
 
 ## Icon Metadata
@@ -75,7 +75,7 @@ icons/<icon-name>.svg
 icons/<icon-name>.json
 ```
 
-Then check whether any category icon, alias, deprecation migration, or documentation example still references the icon.
+Then check whether any alias, deprecation migration, or documentation example still references the icon.
 
 ## Update an icon
 
@@ -91,7 +91,6 @@ Categories are defined in `categories/*.json`.
 {
   "$schema": "../category.schema.json",
   "title": "Simplified Chinese category title",
-  "icon": "compass",
   "i18n": {
     "en": {
       "title": "Navigation & Places"

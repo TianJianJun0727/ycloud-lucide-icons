@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "删除操作",
+    "关闭对话框",
+    "错误指示器"
+  ],
   "name": "八边形关闭",
   "tags": [
     "删除",
-    "停止",
-    "告警",
-    "警告",
-    "次",
-    "清除",
-    "数学"
+    "关闭",
+    "取消",
+    "错误",
+    "清除"
   ],
   "categories": [
     "math",
@@ -28,14 +30,16 @@
       "name": "octagon X",
       "tags": [
         "delete",
-        "stop",
-        "alert",
-        "warning",
-        "times",
-        "clear",
-        "math"
+        "close",
+        "cancel",
+        "error",
+        "clear"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Delete actions",
+        "Close dialogs",
+        "Error indicators"
+      ]
     }
   }
 }

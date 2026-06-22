@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "UI设计工具",
+    "CSS弹性盒对齐",
+    "元素分布",
+    "布局配置"
+  ],
   "name": "对齐水平分布起始",
   "tags": [
-    "左",
-    "项目",
-    "弯曲",
-    "证明合理"
+    "左对齐",
+    "水平分布",
+    "布局",
+    "Flex",
+    "间距",
+    "对齐",
+    "设计工具",
+    "UI布局"
   ],
   "categories": [
     "layout"
@@ -15,12 +24,21 @@
     "en": {
       "name": "align horizontal distribute start",
       "tags": [
-        "left",
-        "items",
+        "left align",
+        "horizontal distribute",
+        "layout",
         "flex",
-        "justify"
+        "spacing",
+        "alignment",
+        "design",
+        "UI layout"
       ],
-      "use-cases": []
+      "use-cases": [
+        "UI design tools",
+        "CSS flexbox alignment",
+        "Element distribution",
+        "Layout configuration"
+      ]
     }
   }
 }

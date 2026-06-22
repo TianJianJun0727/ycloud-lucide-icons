@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "物流与供应链管理",
+    "库存存储与管理",
+    "电商仓储中心"
+  ],
   "name": "仓库",
   "tags": [
-    "存储",
     "仓库",
-    "仓库",
-    "保管人",
-    "存储库",
-    "储藏室",
     "物流",
-    "建筑物"
+    "存储",
+    "库房",
+    "货仓",
+    "仓储"
   ],
   "categories": [
     "buildings",
@@ -20,16 +22,18 @@
     "en": {
       "name": "warehouse",
       "tags": [
-        "storage",
-        "storehouse",
-        "depot",
-        "depository",
-        "repository",
-        "stockroom",
+        "warehouse",
         "logistics",
-        "building"
+        "storage",
+        "depot",
+        "stockroom",
+        "repository"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Logistics and supply chain management",
+        "Inventory storage and management",
+        "E-commerce fulfillment centers"
+      ]
     }
   }
 }

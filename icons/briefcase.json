@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "商务旅行",
+    "办公室工作",
+    "文件存储"
+  ],
   "name": "公文包",
   "tags": [
+    "公文包",
     "工作",
-    "包",
     "行李",
-    "文件夹"
+    "文件夹",
+    "商务"
   ],
   "categories": [
     "transportation"
@@ -15,12 +20,17 @@
     "en": {
       "name": "briefcase",
       "tags": [
+        "briefcase",
         "work",
-        "bag",
         "baggage",
-        "folder"
+        "folder",
+        "business"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Business travel",
+        "Office work",
+        "Document storage"
+      ]
     }
   }
 }

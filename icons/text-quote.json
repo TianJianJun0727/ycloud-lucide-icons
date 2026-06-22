@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文章中的块引用格式化",
+    "回复或引用消息",
+    "突出显示重要的文本段落"
+  ],
   "name": "文本引用",
   "tags": [
+    "引用",
+    "引文",
     "块引用",
-    "报价",
-    "缩进",
+    "语录",
     "回复",
-    "反应"
+    "标注",
+    "缩进"
   ],
   "categories": [
     "text"
@@ -16,13 +22,19 @@
     "en": {
       "name": "text quote",
       "tags": [
-        "blockquote",
+        "quote",
         "quotation",
-        "indent",
+        "blockquote",
+        "citation",
         "reply",
-        "response"
+        "highlight",
+        "indent"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Block quote formatting in articles",
+        "Replying to or citing a message",
+        "Highlighting a notable text passage"
+      ]
     }
   }
 }

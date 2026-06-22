@@ -1,22 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "商品折扣徽章",
+    "美元价格标签",
+    "购物车促销"
+  ],
   "name": "徽章美元标志",
   "tags": [
     "折扣",
-    "报价",
-    "销售",
-    "优惠券",
-    "标签",
-    "货币化",
-    "营销",
-    "金融",
-    "金融",
-    "交换",
-    "交易",
-    "付款",
+    "优惠",
+    "价格",
     "美元",
-    "$"
+    "促销",
+    "金融",
+    "购物",
+    "交易"
   ],
   "categories": [
     "shopping",
@@ -28,20 +26,18 @@
       "tags": [
         "discount",
         "offer",
-        "sale",
-        "voucher",
-        "tag",
-        "monetization",
-        "marketing",
-        "finance",
-        "financial",
-        "exchange",
-        "transaction",
-        "payment",
+        "price",
         "usd",
-        "$"
+        "sale",
+        "finance",
+        "shopping",
+        "transaction"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Discount badge on product",
+        "Price tag in USD",
+        "Shopping cart promotion"
+      ]
     }
   }
 }

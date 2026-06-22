@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示累积数据",
+    "展示时间趋势",
+    "分析仪表盘"
+  ],
   "name": "图表区域",
   "tags": [
-    "统计",
-    "分析",
+    "面积图",
     "图表",
-    "图",
-    "面积"
+    "统计",
+    "数据可视化",
+    "趋势"
   ],
   "categories": [
     "charts"
@@ -24,13 +28,17 @@
     "en": {
       "name": "chart area",
       "tags": [
+        "area chart",
+        "chart",
         "statistics",
-        "analytics",
-        "diagram",
-        "graph",
-        "area"
+        "data visualization",
+        "trend"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display cumulative data",
+        "Show trends over time",
+        "Analytics dashboard"
+      ]
     }
   }
 }

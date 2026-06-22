@@ -1,16 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "折扣或促销徽章",
+    "带折扣的已验证徽章",
+    "显示百分比的价签",
+    "数学百分比符号"
+  ],
   "name": "菱形百分比",
   "tags": [
     "已验证",
-    "未经验证",
-    "销售",
     "折扣",
-    "报价",
+    "促销",
+    "优惠",
     "营销",
-    "贴纸",
-    "价格标签"
+    "价格标签",
+    "百分比",
+    "数学"
   ],
   "categories": [
     "social",
@@ -31,15 +36,20 @@
       "name": "diamond percent",
       "tags": [
         "verified",
-        "unverified",
-        "sale",
         "discount",
+        "sale",
         "offer",
         "marketing",
-        "sticker",
-        "price tag"
+        "price tag",
+        "percent",
+        "mathematics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Discount or sale badge",
+        "Verified badge with discount",
+        "Price tag showing percentage off",
+        "Mathematical percentage symbol"
+      ]
     }
   }
 }

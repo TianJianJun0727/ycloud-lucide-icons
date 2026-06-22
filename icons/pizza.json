@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外卖应用",
+    "餐厅菜单",
+    "烹饪食谱展示"
+  ],
   "name": "披萨",
   "tags": [
-    "馅饼",
-    "乳蛋饼",
-    "食物"
+    "披萨",
+    "食物",
+    "餐饮",
+    "意大利菜",
+    "外卖"
   ],
   "categories": [
     "food-beverage"
@@ -14,11 +20,17 @@
     "en": {
       "name": "pizza",
       "tags": [
-        "pie",
-        "quiche",
-        "food"
+        "pizza",
+        "food",
+        "dining",
+        "Italian cuisine",
+        "delivery"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Food delivery app",
+        "Restaurant menu",
+        "Cooking recipe display"
+      ]
     }
   }
 }

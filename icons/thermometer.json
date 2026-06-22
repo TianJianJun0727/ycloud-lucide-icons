@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "通用温度显示",
+    "天气预报界面",
+    "恒温器控制面板"
+  ],
   "name": "温度计",
   "tags": [
     "温度",
+    "温度计",
+    "天气",
     "摄氏度",
     "华氏度",
-    "天气"
+    "测量",
+    "仪表"
   ],
   "categories": [
     "weather"
@@ -16,11 +23,18 @@
       "name": "thermometer",
       "tags": [
         "temperature",
+        "thermometer",
+        "weather",
         "celsius",
         "fahrenheit",
-        "weather"
+        "measure",
+        "gauge"
       ],
-      "use-cases": []
+      "use-cases": [
+        "General temperature display",
+        "Weather forecast interface",
+        "Thermostat control panel"
+      ]
     }
   }
 }

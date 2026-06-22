@@ -1,26 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "设备状态指示器（电视）",
+    "娱乐系统仪表板",
+    "流媒体应用设备选择"
+  ],
   "name": "电视极简",
   "tags": [
-    "平面屏幕",
     "电视",
-    "流",
-    "显示",
-    "宽银幕",
-    "高清",
-    "高清",
-    "1080p",
-    "4K",
-    "8K",
-    "聪明的",
-    "数字化",
-    "视频",
-    "家庭影院",
+    "显示器",
+    "流媒体",
     "娱乐",
-    "放映时间",
-    "渠道",
-    "追赶"
+    "智能电视",
+    "家庭影院"
   ],
   "categories": [
     "devices",
@@ -38,26 +30,18 @@
     "en": {
       "name": "tv minimal",
       "tags": [
-        "flatscreen",
         "television",
-        "stream",
         "display",
-        "widescreen",
-        "high-definition",
-        "hd",
-        "1080p",
-        "4k",
-        "8k",
-        "smart",
-        "digital",
-        "video",
-        "home cinema",
+        "stream",
         "entertainment",
-        "showtime",
-        "channels",
-        "catchup"
+        "smart tv",
+        "home cinema"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Device status indicator (TV)",
+        "Entertainment system dashboard",
+        "Streaming app device selection"
+      ]
     }
   }
 }

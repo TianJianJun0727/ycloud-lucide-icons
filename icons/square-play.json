@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "媒体播放器控制",
+    "视频界面",
+    "音频播放",
+    "开始按钮"
+  ],
   "name": "方形播放",
   "tags": [
-    "音乐",
-    "音频",
-    "视频",
+    "播放",
     "开始",
-    "跑"
+    "视频",
+    "音频",
+    "多媒体",
+    "运行",
+    "控制",
+    "触发器"
   ],
   "categories": [
     "arrows",
@@ -25,13 +33,21 @@
     "en": {
       "name": "square play",
       "tags": [
-        "music",
-        "audio",
-        "video",
+        "play",
         "start",
-        "run"
+        "video",
+        "audio",
+        "multimedia",
+        "run",
+        "control",
+        "trigger"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Media player control",
+        "Video interface",
+        "Audio playback",
+        "Start button"
+      ]
     }
   }
 }

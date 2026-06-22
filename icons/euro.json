@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "金融应用中的货币选择",
+    "支付方式指示器",
+    "欧洲语境下的价格显示",
+    "金融交易界面"
+  ],
   "name": "欧元",
   "tags": [
+    "欧元",
     "货币",
-    "钱",
-    "付款"
+    "金融",
+    "支付",
+    "钱"
   ],
   "categories": [
     "finance"
@@ -14,11 +21,18 @@
     "en": {
       "name": "euro",
       "tags": [
+        "euro",
         "currency",
-        "money",
-        "payment"
+        "finance",
+        "payment",
+        "money"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Currency selection in finance apps",
+        "Payment method indicators",
+        "Price displays in European contexts",
+        "Financial transaction interfaces"
+      ]
     }
   }
 }

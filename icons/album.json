@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "照片图库",
+    "图片收藏",
+    "媒体库"
+  ],
   "name": "相册",
   "tags": [
+    "相册",
     "照片",
-    "书"
+    "图片",
+    "收藏",
+    "图库",
+    "影集"
   ],
   "categories": [
     "photography",
@@ -14,10 +22,18 @@
     "en": {
       "name": "album",
       "tags": [
+        "album",
         "photo",
-        "book"
+        "picture",
+        "collection",
+        "gallery",
+        "photobook"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Photo gallery",
+        "Image collection",
+        "Media library"
+      ]
     }
   }
 }

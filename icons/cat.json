@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "宠物应用图标",
+    "动物分类",
+    "个人头像"
+  ],
   "name": "猫",
   "tags": [
-    "动物",
+    "猫",
     "宠物",
+    "动物",
     "小猫",
-    "猫科动物"
+    "猫咪"
   ],
   "categories": [
     "animals"
@@ -15,12 +20,17 @@
     "en": {
       "name": "cat",
       "tags": [
-        "animal",
+        "cat",
         "pet",
+        "animal",
         "kitten",
         "feline"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Pet app icon",
+        "Animal category",
+        "Profile picture"
+      ]
     }
   }
 }

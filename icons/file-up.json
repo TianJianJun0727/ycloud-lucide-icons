@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文件上传按钮",
+    "导入数据操作",
+    "提交文档图标"
+  ],
   "name": "文件上",
   "tags": [
     "上传",
     "导入",
-    "导出"
+    "文件上传",
+    "箭头向上",
+    "提交"
   ],
   "categories": [
     "files",
@@ -17,9 +23,15 @@
       "tags": [
         "upload",
         "import",
-        "export"
+        "file upload",
+        "arrow up",
+        "submit"
       ],
-      "use-cases": []
+      "use-cases": [
+        "File upload button",
+        "Import data action",
+        "Submit document icon"
+      ]
     }
   }
 }

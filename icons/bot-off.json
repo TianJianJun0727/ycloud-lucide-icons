@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "关闭聊天机器人",
+    "禁用AI助手",
+    "停止自动服务"
+  ],
   "name": "机器人关闭",
   "tags": [
-    "机器人",
-    "AI",
-    "聊天",
-    "助手"
+    "机器人禁用",
+    "AI关闭",
+    "停止自动化",
+    "禁用助手",
+    "离线状态"
   ],
   "categories": [
     "development",
@@ -16,12 +21,17 @@
     "en": {
       "name": "bot off",
       "tags": [
-        "robot",
-        "ai",
-        "chat",
-        "assistant"
+        "bot disabled",
+        "AI off",
+        "stop automation",
+        "disable assistant",
+        "offline status"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Turn off chatbot",
+        "Disable AI assistant",
+        "Stop automated service"
+      ]
     }
   }
 }

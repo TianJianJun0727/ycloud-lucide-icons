@@ -1,7 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "旅行",
-  "icon": "backpack",
   "i18n": {
     "en": {
       "title": "Travel"

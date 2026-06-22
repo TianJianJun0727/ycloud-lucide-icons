@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "代码问题标记",
+    "时间线里程碑指示",
+    "导航或地图标记替代"
+  ],
   "name": "旗帜三角形左",
   "tags": [
+    "标记",
     "报告",
     "时间线",
-    "标记",
-    "针"
+    "定位",
+    "开发标记"
   ],
   "categories": [
     "development",
@@ -16,12 +21,17 @@
     "en": {
       "name": "flag triangle left",
       "tags": [
+        "marker",
         "report",
         "timeline",
-        "marker",
-        "pin"
+        "pin",
+        "development flag"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Mark an issue in code",
+        "Timeline milestone indicator",
+        "Navigation or map pin alternative"
+      ]
     }
   }
 }

@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "在容器中垂直居中元素",
+    "在Flex布局中将内容垂直居中对齐"
+  ],
   "name": "对齐垂直对齐居中",
   "tags": [
-    "中心",
-    "项目",
-    "弯曲",
-    "证明合理",
-    "分发",
-    "之间"
+    "垂直居中",
+    "居中对齐",
+    "Flex布局",
+    "CSS布局",
+    "垂直对齐",
+    "UI设计"
   ],
   "categories": [
     "layout"
@@ -17,14 +20,17 @@
     "en": {
       "name": "align vertical justify center",
       "tags": [
-        "center",
-        "items",
-        "flex",
-        "justify",
-        "distribute",
-        "between"
+        "vertical center",
+        "center align",
+        "flexbox",
+        "CSS layout",
+        "vertical alignment",
+        "UI design"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Vertically centering elements in a container",
+        "Justifying content to the center in a flex layout"
+      ]
     }
   }
 }

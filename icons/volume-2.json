@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "中音量设置",
+    "媒体播放控制",
+    "声音级别指示"
+  ],
   "name": "音量2",
   "tags": [
-    "音乐",
+    "音量",
+    "中音量",
     "声音",
-    "扬声器"
+    "音频",
+    "扬声器",
+    "媒体"
   ],
   "categories": [
     "connectivity",
@@ -16,11 +23,18 @@
     "en": {
       "name": "volume 2",
       "tags": [
-        "music",
+        "volume",
+        "medium volume",
         "sound",
-        "speaker"
+        "audio",
+        "speaker",
+        "media"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Medium volume setting",
+        "Media playback control",
+        "Sound level indicator"
+      ]
     }
   }
 }

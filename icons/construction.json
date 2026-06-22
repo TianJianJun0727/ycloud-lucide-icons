@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "网站施工中",
+    "维护或停机通知",
+    "功能开发中",
+    "路障或警告"
+  ],
   "name": "施工",
   "tags": [
-    "道路施工",
+    "施工",
     "维护",
-    "封锁",
-    "路障"
+    "建设中",
+    "路障",
+    "开发",
+    "警告",
+    "维修"
   ],
   "categories": [
     "development"
@@ -15,12 +23,20 @@
     "en": {
       "name": "construction",
       "tags": [
-        "roadwork",
+        "construction",
         "maintenance",
-        "blockade",
-        "barricade"
+        "work in progress",
+        "barricade",
+        "development",
+        "warning",
+        "repair"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Site under construction",
+        "Maintenance or downtime notice",
+        "Feature in development",
+        "Roadblock or warning"
+      ]
     }
   }
 }

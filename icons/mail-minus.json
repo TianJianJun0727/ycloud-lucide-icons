@@ -1,13 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "邮件列表退订",
+    "从对话中移除邮件",
+    "删除消息操作"
+  ],
   "name": "邮件减少",
   "tags": [
-    "邮箱",
-    "消息",
-    "信",
-    "移除",
-    "删除"
+    "删除邮件",
+    "移除邮件",
+    "取消订阅",
+    "退订",
+    "邮件减少"
   ],
   "categories": [
     "mail"
@@ -16,13 +20,17 @@
     "en": {
       "name": "mail minus",
       "tags": [
-        "email",
-        "message",
-        "letter",
-        "remove",
-        "delete"
+        "mail minus",
+        "delete email",
+        "remove message",
+        "unsubscribe",
+        "reduce mail"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Unsubscribe from mailing list",
+        "Remove email from thread",
+        "Delete message action"
+      ]
     }
   }
 }

@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "系统错误通知",
+    "重要警告信息",
+    "关键警报对话框"
+  ],
   "name": "圆形告警",
   "tags": [
     "警告",
-    "告警",
+    "警报",
+    "错误",
     "危险",
-    "感叹号"
+    "注意",
+    "圆形感叹号"
   ],
   "categories": [
     "notifications"
@@ -25,10 +31,16 @@
       "tags": [
         "warning",
         "alert",
+        "error",
         "danger",
-        "exclamation mark"
+        "attention",
+        "circle exclamation"
       ],
-      "use-cases": []
+      "use-cases": [
+        "System error notification",
+        "Important warning message",
+        "Critical alert dialog"
+      ]
     }
   }
 }

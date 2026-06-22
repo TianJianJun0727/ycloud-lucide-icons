@@ -1,24 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示器设置面板",
+    "系统配置界面",
+    "设备偏好菜单"
+  ],
   "name": "显示器齿轮",
   "tags": [
-    "电视",
-    "屏幕",
-    "显示",
-    "虚拟机",
-    "虚拟机",
-    "可执行文件",
-    "设置",
-    "设置",
-    "编辑",
-    "齿轮",
-    "配置",
-    "偏好",
-    "系统",
+    "显示器设置",
+    "屏幕配置",
+    "系统偏好",
     "控制面板",
-    "网络",
-    "计算"
+    "设备设置",
+    "网络设置",
+    "虚拟机配置"
   ],
   "categories": [
     "connectivity",
@@ -28,24 +23,19 @@
     "en": {
       "name": "monitor cog",
       "tags": [
-        "tv",
-        "screen",
-        "display",
-        "virtual machine",
-        "vm",
-        "executable",
-        "settings",
-        "cog",
-        "edit",
-        "gear",
-        "configuration",
-        "preferences",
-        "system",
+        "monitor settings",
+        "screen configuration",
+        "system preferences",
         "control panel",
-        "network",
-        "computing"
+        "device settings",
+        "network settings",
+        "virtual machine configuration"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display settings panel",
+        "System configuration interface",
+        "Device preferences menu"
+      ]
     }
   }
 }

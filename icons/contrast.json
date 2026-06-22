@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "显示设置调节",
+    "无障碍高对比度模式",
+    "照片编辑工具",
+    "界面主题切换"
+  ],
   "name": "对比度",
   "tags": [
+    "对比度",
+    "亮度",
     "显示",
-    "可达性"
+    "无障碍",
+    "视觉",
+    "设计",
+    "调节"
   ],
   "categories": [
     "photography",
@@ -15,10 +25,20 @@
     "en": {
       "name": "contrast",
       "tags": [
+        "contrast",
+        "brightness",
         "display",
-        "accessibility"
+        "accessibility",
+        "visual",
+        "design",
+        "adjust"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Display settings adjustment",
+        "Accessibility high contrast mode",
+        "Photo editing tool",
+        "UI theme toggle"
+      ]
     }
   }
 }

@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "几何形状展示",
+    "漏斗或过滤器可视化",
+    "聚光灯或焦点指示器",
+    "交通锥警告"
+  ],
   "name": "圆锥",
   "tags": [
-    "圆锥形的",
-    "三角形",
-    "三角形的",
-    "几何学",
-    "筛选",
+    "圆锥",
+    "几何",
+    "形状",
     "漏斗",
-    "料斗",
     "聚光灯",
-    "探照灯"
+    "三角",
+    "数学"
   ],
   "categories": [
     "shapes",
@@ -21,17 +24,20 @@
     "en": {
       "name": "cone",
       "tags": [
-        "conical",
-        "triangle",
-        "triangular",
+        "cone",
         "geometry",
-        "filter",
+        "shape",
         "funnel",
-        "hopper",
         "spotlight",
-        "searchlight"
+        "triangle",
+        "mathematics"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Geometric shape display",
+        "Funnel or filter visualization",
+        "Spotlight or focus indicator",
+        "Traffic cone warning"
+      ]
     }
   }
 }

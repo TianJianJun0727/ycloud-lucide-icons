@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "文本格式设置",
+    "内容排版",
+    "样式调整"
+  ],
   "name": "剪贴板文字",
   "tags": [
-    "粘贴",
+    "文本",
     "格式",
-    "文本"
+    "排版",
+    "内容",
+    "样式"
   ],
   "categories": [
     "text"
@@ -14,11 +20,17 @@
     "en": {
       "name": "clipboard type",
       "tags": [
-        "paste",
+        "text",
         "format",
-        "text"
+        "typesetting",
+        "content",
+        "style"
       ],
-      "use-cases": []
+      "use-cases": [
+        "Text formatting",
+        "Content typesetting",
+        "Style adjustment"
+      ]
     }
   }
 }

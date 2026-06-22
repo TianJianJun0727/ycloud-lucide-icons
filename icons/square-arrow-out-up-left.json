@@ -1,12 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "外部链接导航",
+    "在新窗口打开",
+    "退出应用"
+  ],
   "name": "方形箭头外部上左",
   "tags": [
-    "向外",
+    "外部",
     "方向",
-    "西北",
-    "对角线"
+    "对角线",
+    "退出",
+    "链接"
   ],
   "categories": [
     "arrows"
@@ -25,10 +30,15 @@
       "tags": [
         "outwards",
         "direction",
-        "north-west",
-        "diagonal"
+        "diagonal",
+        "exit",
+        "link"
       ],
-      "use-cases": []
+      "use-cases": [
+        "External link navigation",
+        "Open in new window",
+        "Exit application"
+      ]
     }
   }
 }
