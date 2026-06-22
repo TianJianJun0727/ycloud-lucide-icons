@@ -28,8 +28,9 @@ import z from 'zod';
 import { createAiClient } from './aiClient.mts';
 import { validateCategoryMetadata } from './checkCategoryMetadata.mts';
 import { validateIconMetadata } from './checkIconMetadata.mts';
-import allowedNonChineseTerms from './data/allowedNonChineseTerms.json' with { type: 'json' };
 import {
+  addReviewedNonChineseTerms,
+  getReviewedNonChineseTerms,
   hasCjk,
   hasUnreviewedNonChineseTerm,
   hasInvalidChineseSideUseCases,
@@ -77,10 +78,6 @@ const uniquePairs = (leftItems: string[], rightItems: string[]) => {
 const normalizeAllowedNonChineseTerm = (term: string) => term.trim();
 const compareAllowedNonChineseTerms = (left: string, right: string) =>
   left.localeCompare(right, 'en', { numeric: true });
-const syncedAllowedNonChineseTerms = new Set<string>(
-  allowedNonChineseTerms.map(normalizeAllowedNonChineseTerm).filter((term) => term.length > 0),
-);
-const allowedNonChineseTermSet = new Set<string>(syncedAllowedNonChineseTerms);
 const hasDisallowedNonChineseTag = (value: unknown) =>
   isStringArray(value) && value.some((tag) => hasUnreviewedNonChineseTerm(tag));
 const categoriesDir = path.resolve('categories');
@@ -286,20 +283,13 @@ async function syncAllowedNonChineseTerms(terms: string[]) {
   const normalizedTerms = terms
     .map(normalizeAllowedNonChineseTerm)
     .filter((term) => term.length > 0 && !hasCjk(term));
-  const nextTerms = [...new Set(normalizedTerms)].filter(
-    (term) => !syncedAllowedNonChineseTerms.has(term),
-  );
+  const nextTerms = addReviewedNonChineseTerms([...new Set(normalizedTerms)]);
 
   if (nextTerms.length === 0) {
     return;
   }
 
-  for (const term of nextTerms) {
-    syncedAllowedNonChineseTerms.add(term);
-    allowedNonChineseTermSet.add(term);
-  }
-
-  const mergedTerms = [...syncedAllowedNonChineseTerms].sort(compareAllowedNonChineseTerms);
+  const mergedTerms = getReviewedNonChineseTerms().sort(compareAllowedNonChineseTerms);
   const content = `${JSON.stringify(mergedTerms, null, 2)}\n`;
 
   await fs.writeFile(allowedNonChineseTermsFile, content, 'utf-8');
@@ -626,11 +616,7 @@ ${JSON.stringify(currentItems, null, 2)}`,
   );
 
   const fixedByFile = new Map(fixedBatch.items.map((item) => [item.file, item.fixed]));
-  await syncAllowedNonChineseTerms(
-    fixedBatch.items.flatMap((item) => item.fixed.allowedNonChineseTerms),
-  );
-
-  return tasks.map((task) => {
+  const fixedItems = tasks.map((task) => {
     const fixed = fixedByFile.get(task.key);
 
     if (!fixed) {
@@ -642,6 +628,12 @@ ${JSON.stringify(currentItems, null, 2)}`,
       metadata: applyIconFix(task.metadata, fixed, task.flags),
     };
   });
+
+  await syncAllowedNonChineseTerms(
+    fixedBatch.items.flatMap((item) => item.fixed.allowedNonChineseTerms),
+  );
+
+  return fixedItems;
 }
 
 async function completeCategoryMetadataBatch(tasks: MetadataTask<CategoryFixFlags>[]) {
@@ -667,11 +659,7 @@ ${JSON.stringify(currentItems, null, 2)}`,
   );
 
   const fixedByFile = new Map(fixedBatch.items.map((item) => [item.file, item.fixed]));
-  await syncAllowedNonChineseTerms(
-    fixedBatch.items.flatMap((item) => item.fixed.allowedNonChineseTerms),
-  );
-
-  return tasks.map((task) => {
+  const fixedItems = tasks.map((task) => {
     const fixed = fixedByFile.get(task.key);
 
     if (!fixed) {
@@ -683,6 +671,12 @@ ${JSON.stringify(currentItems, null, 2)}`,
       metadata: applyCategoryFix(task.metadata, fixed, task.flags),
     };
   });
+
+  await syncAllowedNonChineseTerms(
+    fixedBatch.items.flatMap((item) => item.fixed.allowedNonChineseTerms),
+  );
+
+  return fixedItems;
 }
 
 async function processIconBatch(tasks: MetadataTask<IconFixFlags>[]) {

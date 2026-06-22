@@ -1,5 +1,6 @@
 import getArgumentOptions from 'minimist';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { promises as fs } from 'fs';
 
 import { getAllIconAliases } from '@ycloud-web/helpers';
@@ -18,7 +19,8 @@ const {
   output = defaultOutputDir,
 } = getArgumentOptions(process.argv.slice(2)) ?? {};
 
-const repoRoot = path.join(process.cwd(), '../../');
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(currentDir, '../../..');
 const iconsDir = path.join(repoRoot, 'icons');
 const targetDir = path.resolve(repoRoot, String(output));
 

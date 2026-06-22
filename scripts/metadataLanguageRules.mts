@@ -1,6 +1,10 @@
 import allowedNonChineseTerms from './data/allowedNonChineseTerms.json' with { type: 'json' };
 
-const allowedNonChineseTermSet = new Set<string>(allowedNonChineseTerms);
+const normalizeAllowedNonChineseTerm = (term: string) => term.trim();
+
+const allowedNonChineseTermSet = new Set<string>(
+  allowedNonChineseTerms.map(normalizeAllowedNonChineseTerm).filter((term) => term.length > 0),
+);
 
 export const hasCjk = (value: string) => /[\u3400-\u9fff]/.test(value);
 
@@ -15,7 +19,30 @@ export const isMeaningfulArray = (value: unknown): value is string[] =>
   isStringArray(value) && value.length > 0;
 
 export const isReviewedNonChineseTerm = (value: string) =>
-  allowedNonChineseTermSet.has(value.trim());
+  allowedNonChineseTermSet.has(normalizeAllowedNonChineseTerm(value));
+
+export const addReviewedNonChineseTerms = (terms: string[]) => {
+  const addedTerms: string[] = [];
+
+  for (const term of terms) {
+    const normalizedTerm = normalizeAllowedNonChineseTerm(term);
+
+    if (
+      normalizedTerm.length === 0 ||
+      hasCjk(normalizedTerm) ||
+      allowedNonChineseTermSet.has(normalizedTerm)
+    ) {
+      continue;
+    }
+
+    allowedNonChineseTermSet.add(normalizedTerm);
+    addedTerms.push(normalizedTerm);
+  }
+
+  return addedTerms;
+};
+
+export const getReviewedNonChineseTerms = () => [...allowedNonChineseTermSet];
 
 export const isValidChineseSideText = (value: string) =>
   hasCjk(value) || isReviewedNonChineseTerm(value);
