@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "use-cases": [],
+  "name": "rectangle",
+  "tags": [
+    "test"
+  ],
+  "categories": [
+    "security"
+  ],
+  "i18n": {
+    "en": {
+      "name": "rectangle",
+      "tags": [
+        "test"
+      ],
+      "use-cases": []
+    }
+  }
+}
