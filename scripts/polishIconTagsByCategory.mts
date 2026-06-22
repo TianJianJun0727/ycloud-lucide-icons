@@ -477,7 +477,7 @@ async function polishBatch(items: IconWorkItem[], includeUseCases: boolean) {
 
   if (!ai) {
     throw new Error(
-      'No AI provider is configured. Set OPENROUTER_API_KEY or GITHUB_TOKEN before running tag polishing.',
+      'No AI provider is configured. Set AI_API_KEY, AI_BASE_URL, and AI_MODEL before running tag polishing.',
     );
   }
 

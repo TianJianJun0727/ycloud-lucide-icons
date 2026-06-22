@@ -98,7 +98,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-          ref: main
+          ref: ${{ inputs.ref || github.ref }}
 
       - uses: ./.github/actions/setup-pnpm
         with:
@@ -163,7 +163,9 @@ jobs:
       - name: Generate bilingual release notes
         run: node ./scripts/writeChangelog.mts
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
           YCLOUD_AI_CHANGELOG: '1'
           YCLOUD_AI_CHANGELOG_VERSION: ${{ needs.prepare.outputs.version }}
           YCLOUD_CHANGELOG_RELEASE_NOTES_PATH: .release-notes.md

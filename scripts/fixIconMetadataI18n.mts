@@ -18,6 +18,28 @@ const isMeaningfulArray = (value: unknown): value is string[] =>
   Array.isArray(value) && value.every((item) => typeof item === 'string') && value.length > 0;
 const uniqueList = (items: string[]) =>
   items.filter((item, index, list) => list.indexOf(item) === index);
+const uniquePairs = (leftItems: string[], rightItems: string[]) => {
+  const seen = new Set<string>();
+  const left: string[] = [];
+  const right: string[] = [];
+  const count = Math.min(leftItems.length, rightItems.length);
+
+  for (let index = 0; index < count; index += 1) {
+    const leftItem = leftItems[index];
+    const rightItem = rightItems[index];
+    const key = `${leftItem}\n${rightItem}`;
+
+    if (!leftItem || !rightItem || seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    left.push(leftItem);
+    right.push(rightItem);
+  }
+
+  return { left, right };
+};
 const categoriesDir = path.resolve('categories');
 
 type CategoryContext = {
@@ -132,7 +154,7 @@ function assertAiClient(file: string) {
 
   if (!ai) {
     throw new Error(
-      `${file} needs bilingual metadata fixes, but no AI provider is configured. Set OPENROUTER_API_KEY or run in GitHub Actions with models:read permissions.`,
+      `${file} needs bilingual metadata fixes, but no AI provider is configured. Set AI_API_KEY, AI_BASE_URL, and AI_MODEL.`,
     );
   }
 
@@ -244,12 +266,9 @@ ${JSON.stringify(current, null, 2)}`,
   }
 
   if (shouldFixUseCases) {
-    const currentUseCases = isStringArray(metadata['use-cases']) ? metadata['use-cases'] : [];
-    const currentEnglishUseCases = isStringArray(metadata.i18n?.en?.['use-cases'])
-      ? metadata.i18n.en['use-cases']
-      : [];
-    next['use-cases'] = uniqueList(fixed.useCasesZh);
-    next.i18n.en['use-cases'] = uniqueList(fixed.useCasesEn);
+    const useCasePairs = uniquePairs(fixed.useCasesZh, fixed.useCasesEn);
+    next['use-cases'] = useCasePairs.left;
+    next.i18n.en['use-cases'] = useCasePairs.right;
   }
 
   return next;

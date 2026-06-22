@@ -2,20 +2,106 @@
 applyTo: 'icons/*.json'
 ---
 
-# JSON Metadata Descriptor
+# YCloud Icons Metadata
 
-The schema for the JSON metadata descriptor can be found in `icon.schema.json`. It defines the required and optional properties for the JSON files that accompany each icon. The JSON metadata descriptor should be placed in the same directory as the SVG file of the icon and should have the same name as the SVG file, but with a `.json` extension. For example, if the SVG file is named `home.svg`, the JSON metadata descriptor should be named `home.json`.
+Icon metadata lives next to the SVG source in `icons/*.json` and is validated by
+`icon.schema.json`. Each icon JSON must have the same basename as its SVG file,
+for example `home.svg` and `home.json`.
 
-## Contributors
+YCloud Icons uses Simplified Chinese as the default metadata language. English
+metadata lives under `i18n.en`.
 
-The `contributors` property is a required array of GitHub usernames for the people who created or contributed to the icon. It is used to give credit to contributors and to track the icon's history. Add the PR author to the `contributors` array if they are not already listed and they have made a significant contribution to the icon's SVG.
+## Required Shape
+
+Each icon metadata file must include:
+
+- `$schema`: usually `../icon.schema.json`.
+- `name`: Simplified Chinese display name.
+- `tags`: Simplified Chinese search tags.
+- `categories`: category slugs from `categories/*.json`.
+- `use-cases`: Simplified Chinese product or UI use cases.
+- `i18n.en.name`: English display name.
+- `i18n.en.tags`: English search tags.
+- `i18n.en.use-cases`: English product or UI use cases.
+
+Do not add `contributors`. This project no longer keeps per-icon contributor
+metadata.
+
+Do not add `i18n.en.categories`. Category translations live in
+`categories/*.json`.
+
+## Names
+
+`name` must be natural Simplified Chinese. `i18n.en.name` must be natural
+English and should not be a kebab-case or snake_case slug.
+
+The filename is still the canonical icon identifier used by packages and docs.
+Use it as source context, but do not blindly copy it into display names or tags.
 
 ## Tags
 
-The `tags` property is an array of strings that describe the icon and can be used for searching.
-Validate the tags against the `icon.schema.json` to ensure they are correctly formatted and adhere to the defined structure.
-Provide tag suggestions based on the name of the icon and the use cases provided in the PR description. Use the existing tags in the repository as a reference for consistency and to avoid duplicates. Don't suggest words like: 'icon' and preferably use single words. Tags should always be in lowercase and should not contain spaces. The name of icon should not be included in the tags, as it is already specified.
+Top-level `tags` are Simplified Chinese search terms. `i18n.en.tags` are English
+search terms.
 
-# Categories
+Rules:
 
-The `categories` property is an array of strings that specify the categories to which the icon belongs, such as "devices", "interface", "media", etc. See the `categories` property in the `icon.schema.json` for more details on the allowed values. The categories should be chosen based on the use cases provided in the PR description and the existing categories in the repository. The categories should be relevant to the icon and should help users find the icon when searching for specific types of icons. The name of icon should not be included in the categories, as it is already specified. Suggest categories based on the name of the icon and the use cases provided in the PR description. Use the existing categories in the repository as a reference for consistency and to avoid duplicates. Categories should always be in lowercase and should not contain spaces.
+- Chinese tags and English tags do not need to have the same length or order.
+- Deduplicate each tag array.
+- Prefer short, practical search terms used by designers and frontend
+  developers.
+- Keep common technical terms as-is when Chinese users search that way, such as
+  API, CSS, JSON, SVG, GitHub, Wi-Fi, 3D.
+- Do not include the word `icon`.
+- Do not preserve weak dictionary meanings when they do not match the icon's
+  category or use case.
+- Treat English metadata as the source of truth when translating Chinese tags:
+  filename, `i18n.en.name`, `i18n.en.tags`, and `i18n.en.use-cases`.
+
+## Use Cases
+
+`use-cases` and `i18n.en.use-cases` describe concrete product or UI scenarios.
+They are optional in meaning but required by schema as arrays; empty arrays are
+allowed only for transitional data and should generally be filled when touching a
+file.
+
+Rules:
+
+- Keep Simplified Chinese and English use cases paired by index.
+- Keep both arrays the same length and order when non-empty.
+- Use concise phrases without trailing punctuation.
+- Prefer concrete UI/product scenarios over generic words.
+- If both languages are missing, generate English use cases first from the icon
+  name, English tags, and category context, then translate them to Simplified
+  Chinese.
+
+## Categories
+
+`categories` contains category slugs only. Valid slugs are the JSON filenames in
+`categories/*.json` and the enum values in `icon.schema.json`.
+
+When selecting an existing category, keep the slug exactly as-is. When creating a
+new category, add a matching `categories/<slug>.json` file with:
+
+- `title`: Simplified Chinese category title.
+- `i18n.en.title`: English category title.
+- optional `description` / `i18n.en.description`.
+- optional `weight`.
+
+Do not invent category translations inside icon JSON files.
+
+## Automation
+
+GitHub PR automation may normalize metadata:
+
+- `fix-icon-source.yml` runs on same-repository PRs that change icons or
+  categories. It optimizes SVG, completes bilingual metadata, formats JSON, and
+  validates the result.
+- `pull-request-metadata-suggestions.yml` comments AI suggestions on icon JSON
+  changes. For Figma/Portal-created PRs, it does not suggest categories because
+  the designer already selected them.
+- `checkChangedIconMetadata.mts` enforces Chinese defaults, English `i18n.en`
+  fields, deduplicated tags/categories, and no `i18n.en.categories`.
+
+For local bulk polishing, use `pnpm polish:tags -- --use-cases --write` with an
+OpenAI-compatible AI provider configured through `AI_API_KEY`, `AI_BASE_URL`,
+and `AI_MODEL`.

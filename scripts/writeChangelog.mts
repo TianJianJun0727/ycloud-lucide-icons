@@ -2,6 +2,9 @@ import { execSync } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import z from 'zod';
+import { createAiClient } from './aiClient.mts';
+import { formatShanghaiDateTime } from './dateTime.mts';
 
 type ReleaseEntry = {
   version: string;
@@ -38,11 +41,13 @@ const releaseNotesOutputPath = process.env.YCLOUD_CHANGELOG_RELEASE_NOTES_PATH
   ? path.resolve(projectRoot, process.env.YCLOUD_CHANGELOG_RELEASE_NOTES_PATH)
   : undefined;
 const aiChangelogEnabled = process.env.YCLOUD_AI_CHANGELOG === '1';
-const githubToken = process.env.GITHUB_TOKEN;
-const githubModelsEndpoint =
-  process.env.YCLOUD_AI_CHANGELOG_ENDPOINT || 'https://models.github.ai/inference/chat/completions';
-const githubModelsModel = process.env.YCLOUD_AI_CHANGELOG_MODEL || 'openai/gpt-4o';
 const aiChangelogVersion = process.env.YCLOUD_AI_CHANGELOG_VERSION;
+
+const aiReleaseNotesSchema = z.object({
+  tag: z.string(),
+  zh: z.array(z.string()),
+  en: z.array(z.string()),
+});
 
 function run(command: string) {
   return execSync(command, {
@@ -63,26 +68,6 @@ function getTagDate(tag: string) {
 
 function getTagDateTime(tag: string) {
   return run(`git log -1 --format=%cI ${tag}`);
-}
-
-function formatShanghaiDateTime(isoDateTime: string) {
-  const parts = new Intl.DateTimeFormat('zh-CN', {
-    timeZone: 'Asia/Shanghai',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false,
-  })
-    .formatToParts(new Date(isoDateTime))
-    .reduce<Record<string, string>>((result, part) => {
-      result[part.type] = part.value;
-      return result;
-    }, {});
-
-  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} (UTC+08:00)`;
 }
 
 function getCommits(currentTag: string, previousTag?: string) {
@@ -203,22 +188,6 @@ async function writePersistedNotes(entry: ReleaseEntry) {
   );
 }
 
-function parseJsonObject(content: string) {
-  const normalized = content
-    .trim()
-    .replace(/^```(?:json)?\s*/i, '')
-    .replace(/```$/i, '')
-    .trim();
-  const start = normalized.indexOf('{');
-  const end = normalized.lastIndexOf('}');
-
-  if (start === -1 || end === -1 || end <= start) {
-    throw new Error('GitHub Models response did not contain a JSON object.');
-  }
-
-  return JSON.parse(normalized.slice(start, end + 1));
-}
-
 function buildAiPrompt(entry: ReleaseEntry) {
   const payload = {
     version: entry.tag,
@@ -246,44 +215,24 @@ ${JSON.stringify(payload, null, 2)}`;
 
 async function generateAiNotes(entry: ReleaseEntry): Promise<GeneratedAiNotes> {
   try {
-    const response = await fetch(githubModelsEndpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${githubToken}`,
-      },
-      body: JSON.stringify({
-        model: githubModelsModel,
-        temperature: 0.2,
-        messages: [
-          {
-            role: 'system',
-            content:
-              'You generate concise, accurate bilingual release notes from repository changes.',
-          },
-          {
-            role: 'user',
-            content: buildAiPrompt(entry),
-          },
-        ],
-      }),
+    const ai = createAiClient({
+      provider: process.env.AI_PROVIDER ?? 'Release notes AI',
+      systemPrompt:
+        'You generate concise, accurate bilingual release notes from repository changes.',
     });
 
-    if (!response.ok) {
-      throw new Error(`GitHub Models request failed with ${response.status}`);
+    if (!ai) {
+      throw new Error('AI changelog generation requires AI_API_KEY, AI_BASE_URL, and AI_MODEL.');
     }
 
-    const data = await response.json();
-    const content = data?.choices?.[0]?.message?.content;
-
-    if (typeof content !== 'string') {
-      throw new Error('GitHub Models response did not contain message content.');
-    }
-
-    const parsed = parseJsonObject(content) as AiReleaseNotes;
+    const parsed = await ai.completeJson(
+      buildAiPrompt(entry),
+      'release_notes',
+      aiReleaseNotesSchema,
+    );
 
     if (parsed.tag !== entry.tag) {
-      throw new Error(`GitHub Models response tag mismatch for ${entry.tag}.`);
+      throw new Error(`AI response tag mismatch for ${entry.tag}.`);
     }
 
     const notes = {
@@ -292,7 +241,7 @@ async function generateAiNotes(entry: ReleaseEntry): Promise<GeneratedAiNotes> {
     };
 
     if (!notes.zh.length || !notes.en.length) {
-      throw new Error(`GitHub Models response did not include bilingual notes for ${entry.tag}.`);
+      throw new Error(`AI response did not include bilingual notes for ${entry.tag}.`);
     }
 
     return { notes, generated: true };
@@ -314,7 +263,7 @@ async function applyAiGeneratedNotes(entries: ReleaseEntry[]) {
     }),
   );
 
-  if (!aiChangelogEnabled || !githubToken) {
+  if (!aiChangelogEnabled) {
     return entriesWithPersistedNotes;
   }
 

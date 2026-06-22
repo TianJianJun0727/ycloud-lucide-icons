@@ -12,7 +12,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-      models: read
 
     steps:
       #  We checkout the main branch of main repository for security reasons.
@@ -27,9 +26,9 @@ jobs:
       - name: Generate comment markup
         run: node ./scripts/suggestMetaData.mts
         env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          BASE_URL: https://openrouter.ai/api/v1
-          AI_MODEL: deepseek/deepseek-chat-v3.1
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
           PULL_REQUEST_NUMBER: ${{ github.event.number }}
           COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

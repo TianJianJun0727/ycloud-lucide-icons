@@ -18,7 +18,8 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
 const commitSha = process.env.COMMIT_SHA ?? 'HEAD';
-const useFileSystem = process.env.USE_FILE_SYSYEM === 'true' || false;
+const useFileSystem =
+  process.env.USE_FILE_SYSTEM === 'true' || process.env.USE_FILE_SYSYEM === 'true';
 
 const [owner, repo] = (process.env.GITHUB_REPOSITORY ?? 'TianJianJun0727/ycloud-icons').split('/');
 
@@ -32,6 +33,14 @@ if (!ai) {
 const ALL_METADATA_FIELDS = ['tags', 'categories', 'use-cases', 'i18n.en.use-cases'] as const;
 const PORTAL_METADATA_FIELDS = ['tags', 'use-cases', 'i18n.en.use-cases'] as const;
 type MetadataField = (typeof ALL_METADATA_FIELDS)[number];
+type ReviewComment = {
+  path: string;
+  line: number;
+  side: 'RIGHT';
+  body: string;
+  start_line?: number;
+  start_side?: 'RIGHT';
+};
 
 // Load the allowed categories (name + human-readable title) straight from the
 // `categories/` directory so we can both validate suggestions and give the
@@ -131,10 +140,11 @@ const isPortalPullRequest =
   (pullRequest.body || '').includes('ycloud-icons-source:portal') ||
   (pullRequest.body || '').includes('YCloud 图标同步助手');
 const metadataFields = isPortalPullRequest ? PORTAL_METADATA_FIELDS : ALL_METADATA_FIELDS;
+const shouldSuggestCategories = !isPortalPullRequest;
 
 const metadataSchema = z.object({
   tags: z.array(z.string()),
-  ...(metadataFields.includes('categories')
+  ...(shouldSuggestCategories
     ? {
         categories: z.array(z.enum(categoryNames as [string, ...string[]])),
       }
@@ -337,8 +347,7 @@ Guidelines:
 - tags: Generate Chinese tags by translating from English source metadata, using selected category context and use-cases to resolve ambiguity. Do not translate English tags word by word.
 - tags: If an English tag has multiple meanings, choose the Chinese term that fits the category and use-cases. Prefer natural Chinese UI/product search terms, such as "排列", "下载", "筛选", "急救", "波形". Avoid awkward dictionary words, machine translation, and rare transliterations.
 - tags: Chinese tags do not need to match English tags one-to-one. Translate English tags into natural Chinese concepts, then merge duplicates and remove weak secondary meanings.
-- tags: Prefer the icon's primary library meaning over secondary literal meanings. For example, if "bug" is in development context, suggest "错误", "缺陷", "调试", "排查"; do not suggest animal terms just because "bug" can mean insect.
-- tags: If categories contain development, software, debugging, or code context, prioritize the software meaning of "bug"; do not suggest "昆虫" or "甲虫" unless the animal meaning is the primary icon usage.
+- tags: Prefer the icon's primary library meaning over weak secondary literal meanings. Use the filename, English name, current tags, categories, and use-cases together as context.
 - tags: Keep common technical proper nouns as-is when Chinese users search for them that way, such as API, CSS, JSON, SVG, GitHub. Never include the word "icon" or the icon's own name ("${iconName}").
 - categories: ${isPortalPullRequest ? 'do not suggest categories. This PR comes from the Figma submission flow, where categories are explicitly selected by the designer.' : 'only use values from the allowed categories listed below. Lowercase. Keep them relevant to the icon.'}
 - use-cases: Simplified Chinese phrases describing concrete product/UI situations for this icon's primary library meaning (e.g. "表示摄像头已禁用"). No trailing punctuation.
@@ -405,7 +414,7 @@ ${suggestion}
 \`\`\`
 Want more ideas? [Ask ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(chatGptQuery)})`;
 
-    const comment: Record<string, unknown> = {
+    const comment: ReviewComment = {
       path: filename,
       line: block.endLine,
       side: 'RIGHT',

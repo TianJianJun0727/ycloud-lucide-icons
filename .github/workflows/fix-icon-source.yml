@@ -14,7 +14,6 @@ concurrency:
 permissions:
   contents: write
   pull-requests: read
-  models: read
 
 jobs:
   fix-icon-source:
@@ -60,10 +59,9 @@ jobs:
       - name: Complete changed metadata i18n
         if: steps.changed-files.outputs.any_changed == 'true'
         env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          BASE_URL: https://openrouter.ai/api/v1
-          AI_MODEL: deepseek/deepseek-chat-v3.1
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
         run: |
           json_files=()
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
