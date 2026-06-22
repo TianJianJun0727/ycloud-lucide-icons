@@ -1,6 +1,11 @@
 /**
  * 单个图标重命名命令入口。
- * 从命令行读取旧名称和新名称，并调用通用重命名逻辑完成源文件更新。
+ *
+ * 输入：命令行参数 `<old-icon-file-or-name> <new-icon-file-or-name>`。
+ * 行为：
+ * - 从参数中提取不带扩展名的旧名称和新名称。
+ * - 定位 `icons` 目录。
+ * - 调用 `renameIcon.function.mts` 完成 SVG、JSON、alias 和引用更新。
  */
 import path from 'path';
 import { getCurrentDirPath } from '../../tools/build-helpers/helpers.ts';

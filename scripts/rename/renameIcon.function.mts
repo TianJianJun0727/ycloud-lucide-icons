@@ -1,6 +1,14 @@
 /**
  * 图标重命名核心逻辑。
- * 同步重命名 SVG、元数据、别名和相关源码引用，供单个图标和批量模式复用。
+ *
+ * 输入：旧图标名、新图标名和图标目录。
+ * 行为：
+ * - 重命名对应的 SVG 和 JSON 元数据文件。
+ * - 将旧名称写入 alias，避免历史名称完全丢失。
+ * - 更新相关源码和索引引用。
+ * - 通过 git 操作保留文件重命名语义。
+ *
+ * 供 `renameIcon.mts` 和 `renamePattern.mts` 复用。
  */
 import path from 'path';
 import fs from 'fs';

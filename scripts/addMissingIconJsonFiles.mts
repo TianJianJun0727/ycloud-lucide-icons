@@ -1,6 +1,13 @@
 /**
  * 为缺少元数据的 SVG 源文件补齐对应的 icon JSON 文件。
- * 主要用于导入新图标后批量生成基础名称、标签和分类元数据。
+ *
+ * 输入：固定扫描 `icons/*.svg` 和已有 `icons/*.json`。
+ * 行为：
+ * - 找出有 SVG 但没有 JSON 的图标。
+ * - 为每个缺失项写入基础 JSON 骨架。
+ * - 默认 `name` 使用图标文件名，`categories` 暂放到 `text`，方便后续人工或 AI 修正。
+ *
+ * 适用场景：批量导入 SVG 后，先保证每个图标都有可被 schema 和构建流程识别的元数据文件。
  */
 import path from 'path';
 import {

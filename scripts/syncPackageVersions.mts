@@ -1,6 +1,13 @@
 /**
  * 同步 monorepo 内所有包的版本号。
- * 发布流程使用它把 package.json 版本统一到目标 release 版本。
+ *
+ * 输入：命令行第一个参数为目标版本号，例如 `0.1.12`。
+ * 行为：
+ * - 校验版本号格式。
+ * - 更新根 `package.json` 版本。
+ * - 遍历 packages 目录下各子包的 package.json，把所有包版本同步到同一个版本。
+ *
+ * 适用场景：Release Packages 工作流发布成功后，把仓库内版本号回写到 main。
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

@@ -1,6 +1,14 @@
 /**
  * 处理单个 SVG 源字符串。
- * 通过 SVGO 清理结构、统一根属性，并保留 Prettier 作为 SVG 专用格式化器。
+ *
+ * 输入：一个 SVG 字符串。
+ * 处理流程：
+ * - 使用 SVGO 移除无效结构、冗余属性和不需要的设计工具输出。
+ * - 解析 SVG AST，统一根 `<svg>` 属性为项目默认值。
+ * - 保留图形路径本身，不在这里做语义层面的图标重绘。
+ * - 最后使用 Prettier `html` parser 格式化 SVG 文本。
+ *
+ * 注意：这是当前仓库保留 Prettier 的主要原因；非 SVG 代码格式化由 Oxfmt/Oxlint 负责。
  */
 import { optimize } from 'svgo';
 import * as prettier from 'prettier';

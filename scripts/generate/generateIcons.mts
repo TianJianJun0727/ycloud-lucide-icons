@@ -1,6 +1,11 @@
 /**
  * 为指定图标名称生成初始 SVG 占位文件。
- * 用于快速创建图标源文件骨架，后续再补充真实 SVG 内容和元数据。
+ *
+ * 输入：命令行传入一个或多个图标名称。
+ * 输出：在 `icons` 目录下创建对应 `.svg` 文件。
+ * 规则：
+ * - 只在文件不存在时写入，避免覆盖已有源图标。
+ * - 生成的是占位骨架，真实图形、元数据和分类仍需要后续补充。
  */
 import path from 'path';
 import { getCurrentDirPath, writeFileIfNotExists } from '../../tools/build-helpers/helpers.ts';

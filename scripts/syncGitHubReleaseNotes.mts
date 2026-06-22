@@ -1,6 +1,13 @@
 /**
  * 同步本地持久化变更日志到 GitHub Release。
- * 根据 changelogs/releases 中的双语内容更新对应 tag 的 Release 说明。
+ *
+ * 输入：读取 `changelogs/releases/v*.json` 中持久化的双语 release notes。
+ * 行为：
+ * - 根据 tag 找到或创建对应 GitHub Release。
+ * - 将中文和英文变更说明写入 Release body。
+ * - 可把最新版本标记为 latest。
+ *
+ * 适用场景：修复历史 Release 内容，或把本地 changelog 数据重新同步到 GitHub。
  */
 import { execFileSync } from 'node:child_process';
 import { mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';

@@ -1,6 +1,18 @@
 /**
- * 校验本次变更的图标与分类元数据。
- * 聚焦 PR 增量文件，检查中英文必填字段、重复值和分类引用是否有效。
+ * 校验本次变更的图标与分类元数据，通常由 PR 自动修复流程调用。
+ *
+ * 输入：命令行传入的 `icons/*.json` 或 `categories/*.json` 文件列表。
+ * 图标规则：
+ * - 顶层 `name` 必须是简体中文；`i18n.en.name` 必须是自然英文，不能是 slug。
+ * - 顶层 `tags` 必须是非空中文搜索词数组；`i18n.en.tags` 必须是非空英文搜索词数组。
+ * - `tags`、`i18n.en.tags`、`categories` 都不能包含重复值。
+ * - `use-cases` 和 `i18n.en.use-cases` 必须都是数组；双空允许，但只要一侧有值，另一侧也必须有值。
+ * - 非空的 `use-cases` 必须是中文，非空的 `i18n.en.use-cases` 必须是英文，并且两侧长度和顺序一致。
+ * - `categories` 只能引用 `categories/*.json` 中存在的分类 slug。
+ * - 禁止继续使用 `i18n.en.categories`，分类翻译统一放在 `categories/*.json`。
+ * 分类规则：
+ * - 顶层 `title` 必须是简体中文。
+ * - `i18n.en.title` 必须是自然英文，不能包含中文，也不能是 kebab-case/snake_case slug。
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';

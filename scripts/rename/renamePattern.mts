@@ -1,6 +1,13 @@
 /**
  * 按正则批量重命名图标。
- * 根据匹配模式筛选图标名称，并按替换规则调用通用重命名逻辑。
+ *
+ * 输入：CLI 参数提供匹配正则和替换规则。
+ * 行为：
+ * - 扫描 `icons/*.svg` 获取图标名称。
+ * - 用正则筛选要重命名的图标。
+ * - 对每个匹配项计算新名称，并调用通用重命名逻辑。
+ *
+ * 适用场景：批量修正命名模式，例如前缀、后缀或拼写规则迁移。
  */
 import path from 'path';
 import { getCurrentDirPath, readSvgDirectory } from '../../tools/build-helpers/helpers.ts';

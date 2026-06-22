@@ -1,6 +1,13 @@
 /**
  * 为图标 PR 生成变更预览评论内容。
- * 读取变更 SVG，生成可嵌入 GitHub 评论的图标预览与元数据信息。
+ *
+ * 输入：PR 中变更的 SVG 文件列表。
+ * 主要功能：
+ * - 读取 SVG 源内容并生成可嵌入 GitHub 评论的预览 markup。
+ * - 展示图标名称、SVG 预览和基础元数据信息。
+ * - 用于 `pull_request_icon_preview` / comment 类 workflow，帮助评审人快速看新增或修改图标。
+ *
+ * 注意：该脚本只生成评论内容，不修改图标源文件或元数据。
  */
 import fs from 'fs';
 import path from 'path';

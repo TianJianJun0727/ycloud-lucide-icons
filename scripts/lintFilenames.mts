@@ -1,6 +1,14 @@
 /**
  * 将外部 lint 输出转换为 GitHub annotation。
- * 主要用于 CI 中把文件名、行列号和错误信息转换成可点击的检查结果。
+ *
+ * 输入：
+ * - `CHANGED_FILES` 环境变量指定需要关注的文件。
+ * - 子进程 lint 输出中的 `file:line:column - message` 文本。
+ * 主要功能：
+ * - 只保留本次变更文件相关的问题。
+ * - 转换为 GitHub Actions 可识别的 annotation 格式。
+ *
+ * 适用场景：CI 中把传统命令行 lint 结果变成可点击的 PR 检查注释。
  */
 import path from 'path';
 import fs from 'fs';

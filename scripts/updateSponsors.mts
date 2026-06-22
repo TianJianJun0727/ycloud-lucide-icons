@@ -1,6 +1,12 @@
 /**
  * 同步 README 中的赞助商占位内容到各 package README。
- * 当前仅保留历史兼容用途，避免包文档与根文档的赞助区块不一致。
+ *
+ * 输入：根 `README.md` 中的 Sponsors 占位区块和 packages 目录下各子包的 README。
+ * 行为：
+ * - 查找各包 README 中同名占位区块。
+ * - 用根 README 的内容覆盖，保持多包文档一致。
+ *
+ * 注意：当前项目已弱化赞助相关内容，该脚本主要保留历史兼容用途。
  */
 import { readdirSync } from 'node:fs';
 import { join } from 'node:path';

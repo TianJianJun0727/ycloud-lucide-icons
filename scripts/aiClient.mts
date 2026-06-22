@@ -1,6 +1,16 @@
 /**
  * 创建统一的 AI JSON 调用客户端。
- * 通过 AI_API_KEY、AI_BASE_URL、AI_MODEL 等环境变量接入 OpenAI 兼容服务。
+ *
+ * 配置来源：
+ * - `AI_API_KEY`：OpenAI 兼容服务 token。
+ * - `AI_BASE_URL`：OpenAI 兼容接口地址，例如 OpenRouter 或 GitHub Models 地址。
+ * - `AI_MODEL`：实际调用的模型名称。
+ * - `AI_PROVIDER`：可选，仅用于日志展示 provider 名称。
+ *
+ * 功能：
+ * - 使用 `@ai-sdk/openai` 连接任意 OpenAI 兼容服务。
+ * - 通过 `generateText` 的 JSON output 约束返回结构。
+ * - 使用调用方传入的 Zod schema 做最终校验，保证脚本拿到的是结构化 JSON。
  */
 import { createOpenAI } from '@ai-sdk/openai';
 import { generateText, Output } from 'ai';

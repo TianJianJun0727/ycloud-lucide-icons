@@ -1,6 +1,13 @@
 /**
  * 迁移旧版 use-cases 元数据到当前双语结构。
- * 以英文字段为来源，将中文使用场景放在顶层，英文内容放入 i18n.en。
+ *
+ * 输入：直接运行时全量读取 `icons/*.json`；也导出 `migrateIconUseCases` 供脚本复用。
+ * 迁移规则：
+ * - 优先把旧的 `i18n.en.use-cases` 作为英文来源。
+ * - 如果旧英文不存在，则从顶层 `use-cases` 中挑出不含中文的英文条目作为来源。
+ * - 顶层 `use-cases` 写入中文使用场景；`i18n.en.use-cases` 写入英文使用场景。
+ * - 使用内置翻译表处理已知历史文案，未知文案原样保留，后续再交给 AI 修复脚本润色。
+ * - 输出时会去重英文来源，避免迁移后出现重复使用场景。
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';

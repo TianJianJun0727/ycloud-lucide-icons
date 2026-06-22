@@ -1,6 +1,17 @@
 /**
  * 生成仓库和文档使用的双语变更日志。
- * 支持根据 Git tag、提交记录和可选 AI 摘要产出当前版本 release notes。
+ *
+ * 输入：
+ * - Git tag 和提交记录。
+ * - 可选 `YCLOUD_AI_CHANGELOG=1`、`AI_API_KEY`、`AI_BASE_URL`、`AI_MODEL`。
+ * - 可选 `YCLOUD_AI_CHANGELOG_VERSION` 指定只生成某个版本的 AI release notes。
+ * 输出：
+ * - 根 `CHANGELOG.md` 中文日志。
+ * - `docs/.vitepress/data/CHANGELOG.en.md` 英文日志。
+ * - `docs/.vitepress/data/changelogSidebar.ts` 文档侧边栏数据。
+ * - `changelogs/releases/v*.json` 持久化双语版本说明。
+ *
+ * 规则：AI 模式只为当前目标版本生成摘要，不重新生成全部历史版本。
  */
 import { execSync } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';

@@ -1,6 +1,10 @@
 /**
  * 提供发布流程使用的日期时间格式化工具。
- * 当前统一输出 Asia/Shanghai 时区下的可读时间。
+ *
+ * 输入：ISO 日期时间字符串。
+ * 输出：`Asia/Shanghai` 时区下的 `YYYY-MM-DD HH:mm:ss` 格式。
+ *
+ * 适用场景：生成 changelog、GitHub Release notes 和文档侧边栏时保持发布日期展示一致。
  */
 export function formatShanghaiDateTime(isoDateTime: string) {
   const parts = new Intl.DateTimeFormat('zh-CN', {

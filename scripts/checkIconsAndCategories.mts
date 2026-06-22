@@ -1,6 +1,13 @@
 /**
- * 校验完整图标源数据与分类关系。
- * 确保每个 SVG、JSON 元数据和分类定义能够相互匹配。
+ * 全量校验图标源文件、图标元数据和分类定义的关系。
+ *
+ * 输入：固定读取仓库 `icons` 和 `categories` 目录。
+ * 检查内容：
+ * - 每个 `icons/*.svg` 必须有同名 `icons/*.json`。
+ * - 每个 `icons/*.json` 必须有同名 `icons/*.svg`。
+ * - 每个图标 JSON 中的 `categories` 必须引用已经存在的 `categories/*.json`。
+ *
+ * 注意：这里不检查中英文内容细节；字段语言、重复值和 use-cases 成对规则由 `checkChangedIconMetadata.mts` 负责。
  */
 import path from 'path';
 import {

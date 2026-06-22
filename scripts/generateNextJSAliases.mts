@@ -1,6 +1,12 @@
 /**
  * 生成 Next.js modularize imports 兼容别名。
- * 让图标组件导入路径与 Next.js 对大小写和 kebab-case 的处理方式保持一致。
+ *
+ * 输入：扫描 `icons/*.svg` 得到所有图标名。
+ * 输出：写入构建所需的 Next.js 别名映射文件。
+ * 规则：
+ * - 按 Next.js modularize imports 的 kebab-case 规则转换组件名。
+ * - 对与标准图标名不同的转换结果生成别名。
+ * - 让用户在 Next.js 项目中使用自动模块化导入时仍能命中正确图标。
  */
 import path from 'path';
 import { promises as fs } from 'fs';
