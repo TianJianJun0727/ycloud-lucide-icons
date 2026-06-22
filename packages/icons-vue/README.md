@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-语言：中文 | [English](./README.en.md)
+语言：中文 | <a href="./README.en.md">English</a>
 </p>
 
 <p align="center">

@@ -1,6 +1,6 @@
 # @ycloud-web/shared
 
-语言：中文 | [English](./README.en.md)
+语言：中文 | <a href="./README.en.md">English</a>
 
 YCloud 内部共享工具集合。
 
