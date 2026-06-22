@@ -1,9 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": [],
-  "name": "rectangle",
+  "name": "矩形",
   "tags": [
-    "test"
+    "矩形",
+    "形状",
+    "长方形"
   ],
   "categories": [
     "security",
