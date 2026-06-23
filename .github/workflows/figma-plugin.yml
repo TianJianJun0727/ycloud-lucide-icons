@@ -1,0 +1,36 @@
+name: Figma Plugin Checks
+
+on:
+  pull_request:
+    paths:
+      - .github/actions/setup-pnpm/**
+      - .github/workflows/figma-plugin.yml
+      - apps/figma-plugin/**
+      - package.json
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm figma:build
+
+      - name: Typecheck
+        run: pnpm figma:typecheck
+
+      - name: Lint
+        run: pnpm exec oxlint apps/figma-plugin --quiet
+
+      - name: Format check
+        run: pnpm exec oxfmt --check 'apps/figma-plugin/**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}' --ignore-path .oxfmtignore --no-error-on-unmatched-pattern

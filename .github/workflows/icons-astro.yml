@@ -9,7 +9,6 @@ on:
       - package.json
       - packages/icons-astro/**
       - packages/icons-shared/**
-      - pnpm-lock.yaml
       - pnpm-workspace.yaml
       - tools/build-icons/**
   pull_request:
@@ -17,7 +16,6 @@ on:
       - packages/icons-astro/**
       - packages/icons-shared/**
       - tools/build-icons/**
-      - pnpm-lock.yaml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}

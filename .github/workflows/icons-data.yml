@@ -6,7 +6,6 @@ on:
       - packages/icons-data/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
-      - pnpm-lock.yaml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}

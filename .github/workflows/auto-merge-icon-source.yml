@@ -15,7 +15,14 @@ concurrency:
 jobs:
   auto-merge-icon-source:
     name: Auto merge icon source PR
-    if: github.repository == 'TianJianJun0727/ycloud-icons' && github.event.pull_request.head.repo.full_name == github.repository
+    if: >-
+      github.repository == 'TianJianJun0727/ycloud-icons' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      (
+        startsWith(github.event.pull_request.head.ref, 'ycloud-icons-portal/') ||
+        contains(github.event.pull_request.body || '', 'ycloud-icons-source:figma-plugin') ||
+        contains(github.event.pull_request.body || '', 'ycloud-icons-source:portal')
+      )
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -35,7 +42,7 @@ jobs:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          pr_json="$(gh pr view "$PR_NUMBER" --json baseRefName,body,files,headRefName,headRepository,isDraft,labels)"
+          pr_json="$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json baseRefName,body,files,headRefName,headRepository,isDraft,labels)"
 
           if [[ "$(jq -r '.isDraft' <<< "$pr_json")" == "true" ]]; then
             echo "Draft PRs are not auto-merged."
