@@ -29,3 +29,7 @@ allowBuilds:
   ttf2woff2: false
   unrs-resolver: false
   vue-demi: false
+
+minimumReleaseAgeExclude:
+  - vite@8.1.0
+  - '@vitejs/plugin-react@6.0.3'

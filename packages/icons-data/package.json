@@ -73,7 +73,7 @@
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "typescript": "7.0.1-rc",
-    "vite": "^8.0.16",
+    "vite": "^8.1.0",
     "vitest": "4.1.9"
   },
   "amdName": "ycloud-icons"
