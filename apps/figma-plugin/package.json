@@ -1,0 +1,46 @@
+{
+  "name": "@ycloud-web/figma-plugin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "build-figma-plugin --typecheck --minify",
+    "dev": "build-figma-plugin --typecheck --watch",
+    "watch": "build-figma-plugin --typecheck --watch",
+    "typecheck": "build-figma-plugin --typecheck --minify --output-directory .figma-typecheck",
+    "tsc": "pnpm typecheck"
+  },
+  "dependencies": {
+    "@create-figma-plugin/ui": "^4.0.3",
+    "@create-figma-plugin/utilities": "^4.0.3",
+    "js-base64": "^3.7.5",
+    "preact": "^10.28.0",
+    "ts-dedent": "^2.2.0"
+  },
+  "devDependencies": {
+    "@create-figma-plugin/build": "^4.0.3",
+    "@create-figma-plugin/tsconfig": "^4.0.3",
+    "@figma/plugin-typings": "^1.129.0",
+    "typescript": "6.0.3"
+  },
+  "figma-plugin": {
+    "api": "1.0.0",
+    "editorType": [
+      "figma"
+    ],
+    "id": "1651114766731373192",
+    "name": "YCloud Icons 图标同步助手",
+    "main": "plugin-src/main.ts",
+    "ui": "ui-src/main.tsx",
+    "documentAccess": "dynamic-page",
+    "permissions": [
+      "currentuser"
+    ],
+    "networkAccess": {
+      "allowedDomains": [
+        "https://www.figma.com",
+        "https://api.github.com"
+      ]
+    }
+  }
+}

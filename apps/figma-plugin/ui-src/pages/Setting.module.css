@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid var(--yc-border);
+  border-radius: 10px;
+  background: var(--yc-bg);
+  padding: 12px;
+  box-shadow: var(--yc-shadow);
+}
+
+.statusHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  color: var(--yc-text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.description {
+  color: var(--yc-text-secondary);
+  font-size: 11px;
+  line-height: 16px;
+  margin-top: 2px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--yc-bg-tertiary);
+  color: var(--yc-text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+
+.badgeReady {
+  background: var(--yc-success-bg);
+  color: var(--yc-success);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.repoLink {
+  color: var(--yc-brand);
+  font-size: 11px;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  min-width: 86px;
+  padding: 0 12px;
+  text-decoration: none;
+}
+
+.primaryButton {
+  border: 1px solid var(--yc-brand);
+  background: var(--yc-brand);
+  color: var(--yc-onbrand);
+}
+
+.primaryButton:hover {
+  background: var(--yc-brand-hover);
+}
+
+.primaryButton:disabled {
+  border-color: var(--yc-border);
+  background: var(--yc-bg-disabled);
+  color: var(--yc-text-disabled);
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  border: 1px solid var(--yc-border);
+  background: var(--yc-bg-secondary);
+  color: var(--yc-text);
+}
+
+.secondaryButton:hover {
+  background: var(--yc-bg-hover);
+}

@@ -13,6 +13,7 @@ docs/.vitepress/.temp
 docs/.vitepress/cache
 docs/.vitepress/data
 docs/.nitro
+apps/figma-plugin/manifest.json
 
 # SVG source is handled by Prettier with the HTML parser.
 icons/*.svg

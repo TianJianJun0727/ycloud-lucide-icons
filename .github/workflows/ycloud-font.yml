@@ -6,21 +6,15 @@ on:
       - next
     paths:
       - .github/actions/setup-pnpm/**
-      - package.json
       - packages/icons-static/package.json
-      - pnpm-lock.yaml
-      - pnpm-workspace.yaml
       - .github/workflows/ycloud-font.yml
       - tools/build-font/**
   pull_request:
     paths:
       - .github/actions/setup-pnpm/**
       - .github/workflows/ycloud-font.yml
-      - package.json
       - packages/icons-static/package.json
-      - pnpm-workspace.yaml
       - tools/build-font/**
-      - pnpm-lock.yaml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
