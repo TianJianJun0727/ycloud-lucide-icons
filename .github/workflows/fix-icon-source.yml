@@ -5,6 +5,7 @@ on:
     paths:
       - 'icons/*.svg'
       - 'business-icons/**/*.svg'
+      - 'business-icons/**/*.json'
       - 'icons/*.json'
       - 'categories/*.json'
       - 'scripts/data/allowedNonChineseTerms.json'
@@ -49,6 +50,7 @@ jobs:
           files: |
             icons/*.svg
             business-icons/**/*.svg
+            business-icons/**/*.json
             icons/*.json
             categories/*.json
 
@@ -76,6 +78,7 @@ jobs:
           if (( ${#business_svg_files[@]} > 0 )); then
             node ./scripts/optimizeStagedBusinessSvgs.mts "${business_svg_files[@]}"
             node ./scripts/writeBusinessIconIndex.mts
+            pnpm exec oxfmt business-icons/index.json
           fi
 
       - name: Complete changed metadata i18n
@@ -101,7 +104,7 @@ jobs:
         run: |
           format_files=()
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            if [[ ( "$file" == icons/*.json || "$file" == categories/*.json ) && -f "$file" ]]; then
+            if [[ ( "$file" == icons/*.json || "$file" == categories/*.json || "$file" == business-icons/*.json || "$file" == business-icons/*/*.json ) && -f "$file" ]]; then
               format_files+=("$file")
             fi
           done
