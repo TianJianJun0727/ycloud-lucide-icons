@@ -304,14 +304,18 @@ export function buildBusinessAstroIconModule(name: string) {
   ].join('\n');
 }
 
-export function buildBusinessIconsComponentIndex(names: string[], extension = '') {
+export function buildBusinessIconsComponentIndex(
+  names: string[],
+  extension = '',
+  typeImportExtension = '',
+) {
   const sortedNames = [...names].sort((left, right) => left.localeCompare(right));
   return [
     ...sortedNames.map((name) => {
       const componentName = getBusinessIconComponentName(name);
       return `export { default as ${componentName} } from './business-icons/${name}${extension}';`;
     }),
-    "export type { BusinessIconImageProps } from './businessTypes';",
+    `export type { BusinessIconImageProps } from './businessTypes${typeImportExtension}';`,
     '',
   ].join('\n');
 }
@@ -623,7 +627,7 @@ export async function generateBusinessIconsPackage(targets: Target[] = [...allTa
   if (hasTarget(targets, 'svelte')) {
     await fs.writeFile(
       path.join(sveltePackageSrcDir, 'business.ts'),
-      buildBusinessIconsComponentIndex(names, '.svelte'),
+      buildBusinessIconsComponentIndex(names, '.svelte', '.js'),
     );
     await fs.writeFile(
       path.join(sveltePackageSrcDir, 'businessTypes.ts'),

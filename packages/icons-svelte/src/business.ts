@@ -1,1 +1,1 @@
-export type { BusinessIconImageProps } from './businessTypes';
+export type { BusinessIconImageProps } from './businessTypes.js';
