@@ -534,6 +534,84 @@
       "name": "whatsapplist",
       "path": "business-icons/inbox/whatsapplist.svg",
       "componentName": "Whatsapplist"
+    },
+    {
+      "category": "menu",
+      "name": "campaign-outlined",
+      "path": "business-icons/menu/campaign-outlined.svg",
+      "componentName": "CampaignOutlined"
+    },
+    {
+      "category": "menu",
+      "name": "cart",
+      "path": "business-icons/menu/cart.svg",
+      "componentName": "Cart"
+    },
+    {
+      "category": "menu",
+      "name": "chatbot-outlined",
+      "path": "business-icons/menu/chatbot-outlined.svg",
+      "componentName": "ChatbotOutlined"
+    },
+    {
+      "category": "menu",
+      "name": "contact-outlined",
+      "path": "business-icons/menu/contact-outlined.svg",
+      "componentName": "ContactOutlined"
+    },
+    {
+      "category": "menu",
+      "name": "ctwaoutlined",
+      "path": "business-icons/menu/ctwaoutlined.svg",
+      "componentName": "Ctwaoutlined"
+    },
+    {
+      "category": "menu",
+      "name": "developers",
+      "path": "business-icons/menu/developers.svg",
+      "componentName": "Developers"
+    },
+    {
+      "category": "menu",
+      "name": "home-outlined",
+      "path": "business-icons/menu/home-outlined.svg",
+      "componentName": "HomeOutlined"
+    },
+    {
+      "category": "menu",
+      "name": "inbox-outlined",
+      "path": "business-icons/menu/inbox-outlined.svg",
+      "componentName": "InboxOutlined"
+    },
+    {
+      "category": "menu",
+      "name": "integration-outlined",
+      "path": "business-icons/menu/integration-outlined.svg",
+      "componentName": "IntegrationOutlined"
+    },
+    {
+      "category": "menu",
+      "name": "journey-outlineed",
+      "path": "business-icons/menu/journey-outlineed.svg",
+      "componentName": "JourneyOutlineed"
+    },
+    {
+      "category": "menu",
+      "name": "order-outlined",
+      "path": "business-icons/menu/order-outlined.svg",
+      "componentName": "OrderOutlined"
+    },
+    {
+      "category": "menu",
+      "name": "partner",
+      "path": "business-icons/menu/partner.svg",
+      "componentName": "Partner"
+    },
+    {
+      "category": "menu",
+      "name": "whatsapp-outlined",
+      "path": "business-icons/menu/whatsapp-outlined.svg",
+      "componentName": "WhatsappOutlined"
     }
   ]
 }
