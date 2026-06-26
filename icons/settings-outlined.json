@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "use-cases": [],
+  "name": "",
+  "tags": [],
+  "categories": [
+    "sports"
+  ],
+  "i18n": {
+    "en": {
+      "name": "SettingsOutlined",
+      "tags": [],
+      "use-cases": []
+    }
+  }
+}
