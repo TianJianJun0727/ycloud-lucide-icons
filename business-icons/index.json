@@ -10,146 +10,146 @@
   ],
   "icons": [
     {
-      "name": "a-btest",
       "category": "chatbot",
+      "name": "a-btest",
       "path": "business-icons/chatbot/a-btest.svg",
       "componentName": "ABtest"
     },
     {
-      "name": "ask-a-question",
       "category": "chatbot",
+      "name": "ask-a-question",
       "path": "business-icons/chatbot/ask-a-question.svg",
       "componentName": "AskAQuestion"
     },
     {
-      "name": "branch",
       "category": "chatbot",
+      "name": "branch",
       "path": "business-icons/chatbot/branch.svg",
       "componentName": "Branch"
     },
     {
-      "name": "call-api",
       "category": "chatbot",
+      "name": "call-api",
       "path": "business-icons/chatbot/call-api.svg",
       "componentName": "CallApi"
     },
     {
-      "name": "cloud-off",
       "category": "chatbot",
+      "name": "cloud-off",
       "path": "business-icons/chatbot/cloud-off.svg",
       "componentName": "CloudOff"
     },
     {
-      "name": "folder",
       "category": "chatbot",
+      "name": "folder",
       "path": "business-icons/chatbot/folder.svg",
       "componentName": "Folder"
     },
     {
-      "name": "hand-1",
       "category": "chatbot",
+      "name": "hand-1",
       "path": "business-icons/chatbot/hand-1.svg",
       "componentName": "Hand1"
     },
     {
-      "name": "list-1",
       "category": "chatbot",
+      "name": "list-1",
       "path": "business-icons/chatbot/list-1.svg",
       "componentName": "List1"
     },
     {
-      "name": "mouse-1",
       "category": "chatbot",
+      "name": "mouse-1",
       "path": "business-icons/chatbot/mouse-1.svg",
       "componentName": "Mouse1"
     },
     {
-      "name": "mouse-pointer-1",
       "category": "chatbot",
+      "name": "mouse-pointer-1",
       "path": "business-icons/chatbot/mouse-pointer-1.svg",
       "componentName": "MousePointer1"
     },
     {
-      "name": "msg-rule",
       "category": "chatbot",
+      "name": "msg-rule",
       "path": "business-icons/chatbot/msg-rule.svg",
       "componentName": "MsgRule"
     },
     {
-      "name": "redo",
       "category": "chatbot",
+      "name": "redo",
       "path": "business-icons/chatbot/redo.svg",
       "componentName": "Redo"
     },
     {
-      "name": "remove-minus",
       "category": "chatbot",
+      "name": "remove-minus",
       "path": "business-icons/chatbot/remove-minus.svg",
       "componentName": "RemoveMinus"
     },
     {
-      "name": "report-problem",
       "category": "chatbot",
+      "name": "report-problem",
       "path": "business-icons/chatbot/report-problem.svg",
       "componentName": "ReportProblem"
     },
     {
-      "name": "scratch",
       "category": "chatbot",
+      "name": "scratch",
       "path": "business-icons/chatbot/scratch.svg",
       "componentName": "Scratch"
     },
     {
-      "name": "show",
       "category": "chatbot",
+      "name": "show",
       "path": "business-icons/chatbot/show.svg",
       "componentName": "Show"
     },
     {
-      "name": "template",
       "category": "chatbot",
+      "name": "template",
       "path": "business-icons/chatbot/template.svg",
       "componentName": "Template"
     },
     {
-      "name": "template2",
       "category": "chatbot",
+      "name": "template2",
       "path": "business-icons/chatbot/template2.svg",
       "componentName": "Template2"
     },
     {
-      "name": "templateflow",
       "category": "chatbot",
+      "name": "templateflow",
       "path": "business-icons/chatbot/templateflow.svg",
       "componentName": "Templateflow"
     },
     {
-      "name": "trigger",
       "category": "chatbot",
+      "name": "trigger",
       "path": "business-icons/chatbot/trigger.svg",
       "componentName": "Trigger"
     },
     {
-      "name": "undo",
       "category": "chatbot",
+      "name": "undo",
       "path": "business-icons/chatbot/undo.svg",
       "componentName": "Undo"
     },
     {
-      "name": "variable",
       "category": "chatbot",
+      "name": "variable",
       "path": "business-icons/chatbot/variable.svg",
       "componentName": "Variable"
     },
     {
-      "name": "view",
       "category": "chatbot",
+      "name": "view",
       "path": "business-icons/chatbot/view.svg",
       "componentName": "View"
     },
     {
-      "name": "wait",
       "category": "chatbot",
+      "name": "wait",
       "path": "business-icons/chatbot/wait.svg",
       "componentName": "Wait"
     }
