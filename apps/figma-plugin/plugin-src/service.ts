@@ -128,8 +128,14 @@ const findComponentInNode = (
     }
   }
 };
+function canTemporarilyRemoveFills() {
+  return figma.editorType !== 'dev';
+}
 function removeAndStoreFills(node: SceneNode): Map<string, readonly Paint[]> {
   const fillsMap = new Map<string, readonly Paint[]>();
+  if (!canTemporarilyRemoveFills()) {
+    return fillsMap;
+  }
   if (node.type === 'FRAME' && 'fills' in node && node.id) {
     fillsMap.set(node.id, node.fills as readonly Paint[]);
     node.fills = [];
@@ -145,6 +151,9 @@ function removeAndStoreFills(node: SceneNode): Map<string, readonly Paint[]> {
   return fillsMap;
 }
 function restoreFills(node: SceneNode, fillsMap: Map<string, readonly Paint[]>) {
+  if (fillsMap.size === 0) {
+    return;
+  }
   if (node.type === 'FRAME' && 'fills' in node && node.id && fillsMap.has(node.id)) {
     node.fills = fillsMap.get(node.id)!;
   }
@@ -228,6 +237,7 @@ export async function getSvgFromExtractedNodes(nodes: ExtractedNode[]) {
       return {
         name: parsedName.fileName || stripBeforeIcon(name),
         svg,
+        sourceSvg: rawSvg,
         metadatas,
         ycloud: {
           nameZh: parsedName.nameZh,

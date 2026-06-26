@@ -37,6 +37,12 @@ packages/**/dynamic.d.ts
 packages/**/dynamic.d.mts
 packages/**/dynamic.mjs.map
 packages/**/dynamic.mjs
+packages/**/business.js
+packages/**/business.js.map
+packages/**/business.mjs
+packages/**/business.mjs.map
+packages/**/business.d.ts
+packages/**/business.d.mts
 packages/**/LICENSE
 packages/icons-static/icon-nodes.json
 packages/icons-static/icons

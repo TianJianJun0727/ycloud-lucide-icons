@@ -28,6 +28,7 @@
     "dist",
     "font",
     "icons",
+    "business-icons",
     "lib",
     "icon-nodes.json",
     "sprite.svg",
@@ -42,7 +43,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:lib && pnpm build:tags && pnpm build:font",
     "build:font": "pnpm --dir ../.. --filter build-font start",
     "build:tags": "node ./scripts/migrateIconsToTags.mts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts static",
     "build:lib": "node ./scripts/buildLib.mts",
     "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c rollup.config.mjs",
     "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"

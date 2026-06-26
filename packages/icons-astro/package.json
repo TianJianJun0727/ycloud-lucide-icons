@@ -36,16 +36,25 @@
     },
     "./icons/*": {
       "import": "./src/icons/*.ts"
+    },
+    "./business": {
+      "import": "./src/business.ts"
+    },
+    "./business-icons/*": {
+      "import": "./src/business-icons/*.astro"
     }
   },
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts --pretty=false",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts --pretty=false && node ../../scripts/generateBusinessIconsPackage.mts astro",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "copy:utils": "mkdir -p ./src/utils && for f in hasA11yProp toKebabCase mergeClasses; do cp -f ../../packages/icons-shared/src/utils/$f.ts ./src/utils/; done",
     "test": "pnpm copy:utils && pnpm build:icons && vitest run",
     "test:watch": "pnpm build:icons && vitest run --watch"
+  },
+  "dependencies": {
+    "@ycloud-web/icons": "workspace:*"
   },
   "devDependencies": {
     "@astrojs/markdown-remark": "^7.2.0",

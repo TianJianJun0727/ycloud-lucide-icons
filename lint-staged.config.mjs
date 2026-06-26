@@ -10,6 +10,11 @@ const config = {
     'node ./scripts/optimizeStagedSvgs.mts',
     'node ./scripts/generateNextJSAliases.mts',
   ],
+  'business-icons/**/*.svg': [
+    'node ./scripts/optimizeStagedBusinessSvgs.mts',
+    'node ./scripts/writeBusinessIconIndex.mts',
+    'node ./scripts/checkBusinessSvgSource.mts',
+  ],
   'icons/*.json': (filenames) => [
     `ajv --spec=draft2020 -s icon.schema.json ${filenamesToAjvOption(filenames)}`,
     `oxfmt ${filenames.join(' ')}`,

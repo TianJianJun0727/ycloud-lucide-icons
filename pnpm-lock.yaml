@@ -334,6 +334,10 @@ importers:
     publishDirectory: dist
 
   packages/icons-astro:
+    dependencies:
+      '@ycloud-web/icons':
+        specifier: workspace:*
+        version: link:../icons
     devDependencies:
       '@astrojs/markdown-remark':
         specifier: ^7.2.0
@@ -409,6 +413,10 @@ importers:
         version: 4.1.9(@opentelemetry/api@1.9.1)(@types/node@26.0.0)(@vitest/browser-playwright@4.1.9)(@vitest/coverage-v8@4.1.9)(@vitest/ui@4.1.9)(jsdom@29.1.1)(vite@8.1.0(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(less@4.6.6)(sass@1.101.0)(stylus@0.56.0)(terser@5.47.1)(yaml@2.9.0))
 
   packages/icons-preact:
+    dependencies:
+      '@ycloud-web/icons':
+        specifier: workspace:*
+        version: link:../icons
     devDependencies:
       '@preact/preset-vite':
         specifier: ^2.10.5
@@ -448,6 +456,10 @@ importers:
         version: 8.1.0(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(less@4.6.6)(sass@1.101.0)(stylus@0.56.0)(terser@5.47.1)(yaml@2.9.0)
 
   packages/icons-react:
+    dependencies:
+      '@ycloud-web/icons':
+        specifier: workspace:*
+        version: link:../icons
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.9.1
@@ -496,6 +508,10 @@ importers:
         version: 8.1.0(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(less@4.6.6)(sass@1.101.0)(stylus@0.56.0)(terser@5.47.1)(yaml@2.9.0)
 
   packages/icons-react-native:
+    dependencies:
+      '@ycloud-web/icons':
+        specifier: workspace:*
+        version: link:../icons
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.9.1
@@ -556,6 +572,10 @@ importers:
         version: 8.1.0(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(less@4.6.6)(sass@1.101.0)(stylus@0.56.0)(terser@5.47.1)(yaml@2.9.0)
 
   packages/icons-solid:
+    dependencies:
+      '@ycloud-web/icons':
+        specifier: workspace:*
+        version: link:../icons
     devDependencies:
       '@babel/core':
         specifier: ^7.23.9
@@ -637,6 +657,10 @@ importers:
         version: 5.3.1
 
   packages/icons-svelte:
+    dependencies:
+      '@ycloud-web/icons':
+        specifier: workspace:*
+        version: link:../icons
     devDependencies:
       '@sveltejs/package':
         specifier: ^2.5.8
@@ -685,6 +709,10 @@ importers:
         version: 4.1.9(@opentelemetry/api@1.9.1)(@types/node@26.0.0)(@vitest/browser-playwright@4.1.9)(@vitest/coverage-v8@4.1.9)(@vitest/ui@4.1.9)(jsdom@29.1.1)(vite@8.1.0(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(less@4.6.6)(sass@1.101.0)(stylus@0.56.0)(terser@5.47.1)(yaml@2.9.0))
 
   packages/icons-vue:
+    dependencies:
+      '@ycloud-web/icons':
+        specifier: workspace:*
+        version: link:../icons
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.9.1

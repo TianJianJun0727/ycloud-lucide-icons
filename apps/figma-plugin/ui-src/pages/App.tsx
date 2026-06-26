@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
+import type { IconSourceType } from '../../common/types';
 import { useAppState } from '../contexts/AppContext';
 import styles from './App.module.css';
 import Deploy from './Deploy';
@@ -8,6 +9,7 @@ import Setting from './Setting';
 const App = () => {
   const { githubApiKey, githubRepositoryUrl } = useAppState();
   const [tab, setTab] = useState('deploy');
+  const [sourceType, setSourceType] = useState<IconSourceType>('generic');
   const isSettingsReady =
     /^https:\/\/github\.com\/[^/]+\/[^/]+\/?$/.test(githubRepositoryUrl) &&
     githubApiKey.trim() !== '';
@@ -47,7 +49,16 @@ const App = () => {
           设置
         </button>
       </div>
-      <main className={styles.panel}>{tab === 'deploy' ? <Deploy /> : <Setting />}</main>
+      <main className={styles.panel}>
+        {tab === 'deploy' ? (
+          <Deploy
+            sourceType={sourceType}
+            setSourceType={setSourceType}
+          />
+        ) : (
+          <Setting />
+        )}
+      </main>
     </div>
   );
 };

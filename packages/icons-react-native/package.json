@@ -48,16 +48,25 @@
     },
     "./suffixed": {
       "types": "./dist/ycloud-react-native.suffixed.d.ts"
+    },
+    "./business": {
+      "types": "./dist/business.d.ts",
+      "import": "./dist/esm/business.mjs",
+      "browser": "./dist/esm/business.mjs",
+      "require": "./dist/cjs/business.js"
     }
   },
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts && node ../../scripts/generateBusinessIconsPackage.mts react-native",
     "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@ycloud-web/icons": "workspace:*"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",

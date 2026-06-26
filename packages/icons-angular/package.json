@@ -21,7 +21,7 @@
     "build": "pnpm prebuild && pnpm build:ng",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=ycloud-angular.ts --useDefaultExports=0",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=ycloud-angular.ts --useDefaultExports=0 && node ../../scripts/generateBusinessIconsPackage.mts angular",
     "build:ng": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' ng build --configuration production",
     "test": "pnpm build:icons && NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' ng test --no-watch",
     "test:watch": "ng test",

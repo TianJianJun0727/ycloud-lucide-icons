@@ -6,6 +6,7 @@ const packageName = '@ycloud-web/icons-vue';
 const outputFileName = 'ycloud-vue';
 const outputDir = 'dist';
 const inputs = ['src/ycloud-vue.ts'];
+const businessInput = 'src/business.ts';
 const bundles = [
   {
     format: 'cjs',
@@ -67,6 +68,22 @@ export default [
     ],
   },
   {
+    input: businessInput,
+    output: [
+      {
+        file: `dist/business.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
     input: `src/${outputFileName}.suffixed.ts`,
     output: [
       {
@@ -98,5 +115,20 @@ export default [
       }),
     ],
   },
+  ...['cjs', 'esm'].map((format) => ({
+    input: businessInput,
+    plugins: plugins({ pkg }),
+    external: ['vue', '@ycloud-web/icons/business'],
+    output: {
+      name: `${packageName}Business`,
+      file: `dist/${format}/business.${format === 'esm' ? 'mjs' : 'js'}`,
+      format,
+      sourcemap: true,
+      globals: {
+        vue: 'vue',
+        '@ycloud-web/icons/business': 'YCloudBusinessIcons',
+      },
+    },
+  })),
   ...configs,
 ];

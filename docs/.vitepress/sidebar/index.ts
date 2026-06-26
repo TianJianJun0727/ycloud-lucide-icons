@@ -52,6 +52,7 @@ const zhText: Record<string, string> = {
   'Template element': '模板元素',
   'Icon design guide': '图标设计指南',
   'Icon maintenance': '图标维护',
+  'Business icons': '业务图标',
   Architecture: '架构',
   Changelog: '版本记录',
 };
@@ -100,6 +101,8 @@ const zhDesc: Record<string, string> = {
   'How the YCloud Icons repository is organized and why.':
     'YCloud Icons 仓库的组织方式与设计原因。',
   'Add, update, and remove icons in the repository.': '添加、修改和删除图标的维护流程。',
+  'Source, validation, and submission rules for business-specific SVG icons.':
+    '业务专有 SVG 图标的存放、校验和提交规则。',
 };
 
 const baseGuideSidebarTop: DefaultTheme.SidebarItem[] = [
@@ -137,6 +140,7 @@ function withGuideMaintenanceItems(source: Sidebar): Sidebar {
         const hasGuide = items.some((child) => child.link === '/guide/icon-design-guide');
         const hasMaintenance = items.some((child) => child.link === '/guide/icon-maintenance');
         const hasArchitecture = items.some((child) => child.link === '/guide/architecture');
+        const hasBusinessIcons = items.some((child) => child.link === '/guide/business-icons');
 
         return {
           ...item,
@@ -166,6 +170,15 @@ function withGuideMaintenanceItems(source: Sidebar): Sidebar {
                     text: 'Icon maintenance',
                     link: '/guide/icon-maintenance',
                     desc: 'Add, update, and remove icons in the repository.',
+                  },
+                ]
+              : []),
+            ...(!hasBusinessIcons
+              ? [
+                  {
+                    text: 'Business icons',
+                    link: '/guide/business-icons',
+                    desc: 'Source, validation, and submission rules for business-specific SVG icons.',
                   },
                 ]
               : []),

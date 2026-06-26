@@ -34,14 +34,17 @@ async function sendStorageData() {
   const apiKey = await getLocalData(KEY.GITHUB_API_KEY);
   const pngOption = await getLocalData(KEY.PNG_OPTIONS);
   const ycloudMetadata = await getLocalData(KEY.YCLOUD_METADATA);
+  const storedYCloudMetadata = ycloudMetadata?.ycloud ?? ycloudMetadata;
   emit('GET_GITHUB_REPO_URL', { repoUrl });
   emit('GET_GITHUB_API_KEY', { apiKey });
   emit('GET_DEPLOY_WITH_PNG', {
     options: {
+      sourceType: 'generic',
       png: pngOption?.png || { '1x': false, '2x': false, '3x': false, '4x': false },
       fileName: 'icons',
-      ycloud: ycloudMetadata?.ycloud || {
+      ycloud: storedYCloudMetadata || {
         categories: [],
+        businessCategory: '',
         tagsZh: [],
         useCasesZh: [],
       },

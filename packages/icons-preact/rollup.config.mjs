@@ -6,6 +6,7 @@ const packageName = 'YCloudPreact';
 const outputFileName = 'ycloud-preact';
 const outputDir = 'dist';
 const inputs = [`src/ycloud-preact.ts`];
+const businessInput = 'src/business.ts';
 const bundles = [
   {
     format: 'cjs',
@@ -61,6 +62,16 @@ export default [
     plugins: [dts()],
   },
   {
+    input: businessInput,
+    output: [
+      {
+        file: `dist/business.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
     input: `src/${outputFileName}.suffixed.ts`,
     output: [
       {
@@ -80,5 +91,20 @@ export default [
     ],
     plugins: [dts()],
   },
+  ...['cjs', 'esm'].map((format) => ({
+    input: businessInput,
+    plugins: plugins({ pkg }),
+    external: ['preact', '@ycloud-web/icons/business'],
+    output: {
+      name: `${packageName}Business`,
+      file: `dist/${format}/business.${format === 'esm' ? 'mjs' : 'js'}`,
+      format,
+      sourcemap: true,
+      globals: {
+        preact: 'preact',
+        '@ycloud-web/icons/business': 'YCloudBusinessIcons',
+      },
+    },
+  })),
   ...configs,
 ];

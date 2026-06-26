@@ -9,6 +9,7 @@ export function listenDeployIcon() {
     try {
       const { owner, name, apiKey } = githubData;
       const { png, ycloud } = options;
+      const sourceType = options.sourceType ?? 'generic';
       const { createDeployPR } = createGithubClient(owner, name, apiKey);
       const sourceNodes = getYCloudIconsSourceNodes();
       if (sourceNodes.length === 0) {
@@ -30,11 +31,15 @@ export function listenDeployIcon() {
         figma.notify(message, { timeout: 5000, error: true });
         return;
       }
-      const iconData = await exportFromYCloudIconData(assetFrames, icons, png);
-      const pullRequest = await createDeployPR(iconData, ycloud);
+      const iconData =
+        sourceType === 'business' ? icons : await exportFromYCloudIconData(assetFrames, icons, png);
+      const pullRequest = await createDeployPR(iconData, ycloud, sourceType);
       emit('DEPLOY_DONE', {
         status: 'success',
-        message: '已创建审核单，等待图标库合并。',
+        message:
+          sourceType === 'business'
+            ? '已创建业务图标审核单，等待合并。'
+            : '已创建审核单，等待图标库合并。',
         url: pullRequest.html_url,
       });
       figma.notify('已创建图标审核单', { timeout: 5000 });

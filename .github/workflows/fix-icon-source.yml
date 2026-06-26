@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'icons/*.svg'
+      - 'business-icons/**/*.svg'
       - 'icons/*.json'
       - 'categories/*.json'
       - 'scripts/data/allowedNonChineseTerms.json'
@@ -47,6 +48,7 @@ jobs:
         with:
           files: |
             icons/*.svg
+            business-icons/**/*.svg
             icons/*.json
             categories/*.json
 
@@ -62,6 +64,18 @@ jobs:
 
           if (( ${#svg_files[@]} > 0 )); then
             node ./scripts/optimizeStagedSvgs.mts "${svg_files[@]}"
+          fi
+
+          business_svg_files=()
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ "$file" == business-icons/*/*.svg && -f "$file" ]]; then
+              business_svg_files+=("$file")
+            fi
+          done
+
+          if (( ${#business_svg_files[@]} > 0 )); then
+            node ./scripts/optimizeStagedBusinessSvgs.mts "${business_svg_files[@]}"
+            node ./scripts/writeBusinessIconIndex.mts
           fi
 
       - name: Complete changed metadata i18n
@@ -100,6 +114,7 @@ jobs:
         run: |
           node ./scripts/checkSvgSource.mts
           pnpm exec prettier --parser html --check 'icons/*.svg'
+          node ./scripts/checkBusinessSvgSource.mts
           pnpm lint:json
           ADDED_FILES="${{ steps.changed-files.outputs.added_files }}" pnpm checkIcons
           icon_json_files=()
@@ -129,6 +144,6 @@ jobs:
 
           git config user.name "ycloud-icons-source-bot[bot]"
           git config user.email "ycloud-icons-source-bot[bot]@users.noreply.github.com"
-          git add icons categories scripts/data/allowedNonChineseTerms.json
+          git add icons business-icons categories scripts/data/allowedNonChineseTerms.json
           git commit -m "fix(icons): normalize icon source files"
           git push

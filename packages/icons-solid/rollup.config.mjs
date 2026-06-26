@@ -9,7 +9,8 @@ import pkg from './package.json' with { type: 'json' };
 const packageName = 'YCloudSolid';
 const outputFileName = 'ycloud-solid';
 const outputDir = 'dist';
-const inputs = ['src/ycloud-solid.ts'];
+const businessInput = 'src/business.ts';
+const inputs = ['src/ycloud-solid.ts', businessInput];
 
 const bundles = [
   {
@@ -94,7 +95,7 @@ const configs = bundles
                 });
 
                 // Generate types
-                const program = ts.createProgram([pkg.source], {
+                const program = ts.createProgram([pkg.source, businessInput], {
                   target: ts.ScriptTarget.ESNext,
                   module: ts.ModuleKind.ESNext,
                   moduleResolution: ts.ModuleResolutionKind.NodeJs,

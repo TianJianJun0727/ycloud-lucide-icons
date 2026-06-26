@@ -6,6 +6,7 @@ import pkg from './package.json' with { type: 'json' };
 const outputFileName = pkg.name;
 const outputDir = 'dist';
 const inputs = ['src/ycloud.ts'];
+const businessInput = 'src/business.ts';
 const bundles = [
   {
     format: 'umd',
@@ -82,4 +83,35 @@ const typesFileConfig = {
   ],
 };
 
-export default [...configs, typesFileConfig];
+const businessConfigs = [
+  {
+    input: businessInput,
+    plugins: plugins({ pkg }),
+    output: {
+      file: `${outputDir}/cjs/business.js`,
+      format: 'cjs',
+      sourcemap: true,
+    },
+  },
+  {
+    input: businessInput,
+    plugins: plugins({ pkg }),
+    output: {
+      file: `${outputDir}/esm/business.mjs`,
+      format: 'esm',
+      sourcemap: true,
+    },
+  },
+  {
+    input: businessInput,
+    output: [
+      {
+        file: `${outputDir}/business.d.ts`,
+        format: 'esm',
+      },
+    ],
+    plugins: [dts()],
+  },
+];
+
+export default [...configs, typesFileConfig, ...businessConfigs];

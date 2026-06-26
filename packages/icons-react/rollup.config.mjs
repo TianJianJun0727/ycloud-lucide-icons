@@ -9,6 +9,7 @@ const aliasesEntries = await getAliasesEntryNames();
 const packageName = 'YCloudReact';
 const outputFileName = 'ycloud-react';
 const inputs = [`src/ycloud-react.ts`];
+const businessInput = 'src/business.ts';
 const bundles = [
   {
     format: 'cjs',
@@ -177,6 +178,50 @@ export default [
       },
     ],
     plugins: [dts()],
+  },
+  {
+    input: businessInput,
+    output: [
+      {
+        file: `business.d.ts`,
+        format: 'es',
+      },
+      {
+        file: `business.d.mts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: businessInput,
+    plugins: plugins({ pkg }),
+    external: ['react', '@ycloud-web/icons/business'],
+    output: {
+      name: `${packageName}Business`,
+      file: 'business.js',
+      format: 'cjs',
+      sourcemap: true,
+      globals: {
+        react: 'react',
+        '@ycloud-web/icons/business': 'YCloudBusinessIcons',
+      },
+    },
+  },
+  {
+    input: businessInput,
+    plugins: plugins({ pkg }),
+    external: ['react', '@ycloud-web/icons/business'],
+    output: {
+      name: `${packageName}Business`,
+      file: 'business.mjs',
+      format: 'esm',
+      sourcemap: true,
+      globals: {
+        react: 'react',
+        '@ycloud-web/icons/business': 'YCloudBusinessIcons',
+      },
+    },
   },
   ...configs,
 ];

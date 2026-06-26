@@ -11,6 +11,7 @@ function uniqueList<T>(items: T[] = []): T[] {
 function normalizeYCloudMetadata(options?: Partial<YCloudMetadataOptions>): YCloudMetadataOptions {
   return {
     categories: uniqueList(options?.categories),
+    businessCategory: options?.businessCategory ?? '',
     tagsZh: uniqueList(options?.tagsZh),
     useCasesZh: uniqueList(options?.useCasesZh),
   };

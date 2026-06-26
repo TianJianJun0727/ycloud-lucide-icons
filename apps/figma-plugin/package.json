@@ -26,7 +26,11 @@
   "figma-plugin": {
     "api": "1.0.0",
     "editorType": [
-      "figma"
+      "figma",
+      "dev"
+    ],
+    "capabilities": [
+      "inspect"
     ],
     "id": "1651114766731373192",
     "name": "YCloud Icons 图标同步助手",

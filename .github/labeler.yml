@@ -29,6 +29,7 @@
   - changed-files:
       - any-glob-to-any-file:
           - 'icons/*.svg'
+          - 'business-icons/**/*.svg'
 
 # For changes in the ycloud package
 🧳 ycloud package:

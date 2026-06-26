@@ -43,6 +43,16 @@
       "types": "./dist/icons/*.svelte.d.ts",
       "svelte": "./dist/icons/*.js",
       "default": "./dist/icons/*.js"
+    },
+    "./business": {
+      "types": "./dist/business.d.ts",
+      "svelte": "./dist/business.js",
+      "default": "./dist/business.js"
+    },
+    "./business-icons/*": {
+      "types": "./dist/business-icons/*.svelte.d.ts",
+      "svelte": "./dist/business-icons/*.js",
+      "default": "./dist/business-icons/*.js"
     }
   },
   "scripts": {
@@ -50,12 +60,15 @@
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "copy:utils": "mkdir -p ./src/utils && cp -rf ../../packages/icons-shared/src/utils/hasA11yProp.ts ./src/utils/",
     "clean": "rm -rf dist stats ./src/icons/*.{ts,svelte} ./src/aliases/{aliases,prefixed,suffixed}.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --separateIconFileExport --separateIconFileExportExtension=.ts --withAliases --aliasesFileExtension=.ts --separateAliasesFile  --separateAliasesFileExtension=.ts --aliasImportFileExtension=.js --pretty=false",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --separateIconFileExport --separateIconFileExportExtension=.ts --withAliases --aliasesFileExtension=.ts --separateAliasesFile  --separateAliasesFileExtension=.ts --aliasImportFileExtension=.js --pretty=false && node ../../scripts/generateBusinessIconsPackage.mts svelte",
     "build:package": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' svelte-package --input ./src",
     "build:license": "node ./scripts/appendBlockComments.mts",
     "test": "pnpm copy:license && pnpm copy:utils && pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
     "typecheck": "pnpm copy:license && pnpm copy:utils && pnpm build:icons && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "@ycloud-web/icons": "workspace:*"
   },
   "devDependencies": {
     "@sveltejs/package": "^2.5.8",

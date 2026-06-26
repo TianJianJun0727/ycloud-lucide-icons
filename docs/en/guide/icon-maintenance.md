@@ -24,6 +24,8 @@ Related files:
 - `categories/*.json`: category keys, Chinese titles, and English titles.
 - `docs/`: generated documentation pages, search data, category pages, and icon detail pages.
 
+Business-specific icons live in `business-icons/<business-category>/*.svg`, with the first-level folder acting as the category. These SVGs use minimal cleanup: fixed colors, styles, and design-tool noise are removed, while size, stroke details, and geometry are preserved. They also do not need matching JSON metadata or generic category metadata. See [Business icons](/en/guide/business-icons).
+
 ## Icon Metadata
 
 YCloud Icons is Chinese-first at the source-data level:

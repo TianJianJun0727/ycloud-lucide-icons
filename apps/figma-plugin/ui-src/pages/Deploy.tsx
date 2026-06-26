@@ -3,13 +3,16 @@ import { h } from 'preact';
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { FRAME_NAME } from '../../common/constants';
 import {
+  getBusinessSvgIssues,
+  getBusinessIconNameIssues,
   getIconNameIssues,
   getIconNameWarnings,
   getSvgIssues,
+  sanitizeBusinessSvg,
   sanitizeSvg,
   toKebabCase,
 } from '../../common/iconRules';
-import type { YCloudIconData } from '../../common/types';
+import type { IconSourceType, YCloudIconData } from '../../common/types';
 import { useAppDispatch, useAppState } from '../contexts/AppContext';
 import styles from './Deploy.module.css';
 
@@ -26,6 +29,16 @@ type Category = {
   title: string;
   englishTitle: string;
 };
+
+const BUSINESS_CATEGORY_OPTIONS = [
+  { key: 'inbox', title: 'Inbox' },
+  { key: 'menu', title: 'Menu' },
+  { key: 'chatbot', title: 'Chatbot' },
+  { key: 'outlined', title: 'Outlined' },
+  { key: 'filled', title: 'Filled' },
+  { key: 'basic', title: 'Basic' },
+  { key: 'filter', title: 'Filter' },
+];
 
 type GitHubContentItem = {
   name: string;
@@ -45,6 +58,15 @@ type GitHubTree = {
   }>;
 };
 
+type BusinessIconIndex = {
+  icons?: Array<{
+    name?: string;
+    category?: string;
+    path?: string;
+    componentName?: string;
+  }>;
+};
+
 const GITHUB_API_VERSION = '2022-11-28';
 
 const getPreviewTooltip = (
@@ -52,9 +74,11 @@ const getPreviewTooltip = (
   data: YCloudIconData,
   isExistingIcon: boolean,
   issues: string[],
+  sourceType: IconSourceType,
 ) => {
   const title = data.ycloud?.nameEn || name;
   const issueTips = issues.map((issue) => {
+    if (sourceType === 'business') return issue;
     if (issue.includes('英文名')) return '英文图标名不符合规范';
     if (issue.includes('24 x 24')) return 'SVG 需要使用 24 x 24 画板，viewBox 需要是 0 0 24 24';
     if (issue.includes('style 属性')) return 'SVG 不能包含 style 属性';
@@ -74,7 +98,12 @@ function decodeBase64Json<T>(content: string): T {
   return JSON.parse(Base64.decode(content.replace(/\s/g, ''))) as T;
 }
 
-const Deploy = () => {
+interface DeployProps {
+  sourceType: IconSourceType;
+  setSourceType: (sourceType: IconSourceType) => void;
+}
+
+const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
   const dispatch = useAppDispatch();
   const {
     isDeploying,
@@ -87,7 +116,8 @@ const Deploy = () => {
     deployResult,
   } = useAppState();
   const [categories, setCategories] = useState<Category[]>([]);
-  const [existingIconNames, setExistingIconNames] = useState<string[]>([]);
+  const [existingGenericIconNames, setExistingGenericIconNames] = useState<string[]>([]);
+  const [existingBusinessIconNames, setExistingBusinessIconNames] = useState<string[]>([]);
   const [categoryQuery, setCategoryQuery] = useState('');
   const [isLoadingCategories, setIsLoadingCategories] = useState(false);
   const [categoryMessage, setCategoryMessage] = useState('');
@@ -96,8 +126,12 @@ const Deploy = () => {
   const [isRawOpen, setIsRawOpen] = useState(false);
   const hasAutoLoadedCategories = useRef(false);
   const previousIconNamesRef = useRef<Set<string>>(new Set());
+  const previousSourceTypeRef = useRef<IconSourceType>(sourceType);
   const icons = Object.entries(iconPreview);
+  const existingIconNames =
+    sourceType === 'business' ? existingBusinessIconNames : existingGenericIconNames;
   const existingIconSet = useMemo(() => new Set(existingIconNames), [existingIconNames]);
+  const getTargetIconKey = (name: string) => toKebabCase(name);
   const selectedIconSet = useMemo(() => new Set(selectedIconNames), [selectedIconNames]);
   const selectedIcons = useMemo(
     () => icons.filter(([name]) => selectedIconSet.has(name)),
@@ -106,26 +140,39 @@ const Deploy = () => {
   const iconQualityByName = useMemo(() => {
     return new Map(
       icons.map(([name, data]) => {
-        const cleanedSvg = sanitizeSvg(data.svg);
-        const issues = [...getIconNameIssues(name), ...getSvgIssues(cleanedSvg)];
+        const svg = sourceType === 'business' ? (data.sourceSvg ?? data.svg) : data.svg;
+        const cleanedSvg = sanitizeSvg(svg);
+        const issues =
+          sourceType === 'business'
+            ? [...getBusinessIconNameIssues(name), ...getBusinessSvgIssues(svg)]
+            : [...getIconNameIssues(name), ...getSvgIssues(cleanedSvg)];
         const warnings = [
-          ...getIconNameWarnings(name),
-          ...(data.svg.trim() !== cleanedSvg.trim() ? ['SVG 会在提交时自动清洗。'] : []),
+          ...(sourceType === 'business' ? [] : getIconNameWarnings(name)),
+          ...(sourceType === 'generic' && svg.trim() !== cleanedSvg.trim()
+            ? ['SVG 会在提交时自动清洗。']
+            : []),
         ];
         return [name, { issues, warnings }];
       }),
     );
-  }, [icons]);
+  }, [icons, sourceType]);
   const getIconQuality = (name: string) =>
     iconQualityByName.get(name) ?? { issues: [], warnings: [] };
   const deployableSelectedIcons = useMemo(
     () =>
       selectedIcons.filter(([name]) => {
         const quality = getIconQuality(name);
-        const isExistingIcon = existingIconSet.has(toKebabCase(name));
+        const isExistingIcon = existingIconSet.has(getTargetIconKey(name));
         return quality.issues.length === 0 && (allowExistingIconUpdate || !isExistingIcon);
       }),
-    [allowExistingIconUpdate, existingIconSet, iconQualityByName, selectedIcons],
+    [
+      allowExistingIconUpdate,
+      existingIconSet,
+      iconQualityByName,
+      selectedIcons,
+      sourceType,
+      ycloudMetadata.businessCategory,
+    ],
   );
   const skippedExistingIconCount = selectedIcons.length - deployableSelectedIcons.length;
   const blockedIconCount = icons.filter(([name]) => getIconQuality(name).issues.length > 0).length;
@@ -136,27 +183,34 @@ const Deploy = () => {
           name,
           {
             ...data,
-            svg: sanitizeSvg(data.svg),
+            svg:
+              sourceType === 'business'
+                ? sanitizeBusinessSvg(data.sourceSvg ?? data.svg)
+                : sanitizeSvg(data.svg),
           },
         ]),
       ),
-    [deployableSelectedIcons],
+    [deployableSelectedIcons, sourceType],
   );
 
   useEffect(() => {
     const nextIconNames = icons.map(([name]) => name);
     const nextIconNameSet = new Set(nextIconNames);
     const previousIconNameSet = previousIconNamesRef.current;
+    const didSourceTypeChange = previousSourceTypeRef.current !== sourceType;
     setSelectedIconNames((current) => {
       const currentSet = new Set(current);
       const isSelectable = (name: string) => {
-        const normalizedName = toKebabCase(name);
+        const normalizedName = getTargetIconKey(name);
         const quality = getIconQuality(name);
         return (
           quality.issues.length === 0 &&
           (allowExistingIconUpdate || !existingIconSet.has(normalizedName))
         );
       };
+      if (didSourceTypeChange) {
+        return nextIconNames.filter(isSelectable);
+      }
       const retained = current.filter((name) => nextIconNameSet.has(name) && isSelectable(name));
       const added = nextIconNames.filter(
         (name) => !currentSet.has(name) && !previousIconNameSet.has(name) && isSelectable(name),
@@ -164,7 +218,15 @@ const Deploy = () => {
       return [...retained, ...added];
     });
     previousIconNamesRef.current = nextIconNameSet;
-  }, [allowExistingIconUpdate, existingIconSet, iconPreview, iconQualityByName]);
+    previousSourceTypeRef.current = sourceType;
+  }, [
+    allowExistingIconUpdate,
+    existingIconSet,
+    iconPreview,
+    iconQualityByName,
+    sourceType,
+    ycloudMetadata.businessCategory,
+  ]);
 
   const updateMetadata = (patch: Partial<typeof ycloudMetadata>) => {
     dispatch({
@@ -185,8 +247,9 @@ const Deploy = () => {
         icons: selectedIconPreview,
         githubData,
         options: {
+          sourceType,
           png: pngOption,
-          fileName: 'icons',
+          fileName: sourceType === 'business' ? 'business-icons' : 'icons',
           ycloud: ycloudMetadata,
         },
       },
@@ -216,11 +279,14 @@ const Deploy = () => {
         Accept: 'application/vnd.github+json',
       };
       const apiUrl = `https://api.github.com/repos/${githubData.owner}/${githubData.name}`;
-      const [listResponse, treeResponse] = await Promise.all([
+      const [listResponse, treeResponse, businessIndexResponse] = await Promise.all([
         fetch(`${apiUrl}/contents/categories?ref=main`, {
           headers,
         }),
         fetch(`${apiUrl}/git/trees/main?recursive=1`, {
+          headers,
+        }),
+        fetch(`${apiUrl}/contents/business-icons/index.json?ref=main`, {
           headers,
         }),
       ]);
@@ -236,6 +302,28 @@ const Deploy = () => {
       const nextExistingIconNames = tree.tree
         .filter((item) => item.type === 'blob' && /^icons\/[^/]+\.svg$/.test(item.path))
         .map((item) => item.path.replace(/^icons\//, '').replace(/\.svg$/, ''));
+      const treeBusinessIconNames = tree.tree
+        .filter(
+          (item) => item.type === 'blob' && /^business-icons\/[^/]+\/[^/]+\.svg$/.test(item.path),
+        )
+        .map((item) => item.path.replace(/^business-icons\/[^/]+\//, '').replace(/\.svg$/, ''));
+      const businessIndex = businessIndexResponse.ok
+        ? decodeBase64Json<BusinessIconIndex>(
+            ((await businessIndexResponse.json()) as GitHubContentFile).content,
+          )
+        : businessIndexResponse.status === 404
+          ? { icons: [] }
+          : (() => {
+              throw new Error(
+                `${businessIndexResponse.status} ${businessIndexResponse.statusText}`,
+              );
+            })();
+      const indexBusinessIconNames = (businessIndex.icons ?? [])
+        .map((icon) => icon.name)
+        .filter((name): name is string => typeof name === 'string' && name.length > 0);
+      const nextExistingBusinessIconNames = Array.from(
+        new Set([...indexBusinessIconNames, ...treeBusinessIconNames]),
+      );
       const nextCategories = await Promise.all(
         jsonFiles.map(async (item) => {
           const response = await fetch(`${apiUrl}/contents/${item.path}?ref=main`, {
@@ -263,9 +351,10 @@ const Deploy = () => {
       setCategories(
         nextCategories.sort((left, right) => left.title.localeCompare(right.title, 'zh-Hans-CN')),
       );
-      setExistingIconNames(nextExistingIconNames);
+      setExistingGenericIconNames(nextExistingIconNames);
+      setExistingBusinessIconNames(nextExistingBusinessIconNames);
       setCategoryMessage(
-        `已同步 ${nextCategories.length} 个已有分类、${nextExistingIconNames.length} 个已有图标。`,
+        `已同步 ${nextCategories.length} 个已有分类、${nextExistingIconNames.length} 个通用图标、${nextExistingBusinessIconNames.length} 个业务图标。`,
       );
     } catch (error) {
       setCategoryMessage(
@@ -315,13 +404,16 @@ const Deploy = () => {
     githubApiKey === '' ? '访问凭证' : '',
     icons.length === 0 ? '图标源' : '',
     deployableSelectedIcons.length === 0 ? '本次提交图标' : '',
-    ycloudMetadata.categories.length === 0 ? '分类' : '',
+    sourceType === 'generic' && ycloudMetadata.categories.length === 0 ? '分类' : '',
+    sourceType === 'business' && ycloudMetadata.businessCategory === '' ? '业务分类' : '',
   ].filter(Boolean);
   const canDeploy =
     githubApiKey !== '' &&
     githubRepositoryUrl !== '' &&
     deployableSelectedIcons.length > 0 &&
-    ycloudMetadata.categories.length > 0 &&
+    (sourceType === 'business'
+      ? ycloudMetadata.businessCategory !== ''
+      : ycloudMetadata.categories.length > 0) &&
     !isDeploying;
 
   return (
@@ -353,131 +445,203 @@ const Deploy = () => {
             <span className={styles.muted}>请先完成连接设置</span>
           )}
         </div>
-      </section>
-
-      <section className={styles.card}>
-        <div className={styles.row}>
-          <div>
-            <h2 className={styles.title}>分类</h2>
-            <p className={styles.muted}>选择目标图标库中已有分类。</p>
-          </div>
-          <button
-            className={styles.secondaryButton}
-            type="button"
-            disabled={isLoadingCategories}
-            onClick={loadCategories}
-          >
-            {isLoadingCategories ? '刷新中' : '刷新分类'}
-          </button>
-        </div>
-        {categoryMessage && (
-          <p
-            className={[
-              styles.message,
-              categoryMessage.includes('失败') ? styles.messageError : '',
-            ].join(' ')}
-          >
-            {categoryMessage}
-          </p>
-        )}
-        <div className={styles.fieldGroup}>
-          <input
-            className={styles.input}
-            placeholder="搜索分类名称或标识"
-            value={categoryQuery}
-            onInput={(event) => {
-              setCategoryQuery(event.currentTarget.value);
-            }}
-          />
-        </div>
-        <div className={styles.selectedTags}>
-          {ycloudMetadata.categories.length > 0 ? (
-            ycloudMetadata.categories.map((categoryKey) => {
-              const category = categoryByKey.get(categoryKey);
-              return (
-                <span
-                  key={categoryKey}
-                  className={styles.tag}
-                >
-                  {getCategoryLabel(category, categoryKey)}
-                  <button
-                    className={styles.tagButton}
-                    type="button"
-                    aria-label={`移除分类 ${getCategoryLabel(category, categoryKey)}`}
-                    onClick={() => {
-                      toggleCategory(categoryKey);
-                    }}
-                  >
-                    ×
-                  </button>
-                </span>
-              );
-            })
-          ) : (
-            <span className={styles.muted}>尚未选择分类</span>
-          )}
-        </div>
-        <div className={styles.categoryList}>
-          {filteredCategories.map((category) => (
-            <div
-              key={category.key}
-              className={styles.categoryItem}
+        <div className={styles.sourceSelector}>
+          <span className={styles.label}>提交类型</span>
+          <div className={styles.sourceOptions}>
+            <button
+              className={[
+                styles.sourceOption,
+                sourceType === 'generic' ? styles.sourceOptionActive : '',
+              ].join(' ')}
+              type="button"
+              onClick={() => {
+                setSourceType('generic');
+              }}
             >
-              <label className={styles.checkboxLabel}>
-                <input
-                  className={styles.checkbox}
-                  type="checkbox"
-                  checked={ycloudMetadata.categories.includes(category.key)}
-                  onChange={() => {
-                    toggleCategory(category.key);
-                  }}
-                />
-                <span className={styles.checkboxBox} />
-                <span className={styles.categoryText}>
-                  <span className={styles.categoryTitle}>{category.title}</span>
-                  <span className={styles.categoryMeta}>
-                    {category.englishTitle || category.title}
-                  </span>
-                </span>
-              </label>
-            </div>
-          ))}
-          {filteredCategories.length === 0 && (
-            <div className={styles.empty}>
-              <p className={styles.title}>暂无分类</p>
-              <p className={styles.muted}>请先刷新目标图标库分类，或调整搜索关键词。</p>
-            </div>
-          )}
+              通用图标
+            </button>
+            <button
+              className={[
+                styles.sourceOption,
+                sourceType === 'business' ? styles.sourceOptionActive : '',
+              ].join(' ')}
+              type="button"
+              onClick={() => {
+                setSourceType('business');
+              }}
+            >
+              业务图标
+            </button>
+          </div>
         </div>
+        <p className={styles.sourceHint}>
+          {sourceType === 'business'
+            ? '当前提交到 business-icons/<分类>/*.svg，不需要通用元数据。'
+            : '当前提交到 icons/*.svg，需要分类和通用元数据。'}
+        </p>
       </section>
 
-      <section className={styles.card}>
-        <h2 className={styles.title}>图标元数据</h2>
-        <div className={styles.fieldGroup}>
-          <span className={styles.label}>中文标签，逗号分隔</span>
-          <input
-            className={styles.input}
-            placeholder="箭头, 方向"
-            value={joinList(ycloudMetadata.tagsZh)}
-            onInput={(event) => {
-              updateMetadata({ tagsZh: splitList(event.currentTarget.value) });
-            }}
-          />
-          <p className={styles.muted}>用于搜索和筛选，后续流程会自动补齐英文内容。</p>
-        </div>
-        <div className={styles.fieldGroup}>
-          <span className={styles.label}>中文使用场景，逗号分隔</span>
-          <input
-            className={styles.input}
-            placeholder="工具栏, 导航"
-            value={joinList(ycloudMetadata.useCasesZh)}
-            onInput={(event) => {
-              updateMetadata({ useCasesZh: splitList(event.currentTarget.value) });
-            }}
-          />
-          <p className={styles.muted}>用于描述图标适合出现的位置或业务场景。</p>
-        </div>
-      </section>
+      {sourceType === 'business' && (
+        <section className={styles.card}>
+          <h2 className={styles.title}>业务分类</h2>
+          <div className={styles.fieldGroup}>
+            <span className={styles.label}>目标目录</span>
+            <select
+              className={styles.input}
+              value={ycloudMetadata.businessCategory}
+              onChange={(event) => {
+                updateMetadata({ businessCategory: event.currentTarget.value });
+              }}
+            >
+              <option value="">请选择业务分类</option>
+              {BUSINESS_CATEGORY_OPTIONS.map((category) => (
+                <option
+                  key={category.key}
+                  value={category.key}
+                >
+                  {category.title}
+                </option>
+              ))}
+            </select>
+            <p className={styles.muted}>
+              图标将提交到{' '}
+              <strong>
+                business-icons/
+                {ycloudMetadata.businessCategory || '<分类>'}/
+              </strong>
+              目录。
+            </p>
+          </div>
+        </section>
+      )}
+
+      {sourceType === 'generic' && (
+        <section className={styles.card}>
+          <div className={styles.row}>
+            <div>
+              <h2 className={styles.title}>分类</h2>
+              <p className={styles.muted}>选择目标图标库中已有分类。</p>
+            </div>
+            <button
+              className={styles.secondaryButton}
+              type="button"
+              disabled={isLoadingCategories}
+              onClick={loadCategories}
+            >
+              {isLoadingCategories ? '刷新中' : '刷新分类'}
+            </button>
+          </div>
+          {categoryMessage && (
+            <p
+              className={[
+                styles.message,
+                categoryMessage.includes('失败') ? styles.messageError : '',
+              ].join(' ')}
+            >
+              {categoryMessage}
+            </p>
+          )}
+          <div className={styles.fieldGroup}>
+            <input
+              className={styles.input}
+              placeholder="搜索分类名称或标识"
+              value={categoryQuery}
+              onInput={(event) => {
+                setCategoryQuery(event.currentTarget.value);
+              }}
+            />
+          </div>
+          <div className={styles.selectedTags}>
+            {ycloudMetadata.categories.length > 0 ? (
+              ycloudMetadata.categories.map((categoryKey) => {
+                const category = categoryByKey.get(categoryKey);
+                return (
+                  <span
+                    key={categoryKey}
+                    className={styles.tag}
+                  >
+                    {getCategoryLabel(category, categoryKey)}
+                    <button
+                      className={styles.tagButton}
+                      type="button"
+                      aria-label={`移除分类 ${getCategoryLabel(category, categoryKey)}`}
+                      onClick={() => {
+                        toggleCategory(categoryKey);
+                      }}
+                    >
+                      ×
+                    </button>
+                  </span>
+                );
+              })
+            ) : (
+              <span className={styles.muted}>尚未选择分类</span>
+            )}
+          </div>
+          <div className={styles.categoryList}>
+            {filteredCategories.map((category) => (
+              <div
+                key={category.key}
+                className={styles.categoryItem}
+              >
+                <label className={styles.checkboxLabel}>
+                  <input
+                    className={styles.checkbox}
+                    type="checkbox"
+                    checked={ycloudMetadata.categories.includes(category.key)}
+                    onChange={() => {
+                      toggleCategory(category.key);
+                    }}
+                  />
+                  <span className={styles.checkboxBox} />
+                  <span className={styles.categoryText}>
+                    <span className={styles.categoryTitle}>{category.title}</span>
+                    <span className={styles.categoryMeta}>
+                      {category.englishTitle || category.title}
+                    </span>
+                  </span>
+                </label>
+              </div>
+            ))}
+            {filteredCategories.length === 0 && (
+              <div className={styles.empty}>
+                <p className={styles.title}>暂无分类</p>
+                <p className={styles.muted}>请先刷新目标图标库分类，或调整搜索关键词。</p>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {sourceType === 'generic' && (
+        <section className={styles.card}>
+          <h2 className={styles.title}>图标元数据</h2>
+          <div className={styles.fieldGroup}>
+            <span className={styles.label}>中文标签，逗号分隔</span>
+            <input
+              className={styles.input}
+              placeholder="箭头, 方向"
+              value={joinList(ycloudMetadata.tagsZh)}
+              onInput={(event) => {
+                updateMetadata({ tagsZh: splitList(event.currentTarget.value) });
+              }}
+            />
+            <p className={styles.muted}>用于搜索和筛选，后续流程会自动补齐英文内容。</p>
+          </div>
+          <div className={styles.fieldGroup}>
+            <span className={styles.label}>中文使用场景，逗号分隔</span>
+            <input
+              className={styles.input}
+              placeholder="工具栏, 导航"
+              value={joinList(ycloudMetadata.useCasesZh)}
+              onInput={(event) => {
+                updateMetadata({ useCasesZh: splitList(event.currentTarget.value) });
+              }}
+            />
+            <p className={styles.muted}>用于描述图标适合出现的位置或业务场景。</p>
+          </div>
+        </section>
+      )}
 
       <section className={styles.card}>
         <div className={styles.row}>
@@ -508,7 +672,7 @@ const Deploy = () => {
         )}
         {blockedIconCount > 0 && (
           <p className={[styles.message, styles.messageError].join(' ')}>
-            有 {blockedIconCount} 个图标命名不符合提交规则，已暂时禁用。
+            有 {blockedIconCount} 个图标不符合当前提交规则，已暂时禁用。
           </p>
         )}
         {icons.length > 0 && (
@@ -523,7 +687,7 @@ const Deploy = () => {
                       const quality = getIconQuality(name);
                       return (
                         quality.issues.length === 0 &&
-                        (allowExistingIconUpdate || !existingIconSet.has(toKebabCase(name)))
+                        (allowExistingIconUpdate || !existingIconSet.has(getTargetIconKey(name)))
                       );
                     })
                     .map(([name]) => name),
@@ -546,11 +710,19 @@ const Deploy = () => {
         <div className={styles.preview}>
           {icons.map(([name, data]) => {
             const { svg } = data;
-            const isExistingIcon = existingIconSet.has(toKebabCase(name));
+            const isExistingIcon = existingIconSet.has(getTargetIconKey(name));
             const isDisabledExistingIcon = isExistingIcon && !allowExistingIconUpdate;
             const quality = getIconQuality(name);
             const isBlockedIcon = quality.issues.length > 0;
-            const tooltip = getPreviewTooltip(name, data, isExistingIcon, quality.issues);
+            const tooltip = getPreviewTooltip(
+              name,
+              data,
+              isExistingIcon,
+              quality.issues,
+              sourceType,
+            );
+            const previewSvg =
+              sourceType === 'business' ? sanitizeBusinessSvg(data.sourceSvg ?? svg) : svg;
             return (
               <label
                 className={styles.previewItem}
@@ -575,7 +747,7 @@ const Deploy = () => {
                 <span className={styles.checkboxBox} />
                 <span
                   className={styles.previewIcon}
-                  dangerouslySetInnerHTML={{ __html: svg }}
+                  dangerouslySetInnerHTML={{ __html: previewSvg }}
                 />
               </label>
             );
@@ -648,7 +820,11 @@ const Deploy = () => {
             <p className={styles.footerHint}>{deployResult.message}</p>
           )
         ) : (
-          <p className={styles.footerHint}>将提交 SVG、图标信息和必要的分类信息。</p>
+          <p className={styles.footerHint}>
+            {sourceType === 'business'
+              ? `将提交到 business-icons/${ycloudMetadata.businessCategory || '<分类>'}/，并执行业务 SVG 轻量清洗。`
+              : '将提交 SVG、图标信息和必要的分类信息。'}
+          </p>
         )}
         <button
           className={styles.primaryButton}

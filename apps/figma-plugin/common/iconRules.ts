@@ -42,6 +42,14 @@ export function getIconNameIssues(rawName: string) {
   }
   return issues;
 }
+export function getBusinessIconNameIssues(rawName: string) {
+  const issues: string[] = [];
+  const parsedName = parseIconName(rawName);
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(parsedName.fileName)) {
+    issues.push('业务图标名需要能转换为小写短横线命名');
+  }
+  return issues;
+}
 export function getIconNameWarnings(rawName: string) {
   const warnings: string[] = [];
   const parsedName = parseIconName(rawName);
@@ -69,6 +77,27 @@ export function getSvgIssues(svg: string) {
   }
   return issues;
 }
+export function getBusinessSvgIssues(svg: string) {
+  const issues: string[] = [];
+  const openTag = svg.match(/<svg\b[^>]*>/i)?.[0] ?? '';
+  if (!openTag) {
+    issues.push('业务 SVG 根节点需要是 <svg>');
+    return issues;
+  }
+  if (!/\bviewBox="[^"]+"/i.test(openTag)) {
+    issues.push('业务 SVG 需要包含 viewBox');
+  }
+  if (/<\s*(?:script|foreignObject)\b/i.test(svg)) {
+    issues.push('业务 SVG 不能包含 script 或 foreignObject');
+  }
+  if (/\son[a-z]+\s*=/i.test(svg)) {
+    issues.push('业务 SVG 不能包含事件属性');
+  }
+  if (/javascript\s*:/i.test(svg)) {
+    issues.push('业务 SVG 不能包含 javascript: URL');
+  }
+  return issues;
+}
 export function sanitizeSvg(svg: string) {
   const openTag = svg.match(/<svg\b[^>]*>/i)?.[0];
   if (!openTag) return svg.trim();
@@ -88,5 +117,29 @@ export function sanitizeSvg(svg: string) {
     .replace(/>\s*</g, '>\n  <')
     .replace(/\s*\/>/g, ' />')
     .trim();
+  return `${normalized}\n`;
+}
+
+export function sanitizeBusinessSvg(svg: string) {
+  const openTag = svg.match(/<svg\b[^>]*>/i)?.[0];
+  if (!openTag) return svg.trim();
+  const referencedIds = new Set([...svg.matchAll(/url\(#([^)]+)\)/g)].map((match) => match[1]));
+
+  const normalized = svg
+    .replace(
+      /<\s*(?:script|foreignObject)\b[^>]*>[\s\S]*?<\s*\/\s*(?:script|foreignObject)\s*>/gi,
+      '',
+    )
+    .replace(/<\s*(?:script|foreignObject)\b[^>]*\/\s*>/gi, '')
+    .replace(/\son[a-z]+\s*=\s*"[^"]*"/gi, '')
+    .replace(/\s(?:style|class)="[^"]*"/gi, '')
+    .replace(/\sdata-[^\s=]+="[^"]*"/gi, '')
+    .replace(/\sid="([^"]*)"/gi, (match, id) => (referencedIds.has(id) ? match : ''))
+    .replace(/\s(?:href|xlink:href)="javascript:[^"]*"/gi, '')
+    .replace(/\s(fill|stroke)="(?!none\b|currentColor\b)[^"]+"/gi, ' $1="currentColor"')
+    .replace(/>\s*</g, '>\n  <')
+    .replace(/\s*\/>/g, ' />')
+    .trim();
+
   return `${normalized}\n`;
 }

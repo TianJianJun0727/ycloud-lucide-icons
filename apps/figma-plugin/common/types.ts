@@ -2,6 +2,7 @@ type Base64Data = string;
 export interface ExportedIconData {
   name: string;
   svg: string;
+  sourceSvg?: string;
   png: {
     '1x': Base64Data | null;
     '2x': Base64Data | null;
@@ -15,12 +16,14 @@ export interface ExportedIconData {
     description?: string;
   };
 }
+export type IconSourceType = 'generic' | 'business';
 export interface GithubData {
   owner: string;
   name: string;
   apiKey: string;
 }
 export interface ExportOptions {
+  sourceType: IconSourceType;
   png: PngOptionPayload;
   fileName: string;
   ycloud: YCloudMetadataOptions;
@@ -33,6 +36,7 @@ export interface PngOptionPayload {
 }
 export interface YCloudMetadataOptions {
   categories: string[];
+  businessCategory: string;
   tagsZh: string[];
   useCasesZh: string[];
 }

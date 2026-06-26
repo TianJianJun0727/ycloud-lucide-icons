@@ -52,6 +52,13 @@
       "import": "./dist/esm/icons/*.mjs",
       "browser": "./dist/esm/icons/*.mjs",
       "require": "./dist/cjs/icons/*.js"
+    },
+    "./business": {
+      "types": "./dist/types/business.d.ts",
+      "solid": "./dist/source/business.jsx",
+      "import": "./dist/esm/business.mjs",
+      "browser": "./dist/esm/business.mjs",
+      "require": "./dist/cjs/business.js"
     }
   },
   "scripts": {
@@ -61,11 +68,14 @@
     "build:transpile": "tsc --jsx preserve -t es2020 --rootDir src --outDir dist --noEmit false",
     "build:version": "node ./scripts/replaceVersion.mjs",
     "build:bundle": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c rollup.config.mjs",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts solid",
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@ycloud-web/icons": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
