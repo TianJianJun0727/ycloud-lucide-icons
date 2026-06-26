@@ -1,13 +1,5 @@
 {
-  "categories": [
-    "inbox",
-    "menu",
-    "chatbot",
-    "outlined",
-    "filled",
-    "basic",
-    "filter"
-  ],
+  "categories": ["inbox", "menu", "chatbot", "outlined", "filled", "basic", "filter"],
   "icons": [
     {
       "category": "chatbot",
