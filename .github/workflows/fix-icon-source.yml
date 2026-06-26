@@ -54,6 +54,19 @@ jobs:
             icons/*.json
             categories/*.json
 
+      - name: Detect changed source scope
+        id: source-change-kind
+        run: |
+          business_changed=false
+
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ "$file" == business-icons/* ]]; then
+              business_changed=true
+            fi
+          done
+
+          echo "business_changed=$business_changed" >> "$GITHUB_OUTPUT"
+
       - name: Optimize changed SVGs
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
@@ -124,7 +137,9 @@ jobs:
         run: |
           node ./scripts/checkSvgSource.mts
           pnpm exec prettier --parser html --check 'icons/*.svg'
-          node ./scripts/checkBusinessSvgSource.mts
+          if [[ "${{ steps.source-change-kind.outputs.business_changed }}" == "true" ]]; then
+            node ./scripts/checkBusinessSvgSource.mts
+          fi
           pnpm lint:json
           ADDED_FILES="${{ steps.changed-files.outputs.added_files }}" pnpm checkIcons
           icon_json_files=()
