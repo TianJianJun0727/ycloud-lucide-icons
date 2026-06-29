@@ -55,9 +55,12 @@ jobs:
       version: ${{ steps.version.outputs.version }}
       npm-tag: ${{ steps.version.outputs.npm-tag }}
       ref: ${{ steps.version.outputs.ref }}
+      core-published: ${{ steps.version.outputs.core-published }}
+      frameworks-matrix: ${{ steps.version.outputs.frameworks-matrix }}
+      has-frameworks: ${{ steps.version.outputs.has-frameworks }}
 
     steps:
-      - name: Resolve version and tag
+      - name: Resolve release plan
         id: version
         shell: bash
         run: |
@@ -74,6 +77,56 @@ jobs:
           echo "version=${version}" >> "$GITHUB_OUTPUT"
           echo "npm-tag=${npm_tag}" >> "$GITHUB_OUTPUT"
           echo "ref=${INPUT_REF:-v${version}}" >> "$GITHUB_OUTPUT"
+          export RELEASE_VERSION="${version}"
+
+          node <<'NODE' >> "$GITHUB_OUTPUT"
+          const { execFileSync } = require('node:child_process');
+
+          const version = process.env.RELEASE_VERSION;
+          const packages = [
+            { package: '@ycloud-web/icons-react', hasTest: true },
+            { package: '@ycloud-web/icons-vue', hasTest: true },
+            { package: '@ycloud-web/icons-data', hasTest: true },
+            { package: '@ycloud-web/icons-angular', hasTest: true },
+            { package: '@ycloud-web/icons-astro', hasTest: true },
+            { package: '@ycloud-web/icons-svelte', hasTest: true },
+            { package: '@ycloud-web/icons-solid', hasTest: true },
+            { package: '@ycloud-web/icons-preact', hasTest: true },
+            { package: '@ycloud-web/icons-react-native', hasTest: true },
+            { package: '@ycloud-web/icons-static', hasTest: false },
+          ];
+
+          const isPublished = (packageName) => {
+            try {
+              execFileSync('npm', ['view', `${packageName}@${version}`, 'version'], {
+                stdio: 'ignore',
+              });
+              return true;
+            } catch {
+              return false;
+            }
+          };
+
+          const corePublished = isPublished('@ycloud-web/icons');
+          const unpublishedFrameworks = packages.filter((item) => !isPublished(item.package));
+
+          console.log(`core-published=${corePublished}`);
+          console.log(`frameworks-matrix=${JSON.stringify(unpublishedFrameworks)}`);
+          console.log(`has-frameworks=${unpublishedFrameworks.length > 0}`);
+
+          if (corePublished) {
+            console.error(`@ycloud-web/icons@${version} is already published.`);
+          } else {
+            console.error(`@ycloud-web/icons@${version} is not published yet.`);
+          }
+
+          for (const item of packages) {
+            const state = unpublishedFrameworks.some((unpublished) => unpublished.package === item.package)
+              ? 'not published yet'
+              : 'already published';
+            console.error(`${item.package}@${version} is ${state}.`);
+          }
+          NODE
         env:
           VERSION_REF: ${{ inputs.version || github.ref }}
           INPUT_TAG: ${{ inputs.tag || 'latest' }}
@@ -89,61 +142,72 @@ jobs:
 
     steps:
       - name: Configure git default branch
+        if: needs.prepare.outputs.core-published != 'true'
         run: git config --global init.defaultBranch main
 
       - uses: actions/checkout@v7
+        if: needs.prepare.outputs.core-published != 'true'
         with:
           fetch-depth: 0
           ref: ${{ needs.prepare.outputs.ref }}
 
       - uses: ./.github/actions/setup-pnpm
+        if: needs.prepare.outputs.core-published != 'true'
         with:
           registry-url: https://registry.npmjs.org
           cache-mode: restore
 
       - name: Verify pnpm version
+        if: needs.prepare.outputs.core-published != 'true'
         run: pnpm --version
 
       - name: Install dependencies
+        if: needs.prepare.outputs.core-published != 'true'
         run: pnpm install --frozen-lockfile
 
       - name: Set package version
+        if: needs.prepare.outputs.core-published != 'true'
         run: node ./scripts/syncPackageVersions.mts "${VERSION}"
         env:
           VERSION: ${{ needs.prepare.outputs.version }}
 
-      - name: Check package version
-        id: package-version
-        run: |
-          if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
-            echo "${PACKAGE}@${VERSION} is already published."
-            echo "published=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "${PACKAGE}@${VERSION} is not published yet."
-            echo "published=false" >> "$GITHUB_OUTPUT"
-          fi
-        env:
-          PACKAGE: '@ycloud-web/icons'
-          VERSION: ${{ needs.prepare.outputs.version }}
-
       - name: Build
-        if: steps.package-version.outputs.published != 'true'
+        if: needs.prepare.outputs.core-published != 'true'
         run: pnpm --filter @ycloud-web/icons build
 
       - name: Test
-        if: steps.package-version.outputs.published != 'true'
+        if: needs.prepare.outputs.core-published != 'true'
         run: pnpm --filter @ycloud-web/icons test
 
       - name: Publish
-        if: steps.package-version.outputs.published != 'true'
+        if: needs.prepare.outputs.core-published != 'true'
         shell: bash
         run: |
+          wait_for_package_version() {
+            for visibility_attempt in 1 2 3 4 5 6; do
+              if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
+                echo "${PACKAGE}@${VERSION} is visible on npm."
+                return 0
+              fi
+
+              echo "Waiting for ${PACKAGE}@${VERSION} to become visible on npm (${visibility_attempt}/6)."
+              sleep 10
+            done
+
+            return 1
+          }
+
           for attempt in 1 2 3; do
             if pnpm --filter "${PACKAGE}" publish --tag "${NPM_TAG}" --access public --provenance --no-git-checks; then
-              break
+              if wait_for_package_version; then
+                exit 0
+              fi
+
+              echo "${PACKAGE}@${VERSION} was published, but npm did not expose it before the visibility timeout." >&2
+              exit 1
             fi
 
-            if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
+            if wait_for_package_version; then
               echo "${PACKAGE}@${VERSION} is now published after a failed publish response."
               exit 0
             fi
@@ -155,8 +219,6 @@ jobs:
 
             sleep $((attempt * 20))
           done
-
-          npm view "${PACKAGE}@${VERSION}" version >/dev/null
         env:
           PACKAGE: '@ycloud-web/icons'
           VERSION: ${{ needs.prepare.outputs.version }}
@@ -164,7 +226,7 @@ jobs:
           NPM_CONFIG_PROVENANCE: true
 
   release-frameworks:
-    if: github.repository == 'TianJianJun0727/ycloud-icons'
+    if: github.repository == 'TianJianJun0727/ycloud-icons' && needs.prepare.outputs.has-frameworks == 'true'
     runs-on: ubuntu-latest
     needs:
       - prepare
@@ -175,27 +237,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - package: '@ycloud-web/icons-react'
-            hasTest: true
-          - package: '@ycloud-web/icons-vue'
-            hasTest: true
-          - package: '@ycloud-web/icons-data'
-            hasTest: true
-          - package: '@ycloud-web/icons-angular'
-            hasTest: true
-          - package: '@ycloud-web/icons-astro'
-            hasTest: true
-          - package: '@ycloud-web/icons-svelte'
-            hasTest: true
-          - package: '@ycloud-web/icons-solid'
-            hasTest: true
-          - package: '@ycloud-web/icons-preact'
-            hasTest: true
-          - package: '@ycloud-web/icons-react-native'
-            hasTest: true
-          - package: '@ycloud-web/icons-static'
-            hasTest: false
+        include: ${{ fromJson(needs.prepare.outputs.frameworks-matrix) }}
 
     steps:
       - name: Configure git default branch
@@ -222,42 +264,44 @@ jobs:
         env:
           VERSION: ${{ needs.prepare.outputs.version }}
 
-      - name: Check package version
-        id: package-version
-        run: |
-          if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
-            echo "${PACKAGE}@${VERSION} is already published."
-            echo "published=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "${PACKAGE}@${VERSION} is not published yet."
-            echo "published=false" >> "$GITHUB_OUTPUT"
-          fi
-        env:
-          PACKAGE: ${{ matrix.package }}
-          VERSION: ${{ needs.prepare.outputs.version }}
-
       - name: Build core package
-        if: steps.package-version.outputs.published != 'true'
         run: pnpm --filter @ycloud-web/icons build
 
       - name: Build
-        if: steps.package-version.outputs.published != 'true'
         run: pnpm --filter ${{ matrix.package }} build
 
       - name: Test
-        if: ${{ matrix.hasTest == true && steps.package-version.outputs.published != 'true' }}
+        if: ${{ matrix.hasTest == true }}
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        if: steps.package-version.outputs.published != 'true'
         shell: bash
         run: |
+          wait_for_package_version() {
+            for visibility_attempt in 1 2 3 4 5 6; do
+              if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
+                echo "${PACKAGE}@${VERSION} is visible on npm."
+                return 0
+              fi
+
+              echo "Waiting for ${PACKAGE}@${VERSION} to become visible on npm (${visibility_attempt}/6)."
+              sleep 10
+            done
+
+            return 1
+          }
+
           for attempt in 1 2 3; do
             if pnpm --filter "${PACKAGE}" publish --tag "${NPM_TAG}" --access public --provenance --no-git-checks; then
-              break
+              if wait_for_package_version; then
+                exit 0
+              fi
+
+              echo "${PACKAGE}@${VERSION} was published, but npm did not expose it before the visibility timeout." >&2
+              exit 1
             fi
 
-            if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
+            if wait_for_package_version; then
               echo "${PACKAGE}@${VERSION} is now published after a failed publish response."
               exit 0
             fi
@@ -269,8 +313,6 @@ jobs:
 
             sleep $((attempt * 20))
           done
-
-          npm view "${PACKAGE}@${VERSION}" version >/dev/null
         env:
           PACKAGE: ${{ matrix.package }}
           VERSION: ${{ needs.prepare.outputs.version }}
@@ -278,7 +320,7 @@ jobs:
           NPM_CONFIG_PROVENANCE: true
 
   github-release:
-    if: github.repository == 'TianJianJun0727/ycloud-icons'
+    if: ${{ always() && github.repository == 'TianJianJun0727/ycloud-icons' && needs.prepare.result == 'success' && needs.release-core.result == 'success' && (needs.release-frameworks.result == 'success' || needs.release-frameworks.result == 'skipped') }}
     needs:
       - prepare
       - release-core
