@@ -28,15 +28,6 @@
       }
     },
     {
-      "name": "outlined",
-      "title": "线性",
-      "i18n": {
-        "en": {
-          "title": "Outlined"
-        }
-      }
-    },
-    {
       "name": "filled",
       "title": "填充",
       "i18n": {
