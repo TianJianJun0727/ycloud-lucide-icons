@@ -1,0 +1,83 @@
+{
+  "categories": ["inbox", "menu", "chatbot", "outlined", "filled", "basic", "filter"],
+  "icons": [
+    {
+      "category": "menu",
+      "name": "campaign",
+      "path": "business-icons/menu/campaign.svg",
+      "componentName": "Campaign"
+    },
+    {
+      "category": "menu",
+      "name": "cart",
+      "path": "business-icons/menu/cart.svg",
+      "componentName": "Cart"
+    },
+    {
+      "category": "menu",
+      "name": "chatbot",
+      "path": "business-icons/menu/chatbot.svg",
+      "componentName": "Chatbot"
+    },
+    {
+      "category": "menu",
+      "name": "contact",
+      "path": "business-icons/menu/contact.svg",
+      "componentName": "Contact"
+    },
+    {
+      "category": "menu",
+      "name": "ctwa",
+      "path": "business-icons/menu/ctwa.svg",
+      "componentName": "Ctwa"
+    },
+    {
+      "category": "menu",
+      "name": "developers",
+      "path": "business-icons/menu/developers.svg",
+      "componentName": "Developers"
+    },
+    {
+      "category": "menu",
+      "name": "home",
+      "path": "business-icons/menu/home.svg",
+      "componentName": "Home"
+    },
+    {
+      "category": "menu",
+      "name": "inbox",
+      "path": "business-icons/menu/inbox.svg",
+      "componentName": "Inbox"
+    },
+    {
+      "category": "menu",
+      "name": "integration",
+      "path": "business-icons/menu/integration.svg",
+      "componentName": "Integration"
+    },
+    {
+      "category": "menu",
+      "name": "journey",
+      "path": "business-icons/menu/journey.svg",
+      "componentName": "Journey"
+    },
+    {
+      "category": "menu",
+      "name": "order",
+      "path": "business-icons/menu/order.svg",
+      "componentName": "Order"
+    },
+    {
+      "category": "menu",
+      "name": "partner",
+      "path": "business-icons/menu/partner.svg",
+      "componentName": "Partner"
+    },
+    {
+      "category": "menu",
+      "name": "whatsapp",
+      "path": "business-icons/menu/whatsapp.svg",
+      "componentName": "Whatsapp"
+    }
+  ]
+}
