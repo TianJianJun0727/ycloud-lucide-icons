@@ -3,6 +3,12 @@
   "icons": [
     {
       "category": "menu",
+      "name": "billing",
+      "path": "business-icons/menu/billing.svg",
+      "componentName": "Billing"
+    },
+    {
+      "category": "menu",
       "name": "campaign",
       "path": "business-icons/menu/campaign.svg",
       "componentName": "Campaign"
@@ -21,6 +27,12 @@
     },
     {
       "category": "menu",
+      "name": "company",
+      "path": "business-icons/menu/company.svg",
+      "componentName": "Company"
+    },
+    {
+      "category": "menu",
       "name": "contact",
       "path": "business-icons/menu/contact.svg",
       "componentName": "Contact"
@@ -36,6 +48,12 @@
       "name": "developers",
       "path": "business-icons/menu/developers.svg",
       "componentName": "Developers"
+    },
+    {
+      "category": "menu",
+      "name": "help",
+      "path": "business-icons/menu/help.svg",
+      "componentName": "Help"
     },
     {
       "category": "menu",
@@ -63,6 +81,12 @@
     },
     {
       "category": "menu",
+      "name": "logout",
+      "path": "business-icons/menu/logout.svg",
+      "componentName": "Logout"
+    },
+    {
+      "category": "menu",
       "name": "order",
       "path": "business-icons/menu/order.svg",
       "componentName": "Order"
@@ -72,6 +96,12 @@
       "name": "partner",
       "path": "business-icons/menu/partner.svg",
       "componentName": "Partner"
+    },
+    {
+      "category": "menu",
+      "name": "settings",
+      "path": "business-icons/menu/settings.svg",
+      "componentName": "Settings"
     },
     {
       "category": "menu",
