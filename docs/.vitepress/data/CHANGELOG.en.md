@@ -4,7 +4,7 @@
 
 ## v0.2.0 - 2026-06-29
 
-- Added categorized business icons with 89 new icons
+- Added categorized business icons with 19 new icons
 - Removed several icons including settings-outlined and business icons
 - Introduced Figma plugin for icon synchronization
 - Optimized build toolchain with Vite upgrade
