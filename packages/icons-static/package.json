@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-static",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "description": "Static SVG and font assets for YCloud Icons.",
   "keywords": [
     "Feather",

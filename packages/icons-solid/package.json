@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-solid",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "description": "A YCloud icon library package for Solid applications.",
   "keywords": [
     "Feather",
