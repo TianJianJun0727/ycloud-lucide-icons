@@ -2,14 +2,14 @@
   "tag": "v0.2.0",
   "date": "2026-06-29",
   "zh": [
-    "新增业务图标分类，添加了89个新图标",
+    "新增业务图标分类，添加了19个新图标",
     "移除部分图标，包括设置轮廓图标和业务图标",
     "引入Figma插件，支持图标同步",
     "优化构建工具链，升级Vite",
     "改进CI/CD流程，提升发布稳定性"
   ],
   "en": [
-    "Added categorized business icons with 89 new icons",
+    "Added categorized business icons with 19 new icons",
     "Removed several icons including settings-outlined and business icons",
     "Introduced Figma plugin for icon synchronization",
     "Optimized build toolchain with Vite upgrade",
