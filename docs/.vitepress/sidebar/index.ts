@@ -111,6 +111,11 @@ const baseGuideSidebarTop: DefaultTheme.SidebarItem[] = [
     items: [
       { text: 'What is YCloud Icons?', link: '/guide/' },
       { text: 'Installation', link: '/guide/installation' },
+      {
+        text: 'Business icons',
+        link: '/guide/business-icons',
+        desc: 'Source, validation, and submission rules for business-specific SVG icons.',
+      },
     ],
   },
 ];
@@ -140,7 +145,6 @@ function withGuideMaintenanceItems(source: Sidebar): Sidebar {
         const hasGuide = items.some((child) => child.link === '/guide/icon-design-guide');
         const hasMaintenance = items.some((child) => child.link === '/guide/icon-maintenance');
         const hasArchitecture = items.some((child) => child.link === '/guide/architecture');
-        const hasBusinessIcons = items.some((child) => child.link === '/guide/business-icons');
 
         return {
           ...item,
@@ -170,15 +174,6 @@ function withGuideMaintenanceItems(source: Sidebar): Sidebar {
                     text: 'Icon maintenance',
                     link: '/guide/icon-maintenance',
                     desc: 'Add, update, and remove icons in the repository.',
-                  },
-                ]
-              : []),
-            ...(!hasBusinessIcons
-              ? [
-                  {
-                    text: 'Business icons',
-                    link: '/guide/business-icons',
-                    desc: 'Source, validation, and submission rules for business-specific SVG icons.',
                   },
                 ]
               : []),
@@ -243,6 +238,7 @@ function getBaseSidebar(locale: DocsLocale): Sidebar {
     '/guide/static/': ycloudStaticSidebar,
     '/changelog': getChangelogSidebar(locale),
     '/icons/': [{ text: '', link: '/icons/' }],
+    '/business-icons/': [{ text: '', link: '/business-icons/' }],
   });
 }
 

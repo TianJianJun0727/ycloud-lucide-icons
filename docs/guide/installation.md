@@ -7,6 +7,13 @@ description: 安装 YCloud Icons 支持的框架包和静态资源包。
 
 YCloud Icons 当前覆盖 10 种包类型，可以按项目所用框架选择安装。
 
+这些包同时覆盖两类图标资产：
+
+- 通用图标：默认入口和 `icons/*` 子路径，适合 24x24 线性图标。
+- 业务图标：`business` 子入口、`business-icons/*` 静态路径和独立业务字体，适合产品或业务专有图形。
+
+业务图标不会混入通用图标默认入口。具体规则见 [业务图标](./business-icons.md)。
+
 ## 版本要求
 
 具体版本要求放在对应框架的快速开始页，避免 React、React Native、Astro 等 peer dependency 范围里的 `|` 影响 Markdown 表格解析。
@@ -247,7 +254,7 @@ bun add @ycloud-web/icons-astro@latest
 
 ## 静态资源
 
-静态 SVG 文件、SVG Sprite、Icon Font 和 SVG 字符串模块。
+静态 SVG 文件、业务 SVG 文件、SVG Sprite、通用 Icon Font、业务 Icon Font 和 SVG 字符串模块。
 
 ::: code-group
 

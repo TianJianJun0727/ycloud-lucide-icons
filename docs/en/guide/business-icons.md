@@ -23,9 +23,13 @@ If the artwork can become a generic linear icon, keep it in `icons/`.
 
 ```text
 business-icons/<business-category>/<icon-name>.svg
+business-icons/<business-category>/index.json
+business-icons/index.json
 ```
 
-Business categories are represented by first-level folders. The allowed folders are:
+Business categories are represented by first-level folders. Each folder keeps its Chinese title, English title, and sort weight in `business-icons/<business-category>/index.json`. The root `business-icons/index.json` is generated for validation, the Figma plugin, docs, package generation, and duplicate-name checks.
+
+The current allowed folders are:
 
 ```text
 inbox
@@ -37,7 +41,7 @@ basic
 filter
 ```
 
-Business icons do not currently need matching JSON metadata and are not included in the generic icon search or category pages. They are generated into `business` subpath entries in the existing packages instead of being mixed into the generic default entries. Package component exports are still based on the SVG file name and do not include the category name, so SVG file names must remain unique across categories.
+Business icons do not need per-SVG metadata JSON and are not included in the generic icon metadata system. They are generated into `business` subpath entries in the existing packages instead of being mixed into the generic default entries. Package component exports are still based on the SVG file name and do not include the category name, so SVG file names must remain unique across categories.
 
 ## Cleanup And Validation
 
@@ -53,7 +57,8 @@ Business cleanup will:
 Only baseline structure and safety checks run:
 
 - paths must use `business-icons/<business-category>/<icon-name>.svg`
-- business category folders must be one of the allowed first-level folders
+- business category folders must include `business-icons/<business-category>/index.json`
+- root `business-icons/index.json` must match `node ./scripts/writeBusinessIconIndex.mts`
 - file names must be lowercase kebab-case
 - the root element must be `<svg>`
 - `fill` and `stroke` may only be `currentColor` or `none`
@@ -66,6 +71,7 @@ Run locally:
 
 ```sh
 node ./scripts/optimizeBusinessSvgs.mts
+node ./scripts/writeBusinessIconIndex.mts
 node ./scripts/checkBusinessSvgSource.mts
 ```
 
@@ -151,6 +157,16 @@ pnpm add @ycloud-web/icons-static
 
 ```ts
 import whatsappBusinessIconUrl from '@ycloud-web/icons-static/business-icons/inbox/whatsapp-business.svg';
+```
+
+Business icons also generate a separate icon font. It is not mixed into the generic `font/ycloud.css` output:
+
+```css
+@import '@ycloud-web/icons-static/business-font/ycloud-business.css';
+```
+
+```html
+<div class="business-icon-whatsapp-business"></div>
 ```
 
 Business icons only clear fixed colors, styles, and design-tool noise; size, stroke details, and geometry are not rewritten.

@@ -8,21 +8,35 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseSync, type INode } from 'svgson';
+import { buildBusinessIconIndex } from './writeBusinessIconIndex.mts';
 
 const BUSINESS_ICONS_DIR = 'business-icons';
 const BUSINESS_ICON_INDEX_FILE = path.join(BUSINESS_ICONS_DIR, 'index.json');
-const BUSINESS_CATEGORY_NAMES = new Set([
-  'inbox',
-  'menu',
-  'chatbot',
-  'outlined',
-  'filled',
-  'basic',
-  'filter',
-]);
 const SVG_FILENAME_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*\.svg$/;
 
-export function validateBusinessSvgFileName(file: string) {
+type BusinessIconIndex = {
+  categories: Array<{
+    name: string;
+    title: string;
+    i18n: {
+      en: {
+        title: string;
+      };
+    };
+  }>;
+  icons: Array<{
+    name: string;
+    category: string;
+    path: string;
+    componentName: string;
+  }>;
+};
+
+async function readBusinessIconIndex() {
+  return JSON.parse(await fs.readFile(BUSINESS_ICON_INDEX_FILE, 'utf-8')) as BusinessIconIndex;
+}
+
+export function validateBusinessSvgFileName(file: string, categoryNames: Set<string>) {
   const fileName = path.basename(file);
   const normalizedFile = file.split(path.sep).join('/');
   const businessPrefix = `${BUSINESS_ICONS_DIR}/`;
@@ -36,10 +50,8 @@ export function validateBusinessSvgFileName(file: string) {
 
   if (segments.length !== 2) {
     errors.push(`Business SVG must be stored as "business-icons/<category>/<icon-name>.svg".`);
-  } else if (!BUSINESS_CATEGORY_NAMES.has(segments[0])) {
-    errors.push(
-      `Business SVG category must be one of: ${Array.from(BUSINESS_CATEGORY_NAMES).join(', ')}.`,
-    );
+  } else if (!categoryNames.has(segments[0])) {
+    errors.push(`Business SVG category must be one of: ${Array.from(categoryNames).join(', ')}.`);
   }
 
   if (!SVG_FILENAME_PATTERN.test(fileName)) {
@@ -134,8 +146,8 @@ export function validateBusinessSvgSource(svg: string) {
   return errors;
 }
 
-export async function validateBusinessSvgSourceFile(file: string) {
-  const fileNameErrors = validateBusinessSvgFileName(file);
+export async function validateBusinessSvgSourceFile(file: string, categoryNames: Set<string>) {
+  const fileNameErrors = validateBusinessSvgFileName(file, categoryNames);
 
   try {
     return [...fileNameErrors, ...validateBusinessSvgSource(await fs.readFile(file, 'utf-8'))];
@@ -169,6 +181,7 @@ function findNormalizedDuplicateFiles(files: string[]) {
 
 async function validateBusinessIconIndex(files: string[]) {
   const errors: string[] = [];
+  const expectedIndex = await buildBusinessIconIndex();
   const expectedPaths = files
     .map((file) => file.split(path.sep).join('/'))
     .map((file) => {
@@ -179,18 +192,30 @@ async function validateBusinessIconIndex(files: string[]) {
     .sort();
 
   try {
-    const index = JSON.parse(await fs.readFile(BUSINESS_ICON_INDEX_FILE, 'utf-8')) as {
-      icons?: Array<{
-        name?: string;
-        category?: string;
-        path?: string;
-        componentName?: string;
-      }>;
-    };
-    const actualPaths = (Array.isArray(index.icons) ? index.icons : [])
+    const index = await readBusinessIconIndex();
+    if (JSON.stringify(index) !== JSON.stringify(expectedIndex)) {
+      errors.push(
+        `${BUSINESS_ICON_INDEX_FILE} is out of sync. Run "node ./scripts/writeBusinessIconIndex.mts".`,
+      );
+      return errors;
+    }
+
+    const actualPaths = index.icons
       .map((icon) => icon.path)
       .filter((iconPath): iconPath is string => typeof iconPath === 'string')
       .sort();
+
+    if (!Array.isArray(index.categories) || index.categories.length === 0) {
+      errors.push(`${BUSINESS_ICON_INDEX_FILE} must define business icon categories.`);
+    }
+
+    for (const category of index.categories) {
+      if (!category.name || !category.title || !category.i18n?.en?.title) {
+        errors.push(
+          `${BUSINESS_ICON_INDEX_FILE} category entries must include name, title and i18n.en.title.`,
+        );
+      }
+    }
 
     if (JSON.stringify(actualPaths) !== JSON.stringify(expectedPaths)) {
       errors.push(
@@ -238,7 +263,20 @@ async function readDefaultBusinessSvgFiles() {
 async function main() {
   const svgFiles = process.argv.slice(2);
   const files = svgFiles.length ? svgFiles : await readDefaultBusinessSvgFiles();
+  let categoryNames = new Set<string>();
   let hasError = false;
+
+  try {
+    const expectedIndex = await buildBusinessIconIndex();
+    categoryNames = new Set(expectedIndex.categories.map((category) => category.name));
+  } catch (error) {
+    console.error(
+      `cannot read ${BUSINESS_ICON_INDEX_FILE}: ${
+        error instanceof Error ? error.message : String(error)
+      }`,
+    );
+    hasError = true;
+  }
 
   for (const duplicate of findNormalizedDuplicateFiles(files)) {
     console.error(
@@ -253,7 +291,7 @@ async function main() {
   }
 
   for (const file of files) {
-    const errors = await validateBusinessSvgSourceFile(file);
+    const errors = await validateBusinessSvgSourceFile(file, categoryNames);
 
     for (const message of errors) {
       console.error(`${file}: ${message}`);

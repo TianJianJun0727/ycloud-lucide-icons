@@ -4,16 +4,18 @@ import { fileURLToPath } from 'node:url';
 
 const BUSINESS_ICONS_DIR = 'business-icons';
 const BUSINESS_ICON_INDEX_FILE = path.join(BUSINESS_ICONS_DIR, 'index.json');
+const BUSINESS_CATEGORY_CONFIG_FILE = 'index.json';
 
-const BUSINESS_CATEGORY_NAMES = new Set([
-  'inbox',
-  'menu',
-  'chatbot',
-  'outlined',
-  'filled',
-  'basic',
-  'filter',
-]);
+type BusinessCategoryConfig = {
+  $schema?: string;
+  title: string;
+  weight?: number;
+  i18n: {
+    en: {
+      title: string;
+    };
+  };
+};
 
 const toPascalCase = (value: string) =>
   value
@@ -30,12 +32,52 @@ const getComponentName = (name: string) => {
   return `Business${pascal}`;
 };
 
-async function readBusinessSvgFiles() {
+async function readBusinessCategories() {
+  try {
+    const entries = await fs.readdir(BUSINESS_ICONS_DIR, { withFileTypes: true });
+    const categories = await Promise.all(
+      entries
+        .filter((entry) => entry.isDirectory())
+        .map(async (entry) => {
+          const configPath = path.join(
+            BUSINESS_ICONS_DIR,
+            entry.name,
+            BUSINESS_CATEGORY_CONFIG_FILE,
+          );
+          const config = JSON.parse(
+            await fs.readFile(configPath, 'utf-8'),
+          ) as BusinessCategoryConfig;
+
+          return {
+            name: entry.name,
+            title: config.title,
+            weight: config.weight,
+            i18n: config.i18n,
+          };
+        }),
+    );
+
+    return categories
+      .sort(
+        (left, right) =>
+          (left.weight ?? Number.MAX_SAFE_INTEGER) - (right.weight ?? Number.MAX_SAFE_INTEGER) ||
+          left.name.localeCompare(right.name),
+      )
+      .map(({ name, title, i18n }) => ({ name, title, i18n }));
+  } catch (error) {
+    if (error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') {
+      return [];
+    }
+    throw error;
+  }
+}
+
+async function readBusinessSvgFiles(categoryNames: Set<string>) {
   try {
     const categories = await fs.readdir(BUSINESS_ICONS_DIR, { withFileTypes: true });
     const files = await Promise.all(
       categories
-        .filter((entry) => entry.isDirectory() && BUSINESS_CATEGORY_NAMES.has(entry.name))
+        .filter((entry) => entry.isDirectory() && categoryNames.has(entry.name))
         .map(async (category) => {
           const categoryDir = path.join(BUSINESS_ICONS_DIR, category.name);
           const entries = await fs.readdir(categoryDir, { withFileTypes: true });
@@ -61,13 +103,15 @@ async function readBusinessSvgFiles() {
 }
 
 export async function buildBusinessIconIndex() {
-  const icons = (await readBusinessSvgFiles()).map((icon) => ({
+  const categories = await readBusinessCategories();
+  const categoryNames = new Set(categories.map((category) => category.name));
+  const icons = (await readBusinessSvgFiles(categoryNames)).map((icon) => ({
     ...icon,
     componentName: getComponentName(icon.name),
   }));
 
   return {
-    categories: Array.from(BUSINESS_CATEGORY_NAMES),
+    categories,
     icons,
   };
 }

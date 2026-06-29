@@ -1,0 +1,10 @@
+{
+  "$schema": "../../category.schema.json",
+  "title": "聊天机器人",
+  "weight": 30,
+  "i18n": {
+    "en": {
+      "title": "Chatbot"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../category.schema.json",
+  "title": "Inbox",
+  "weight": 10,
+  "i18n": {
+    "en": {
+      "title": "Inbox"
+    }
+  }
+}

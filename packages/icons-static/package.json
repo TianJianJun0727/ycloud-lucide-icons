@@ -27,6 +27,7 @@
   "files": [
     "dist",
     "font",
+    "business-font",
     "icons",
     "business-icons",
     "lib",

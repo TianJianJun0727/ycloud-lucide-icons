@@ -1,0 +1,10 @@
+{
+  "$schema": "../../category.schema.json",
+  "title": "填充",
+  "weight": 50,
+  "i18n": {
+    "en": {
+      "title": "Filled"
+    }
+  }
+}

@@ -7,8 +7,6 @@ import IconPreview from './IconPreview.vue';
 import { x, expand } from '@data/iconNodes';
 import { useData, useRouter } from 'vitepress';
 import IconInfo from './IconInfo.vue';
-import Badge from '../base/Badge.vue';
-import { satisfies } from 'semver';
 import { resolveBrowserHref, resolveRoutePath } from '@theme/utils/navigation';
 
 const props = defineProps<{
@@ -23,12 +21,6 @@ const icon = computed(() => props.icon);
 
 const emit = defineEmits(['close']);
 const isOpen = computed(() => !!icon.value);
-
-function releaseTagLink(version) {
-  const shouldAddV = satisfies(version, `<0.266.0`);
-
-  return `https://github.com/ycloud-icons/@ycloud-web/icons/releases/tag/${shouldAddV ? 'v' : ''}${version}`;
-}
 
 function onClose() {
   emit('close');
@@ -62,12 +54,6 @@ function openDetailPage(iconName: string) {
     >
       <div class="overlay-panel">
         <nav class="overlay-menu">
-          <Badge
-            v-if="icon.createdRelease"
-            class="version"
-            :href="releaseTagLink(icon.createdRelease.version)"
-            >v{{ icon.createdRelease.version }}</Badge
-          >
           <IconButton @click="openDetailPage(icon.name)">
             <component :is="Expand" />
           </IconButton>
@@ -173,9 +159,4 @@ function openDetailPage(iconName: string) {
   transform: translateY(100%);
   opacity: 0;
 }
-
-.version {
-  margin-right: 24px;
-}
-
 </style>

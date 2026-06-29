@@ -1,11 +1,11 @@
 # YCloud Icons Static
 
-YCloud Icons Static provides framework-agnostic assets, including individual SVG files, SVG sprites, Icon Font files, and SVG string modules.
+YCloud Icons Static provides framework-agnostic assets, including generic SVG files, business SVG files, SVG sprites, generic Icon Font files, business Icon Font files, and SVG string modules.
 
 **You can use it to:**
 
-- Use SVG files as images or CSS backgrounds.
-- Use SVG sprites or Icon Font in static sites.
+- Use generic or business SVG files as images or CSS backgrounds.
+- Use SVG sprites, generic Icon Font, or business Icon Font in static sites.
 - Import SVG strings in Node.js or JavaScript projects.
 
 ## Installation
@@ -40,6 +40,13 @@ No framework peer dependency.
 <img
   src="./node_modules/@ycloud-web/icons-static/icons/house.svg"
   alt="House"
+/>
+```
+
+```html
+<img
+  src="./node_modules/@ycloud-web/icons-static/business-icons/menu/billing.svg"
+  alt="Billing"
 />
 ```
 

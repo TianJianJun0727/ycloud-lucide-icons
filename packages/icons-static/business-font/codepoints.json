@@ -1,0 +1,21 @@
+{
+  "billing": 61440,
+  "campaign": 61441,
+  "cart": 61442,
+  "chatbot": 61443,
+  "company": 61444,
+  "contact": 61445,
+  "ctwa": 61446,
+  "developers": 61447,
+  "help": 61448,
+  "home": 61449,
+  "inbox": 61450,
+  "integration": 61451,
+  "journey": 61452,
+  "logout": 61453,
+  "order": 61454,
+  "partner": 61455,
+  "pin": 61456,
+  "settings": 61457,
+  "whatsapp": 61458
+}

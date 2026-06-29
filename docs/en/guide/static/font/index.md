@@ -10,13 +10,13 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 # Icon Font
 
-YCloud icons are also available as a web font. The font includes all icons as glyphs, allowing you to use them in your project with CSS classes. This can be a convenient option for projects that prefer using icon fonts.
+YCloud icons are also available as web fonts. Generic icons and business icons are generated into separate font directories so `icon-*` and `business-icon-*` classes are not mixed in the same stylesheet.
 
 :::warning Not recommended for high traffic production use
-The Icon font includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../../packages.md).
+Each icon font includes all icons for that asset family, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../../packages.md).
 :::
 
-## Using the CSS Stylesheet
+## Generic Icon Font
 
 ::: code-group
 
@@ -44,14 +44,46 @@ The Icon font includes all icons, which can significantly increase your app's bu
 
 :::
 
-## Using the Icon Font
-
 Once you have included the stylesheet, you can use the icons in your HTML by applying the appropriate CSS classes. Each icon has a corresponding class name that you can use to display it.
 
-For example, to display the "home" icon, you would use the following HTML:
+For example, to display the generic "house" icon, you would use the following HTML:
 
 ```html
 <div class="icon-house"></div>
+```
+
+## Business Icon Font
+
+Business icons use a separate font and the `business-icon-` class prefix:
+
+::: code-group
+
+```css [Vite]
+@import '@ycloud-web/icons-static/business-font/ycloud-business.css';
+```
+
+```css [Webpack]
+@import '~@ycloud-web/icons-static/business-font/ycloud-business.css';
+```
+
+```html [CDN]
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@ycloud-web/icons-static@latest/business-font/ycloud-business.css"
+/>
+```
+
+```html [Static asset]
+<link
+  rel="stylesheet"
+  href="/your/path/to/ycloud-business.css"
+/>
+```
+
+:::
+
+```html
+<div class="business-icon-billing"></div>
 ```
 
 ## Example with JavaScript

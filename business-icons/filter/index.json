@@ -1,0 +1,10 @@
+{
+  "$schema": "../../category.schema.json",
+  "title": "筛选",
+  "weight": 70,
+  "i18n": {
+    "en": {
+      "title": "Filter"
+    }
+  }
+}

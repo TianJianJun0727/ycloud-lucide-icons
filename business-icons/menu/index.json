@@ -1,0 +1,10 @@
+{
+  "$schema": "../../category.schema.json",
+  "title": "菜单",
+  "weight": 20,
+  "i18n": {
+    "en": {
+      "title": "Menu"
+    }
+  }
+}

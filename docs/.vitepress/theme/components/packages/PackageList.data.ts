@@ -39,8 +39,8 @@ const packageDescriptions: Record<string, { zh: string; en: string }> = {
     en: 'YCloud Icons package for Astro applications.',
   },
   '@ycloud-web/icons-static': {
-    zh: 'YCloud Icons 的静态 SVG 和字体资源包。',
-    en: 'Static SVG, sprite, and icon font assets for YCloud Icons.',
+    zh: 'YCloud Icons 的通用/业务 SVG、Sprite 和字体资源包。',
+    en: 'Generic and business SVG, sprite, and icon font assets for YCloud Icons.',
   },
   '@ycloud-web/icons-data': {
     zh: '包含标准化图标节点和元数据的 YCloud Icons 数据包。',

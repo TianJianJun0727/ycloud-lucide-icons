@@ -1,5 +1,69 @@
 {
-  "categories": ["inbox", "menu", "chatbot", "outlined", "filled", "basic", "filter"],
+  "categories": [
+    {
+      "name": "inbox",
+      "title": "Inbox",
+      "i18n": {
+        "en": {
+          "title": "Inbox"
+        }
+      }
+    },
+    {
+      "name": "menu",
+      "title": "菜单",
+      "i18n": {
+        "en": {
+          "title": "Menu"
+        }
+      }
+    },
+    {
+      "name": "chatbot",
+      "title": "聊天机器人",
+      "i18n": {
+        "en": {
+          "title": "Chatbot"
+        }
+      }
+    },
+    {
+      "name": "outlined",
+      "title": "线性",
+      "i18n": {
+        "en": {
+          "title": "Outlined"
+        }
+      }
+    },
+    {
+      "name": "filled",
+      "title": "填充",
+      "i18n": {
+        "en": {
+          "title": "Filled"
+        }
+      }
+    },
+    {
+      "name": "basic",
+      "title": "基础",
+      "i18n": {
+        "en": {
+          "title": "Basic"
+        }
+      }
+    },
+    {
+      "name": "filter",
+      "title": "筛选",
+      "i18n": {
+        "en": {
+          "title": "Filter"
+        }
+      }
+    }
+  ],
   "icons": [
     {
       "category": "menu",
@@ -96,6 +160,12 @@
       "name": "partner",
       "path": "business-icons/menu/partner.svg",
       "componentName": "Partner"
+    },
+    {
+      "category": "menu",
+      "name": "pin",
+      "path": "business-icons/menu/pin.svg",
+      "componentName": "Pin"
     },
     {
       "category": "menu",
