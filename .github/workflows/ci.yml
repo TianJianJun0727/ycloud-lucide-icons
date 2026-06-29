@@ -27,7 +27,7 @@ on:
 permissions:
   id-token: write # Required for OIDC
   contents: write
-  pull-requests: read
+  pull-requests: write
 
 # This is added to make sure we wait until last release is done, this is needed for the font-build process
 concurrency:
@@ -150,7 +150,16 @@ jobs:
       - name: Configure git default branch
         run: git config --global init.defaultBranch main
 
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.YCLOUD_ICONS_APP_ID }}
+          private-key: ${{ secrets.YCLOUD_ICONS_APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@v7
+        with:
+          token: ${{ steps.app-token.outputs.token }}
 
       - uses: ./.github/actions/setup-pnpm
 
@@ -190,21 +199,108 @@ jobs:
       - name: Check output
         run: echo '${{ steps.new-version.outputs.NEW_VERSION }}'
 
-      - name: Create and push release tag
+      - name: Prepare release PR
+        id: release-pr
+        shell: bash
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
+          YCLOUD_AI_CHANGELOG: '1'
+          YCLOUD_AI_CHANGELOG_VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
         run: |
-          git tag "v${VERSION}"
+          release_branch="release/v${VERSION}"
+
+          if git ls-remote --exit-code --heads origin "$release_branch" >/dev/null 2>&1; then
+            git fetch origin "$release_branch"
+            git switch "$release_branch"
+            git reset --hard "origin/$release_branch"
+          else
+            git switch -c "$release_branch"
+          fi
+
+          node ./scripts/syncPackageVersions.mts "$VERSION"
+          node ./scripts/writeChangelog.mts
+
+          git add packages/*/package.json CHANGELOG.md docs/.vitepress/data/CHANGELOG.en.md docs/.vitepress/data/changelogSidebar.ts
+          if [ -f "changelogs/releases/v${VERSION}.json" ]; then
+            git add "changelogs/releases/v${VERSION}.json"
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No release preparation changes to commit."
+          else
+            git config user.name "ycloud-icons-source-bot[bot]"
+            git config user.email "ycloud-icons-source-bot[bot]@users.noreply.github.com"
+            HUSKY=0 git commit -m "chore(release): prepare v${VERSION}"
+          fi
+
+          git push --force-with-lease origin "$release_branch"
+
+          pr_number="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$release_branch" --state open --json number --jq '.[0].number // empty')"
+          if [[ -z "$pr_number" ]]; then
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head "$release_branch" \
+              --title "chore(release): prepare v${VERSION}" \
+              --body "Prepare repository files for v${VERSION} before publishing packages."
+            pr_number="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$release_branch" --state open --json number --jq '.[0].number')"
+          fi
+
+          echo "number=$pr_number" >> "$GITHUB_OUTPUT"
+
+          if ! gh pr merge "$pr_number" --repo "$GITHUB_REPOSITORY" --auto --squash --subject "chore(release): prepare v${VERSION}"; then
+            echo "Failed to enable auto-merge for PR #${pr_number}. This may indicate:" >&2
+            echo "  - Required status checks are not satisfied" >&2
+            echo "  - Required reviews are missing" >&2
+            echo "  - Branch protection rules prevent auto-merge" >&2
+            exit 1
+          fi
+
+      - name: Wait for release PR and push tag
+        run: |
+          pr_number="${{ steps.release-pr.outputs.number }}"
+          merge_commit=""
+
+          for attempt in {1..80}; do
+            pr_json="$(gh pr view "$pr_number" --repo "$GITHUB_REPOSITORY" --json state,mergeCommit)"
+            state="$(jq -r '.state' <<< "$pr_json")"
+
+            if [[ "$state" == "MERGED" ]]; then
+              merge_commit="$(jq -r '.mergeCommit.oid' <<< "$pr_json")"
+              break
+            fi
+
+            if [[ "$state" == "CLOSED" ]]; then
+              echo "Release preparation PR #${pr_number} was closed without merging." >&2
+              exit 1
+            fi
+
+            echo "Waiting for release preparation PR #${pr_number} to merge... (${attempt}/80)"
+            sleep 30
+          done
+
+          if [[ -z "$merge_commit" || "$merge_commit" == "null" ]]; then
+            echo "Timed out waiting for release preparation PR #${pr_number} to merge after 40 minutes." >&2
+            echo "Check the PR for failing status checks or missing reviews:" >&2
+            echo "  https://github.com/${GITHUB_REPOSITORY}/pull/${pr_number}" >&2
+            exit 1
+          fi
+
+          git fetch origin main --tags
+          if git rev-parse -q --verify "refs/tags/v${VERSION}" >/dev/null; then
+            echo "Release tag v${VERSION} already exists."
+            exit 0
+          fi
+
+          git tag "v${VERSION}" "$merge_commit"
           git push origin "v${VERSION}"
         env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
           VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
-
-  start-release:
-    if: github.repository == 'TianJianJun0727/ycloud-icons'
-    needs: create-release
-    uses: './.github/workflows/release.yml'
-    secrets: inherit
-    with:
-      version: ${{ needs.create-release.outputs.VERSION }}
-      ref: v${{ needs.create-release.outputs.VERSION }}
 
   dispatch-release:
     if: github.event_name == 'workflow_dispatch'
