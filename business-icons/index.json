@@ -28,6 +28,15 @@
       }
     },
     {
+      "name": "outlined",
+      "title": "线性",
+      "i18n": {
+        "en": {
+          "title": "Outlined"
+        }
+      }
+    },
+    {
       "name": "filled",
       "title": "填充",
       "i18n": {
@@ -58,6 +67,12 @@
   "icons": [
     {
       "category": "basic",
+      "name": "acquire-more-leads",
+      "path": "business-icons/basic/acquire-more-leads.svg",
+      "componentName": "AcquireMoreLeads"
+    },
+    {
+      "category": "basic",
       "name": "add-nick",
       "path": "business-icons/basic/add-nick.svg",
       "componentName": "AddNick"
@@ -67,6 +82,12 @@
       "name": "add-tags",
       "path": "business-icons/basic/add-tags.svg",
       "componentName": "AddTags"
+    },
+    {
+      "category": "basic",
+      "name": "advertising-filled",
+      "path": "business-icons/basic/advertising-filled.svg",
+      "componentName": "AdvertisingFilled"
     },
     {
       "category": "basic",
@@ -109,6 +130,12 @@
       "name": "analytics-filled",
       "path": "business-icons/basic/analytics-filled.svg",
       "componentName": "AnalyticsFilled"
+    },
+    {
+      "category": "basic",
+      "name": "api-docs",
+      "path": "business-icons/basic/api-docs.svg",
+      "componentName": "ApiDocs"
     },
     {
       "category": "basic",
@@ -214,6 +241,18 @@
     },
     {
       "category": "basic",
+      "name": "block",
+      "path": "business-icons/basic/block.svg",
+      "componentName": "Block"
+    },
+    {
+      "category": "basic",
+      "name": "blog",
+      "path": "business-icons/basic/blog.svg",
+      "componentName": "Blog"
+    },
+    {
+      "category": "basic",
       "name": "bot-outlined",
       "path": "business-icons/basic/bot-outlined.svg",
       "componentName": "BotOutlined"
@@ -268,15 +307,33 @@
     },
     {
       "category": "basic",
+      "name": "campaign-filled",
+      "path": "business-icons/basic/campaign-filled.svg",
+      "componentName": "CampaignFilled"
+    },
+    {
+      "category": "basic",
       "name": "campaign-outlined",
       "path": "business-icons/basic/campaign-outlined.svg",
       "componentName": "CampaignOutlined"
     },
     {
       "category": "basic",
+      "name": "canned-response-check",
+      "path": "business-icons/basic/canned-response-check.svg",
+      "componentName": "CannedResponseCheck"
+    },
+    {
+      "category": "basic",
       "name": "category-filled",
       "path": "business-icons/basic/category-filled.svg",
       "componentName": "CategoryFilled"
+    },
+    {
+      "category": "basic",
+      "name": "chat-loading-icon",
+      "path": "business-icons/basic/chat-loading-icon.svg",
+      "componentName": "ChatLoadingIcon"
     },
     {
       "category": "basic",
@@ -295,6 +352,18 @@
       "name": "circular-right-arrow",
       "path": "business-icons/basic/circular-right-arrow.svg",
       "componentName": "CircularRightArrow"
+    },
+    {
+      "category": "basic",
+      "name": "clock-outlined",
+      "path": "business-icons/basic/clock-outlined.svg",
+      "componentName": "ClockOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "code-filled",
+      "path": "business-icons/basic/code-filled.svg",
+      "componentName": "CodeFilled"
     },
     {
       "category": "basic",
@@ -358,9 +427,27 @@
     },
     {
       "category": "basic",
+      "name": "conversation-unsubscribe",
+      "path": "business-icons/basic/conversation-unsubscribe.svg",
+      "componentName": "ConversationUnsubscribe"
+    },
+    {
+      "category": "basic",
+      "name": "coupon-code",
+      "path": "business-icons/basic/coupon-code.svg",
+      "componentName": "CouponCode"
+    },
+    {
+      "category": "basic",
       "name": "coupon-filled",
       "path": "business-icons/basic/coupon-filled.svg",
       "componentName": "CouponFilled"
+    },
+    {
+      "category": "basic",
+      "name": "create-tickets-icon",
+      "path": "business-icons/basic/create-tickets-icon.svg",
+      "componentName": "CreateTicketsIcon"
     },
     {
       "category": "basic",
@@ -409,6 +496,12 @@
       "name": "document-filled",
       "path": "business-icons/basic/document-filled.svg",
       "componentName": "DocumentFilled"
+    },
+    {
+      "category": "basic",
+      "name": "double-check",
+      "path": "business-icons/basic/double-check.svg",
+      "componentName": "DoubleCheck"
     },
     {
       "category": "basic",
@@ -478,9 +571,21 @@
     },
     {
       "category": "basic",
+      "name": "journey-filled",
+      "path": "business-icons/basic/journey-filled.svg",
+      "componentName": "JourneyFilled"
+    },
+    {
+      "category": "basic",
       "name": "journey-outlined",
       "path": "business-icons/basic/journey-outlined.svg",
       "componentName": "JourneyOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "language",
+      "path": "business-icons/basic/language.svg",
+      "componentName": "Language"
     },
     {
       "category": "basic",
@@ -493,6 +598,18 @@
       "name": "line-simple",
       "path": "business-icons/basic/line-simple.svg",
       "componentName": "LineSimple"
+    },
+    {
+      "category": "basic",
+      "name": "link-action",
+      "path": "business-icons/basic/link-action.svg",
+      "componentName": "LinkAction"
+    },
+    {
+      "category": "basic",
+      "name": "link-circle-filled",
+      "path": "business-icons/basic/link-circle-filled.svg",
+      "componentName": "LinkCircleFilled"
     },
     {
       "category": "basic",
@@ -517,6 +634,12 @@
       "name": "map-outlined",
       "path": "business-icons/basic/map-outlined.svg",
       "componentName": "MapOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "message-bubble-filled",
+      "path": "business-icons/basic/message-bubble-filled.svg",
+      "componentName": "MessageBubbleFilled"
     },
     {
       "category": "basic",
@@ -592,6 +715,12 @@
     },
     {
       "category": "basic",
+      "name": "music",
+      "path": "business-icons/basic/music.svg",
+      "componentName": "Music"
+    },
+    {
+      "category": "basic",
       "name": "new-tag-filled",
       "path": "business-icons/basic/new-tag-filled.svg",
       "componentName": "NewTagFilled"
@@ -631,6 +760,12 @@
       "name": "payments-filled",
       "path": "business-icons/basic/payments-filled.svg",
       "componentName": "PaymentsFilled"
+    },
+    {
+      "category": "basic",
+      "name": "play-circle-filled",
+      "path": "business-icons/basic/play-circle-filled.svg",
+      "componentName": "PlayCircleFilled"
     },
     {
       "category": "basic",
@@ -688,6 +823,12 @@
     },
     {
       "category": "basic",
+      "name": "scroll-to-bottom",
+      "path": "business-icons/basic/scroll-to-bottom.svg",
+      "componentName": "ScrollToBottom"
+    },
+    {
+      "category": "basic",
       "name": "security-filled",
       "path": "business-icons/basic/security-filled.svg",
       "componentName": "SecurityFilled"
@@ -739,6 +880,12 @@
       "name": "shop-check-bag-filled",
       "path": "business-icons/basic/shop-check-bag-filled.svg",
       "componentName": "ShopCheckBagFilled"
+    },
+    {
+      "category": "basic",
+      "name": "shop-menu-filled",
+      "path": "business-icons/basic/shop-menu-filled.svg",
+      "componentName": "ShopMenuFilled"
     },
     {
       "category": "basic",
@@ -808,6 +955,18 @@
     },
     {
       "category": "basic",
+      "name": "task-menu-filled",
+      "path": "business-icons/basic/task-menu-filled.svg",
+      "componentName": "TaskMenuFilled"
+    },
+    {
+      "category": "basic",
+      "name": "team",
+      "path": "business-icons/basic/team.svg",
+      "componentName": "Team"
+    },
+    {
+      "category": "basic",
       "name": "template-filled",
       "path": "business-icons/basic/template-filled.svg",
       "componentName": "TemplateFilled"
@@ -838,6 +997,12 @@
     },
     {
       "category": "basic",
+      "name": "trophy",
+      "path": "business-icons/basic/trophy.svg",
+      "componentName": "Trophy"
+    },
+    {
+      "category": "basic",
       "name": "undo",
       "path": "business-icons/basic/undo.svg",
       "componentName": "Undo"
@@ -850,9 +1015,21 @@
     },
     {
       "category": "basic",
+      "name": "upgrade-diamond-filled",
+      "path": "business-icons/basic/upgrade-diamond-filled.svg",
+      "componentName": "UpgradeDiamondFilled"
+    },
+    {
+      "category": "basic",
       "name": "upload-file",
       "path": "business-icons/basic/upload-file.svg",
       "componentName": "UploadFile"
+    },
+    {
+      "category": "basic",
+      "name": "user-filled",
+      "path": "business-icons/basic/user-filled.svg",
+      "componentName": "UserFilled"
     },
     {
       "category": "basic",
@@ -883,6 +1060,12 @@
       "name": "whatsapp-phone-outlined",
       "path": "business-icons/basic/whatsapp-phone-outlined.svg",
       "componentName": "WhatsappPhoneOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "widgets-filled",
+      "path": "business-icons/basic/widgets-filled.svg",
+      "componentName": "WidgetsFilled"
     },
     {
       "category": "basic",
