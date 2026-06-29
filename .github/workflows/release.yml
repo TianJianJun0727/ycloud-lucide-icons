@@ -169,76 +169,12 @@ jobs:
           YCLOUD_AI_CHANGELOG_VERSION: ${{ needs.prepare.outputs.version }}
           YCLOUD_CHANGELOG_RELEASE_NOTES_PATH: .release-notes.md
 
-      - name: Commit persisted changelog notes
-        shell: bash
-        run: |
-          git add CHANGELOG.md docs/.vitepress/data/CHANGELOG.en.md docs/.vitepress/data/changelogSidebar.ts
-          if [ -f "changelogs/releases/v${VERSION}.json" ]; then
-            git add "changelogs/releases/v${VERSION}.json"
-          fi
-
-          if git diff --cached --quiet; then
-            echo "No changelog notes to commit."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "docs: add changelog for v${VERSION} [skip docs]"
-          git push origin HEAD:main
-        env:
-          VERSION: ${{ needs.prepare.outputs.version }}
-
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
           tag_name: v${{ needs.prepare.outputs.version }}
           name: Version ${{ needs.prepare.outputs.version }}
           body_path: .release-notes.md
-
-  sync-versions:
-    if: github.repository == 'TianJianJun0727/ycloud-icons'
-    needs:
-      - prepare
-      - release
-      - github-release
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Configure git default branch
-        run: git config --global init.defaultBranch main
-
-      - uses: actions/checkout@v7
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - uses: ./.github/actions/setup-pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Sync package versions
-        run: node ./scripts/syncPackageVersions.mts "${VERSION}"
-        env:
-          VERSION: ${{ needs.prepare.outputs.version }}
-
-      - name: Commit synced package versions
-        shell: bash
-        run: |
-          if git diff --quiet -- packages; then
-            echo "No package version changes to commit."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add packages/*/package.json
-          git commit -m "chore(release): sync package versions to ${VERSION} [skip docs]"
-          git push origin HEAD:main
-        env:
-          VERSION: ${{ needs.prepare.outputs.version }}
 
   # Temporarily disable automatic docs deployment after package releases.
   # Keep this job for quick restoration when release-driven docs publishing is needed again.
