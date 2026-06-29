@@ -2,6 +2,14 @@
 
 > This file is generated before the documentation build from Git tags and release changes.
 
+## v0.2.1 - 2026-06-29
+
+- Added the business icon system with basic, chatbot, filled, filter, inbox, and menu categories, including the basic business SVG sources.
+- Published business icon data and static font artifacts, adding business icon exports and assets for icons-data and icons-static.
+- Added bilingual business icon documentation, icon detail pages, and installation/static asset guides.
+- Enhanced the Figma plugin submission flow to generate different files and review notes for generic icons and business icons.
+- Improved business SVG cleanup, index generation, and CI validation so business icons use their own rules.
+
 ## v0.2.0 - 2026-06-29
 
 - Added categorized business icons with 19 new icons

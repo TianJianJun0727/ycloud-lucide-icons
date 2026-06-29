@@ -1,0 +1,18 @@
+{
+  "tag": "v0.2.1",
+  "date": "2026-06-29",
+  "zh": [
+    "新增业务图标体系，收录 basic、chatbot、filled、filter、inbox、menu 等分类，并补齐 basic 业务 SVG 源文件。",
+    "发布业务图标数据与静态字体产物，补充 icons-data 与 icons-static 的业务图标导出和资源文件。",
+    "新增中英文业务图标文档、图标详情页和安装/静态资源使用指南。",
+    "增强 Figma 插件提交流程，支持按普通图标和业务图标生成不同文件与审核说明。",
+    "优化业务 SVG 清洗、索引生成和 CI 校验，使业务图标按独立规则处理。"
+  ],
+  "en": [
+    "Added the business icon system with basic, chatbot, filled, filter, inbox, and menu categories, including the basic business SVG sources.",
+    "Published business icon data and static font artifacts, adding business icon exports and assets for icons-data and icons-static.",
+    "Added bilingual business icon documentation, icon detail pages, and installation/static asset guides.",
+    "Enhanced the Figma plugin submission flow to generate different files and review notes for generic icons and business icons.",
+    "Improved business SVG cleanup, index generation, and CI validation so business icons use their own rules."
+  ]
+}
