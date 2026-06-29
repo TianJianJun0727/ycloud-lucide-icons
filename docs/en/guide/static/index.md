@@ -14,21 +14,23 @@ import { ycloudStaticSidebar } from '../../../.vitepress/sidebar/static'
 
 # YCloud Static Assets
 
-Static assets and utilities for YCloud icons that work without JavaScript frameworks. This package provides multiple formats including individual SVG files, SVG sprites, icon fonts, and Node.js utilities for server-side rendering and static site generation.
+Static assets and utilities for YCloud icons that work without JavaScript frameworks. This package provides multiple formats including generic SVG files, business SVG files, SVG sprites, generic icon fonts, business icon fonts, and Node.js utilities for server-side rendering and static site generation.
 
 **What you can accomplish:**
 
-- Use individual SVG files as images or CSS background images
-- Implement icon fonts for CSS-based icon systems
+- Use generic or business SVG files as images or CSS background images
+- Implement generic and business icon fonts for CSS-based icon systems
 - Create SVG sprites for efficient icon loading in static sites
 - Import SVG strings in Node.js applications and server-side rendering
 - Build static websites and applications without JavaScript framework dependencies
 
 This package includes the following implementations of YCloud icons:
 
-- Individual SVG files
+- Generic SVG files
+- Business SVG files
 - SVG sprite
-- Icon font files
+- Generic icon font files
+- Business icon font files
 - A JavaScript library exporting SVG strings
 
 ## Overview

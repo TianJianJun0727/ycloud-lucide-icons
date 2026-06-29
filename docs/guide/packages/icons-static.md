@@ -1,11 +1,11 @@
 # YCloud Icons Static
 
-无需 JavaScript 框架即可使用的 YCloud Icons 静态资源和工具。这个包提供多种格式，包括独立 SVG 文件、SVG sprites、Icon font，以及用于服务端渲染和静态站点生成的 Node.js 工具。
+无需 JavaScript 框架即可使用的 YCloud Icons 静态资源和工具。这个包提供多种格式，包括通用 SVG 文件、业务 SVG 文件、SVG sprites、通用 Icon Font、业务 Icon Font，以及用于服务端渲染和静态站点生成的 Node.js 工具。
 
 **你可以用它完成：**
 
 - 将独立 SVG 文件作为图片或 CSS 背景图使用。
-- 为基于 CSS 的图标系统实现 Icon font。
+- 为基于 CSS 的图标系统实现通用和业务 Icon Font。
 - 创建 SVG sprites，让静态站点能更高效地加载图标。
 - 在 Node.js 应用和服务端渲染中导入 SVG 字符串。
 - 构建不依赖 JavaScript 框架的静态网站和应用。
@@ -14,7 +14,8 @@
 
 - 独立 SVG 文件
 - SVG sprite
-- Icon font 文件
+- 通用 Icon Font 文件
+- 业务 Icon Font 文件
 - 导出 SVG 字符串的 JavaScript 库
 
 ## 适用场景
@@ -23,6 +24,7 @@
 
 - 使用纯 CSS 或 utility-first 框架消费 Icon font 的项目。
 - 直接在 HTML 中嵌入原始 SVG 文件或 sprites。
+- 直接消费业务 SVG 文件或业务字体 class 的项目。
 - 将 SVG 作为 CSS 背景图使用。
 - 在 Node.js（CommonJS）环境中导入 SVG 字符串。
 

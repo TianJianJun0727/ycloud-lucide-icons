@@ -7,6 +7,13 @@ description: Install YCloud Icons packages for supported frameworks and static a
 
 YCloud Icons follows the same package coverage model as Lucide and currently documents 10 package types.
 
+These packages cover two icon asset families:
+
+- Generic icons: default entries and `icons/*` subpaths for 24x24 linear icons.
+- Business icons: `business` subpath entries, `business-icons/*` static paths, and a separate business icon font for product- or business-specific artwork.
+
+Business icons are not mixed into the generic default entries. See [Business icons](./business-icons.md) for the source and validation rules.
+
 ## Core JavaScript
 
 Framework-agnostic icon data and helpers.
@@ -243,7 +250,7 @@ See the [Astro guide](./astro/index.md).
 
 ## Static Assets
 
-Static SVG files, SVG sprites, icon fonts, and SVG string modules.
+Static SVG files, business SVG files, SVG sprites, generic icon fonts, business icon fonts, and SVG string modules.
 
 ::: code-group
 

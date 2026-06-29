@@ -8,6 +8,11 @@ This project is developed from [Lucide](https://github.com/lucide-icons/lucide).
 
 It provides consistent icon source data, tree-shakable component packages, static assets, and icon data packages. Application projects can install the package for their framework, import icons on demand, and get TypeScript autocomplete, refactoring, and type-checking support.
 
+The repository maintains two icon asset families:
+
+- **Generic icons**: stored in `icons/`, using 24x24 linear SVGs, `icons/*.json` metadata, and the generic category system.
+- **Business icons**: stored in `business-icons/`, grouped by first-level business folders, preserving business-specific geometry, and exported through each package's `business` subpath plus `business-icons/` and `business-font/` in the static package.
+
 ## Packages
 
 | Target          | Package                          | Source directory              |
@@ -23,6 +28,8 @@ It provides consistent icon source data, tree-shakable component packages, stati
 | Astro           | `@ycloud-web/icons-astro`        | `packages/icons-astro`        |
 | Static assets   | `@ycloud-web/icons-static`       | `packages/icons-static`       |
 | Icon data       | `@ycloud-web/icons-data`         | `packages/icons-data`         |
+
+`@ycloud-web/icons-data` provides both generic icon node data and business icon SVG / data URI data.
 
 ## Usage Examples
 
@@ -68,12 +75,33 @@ createIcons({
 });
 ```
 
+Business icons in React:
+
+```tsx
+import { Billing } from '@ycloud-web/icons-react/business';
+
+export function BusinessExample() {
+  return <Billing size={24} />;
+}
+```
+
+Business icon font:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@ycloud-web/icons-static@latest/business-font/ycloud-business.css"
+/>
+
+<div class="business-icon-billing"></div>
+```
+
 ## Design Goals
 
 - **Component-first experience**: Use icons as real components in React, Vue, and other frameworks.
 - **On-demand bundling**: Application bundles include only the icons that are actually imported.
 - **Strong typing**: Component names, props, and icon data include type declarations for autocomplete, checking, and refactoring.
-- **One source, many targets**: One icon source generates framework packages, static assets, and icon data.
+- **One source, many targets**: Generic icons and business icons are generated from their source directories into framework packages, static assets, and icon data.
 - **Sustainable maintenance**: The generation pipeline is based on stable SVG data, build scripts, and package publishing workflows.
 
 ## Style Strategy

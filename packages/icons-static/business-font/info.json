@@ -1,0 +1,116 @@
+{
+  "billing": {
+    "encodedCode": "\\f000",
+    "prefix": "business-icon",
+    "className": "business-icon-billing",
+    "unicode": "&#61440;"
+  },
+  "campaign": {
+    "encodedCode": "\\f001",
+    "prefix": "business-icon",
+    "className": "business-icon-campaign",
+    "unicode": "&#61441;"
+  },
+  "cart": {
+    "encodedCode": "\\f002",
+    "prefix": "business-icon",
+    "className": "business-icon-cart",
+    "unicode": "&#61442;"
+  },
+  "chatbot": {
+    "encodedCode": "\\f003",
+    "prefix": "business-icon",
+    "className": "business-icon-chatbot",
+    "unicode": "&#61443;"
+  },
+  "company": {
+    "encodedCode": "\\f004",
+    "prefix": "business-icon",
+    "className": "business-icon-company",
+    "unicode": "&#61444;"
+  },
+  "contact": {
+    "encodedCode": "\\f005",
+    "prefix": "business-icon",
+    "className": "business-icon-contact",
+    "unicode": "&#61445;"
+  },
+  "ctwa": {
+    "encodedCode": "\\f006",
+    "prefix": "business-icon",
+    "className": "business-icon-ctwa",
+    "unicode": "&#61446;"
+  },
+  "developers": {
+    "encodedCode": "\\f007",
+    "prefix": "business-icon",
+    "className": "business-icon-developers",
+    "unicode": "&#61447;"
+  },
+  "help": {
+    "encodedCode": "\\f008",
+    "prefix": "business-icon",
+    "className": "business-icon-help",
+    "unicode": "&#61448;"
+  },
+  "home": {
+    "encodedCode": "\\f009",
+    "prefix": "business-icon",
+    "className": "business-icon-home",
+    "unicode": "&#61449;"
+  },
+  "inbox": {
+    "encodedCode": "\\f00a",
+    "prefix": "business-icon",
+    "className": "business-icon-inbox",
+    "unicode": "&#61450;"
+  },
+  "integration": {
+    "encodedCode": "\\f00b",
+    "prefix": "business-icon",
+    "className": "business-icon-integration",
+    "unicode": "&#61451;"
+  },
+  "journey": {
+    "encodedCode": "\\f00c",
+    "prefix": "business-icon",
+    "className": "business-icon-journey",
+    "unicode": "&#61452;"
+  },
+  "logout": {
+    "encodedCode": "\\f00d",
+    "prefix": "business-icon",
+    "className": "business-icon-logout",
+    "unicode": "&#61453;"
+  },
+  "order": {
+    "encodedCode": "\\f00e",
+    "prefix": "business-icon",
+    "className": "business-icon-order",
+    "unicode": "&#61454;"
+  },
+  "partner": {
+    "encodedCode": "\\f00f",
+    "prefix": "business-icon",
+    "className": "business-icon-partner",
+    "unicode": "&#61455;"
+  },
+  "pin": {
+    "encodedCode": "\\f010",
+    "prefix": "business-icon",
+    "className": "business-icon-pin",
+    "unicode": "&#61456;"
+  },
+  "settings": {
+    "encodedCode": "\\f011",
+    "prefix": "business-icon",
+    "className": "business-icon-settings",
+    "unicode": "&#61457;"
+  },
+  "whatsapp": {
+    "encodedCode": "\\f012",
+    "prefix": "business-icon",
+    "className": "business-icon-whatsapp",
+    "unicode": "&#61458;"
+  }
+}

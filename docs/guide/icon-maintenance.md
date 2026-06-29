@@ -24,7 +24,7 @@ icons/<icon-name>.json
 - `categories/*.json`：定义分类名称、中文分类标题和英文分类标题
 - `docs/`：文档站点，图标详情页、搜索和分类页都由构建脚本自动生成
 
-业务专有图标放在 `business-icons/<business-category>/*.svg`，分类直接由一级目录区分。这类 SVG 只做轻量清洗：清除固定颜色、样式和设计工具冗余属性，不归一尺寸、描边细节或几何结构，也不需要同名 JSON 或进入通用分类元数据。详细规则见 [业务图标](/guide/business-icons)。
+业务专有图标放在 `business-icons/<business-category>/*.svg`，分类直接由一级目录区分。分类多语言名维护在 `business-icons/<business-category>/index.json`，根 `business-icons/index.json` 由脚本生成索引。这类 SVG 只做轻量清洗：清除固定颜色、样式和设计工具冗余属性，不归一尺寸、描边细节或几何结构，也不需要每个图标的同名 JSON。详细规则见 [业务图标](/guide/business-icons)。
 
 ## 图标规范
 

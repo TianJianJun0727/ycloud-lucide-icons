@@ -4,6 +4,11 @@
 
 它刻意**不包含真实渲染逻辑或组件**，其他包（例如 [`@ycloud-web/icons-angular`](http://npmjs.com/package/@ycloud-web/icons-angular)）可以消费这些数据，在各自框架中渲染图标。你也可以使用这个包为暂未支持的框架构建第三方集成。
 
+这个包同时覆盖两类图标数据：
+
+- 通用图标：从主入口 `@ycloud-web/icons-data` 导出标准节点数据，可配合 builder 设置颜色、尺寸、描边宽度等。
+- 业务图标：从 `@ycloud-web/icons-data/business` 导出原始 SVG、data URI 和索引数据，不经过通用 stroke builder。
+
 ## 安装
 
 ::: code-group
@@ -49,12 +54,24 @@ export type YCloudIconData = {
 
 ## 使用方式
 
-图标可以单独导入。只有你导入的图标会被应用代码引用，其余图标会被 tree-shaking 移除。
+通用图标可以单独导入。只有你导入的图标会被应用代码引用，其余图标会被 tree-shaking 移除。
 
 ```ts
 import { House } from '@ycloud-web/icons-data';
 // House 是图标数据，不是已经渲染好的组件。
 ```
+
+业务图标使用单独子入口：
+
+```ts
+import { billingDataUri, businessIconNames, getBusinessIcon } from '@ycloud-web/icons-data/business';
+
+const billing = getBusinessIcon('billing');
+const imageSource = billingDataUri;
+const availableBusinessIcons = businessIconNames;
+```
+
+业务图标导出的是已经清洗后的 SVG 字符串和 data URI，适合自定义渲染器、图片标签、Canvas 或后台生成场景。它们不支持 `strokeWidth`、`absoluteStrokeWidth` 等只属于通用图标节点构建的参数。
 
 ## 构建图标
 

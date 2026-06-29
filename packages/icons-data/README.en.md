@@ -9,7 +9,7 @@ Language: <a href="./README.md">中文</a> | English
 </p>
 
 <p align="center">
-Helper library that exports YCloud Icons icon data.
+Helper library that exports YCloud Icons generic icon node data and business icon SVG data.
 </p>
 
 <div align="center">
@@ -30,7 +30,7 @@ Helper library that exports YCloud Icons icon data.
 
 # @ycloud-web/icons-data
 
-Exports YCloud Icons icon data in a tree-shakable format and provides helper functions for dynamic icon imports.
+Exports YCloud Icons generic icon node data in a tree-shakable format, and exposes business icon SVG / data URI data through a business subpath.
 
 ## Installation
 
@@ -56,6 +56,8 @@ No framework peer dependency.
 
 ### Usage
 
+Generic icons use node data and can be rendered through the builders:
+
 ```ts
 import { House } from '@ycloud-web/icons-data';
 import { buildYCloudSvg } from '@ycloud-web/icons-data/build';
@@ -65,6 +67,18 @@ const houseSvg = buildYCloudSvg(House, {
   color: '#111827',
 });
 ```
+
+Business icons use a separate subpath that exports raw SVG, data URIs, and an index:
+
+```ts
+import { billingDataUri, businessIcons, getBusinessIcon } from '@ycloud-web/icons-data/business';
+
+const billing = getBusinessIcon('billing');
+const imageSource = billingDataUri;
+const allBusinessIconNames = Object.keys(businessIcons);
+```
+
+Business icons are not generic stroke node data, so they do not support generic build params such as `strokeWidth` or `absoluteStrokeWidth`.
 
 ## Documentation
 

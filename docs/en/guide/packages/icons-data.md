@@ -2,6 +2,11 @@
 
 YCloud Icons Data exposes tree-shakable icon node data and helpers for custom renderers and framework integrations.
 
+The package now covers both icon families:
+
+- Generic icons are exported from `@ycloud-web/icons-data` as normalized node data for the generic builders.
+- Business icons are exported from `@ycloud-web/icons-data/business` as cleaned SVG strings, data URIs, and index data.
+
 **You can use it to:**
 
 - Consume icon nodes without a framework component layer.
@@ -42,6 +47,18 @@ import { buildYCloudSvg } from '@ycloud-web/icons-data/build';
 
 const svg = buildYCloudSvg(House);
 ```
+
+Business icon data:
+
+```ts
+import { billingDataUri, businessIconNames, getBusinessIcon } from '@ycloud-web/icons-data/business';
+
+const billing = getBusinessIcon('billing');
+const imageSource = billingDataUri;
+const availableBusinessIcons = businessIconNames;
+```
+
+Business icons are not generic stroke node data, so they do not support generic builder params such as `strokeWidth` or `absoluteStrokeWidth`.
 
 ## Documentation
 

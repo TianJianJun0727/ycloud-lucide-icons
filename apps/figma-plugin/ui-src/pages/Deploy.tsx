@@ -12,7 +12,7 @@ import {
   sanitizeSvg,
   toKebabCase,
 } from '../../common/iconRules';
-import type { IconSourceType, YCloudIconData } from '../../common/types';
+import type { BusinessIconCategory, IconSourceType, YCloudIconData } from '../../common/types';
 import { useAppDispatch, useAppState } from '../contexts/AppContext';
 import styles from './Deploy.module.css';
 
@@ -29,16 +29,6 @@ type Category = {
   title: string;
   englishTitle: string;
 };
-
-const BUSINESS_CATEGORY_OPTIONS = [
-  { key: 'inbox', title: 'Inbox' },
-  { key: 'menu', title: 'Menu' },
-  { key: 'chatbot', title: 'Chatbot' },
-  { key: 'outlined', title: 'Outlined' },
-  { key: 'filled', title: 'Filled' },
-  { key: 'basic', title: 'Basic' },
-  { key: 'filter', title: 'Filter' },
-];
 
 type GitHubContentItem = {
   name: string;
@@ -59,6 +49,7 @@ type GitHubTree = {
 };
 
 type BusinessIconIndex = {
+  categories: BusinessIconCategory[];
   icons?: Array<{
     name?: string;
     category?: string;
@@ -116,6 +107,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     deployResult,
   } = useAppState();
   const [categories, setCategories] = useState<Category[]>([]);
+  const [businessCategories, setBusinessCategories] = useState<BusinessIconCategory[]>([]);
   const [existingGenericIconNames, setExistingGenericIconNames] = useState<string[]>([]);
   const [existingBusinessIconNames, setExistingBusinessIconNames] = useState<string[]>([]);
   const [categoryQuery, setCategoryQuery] = useState('');
@@ -311,13 +303,9 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         ? decodeBase64Json<BusinessIconIndex>(
             ((await businessIndexResponse.json()) as GitHubContentFile).content,
           )
-        : businessIndexResponse.status === 404
-          ? { icons: [] }
-          : (() => {
-              throw new Error(
-                `${businessIndexResponse.status} ${businessIndexResponse.statusText}`,
-              );
-            })();
+        : (() => {
+            throw new Error(`${businessIndexResponse.status} ${businessIndexResponse.statusText}`);
+          })();
       const indexBusinessIconNames = (businessIndex.icons ?? [])
         .map((icon) => icon.name)
         .filter((name): name is string => typeof name === 'string' && name.length > 0);
@@ -351,10 +339,11 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       setCategories(
         nextCategories.sort((left, right) => left.title.localeCompare(right.title, 'zh-Hans-CN')),
       );
+      setBusinessCategories(businessIndex.categories);
       setExistingGenericIconNames(nextExistingIconNames);
       setExistingBusinessIconNames(nextExistingBusinessIconNames);
       setCategoryMessage(
-        `已同步 ${nextCategories.length} 个已有分类、${nextExistingIconNames.length} 个通用图标、${nextExistingBusinessIconNames.length} 个业务图标。`,
+        `已同步 ${nextCategories.length} 个已有分类、${businessIndex.categories.length} 个业务分类、${nextExistingIconNames.length} 个通用图标、${nextExistingBusinessIconNames.length} 个业务图标。`,
       );
     } catch (error) {
       setCategoryMessage(
@@ -369,7 +358,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     if (
       hasAutoLoadedCategories.current ||
       isLoadingCategories ||
-      categories.length > 0 ||
+      (categories.length > 0 && businessCategories.length > 0) ||
       !githubData.owner ||
       !githubData.name ||
       !githubApiKey
@@ -378,7 +367,14 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     }
     hasAutoLoadedCategories.current = true;
     void loadCategories();
-  }, [categories.length, githubApiKey, githubData.name, githubData.owner, isLoadingCategories]);
+  }, [
+    businessCategories.length,
+    categories.length,
+    githubApiKey,
+    githubData.name,
+    githubData.owner,
+    isLoadingCategories,
+  ]);
 
   const allCategoryOptions = useMemo(
     () =>
@@ -484,6 +480,27 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       {sourceType === 'business' && (
         <section className={styles.card}>
           <h2 className={styles.title}>业务分类</h2>
+          <div className={styles.row}>
+            <p className={styles.muted}>选择 business-icons 下已配置的目录。</p>
+            <button
+              className={styles.secondaryButton}
+              type="button"
+              disabled={isLoadingCategories}
+              onClick={loadCategories}
+            >
+              {isLoadingCategories ? '刷新中' : '刷新分类'}
+            </button>
+          </div>
+          {categoryMessage && (
+            <p
+              className={[
+                styles.message,
+                categoryMessage.includes('失败') ? styles.messageError : '',
+              ].join(' ')}
+            >
+              {categoryMessage}
+            </p>
+          )}
           <div className={styles.fieldGroup}>
             <span className={styles.label}>目标目录</span>
             <select
@@ -494,12 +511,12 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
               }}
             >
               <option value="">请选择业务分类</option>
-              {BUSINESS_CATEGORY_OPTIONS.map((category) => (
+              {businessCategories.map((category) => (
                 <option
-                  key={category.key}
-                  value={category.key}
+                  key={category.name}
+                  value={category.name}
                 >
-                  {category.title}
+                  {category.title} / {category.i18n.en.title}
                 </option>
               ))}
             </select>

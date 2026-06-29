@@ -31,6 +31,25 @@ export interface IconEntity extends IconMetaData {
   popularity?: number;
 }
 
+export interface BusinessIconEntity {
+  name: string;
+  displayName: string;
+  category: string;
+  categoryTitle: string;
+  englishCategoryTitle: string;
+  componentName: string;
+  path: string;
+  svg: string;
+  dataUri: string;
+}
+
+export interface BusinessIconCategory {
+  name: string;
+  title: string;
+  englishTitle: string;
+  iconCount: number;
+}
+
 export interface Category {
   name: string;
   title: string;

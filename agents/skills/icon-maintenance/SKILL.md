@@ -8,23 +8,29 @@
 
 默认遵守下面几条：
 
-1. 不要只改 SVG，不同步元数据。
-2. 不要只删 `.svg` 或只删 `.json`。
-3. 默认不要发明新的分类名，图标的 `categories` 应优先复用现有 `categories/*.json`。
-4. 图标元数据默认使用中文，英文信息必须补齐到 `i18n.en`，不要只保留单语言标签。
-5. 除非用户明确要求，不要顺手批量改无关图标。
-6. 修改完成后至少运行最小验证命令，再决定是否提交。
+1. 先判断目标是通用图标还是业务图标，不要混用两套规则。
+2. 通用图标不要只改 SVG，不同步元数据。
+3. 通用图标不要只删 `.svg` 或只删 `.json`。
+4. 默认不要发明新的分类名；通用图标的 `categories` 应优先复用现有 `categories/*.json`，业务图标应优先复用现有 `business-icons/<category>/index.json`。
+5. 通用图标元数据默认使用中文，英文信息必须补齐到 `i18n.en`，不要只保留单语言标签。
+6. 除非用户明确要求，不要顺手批量改无关图标。
+7. 修改完成后至少运行最小验证命令，再决定是否提交。
 
-把 `icons/*.svg` 和 `icons/*.json` 视为同一个实体的两部分。任何增删改都先检查它们是否仍然成对存在。
+把通用图标的 `icons/*.svg` 和 `icons/*.json` 视为同一个实体的两部分。任何通用图标增删改都先检查它们是否仍然成对存在。
+
+业务图标不维护逐图标 JSON；它的元数据来自目录级 `business-icons/<category>/index.json` 和生成产物 `business-icons/index.json`。业务图标数据同时需要进入 `@ycloud-web/icons-data/business`。
 
 ## 目录约定
 
 - `icons/*.svg`：图标 SVG 源文件
 - `icons/*.json`：图标元数据，主字段为中文展示信息，`i18n.en` 为英文展示信息
 - `categories/*.json`：分类定义，决定左侧分类展示、分类标题和英文标题
+- `business-icons/<category>/*.svg`：业务图标 SVG 源文件
+- `business-icons/<category>/index.json`：业务分类定义，包含中文标题、英文标题和排序权重
+- `business-icons/index.json`：生成产物，供校验、Figma 插件、文档和包生成消费
 - `docs/`：文档站点，图标详情页、分类页和搜索数据都由构建脚本自动生成
 
-一个图标必须同时具备：
+一个通用图标必须同时具备：
 
 ```text
 icons/<icon-name>.svg
@@ -33,13 +39,27 @@ icons/<icon-name>.json
 
 否则 `pnpm checkIcons` 会报错。
 
+一个业务图标必须位于：
+
+```text
+business-icons/<category>/<icon-name>.svg
+```
+
+并且对应分类目录必须存在：
+
+```text
+business-icons/<category>/index.json
+```
+
+业务图标文件名在所有业务分类中必须全局唯一，因为包内组件导出名不拼接分类名。
+
 ## SVG 规范
 
 AI 在处理 SVG 时，除了保证文件存在，还要遵守这些约束：
 
 1. 文件名使用 kebab-case。
 2. 不保留无意义的编辑器残留和元数据。
-3. 不随意引入与现有线性图标风格明显不一致的形状语言。
+3. 通用图标不随意引入与现有线性图标风格明显不一致的形状语言；业务图标可以保留产品、渠道、状态或业务对象的专有视觉信息。
 4. 路径结构尽量简单，避免明显冗余的 group、style 和无用属性。
 5. 如果只是修元数据，不要顺手改 SVG 形状。
 6. 修改后的图标默认应能在 24px 视口下保持清晰可辨。
@@ -52,26 +72,57 @@ pnpm optimize
 
 然后再做后续维护。
 
+业务图标来自外部设计工具时，优先执行：
+
+```sh
+node ./scripts/optimizeBusinessSvgs.mts
+node ./scripts/writeBusinessIconIndex.mts
+```
+
+业务清洗只清除固定颜色、样式和设计工具冗余属性，不自动补 `stroke-width="2"`，也不强制改成通用 24x24 线性风格。
+
 ## 最小决策树
 
 收到“新增 / 删除 / 修改图标”的需求时，先做这个判断：
 
-### 新增图标
+### 新增通用图标
 
 - 新增 `icons/<name>.svg`
 - 新增 `icons/<name>.json`
 - 如果任务明确需要新增分类，再新增 `categories/<category>.json`
 
-### 删除图标
+### 新增业务图标
+
+- 新增 `business-icons/<category>/<name>.svg`
+- 如果是新业务分类，再新增 `business-icons/<category>/index.json`
+- 运行 `node ./scripts/writeBusinessIconIndex.mts` 更新根索引
+- 不新增 `icons/<name>.json`
+
+### 删除通用图标
 
 - 同时删除 `icons/<name>.svg` 和 `icons/<name>.json`
 - 检查别名、弃用迁移信息、文档示例是否仍引用该图标
 
-### 修改图标
+### 删除业务图标
+
+- 删除 `business-icons/<category>/<name>.svg`
+- 运行 `node ./scripts/writeBusinessIconIndex.mts` 更新根索引
+- 如果分类目录变空，除非用户明确要求保留，否则仍保留目录级 `index.json` 作为允许分类配置
+- 检查文档示例、业务字体 class、包导入示例是否仍引用该图标
+
+### 修改通用图标
 
 - 只改形状：改 `.svg`
 - 只改标签 / 分类 / 中文名称：改 `.json`
 - 改名字：同步重命名 `.svg`、`.json`，必要时增加 `aliases`
+
+### 修改业务图标
+
+- 只改形状：改 `business-icons/<category>/<name>.svg`
+- 改分类：移动 SVG 到目标分类目录，确保目标分类有 `index.json`
+- 改名字：重命名 SVG；同步检查业务包导入示例、业务字体 class 和文档引用
+- 改分类标题：改 `business-icons/<category>/index.json`
+- 每次改完业务 SVG 或分类配置后运行 `node ./scripts/writeBusinessIconIndex.mts`
 
 ## 最小验证命令
 
@@ -80,6 +131,7 @@ pnpm optimize
 ```sh
 pnpm checkIcons
 pnpm lint:json
+node ./scripts/checkBusinessSvgSource.mts
 pnpm --dir docs docs:build:no-og
 ```
 
@@ -87,6 +139,7 @@ pnpm --dir docs docs:build:no-og
 
 - `pnpm checkIcons`：检查 `.svg` / `.json` 是否一一对应，分类是否有效
 - `pnpm lint:json`：校验图标和分类 JSON 是否符合 schema
+- `node ./scripts/checkBusinessSvgSource.mts`：校验业务 SVG、业务分类配置和根索引是否同步
 - `pnpm --dir docs docs:build:no-og`：验证文档站点、图标页、分类页和搜索索引是否都能生成
 
 如果改动影响某个具体包的导出或构建，再补对应包构建，例如：
@@ -94,6 +147,7 @@ pnpm --dir docs docs:build:no-og
 ```sh
 pnpm --filter @ycloud-web/icons-react build
 pnpm --filter @ycloud-web/icons-vue build
+pnpm --filter @ycloud-web/icons-data build
 ```
 
 如果只是批量清洗 SVG，可以先运行：
@@ -102,7 +156,15 @@ pnpm --filter @ycloud-web/icons-vue build
 pnpm optimize
 ```
 
-## 添加一个图标
+如果只是批量清洗业务 SVG，可以先运行：
+
+```sh
+node ./scripts/optimizeBusinessSvgs.mts
+node ./scripts/writeBusinessIconIndex.mts
+node ./scripts/checkBusinessSvgSource.mts
+```
+
+## 添加一个通用图标
 
 ### 1. 放入 SVG 源文件
 
@@ -199,7 +261,7 @@ pnpm optimize
 
 ## 删除一个图标
 
-删除图标时必须成对清理：
+删除通用图标时必须成对清理：
 
 ```text
 icons/<icon-name>.svg
@@ -293,6 +355,66 @@ rg -n "<old-name>|<new-name>" docs icons categories packages
 - 没有遗漏旧名字引用
 - 没有把新旧名字混用到不一致状态
 
+## 添加一个业务图标
+
+### 1. 选择业务分类目录
+
+业务图标必须放在一级业务分类目录中，例如：
+
+```text
+business-icons/menu/billing.svg
+```
+
+当前允许分类由 `business-icons/<category>/index.json` 决定。不要只凭文件夹名新增分类；新增分类时必须同步写入目录级 `index.json`。
+
+目录级配置示例：
+
+```json
+{
+  "$schema": "../category.schema.json",
+  "title": "菜单",
+  "weight": 20,
+  "i18n": {
+    "en": {
+      "title": "Menu"
+    }
+  }
+}
+```
+
+### 2. 放入 SVG 源文件
+
+业务图标文件名使用 kebab-case。业务图标不要求和通用图标一致的 `stroke-width="2"`、`stroke-linecap="round"`、`stroke-linejoin="round"`，但清洗后颜色必须可由 `currentColor` 控制。
+
+建议执行：
+
+```sh
+node ./scripts/optimizeBusinessSvgs.mts
+node ./scripts/writeBusinessIconIndex.mts
+node ./scripts/checkBusinessSvgSource.mts
+```
+
+### 3. 检查导出名
+
+业务包导出名按 SVG 文件名生成，不拼接分类名：
+
+```text
+business-icons/menu/billing.svg -> Billing
+```
+
+所以不同业务分类下不能出现同名 SVG。重复名称会导致包生成和 Figma 提交校验失败。
+
+### 4. 自检结果
+
+新增业务图标完成后，至少确认：
+
+- 图标能在 `/business-icons/` 列表展示
+- 图标能在 `/business-icons/<name>` 页面生成详情
+- 所属业务分类能在左侧分类和 Figma 插件下拉中展示
+- 根 `business-icons/index.json` 是由脚本生成的最新内容
+- `@ycloud-web/icons-data/business` 能导出对应 SVG / data URI 数据
+- 业务字体示例可使用 `business-icon-<name>`
+
 ## 提交前检查
 
 提交前建议执行：
@@ -306,10 +428,11 @@ git diff --check
 
 - `icons/`
 - `categories/`
+- `business-icons/`
 - `docs/` 中与图标展示或说明直接相关的文件
 
-如果 diff 扩散到了大量无关文件，应先解释原因，再决定是否继续提交。
+如果 diff 扩散到了大量无关文件，应先解释原因，再决定是否继续提交。业务图标变更通常还会触发 `packages/icons-static/business-font/`、Figma 插件或业务图标文档相关文件。
 
 ## 一句话摘要
 
-> 先判断是新增、删除还是修改；保证 `icons/*.svg` 与 `icons/*.json` 成对一致；分类只引用已存在的 `categories/*.json`；中文写入主字段，英文写入必填的 `i18n.en`；最后至少运行 `pnpm checkIcons`、`pnpm lint:json` 和 `pnpm --dir docs docs:build:no-og`。
+> 先判断是通用图标还是业务图标；通用图标保证 `icons/*.svg` 与 `icons/*.json` 成对一致；业务图标保证 `business-icons/<category>/*.svg`、目录级 `index.json` 和根 `business-icons/index.json` 同步；最后至少运行对应校验和文档构建。

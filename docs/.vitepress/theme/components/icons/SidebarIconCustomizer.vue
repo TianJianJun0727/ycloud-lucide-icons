@@ -11,6 +11,7 @@ import Switch from '../base/Switch.vue';
 
 const props = defineProps<{
   rootEl?: Ref<HTMLElement>;
+  mode?: 'icon' | 'business';
 }>();
 
 const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext();
@@ -56,9 +57,10 @@ watch(absoluteStrokeWidth, (enabled) => {
 const customizingActive = computed(() => {
   return (
     color.value !== STYLE_DEFAULTS.color ||
-    strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
     size.value !== STYLE_DEFAULTS.size ||
-    absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
+    (props.mode !== 'business' &&
+      (strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
+        absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth))
   );
 });
 </script>
@@ -87,6 +89,7 @@ const customizingActive = computed(() => {
     </InputField>
 
     <InputField
+      v-if="mode !== 'business'"
       id="stroke-width"
       :label="isEnglish ? 'Stroke width' : '描边宽度'"
     >
@@ -121,6 +124,7 @@ const customizingActive = computed(() => {
     </InputField>
 
     <InputField
+      v-if="mode !== 'business'"
       id="absolute-stroke-width"
       :label="isEnglish ? 'Absolute stroke width' : '固定描边宽度'"
     >

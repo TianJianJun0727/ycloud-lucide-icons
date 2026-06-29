@@ -15,6 +15,7 @@ The main flow looks like this:
 
 ```text
 icons/*.svg + icons/*.json
+business-icons/<category>/*.svg + business-icons/<category>/index.json
   -> validation and SVG optimization
   -> package generation for each framework
   -> documentation data generation
@@ -32,13 +33,17 @@ The source of truth lives in:
 ```text
 icons/
 categories/
+business-icons/
 ```
 
 - `icons/*.svg`: the icon artwork
 - `icons/*.json`: icon metadata, such as categories, tags, and localized display data
 - `categories/*.json`: category definitions, Chinese titles, and English titles
+- `business-icons/<category>/*.svg`: business-specific icon artwork
+- `business-icons/<category>/index.json`: localized business category titles and sort order
+- `business-icons/index.json`: generated index consumed by validation, the Figma plugin, docs, and package generation
 
-The icon shape and the icon meaning are both stored in source control instead of being scattered through documentation or framework components.
+The icon shape and the icon meaning are both stored in source control instead of being scattered through documentation or framework components. Generic icons have per-icon metadata. Business icons keep category metadata only, and package export names are still derived from file names.
 
 ### 2. Generation And Validation
 
@@ -95,7 +100,7 @@ This layer describes how the repository is maintained over time.
 
 ## Why SVG And JSON Are Separate
 
-Each icon is represented by two files:
+Each generic icon is represented by two files:
 
 ```text
 icons/<name>.svg
@@ -110,6 +115,16 @@ It has a few practical benefits:
 - localized names, search keywords, tags, and categories can be maintained in JSON
 - every framework package reads the same metadata
 - validation scripts can check missing categories, missing localized fields, and invalid references
+
+Business icons use a different model:
+
+```text
+business-icons/<category>/<name>.svg
+business-icons/<category>/index.json
+business-icons/index.json
+```
+
+Business icons do not keep a JSON file next to every SVG. The category comes from the first-level folder, localized category titles come from the folder `index.json`, and the root `business-icons/index.json` is generated for the Figma plugin, docs, duplicate-name checks, and package generation.
 
 ## Package Structure
 
@@ -148,12 +163,17 @@ Stable component names keep IDE autocomplete, TypeScript hints, and rename refac
 
 - `packages/icons-static`
 
-This package targets SVG files, SVG sprites, Icon Font output, and other non-component usage.
+This package targets generic SVG files, business SVG files, SVG sprites, generic Icon Font output, business Icon Font output, and other non-component usage.
 
 ### Data And Shared Utilities
 
 - `packages/icons-data`
 - `packages/icons-shared`
+
+`packages/icons-data` now has two data shapes:
+
+- The main entry exports generic icon node data and generic builders.
+- The `business` subpath exports business icon SVG strings, data URIs, and index data.
 
 These packages avoid duplicating icon data, shared helpers, and common types across framework packages.
 
@@ -183,6 +203,7 @@ Documentation scripts generate:
 - icon node data
 - icon detail data
 - category metadata
+- business icon category and detail data
 - related icon relationships
 - release metadata
 - changelog content

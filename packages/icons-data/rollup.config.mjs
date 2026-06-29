@@ -5,16 +5,17 @@ import dts from 'rollup-plugin-dts';
 const packageName = '@ycloud-web/icons-data';
 const outputFileName = 'ycloud-icons';
 const inputs = [`src/ycloud-icons.ts`];
+const secondaryInputs = ['./src/dynamic.ts', './src/build.ts', './src/business.ts'];
 const bundles = [
   {
     format: 'cjs',
-    inputs: [...inputs, './src/dynamic.ts', './src/build.ts'],
+    inputs: [...inputs, ...secondaryInputs],
     preserveModules: true,
     extension: 'cjs',
   },
   {
     format: 'esm',
-    inputs: [...inputs, './src/dynamic.ts', './src/build.ts'],
+    inputs: [...inputs, ...secondaryInputs],
     preserveModules: true,
     extension: 'mjs',
   },
@@ -70,6 +71,7 @@ export default [
     `${outputFileName}.suffixed`,
     'dynamic',
     'build',
+    'business',
   ].map((filename) => ({
     input: `./src/${filename}.ts`,
     output: [

@@ -40,6 +40,15 @@ export interface YCloudMetadataOptions {
   tagsZh: string[];
   useCasesZh: string[];
 }
+export interface BusinessIconCategory {
+  name: string;
+  title: string;
+  i18n: {
+    en: {
+      title: string;
+    };
+  };
+}
 export interface YCloudIconData extends ExportedIconData {
   ycloud?: {
     nameZh: string;

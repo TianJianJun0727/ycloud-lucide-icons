@@ -1,113 +1,1068 @@
 {
-  "categories": ["inbox", "menu", "chatbot", "outlined", "filled", "basic", "filter"],
+  "categories": [
+    {
+      "name": "inbox",
+      "title": "Inbox",
+      "i18n": {
+        "en": {
+          "title": "Inbox"
+        }
+      }
+    },
+    {
+      "name": "menu",
+      "title": "菜单",
+      "i18n": {
+        "en": {
+          "title": "Menu"
+        }
+      }
+    },
+    {
+      "name": "chatbot",
+      "title": "聊天机器人",
+      "i18n": {
+        "en": {
+          "title": "Chatbot"
+        }
+      }
+    },
+    {
+      "name": "filled",
+      "title": "填充",
+      "i18n": {
+        "en": {
+          "title": "Filled"
+        }
+      }
+    },
+    {
+      "name": "basic",
+      "title": "基础",
+      "i18n": {
+        "en": {
+          "title": "Basic"
+        }
+      }
+    },
+    {
+      "name": "filter",
+      "title": "筛选",
+      "i18n": {
+        "en": {
+          "title": "Filter"
+        }
+      }
+    }
+  ],
   "icons": [
     {
-      "category": "menu",
+      "category": "basic",
+      "name": "acquire-more-leads",
+      "path": "business-icons/basic/acquire-more-leads.svg",
+      "componentName": "AcquireMoreLeads"
+    },
+    {
+      "category": "basic",
+      "name": "add-nick",
+      "path": "business-icons/basic/add-nick.svg",
+      "componentName": "AddNick"
+    },
+    {
+      "category": "basic",
+      "name": "add-tags",
+      "path": "business-icons/basic/add-tags.svg",
+      "componentName": "AddTags"
+    },
+    {
+      "category": "basic",
+      "name": "advertising-filled",
+      "path": "business-icons/basic/advertising-filled.svg",
+      "componentName": "AdvertisingFilled"
+    },
+    {
+      "category": "basic",
+      "name": "advertising-outlined",
+      "path": "business-icons/basic/advertising-outlined.svg",
+      "componentName": "AdvertisingOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "agent-guide-filled",
+      "path": "business-icons/basic/agent-guide-filled.svg",
+      "componentName": "AgentGuideFilled"
+    },
+    {
+      "category": "basic",
+      "name": "agent-permission-filled",
+      "path": "business-icons/basic/agent-permission-filled.svg",
+      "componentName": "AgentPermissionFilled"
+    },
+    {
+      "category": "basic",
+      "name": "agent-with-time",
+      "path": "business-icons/basic/agent-with-time.svg",
+      "componentName": "AgentWithTime"
+    },
+    {
+      "category": "basic",
+      "name": "agent",
+      "path": "business-icons/basic/agent.svg",
+      "componentName": "Agent"
+    },
+    {
+      "category": "basic",
+      "name": "alipay",
+      "path": "business-icons/basic/alipay.svg",
+      "componentName": "Alipay"
+    },
+    {
+      "category": "basic",
+      "name": "analytics-filled",
+      "path": "business-icons/basic/analytics-filled.svg",
+      "componentName": "AnalyticsFilled"
+    },
+    {
+      "category": "basic",
+      "name": "api-docs",
+      "path": "business-icons/basic/api-docs.svg",
+      "componentName": "ApiDocs"
+    },
+    {
+      "category": "basic",
+      "name": "ask-question",
+      "path": "business-icons/basic/ask-question.svg",
+      "componentName": "AskQuestion"
+    },
+    {
+      "category": "basic",
+      "name": "assign",
+      "path": "business-icons/basic/assign.svg",
+      "componentName": "Assign"
+    },
+    {
+      "category": "basic",
+      "name": "authentication-filled",
+      "path": "business-icons/basic/authentication-filled.svg",
+      "componentName": "AuthenticationFilled"
+    },
+    {
+      "category": "basic",
+      "name": "balance",
+      "path": "business-icons/basic/balance.svg",
+      "componentName": "Balance"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-analytics",
+      "path": "business-icons/basic/benefit-analytics.svg",
+      "componentName": "BenefitAnalytics"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-global",
+      "path": "business-icons/basic/benefit-global.svg",
+      "componentName": "BenefitGlobal"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-languages",
+      "path": "business-icons/basic/benefit-languages.svg",
+      "componentName": "BenefitLanguages"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-payments",
+      "path": "business-icons/basic/benefit-payments.svg",
+      "componentName": "BenefitPayments"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-restriction",
+      "path": "business-icons/basic/benefit-restriction.svg",
+      "componentName": "BenefitRestriction"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-security",
+      "path": "business-icons/basic/benefit-security.svg",
+      "componentName": "BenefitSecurity"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-sender",
+      "path": "business-icons/basic/benefit-sender.svg",
+      "componentName": "BenefitSender"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-simple",
+      "path": "business-icons/basic/benefit-simple.svg",
+      "componentName": "BenefitSimple"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-smile",
+      "path": "business-icons/basic/benefit-smile.svg",
+      "componentName": "BenefitSmile"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-statistical",
+      "path": "business-icons/basic/benefit-statistical.svg",
+      "componentName": "BenefitStatistical"
+    },
+    {
+      "category": "basic",
+      "name": "benefit-template",
+      "path": "business-icons/basic/benefit-template.svg",
+      "componentName": "BenefitTemplate"
+    },
+    {
+      "category": "basic",
+      "name": "billing-filled",
+      "path": "business-icons/basic/billing-filled.svg",
+      "componentName": "BillingFilled"
+    },
+    {
+      "category": "basic",
       "name": "billing",
-      "path": "business-icons/menu/billing.svg",
+      "path": "business-icons/basic/billing.svg",
       "componentName": "Billing"
     },
     {
-      "category": "menu",
-      "name": "campaign",
-      "path": "business-icons/menu/campaign.svg",
-      "componentName": "Campaign"
+      "category": "basic",
+      "name": "block",
+      "path": "business-icons/basic/block.svg",
+      "componentName": "Block"
     },
     {
-      "category": "menu",
-      "name": "cart",
-      "path": "business-icons/menu/cart.svg",
-      "componentName": "Cart"
+      "category": "basic",
+      "name": "blog",
+      "path": "business-icons/basic/blog.svg",
+      "componentName": "Blog"
     },
     {
-      "category": "menu",
-      "name": "chatbot",
-      "path": "business-icons/menu/chatbot.svg",
-      "componentName": "Chatbot"
+      "category": "basic",
+      "name": "bot-outlined",
+      "path": "business-icons/basic/bot-outlined.svg",
+      "componentName": "BotOutlined"
     },
     {
-      "category": "menu",
+      "category": "basic",
+      "name": "botfilled",
+      "path": "business-icons/basic/botfilled.svg",
+      "componentName": "Botfilled"
+    },
+    {
+      "category": "basic",
+      "name": "branch",
+      "path": "business-icons/basic/branch.svg",
+      "componentName": "Branch"
+    },
+    {
+      "category": "basic",
+      "name": "business-icon",
+      "path": "business-icons/basic/business-icon.svg",
+      "componentName": "BusinessIcon"
+    },
+    {
+      "category": "basic",
+      "name": "call-api",
+      "path": "business-icons/basic/call-api.svg",
+      "componentName": "CallApi"
+    },
+    {
+      "category": "basic",
+      "name": "call-in",
+      "path": "business-icons/basic/call-in.svg",
+      "componentName": "CallIn"
+    },
+    {
+      "category": "basic",
+      "name": "call-out",
+      "path": "business-icons/basic/call-out.svg",
+      "componentName": "CallOut"
+    },
+    {
+      "category": "basic",
+      "name": "calling-filled",
+      "path": "business-icons/basic/calling-filled.svg",
+      "componentName": "CallingFilled"
+    },
+    {
+      "category": "basic",
+      "name": "calling-outlined",
+      "path": "business-icons/basic/calling-outlined.svg",
+      "componentName": "CallingOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "campaign-filled",
+      "path": "business-icons/basic/campaign-filled.svg",
+      "componentName": "CampaignFilled"
+    },
+    {
+      "category": "basic",
+      "name": "campaign-outlined",
+      "path": "business-icons/basic/campaign-outlined.svg",
+      "componentName": "CampaignOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "canned-response-check",
+      "path": "business-icons/basic/canned-response-check.svg",
+      "componentName": "CannedResponseCheck"
+    },
+    {
+      "category": "basic",
+      "name": "category-filled",
+      "path": "business-icons/basic/category-filled.svg",
+      "componentName": "CategoryFilled"
+    },
+    {
+      "category": "basic",
+      "name": "chat-loading-icon",
+      "path": "business-icons/basic/chat-loading-icon.svg",
+      "componentName": "ChatLoadingIcon"
+    },
+    {
+      "category": "basic",
+      "name": "check-cancel-filled",
+      "path": "business-icons/basic/check-cancel-filled.svg",
+      "componentName": "CheckCancelFilled"
+    },
+    {
+      "category": "basic",
+      "name": "check",
+      "path": "business-icons/basic/check.svg",
+      "componentName": "Check"
+    },
+    {
+      "category": "basic",
+      "name": "circular-right-arrow",
+      "path": "business-icons/basic/circular-right-arrow.svg",
+      "componentName": "CircularRightArrow"
+    },
+    {
+      "category": "basic",
+      "name": "clock-outlined",
+      "path": "business-icons/basic/clock-outlined.svg",
+      "componentName": "ClockOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "code-filled",
+      "path": "business-icons/basic/code-filled.svg",
+      "componentName": "CodeFilled"
+    },
+    {
+      "category": "basic",
+      "name": "code-mark",
+      "path": "business-icons/basic/code-mark.svg",
+      "componentName": "CodeMark"
+    },
+    {
+      "category": "basic",
+      "name": "code-outlined",
+      "path": "business-icons/basic/code-outlined.svg",
+      "componentName": "CodeOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "code-text",
+      "path": "business-icons/basic/code-text.svg",
+      "componentName": "CodeText"
+    },
+    {
+      "category": "basic",
+      "name": "coding-filled",
+      "path": "business-icons/basic/coding-filled.svg",
+      "componentName": "CodingFilled"
+    },
+    {
+      "category": "basic",
+      "name": "coming-soon",
+      "path": "business-icons/basic/coming-soon.svg",
+      "componentName": "ComingSoon"
+    },
+    {
+      "category": "basic",
       "name": "company",
-      "path": "business-icons/menu/company.svg",
+      "path": "business-icons/basic/company.svg",
       "componentName": "Company"
     },
     {
-      "category": "menu",
-      "name": "contact",
-      "path": "business-icons/menu/contact.svg",
-      "componentName": "Contact"
+      "category": "basic",
+      "name": "compass-filled",
+      "path": "business-icons/basic/compass-filled.svg",
+      "componentName": "CompassFilled"
     },
     {
-      "category": "menu",
-      "name": "ctwa",
-      "path": "business-icons/menu/ctwa.svg",
-      "componentName": "Ctwa"
+      "category": "basic",
+      "name": "composite-trigger-icon",
+      "path": "business-icons/basic/composite-trigger-icon.svg",
+      "componentName": "CompositeTriggerIcon"
     },
     {
-      "category": "menu",
-      "name": "developers",
-      "path": "business-icons/menu/developers.svg",
-      "componentName": "Developers"
+      "category": "basic",
+      "name": "contact-filled",
+      "path": "business-icons/basic/contact-filled.svg",
+      "componentName": "ContactFilled"
     },
     {
-      "category": "menu",
-      "name": "help",
-      "path": "business-icons/menu/help.svg",
-      "componentName": "Help"
+      "category": "basic",
+      "name": "contact-outlined",
+      "path": "business-icons/basic/contact-outlined.svg",
+      "componentName": "ContactOutlined"
     },
     {
-      "category": "menu",
-      "name": "home",
-      "path": "business-icons/menu/home.svg",
-      "componentName": "Home"
+      "category": "basic",
+      "name": "conversation-unsubscribe",
+      "path": "business-icons/basic/conversation-unsubscribe.svg",
+      "componentName": "ConversationUnsubscribe"
     },
     {
-      "category": "menu",
-      "name": "inbox",
-      "path": "business-icons/menu/inbox.svg",
-      "componentName": "Inbox"
+      "category": "basic",
+      "name": "coupon-code",
+      "path": "business-icons/basic/coupon-code.svg",
+      "componentName": "CouponCode"
     },
     {
-      "category": "menu",
-      "name": "integration",
-      "path": "business-icons/menu/integration.svg",
-      "componentName": "Integration"
+      "category": "basic",
+      "name": "coupon-filled",
+      "path": "business-icons/basic/coupon-filled.svg",
+      "componentName": "CouponFilled"
     },
     {
-      "category": "menu",
-      "name": "journey",
-      "path": "business-icons/menu/journey.svg",
-      "componentName": "Journey"
+      "category": "basic",
+      "name": "create-tickets-icon",
+      "path": "business-icons/basic/create-tickets-icon.svg",
+      "componentName": "CreateTicketsIcon"
     },
     {
-      "category": "menu",
+      "category": "basic",
+      "name": "credit-card-icon",
+      "path": "business-icons/basic/credit-card-icon.svg",
+      "componentName": "CreditCardIcon"
+    },
+    {
+      "category": "basic",
+      "name": "ctwa-system-keyword-event",
+      "path": "business-icons/basic/ctwa-system-keyword-event.svg",
+      "componentName": "CtwaSystemKeywordEvent"
+    },
+    {
+      "category": "basic",
+      "name": "date-time",
+      "path": "business-icons/basic/date-time.svg",
+      "componentName": "DateTime"
+    },
+    {
+      "category": "basic",
+      "name": "delivered-icon",
+      "path": "business-icons/basic/delivered-icon.svg",
+      "componentName": "DeliveredIcon"
+    },
+    {
+      "category": "basic",
+      "name": "direction-filled",
+      "path": "business-icons/basic/direction-filled.svg",
+      "componentName": "DirectionFilled"
+    },
+    {
+      "category": "basic",
+      "name": "discount",
+      "path": "business-icons/basic/discount.svg",
+      "componentName": "Discount"
+    },
+    {
+      "category": "basic",
+      "name": "doc-csv-filled",
+      "path": "business-icons/basic/doc-csv-filled.svg",
+      "componentName": "DocCsvFilled"
+    },
+    {
+      "category": "basic",
+      "name": "document-filled",
+      "path": "business-icons/basic/document-filled.svg",
+      "componentName": "DocumentFilled"
+    },
+    {
+      "category": "basic",
+      "name": "double-check",
+      "path": "business-icons/basic/double-check.svg",
+      "componentName": "DoubleCheck"
+    },
+    {
+      "category": "basic",
+      "name": "edit-title",
+      "path": "business-icons/basic/edit-title.svg",
+      "componentName": "EditTitle"
+    },
+    {
+      "category": "basic",
+      "name": "exchange",
+      "path": "business-icons/basic/exchange.svg",
+      "componentName": "Exchange"
+    },
+    {
+      "category": "basic",
+      "name": "expand-icon",
+      "path": "business-icons/basic/expand-icon.svg",
+      "componentName": "ExpandIcon"
+    },
+    {
+      "category": "basic",
+      "name": "export-filled",
+      "path": "business-icons/basic/export-filled.svg",
+      "componentName": "ExportFilled"
+    },
+    {
+      "category": "basic",
+      "name": "file-attach",
+      "path": "business-icons/basic/file-attach.svg",
+      "componentName": "FileAttach"
+    },
+    {
+      "category": "basic",
+      "name": "filter-event",
+      "path": "business-icons/basic/filter-event.svg",
+      "componentName": "FilterEvent"
+    },
+    {
+      "category": "basic",
+      "name": "flow",
+      "path": "business-icons/basic/flow.svg",
+      "componentName": "Flow"
+    },
+    {
+      "category": "basic",
+      "name": "gift",
+      "path": "business-icons/basic/gift.svg",
+      "componentName": "Gift"
+    },
+    {
+      "category": "basic",
+      "name": "global",
+      "path": "business-icons/basic/global.svg",
+      "componentName": "Global"
+    },
+    {
+      "category": "basic",
+      "name": "handle",
+      "path": "business-icons/basic/handle.svg",
+      "componentName": "Handle"
+    },
+    {
+      "category": "basic",
+      "name": "hub-spot",
+      "path": "business-icons/basic/hub-spot.svg",
+      "componentName": "HubSpot"
+    },
+    {
+      "category": "basic",
+      "name": "journey-filled",
+      "path": "business-icons/basic/journey-filled.svg",
+      "componentName": "JourneyFilled"
+    },
+    {
+      "category": "basic",
+      "name": "journey-outlined",
+      "path": "business-icons/basic/journey-outlined.svg",
+      "componentName": "JourneyOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "language",
+      "path": "business-icons/basic/language.svg",
+      "componentName": "Language"
+    },
+    {
+      "category": "basic",
+      "name": "lightning-filled",
+      "path": "business-icons/basic/lightning-filled.svg",
+      "componentName": "LightningFilled"
+    },
+    {
+      "category": "basic",
+      "name": "line-simple",
+      "path": "business-icons/basic/line-simple.svg",
+      "componentName": "LineSimple"
+    },
+    {
+      "category": "basic",
+      "name": "link-action",
+      "path": "business-icons/basic/link-action.svg",
+      "componentName": "LinkAction"
+    },
+    {
+      "category": "basic",
+      "name": "link-circle-filled",
+      "path": "business-icons/basic/link-circle-filled.svg",
+      "componentName": "LinkCircleFilled"
+    },
+    {
+      "category": "basic",
+      "name": "link",
+      "path": "business-icons/basic/link.svg",
+      "componentName": "Link"
+    },
+    {
+      "category": "basic",
+      "name": "location",
+      "path": "business-icons/basic/location.svg",
+      "componentName": "Location"
+    },
+    {
+      "category": "basic",
       "name": "logout",
-      "path": "business-icons/menu/logout.svg",
+      "path": "business-icons/basic/logout.svg",
       "componentName": "Logout"
     },
     {
-      "category": "menu",
-      "name": "order",
-      "path": "business-icons/menu/order.svg",
-      "componentName": "Order"
+      "category": "basic",
+      "name": "map-outlined",
+      "path": "business-icons/basic/map-outlined.svg",
+      "componentName": "MapOutlined"
     },
     {
-      "category": "menu",
-      "name": "partner",
-      "path": "business-icons/menu/partner.svg",
-      "componentName": "Partner"
+      "category": "basic",
+      "name": "message-bubble-filled",
+      "path": "business-icons/basic/message-bubble-filled.svg",
+      "componentName": "MessageBubbleFilled"
     },
     {
-      "category": "menu",
-      "name": "settings",
-      "path": "business-icons/menu/settings.svg",
-      "componentName": "Settings"
+      "category": "basic",
+      "name": "message-bubble-outlined",
+      "path": "business-icons/basic/message-bubble-outlined.svg",
+      "componentName": "MessageBubbleOutlined"
     },
     {
-      "category": "menu",
-      "name": "whatsapp",
-      "path": "business-icons/menu/whatsapp.svg",
-      "componentName": "Whatsapp"
+      "category": "basic",
+      "name": "message-filled",
+      "path": "business-icons/basic/message-filled.svg",
+      "componentName": "MessageFilled"
+    },
+    {
+      "category": "basic",
+      "name": "meta-filled",
+      "path": "business-icons/basic/meta-filled.svg",
+      "componentName": "MetaFilled"
+    },
+    {
+      "category": "basic",
+      "name": "migrate-outlined",
+      "path": "business-icons/basic/migrate-outlined.svg",
+      "componentName": "MigrateOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "mobile-phone",
+      "path": "business-icons/basic/mobile-phone.svg",
+      "componentName": "MobilePhone"
+    },
+    {
+      "category": "basic",
+      "name": "more-horiz",
+      "path": "business-icons/basic/more-horiz.svg",
+      "componentName": "MoreHoriz"
+    },
+    {
+      "category": "basic",
+      "name": "more-price",
+      "path": "business-icons/basic/more-price.svg",
+      "componentName": "MorePrice"
+    },
+    {
+      "category": "basic",
+      "name": "more-restriction",
+      "path": "business-icons/basic/more-restriction.svg",
+      "componentName": "MoreRestriction"
+    },
+    {
+      "category": "basic",
+      "name": "more-sender-name",
+      "path": "business-icons/basic/more-sender-name.svg",
+      "componentName": "MoreSenderName"
+    },
+    {
+      "category": "basic",
+      "name": "more-sender",
+      "path": "business-icons/basic/more-sender.svg",
+      "componentName": "MoreSender"
+    },
+    {
+      "category": "basic",
+      "name": "more-vert",
+      "path": "business-icons/basic/more-vert.svg",
+      "componentName": "MoreVert"
+    },
+    {
+      "category": "basic",
+      "name": "mouse-filled",
+      "path": "business-icons/basic/mouse-filled.svg",
+      "componentName": "MouseFilled"
+    },
+    {
+      "category": "basic",
+      "name": "music",
+      "path": "business-icons/basic/music.svg",
+      "componentName": "Music"
+    },
+    {
+      "category": "basic",
+      "name": "new-tag-filled",
+      "path": "business-icons/basic/new-tag-filled.svg",
+      "componentName": "NewTagFilled"
+    },
+    {
+      "category": "basic",
+      "name": "note-filled",
+      "path": "business-icons/basic/note-filled.svg",
+      "componentName": "NoteFilled"
+    },
+    {
+      "category": "basic",
+      "name": "online-chat-outline",
+      "path": "business-icons/basic/online-chat-outline.svg",
+      "componentName": "OnlineChatOutline"
+    },
+    {
+      "category": "basic",
+      "name": "order-event-filled",
+      "path": "business-icons/basic/order-event-filled.svg",
+      "componentName": "OrderEventFilled"
+    },
+    {
+      "category": "basic",
+      "name": "order-outlined",
+      "path": "business-icons/basic/order-outlined.svg",
+      "componentName": "OrderOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "partners-outlined",
+      "path": "business-icons/basic/partners-outlined.svg",
+      "componentName": "PartnersOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "payments-filled",
+      "path": "business-icons/basic/payments-filled.svg",
+      "componentName": "PaymentsFilled"
+    },
+    {
+      "category": "basic",
+      "name": "play-circle-filled",
+      "path": "business-icons/basic/play-circle-filled.svg",
+      "componentName": "PlayCircleFilled"
+    },
+    {
+      "category": "basic",
+      "name": "progressomg",
+      "path": "business-icons/basic/progressomg.svg",
+      "componentName": "Progressomg"
+    },
+    {
+      "category": "basic",
+      "name": "push-pin-filled",
+      "path": "business-icons/basic/push-pin-filled.svg",
+      "componentName": "PushPinFilled"
+    },
+    {
+      "category": "basic",
+      "name": "push-pin-outlined",
+      "path": "business-icons/basic/push-pin-outlined.svg",
+      "componentName": "PushPinOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "qmai-event",
+      "path": "business-icons/basic/qmai-event.svg",
+      "componentName": "QmaiEvent"
+    },
+    {
+      "category": "basic",
+      "name": "qr-code",
+      "path": "business-icons/basic/qr-code.svg",
+      "componentName": "QrCode"
+    },
+    {
+      "category": "basic",
+      "name": "record-filled",
+      "path": "business-icons/basic/record-filled.svg",
+      "componentName": "RecordFilled"
+    },
+    {
+      "category": "basic",
+      "name": "redo",
+      "path": "business-icons/basic/redo.svg",
+      "componentName": "Redo"
+    },
+    {
+      "category": "basic",
+      "name": "route",
+      "path": "business-icons/basic/route.svg",
+      "componentName": "Route"
+    },
+    {
+      "category": "basic",
+      "name": "sand-clock",
+      "path": "business-icons/basic/sand-clock.svg",
+      "componentName": "SandClock"
+    },
+    {
+      "category": "basic",
+      "name": "scroll-to-bottom",
+      "path": "business-icons/basic/scroll-to-bottom.svg",
+      "componentName": "ScrollToBottom"
+    },
+    {
+      "category": "basic",
+      "name": "security-filled",
+      "path": "business-icons/basic/security-filled.svg",
+      "componentName": "SecurityFilled"
+    },
+    {
+      "category": "basic",
+      "name": "segment",
+      "path": "business-icons/basic/segment.svg",
+      "componentName": "Segment"
+    },
+    {
+      "category": "basic",
+      "name": "send-message-mark",
+      "path": "business-icons/basic/send-message-mark.svg",
+      "componentName": "SendMessageMark"
+    },
+    {
+      "category": "basic",
+      "name": "send-message",
+      "path": "business-icons/basic/send-message.svg",
+      "componentName": "SendMessage"
+    },
+    {
+      "category": "basic",
+      "name": "setting-filled",
+      "path": "business-icons/basic/setting-filled.svg",
+      "componentName": "SettingFilled"
+    },
+    {
+      "category": "basic",
+      "name": "setting-outlined",
+      "path": "business-icons/basic/setting-outlined.svg",
+      "componentName": "SettingOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "share",
+      "path": "business-icons/basic/share.svg",
+      "componentName": "Share"
+    },
+    {
+      "category": "basic",
+      "name": "shop-assistant",
+      "path": "business-icons/basic/shop-assistant.svg",
+      "componentName": "ShopAssistant"
+    },
+    {
+      "category": "basic",
+      "name": "shop-check-bag-filled",
+      "path": "business-icons/basic/shop-check-bag-filled.svg",
+      "componentName": "ShopCheckBagFilled"
+    },
+    {
+      "category": "basic",
+      "name": "shop-menu-filled",
+      "path": "business-icons/basic/shop-menu-filled.svg",
+      "componentName": "ShopMenuFilled"
+    },
+    {
+      "category": "basic",
+      "name": "shop-menu-outlined",
+      "path": "business-icons/basic/shop-menu-outlined.svg",
+      "componentName": "ShopMenuOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "shopify",
+      "path": "business-icons/basic/shopify.svg",
+      "componentName": "Shopify"
+    },
+    {
+      "category": "basic",
+      "name": "show-side-bar",
+      "path": "business-icons/basic/show-side-bar.svg",
+      "componentName": "ShowSideBar"
+    },
+    {
+      "category": "basic",
+      "name": "side-bar",
+      "path": "business-icons/basic/side-bar.svg",
+      "componentName": "SideBar"
+    },
+    {
+      "category": "basic",
+      "name": "star",
+      "path": "business-icons/basic/star.svg",
+      "componentName": "Star"
+    },
+    {
+      "category": "basic",
+      "name": "start-arrow",
+      "path": "business-icons/basic/start-arrow.svg",
+      "componentName": "StartArrow"
+    },
+    {
+      "category": "basic",
+      "name": "status-filled",
+      "path": "business-icons/basic/status-filled.svg",
+      "componentName": "StatusFilled"
+    },
+    {
+      "category": "basic",
+      "name": "sync",
+      "path": "business-icons/basic/sync.svg",
+      "componentName": "Sync"
+    },
+    {
+      "category": "basic",
+      "name": "table-setting",
+      "path": "business-icons/basic/table-setting.svg",
+      "componentName": "TableSetting"
+    },
+    {
+      "category": "basic",
+      "name": "tag",
+      "path": "business-icons/basic/tag.svg",
+      "componentName": "Tag"
+    },
+    {
+      "category": "basic",
+      "name": "task-complete",
+      "path": "business-icons/basic/task-complete.svg",
+      "componentName": "TaskComplete"
+    },
+    {
+      "category": "basic",
+      "name": "task-menu-filled",
+      "path": "business-icons/basic/task-menu-filled.svg",
+      "componentName": "TaskMenuFilled"
+    },
+    {
+      "category": "basic",
+      "name": "team",
+      "path": "business-icons/basic/team.svg",
+      "componentName": "Team"
+    },
+    {
+      "category": "basic",
+      "name": "template-filled",
+      "path": "business-icons/basic/template-filled.svg",
+      "componentName": "TemplateFilled"
+    },
+    {
+      "category": "basic",
+      "name": "time-clock",
+      "path": "business-icons/basic/time-clock.svg",
+      "componentName": "TimeClock"
+    },
+    {
+      "category": "basic",
+      "name": "title-edit-icon",
+      "path": "business-icons/basic/title-edit-icon.svg",
+      "componentName": "TitleEditIcon"
+    },
+    {
+      "category": "basic",
+      "name": "tool-filled",
+      "path": "business-icons/basic/tool-filled.svg",
+      "componentName": "ToolFilled"
+    },
+    {
+      "category": "basic",
+      "name": "trigger",
+      "path": "business-icons/basic/trigger.svg",
+      "componentName": "Trigger"
+    },
+    {
+      "category": "basic",
+      "name": "trophy",
+      "path": "business-icons/basic/trophy.svg",
+      "componentName": "Trophy"
+    },
+    {
+      "category": "basic",
+      "name": "undo",
+      "path": "business-icons/basic/undo.svg",
+      "componentName": "Undo"
+    },
+    {
+      "category": "basic",
+      "name": "unsubscribe",
+      "path": "business-icons/basic/unsubscribe.svg",
+      "componentName": "Unsubscribe"
+    },
+    {
+      "category": "basic",
+      "name": "upgrade-diamond-filled",
+      "path": "business-icons/basic/upgrade-diamond-filled.svg",
+      "componentName": "UpgradeDiamondFilled"
+    },
+    {
+      "category": "basic",
+      "name": "upload-file",
+      "path": "business-icons/basic/upload-file.svg",
+      "componentName": "UploadFile"
+    },
+    {
+      "category": "basic",
+      "name": "user-filled",
+      "path": "business-icons/basic/user-filled.svg",
+      "componentName": "UserFilled"
+    },
+    {
+      "category": "basic",
+      "name": "wechat-filled",
+      "path": "business-icons/basic/wechat-filled.svg",
+      "componentName": "WechatFilled"
+    },
+    {
+      "category": "basic",
+      "name": "whatsapp-business-outlined",
+      "path": "business-icons/basic/whatsapp-business-outlined.svg",
+      "componentName": "WhatsappBusinessOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "whatsapp-notch-outlined",
+      "path": "business-icons/basic/whatsapp-notch-outlined.svg",
+      "componentName": "WhatsappNotchOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "whatsapp-phone-filled",
+      "path": "business-icons/basic/whatsapp-phone-filled.svg",
+      "componentName": "WhatsappPhoneFilled"
+    },
+    {
+      "category": "basic",
+      "name": "whatsapp-phone-outlined",
+      "path": "business-icons/basic/whatsapp-phone-outlined.svg",
+      "componentName": "WhatsappPhoneOutlined"
+    },
+    {
+      "category": "basic",
+      "name": "widgets-filled",
+      "path": "business-icons/basic/widgets-filled.svg",
+      "componentName": "WidgetsFilled"
+    },
+    {
+      "category": "basic",
+      "name": "widgets-outlined",
+      "path": "business-icons/basic/widgets-outlined.svg",
+      "componentName": "WidgetsOutlined"
     }
   ]
 }

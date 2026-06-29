@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'ycloud-business';
+  src: url('ycloud-business.eot'); /* IE9*/
+  src:
+    url('ycloud-business.eot#iefix') format('embedded-opentype') /* IE6-IE8 */,
+    url('ycloud-business.woff2') format('woff2'),
+    url('ycloud-business.woff') format('woff'),
+    url('ycloud-business.ttf') format('truetype'),
+    url('ycloud-business.svg') format('svg');
+}
+
+[class^='business-icon-'],
+[class*=' business-icon-'] {
+  font-family: 'ycloud-business' !important;
+  font-size: inherit;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.business-icon-billing::before {
+  content: '\f000';
+}
+.business-icon-campaign::before {
+  content: '\f001';
+}
+.business-icon-cart::before {
+  content: '\f002';
+}
+.business-icon-chatbot::before {
+  content: '\f003';
+}
+.business-icon-company::before {
+  content: '\f004';
+}
+.business-icon-contact::before {
+  content: '\f005';
+}
+.business-icon-ctwa::before {
+  content: '\f006';
+}
+.business-icon-developers::before {
+  content: '\f007';
+}
+.business-icon-help::before {
+  content: '\f008';
+}
+.business-icon-home::before {
+  content: '\f009';
+}
+.business-icon-inbox::before {
+  content: '\f00a';
+}
+.business-icon-integration::before {
+  content: '\f00b';
+}
+.business-icon-journey::before {
+  content: '\f00c';
+}
+.business-icon-logout::before {
+  content: '\f00d';
+}
+.business-icon-order::before {
+  content: '\f00e';
+}
+.business-icon-partner::before {
+  content: '\f00f';
+}
+.business-icon-pin::before {
+  content: '\f010';
+}
+.business-icon-settings::before {
+  content: '\f011';
+}
+.business-icon-whatsapp::before {
+  content: '\f012';
+}

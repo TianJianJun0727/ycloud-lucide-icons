@@ -6,6 +6,8 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'
 const businessIconsDir = path.join(repoRoot, 'business-icons');
 const corePackageSrcDir = path.join(repoRoot, 'packages/icons/src');
 const corePackageIconsDir = path.join(corePackageSrcDir, 'business-icons');
+const iconsDataPackageSrcDir = path.join(repoRoot, 'packages/icons-data/src');
+const iconsDataPackageIconsDir = path.join(iconsDataPackageSrcDir, 'business-icons');
 const reactPackageSrcDir = path.join(repoRoot, 'packages/icons-react/src');
 const reactPackageIconsDir = path.join(reactPackageSrcDir, 'business-icons');
 const staticPackageIconsDir = path.join(repoRoot, 'packages/icons-static/business-icons');
@@ -25,6 +27,7 @@ const angularPackageSrcDir = path.join(repoRoot, 'packages/icons-angular/src');
 const angularPackageIconsDir = path.join(angularPackageSrcDir, 'business-icons');
 const allTargets = [
   'core',
+  'data',
   'react',
   'static',
   'preact',
@@ -368,6 +371,11 @@ async function resetOutputDirectory(targets: Target[]) {
     await fs.mkdir(corePackageIconsDir, { recursive: true });
   }
 
+  if (hasTarget(targets, 'data')) {
+    await fs.rm(iconsDataPackageIconsDir, { recursive: true, force: true });
+    await fs.mkdir(iconsDataPackageIconsDir, { recursive: true });
+  }
+
   if (hasTarget(targets, 'react')) {
     await fs.rm(reactPackageIconsDir, { recursive: true, force: true });
     await fs.mkdir(reactPackageIconsDir, { recursive: true });
@@ -478,6 +486,15 @@ export async function generateBusinessIconsPackage(targets: Target[] = [...allTa
         );
       }
 
+      if (hasTarget(targets, 'data')) {
+        writes.push(
+          fs.writeFile(
+            path.join(iconsDataPackageIconsDir, `${name}.ts`),
+            buildBusinessIconModule(name, svg),
+          ),
+        );
+      }
+
       if (hasTarget(targets, 'react')) {
         writes.push(
           fs.writeFile(
@@ -567,6 +584,13 @@ export async function generateBusinessIconsPackage(targets: Target[] = [...allTa
 
   if (hasTarget(targets, 'core')) {
     await fs.writeFile(path.join(corePackageSrcDir, 'business.ts'), buildBusinessIconsIndex(names));
+  }
+
+  if (hasTarget(targets, 'data')) {
+    await fs.writeFile(
+      path.join(iconsDataPackageSrcDir, 'business.ts'),
+      buildBusinessIconsIndex(names),
+    );
   }
 
   if (hasTarget(targets, 'react')) {

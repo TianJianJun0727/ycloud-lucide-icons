@@ -23,9 +23,13 @@ description: 业务专有 SVG 图标的存放、校验和提交规则。
 
 ```text
 business-icons/<business-category>/<icon-name>.svg
+business-icons/<business-category>/index.json
+business-icons/index.json
 ```
 
-业务分类直接由一级目录决定，目前允许：
+业务分类直接由一级目录决定，目录的中文名、英文名和排序权重维护在 `business-icons/<business-category>/index.json`。根 `business-icons/index.json` 是生成产物，用于给校验、Figma 插件、文档站和包生成流程消费。
+
+当前允许目录：
 
 ```text
 inbox
@@ -37,7 +41,9 @@ basic
 filter
 ```
 
-业务图标目前不需要同名 JSON 元数据，也不会进入通用图标搜索或分类页。它会生成到现有包的 `business` 子入口，不混入通用图标默认入口。包内组件导出名仍按文件名生成，不拼接分类名，因此不同分类下也不能出现同名 SVG。
+业务图标不需要每个 SVG 配一份同名 JSON 元数据，也不会进入通用图标分类元数据。`business-icons/<business-category>/index.json` 只维护业务分类配置；根 `business-icons/index.json` 由脚本生成业务分类、多语言显示名和图标索引，用于校验、Figma 插件下拉选择、文档分类展示和重复检测。
+
+它会生成到现有包的 `business` 子入口，不混入通用图标默认入口。包内组件导出名仍按文件名生成，不拼接分类名，因此不同分类下也不能出现同名 SVG。
 
 ## 清洗和校验规则
 
@@ -53,7 +59,8 @@ filter
 提交时只做基础安全和结构校验：
 
 - 文件路径必须是 `business-icons/<business-category>/<icon-name>.svg`
-- 业务分类目录必须是允许列表中的一级目录
+- 业务分类目录必须有 `business-icons/<business-category>/index.json`
+- 根 `business-icons/index.json` 必须由 `node ./scripts/writeBusinessIconIndex.mts` 生成并保持同步
 - 文件名必须是小写 kebab-case
 - 根节点必须是 `<svg>`
 - `fill`、`stroke` 只能是 `currentColor` 或 `none`
@@ -66,6 +73,7 @@ filter
 
 ```sh
 node ./scripts/optimizeBusinessSvgs.mts
+node ./scripts/writeBusinessIconIndex.mts
 node ./scripts/checkBusinessSvgSource.mts
 ```
 
@@ -151,6 +159,16 @@ pnpm add @ycloud-web/icons-static
 
 ```ts
 import whatsappBusinessIconUrl from '@ycloud-web/icons-static/business-icons/inbox/whatsapp-business.svg';
+```
+
+业务图标也会生成独立 Icon Font，不和通用 `font/ycloud.css` 混在一起：
+
+```css
+@import '@ycloud-web/icons-static/business-font/ycloud-business.css';
+```
+
+```html
+<div class="business-icon-whatsapp-business"></div>
 ```
 
 业务图标只会清除固定颜色、样式和设计工具冗余属性，不会改写尺寸、描边细节或几何结构。

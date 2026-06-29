@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-导出 YCloud Icons 图标数据的辅助库。
+导出 YCloud Icons 通用图标节点数据和业务图标 SVG 数据的辅助库。
 </p>
 
 <div align="center">
@@ -30,7 +30,7 @@
 
 # @ycloud-web/icons-data
 
-以支持 tree-shaking 的格式导出 YCloud Icons 图标数据，并提供动态图标导入相关工具函数。
+以支持 tree-shaking 的格式导出 YCloud Icons 通用图标节点数据，并通过业务子入口导出业务图标 SVG / data URI 数据。
 
 ## 安装
 
@@ -56,6 +56,8 @@ bun add @ycloud-web/icons-data@latest
 
 ### 用法
 
+通用图标使用节点数据，可以继续交给 builder 生成 SVG：
+
 ```ts
 import { House } from '@ycloud-web/icons-data';
 import { buildYCloudSvg } from '@ycloud-web/icons-data/build';
@@ -65,6 +67,18 @@ const houseSvg = buildYCloudSvg(House, {
   color: '#111827',
 });
 ```
+
+业务图标使用独立子入口，导出原始 SVG、data URI 和索引数据：
+
+```ts
+import { billingDataUri, businessIcons, getBusinessIcon } from '@ycloud-web/icons-data/business';
+
+const billing = getBusinessIcon('billing');
+const imageSource = billingDataUri;
+const allBusinessIconNames = Object.keys(businessIcons);
+```
+
+业务图标不是通用 stroke 节点数据，不支持 `strokeWidth`、`absoluteStrokeWidth` 等通用构建参数。
 
 ## 文档
 

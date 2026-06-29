@@ -1,0 +1,10 @@
+{
+  "$schema": "../../category.schema.json",
+  "title": "基础",
+  "weight": 60,
+  "i18n": {
+    "en": {
+      "title": "Basic"
+    }
+  }
+}
