@@ -272,6 +272,8 @@
   width: 24px;
   height: 24px;
   color: var(--yc-text);
+  --business-icon-primary-color: var(--yc-text);
+  --business-icon-secondary-color: var(--yc-bg);
 }
 
 .previewIcon svg {
