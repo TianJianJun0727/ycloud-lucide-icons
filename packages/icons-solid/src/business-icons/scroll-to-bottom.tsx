@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2026%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_3626_8464)%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20d%3D%22M18.0235%208.29806C18.3183%207.98306%2018.302%207.48866%2017.987%207.1938C17.672%206.89894%2017.1776%206.91527%2016.8828%207.23027L12.9934%2011.3853L9.11697%207.23116C8.8226%206.9157%208.32823%206.8986%208.01278%207.19297C7.69732%207.48735%207.68022%207.98171%207.97459%208.29717L12.4213%2013.0624C12.5689%2013.2206%2012.7755%2013.3105%2012.9919%2013.3107C13.2083%2013.3109%2013.415%2013.2213%2013.5629%2013.0633L18.0235%208.29806ZM18.0235%2014.0042C18.3183%2013.6892%2018.302%2013.1948%2017.987%2012.9C17.672%2012.6051%2017.1776%2012.6214%2016.8828%2012.9364L12.9934%2017.0915L9.11697%2012.9373C8.8226%2012.6219%208.32823%2012.6048%208.01278%2012.8992C7.69732%2013.1935%207.68022%2013.6879%207.97459%2014.0033L12.4213%2018.7686C12.5689%2018.9268%2012.7755%2019.0167%2012.9919%2019.0169C13.2083%2019.017%2013.415%2018.9275%2013.5629%2018.7695L18.0235%2014.0042Z%22%0A%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_3626_8464%22%3E%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%2225%22%0A%20%20%20%20%20%20%20%20height%3D%2225%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20transform%3D%22matrix(0%201%20-1%200%2025.5%200.5)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A';
 
 const ScrollToBottom = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default ScrollToBottom;

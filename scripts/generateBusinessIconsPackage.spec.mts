@@ -103,8 +103,9 @@ describe('generateBusinessIconsPackage', () => {
     const solidSource = buildBusinessSolidIconModule('whatsapp-business', dataUri);
     const svelteSource = buildBusinessSvelteIconModule('whatsapp-business', dataUri);
 
-    expect(solidSource).toContain(`const dataUri = '${dataUri}';`);
-    expect(solidSource).toContain('src={dataUri}');
+    expect(solidSource).toContain(`  '${dataUri}';`);
+    expect(solidSource).toContain('src: dataUri');
+    expect(solidSource).toContain('<img {...mergedProps} />');
     expect(svelteSource).toContain(`const dataUri = '${dataUri}';`);
     expect(svelteSource).toContain('src={dataUri}');
     expect(solidSource).not.toContain('@ycloud-web/icons/business');

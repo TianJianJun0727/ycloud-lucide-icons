@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2025%2024%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M17.3042%2016.8048C15.1792%2014.3541%207.73506%2014.5234%207.60894%2013.7603V8.20326C7.73408%207.12513%2013.7119%207.59862%2016.8373%204.70802C19.9962%201.78679%2021.1992%207.3745%2021.1992%2011.1947C21.1992%2015.0144%2019.447%2019.2765%2017.3042%2016.8048ZM4.19922%2012.1788V9.36283C4.19922%208.74057%204.70555%208.23612%205.33001%208.23612H6.47784V13.3057H5.33001C4.70557%2013.3057%204.19922%2012.8013%204.19922%2012.1788ZM8.94237%2015.3394C9.73999%2015.4985%2010.3379%2015.7442%2010.3379%2015.7442C10.3379%2015.7442%2010.5933%2016.4466%2011.2857%2017.4216C12.1185%2018.5939%2013.1559%2020.0874%2011.9725%2020.0874C11.5926%2020.0874%2011.2624%2020.0945%2010.9429%2020.0945C9.96587%2020.0945%209.39931%2019.396%208.46385%2017.8016C7.40138%2015.9901%207.66663%2015.0617%207.66663%2015.0617C7.66663%2015.0617%208.14493%2015.1805%208.94237%2015.3394Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
 
 const CampaignFilled = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default CampaignFilled;

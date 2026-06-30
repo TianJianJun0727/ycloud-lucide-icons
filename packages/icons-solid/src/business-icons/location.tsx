@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M13.0592%206.86728C13.0592%204.07041%2010.792%201.80322%207.99512%201.80322C5.19824%201.80322%202.93262%204.07041%202.93262%206.86728C2.93262%208.19072%203.44355%209.39072%204.2748%2010.2923L4.27168%2010.2954L4.32168%2010.3454C4.38574%2010.4126%204.4498%2010.4782%204.51699%2010.5407L7.99512%2014.0188L11.4732%2010.5407C11.5404%2010.4767%2011.6061%2010.4126%2011.6686%2010.3454L11.7186%2010.2954L11.7154%2010.2923C12.5482%209.39072%2013.0592%208.19072%2013.0592%206.86728ZM7.99512%209.01728C6.80762%209.01728%205.84512%208.05478%205.84512%206.86728C5.84512%205.67979%206.80762%204.71728%207.99512%204.71728C9.18262%204.71728%2010.1451%205.67979%2010.1451%206.86728C10.1451%208.05478%209.18262%209.01728%207.99512%209.01728Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
 
 const Location = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default Location;

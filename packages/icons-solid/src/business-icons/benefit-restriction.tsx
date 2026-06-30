@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M16.0001%208C11.5817%208%208%2011.5817%208%2016C8%2020.4183%2011.5818%2024%2016.0001%2024C20.4183%2024%2024%2020.4183%2024%2016C24%2011.5817%2020.4183%208%2016.0001%208ZM15.6146%2023.1148C11.8981%2023.1148%208.88515%2020.102%208.88515%2016.3855H15.6146V23.1148ZM15.6146%2015.6146H8.88515C8.88515%2011.898%2011.8981%208.88515%2015.6146%208.88515V15.6146ZM16.3854%2023.1148V16.3855H23.1148C23.1148%2020.102%2020.1019%2023.1148%2016.3854%2023.1148ZM16.3854%2015.6146V8.88515C20.1019%208.88515%2023.1148%2011.898%2023.1148%2015.6146H16.3854Z%22%0A%20%20%2F%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M16%200C7.16341%200%200%207.16345%200%2016C0%2024.8366%207.16341%2032%2016%2032C24.8365%2032%2032%2024.8366%2032%2016C32%207.16345%2024.8365%200%2016%200ZM16%2024.9136C11.077%2024.9136%207.08639%2020.9228%207.08639%2016C7.08639%2011.0772%2011.0771%207.08651%2016%207.08651C20.9227%207.08651%2024.9135%2011.0772%2024.9135%2016C24.9135%2020.9228%2020.9227%2024.9136%2016%2024.9136Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
 
 const BenefitRestriction = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default BenefitRestriction;
