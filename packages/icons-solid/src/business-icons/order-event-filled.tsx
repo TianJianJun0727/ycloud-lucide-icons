@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20d%3D%22M6.31253%203.05903C6.31253%202.7503%206.56437%202.50003%206.87503%202.50003H13.125C13.4357%202.50003%2013.6875%202.7503%2013.6875%203.05903V6.08703H17.0313C17.1616%206.08703%2017.2861%206.14096%2017.3748%206.23587C17.4635%206.33078%2017.5084%206.45811%2017.4988%206.58728L16.7175%2017.0686C16.6994%2017.3118%2016.4955%2017.5%2016.25%2017.5H3.75004C3.50459%2017.5%203.3007%2017.3118%203.28257%2017.0686L2.50132%206.58728C2.49169%206.45811%202.53662%206.33078%202.62531%206.23587C2.714%206.14096%202.83845%206.08703%202.96879%206.08703H6.31253V3.05903ZM12.5625%203.61804V6.08703H7.43753V3.61804H12.5625ZM6.87504%2011.5995C6.61615%2011.5995%206.40629%2011.8081%206.40629%2012.0654C6.40629%2012.3226%206.61615%2012.5312%206.87504%2012.5312H13.125C13.3839%2012.5312%2013.5938%2012.3226%2013.5938%2012.0654C13.5938%2011.8081%2013.3839%2011.5995%2013.125%2011.5995H6.87504Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
 
 const OrderEventFilled = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default OrderEventFilled;

@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20d%3D%22M6.15398%203.28391C6.31178%203.1036%206.54098%203%206.78207%203H17.2179C17.459%203%2017.6882%203.1036%2017.846%203.28391L20.2435%206.02328C20.3395%206.133%2020.401%206.26069%2020.4288%206.39336C20.7758%206.64345%2021%207.0397%2021%207.48576V18.8313C21%2020.0291%2019.9792%2021%2018.72%2021H5.28C4.0208%2021%203%2020.0291%203%2018.8313V7.48576C3%207.0397%203.22417%206.64344%203.57121%206.39335C3.59905%206.26068%203.66051%206.13299%203.75653%206.02328L6.15398%203.28391ZM16.8383%204.64362L18.127%206.11607H5.87303L7.16169%204.64362H16.8383ZM16.995%2010.495C17.2683%2010.2217%2017.2683%209.77844%2016.995%209.50507C16.7216%209.23171%2016.2784%209.23171%2016.005%209.50507L11.1414%2014.3687C11.0633%2014.4468%2010.9367%2014.4468%2010.8586%2014.3687L8.99496%2012.5051C8.7216%2012.2317%208.27838%2012.2317%208.00501%2012.5051C7.73165%2012.7784%207.73165%2013.2217%208.00501%2013.495L10.2929%2015.7829C10.6834%2016.1734%2011.3166%2016.1734%2011.7071%2015.7829L16.995%2010.495Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
 
 const ShopCheckBagFilled = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default ShopCheckBagFilled;

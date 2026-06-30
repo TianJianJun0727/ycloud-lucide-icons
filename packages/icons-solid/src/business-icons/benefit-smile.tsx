@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M16%200C24.8366%200%2032%207.16344%2032%2016C32%2024.8366%2024.8366%2032%2016%2032C7.16344%2032%200%2024.8366%200%2016C0%207.16344%207.16344%200%2016%200ZM23.7526%2018.6745H8.98971V18.6804C8.98971%2022.7571%2012.2945%2026.0618%2016.3711%2026.0618C20.4478%2026.0618%2023.7526%2022.7571%2023.7526%2018.6804V18.6745ZM11.4639%209.40205C10.0975%209.40205%208.98967%2010.5098%208.98967%2011.8763C8.98967%2013.2428%2010.0975%2014.3505%2011.4639%2014.3505C12.8304%2014.3505%2013.9382%2013.2428%2013.9382%2011.8763C13.9382%2010.5098%2012.8304%209.40205%2011.4639%209.40205H11.4639ZM21.2783%209.40205C19.9119%209.40205%2018.8041%2010.5098%2018.8041%2011.8763C18.8041%2013.2428%2019.9119%2014.3505%2021.2783%2014.3505C22.6448%2014.3505%2023.7526%2013.2428%2023.7526%2011.8763C23.7526%2010.5098%2022.6448%209.40205%2021.2783%209.40205Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
 
 const BenefitSmile = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default BenefitSmile;

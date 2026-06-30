@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_7774_12737)%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20d%3D%22M19%204H14.82C14.4%202.84%2013.3%202%2012%202C10.7%202%209.6%202.84%209.18%204H5C3.9%204%203%204.9%203%206V20C3%2021.1%203.9%2022%205%2022H19C20.1%2022%2021%2021.1%2021%2020V6C21%204.9%2020.1%204%2019%204ZM12%204C12.55%204%2013%204.45%2013%205C13%205.55%2012.55%206%2012%206C11.45%206%2011%205.55%2011%205C11%204.45%2011.45%204%2012%204ZM14%2017.75C14%2018.1642%2013.6642%2018.5%2013.25%2018.5H7.75C7.33579%2018.5%207%2018.1642%207%2017.75C7%2017.3358%207.33579%2017%207.75%2017H13.25C13.6642%2017%2014%2017.3358%2014%2017.75ZM17%2013.75C17%2014.1642%2016.6642%2014.5%2016.25%2014.5H7.75C7.33579%2014.5%207%2014.1642%207%2013.75C7%2013.3358%207.33579%2013%207.75%2013H16.25C16.6642%2013%2017%2013.3358%2017%2013.75ZM17%209.75C17%2010.1642%2016.6642%2010.5%2016.25%2010.5H7.75C7.33579%2010.5%207%2010.1642%207%209.75C7%209.33579%207.33579%209%207.75%209H16.25C16.6642%209%2017%209.33579%2017%209.75Z%22%0A%20%20%20%20%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_7774_12737%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22currentColor%22%20%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A';
 
 const TaskMenuFilled = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default TaskMenuFilled;

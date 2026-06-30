@@ -1,20 +1,25 @@
+import { mergeProps } from 'solid-js';
 import type { BusinessIconImageProps } from '../businessTypes';
 
 const dataUri =
   'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M16.4897%2012.7312H13.6862L13.7913%2012.5396C13.8557%2012.422%2013.9301%2012.2858%2013.9523%2012.2438C14.8474%2010.5345%2014.7939%208.85323%2013.6534%207.30082C12.5256%205.76547%2010.9449%205.14889%209.07932%205.53852C7.24897%205.92083%206.07713%207.10189%205.5957%208.90775C4.86155%2011.6616%207.00142%2014.4947%209.84324%2014.5328C10.8577%2014.5471%2011.8719%2014.5502%2012.8864%2014.5496C13.8444%2014.5496%2014.8021%2014.5447%2015.7598%2014.5435H17.0532V17.0795H10.1619C6.61536%2017.0734%203.86952%2014.8633%203.07676%2011.3829C2.26728%207.82844%204.67141%203.97636%208.22429%203.13192C11.9111%202.25793%2015.4029%204.11893%2016.6802%207.66759C17.2224%209.1737%2017.2087%2010.7042%2016.7151%2012.2267C16.6544%2012.415%2016.5538%2012.5899%2016.4897%2012.7312Z%22%0A%20%20%20%20fill%3D%22currentColor%22%0A%20%20%2F%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M13.7616%2012.5918L13.2182%2013.58L12.9877%2013.9267L12.841%2014.1476L12.8337%2014.1588L12.5552%2014.5774H15.7603L16.5336%2012.6378L13.7616%2012.5918Z%22%0A%20%20%20%20fill%3D%22currentColor%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
 
 const QmaiEvent = (props: BusinessIconImageProps) => {
-  const size = () => props.size ?? 24;
-
-  return (
-    <img
-      src={dataUri}
-      alt={props.alt ?? ''}
-      width={props.width ?? size()}
-      height={props.height ?? size()}
-      {...props}
-    />
+  const mergedProps = mergeProps(
+    {
+      src: dataUri,
+      alt: '',
+      get width() {
+        return props.width ?? props.size ?? 24;
+      },
+      get height() {
+        return props.height ?? props.size ?? 24;
+      },
+    },
+    props,
   );
+
+  return <img {...mergedProps} />;
 };
 
 export default QmaiEvent;
