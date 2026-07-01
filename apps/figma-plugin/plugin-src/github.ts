@@ -16,25 +16,16 @@ interface TreeItem {
 function uniqueList<T>(items: T[]): T[] {
   return items.filter((item, index, list) => list.indexOf(item) === index);
 }
-function createIconJson(
-  name: string,
-  icon: YCloudIconData,
-  metadata: YCloudMetadataOptions,
-): Record<string, unknown> {
-  const rawNameZh = icon.ycloud?.nameZh?.trim() ?? '';
-  const rawNameEn = icon.ycloud?.nameEn?.trim() ?? '';
-  const nameZh = rawNameZh;
-  const nameEn = rawNameEn;
-  const useCasesZh = uniqueList(metadata.useCasesZh ?? []);
+function createIconJson(metadata: YCloudMetadataOptions): Record<string, unknown> {
   return {
     $schema: '../icon.schema.json',
-    'use-cases': useCasesZh,
-    name: nameZh,
-    tags: uniqueList(metadata.tagsZh),
+    'use-cases': [],
+    name: '',
+    tags: [],
     categories: uniqueList(metadata.categories),
     i18n: {
       en: {
-        name: nameEn,
+        name: '',
         tags: [],
         'use-cases': [],
       },
@@ -51,7 +42,7 @@ function buildYCloudFiles(icons: Record<string, YCloudIconData>, metadata: YClou
       },
       {
         path: `icons/${name}.json`,
-        content: `${JSON.stringify(createIconJson(name, icon, metadata), null, 2)}\n`,
+        content: `${JSON.stringify(createIconJson(metadata), null, 2)}\n`,
       },
     ];
   });
@@ -85,16 +76,6 @@ function buildIllustrationFiles(icons: Record<string, YCloudIconData>) {
   });
 }
 
-function buildReviewNotes(icons: Record<string, YCloudIconData>) {
-  const notes: string[] = [];
-  Object.entries(icons).forEach(([key, icon]) => {
-    const name = toKebabCase(icon.name || key);
-    if (!icon.ycloud?.nameZh || !icon.ycloud?.nameEn) {
-      notes.push(`- 图标 \`${name}\` 缺少完整中英文名称，建议审核时补齐。`);
-    }
-  });
-  return notes;
-}
 export function createGithubClient(
   repoOwner: string,
   repoName: string,
@@ -210,7 +191,7 @@ export function createGithubClient(
         : sourceType === 'illustration'
           ? buildIllustrationFiles(icons)
           : buildYCloudFiles(icons, metadata);
-    const reviewNotes = sourceType === 'generic' ? buildReviewNotes(icons) : [];
+    const reviewNotes: string[] = [];
     const iconCount = Object.keys(icons).length;
     const scope =
       sourceType === 'business'

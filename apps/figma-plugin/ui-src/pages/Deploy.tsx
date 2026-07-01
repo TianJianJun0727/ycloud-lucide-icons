@@ -18,14 +18,6 @@ import type { IconSourceType, YCloudIconData } from '../../common/types';
 import { useAppDispatch, useAppState } from '../contexts/AppContext';
 import styles from './Deploy.module.css';
 
-const splitList = (value: string) =>
-  value
-    .split(',')
-    .map((item) => item.trim())
-    .filter(Boolean);
-
-const joinList = (value: string[]) => value.join(', ');
-
 type Category = {
   key: string;
   title: string;
@@ -688,36 +680,6 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
                 <p className={styles.muted}>请先刷新目标图标库分类，或调整搜索关键词。</p>
               </div>
             )}
-          </div>
-        </section>
-      )}
-
-      {sourceType === 'generic' && (
-        <section className={styles.card}>
-          <h2 className={styles.title}>图标元数据</h2>
-          <div className={styles.fieldGroup}>
-            <span className={styles.label}>中文标签，逗号分隔</span>
-            <input
-              className={styles.input}
-              placeholder="箭头, 方向"
-              value={joinList(ycloudMetadata.tagsZh)}
-              onInput={(event) => {
-                updateMetadata({ tagsZh: splitList(event.currentTarget.value) });
-              }}
-            />
-            <p className={styles.muted}>用于搜索和筛选，后续流程会自动补齐英文内容。</p>
-          </div>
-          <div className={styles.fieldGroup}>
-            <span className={styles.label}>中文使用场景，逗号分隔</span>
-            <input
-              className={styles.input}
-              placeholder="工具栏, 导航"
-              value={joinList(ycloudMetadata.useCasesZh)}
-              onInput={(event) => {
-                updateMetadata({ useCasesZh: splitList(event.currentTarget.value) });
-              }}
-            />
-            <p className={styles.muted}>用于描述图标适合出现的位置或业务场景。</p>
           </div>
         </section>
       )}
