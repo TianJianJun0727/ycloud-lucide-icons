@@ -73,24 +73,7 @@ const businessColorModes = [
   { value: 'multicolor', label: '多色', description: 'business-icons/multicolor' },
 ] as const;
 
-const getPreviewTooltip = (
-  name: string,
-  data: YCloudIconData,
-  isExistingIcon: boolean,
-  issues: string[],
-  sourceType: IconSourceType,
-) => {
-  const title = data.ycloud?.nameEn || name;
-  const issueTips = issues.map((issue) => {
-    if (sourceType === 'business') return issue;
-    if (issue.includes('英文名')) return '英文图标名不符合规范';
-    if (issue.includes('24 x 24')) return 'SVG 需要使用 24 x 24 画板，viewBox 需要是 0 0 24 24';
-    if (issue.includes('style 属性')) return 'SVG 不能包含 style 属性';
-    if (issue.includes('写死颜色')) return 'SVG 不能包含写死颜色';
-    return '需要检查';
-  });
-  return [title, isExistingIcon ? '已存在图标' : '', ...issueTips].filter(Boolean).join('\n');
-};
+const getSourceIconName = (name: string, data: YCloudIconData) => data.figma?.name || name;
 
 const getCategoryLabel = (category: Category | undefined, fallback: string) => {
   if (!category) return fallback;
@@ -145,14 +128,15 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
   const iconQualityByName = useMemo(() => {
     return new Map(
       icons.map(([name, data]) => {
+        const sourceName = getSourceIconName(name, data);
         const svg = sourceType === 'business' ? (data.sourceSvg ?? data.svg) : data.svg;
         const cleanedSvg = sanitizeSvg(svg);
         const issues =
           sourceType === 'business'
-            ? [...getBusinessIconNameIssues(name), ...getBusinessSvgIssues(svg)]
-            : [...getIconNameIssues(name), ...getSvgIssues(cleanedSvg)];
+            ? [...getBusinessIconNameIssues(sourceName), ...getBusinessSvgIssues(svg)]
+            : [...getIconNameIssues(sourceName), ...getSvgIssues(cleanedSvg)];
         const warnings = [
-          ...(sourceType === 'business' ? [] : getIconNameWarnings(name)),
+          ...(sourceType === 'business' ? [] : getIconNameWarnings(sourceName)),
           ...(sourceType === 'generic' && svg.trim() !== cleanedSvg.trim()
             ? ['SVG 会在提交时自动清洗。']
             : []),
@@ -180,11 +164,19 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     ],
   );
   const skippedExistingIconCount = selectedIcons.length - deployableSelectedIcons.length;
-  const blockedIconCount = icons.filter(([name]) => getIconQuality(name).issues.length > 0).length;
   const previewDialogIcon = useMemo(
     () => icons.find(([name]) => name === previewDialogIconName),
     [icons, previewDialogIconName],
   );
+  const previewDialogIssues = useMemo(() => {
+    if (!previewDialogIcon) return [];
+    const [name] = previewDialogIcon;
+    const isExistingIcon = existingIconSet.has(getTargetIconKey(name));
+    return [
+      ...(isExistingIcon && !allowExistingIconUpdate ? ['已存在同名图标，当前未开启覆盖。'] : []),
+      ...getIconQuality(name).issues,
+    ];
+  }, [allowExistingIconUpdate, existingIconSet, iconQualityByName, previewDialogIcon]);
   const selectedIconPreview = useMemo(
     () =>
       Object.fromEntries(
@@ -711,11 +703,6 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         {skippedExistingIconCount > 0 && !allowExistingIconUpdate && (
           <p className={styles.message}>本次已跳过 {skippedExistingIconCount} 个已存在图标。</p>
         )}
-        {blockedIconCount > 0 && (
-          <p className={[styles.message, styles.messageError].join(' ')}>
-            有 {blockedIconCount} 个图标不符合当前提交规则，已暂时禁用。
-          </p>
-        )}
         {icons.length > 0 && (
           <div className={styles.previewActions}>
             <button
@@ -755,49 +742,64 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
             const isDisabledExistingIcon = isExistingIcon && !allowExistingIconUpdate;
             const quality = getIconQuality(name);
             const isBlockedIcon = quality.issues.length > 0;
-            const tooltip = getPreviewTooltip(
-              name,
-              data,
-              isExistingIcon,
-              quality.issues,
-              sourceType,
-            );
+            const isDisabledIcon = isDisabledExistingIcon || isBlockedIcon;
+            const disabledReasons = [
+              ...(isDisabledExistingIcon ? ['已存在同名图标，当前未开启覆盖。'] : []),
+              ...quality.issues,
+            ];
             const previewSvg =
               sourceType === 'business'
                 ? sanitizeBusinessSvg(data.sourceSvg ?? svg, ycloudMetadata.businessColorMode)
                 : svg;
-            const previewLabel = data.ycloud?.nameEn || name;
+            const previewLabel = getSourceIconName(name, data);
             return (
               <div
-                className={styles.previewItem}
+                className={[
+                  styles.previewItem,
+                  selectedIconSet.has(name) ? styles.previewItemSelected : '',
+                  isDisabledIcon ? styles.previewItemBlocked : '',
+                ].join(' ')}
                 key={name}
-                title={tooltip}
               >
-                <label
-                  className={styles.previewCheckbox}
-                  aria-label={`选择图标 ${previewLabel}`}
-                >
-                  <input
-                    className={styles.checkbox}
-                    type="checkbox"
-                    checked={selectedIconSet.has(name)}
-                    disabled={isDisabledExistingIcon || isBlockedIcon}
-                    onChange={(event) => {
-                      const checked = event.currentTarget.checked;
-                      setSelectedIconNames((current) => {
-                        if (checked) {
-                          return Array.from(new Set([...current, name]));
-                        }
-                        return current.filter((item) => item !== name);
-                      });
-                    }}
-                  />
-                  <span className={styles.checkboxBox} />
-                </label>
+                <div className={styles.previewItemHeader}>
+                  <label
+                    className={styles.previewCheckbox}
+                    aria-label={`选择图标 ${previewLabel}`}
+                  >
+                    <input
+                      className={styles.checkbox}
+                      type="checkbox"
+                      checked={selectedIconSet.has(name)}
+                      disabled={isDisabledExistingIcon || isBlockedIcon}
+                      onChange={(event) => {
+                        const checked = event.currentTarget.checked;
+                        setSelectedIconNames((current) => {
+                          if (checked) {
+                            return Array.from(new Set([...current, name]));
+                          }
+                          return current.filter((item) => item !== name);
+                        });
+                      }}
+                    />
+                    <span className={styles.checkboxBox} />
+                  </label>
+                  <span
+                    className={[
+                      styles.previewStatus,
+                      isDisabledIcon ? styles.previewStatusError : '',
+                    ].join(' ')}
+                  >
+                    {isDisabledIcon ? '不可提交' : '可提交'}
+                  </span>
+                </div>
                 <button
                   className={styles.previewIconButton}
                   type="button"
-                  aria-label={`放大预览 ${previewLabel}`}
+                  aria-label={
+                    disabledReasons.length > 0
+                      ? `放大预览 ${previewLabel}，${disabledReasons.join('，')}`
+                      : `放大预览 ${previewLabel}`
+                  }
                   onClick={() => {
                     setPreviewDialogIconName(name);
                   }}
@@ -807,6 +809,18 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
                     dangerouslySetInnerHTML={{ __html: previewSvg }}
                   />
                 </button>
+                <p
+                  className={styles.previewName}
+                  title={previewLabel}
+                >
+                  {previewLabel}
+                </p>
+                <p
+                  className={isDisabledIcon ? styles.previewInlineError : styles.previewTargetName}
+                  title={isDisabledIcon ? disabledReasons.join('；') : name}
+                >
+                  {isDisabledIcon ? disabledReasons[0] : name}
+                </p>
               </div>
             );
           })}
@@ -862,9 +876,9 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
                   id="preview-dialog-title"
                   className={styles.dialogTitle}
                 >
-                  {previewDialogIcon[1].ycloud?.nameEn || previewDialogIcon[0]}
+                  {getSourceIconName(previewDialogIcon[0], previewDialogIcon[1])}
                 </h2>
-                <p className={styles.dialogMeta}>{toKebabCase(previewDialogIcon[0])}</p>
+                <p className={styles.dialogMeta}>目标名：{toKebabCase(previewDialogIcon[0])}</p>
               </div>
               <button
                 className={styles.dialogCloseButton}
@@ -877,6 +891,16 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
                 ×
               </button>
             </div>
+            {previewDialogIssues.length > 0 && (
+              <div className={styles.dialogIssues}>
+                <p className={styles.dialogIssuesTitle}>当前不可提交</p>
+                <ul className={styles.dialogIssueList}>
+                  {previewDialogIssues.map((issue) => (
+                    <li key={issue}>{issue}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div
               className={styles.dialogIcon}
               dangerouslySetInnerHTML={{

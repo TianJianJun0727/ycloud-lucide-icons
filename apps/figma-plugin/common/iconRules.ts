@@ -7,6 +7,17 @@ export const toKebabCase = (value: string) =>
     .replace(/-{2,}/g, '-')
     .toLowerCase();
 const hasCjkText = (value: string) => /[\u3400-\u9fff]/.test(value);
+const ICON_NAME_ALLOWED_PATTERN = /^[a-zA-Z0-9-]+$/;
+const ICON_NAME_ALLOWED_MESSAGE = '图标名称仅允许英文字母、数字和短横线（a-z、A-Z、0-9、-）';
+
+function getRawIconNameIssues(rawName: string) {
+  const normalizedRawName = rawName.trim();
+  if (!ICON_NAME_ALLOWED_PATTERN.test(normalizedRawName)) {
+    return [ICON_NAME_ALLOWED_MESSAGE];
+  }
+  return [];
+}
+
 export function parseIconName(rawName: string) {
   const normalizedRawName = rawName.trim();
   const [left = '', right = ''] = normalizedRawName
@@ -35,7 +46,7 @@ export function parseIconName(rawName: string) {
   };
 }
 export function getIconNameIssues(rawName: string) {
-  const issues: string[] = [];
+  const issues = getRawIconNameIssues(rawName);
   const parsedName = parseIconName(rawName);
   if (!/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(parsedName.fileName)) {
     issues.push('英文名需要能转换为小写短横线命名');
@@ -43,7 +54,7 @@ export function getIconNameIssues(rawName: string) {
   return issues;
 }
 export function getBusinessIconNameIssues(rawName: string) {
-  const issues: string[] = [];
+  const issues = getRawIconNameIssues(rawName);
   const parsedName = parseIconName(rawName);
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(parsedName.fileName)) {
     issues.push('业务图标名需要能转换为小写短横线命名');
@@ -53,10 +64,8 @@ export function getBusinessIconNameIssues(rawName: string) {
 export function getIconNameWarnings(rawName: string) {
   const warnings: string[] = [];
   const parsedName = parseIconName(rawName);
-  if (!parsedName.nameZh || !parsedName.nameEn) {
-    warnings.push(
-      '建议图层名称同时包含中文名和英文名，例如：返回|arrow-left；缺失内容后续可由 AI 补全。',
-    );
+  if (!parsedName.nameEn) {
+    warnings.push('建议图层名称使用英文语义名称，例如：arrow-left。');
   }
   return warnings;
 }
