@@ -379,21 +379,10 @@ jobs:
           fetch-depth: 0
           ref: ${{ needs.prepare.outputs.ref }}
 
-      - uses: ./.github/actions/setup-pnpm
-        with:
-          cache-mode: restore
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
       - name: Generate bilingual release notes
-        run: node ./scripts/writeChangelog.mts
+        run: node ./scripts/writeGitHubReleaseNotes.mjs
         env:
-          AI_API_KEY: ${{ secrets.AI_API_KEY }}
-          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
-          AI_MODEL: ${{ vars.AI_MODEL }}
-          YCLOUD_AI_CHANGELOG: '1'
-          YCLOUD_AI_CHANGELOG_VERSION: ${{ needs.prepare.outputs.version }}
+          RELEASE_VERSION: ${{ needs.prepare.outputs.version }}
           YCLOUD_CHANGELOG_RELEASE_NOTES_PATH: .release-notes.md
 
       - name: Verify release notes
