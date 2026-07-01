@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "minimist": "^1.2.7",
-    "oxfmt": "0.55.0",
+    "oxfmt": "0.57.0",
     "svgo": "^3.3.3",
     "svgson": "^5.2.1"
   },

@@ -13,11 +13,11 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@vercel/blob": "^2.3.0",
-    "fs-extra": "^11.2.0",
+    "@vercel/blob": "^2.5.0",
+    "fs-extra": "^11.3.6",
     "minimist": "^1.2.8",
     "oslllo-svg-fixer": "^5.0.0",
-    "svgtofont": "^6.5.2"
+    "svgtofont": "^6.5.3"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",

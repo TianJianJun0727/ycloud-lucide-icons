@@ -15,13 +15,13 @@
     "@create-figma-plugin/ui": "^4.0.3",
     "@create-figma-plugin/utilities": "^4.0.3",
     "js-base64": "^3.7.5",
-    "preact": "^10.28.0",
+    "preact": "^10.29.3",
     "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
     "@create-figma-plugin/build": "^4.0.3",
     "@create-figma-plugin/tsconfig": "^4.0.3",
-    "@figma/plugin-typings": "^1.129.0",
+    "@figma/plugin-typings": "^1.130.0",
     "typescript": "6.0.3"
   },
   "figma-plugin": {
