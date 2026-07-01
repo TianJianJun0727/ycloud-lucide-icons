@@ -132,24 +132,6 @@ export default defineConfig({
           find: '@packages',
           replacement: fileURLToPath(new URL('../../packages', import.meta.url)),
         },
-        {
-          find: /^@ycloud-web\/icons-vue$/,
-          replacement: fileURLToPath(
-            new URL('../../packages/icons-vue/src/ycloud-vue.ts', import.meta.url),
-          ),
-        },
-        {
-          find: /^@ycloud-web\/icons-vue\/business$/,
-          replacement: fileURLToPath(
-            new URL('../../packages/icons-vue/src/business.ts', import.meta.url),
-          ),
-        },
-        {
-          find: /^@ycloud-web\/icons-vue\/illustration$/,
-          replacement: fileURLToPath(
-            new URL('../../packages/icons-vue/src/illustration.ts', import.meta.url),
-          ),
-        },
       ],
     },
     build: {
