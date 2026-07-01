@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-astro",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A YCloud icon library package for Astro applications.",
   "keywords": [
     "Astro",

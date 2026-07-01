@@ -377,6 +377,10 @@ async function main() {
     link: `/changelog#${getChangelogAnchor(entry.version, entry.date)}`,
   }));
 
+  if (releaseNotesOutputPath && !targetEntry) {
+    throw new Error(`Release notes target version was not found: ${targetVersion}.`);
+  }
+
   await writeFile(changelogPath, markdown, 'utf8');
   await writeFile(englishChangelogPath, englishMarkdown, 'utf8');
   if (releaseNotesOutputPath && targetEntry) {

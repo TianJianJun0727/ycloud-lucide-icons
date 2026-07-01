@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-data",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A YCloud icon data package that contains normalized icon nodes and metadata.",
   "keywords": [
     "Feather",

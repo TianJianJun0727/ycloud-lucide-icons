@@ -49,7 +49,7 @@ concurrency:
 
 jobs:
   prepare:
-    if: github.repository == 'TianJianJun0727/ycloud-icons'
+    if: github.repository == 'TianJianJun0727/ycloud-icons' && (github.event_name != 'push' || github.event.created)
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -60,6 +60,25 @@ jobs:
       has-frameworks: ${{ steps.version.outputs.has-frameworks }}
 
     steps:
+      - name: Configure git default branch
+        if: github.event_name == 'push'
+        run: git config --global init.defaultBranch main
+
+      - uses: actions/checkout@v7
+        if: github.event_name == 'push'
+        with:
+          fetch-depth: 0
+
+      - name: Verify tag commit is on main
+        if: github.event_name == 'push'
+        run: |
+          git fetch origin +refs/heads/main:refs/remotes/origin/main
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+            echo "Release tag ${GITHUB_REF_NAME} points to ${GITHUB_SHA}, which is not in origin/main history." >&2
+            echo "Merge the release commit into main first, then create the tag from main." >&2
+            exit 1
+          fi
+
       - name: Resolve release plan
         id: version
         shell: bash
@@ -358,21 +377,26 @@ jobs:
           tag_name: v${{ needs.prepare.outputs.version }}
           name: Version ${{ needs.prepare.outputs.version }}
           body_path: .release-notes.md
+          target_commitish: ${{ github.sha }}
 
-  # Temporarily disable automatic docs deployment after package releases.
-  # Keep this job for quick restoration when release-driven docs publishing is needed again.
-  # deploy-docs:
-  #   if: github.repository == 'TianJianJun0727/ycloud-icons'
-  #   needs:
-  #     - release
-  #     - github-release
-  #     - sync-versions
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     actions: write
-  #     contents: read
-  #   steps:
-  #     - name: Trigger GitHub Pages deployment
-  #       run: gh workflow run docs.yml --repo "$GITHUB_REPOSITORY" --ref main --field ref=main
-  #       env:
-  #         GH_TOKEN: ${{ github.token }}
+  deploy-docs:
+    if: github.repository == 'TianJianJun0727/ycloud-icons'
+    needs:
+      - prepare
+      - github-release
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Trigger GitHub Pages deployment
+        run: |
+          gh workflow run docs.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$DOCS_REF" \
+            --field "ref=${DOCS_REF}" \
+            --field "package_version=${VERSION}"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DOCS_REF: ${{ needs.prepare.outputs.ref }}
+          VERSION: ${{ needs.prepare.outputs.version }}
