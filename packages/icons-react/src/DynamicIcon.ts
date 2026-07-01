@@ -1,4 +1,5 @@
 import { createElement, forwardRef, useEffect, useState } from 'react';
+import type { JSX } from 'react';
 import { IconNode, YCloudIcon, YCloudIconsProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
 import Icon from './Icon';

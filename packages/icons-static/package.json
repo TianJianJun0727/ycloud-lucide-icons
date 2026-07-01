@@ -103,7 +103,7 @@
     "@ycloud-web/build-icons": "workspace:*",
     "@ycloud-web/helpers": "workspace:*",
     "@ycloud-web/rollup-plugins": "workspace:*",
-    "prettier": "^2.3.2",
+    "prettier": "^3.9.4",
     "rollup": "^4.62.2",
     "rollup-plugin-dts": "^6.4.1",
     "svgson": "^5.2.1"
