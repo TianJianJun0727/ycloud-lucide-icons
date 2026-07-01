@@ -23,11 +23,19 @@ on:
         description: Git ref to deploy
         default: ${{ github.ref }}
         type: string
+      package_version:
+        description: Published icon package version to use for the docs build
+        default: ''
+        type: string
   workflow_dispatch:
     inputs:
       ref:
         description: Git ref to deploy
         default: main
+        type: string
+      package_version:
+        description: Published icon package version to use for the docs build
+        default: ''
         type: string
 
 permissions:
@@ -54,14 +62,45 @@ jobs:
 
       - uses: ./.github/actions/setup-pnpm
 
+      - name: Use published icon packages
+        if: ${{ inputs.package_version != '' }}
+        run: |
+          node <<'NODE'
+          const { readFileSync, writeFileSync } = require('node:fs');
+
+          const version = process.env.PACKAGE_VERSION;
+          const packagePath = 'docs/package.json';
+          const manifest = JSON.parse(readFileSync(packagePath, 'utf8'));
+          const packages = [
+            '@ycloud-web/icons',
+            '@ycloud-web/icons-react',
+            '@ycloud-web/icons-vue',
+          ];
+
+          for (const packageName of packages) {
+            manifest.dependencies[packageName] = version;
+          }
+
+          writeFileSync(packagePath, `${JSON.stringify(manifest, null, 2)}\n`);
+          NODE
+        env:
+          PACKAGE_VERSION: ${{ inputs.package_version }}
+
       - name: Install dependencies
+        if: ${{ inputs.package_version == '' }}
         run: pnpm install --frozen-lockfile
+
+      - name: Install dependencies with published icon packages
+        if: ${{ inputs.package_version != '' }}
+        run: pnpm install --no-frozen-lockfile --config.link-workspace-packages=false
 
       - name: Generate GitHub Pages cache key
         id: pages-cache-key
         run: |
           release_tags_hash="$(git tag --list 'v*' --sort=-version:refname | sha256sum | cut -d ' ' -f 1)"
-          echo "release-tags=${release_tags_hash}" >> "$GITHUB_OUTPUT"
+          echo "release-tags=${release_tags_hash}-${PACKAGE_VERSION:-workspace}" >> "$GITHUB_OUTPUT"
+        env:
+          PACKAGE_VERSION: ${{ inputs.package_version }}
 
       - name: Restore GitHub Pages build output
         id: pages-build-cache
