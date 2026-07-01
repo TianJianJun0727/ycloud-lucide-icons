@@ -84,8 +84,8 @@ importers:
         specifier: ^3.36.0
         version: 3.36.0
       svgo:
-        specifier: ^3.3.3
-        version: 3.3.3
+        specifier: ^4.0.1
+        version: 4.0.1
       svgson:
         specifier: ^5.3.1
         version: 5.3.1
@@ -6365,9 +6365,6 @@ packages:
 
   commander@2.20.0:
     resolution: {integrity: sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==}
-
-  commander@2.20.3:
-    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
   commander@4.0.0:
     resolution: {integrity: sha512-SEa2abMBTZuEjLVYpNrAFoRgxPwG4rXP3+SGY6CM/HZGeDzIA7Pzp+7H3AHDukKEpyy2SoSGGPShKqqfH9T9AQ==}
@@ -17336,8 +17333,6 @@ snapshots:
 
   commander@2.20.0: {}
 
-  commander@2.20.3: {}
-
   commander@4.0.0: {}
 
   commander@5.1.0: {}
@@ -22739,7 +22734,7 @@ snapshots:
     dependencies:
       '@jridgewell/source-map': 0.3.11
       acorn: 8.17.0
-      commander: 2.20.3
+      commander: 2.20.0
       source-map-support: 0.5.21
 
   terser@5.47.1:
