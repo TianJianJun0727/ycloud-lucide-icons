@@ -85,9 +85,7 @@ function readMarkdownNotes(filePath, subsectionHeading) {
   const section = nextHeadingMatch
     ? markdown.slice(sectionStart, sectionStart + nextHeadingMatch.index)
     : markdown.slice(sectionStart);
-  const notesSection = subsectionHeading
-    ? extractSubsection(section, subsectionHeading)
-    : section;
+  const notesSection = subsectionHeading ? extractSubsection(section, subsectionHeading) : section;
 
   return notesSection
     .split('\n')
