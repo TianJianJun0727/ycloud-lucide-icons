@@ -356,6 +356,10 @@ async function main() {
   const tags = listTags();
 
   if (!tags.length) {
+    if (releaseNotesOutputPath) {
+      throw new Error('Release notes cannot be generated because no version tags are available.');
+    }
+
     const fallback = '# 更新日志\n\n> 当前仓库还没有可用的版本标签。\n';
     const englishFallback =
       '# Changelog\n\n> No version tags are available in this repository yet.\n';

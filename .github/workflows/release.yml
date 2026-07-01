@@ -377,6 +377,9 @@ jobs:
           YCLOUD_AI_CHANGELOG_VERSION: ${{ needs.prepare.outputs.version }}
           YCLOUD_CHANGELOG_RELEASE_NOTES_PATH: .release-notes.md
 
+      - name: Verify release notes
+        run: test -s .release-notes.md
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
