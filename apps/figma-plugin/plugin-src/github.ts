@@ -230,7 +230,7 @@ export function createGithubClient(
         '来源：Figma 插件',
         '',
         sourceType === 'business'
-          ? `本次提交 ${iconCount} 个业务图标，颜色类型为 \`business-icons/${metadata.businessColorMode || 'mono'}/\`。SVG 已按业务规则轻量清洗。`
+          ? `本次提交 ${iconCount} 个业务图标，颜色模式为 \`business-icons/${metadata.businessColorMode || 'mono'}/\`。SVG 已按业务规则轻量清洗。`
           : sourceType === 'illustration'
             ? `本次提交 ${iconCount} 个插画。SVG 已做安全轻量清洗，并保留原始颜色和尺寸属性。`
             : `本次提交 ${iconCount} 个图标。SVG 已按图标库规范自动清洗。`,

@@ -97,7 +97,6 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     deployResult,
   } = useAppState();
   const [categories, setCategories] = useState<Category[]>([]);
-  const [businessCategories, setBusinessCategories] = useState<BusinessIconIndex['categories']>([]);
   const [existingGenericIconNames, setExistingGenericIconNames] = useState<string[]>([]);
   const [existingBusinessIconNames, setExistingBusinessIconNames] = useState<string[]>([]);
   const [existingIllustrationNames, setExistingIllustrationNames] = useState<string[]>([]);
@@ -118,10 +117,12 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       : sourceType === 'illustration'
         ? existingIllustrationNames
         : existingGenericIconNames;
+  const sourceTypeLabel =
+    sourceType === 'business' ? '业务图标' : sourceType === 'illustration' ? '插画' : '通用图标';
   const syncStatusMessage =
     categoryMessage === 'synced'
       ? sourceType === 'business'
-        ? `已同步 ${businessCategories.length} 个业务分类、${existingBusinessIconNames.length} 个业务图标。`
+        ? `已同步 ${businessColorModes.length} 个颜色模式、${existingBusinessIconNames.length} 个业务图标。`
         : sourceType === 'illustration'
           ? `已同步 ${existingIllustrationNames.length} 个插画。`
           : `已同步 ${categories.length} 个已有分类、${existingGenericIconNames.length} 个通用图标。`
@@ -386,7 +387,6 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         nextCategories.sort((left, right) => left.title.localeCompare(right.title, 'zh-Hans-CN')),
       );
       setExistingGenericIconNames(nextExistingIconNames);
-      setBusinessCategories(businessIndex.categories ?? []);
       setExistingBusinessIconNames(nextExistingBusinessIconNames);
       setExistingIllustrationNames(nextExistingIllustrationNames);
       setCategoryMessage('synced');
@@ -439,7 +439,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     icons.length === 0 ? '图标源' : '',
     deployableSelectedIcons.length === 0 ? '本次提交图标' : '',
     sourceType === 'generic' && ycloudMetadata.categories.length === 0 ? '分类' : '',
-    sourceType === 'business' && ycloudMetadata.businessColorMode === undefined ? '颜色类型' : '',
+    sourceType === 'business' && ycloudMetadata.businessColorMode === undefined ? '颜色模式' : '',
   ].filter(Boolean);
   const canDeploy =
     githubApiKey !== '' &&
@@ -522,25 +522,25 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         </div>
         <p className={styles.sourceHint}>
           {sourceType === 'business'
-            ? '当前提交到 business-icons/<颜色类型>/*.svg，不需要通用元数据。'
+            ? '当前提交到 business-icons/<颜色模式>/*.svg。'
             : sourceType === 'illustration'
-              ? '当前提交到 illustration-icons/*.svg，轻量清洗后保留原始颜色和尺寸属性。'
-              : '当前提交到 icons/*.svg，需要分类和通用元数据。'}
+              ? '当前提交到 illustration-icons/*.svg。'
+              : '当前提交到 icons/*.svg，并提交所选分类。'}
         </p>
       </section>
 
       {sourceType === 'business' && (
         <section className={styles.card}>
-          <h2 className={styles.title}>颜色类型</h2>
+          <h2 className={styles.title}>颜色模式</h2>
           <div className={styles.row}>
-            <p className={styles.muted}>选择业务图标需要几个可传入颜色。</p>
+            <p className={styles.muted}>选择业务图标的颜色模式，用于决定提交目录和颜色处理方式。</p>
             <button
               className={styles.secondaryButton}
               type="button"
               disabled={isLoadingCategories}
               onClick={loadCategories}
             >
-              {isLoadingCategories ? '刷新中' : '刷新分类'}
+              {isLoadingCategories ? '刷新中' : '刷新数据'}
             </button>
           </div>
           {syncStatusMessage && (
@@ -554,7 +554,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
             </p>
           )}
           <div className={styles.fieldGroup}>
-            <span className={styles.label}>颜色类型</span>
+            <span className={styles.label}>颜色模式</span>
             <select
               className={styles.input}
               value={ycloudMetadata.businessColorMode}
@@ -691,25 +691,29 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
             将提交 {deployableSelectedIcons.length} / {icons.length} 个
           </p>
         </div>
-        {existingIconNames.length > 0 && (
-          <div className={styles.row}>
-            <p className={styles.muted}>已自动跳过同名图标，避免重复提交。</p>
-            <label className={styles.checkboxLabel}>
-              <input
-                className={styles.checkbox}
-                type="checkbox"
-                checked={allowExistingIconUpdate}
-                onChange={(event) => {
-                  setAllowExistingIconUpdate(event.currentTarget.checked);
-                }}
-              />
-              <span className={styles.checkboxBox} />
-              覆盖已存在图标
-            </label>
-          </div>
-        )}
+        <div className={styles.row}>
+          <p className={styles.muted}>
+            {existingIconNames.length > 0
+              ? `已自动跳过同名${sourceTypeLabel}，避免重复提交。`
+              : `可覆盖目标目录中同名${sourceTypeLabel}。`}
+          </p>
+          <label className={styles.checkboxLabel}>
+            <input
+              className={styles.checkbox}
+              type="checkbox"
+              checked={allowExistingIconUpdate}
+              onChange={(event) => {
+                setAllowExistingIconUpdate(event.currentTarget.checked);
+              }}
+            />
+            <span className={styles.checkboxBox} />
+            覆盖已存在{sourceTypeLabel}
+          </label>
+        </div>
         {skippedExistingIconCount > 0 && !allowExistingIconUpdate && (
-          <p className={styles.message}>本次已跳过 {skippedExistingIconCount} 个已存在图标。</p>
+          <p className={styles.message}>
+            本次已跳过 {skippedExistingIconCount} 个已存在{sourceTypeLabel}。
+          </p>
         )}
         {icons.length > 0 && (
           <div className={styles.previewActions}>
@@ -970,10 +974,10 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         ) : (
           <p className={styles.footerHint}>
             {sourceType === 'business'
-              ? `将提交到 business-icons/${ycloudMetadata.businessColorMode}/，并执行业务 SVG 轻量清洗。`
+              ? '清洗：移除脚本、事件属性、style/class/data-*、未引用 id 和 javascript: 链接；按颜色模式处理 fill/stroke，不添加通用描边属性。'
               : sourceType === 'illustration'
-                ? '将提交到 illustration-icons/，清理危险和无关属性，保留 SVG 原始颜色和尺寸属性。'
-                : '将提交 SVG、图标信息和必要的分类信息。'}
+                ? '清洗：移除脚本、事件属性、style/class/data-*、未引用 id 和 javascript: 链接；保留原始颜色和尺寸属性。'
+                : '清洗：统一 24x24 viewBox、currentColor、stroke-width=2、round linecap/linejoin，并移除 style 和硬编码颜色。'}
           </p>
         )}
         <button

@@ -33,7 +33,7 @@
       "inspect"
     ],
     "id": "1651114766731373192",
-    "name": "YCloud Icons 图标同步助手",
+    "name": "YCloud Icons Manager",
     "main": "plugin-src/main.ts",
     "ui": "ui-src/main.tsx",
     "documentAccess": "dynamic-page",
