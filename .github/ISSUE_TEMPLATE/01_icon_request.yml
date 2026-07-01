@@ -18,6 +18,17 @@ body:
       description: What should this icon depict? For multiple icons, provide a comma-separated list.
     validations:
       required: true
+  - type: dropdown
+    id: asset-type
+    attributes:
+      label: Asset type
+      description: Choose the target source family for this request.
+      options:
+        - Generic icon
+        - Business icon
+        - Illustration
+    validations:
+      required: true
   - type: textarea
     id: use-cases
     attributes:

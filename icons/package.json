@@ -5,6 +5,7 @@
     "development",
     "files"
   ],
+  "author": "TianJianJun",
   "i18n": {
     "en": {
       "name": "package",

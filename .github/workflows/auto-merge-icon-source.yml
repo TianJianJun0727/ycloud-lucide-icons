@@ -76,7 +76,7 @@ jobs:
 
           invalid_files="$(
             jq -r '.files[].path' <<< "$pr_json" |
-              grep -Ev '^(icons/[^/]+\.(svg|json)|business-icons/[^/]+/[^/]+\.svg|business-icons/index\.json|categories/[^/]+\.json|scripts/data/allowedNonChineseTerms\.json)$' || true
+              grep -Ev '^(icons/[^/]+\.(svg|json)|business-icons/[^/]+/[^/]+\.svg|business-icons/index\.json|illustration-icons/[^/]+\.svg|illustration-icons/index\.json|categories/[^/]+\.json|scripts/data/allowedNonChineseTerms\.json)$' || true
           )"
           if [[ -n "$invalid_files" ]]; then
             echo "Auto-merge blocked because this PR changes files outside icon source scope:"

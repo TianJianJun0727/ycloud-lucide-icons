@@ -1,6 +1,6 @@
 <script lang="ts">
   import Smile from '../src/icons/smile.svelte';
-  import { setYCloudIconsProps } from '../src/ycloud-svelte.js';
+  import { setYCloudIconsProps } from '../src/icons.js';
 
   setYCloudIconsProps({
     size: 32,

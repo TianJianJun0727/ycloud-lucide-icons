@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IconEntity } from '@theme/types';
 import { computed } from 'vue';
-import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon.ts';
+import { createYCloudIcon } from '@ycloud-web/icons-vue';
 import Calendar from '@data/iconDetails/calendar.ts';
 import Clock from '@data/iconDetails/clock.ts';
 import Bug from '@data/iconDetails/bug.ts';

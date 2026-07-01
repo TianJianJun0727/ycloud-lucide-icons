@@ -11,6 +11,23 @@ export default async ({
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
+  const attrs = {
+    xmlns: 'http://www.w3.org/2000/svg',
+    width: '24',
+    height: '24',
+    viewBox: `0 0 ${'size' in iconData ? iconData.size : iconData.width} ${'size' in iconData ? iconData.size : iconData.height}`,
+    fill: 'none',
+    stroke: 'currentColor',
+    'stroke-width': '2',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
+  };
+  const data = {
+    name: iconData.name,
+    attrs,
+    node: iconData.node,
+    ...(iconData.aliases ? { aliases: iconData.aliases } : {}),
+  };
 
   return `
 import type { YCloudIconData } from '../types';
@@ -25,7 +42,7 @@ import type { YCloudIconData } from '../types';
  * @returns {Array}
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName}: YCloudIconData = ${JSON.stringify(iconData)}
+const ${componentName}: YCloudIconData = ${JSON.stringify(data)}
 
 export default ${componentName};
 `;

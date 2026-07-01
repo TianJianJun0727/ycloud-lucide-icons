@@ -2,10 +2,11 @@
 
 YCloud Icons Data exposes tree-shakable icon node data and helpers for custom renderers and framework integrations.
 
-The package now covers both icon families:
+The package covers three asset families:
 
 - Generic icons are exported from `@ycloud-web/icons-data` as normalized node data for the generic builders.
-- Business icons are exported from `@ycloud-web/icons-data/business` as cleaned SVG strings, data URIs, and index data.
+- Business icons are exported from `@ycloud-web/icons-data/business` as cleaned SVG definition objects and index data.
+- Illustrations are exported from `@ycloud-web/icons-data/illustration` as SVG definition objects and index data.
 
 **You can use it to:**
 
@@ -51,14 +52,28 @@ const svg = buildYCloudSvg(House);
 Business icon data:
 
 ```ts
-import { billingDataUri, businessIconNames, getBusinessIcon } from '@ycloud-web/icons-data/business';
+import { businessIconNames, getBusinessIcon } from '@ycloud-web/icons-data/business';
 
 const billing = getBusinessIcon('billing');
-const imageSource = billingDataUri;
+const rootAttrs = billing.attrs;
+const children = billing.node;
 const availableBusinessIcons = businessIconNames;
 ```
 
-Business icons are not generic stroke node data, so they do not support generic builder params such as `strokeWidth` or `absoluteStrokeWidth`.
+Business icons are structured SVG definitions. They are not generic stroke node data, so they do not support generic builder params such as `strokeWidth` or `absoluteStrokeWidth`.
+
+Illustration data:
+
+```ts
+import { getIllustration, illustrationNames } from '@ycloud-web/icons-data/illustration';
+
+const emptyPage = getIllustration('empty-page');
+const rootAttrs = emptyPage.attrs;
+const children = emptyPage.node;
+const availableIllustrations = illustrationNames;
+```
+
+Illustrations keep their source SVG colors and root attributes, so they are intended for empty states, result pages, permission pages, and similar artwork use cases.
 
 ## Documentation
 

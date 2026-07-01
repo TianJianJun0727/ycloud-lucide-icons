@@ -3,15 +3,42 @@ import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
 const packageName = '@ycloud-web/icons-vue';
-const outputFileName = 'ycloud-vue';
+const outputFileName = 'icons';
 const outputDir = 'dist';
-const inputs = ['src/ycloud-vue.ts'];
 const businessInput = 'src/business.ts';
+const illustrationInput = 'src/illustration.ts';
+const inputs = ['src/ycloud-vue.ts', businessInput, illustrationInput];
+const entryFileNameMap = {
+  'ycloud-vue': 'icons',
+  business: 'business-icons',
+  illustration: 'illustration-icons',
+};
+const runtimeEntryNames = new Set([
+  'Icon',
+  'context',
+  'createYCloudIcon',
+  'defaultAttributes',
+  'types',
+]);
+const getEntryFileName = (chunkInfo, extension) => {
+  const entryName = entryFileNameMap[chunkInfo.name];
+
+  if (entryName) {
+    return `${entryName}.${extension}`;
+  }
+
+  if (runtimeEntryNames.has(chunkInfo.name)) {
+    return `runtime/${chunkInfo.name}.${extension}`;
+  }
+
+  return `${chunkInfo.name}.${extension}`;
+};
 const bundles = [
   {
     format: 'cjs',
     inputs,
     outputDir,
+    preserveModules: true,
   },
   {
     format: 'esm',
@@ -33,7 +60,8 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
-              entryFileNames: `[name].${extension}`,
+              exports: format === 'cjs' ? 'named' : undefined,
+              entryFileNames: (chunkInfo) => getEntryFileName(chunkInfo, extension),
             }
           : {
               file: `${outputDir}/${format}/${outputFileName}.${extension}`,
@@ -71,7 +99,7 @@ export default [
     input: businessInput,
     output: [
       {
-        file: `dist/business.d.ts`,
+        file: `dist/business-icons.d.ts`,
         format: 'es',
       },
     ],
@@ -84,10 +112,10 @@ export default [
     ],
   },
   {
-    input: `src/${outputFileName}.suffixed.ts`,
+    input: illustrationInput,
     output: [
       {
-        file: `dist/${outputFileName}.suffixed.d.ts`,
+        file: `dist/illustration-icons.d.ts`,
         format: 'es',
       },
     ],
@@ -99,36 +127,5 @@ export default [
       }),
     ],
   },
-  {
-    input: `src/${outputFileName}.prefixed.ts`,
-    output: [
-      {
-        file: `dist/${outputFileName}.prefixed.d.ts`,
-        format: 'es',
-      },
-    ],
-    plugins: [
-      dts({
-        compilerOptions: {
-          preserveSymlinks: false,
-        },
-      }),
-    ],
-  },
-  ...['cjs', 'esm'].map((format) => ({
-    input: businessInput,
-    plugins: plugins({ pkg }),
-    external: ['vue', '@ycloud-web/icons/business'],
-    output: {
-      name: `${packageName}Business`,
-      file: `dist/${format}/business.${format === 'esm' ? 'mjs' : 'js'}`,
-      format,
-      sourcemap: true,
-      globals: {
-        vue: 'vue',
-        '@ycloud-web/icons/business': 'YCloudBusinessIcons',
-      },
-    },
-  })),
   ...configs,
 ];

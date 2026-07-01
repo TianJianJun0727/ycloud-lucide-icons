@@ -60,7 +60,7 @@ bun add @ycloud-web/icons@latest
 
 ```html
 <!-- 开发版本 -->
-<script src="https://unpkg.com/@ycloud-web/icons@latest/dist/umd/@ycloud-web/icons.js"></script>
+<script src="https://unpkg.com/@ycloud-web/icons@latest/dist/umd/icons.js"></script>
 
 <!-- 生产版本 -->
 <script src="https://unpkg.com/@ycloud-web/icons@latest"></script>

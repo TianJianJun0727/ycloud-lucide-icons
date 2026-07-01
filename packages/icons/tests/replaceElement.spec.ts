@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getAttrs, getClassNames } from '../src/replaceElement';
+import { getAttrs, getClassNames } from '../src/replaceElementUtils';
 
 describe('getAtts', () => {
   it('should returns attrbrutes of an element', () => {

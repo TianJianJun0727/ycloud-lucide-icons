@@ -16,6 +16,7 @@ The main flow looks like this:
 ```text
 icons/*.svg + icons/*.json
 business-icons/<color-mode>/*.svg + business-icons/<color-mode>/index.json
+illustration-icons/*.svg
   -> validation and SVG optimization
   -> package generation for each framework
   -> documentation data generation
@@ -34,6 +35,7 @@ The source of truth lives in:
 icons/
 categories/
 business-icons/
+illustration-icons/
 ```
 
 - `icons/*.svg`: the icon artwork
@@ -42,8 +44,10 @@ business-icons/
 - `business-icons/<color-mode>/*.svg`: business-specific icon artwork; the first-level folder must be `mono`, `duotone`, or `multicolor`
 - `business-icons/<color-mode>/index.json`: localized business color-mode titles
 - `business-icons/index.json`: generated index consumed by validation, the Figma plugin, docs, and package generation
+- `illustration-icons/*.svg`: illustration artwork that keeps its original colors and size attributes
+- `illustration-icons/index.json`: generated index consumed by validation, the Figma plugin, docs, and package generation
 
-The icon shape and the icon meaning are both stored in source control instead of being scattered through documentation or framework components. Generic icons have per-icon metadata. Business icons keep color-mode folder metadata only, and package export names are still derived from file names.
+The icon shape and the icon meaning are both stored in source control instead of being scattered through documentation or framework components. Generic icons have per-icon metadata. Business icons keep color-mode folder metadata only. Illustrations keep SVG files plus a generated index. Business icon and illustration package export names are derived from file names.
 
 ### 2. Generation And Validation
 
@@ -170,10 +174,11 @@ This package targets generic SVG files, business SVG files, SVG sprites, generic
 - `packages/icons-data`
 - `packages/icons-shared`
 
-`packages/icons-data` now has two data shapes:
+`packages/icons-data` now exposes structured icon data for each asset family:
 
 - The main entry exports generic icon node data and generic builders.
-- The `business` subpath exports business icon SVG strings, data URIs, and index data.
+- The `business` subpath exports business icon SVG definition objects and index data.
+- The `illustration` subpath exports illustration SVG definition objects and index data.
 
 These packages avoid duplicating icon data, shared helpers, and common types across framework packages.
 

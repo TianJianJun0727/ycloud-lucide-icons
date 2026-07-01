@@ -5,7 +5,7 @@ import type { BusinessIconEntity } from '@theme/types';
 import IconButton from '../base/IconButton.vue';
 import BusinessIconPreview from './BusinessIconPreview.vue';
 import BusinessIconInfo from './BusinessIconInfo.vue';
-import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-vue';
 import { expand, x } from '@data/iconNodes';
 import { resolveBrowserHref, resolveRoutePath } from '@theme/utils/navigation';
 

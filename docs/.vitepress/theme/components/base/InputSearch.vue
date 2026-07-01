@@ -7,7 +7,7 @@ export default {
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import Input from './Input.vue';
-import Icon from '@ycloud-web/icons-vue/src/Icon';
+import { Icon } from '@ycloud-web/icons-vue';
 import { search } from '@data/iconNodes';
 
 interface Props {

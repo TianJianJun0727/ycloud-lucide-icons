@@ -10,7 +10,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 # Icon Font
 
-YCloud icons are also available as web fonts. Generic icons and business icons are generated into separate font directories so `icon-*` and `business-icon-*` classes are not mixed in the same stylesheet.
+YCloud icons are also available as web fonts. Generic icons and business icons are generated into separate font directories so `icon-*` and `business-icon-*` classes are not mixed in the same stylesheet. Illustrations are not generated as fonts; use the `illustration` component entry or `illustration-icons/*.svg` static assets instead.
 
 :::warning Not recommended for high traffic production use
 Each icon font includes all icons for that asset family, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../../packages.md).

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { airVent } from './testIconNodes';
 import { createAstroHTMLString, render } from './utils';
-import { Icon, Rocket } from '../src/ycloud-astro';
+import { Icon, Rocket } from '../src/icons';
 
 describe('Using Icon Component', async () => {
   const { container } = await render(Icon, {

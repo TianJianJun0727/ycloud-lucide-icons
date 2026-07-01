@@ -2,12 +2,12 @@
   "$schema": "../icon.schema.json",
   "use-cases": ["食谱或烹饪应用", "食品购物清单", "健康与营养追踪", "农场或农产品市场界面"],
   "name": "胡萝卜",
-  "tags": ["胡萝卜", "蔬菜", "食物", "健康饮食", "食材"],
+  "tags": ["胡萝卜", "橙色", "健康", "自然", "新鲜", "根茎", "农产品", "有机", "营养", "蔬菜", "食物", "食材"],
   "categories": ["food-beverage"],
   "i18n": {
     "en": {
       "name": "carrot",
-      "tags": ["carrot", "vegetable", "food", "healthy eating", "ingredient"],
+      "tags": ["carrot", "orange", "healthy", "nature", "fresh", "root", "produce", "organic", "nutrition", "vegetable", "food", "ingredient"],
       "use-cases": ["Recipe or cooking app", "Grocery shopping list", "Health and nutrition tracker", "Farm or produce market UI"]
     }
   }

@@ -1,5 +1,5 @@
 import { Base64 } from 'js-base64';
-import { parseIconName, sanitizeSvg } from '../common/iconRules';
+import { parseIconName } from '../common/iconRules';
 import type { PngOptionPayload, YCloudIconData } from '../common/types';
 import { Meta, Tag } from './constants';
 import { stripBeforeIcon } from './utils';
@@ -232,12 +232,10 @@ export async function getSvgFromExtractedNodes(nodes: ExtractedNode[]) {
         format: 'SVG_STRING',
         svgIdAttribute: true,
       });
-      const svg = sanitizeSvg(rawSvg);
       restoreFills(node, fillsMap);
       return {
         name: parsedName.fileName || stripBeforeIcon(name),
-        svg,
-        sourceSvg: rawSvg,
+        svg: rawSvg,
         metadatas,
         ycloud: {
           nameZh: parsedName.nameZh,

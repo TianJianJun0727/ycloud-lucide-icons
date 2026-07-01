@@ -1,4 +1,4 @@
-import type { IconNode } from '../src/ycloud-svelte.js';
+import type { IconNode } from '../src/icons.js';
 
 export const airVent: IconNode = [
   [

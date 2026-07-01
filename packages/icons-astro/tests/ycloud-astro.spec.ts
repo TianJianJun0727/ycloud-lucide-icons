@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Pen, Edit2, Grid, Droplet, Smile, Rocket } from '../src/ycloud-astro';
+import { Pen, Edit2, Grid, Droplet, Smile, Rocket } from '../src/icons';
 import defaultAttributes from '../src/defaultAttributes';
 import { createAstroHTMLString, render } from './utils';
 

@@ -4,12 +4,12 @@
  * 输入：命令行第一个参数为目标版本号，例如 `0.1.12`。
  * 行为：
  * - 校验版本号格式。
- * - 更新根 `package.json` 版本。
  * - 遍历 packages 目录下各子包的 package.json，把所有包版本同步到同一个版本。
+ * - 传入 `--check` 时只校验版本是否一致，不写文件。
  *
- * 适用场景：Release Packages 工作流发布成功后，把仓库内版本号回写到 main。
+ * 适用场景：Release Packages 工作流发布前准备版本提交，或校验待发布 ref 已经包含正确版本。
  * 调用位置：根 `package.json` 的 `pnpm sync:package-versions`，`.github/workflows/ci.yml` 和 `.github/workflows/release.yml`。
- * 调用时机：发布流程确定目标版本后运行，确保根包和 packages 下所有包版本一致。
+ * 调用时机：发布流程确定目标版本后运行，确保 packages 下所有发布包版本一致。
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -40,10 +40,13 @@ function resolveVersion() {
   return version;
 }
 
+const checkOnly = process.argv.includes('--check');
+
 async function main() {
   const version = resolveVersion();
   const packageDirs = await readdir(packagesDir, { withFileTypes: true });
   const updatedPackages: string[] = [];
+  const mismatchedPackages: string[] = [];
 
   for (const entry of packageDirs) {
     if (!entry.isDirectory()) continue;
@@ -58,6 +61,13 @@ async function main() {
         continue;
       }
 
+      if (checkOnly) {
+        mismatchedPackages.push(
+          `${packageJson.name ?? entry.name}: ${packageJson.version ?? '<missing>'}`,
+        );
+        continue;
+      }
+
       packageJson.version = version;
       await writeFile(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`, 'utf8');
       updatedPackages.push(packageJson.name ?? entry.name);
@@ -68,6 +78,19 @@ async function main() {
 
       throw error;
     }
+  }
+
+  if (checkOnly) {
+    if (mismatchedPackages.length > 0) {
+      throw new Error(
+        `Package versions do not match ${version}:\n${mismatchedPackages
+          .map((item) => `- ${item}`)
+          .join('\n')}`,
+      );
+    }
+
+    console.log(`All package versions match ${version}.`);
+    return;
   }
 
   if (updatedPackages.length === 0) {

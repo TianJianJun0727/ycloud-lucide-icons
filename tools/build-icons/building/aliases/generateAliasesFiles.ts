@@ -40,6 +40,7 @@ export default async function generateAliasesFiles({
   const destinationDirectory = path.join(outputDirectory, 'aliases');
 
   const aliasFileName = path.basename(`aliases${fileExtension}`);
+  const aliasIndexFileName = path.basename(`index${fileExtension}`);
   const aliasPrefixesFileName = path.basename(`prefixed${fileExtension}`);
   const aliasSuffixFileName = path.basename(`suffixed${fileExtension}`);
 
@@ -49,11 +50,27 @@ export default async function generateAliasesFiles({
 
   // Reset files
   await resetFile(aliasFileName, destinationDirectory);
+  await resetFile(aliasIndexFileName, destinationDirectory);
 
   if (!aliasNamesOnly) {
     await resetFile(aliasPrefixesFileName, destinationDirectory);
     await resetFile(aliasSuffixFileName, destinationDirectory);
   }
+
+  await appendFile(
+    [
+      `export * from './aliases${aliasImportFileExtension}';`,
+      ...(!aliasNamesOnly
+        ? [
+            `export * from './prefixed${aliasImportFileExtension}';`,
+            `export * from './suffixed${aliasImportFileExtension}';`,
+          ]
+        : []),
+      '',
+    ].join('\n'),
+    aliasIndexFileName,
+    destinationDirectory,
+  );
 
   // Generate Import for Icon VNodes
   await Promise.all(
@@ -192,7 +209,10 @@ export default async function generateAliasesFiles({
 
   if (showLog) {
     console.log(`Successfully generated src/aliases/${aliasFileName} file`);
-    console.log(`Successfully generated src/aliases/${aliasPrefixesFileName} file`);
-    console.log(`Successfully generated src/aliases/${aliasSuffixFileName} file`);
+
+    if (!aliasNamesOnly) {
+      console.log(`Successfully generated src/aliases/${aliasPrefixesFileName} file`);
+      console.log(`Successfully generated src/aliases/${aliasSuffixFileName} file`);
+    }
   }
 }

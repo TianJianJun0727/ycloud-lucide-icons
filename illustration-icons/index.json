@@ -1,0 +1,64 @@
+{
+  "illustrations": [
+    {
+      "name": "account-unbound",
+      "path": "illustration-icons/account-unbound.svg",
+      "componentName": "AccountUnbound"
+    },
+    {
+      "name": "data-importing",
+      "path": "illustration-icons/data-importing.svg",
+      "componentName": "DataImporting"
+    },
+    {
+      "name": "empty-list",
+      "path": "illustration-icons/empty-list.svg",
+      "componentName": "EmptyList"
+    },
+    {
+      "name": "empty-orders",
+      "path": "illustration-icons/empty-orders.svg",
+      "componentName": "EmptyOrders"
+    },
+    {
+      "name": "empty-page",
+      "path": "illustration-icons/empty-page.svg",
+      "componentName": "EmptyPage"
+    },
+    {
+      "name": "empty-search",
+      "path": "illustration-icons/empty-search.svg",
+      "componentName": "EmptySearch"
+    },
+    {
+      "name": "load-failed",
+      "path": "illustration-icons/load-failed.svg",
+      "componentName": "LoadFailed"
+    },
+    {
+      "name": "network-disconnected",
+      "path": "illustration-icons/network-disconnected.svg",
+      "componentName": "NetworkDisconnected"
+    },
+    {
+      "name": "no-permission",
+      "path": "illustration-icons/no-permission.svg",
+      "componentName": "NoPermission"
+    },
+    {
+      "name": "not-found",
+      "path": "illustration-icons/not-found.svg",
+      "componentName": "NotFound"
+    },
+    {
+      "name": "payment-method-disabled",
+      "path": "illustration-icons/payment-method-disabled.svg",
+      "componentName": "PaymentMethodDisabled"
+    },
+    {
+      "name": "waiting-status",
+      "path": "illustration-icons/waiting-status.svg",
+      "componentName": "WaitingStatus"
+    }
+  ]
+}

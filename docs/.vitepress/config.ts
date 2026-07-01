@@ -23,6 +23,7 @@ const base = process.env.DOCS_BASE ?? (process.env.GITHUB_ACTIONS ? '/ycloud-ico
 const zhNav = [
   { text: '图标', link: '/icons/' },
   { text: '业务图标', link: '/business-icons/' },
+  { text: '插画', link: '/illustration-icons/' },
   { text: '指南', link: '/guide/' },
   { text: '包', link: '/packages' },
   { text: '更新日志', link: '/changelog' },
@@ -31,6 +32,7 @@ const zhNav = [
 const enNav = [
   { text: 'Icons', link: '/en/icons/' },
   { text: 'Business icons', link: '/en/business-icons/' },
+  { text: 'Illustrations', link: '/en/illustration-icons/' },
   { text: 'Guide', link: '/en/guide/' },
   { text: 'Packages', link: '/en/packages' },
   { text: 'Changelog', link: '/en/changelog' },

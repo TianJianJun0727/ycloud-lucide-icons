@@ -1,13 +1,20 @@
 ---
-const dataUri = 'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20d%3D%22M8.5%2012C8.5%2012.8284%207.82843%2013.5%207%2013.5C6.17157%2013.5%205.5%2012.8284%205.5%2012C5.5%2011.1716%206.17157%2010.5%207%2010.5C7.82843%2010.5%208.5%2011.1716%208.5%2012ZM13.5%2012C13.5%2012.8284%2012.8284%2013.5%2012%2013.5C11.1716%2013.5%2010.5%2012.8284%2010.5%2012C10.5%2011.1716%2011.1716%2010.5%2012%2010.5C12.8284%2010.5%2013.5%2011.1716%2013.5%2012ZM17%2013.5C17.8284%2013.5%2018.5%2012.8284%2018.5%2012C18.5%2011.1716%2017.8284%2010.5%2017%2010.5C16.1716%2010.5%2015.5%2011.1716%2015.5%2012C15.5%2012.8284%2016.1716%2013.5%2017%2013.5Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
-
-const { size = 24, width, height, alt = '', ...props } = Astro.props;
+import type { BusinessIconImageProps } from '../businessTypes';
+const { size = 24, width, height, alt = '', color = 'currentColor', style, ...props }: BusinessIconImageProps = Astro.props;
 ---
 
-<img
-  src={dataUri}
-  alt={alt}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
   width={width ?? size}
   height={height ?? size}
+  role={alt ? 'img' : undefined}
+  aria-label={alt || undefined}
+  aria-hidden={alt ? undefined : true}
+  color={color}
+  style={style}
   {...props}
-/>
+>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12C8.5 12.8284 7.82843 13.5 7 13.5C6.17157 13.5 5.5 12.8284 5.5 12C5.5 11.1716 6.17157 10.5 7 10.5C7.82843 10.5 8.5 11.1716 8.5 12ZM13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12ZM17 13.5C17.8284 13.5 18.5 12.8284 18.5 12C18.5 11.1716 17.8284 10.5 17 10.5C16.1716 10.5 15.5 11.1716 15.5 12C15.5 12.8284 16.1716 13.5 17 13.5Z" />
+</svg>

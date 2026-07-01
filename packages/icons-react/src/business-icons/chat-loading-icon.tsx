@@ -27,14 +27,14 @@ const ChatLoadingIcon = forwardRef<SVGSVGElement, BusinessIconImageProps>(
         cy="12.2285"
         r="1.5"
         fill="currentColor"
-        fill-opacity="0.8"
+        fillOpacity="0.8"
       />
       <circle
         cx="19"
         cy="12.2285"
         r="1.5"
         fill="currentColor"
-        fill-opacity="0.3"
+        fillOpacity="0.3"
       />
     </svg>
   ),

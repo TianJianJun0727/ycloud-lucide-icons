@@ -1,5 +1,6 @@
 {
   "private": true,
+  "author": "TianJianJun",
   "scripts": {
     "build": "pnpm -r --filter './packages/**' build",
     "test": "pnpm -r --filter './packages/**' test",
@@ -49,8 +50,8 @@
     "lint:format-fix": "oxfmt '**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}' --ignore-path .oxfmtignore --no-error-on-unmatched-pattern",
     "lint:svg:icons": "node ./scripts/checkSvgSource.mts && prettier --parser html --check 'icons/*.svg'",
     "lint:svg:business": "node ./scripts/checkBusinessSvgSource.mts",
-    "lint:svg": "pnpm lint:svg:icons && pnpm lint:svg:business",
-    "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/*.json' > /dev/null",
+    "lint:svg": "pnpm lint:svg:icons && pnpm lint:svg:business && pnpm lint:svg:illustration",
+    "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/!(package).json' > /dev/null",
     "lint:json:categories": "ajv --spec=draft2020 -s category.schema.json -d 'categories/*.json' > /dev/null",
     "lint:json": "pnpm run lint:json:icons && pnpm run lint:json:categories",
     "lint": "pnpm lint:es && pnpm lint:format && pnpm lint:svg && pnpm lint:json",
@@ -59,7 +60,9 @@
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mts",
     "rename": "node ./scripts/rename/renameIcon.mts",
-    "renamePattern": "node ./scripts/rename/renamePattern.mts"
+    "renamePattern": "node ./scripts/rename/renamePattern.mts",
+    "generate:illustration-index": "node ./scripts/writeIllustrationIndex.mts",
+    "lint:svg:illustration": "node ./scripts/checkIllustrationSvgSource.mts"
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",

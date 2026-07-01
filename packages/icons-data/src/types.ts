@@ -1,4 +1,4 @@
-export type SVGProps = Record<string, string>;
+export type SVGProps = Record<string, string | number | undefined>;
 
 /**
  * A YCloud icon node (an svgson-like internal format)
@@ -12,9 +12,11 @@ export type YCloudIconNode =
  */
 export type YCloudIconData = {
   name: string;
+  attrs: SVGProps;
   node: YCloudIconNode[];
   aliases?: string[];
-} & ({ size: number } | { width: number; height: number });
+  colorMode?: 'mono' | 'duotone' | 'multicolor';
+};
 
 /**
  * Build parameters for creating a YCloud icon instance for display.

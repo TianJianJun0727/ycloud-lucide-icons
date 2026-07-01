@@ -26,6 +26,8 @@ icons/<icon-name>.json
 
 业务专有图标放在 `business-icons/<color-mode>/*.svg`，一级目录只能是 `mono`、`duotone`、`multicolor`，用于区分单色、双色和多色清洗/打包规则。颜色模式显示名维护在 `business-icons/<color-mode>/index.json`，根 `business-icons/index.json` 由脚本生成索引。业务图标不需要每个图标的同名 JSON；详细规则见 [业务图标](/guide/business-icons)。
 
+插画资源放在 `illustration-icons/*.svg`，不做颜色转换、不做尺寸清洗，组件默认 `width="100%"`、`height="auto"`。根 `illustration-icons/index.json` 由脚本生成索引。插画不需要每个 SVG 的同名 JSON；包入口使用 `@ycloud-web/icons-*/illustration`，静态资源路径使用 `@ycloud-web/icons-static/illustration-icons/<name>.svg`。
+
 ## 图标规范
 
 在真正修改图标之前，先看一遍公开规范页：

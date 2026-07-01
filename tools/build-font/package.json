@@ -5,7 +5,7 @@
   "description": "A internal used package to build the font.",
   "keywords": [],
   "license": "ISC",
-  "author": "",
+  "author": "TianJianJun",
   "type": "module",
   "main": "main.ts",
   "scripts": {

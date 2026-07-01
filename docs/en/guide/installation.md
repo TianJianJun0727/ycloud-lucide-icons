@@ -7,12 +7,13 @@ description: Install YCloud Icons packages for supported frameworks and static a
 
 YCloud Icons follows the same package coverage model as Lucide and currently documents 10 package types.
 
-These packages cover two icon asset families:
+These packages cover three asset families:
 
 - Generic icons: default entries and `icons/*` subpaths for 24x24 linear icons.
 - Business icons: `business` subpath entries, `business-icons/*` static paths, and a separate business icon font for product- or business-specific artwork.
+- Illustrations: `illustration` subpath entries and `illustration-icons/*` static paths for artwork that keeps its original colors and aspect ratio.
 
-Business icons are not mixed into the generic default entries. See [Business icons](./business-icons.md) for the source and validation rules.
+Business icons and illustrations are not mixed into the generic default entries. See [Business icons](./business-icons.md) for the business source and validation rules, see [Illustrations](./illustration-icons.md) for illustration rules, and browse the [Illustrations](/en/illustration-icons/) gallery.
 
 ## Core JavaScript
 

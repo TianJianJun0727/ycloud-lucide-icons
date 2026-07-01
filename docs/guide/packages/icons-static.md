@@ -1,10 +1,11 @@
 # YCloud Icons Static
 
-无需 JavaScript 框架即可使用的 YCloud Icons 静态资源和工具。这个包提供多种格式，包括通用 SVG 文件、业务 SVG 文件、SVG sprites、通用 Icon Font、业务 Icon Font，以及用于服务端渲染和静态站点生成的 Node.js 工具。
+无需 JavaScript 框架即可使用的 YCloud Icons 静态资源和工具。这个包提供多种格式，包括通用 SVG 文件、业务 SVG 文件、插画 SVG 文件、SVG sprites、通用 Icon Font、业务 Icon Font，以及用于服务端渲染和静态站点生成的 Node.js 工具。
 
 **你可以用它完成：**
 
 - 将独立 SVG 文件作为图片或 CSS 背景图使用。
+- 将插画 SVG 文件作为图片或页面插画使用。
 - 为基于 CSS 的图标系统实现通用和业务 Icon Font。
 - 创建 SVG sprites，让静态站点能更高效地加载图标。
 - 在 Node.js 应用和服务端渲染中导入 SVG 字符串。
@@ -13,6 +14,7 @@
 这个包包含以下 YCloud Icons 实现形式：
 
 - 独立 SVG 文件
+- 插画 SVG 文件
 - SVG sprite
 - 通用 Icon Font 文件
 - 业务 Icon Font 文件
@@ -25,6 +27,7 @@
 - 使用纯 CSS 或 utility-first 框架消费 Icon font 的项目。
 - 直接在 HTML 中嵌入原始 SVG 文件或 sprites。
 - 直接消费业务 SVG 文件或业务字体 class 的项目。
+- 直接消费插画 SVG 文件的空状态、结果页或说明页。
 - 将 SVG 作为 CSS 背景图使用。
 - 在 Node.js（CommonJS）环境中导入 SVG 字符串。
 
@@ -86,6 +89,12 @@ bun add @ycloud-web/icons-static@latest
 ```
 
 :::
+
+插画 SVG 使用 `illustration-icons/` 路径：
+
+```html
+<img src="~@ycloud-web/icons-static/illustration-icons/empty-page.svg" />
+```
 
 #### 在 CSS 中使用:
 

@@ -94,7 +94,7 @@ For shared usage across projects, keep installing the existing package and impor
 
 ### Core package
 
-Install this package when you need SVG strings, data URIs, or shared icon definitions:
+Install this package when you need structured SVG definitions or a shared icon index:
 
 ```sh
 pnpm add @ycloud-web/icons
@@ -103,13 +103,13 @@ pnpm add @ycloud-web/icons
 ```ts
 import {
   businessIcons,
-  billingDataUri,
-  billingSvg,
+  getBusinessIcon,
 } from '@ycloud-web/icons/business';
 
-const svg = billingSvg;
-const imageSrc = billingDataUri;
-const icon = businessIcons['billing'];
+const icon = getBusinessIcon('billing');
+const rootAttrs = icon.attrs;
+const children = icon.node;
+const sameIcon = businessIcons['billing'];
 ```
 
 ### React package
@@ -160,10 +160,12 @@ import { Billing } from '@ycloud-web/icons-astro/business';
 import { Billing } from '@ycloud-web/icons-react-native/business';
 ```
 
-The Angular package exports business icon definitions for direct data URI binding:
+The Angular package exports business icon definitions that can be rendered as inline SVG or serialized by your application:
 
 ```ts
-import { billingDataUri } from '@ycloud-web/icons-angular';
+import { getBusinessIcon } from '@ycloud-web/icons-angular';
+
+const billing = getBusinessIcon('billing');
 ```
 
 ### Static package
@@ -188,4 +190,4 @@ Business icons also generate a separate icon font. It is not mixed into the gene
 <div class="business-icon-billing"></div>
 ```
 
-Static SVGs and data packages keep the cleaned color tokens. During React package generation, duotone primary and secondary tokens are converted to `color` and `secondaryColor` props; multicolor icons always keep their fixed source colors.
+Static SVGs and data packages keep the cleaned color tokens. During component package generation, duotone primary and secondary tokens are converted to framework props; multicolor icons always keep their fixed source colors.

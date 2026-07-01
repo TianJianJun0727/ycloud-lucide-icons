@@ -26,6 +26,8 @@ Related files:
 
 Business-specific icons live in `business-icons/<color-mode>/*.svg`. The first-level folder must be `mono`, `duotone`, or `multicolor`, and it controls the cleanup and package-generation behavior. Color-mode display names live in `business-icons/<color-mode>/index.json`, while the root `business-icons/index.json` is generated. Business icons do not need per-icon JSON metadata. See [Business icons](/en/guide/business-icons).
 
+Illustrations live in `illustration-icons/*.svg`. They do not go through color conversion or size cleanup, and generated components default to `width="100%"` and `height="auto"`. The root `illustration-icons/index.json` is generated. Illustrations do not need per-SVG JSON metadata; package subpaths use `@ycloud-web/icons-*/illustration`, while static assets use `@ycloud-web/icons-static/illustration-icons/<name>.svg`.
+
 ## Icon Metadata
 
 YCloud Icons is Chinese-first at the source-data level:

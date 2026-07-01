@@ -8,7 +8,7 @@ export default defineExportTemplate(
 
     return `
 import defaultAttributes from '../defaultAttributes';
-import type { IconNode } from '../types';
+import type { IconData } from '../types';
 
 /**
  * @name ${iconName}
@@ -20,7 +20,11 @@ import type { IconNode } from '../types';
  * @returns {Array}
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName}: IconNode =  ${JSON.stringify(children)}
+const ${componentName}: IconData = {
+  name: '${iconName}',
+  attrs: defaultAttributes,
+  node: ${JSON.stringify(children)},
+};
 
 export default ${componentName};
 `;

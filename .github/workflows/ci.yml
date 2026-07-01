@@ -7,6 +7,7 @@ on:
     paths:
       - icons/**/*.svg
       - business-icons/**/*.svg
+      - illustration-icons/**/*.svg
 
 permissions:
   id-token: write # Required for OIDC
@@ -90,7 +91,7 @@ jobs:
 
           changed_icon_svgs="$(
             jq -r '.files[].path' <<< "$pr_json" |
-              grep -E '^(icons/[^/]+\.svg|business-icons/[^/]+/[^/]+\.svg)$' || true
+              grep -E '^(icons/[^/]+\.svg|business-icons/[^/]+/[^/]+\.svg|illustration-icons/[^/]+\.svg)$' || true
           )"
           if [[ -z "$changed_icon_svgs" ]]; then
             echo "The merged Figma PR does not change icon SVG files."

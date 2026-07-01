@@ -8,26 +8,30 @@
 
 默认遵守下面几条：
 
-1. 先判断目标是通用图标还是业务图标，不要混用两套规则。
+1. 先判断目标是通用图标、业务图标还是插画，不要混用三套规则。
 2. 通用图标不要只改 SVG，不同步元数据。
 3. 通用图标不要只删 `.svg` 或只删 `.json`。
-4. 默认不要发明新的分类名；通用图标的 `categories` 应优先复用现有 `categories/*.json`，业务图标应优先复用现有 `business-icons/<category>/index.json`。
+4. 默认不要发明新的分类名；通用图标的 `categories` 应优先复用现有 `categories/*.json`，业务图标应优先复用现有 `business-icons/<color-mode>/index.json`，插画不维护分类。
 5. 通用图标元数据默认使用中文，英文信息必须补齐到 `i18n.en`，不要只保留单语言标签。
 6. 除非用户明确要求，不要顺手批量改无关图标。
 7. 修改完成后至少运行最小验证命令，再决定是否提交。
 
 把通用图标的 `icons/*.svg` 和 `icons/*.json` 视为同一个实体的两部分。任何通用图标增删改都先检查它们是否仍然成对存在。
 
-业务图标不维护逐图标 JSON；它的元数据来自目录级 `business-icons/<category>/index.json` 和生成产物 `business-icons/index.json`。业务图标数据同时需要进入 `@ycloud-web/icons-data/business`。
+业务图标不维护逐图标 JSON；它的元数据来自目录级 `business-icons/<color-mode>/index.json` 和生成产物 `business-icons/index.json`。业务图标数据同时需要进入各包的 `business` 子入口。
+
+插画不维护逐图标 JSON；它的索引来自生成产物 `illustration-icons/index.json`。插画数据同时需要进入各包的 `illustration` 子入口。
 
 ## 目录约定
 
 - `icons/*.svg`：图标 SVG 源文件
 - `icons/*.json`：图标元数据，主字段为中文展示信息，`i18n.en` 为英文展示信息
 - `categories/*.json`：分类定义，决定左侧分类展示、分类标题和英文标题
-- `business-icons/<category>/*.svg`：业务图标 SVG 源文件
-- `business-icons/<category>/index.json`：业务分类定义，包含中文标题、英文标题和排序权重
+- `business-icons/<color-mode>/*.svg`：业务图标 SVG 源文件；一级目录只能是 `mono`、`duotone`、`multicolor`
+- `business-icons/<color-mode>/index.json`：业务颜色模式定义，包含中文标题和英文标题
 - `business-icons/index.json`：生成产物，供校验、Figma 插件、文档和包生成消费
+- `illustration-icons/*.svg`：插画 SVG 源文件
+- `illustration-icons/index.json`：生成产物，供校验、Figma 插件、文档和包生成消费
 - `docs/`：文档站点，图标详情页、分类页和搜索数据都由构建脚本自动生成
 
 一个通用图标必须同时具备：
@@ -42,16 +46,26 @@ icons/<icon-name>.json
 一个业务图标必须位于：
 
 ```text
-business-icons/<category>/<icon-name>.svg
+business-icons/<color-mode>/<icon-name>.svg
 ```
 
-并且对应分类目录必须存在：
+并且对应颜色模式目录必须存在：
 
 ```text
-business-icons/<category>/index.json
+business-icons/<color-mode>/index.json
 ```
 
-业务图标文件名在所有业务分类中必须全局唯一，因为包内组件导出名不拼接分类名。
+这里的 `<color-mode>` 只能是 `mono`、`duotone` 或 `multicolor`。
+
+业务图标文件名在所有颜色模式目录中必须全局唯一，因为包内组件导出名不拼接颜色模式名。
+
+一个插画必须位于：
+
+```text
+illustration-icons/<illustration-name>.svg
+```
+
+插画文件名必须全局唯一，因为包内组件导出名直接来自文件名。
 
 ## SVG 规范
 
@@ -59,7 +73,7 @@ AI 在处理 SVG 时，除了保证文件存在，还要遵守这些约束：
 
 1. 文件名使用 kebab-case。
 2. 不保留无意义的编辑器残留和元数据。
-3. 通用图标不随意引入与现有线性图标风格明显不一致的形状语言；业务图标可以保留产品、渠道、状态或业务对象的专有视觉信息。
+3. 通用图标不随意引入与现有线性图标风格明显不一致的形状语言；业务图标可以保留产品、渠道、状态或业务对象的专有视觉信息；插画可以保留页面级视觉、固定颜色和复杂图形层次。
 4. 路径结构尽量简单，避免明显冗余的 group、style 和无用属性。
 5. 如果只是修元数据，不要顺手改 SVG 形状。
 6. 修改后的图标默认应能在 24px 视口下保持清晰可辨。
@@ -81,6 +95,13 @@ node ./scripts/writeBusinessIconIndex.mts
 
 业务清洗只清除固定颜色、样式和设计工具冗余属性，不自动补 `stroke-width="2"`，也不强制改成通用 24x24 线性风格。
 
+插画来自外部设计工具时，不执行颜色转换或尺寸清洗，只更新索引并做基础安全校验：
+
+```sh
+node ./scripts/writeIllustrationIndex.mts
+node ./scripts/checkIllustrationSvgSource.mts
+```
+
 ## 最小决策树
 
 收到“新增 / 删除 / 修改图标”的需求时，先做这个判断：
@@ -93,9 +114,15 @@ node ./scripts/writeBusinessIconIndex.mts
 
 ### 新增业务图标
 
-- 新增 `business-icons/<category>/<name>.svg`
-- 如果是新业务分类，再新增 `business-icons/<category>/index.json`
+- 新增 `business-icons/<color-mode>/<name>.svg`
+- 如果是新颜色模式目录，再新增 `business-icons/<color-mode>/index.json`
 - 运行 `node ./scripts/writeBusinessIconIndex.mts` 更新根索引
+- 不新增 `icons/<name>.json`
+
+### 新增插画
+
+- 新增 `illustration-icons/<name>.svg`
+- 运行 `node ./scripts/writeIllustrationIndex.mts` 更新根索引
 - 不新增 `icons/<name>.json`
 
 ### 删除通用图标
@@ -105,10 +132,16 @@ node ./scripts/writeBusinessIconIndex.mts
 
 ### 删除业务图标
 
-- 删除 `business-icons/<category>/<name>.svg`
+- 删除 `business-icons/<color-mode>/<name>.svg`
 - 运行 `node ./scripts/writeBusinessIconIndex.mts` 更新根索引
-- 如果分类目录变空，除非用户明确要求保留，否则仍保留目录级 `index.json` 作为允许分类配置
+- 如果颜色模式目录变空，除非用户明确要求删除，否则仍保留目录级 `index.json` 作为允许颜色模式配置
 - 检查文档示例、业务字体 class、包导入示例是否仍引用该图标
+
+### 删除插画
+
+- 删除 `illustration-icons/<name>.svg`
+- 运行 `node ./scripts/writeIllustrationIndex.mts` 更新根索引
+- 检查文档示例、静态资源路径、包导入示例是否仍引用该插画
 
 ### 修改通用图标
 
@@ -118,11 +151,17 @@ node ./scripts/writeBusinessIconIndex.mts
 
 ### 修改业务图标
 
-- 只改形状：改 `business-icons/<category>/<name>.svg`
-- 改分类：移动 SVG 到目标分类目录，确保目标分类有 `index.json`
+- 只改形状：改 `business-icons/<color-mode>/<name>.svg`
+- 改颜色模式：移动 SVG 到目标颜色模式目录，确保目标目录有 `index.json`
 - 改名字：重命名 SVG；同步检查业务包导入示例、业务字体 class 和文档引用
-- 改分类标题：改 `business-icons/<category>/index.json`
-- 每次改完业务 SVG 或分类配置后运行 `node ./scripts/writeBusinessIconIndex.mts`
+- 改颜色模式标题：改 `business-icons/<color-mode>/index.json`
+- 每次改完业务 SVG 或颜色模式配置后运行 `node ./scripts/writeBusinessIconIndex.mts`
+
+### 修改插画
+
+- 只改形状：改 `illustration-icons/<name>.svg`
+- 改名字：重命名 SVG；同步检查插画包导入示例、静态资源路径和文档引用
+- 每次改完插画 SVG 后运行 `node ./scripts/writeIllustrationIndex.mts`
 
 ## 最小验证命令
 
@@ -132,6 +171,7 @@ node ./scripts/writeBusinessIconIndex.mts
 pnpm checkIcons
 pnpm lint:json
 node ./scripts/checkBusinessSvgSource.mts
+node ./scripts/checkIllustrationSvgSource.mts
 pnpm --dir docs docs:build:no-og
 ```
 
@@ -139,7 +179,8 @@ pnpm --dir docs docs:build:no-og
 
 - `pnpm checkIcons`：检查 `.svg` / `.json` 是否一一对应，分类是否有效
 - `pnpm lint:json`：校验图标和分类 JSON 是否符合 schema
-- `node ./scripts/checkBusinessSvgSource.mts`：校验业务 SVG、业务分类配置和根索引是否同步
+- `node ./scripts/checkBusinessSvgSource.mts`：校验业务 SVG、业务颜色模式配置和根索引是否同步
+- `node ./scripts/checkIllustrationSvgSource.mts`：校验插画 SVG 和根索引是否同步
 - `pnpm --dir docs docs:build:no-og`：验证文档站点、图标页、分类页和搜索索引是否都能生成
 
 如果改动影响某个具体包的导出或构建，再补对应包构建，例如：
@@ -162,6 +203,13 @@ pnpm optimize
 node ./scripts/optimizeBusinessSvgs.mts
 node ./scripts/writeBusinessIconIndex.mts
 node ./scripts/checkBusinessSvgSource.mts
+```
+
+如果只是维护插画 SVG，可以先运行：
+
+```sh
+node ./scripts/writeIllustrationIndex.mts
+node ./scripts/checkIllustrationSvgSource.mts
 ```
 
 ## 添加一个通用图标
@@ -357,26 +405,25 @@ rg -n "<old-name>|<new-name>" docs icons categories packages
 
 ## 添加一个业务图标
 
-### 1. 选择业务分类目录
+### 1. 选择业务颜色模式目录
 
-业务图标必须放在一级业务分类目录中，例如：
+业务图标必须放在一级颜色模式目录中，例如：
 
 ```text
-business-icons/menu/billing.svg
+business-icons/mono/billing.svg
 ```
 
-当前允许分类由 `business-icons/<category>/index.json` 决定。不要只凭文件夹名新增分类；新增分类时必须同步写入目录级 `index.json`。
+当前允许颜色模式由 `business-icons/<color-mode>/index.json` 决定。目录只能是 `mono`、`duotone`、`multicolor`；新增目录时必须同步写入目录级 `index.json`。
 
 目录级配置示例：
 
 ```json
 {
   "$schema": "../category.schema.json",
-  "title": "菜单",
-  "weight": 20,
+  "title": "单色",
   "i18n": {
     "en": {
-      "title": "Menu"
+      "title": "Mono"
     }
   }
 }
@@ -384,7 +431,13 @@ business-icons/menu/billing.svg
 
 ### 2. 放入 SVG 源文件
 
-业务图标文件名使用 kebab-case。业务图标不要求和通用图标一致的 `stroke-width="2"`、`stroke-linecap="round"`、`stroke-linejoin="round"`，但清洗后颜色必须可由 `currentColor` 控制。
+业务图标文件名使用 kebab-case。业务图标不要求和通用图标一致的 `stroke-width="2"`、`stroke-linecap="round"`、`stroke-linejoin="round"`。
+
+颜色规则：
+
+- `mono`：固定颜色会转为 `currentColor`
+- `duotone`：白色会转为 secondary token，其他颜色会转为 primary token
+- `multicolor`：保留固定颜色
 
 建议执行：
 
@@ -396,13 +449,13 @@ node ./scripts/checkBusinessSvgSource.mts
 
 ### 3. 检查导出名
 
-业务包导出名按 SVG 文件名生成，不拼接分类名：
+业务包导出名按 SVG 文件名生成，不拼接颜色模式名：
 
 ```text
-business-icons/menu/billing.svg -> Billing
+business-icons/mono/billing.svg -> Billing
 ```
 
-所以不同业务分类下不能出现同名 SVG。重复名称会导致包生成和 Figma 提交校验失败。
+所以不同颜色模式目录下不能出现同名 SVG。重复名称会导致包生成和 Figma 提交校验失败。
 
 ### 4. 自检结果
 
@@ -410,10 +463,58 @@ business-icons/menu/billing.svg -> Billing
 
 - 图标能在 `/business-icons/` 列表展示
 - 图标能在 `/business-icons/<name>` 页面生成详情
-- 所属业务分类能在左侧分类和 Figma 插件下拉中展示
+- 所属颜色模式能在文档和 Figma 插件下拉中展示
 - 根 `business-icons/index.json` 是由脚本生成的最新内容
 - `@ycloud-web/icons-data/business` 能导出对应 SVG / data URI 数据
 - 业务字体示例可使用 `business-icon-<name>`
+
+## 添加一个插画
+
+### 1. 放入 SVG 源文件
+
+把新插画放到 `illustration-icons/` 目录，文件名使用 kebab-case，例如：
+
+```text
+illustration-icons/empty-page.svg
+```
+
+插画不需要逐图标 JSON，不进入通用图标分类，也不按业务图标颜色模式归类。
+
+### 2. 保留源 SVG 视觉
+
+插画不做颜色转换、不做尺寸清洗。可以保留固定颜色、渐变、透明度、宽高和复杂图形层次，但仍必须通过基础安全校验。
+
+建议执行：
+
+```sh
+node ./scripts/writeIllustrationIndex.mts
+node ./scripts/checkIllustrationSvgSource.mts
+```
+
+如果插画来自 Figma 插件提交，后续自动链路必须和通用图标、业务图标一致：
+
+- 自动修复工作流需要刷新并提交 `illustration-icons/index.json`
+- PR lint 需要运行 `pnpm lint:svg:illustration`
+- 自动合并白名单需要允许 `illustration-icons/*.svg` 和 `illustration-icons/index.json`
+- 合并到 `main` 后，Figma PR 中的 `illustration-icons/*.svg` 变更需要触发 release / npm 发布流程
+
+### 3. 检查导出名
+
+插画包导出名按 SVG 文件名生成：
+
+```text
+illustration-icons/empty-page.svg -> EmptyPage
+```
+
+### 4. 自检结果
+
+新增插画完成后，至少确认：
+
+- 插画能在 `/illustration-icons/` 列表展示
+- 插画能在 `/illustration-icons/<name>` 页面生成详情
+- 根 `illustration-icons/index.json` 是由脚本生成的最新内容
+- `@ycloud-web/icons-data/illustration` 能导出对应 SVG / data URI 数据
+- 静态资源路径可使用 `@ycloud-web/icons-static/illustration-icons/<name>.svg`
 
 ## 提交前检查
 
@@ -429,10 +530,11 @@ git diff --check
 - `icons/`
 - `categories/`
 - `business-icons/`
+- `illustration-icons/`
 - `docs/` 中与图标展示或说明直接相关的文件
 
-如果 diff 扩散到了大量无关文件，应先解释原因，再决定是否继续提交。业务图标变更通常还会触发 `packages/icons-static/business-font/`、Figma 插件或业务图标文档相关文件。
+如果 diff 扩散到了大量无关文件，应先解释原因，再决定是否继续提交。业务图标变更通常还会触发 `packages/icons-static/business-font/`、Figma 插件或业务图标文档相关文件；插画变更通常会触发插画索引、包入口和文档列表相关文件。
 
 ## 一句话摘要
 
-> 先判断是通用图标还是业务图标；通用图标保证 `icons/*.svg` 与 `icons/*.json` 成对一致；业务图标保证 `business-icons/<category>/*.svg`、目录级 `index.json` 和根 `business-icons/index.json` 同步；最后至少运行对应校验和文档构建。
+> 先判断是通用图标、业务图标还是插画；通用图标保证 `icons/*.svg` 与 `icons/*.json` 成对一致；业务图标保证 `business-icons/<color-mode>/*.svg`、目录级 `index.json` 和根 `business-icons/index.json` 同步；插画保证 `illustration-icons/*.svg` 和根 `illustration-icons/index.json` 同步；最后至少运行对应校验和文档构建。

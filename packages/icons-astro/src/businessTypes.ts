@@ -3,5 +3,8 @@ export interface BusinessIconImageProps {
   width?: number | string;
   height?: number | string;
   alt?: string;
+  color?: string;
+  secondaryColor?: string;
+  style?: unknown;
   [key: string]: unknown;
 }

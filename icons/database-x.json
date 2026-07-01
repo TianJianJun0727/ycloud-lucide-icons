@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "use-cases": ["表示数据库连接失败或丢失", "在监控工具中显示错误状态", "表示被拒绝的查询或破坏性操作"],
-  "name": "数据库关闭",
-  "tags": ["数据库", "存储", "服务器", "关闭", "错误", "失败", "移除", "断开", "拒绝"],
+  "name": "数据库错误",
+  "tags": ["数据库", "存储", "服务器", "关闭", "错误", "失败", "无效", "拒绝", "清除", "移除", "断开"],
   "categories": ["devices", "development"],
   "i18n": {
     "en": {
-      "name": "database X",
-      "tags": ["database", "storage", "server", "close", "error", "failed", "remove", "disconnect", "reject"],
-      "use-cases": ["indicating a failed or lost database connection", "displaying error states in monitoring tools", "representing rejected queries or destructive operations"]
+      "name": "database x",
+      "tags": ["database", "storage", "server", "x", "error", "failed", "invalid", "rejected", "denied", "clear", "remove", "disconnect"],
+      "use-cases": ["Indicating a failed or lost database connection", "Displaying error states in monitoring tools", "Representing rejected queries or destructive operations"]
     }
   }
 }

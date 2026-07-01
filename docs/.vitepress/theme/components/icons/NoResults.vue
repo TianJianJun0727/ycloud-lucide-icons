@@ -20,7 +20,7 @@ import {
   testTubeDiagonal,
   sword,
 } from '@data/iconNodes';
-import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-vue';
 import { useEventListener } from '@vueuse/core';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { IconNode } from '@theme/types';

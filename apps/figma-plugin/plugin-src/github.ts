@@ -1,4 +1,9 @@
-import { sanitizeBusinessSvg, sanitizeSvg, toKebabCase } from '../common/iconRules';
+import {
+  sanitizeBusinessSvg,
+  sanitizeIllustrationSvg,
+  sanitizeSvg,
+  toKebabCase,
+} from '../common/iconRules';
 import type { IconSourceType, YCloudIconData, YCloudMetadataOptions } from '../common/types';
 const GITHUB_API_VERSION = '2022-11-28';
 interface TreeItem {
@@ -11,25 +16,16 @@ interface TreeItem {
 function uniqueList<T>(items: T[]): T[] {
   return items.filter((item, index, list) => list.indexOf(item) === index);
 }
-function createIconJson(
-  name: string,
-  icon: YCloudIconData,
-  metadata: YCloudMetadataOptions,
-): Record<string, unknown> {
-  const rawNameZh = icon.ycloud?.nameZh?.trim() ?? '';
-  const rawNameEn = icon.ycloud?.nameEn?.trim() ?? '';
-  const nameZh = rawNameZh;
-  const nameEn = rawNameEn;
-  const useCasesZh = uniqueList(metadata.useCasesZh ?? []);
+function createIconJson(metadata: YCloudMetadataOptions): Record<string, unknown> {
   return {
     $schema: '../icon.schema.json',
-    'use-cases': useCasesZh,
-    name: nameZh,
-    tags: uniqueList(metadata.tagsZh),
+    'use-cases': [],
+    name: '',
+    tags: [],
     categories: uniqueList(metadata.categories),
     i18n: {
       en: {
-        name: nameEn,
+        name: '',
         tags: [],
         'use-cases': [],
       },
@@ -46,7 +42,7 @@ function buildYCloudFiles(icons: Record<string, YCloudIconData>, metadata: YClou
       },
       {
         path: `icons/${name}.json`,
-        content: `${JSON.stringify(createIconJson(name, icon, metadata), null, 2)}\n`,
+        content: `${JSON.stringify(createIconJson(metadata), null, 2)}\n`,
       },
     ];
   });
@@ -66,21 +62,20 @@ function buildBusinessIconFiles(
     const name = toKebabCase(icon.name || key);
     return {
       path: `business-icons/${businessColorMode}/${name}.svg`,
-      content: sanitizeBusinessSvg(icon.sourceSvg ?? icon.svg, businessColorMode),
+      content: sanitizeBusinessSvg(icon.svg, businessColorMode),
+    };
+  });
+}
+function buildIllustrationFiles(icons: Record<string, YCloudIconData>) {
+  return Object.entries(icons).map(([key, icon]) => {
+    const name = toKebabCase(icon.name || key);
+    return {
+      path: `illustration-icons/${name}.svg`,
+      content: sanitizeIllustrationSvg(icon.svg),
     };
   });
 }
 
-function buildReviewNotes(icons: Record<string, YCloudIconData>) {
-  const notes: string[] = [];
-  Object.entries(icons).forEach(([key, icon]) => {
-    const name = toKebabCase(icon.name || key);
-    if (!icon.ycloud?.nameZh || !icon.ycloud?.nameEn) {
-      notes.push(`- 图标 \`${name}\` 缺少完整中英文名称，建议审核时补齐。`);
-    }
-  });
-  return notes;
-}
 export function createGithubClient(
   repoOwner: string,
   repoName: string,
@@ -193,13 +188,21 @@ export function createGithubClient(
     const files =
       sourceType === 'business'
         ? buildBusinessIconFiles(icons, metadata)
-        : buildYCloudFiles(icons, metadata);
-    const reviewNotes = sourceType === 'business' ? [] : buildReviewNotes(icons);
+        : sourceType === 'illustration'
+          ? buildIllustrationFiles(icons)
+          : buildYCloudFiles(icons, metadata);
+    const reviewNotes: string[] = [];
     const iconCount = Object.keys(icons).length;
+    const scope =
+      sourceType === 'business'
+        ? 'business-icons'
+        : sourceType === 'illustration'
+          ? 'illustration'
+          : 'icons';
     const commitTitle =
       iconCount === 1
-        ? `feat(${sourceType === 'business' ? 'business-icons' : 'icons'}): add ${Object.keys(icons)[0]}`
-        : `feat(${sourceType === 'business' ? 'business-icons' : 'icons'}): add ${iconCount} icons`;
+        ? `feat(${scope}): add ${Object.keys(icons)[0]}`
+        : `feat(${scope}): add ${iconCount} icons`;
     const head = await getHead(baseBranch);
     const baseCommit = await getCommit(head.object.sha);
     const treeBody = await Promise.all(
@@ -227,8 +230,10 @@ export function createGithubClient(
         '来源：Figma 插件',
         '',
         sourceType === 'business'
-          ? `本次提交 ${iconCount} 个业务图标，颜色类型为 \`business-icons/${metadata.businessColorMode || 'mono'}/\`。SVG 已按业务规则轻量清洗。`
-          : `本次提交 ${iconCount} 个图标。SVG 已按图标库规范自动清洗。`,
+          ? `本次提交 ${iconCount} 个业务图标，颜色模式为 \`business-icons/${metadata.businessColorMode || 'mono'}/\`。SVG 已按业务规则轻量清洗。`
+          : sourceType === 'illustration'
+            ? `本次提交 ${iconCount} 个插画。SVG 已做安全轻量清洗，并保留原始颜色和尺寸属性。`
+            : `本次提交 ${iconCount} 个图标。SVG 已按图标库规范自动清洗。`,
         '',
         '变更文件：',
         ...files.map((file) => `- \`${file.path}\``),

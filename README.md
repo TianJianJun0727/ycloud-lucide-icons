@@ -8,10 +8,11 @@ YCloud Icons 是 YCloud 的多框架 SVG 图标组件库，面向产品前端、
 
 它提供一致的图标源数据、可 tree-shaking 的组件包、静态资源包和图标数据包。业务项目只需要安装对应框架包，即可按需引入图标组件，并获得 TypeScript 自动补全、重构和类型检查体验。
 
-仓库同时维护两类图标资产：
+仓库同时维护三类 SVG 资产：
 
 - **通用图标**：位于 `icons/`，使用 24x24 线性 SVG、`icons/*.json` 元数据和通用分类体系。
 - **业务图标**：位于 `business-icons/`，按 `mono`、`duotone`、`multicolor` 一级目录区分颜色模式，保留业务图形自身几何结构，通过各包的 `business` 子入口和静态包的 `business-icons/`、`business-font/` 输出。
+- **插画**：位于 `illustration-icons/`，保留原始 SVG 颜色和尺寸属性，通过各包的 `illustration` 子入口和静态包的 `illustration-icons/` 输出。
 
 ## 包
 
@@ -29,7 +30,7 @@ YCloud Icons 是 YCloud 的多框架 SVG 图标组件库，面向产品前端、
 | 静态资源        | `@ycloud-web/icons-static`       | `packages/icons-static`       |
 | 图标数据        | `@ycloud-web/icons-data`         | `packages/icons-data`         |
 
-`@ycloud-web/icons-data` 同时提供通用图标节点数据和业务图标 SVG / data URI 数据。
+`@ycloud-web/icons-data` 同时提供通用图标节点数据、业务图标 SVG / data URI 数据和插画 SVG / data URI 数据。
 
 ## 使用示例
 
@@ -96,12 +97,27 @@ export function BusinessExample() {
 <div class="business-icon-billing"></div>
 ```
 
+插画 React：
+
+```tsx
+import { EmptyPage } from '@ycloud-web/icons-react/illustration';
+
+export function IllustrationExample() {
+  return (
+    <EmptyPage
+      width="100%"
+      height="auto"
+    />
+  );
+}
+```
+
 ## 设计目标
 
 - **组件化体验**：在 React、Vue 等框架中以真实组件方式使用图标。
 - **按需打包**：业务只会打包实际导入的图标，避免引入未使用资源。
 - **强类型提示**：组件名、属性和图标数据都提供类型声明，便于补全、检查和重构。
-- **一源多端**：通用图标和业务图标分别从源码目录生成多框架包、静态资源和图标数据。
+- **一源多端**：通用图标、业务图标和插画分别从源码目录生成多框架包、静态资源和图标数据。
 - **可持续维护**：生成链路基于稳定的 SVG 数据、构建脚本和包发布流程。
 
 ## 风格策略

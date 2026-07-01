@@ -16,7 +16,7 @@ const ScrollToBottom = forwardRef<SVGSVGElement, BusinessIconImageProps>(
       style={{ color, ...style }}
       {...props}
     >
-      <g clip-path="url(#clip0_3626_8464)">
+      <g clipPath="url(#clip0_3626_8464)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"

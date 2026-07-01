@@ -1,0 +1,8 @@
+/**
+ * @license @ycloud-web/icons-static v0.2.0 - ISC
+ */
+
+const LightningFilled: string =
+  '<svg\n  class="ycloud-business ycloud-business-lightning-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">\n  <path\n    fill-rule="evenodd"\n    clip-rule="evenodd"\n    d="M3.19506 9.00032C2.57142 9.00032 2.25911 8.24632 2.70008 7.80534L9.65784 0.847587C10.1642 0.341177 11.0143 0.831968 10.829 1.52374L9.53016 6.37091C9.44507 6.68847 9.68436 7.00032 10.0131 7.00032L12.921 7.00032C13.5273 7.00032 13.8469 7.71872 13.4409 8.16905L7.3274 14.9499C6.84112 15.4893 5.95654 15.0227 6.12707 14.3168L7.26227 9.61773C7.33827 9.30313 7.0999 9.00032 6.77625 9.00032H3.19506Z"\n  />\n</svg>\n';
+
+export default LightningFilled;

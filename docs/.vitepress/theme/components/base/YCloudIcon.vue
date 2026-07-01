@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-vue';
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][];
 

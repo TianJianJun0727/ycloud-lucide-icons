@@ -303,6 +303,9 @@
 .business-icon-map-outlined::before {
   content: '\f06e';
 }
+.business-icon-menu-open::before {
+  content: '\f0b8';
+}
 .business-icon-message-bubble-filled::before {
   content: '\f06f';
 }

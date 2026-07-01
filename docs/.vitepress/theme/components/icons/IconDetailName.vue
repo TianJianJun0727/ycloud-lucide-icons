@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue';
 import { copy } from '@data/iconNodes';
-import Icon from '@ycloud-web/icons-vue/src/Icon';
+import { Icon } from '@ycloud-web/icons-vue';
 import useConfetti from '@theme/composables/useConfetti';
 import { useData } from 'vitepress';
 const { animate, confetti } = useConfetti();

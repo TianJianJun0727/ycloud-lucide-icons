@@ -2,7 +2,7 @@
 import { useLocalStorage } from '@vueuse/core';
 import IconButton from './base/IconButton.vue';
 import { x } from '@data/iconNodes';
-import Icon from '@ycloud-web/icons-vue/src/Icon';
+import { Icon } from '@ycloud-web/icons-vue';
 import { computed, onMounted, ref } from 'vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 

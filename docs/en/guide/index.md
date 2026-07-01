@@ -11,11 +11,13 @@ YCloud Icons is a multi-framework SVG icon toolkit. It provides tree-shakable ic
 
 ## Available Icons
 
-YCloud Icons currently ships the base outline icon set and package infrastructure. Style variants such as filled icons are part of the roadmap and should be generated from normalized SVG sources when the conversion is reliable.
+YCloud Icons currently ships generic outline icons, business icons, illustrations, and package infrastructure. Style variants such as filled icons are part of the roadmap and should be generated from normalized SVG sources when the conversion is reliable.
 
 ### Complete Set of Icons
 
 The icon source is kept in the repository and normalized by the build pipeline. Packages consume generated data and components so framework packages stay consistent.
+
+Generic icons are for 24px linear icons in controls, menus, and buttons. Business icons are for product, channel, status, or business-object visuals. Illustrations are for empty states, onboarding, result pages, and error pages.
 
 ## Code Optimization
 

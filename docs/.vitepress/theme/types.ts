@@ -51,6 +51,15 @@ export interface BusinessIconCategory {
   iconCount: number;
 }
 
+export interface IllustrationEntity {
+  name: string;
+  displayName: string;
+  componentName: string;
+  path: string;
+  svg: string;
+  dataUri: string;
+}
+
 export interface Category {
   name: string;
   title: string;

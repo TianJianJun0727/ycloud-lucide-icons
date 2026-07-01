@@ -7,12 +7,13 @@ description: 安装 YCloud Icons 支持的框架包和静态资源包。
 
 YCloud Icons 当前覆盖 10 种包类型，可以按项目所用框架选择安装。
 
-这些包同时覆盖两类图标资产：
+这些包同时覆盖三类图标资产：
 
 - 通用图标：默认入口和 `icons/*` 子路径，适合 24x24 线性图标。
 - 业务图标：`business` 子入口、`business-icons/*` 静态路径和独立业务字体，适合产品或业务专有图形。
+- 插画：`illustration` 子入口和 `illustration-icons/*` 静态路径，适合保留原始颜色和宽高比例的插画资源。
 
-业务图标不会混入通用图标默认入口。具体规则见 [业务图标](./business-icons.md)。
+业务图标和插画不会混入通用图标默认入口。业务图标规则见 [业务图标](./business-icons.md)，插画规则见 [插画](./illustration-icons.md)，插画列表可在 [插画](/illustration-icons/) 中浏览。
 
 ## 版本要求
 

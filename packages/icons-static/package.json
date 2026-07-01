@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-static",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Static SVG and font assets for YCloud Icons.",
   "keywords": [
     "Feather",
@@ -18,36 +18,85 @@
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/static/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
   "license": "ISC",
+  "author": "TianJianJun",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
     "directory": "packages/icons-static"
   },
-  "source": "src/ycloud-static.js",
+  "source": "src/ycloud-static.ts",
   "files": [
     "dist",
     "font",
     "business-font",
     "icons",
     "business-icons",
-    "lib",
+    "illustration-icons",
+    "assets.json",
     "icon-nodes.json",
     "sprite.svg",
     "tags.json"
   ],
   "sideEffects": false,
-  "main": "dist/cjs/ycloud-static.js",
-  "module": "dist/esm/ycloud-static.mjs",
-  "typings": "dist/ycloud-static.d.ts",
+  "main": "dist/cjs/icons.js",
+  "module": "dist/esm/icons.mjs",
+  "typings": "dist/icons.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/esm/icons.mjs",
+      "require": "./dist/cjs/icons.js",
+      "default": "./dist/esm/icons.mjs"
+    },
+    "./business": {
+      "types": "./dist/business-icons.d.ts",
+      "import": "./dist/esm/business-icons.mjs",
+      "require": "./dist/cjs/business-icons.js",
+      "default": "./dist/esm/business-icons.mjs"
+    },
+    "./illustration": {
+      "types": "./dist/illustration-icons.d.ts",
+      "import": "./dist/esm/illustration-icons.mjs",
+      "require": "./dist/cjs/illustration-icons.js",
+      "default": "./dist/esm/illustration-icons.mjs"
+    },
+    "./icons/*.svg": null,
+    "./icons/*/*.svg": null,
+    "./icons/*": {
+      "import": "./dist/esm/icons/*.mjs",
+      "require": "./dist/cjs/icons/*.js",
+      "default": "./dist/esm/icons/*.mjs"
+    },
+    "./business-icons/*.svg": null,
+    "./business-icons/*/*.svg": null,
+    "./business-icons/*": {
+      "import": "./dist/esm/business-icons/*.mjs",
+      "require": "./dist/cjs/business-icons/*.js",
+      "default": "./dist/esm/business-icons/*.mjs"
+    },
+    "./illustration-icons/*.svg": null,
+    "./illustration-icons/*/*.svg": null,
+    "./illustration-icons/*": {
+      "import": "./dist/esm/illustration-icons/*.mjs",
+      "require": "./dist/cjs/illustration-icons/*.js",
+      "default": "./dist/esm/illustration-icons/*.mjs"
+    },
+    "./font/*": "./font/*",
+    "./business-font/*": "./business-font/*",
+    "./assets.json": "./assets.json",
+    "./sprite.svg": "./sprite.svg",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:lib && pnpm build:tags && pnpm build:font",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:assets && pnpm build:manifest && pnpm build:bundles && pnpm build:tags && pnpm build:font",
     "build:font": "pnpm --dir ../.. --filter build-font start",
     "build:tags": "node ./scripts/migrateIconsToTags.mts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts static",
-    "build:lib": "node ./scripts/buildLib.mts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasesFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts static && node ../../scripts/generateIllustrationsPackage.mts static && node ./scripts/writeStaticSvgStringModules.mts",
+    "build:assets": "node ./scripts/buildStaticAssets.mts",
+    "build:manifest": "node ./scripts/writeStaticAssetsManifest.mts",
     "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c rollup.config.mjs",
-    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
+    "clean": "rm -rf dist && rm -rf build && rm -rf icons && rm -rf business-icons && rm -rf illustration && rm -rf illustrations && rm -rf illustration-icons && rm -rf ./src/business-icons ./src/illustration-icons && rm -f ./src/business-static.ts ./src/illustration-static.ts ./src/business-icons.ts ./src/illustration-icons.ts sprite.svg assets.json"
   },
   "devDependencies": {
     "@types/node": "^24.13.2",

@@ -3,9 +3,27 @@ import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
 const packageName = '@ycloud-web/icons-data';
-const outputFileName = 'ycloud-icons';
 const inputs = [`src/ycloud-icons.ts`];
-const secondaryInputs = ['./src/dynamic.ts', './src/build.ts', './src/business.ts'];
+const secondaryInputs = [
+  './src/dynamic.ts',
+  './src/build.ts',
+  './src/business.ts',
+  './src/illustration.ts',
+];
+const entryOutputNames = {
+  'ycloud-icons': 'icons',
+  business: 'business-icons',
+  illustration: 'illustration-icons',
+};
+const getEntryFileName = (extension) => (chunkInfo) =>
+  `${entryOutputNames[chunkInfo.name] ?? chunkInfo.name}.${extension}`;
+const dtsEntries = [
+  ['ycloud-icons', 'icons'],
+  ['dynamic', 'dynamic'],
+  ['build', 'build'],
+  ['business', 'business-icons'],
+  ['illustration', 'illustration-icons'],
+];
 const bundles = [
   {
     format: 'cjs',
@@ -37,6 +55,7 @@ const configs = bundles
     }) =>
       inputs.map((input) => ({
         input,
+        treeshake: preserveModules ? false : undefined,
         plugins: [...plugins({ pkg, minify })],
         external,
         output: {
@@ -45,12 +64,10 @@ const configs = bundles
           ...(preserveModules
             ? {
                 dir: `${outputDir}/${format}`,
-                entryFileNames: `[name].${extension}`,
+                entryFileNames: getEntryFileName(extension),
               }
             : {
-                file:
-                  outputFile ??
-                  `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.${extension}`,
+                file: outputFile,
               }),
           paths,
           format,
@@ -65,22 +82,15 @@ const configs = bundles
   .flat();
 
 export default [
-  ...[
-    outputFileName,
-    `${outputFileName}.prefixed`,
-    `${outputFileName}.suffixed`,
-    'dynamic',
-    'build',
-    'business',
-  ].map((filename) => ({
-    input: `./src/${filename}.ts`,
+  ...dtsEntries.map(([sourceName, outputName]) => ({
+    input: `./src/${sourceName}.ts`,
     output: [
       {
-        file: `dist/esm/${filename}.d.ts`,
+        file: `dist/esm/${outputName}.d.ts`,
         format: 'esm',
       },
       {
-        file: `dist/cjs/${filename}.d.cts`,
+        file: `dist/cjs/${outputName}.d.cts`,
         format: 'cjs',
       },
     ],

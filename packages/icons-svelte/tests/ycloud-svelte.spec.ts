@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { render, cleanup } from '@testing-library/svelte';
-import { Smile, Pen, Edit2 } from '../src/ycloud-svelte.js';
+import { Smile, Pen, Edit2 } from '../src/icons.js';
 import TestSlots from './TestSlots.svelte';
 import ContextWrapper from './ContextWrapper.svelte';
 

@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-solid",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A YCloud icon library package for Solid applications.",
   "keywords": [
     "Feather",
@@ -17,7 +17,7 @@
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/solid/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
   "license": "ISC",
-  "author": "YCloud",
+  "author": "TianJianJun",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
@@ -28,47 +28,68 @@
     "dist"
   ],
   "sideEffects": false,
-  "main": "dist/cjs/ycloud-solid.js",
-  "module": "dist/esm/ycloud-solid.mjs",
-  "types": "dist/types/ycloud-solid.d.ts",
+  "main": "dist/cjs/icons.js",
+  "module": "dist/esm/icons.mjs",
+  "types": "dist/types/icons.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/ycloud-solid.d.ts",
-      "solid": "./dist/source/ycloud-solid.jsx",
-      "import": "./dist/esm/ycloud-solid.mjs",
-      "browser": "./dist/esm/ycloud-solid.mjs",
-      "require": "./dist/cjs/ycloud-solid.js"
+      "types": "./dist/types/icons.d.ts",
+      "solid": "./dist/source/icons.jsx",
+      "import": "./dist/esm/icons.mjs",
+      "browser": "./dist/esm/icons.mjs",
+      "require": "./dist/cjs/icons.js",
+      "default": "./dist/esm/icons.mjs"
     },
-    "./icons": {
-      "types": "./dist/types/ycloud-solid.d.ts",
-      "solid": "./dist/source/ycloud-solid.jsx",
-      "import": "./dist/esm/ycloud-solid.mjs",
-      "browser": "./dist/esm/ycloud-solid.mjs",
-      "require": "./dist/cjs/ycloud-solid.js"
+    "./business": {
+      "types": "./dist/types/business-icons.d.ts",
+      "solid": "./dist/source/business-icons.jsx",
+      "import": "./dist/esm/business-icons.mjs",
+      "browser": "./dist/esm/business-icons.mjs",
+      "require": "./dist/cjs/business-icons.js",
+      "default": "./dist/esm/business-icons.mjs"
+    },
+    "./illustration": {
+      "types": "./dist/types/illustration-icons.d.ts",
+      "solid": "./dist/source/illustration-icons.jsx",
+      "import": "./dist/esm/illustration-icons.mjs",
+      "browser": "./dist/esm/illustration-icons.mjs",
+      "require": "./dist/cjs/illustration-icons.js",
+      "default": "./dist/esm/illustration-icons.mjs"
     },
     "./icons/*": {
       "types": "./dist/types/icons/*.d.ts",
       "solid": "./dist/source/icons/*.jsx",
       "import": "./dist/esm/icons/*.mjs",
       "browser": "./dist/esm/icons/*.mjs",
-      "require": "./dist/cjs/icons/*.js"
+      "require": "./dist/cjs/icons/*.js",
+      "default": "./dist/esm/icons/*.mjs"
     },
-    "./business": {
-      "types": "./dist/types/business.d.ts",
-      "solid": "./dist/source/business.jsx",
-      "import": "./dist/esm/business.mjs",
-      "browser": "./dist/esm/business.mjs",
-      "require": "./dist/cjs/business.js"
-    }
+    "./business-icons/*": {
+      "types": "./dist/types/business-icons/*.d.ts",
+      "solid": "./dist/source/business-icons/*.jsx",
+      "import": "./dist/esm/business-icons/*.mjs",
+      "browser": "./dist/esm/business-icons/*.mjs",
+      "require": "./dist/cjs/business-icons/*.js",
+      "default": "./dist/esm/business-icons/*.mjs"
+    },
+    "./illustration-icons/*": {
+      "types": "./dist/types/illustration-icons/*.d.ts",
+      "solid": "./dist/source/illustration-icons/*.jsx",
+      "import": "./dist/esm/illustration-icons/*.mjs",
+      "browser": "./dist/esm/illustration-icons/*.mjs",
+      "require": "./dist/cjs/illustration-icons/*.js",
+      "default": "./dist/esm/illustration-icons/*.mjs"
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -f ./src/aliases/{prefixed,suffixed}.ts && rm -rf ./src/business-icons ./src/illustration-icons && rm -f ./src/business.ts ./src/businessTypes.ts ./src/illustration.ts ./src/illustrationTypes.ts",
     "build:transpile": "tsc --jsx preserve -t es2020 --rootDir src --outDir dist --noEmit false",
     "build:version": "node ./scripts/replaceVersion.mjs",
     "build:bundle": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c rollup.config.mjs",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts solid",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts solid && node ../../scripts/generateIllustrationsPackage.mts solid",
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",

@@ -30,6 +30,7 @@
       - any-glob-to-any-file:
           - 'icons/*.svg'
           - 'business-icons/**/*.svg'
+          - 'illustration-icons/**/*.svg'
 
 # For changes in the ycloud package
 🧳 ycloud package:

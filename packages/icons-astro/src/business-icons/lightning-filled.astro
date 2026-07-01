@@ -1,13 +1,20 @@
 ---
-const dataUri = 'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20d%3D%22M3.19506%209.00032C2.57142%209.00032%202.25911%208.24632%202.70008%207.80534L9.65784%200.847587C10.1642%200.341177%2011.0143%200.831968%2010.829%201.52374L9.53016%206.37091C9.44507%206.68847%209.68436%207.00032%2010.0131%207.00032L12.921%207.00032C13.5273%207.00032%2013.8469%207.71872%2013.4409%208.16905L7.3274%2014.9499C6.84112%2015.4893%205.95654%2015.0227%206.12707%2014.3168L7.26227%209.61773C7.33827%209.30313%207.0999%209.00032%206.77625%209.00032H3.19506Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
-
-const { size = 24, width, height, alt = '', ...props } = Astro.props;
+import type { BusinessIconImageProps } from '../businessTypes';
+const { size = 24, width, height, alt = '', color = 'currentColor', style, ...props }: BusinessIconImageProps = Astro.props;
 ---
 
-<img
-  src={dataUri}
-  alt={alt}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 16 16"
+  fill="currentColor"
   width={width ?? size}
   height={height ?? size}
+  role={alt ? 'img' : undefined}
+  aria-label={alt || undefined}
+  aria-hidden={alt ? undefined : true}
+  color={color}
+  style={style}
   {...props}
-/>
+>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.19506 9.00032C2.57142 9.00032 2.25911 8.24632 2.70008 7.80534L9.65784 0.847587C10.1642 0.341177 11.0143 0.831968 10.829 1.52374L9.53016 6.37091C9.44507 6.68847 9.68436 7.00032 10.0131 7.00032L12.921 7.00032C13.5273 7.00032 13.8469 7.71872 13.4409 8.16905L7.3274 14.9499C6.84112 15.4893 5.95654 15.0227 6.12707 14.3168L7.26227 9.61773C7.33827 9.30313 7.0999 9.00032 6.77625 9.00032H3.19506Z" />
+</svg>

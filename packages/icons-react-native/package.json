@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-react-native",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A YCloud icon library package for React Native applications.",
   "keywords": [
     "Feather",
@@ -16,7 +16,7 @@
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/react-native/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
   "license": "ISC",
-  "author": "YCloud",
+  "author": "TianJianJun",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
@@ -26,41 +26,57 @@
     "dist"
   ],
   "sideEffects": false,
-  "main": "dist/cjs/ycloud-react-native.js",
-  "module": "dist/esm/ycloud-react-native.mjs",
-  "typings": "dist/ycloud-react-native.d.ts",
-  "react-native": "dist/esm/ycloud-react-native.mjs",
+  "main": "dist/cjs/icons.js",
+  "module": "dist/esm/icons.mjs",
+  "typings": "dist/icons.d.ts",
+  "react-native": "dist/esm/icons.mjs",
   "exports": {
     ".": {
-      "types": "./dist/ycloud-react-native.d.ts",
-      "import": "./dist/esm/ycloud-react-native.mjs",
-      "browser": "./dist/esm/ycloud-react-native.mjs",
-      "require": "./dist/cjs/ycloud-react-native.js"
-    },
-    "./icons": {
       "types": "./dist/icons.d.ts",
-      "import": "./dist/esm/icons/index.mjs",
-      "browser": "./dist/esm/icons/index.mjs",
-      "require": "./dist/cjs/icons/index.js"
-    },
-    "./prefixed": {
-      "types": "./dist/ycloud-react-native.prefixed.d.ts"
-    },
-    "./suffixed": {
-      "types": "./dist/ycloud-react-native.suffixed.d.ts"
+      "browser": "./dist/esm/icons.mjs",
+      "import": "./dist/esm/icons.mjs",
+      "require": "./dist/cjs/icons.js",
+      "default": "./dist/esm/icons.mjs"
     },
     "./business": {
-      "types": "./dist/business.d.ts",
-      "import": "./dist/esm/business.mjs",
-      "browser": "./dist/esm/business.mjs",
-      "require": "./dist/cjs/business.js"
-    }
+      "types": "./dist/business-icons.d.ts",
+      "browser": "./dist/esm/business-icons.mjs",
+      "import": "./dist/esm/business-icons.mjs",
+      "require": "./dist/cjs/business-icons.js",
+      "default": "./dist/esm/business-icons.mjs"
+    },
+    "./illustration": {
+      "types": "./dist/illustration-icons.d.ts",
+      "browser": "./dist/esm/illustration-icons.mjs",
+      "import": "./dist/esm/illustration-icons.mjs",
+      "require": "./dist/cjs/illustration-icons.js",
+      "default": "./dist/esm/illustration-icons.mjs"
+    },
+    "./icons/*": {
+      "browser": "./dist/esm/icons/*.mjs",
+      "import": "./dist/esm/icons/*.mjs",
+      "require": "./dist/cjs/icons/*.js",
+      "default": "./dist/esm/icons/*.mjs"
+    },
+    "./business-icons/*": {
+      "browser": "./dist/esm/business-icons/*.mjs",
+      "import": "./dist/esm/business-icons/*.mjs",
+      "require": "./dist/cjs/business-icons/*.js",
+      "default": "./dist/esm/business-icons/*.mjs"
+    },
+    "./illustration-icons/*": {
+      "browser": "./dist/esm/illustration-icons/*.mjs",
+      "import": "./dist/esm/illustration-icons/*.mjs",
+      "require": "./dist/cjs/illustration-icons/*.js",
+      "default": "./dist/esm/illustration-icons/*.mjs"
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts && node ../../scripts/generateBusinessIconsPackage.mts react-native",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -f ./src/aliases/{prefixed,suffixed}.ts && rm -rf ./src/business-icons ./src/illustration-icons && rm -f ./src/business.ts ./src/businessTypes.ts ./src/illustration.ts ./src/illustrationTypes.ts ./src/ycloud-react-native.prefixed.ts ./src/ycloud-react-native.suffixed.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts && node ../../scripts/generateBusinessIconsPackage.mts react-native && node ../../scripts/generateIllustrationsPackage.mts react-native",
     "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch"

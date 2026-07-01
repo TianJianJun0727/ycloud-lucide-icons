@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-vue",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A YCloud icon library package for Vue applications.",
   "keywords": [
     "Feather",
@@ -14,7 +14,7 @@
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/vue/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
   "license": "ISC",
-  "author": "YCloud",
+  "author": "TianJianJun",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
@@ -25,22 +25,43 @@
     "dist"
   ],
   "sideEffects": false,
-  "main": "dist/cjs/ycloud-vue.js",
-  "module": "dist/esm/ycloud-vue.mjs",
-  "typings": "dist/ycloud-vue.d.ts",
+  "main": "dist/cjs/icons.js",
+  "module": "dist/esm/icons.mjs",
+  "typings": "dist/icons.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/ycloud-vue.d.ts",
-      "import": "./dist/esm/ycloud-vue.mjs",
-      "require": "./dist/cjs/ycloud-vue.js"
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/esm/icons.mjs",
+      "require": "./dist/cjs/icons.js",
+      "default": "./dist/esm/icons.mjs"
     },
     "./business": {
-      "types": "./dist/business.d.ts",
-      "import": "./dist/esm/business.mjs",
-      "require": "./dist/cjs/business.js"
+      "types": "./dist/business-icons.d.ts",
+      "import": "./dist/esm/business-icons.mjs",
+      "require": "./dist/cjs/business-icons.js",
+      "default": "./dist/esm/business-icons.mjs"
     },
-    "./src/*": "./src/*",
-    "./dist/*": "./dist/*",
+    "./illustration": {
+      "types": "./dist/illustration-icons.d.ts",
+      "import": "./dist/esm/illustration-icons.mjs",
+      "require": "./dist/cjs/illustration-icons.js",
+      "default": "./dist/esm/illustration-icons.mjs"
+    },
+    "./icons/*": {
+      "import": "./dist/esm/icons/*.mjs",
+      "require": "./dist/cjs/icons/*.js",
+      "default": "./dist/esm/icons/*.mjs"
+    },
+    "./business-icons/*": {
+      "import": "./dist/esm/business-icons/*.mjs",
+      "require": "./dist/cjs/business-icons/*.js",
+      "default": "./dist/esm/business-icons/*.mjs"
+    },
+    "./illustration-icons/*": {
+      "import": "./dist/esm/illustration-icons/*.mjs",
+      "require": "./dist/cjs/illustration-icons/*.js",
+      "default": "./dist/esm/illustration-icons/*.mjs"
+    },
     "./package.json": "./package.json"
   },
   "publishConfig": {
@@ -50,8 +71,8 @@
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts vue",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -f ./src/aliases/{prefixed,suffixed}.ts && rm -rf ./src/business-icons ./src/illustration-icons && rm -f ./src/business.ts ./src/businessTypes.ts ./src/illustration.ts ./src/illustrationTypes.ts ./src/ycloud-vue.prefixed.ts ./src/ycloud-vue.suffixed.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts vue && node ../../scripts/generateIllustrationsPackage.mts vue",
     "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c ./rollup.config.mjs",
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",

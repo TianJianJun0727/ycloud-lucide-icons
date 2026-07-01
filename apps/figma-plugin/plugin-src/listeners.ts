@@ -32,14 +32,16 @@ export function listenDeployIcon() {
         return;
       }
       const iconData =
-        sourceType === 'business' ? icons : await exportFromYCloudIconData(assetFrames, icons, png);
+        sourceType === 'generic' ? await exportFromYCloudIconData(assetFrames, icons, png) : icons;
       const pullRequest = await createDeployPR(iconData, ycloud, sourceType);
       emit('DEPLOY_DONE', {
         status: 'success',
         message:
           sourceType === 'business'
             ? '已创建业务图标审核单，等待合并。'
-            : '已创建审核单，等待图标库合并。',
+            : sourceType === 'illustration'
+              ? '已创建插画审核单，等待合并。'
+              : '已创建审核单，等待图标库合并。',
         url: pullRequest.html_url,
       });
       figma.notify('已创建图标审核单', { timeout: 5000 });

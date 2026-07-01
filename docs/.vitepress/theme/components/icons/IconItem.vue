@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, watchEffect } from 'vue';
-import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-vue';
 import { useMediaQuery } from '@vueuse/core';
 import { useData, useRouter } from 'vitepress';
 import getSVGIcon from '@theme/utils/getSVGIcon';

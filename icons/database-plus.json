@@ -2,13 +2,13 @@
   "$schema": "../icon.schema.json",
   "use-cases": ["创建新的数据库实例", "在客户端或管理面板中添加数据库连接"],
   "name": "数据库加号",
-  "tags": ["数据库", "存储", "服务器", "添加", "创建", "新建", "插入", "扩展"],
+  "tags": ["数据库", "存储", "服务器", "加号", "添加", "创建", "新建", "插入", "扩展"],
   "categories": ["devices", "development"],
   "i18n": {
     "en": {
       "name": "database plus",
-      "tags": ["database", "storage", "server", "add", "create", "new", "insert", "expand"],
-      "use-cases": ["creating a new database instance", "adding a database connection in a client or admin panel"]
+      "tags": ["database", "storage", "server", "plus", "add", "create", "new", "insert", "expand"],
+      "use-cases": ["Creating a new database instance", "Adding a database connection in a client or admin panel"]
     }
   }
 }

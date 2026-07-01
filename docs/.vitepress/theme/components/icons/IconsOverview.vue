@@ -14,7 +14,7 @@ import useFetchTags from '@theme/composables/useFetchTags';
 import useFetchCategories from '@theme/composables/useFetchCategories';
 import chunkArray from '@theme/utils/chunkArray';
 import useSearchPlaceholder from '@theme/utils/useSearchPlaceholder.ts';
-import Icon from '@ycloud-web/icons-vue/src/Icon';
+import { Icon } from '@ycloud-web/icons-vue';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
 
 const ICON_SIZE = 56;

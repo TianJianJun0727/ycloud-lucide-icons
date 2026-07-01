@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IconEntity } from '@theme/types';
 import { computed, ref } from 'vue';
-import createYCloudIcon from '@ycloud-web/icons-vue/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-vue';
 import { useIconStyleContext } from '@theme/composables/useIconStyle';
 
 const props = defineProps<{

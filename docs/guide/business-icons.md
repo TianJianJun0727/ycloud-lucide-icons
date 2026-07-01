@@ -96,7 +96,7 @@ node ./scripts/checkBusinessSvgSource.mts
 
 ### Core 包
 
-需要 SVG 字符串、data URI 或统一图标定义时安装：
+需要结构化 SVG 定义或统一图标索引时安装：
 
 ```sh
 pnpm add @ycloud-web/icons
@@ -105,13 +105,13 @@ pnpm add @ycloud-web/icons
 ```ts
 import {
   businessIcons,
-  billingDataUri,
-  billingSvg,
+  getBusinessIcon,
 } from '@ycloud-web/icons/business';
 
-const svg = billingSvg;
-const imageSrc = billingDataUri;
-const icon = businessIcons['billing'];
+const icon = getBusinessIcon('billing');
+const rootAttrs = icon.attrs;
+const children = icon.node;
+const sameIcon = businessIcons['billing'];
 ```
 
 ### React 包
@@ -162,10 +162,12 @@ import { Billing } from '@ycloud-web/icons-astro/business';
 import { Billing } from '@ycloud-web/icons-react-native/business';
 ```
 
-Angular 包导出业务图标定义，可直接用 data URI 绑定图片：
+Angular 包导出业务图标定义，可按 `attrs + node` 渲染为内联 SVG 或自行序列化：
 
 ```ts
-import { billingDataUri } from '@ycloud-web/icons-angular';
+import { getBusinessIcon } from '@ycloud-web/icons-angular';
+
+const billing = getBusinessIcon('billing');
 ```
 
 ### Static 包
@@ -190,4 +192,4 @@ import billingIconUrl from '@ycloud-web/icons-static/business-icons/mono/billing
 <div class="business-icon-billing"></div>
 ```
 
-静态 SVG 与数据包会保留清洗后的颜色 token。使用 `duotone` 源时，打包到 React 组件阶段会把 primary/secondary token 转为 `color` 和 `secondaryColor` props；多色图标始终保留源 SVG 固定色。
+静态 SVG 与数据包会保留清洗后的颜色 token。使用 `duotone` 源时，打包到组件阶段会把 primary/secondary token 转为对应框架的可传入颜色参数；多色图标始终保留源 SVG 固定色。

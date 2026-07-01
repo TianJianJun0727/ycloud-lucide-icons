@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": ["数据库连接验证", "健康检查监控", "备份完整性确认"],
+  "use-cases": ["表示数据库连接成功", "展示已验证或健康的数据库实例", "确认备份完整性或同步完成"],
   "name": "数据库勾选",
-  "tags": ["数据库", "验证", "成功", "健康", "连接", "完整性"],
+  "tags": ["数据库", "存储", "服务器", "勾选", "成功", "有效", "已验证", "已确认", "完成"],
   "categories": ["devices", "development"],
   "i18n": {
     "en": {
       "name": "database check",
-      "tags": ["database", "verification", "success", "health", "connection", "integrity"],
-      "use-cases": ["Database connection verification", "Health check and monitoring", "Backup integrity confirmation"]
+      "tags": ["database", "storage", "server", "check", "success", "valid", "verified", "confirmed", "complete"],
+      "use-cases": ["Indicating a successful database connection", "Showing a verified or healthy database instance", "Confirming backup integrity or successful sync"]
     }
   }
 }

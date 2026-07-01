@@ -48,6 +48,14 @@ jobs:
             business-icons/**/*.svg
             business-icons/**/*.json
 
+      - name: Get changed illustration files
+        id: changed-illustrations
+        uses: tj-actions/changed-files@v47
+        with:
+          files: |
+            illustration-icons/**/*.svg
+            illustration-icons/**/*.json
+
       - name: Run Linter
         run: |
           pnpm lint:es
@@ -71,6 +79,10 @@ jobs:
 
           if [[ "${{ steps.changed-business-icons.outputs.any_changed }}" == "true" ]]; then
             pnpm lint:svg:business
+          fi
+
+          if [[ "${{ steps.changed-illustrations.outputs.any_changed }}" == "true" ]]; then
+            pnpm lint:svg:illustration
           fi
 
           pnpm lint:json

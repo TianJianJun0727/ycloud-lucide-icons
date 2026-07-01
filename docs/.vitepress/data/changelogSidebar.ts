@@ -1,64 +1,64 @@
 const changelogSidebarItems = [
   {
-    text: 'v0.2.1 · 2026-06-29',
-    link: '/changelog#v0-2-1-2026-06-29',
+    "text": "v0.2.1 · 2026-06-29",
+    "link": "/changelog#v0-2-1-2026-06-29"
   },
   {
-    text: 'v0.2.0 · 2026-06-29',
-    link: '/changelog#v0-2-0-2026-06-29',
+    "text": "v0.2.0 · 2026-06-29",
+    "link": "/changelog#v0-2-0-2026-06-29"
   },
   {
-    text: 'v0.1.12 · 2026-06-21',
-    link: '/changelog#v0-1-12-2026-06-21',
+    "text": "v0.1.12 · 2026-06-21",
+    "link": "/changelog#v0-1-12-2026-06-21"
   },
   {
-    text: 'v0.1.11 · 2026-06-21',
-    link: '/changelog#v0-1-11-2026-06-21',
+    "text": "v0.1.11 · 2026-06-21",
+    "link": "/changelog#v0-1-11-2026-06-21"
   },
   {
-    text: 'v0.1.10 · 2026-06-21',
-    link: '/changelog#v0-1-10-2026-06-21',
+    "text": "v0.1.10 · 2026-06-21",
+    "link": "/changelog#v0-1-10-2026-06-21"
   },
   {
-    text: 'v0.1.9 · 2026-06-21',
-    link: '/changelog#v0-1-9-2026-06-21',
+    "text": "v0.1.9 · 2026-06-21",
+    "link": "/changelog#v0-1-9-2026-06-21"
   },
   {
-    text: 'v0.1.8 · 2026-06-21',
-    link: '/changelog#v0-1-8-2026-06-21',
+    "text": "v0.1.8 · 2026-06-21",
+    "link": "/changelog#v0-1-8-2026-06-21"
   },
   {
-    text: 'v0.1.7 · 2026-06-21',
-    link: '/changelog#v0-1-7-2026-06-21',
+    "text": "v0.1.7 · 2026-06-21",
+    "link": "/changelog#v0-1-7-2026-06-21"
   },
   {
-    text: 'v0.1.6 · 2026-06-21',
-    link: '/changelog#v0-1-6-2026-06-21',
+    "text": "v0.1.6 · 2026-06-21",
+    "link": "/changelog#v0-1-6-2026-06-21"
   },
   {
-    text: 'v0.1.5 · 2026-06-19',
-    link: '/changelog#v0-1-5-2026-06-19',
+    "text": "v0.1.5 · 2026-06-19",
+    "link": "/changelog#v0-1-5-2026-06-19"
   },
   {
-    text: 'v0.1.4 · 2026-06-19',
-    link: '/changelog#v0-1-4-2026-06-19',
+    "text": "v0.1.4 · 2026-06-19",
+    "link": "/changelog#v0-1-4-2026-06-19"
   },
   {
-    text: 'v0.1.3 · 2026-06-19',
-    link: '/changelog#v0-1-3-2026-06-19',
+    "text": "v0.1.3 · 2026-06-19",
+    "link": "/changelog#v0-1-3-2026-06-19"
   },
   {
-    text: 'v0.1.2 · 2026-06-19',
-    link: '/changelog#v0-1-2-2026-06-19',
+    "text": "v0.1.2 · 2026-06-19",
+    "link": "/changelog#v0-1-2-2026-06-19"
   },
   {
-    text: 'v0.1.1 · 2026-06-19',
-    link: '/changelog#v0-1-1-2026-06-19',
+    "text": "v0.1.1 · 2026-06-19",
+    "link": "/changelog#v0-1-1-2026-06-19"
   },
   {
-    text: 'v0.1.0 · 2026-06-19',
-    link: '/changelog#v0-1-0-2026-06-19',
-  },
+    "text": "v0.1.0 · 2026-06-19",
+    "link": "/changelog#v0-1-0-2026-06-19"
+  }
 ];
 
 export default changelogSidebarItems;

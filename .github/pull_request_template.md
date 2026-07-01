@@ -53,13 +53,14 @@ Common scopes: icons, docs, studio, site, dev
 
 - [ ] I've named icons using concise, generic, kebab-case names.
 - [ ] I've named icons by what they are rather than their use case.
-- [ ] I've provided meta JSON files in `icons/[iconName].json`.
+- [ ] For generic icons, I've provided meta JSON files in `icons/[iconName].json`. Business icons and illustrations do not need per-SVG meta JSON.
 
 ### Design <!-- ONLY for new icons -->
 
 <!-- All of these requirements must be fulfilled. -->
 
 - [ ] I've followed the project icon design rules: 24x24 viewBox, consistent stroke width, optical balance, and no embedded branding unless explicitly approved.
+- [ ] If this is a business icon or illustration, I've followed its dedicated source directory and cleanup rules instead of the generic 24x24 icon rules.
 - [ ] I've made sure that the icons look sharp on low DPI displays.
 - [ ] I've made sure that the icons look consistent with the icon set in size, optical volume and density.
 - [ ] I've made sure that the icons are visually centered.

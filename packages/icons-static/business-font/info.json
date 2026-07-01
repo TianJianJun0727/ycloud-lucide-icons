@@ -569,6 +569,12 @@
     "className": "business-icon-map-outlined",
     "unicode": "&#61550;"
   },
+  "menu-open": {
+    "encodedCode": "\\f0b8",
+    "prefix": "business-icon",
+    "className": "business-icon-menu-open",
+    "unicode": "&#61624;"
+  },
   "message-bubble-filled": {
     "encodedCode": "\\f06f",
     "prefix": "business-icon",

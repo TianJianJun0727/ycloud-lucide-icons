@@ -10,7 +10,7 @@ import SandpackIconFont from '~/.vitepress/theme/components/editors/SandpackIcon
 
 # Icon Font
 
-YCloud Icons 也提供 Web Font 版本。通用图标和业务图标会生成到不同的字体目录，避免 `icon-*` 和 `business-icon-*` 混在同一份 CSS 中。
+YCloud Icons 也提供 Web Font 版本。通用图标和业务图标会生成到不同的字体目录，避免 `icon-*` 和 `business-icon-*` 混在同一份 CSS 中。插画不生成字体，请使用 `illustration` 组件入口或 `illustration-icons/*.svg` 静态资源。
 
 :::warning 不建议在高流量生产环境中使用
 Icon Font 会包含对应类型的全部图标，可能显著增加应用包体积和加载时间。生产环境建议使用支持 tree-shaking 的构建工具，只包含实际使用的图标。也可以考虑使用某个框架对应的 [package](../../../packages.md)。

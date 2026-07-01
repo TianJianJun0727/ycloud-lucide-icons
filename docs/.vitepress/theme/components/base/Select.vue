@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue';
-import Icon from '@ycloud-web/icons-vue/src/Icon';
+import { Icon } from '@ycloud-web/icons-vue';
 import { chevronsUpDown, check } from '@data/iconNodes';
 import SelectIcon from './SelectIcon.vue';
 

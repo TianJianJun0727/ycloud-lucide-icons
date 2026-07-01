@@ -4,10 +4,11 @@
 
 它刻意**不包含真实渲染逻辑或组件**，其他包（例如 [`@ycloud-web/icons-angular`](http://npmjs.com/package/@ycloud-web/icons-angular)）可以消费这些数据，在各自框架中渲染图标。你也可以使用这个包为暂未支持的框架构建第三方集成。
 
-这个包同时覆盖两类图标数据：
+这个包同时覆盖三类图标数据：
 
 - 通用图标：从主入口 `@ycloud-web/icons-data` 导出标准节点数据，可配合 builder 设置颜色、尺寸、描边宽度等。
-- 业务图标：从 `@ycloud-web/icons-data/business` 导出原始 SVG、data URI 和索引数据，不经过通用 stroke builder。
+- 业务图标：从 `@ycloud-web/icons-data/business` 导出业务 SVG 定义对象和索引数据，不经过通用 stroke builder。
+- 插画：从 `@ycloud-web/icons-data/illustration` 导出插画 SVG 定义对象和索引数据，保留源 SVG 颜色和尺寸属性。
 
 ## 安装
 
@@ -42,15 +43,20 @@ bun add @ycloud-web/icons-data@latest
 ```typescript
 export type YCloudIconData = {
   name: string;
+  attrs: SVGProps;
   node: YCloudIconNode[];
-} & ({ size: number } | { width: number; height: number });
+  aliases?: string[];
+  colorMode?: 'mono' | 'duotone' | 'multicolor';
+};
 ```
 
-| 名称                         | 类型               | 说明                                              |
-| ---------------------------- | ------------------ | ------------------------------------------------- |
-| `name`                       | `string`           | 图标名称。                                        |
-| `node`                       | `YCloudIconNode[]` | SVG 子节点，格式为 `[tagName, attributes]` 元组。 |
-| `size` or `width` & `height` | `number`           | 图标尺寸（`size` 是正方形图标的简写）。           |
+| 名称        | 类型                                      | 说明                                                 |
+| ----------- | ----------------------------------------- | ---------------------------------------------------- |
+| `name`      | `string`                                  | 图标名称。                                           |
+| `attrs`     | `SVGProps`                                | 根 `<svg>` 属性。                                    |
+| `node`      | `YCloudIconNode[]`                        | SVG 子节点，格式为 `[tagName, attributes]` 元组。    |
+| `aliases`   | `string[]`                                | 可选别名。                                           |
+| `colorMode` | `'mono' \| 'duotone' \| 'multicolor'`     | 业务图标颜色类型；通用图标和插画通常不需要这个字段。 |
 
 ## 使用方式
 
@@ -64,14 +70,28 @@ import { House } from '@ycloud-web/icons-data';
 业务图标使用单独子入口：
 
 ```ts
-import { billingDataUri, businessIconNames, getBusinessIcon } from '@ycloud-web/icons-data/business';
+import { businessIconNames, getBusinessIcon } from '@ycloud-web/icons-data/business';
 
 const billing = getBusinessIcon('billing');
-const imageSource = billingDataUri;
+const rootAttrs = billing.attrs;
+const children = billing.node;
 const availableBusinessIcons = businessIconNames;
 ```
 
-业务图标导出的是已经清洗后的 SVG 字符串和 data URI，适合自定义渲染器、图片标签、Canvas 或后台生成场景。它们不支持 `strokeWidth`、`absoluteStrokeWidth` 等只属于通用图标节点构建的参数。
+业务图标导出的是已经清洗后的结构化 SVG 定义，适合自定义渲染器、后台生成、Canvas 或自行序列化为字符串/data URI 的场景。它们不支持 `strokeWidth`、`absoluteStrokeWidth` 等只属于通用图标节点构建的参数。
+
+插画使用单独子入口：
+
+```ts
+import { getIllustration, illustrationNames } from '@ycloud-web/icons-data/illustration';
+
+const emptyPage = getIllustration('empty-page');
+const rootAttrs = emptyPage.attrs;
+const children = emptyPage.node;
+const availableIllustrations = illustrationNames;
+```
+
+插画导出的是保留源 SVG 视觉的结构化定义，不经过颜色转换或尺寸清洗，适合空状态、结果页、权限页等需要保留原始视觉的场景。
 
 ## 构建图标
 

@@ -48,7 +48,7 @@ declare module 'node:module' {
 }
 
 declare module '*.node.json' {
-  import type { IconNode } from '@ycloud-web/icons-vue/src/types';
+  import type { IconNode } from '@ycloud-web/icons-vue';
 
   const value: IconNode;
   export default value;

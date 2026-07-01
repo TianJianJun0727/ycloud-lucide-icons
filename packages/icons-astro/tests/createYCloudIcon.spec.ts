@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { createYCloudIcon } from '../src/ycloud-astro';
+import { createYCloudIcon } from '../src/icons';
 import { airVent } from './testIconNodes';
 import { render } from './utils';
 

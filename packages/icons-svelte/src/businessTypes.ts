@@ -1,7 +1,13 @@
-export interface BusinessIconImageProps {
+import type { SVGAttributes } from 'svelte/elements';
+
+export interface BusinessIconImageProps extends Omit<
+  SVGAttributes<SVGSVGElement>,
+  'color' | 'width' | 'height'
+> {
   size?: number | string;
   width?: number | string;
   height?: number | string;
   alt?: string;
-  [key: string]: unknown;
+  color?: string;
+  secondaryColor?: string;
 }

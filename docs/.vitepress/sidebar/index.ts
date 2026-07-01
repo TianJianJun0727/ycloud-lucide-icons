@@ -53,6 +53,7 @@ const zhText: Record<string, string> = {
   'Icon design guide': '图标设计指南',
   'Icon maintenance': '图标维护',
   'Business icons': '业务图标',
+  Illustrations: '插画',
   Architecture: '架构',
   Changelog: '版本记录',
 };
@@ -103,6 +104,8 @@ const zhDesc: Record<string, string> = {
   'Add, update, and remove icons in the repository.': '添加、修改和删除图标的维护流程。',
   'Source, validation, and submission rules for business-specific SVG icons.':
     '业务专有 SVG 图标的存放、校验和提交规则。',
+  'Source, validation, and usage rules for illustration SVG assets.':
+    '插画 SVG 资产的存放、校验和使用规则。',
 };
 
 const baseGuideSidebarTop: DefaultTheme.SidebarItem[] = [
@@ -115,6 +118,11 @@ const baseGuideSidebarTop: DefaultTheme.SidebarItem[] = [
         text: 'Business icons',
         link: '/guide/business-icons',
         desc: 'Source, validation, and submission rules for business-specific SVG icons.',
+      },
+      {
+        text: 'Illustrations',
+        link: '/guide/illustration-icons',
+        desc: 'Source, validation, and usage rules for illustration SVG assets.',
       },
     ],
   },
@@ -239,6 +247,7 @@ function getBaseSidebar(locale: DocsLocale): Sidebar {
     '/changelog': getChangelogSidebar(locale),
     '/icons/': [{ text: '', link: '/icons/' }],
     '/business-icons/': [{ text: '', link: '/business-icons/' }],
+    '/illustration-icons/': [{ text: '', link: '/illustration-icons/' }],
   });
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "@ycloud-web/icons-data",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A YCloud icon data package that contains normalized icon nodes and metadata.",
   "keywords": [
     "Feather",
@@ -14,6 +14,7 @@
   "homepage": "https://tianjianjun0727.github.io/ycloud-icons/guide/packages/icons-data/",
   "bugs": "https://github.com/TianJianJun0727/ycloud-icons/issues",
   "license": "ISC",
+  "author": "TianJianJun",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TianJianJun0727/ycloud-icons.git",
@@ -21,25 +22,48 @@
   },
   "source": "src/ycloud-icons.ts",
   "sideEffects": false,
-  "main": "dist/cjs/ycloud-icons.cjs",
-  "module": "dist/esm/ycloud-icons.mjs",
-  "types": "dist/esm/ycloud-icons.d.ts",
+  "main": "dist/cjs/icons.cjs",
+  "module": "dist/esm/icons.mjs",
+  "types": "dist/esm/icons.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/esm/ycloud-icons.d.ts",
-      "import": "./dist/esm/ycloud-icons.mjs",
-      "require": "./dist/cjs/ycloud-icons.cjs",
-      "default": "./dist/esm/ycloud-icons.mjs"
+      "types": "./dist/esm/icons.d.ts",
+      "import": "./dist/esm/icons.mjs",
+      "require": "./dist/cjs/icons.cjs",
+      "default": "./dist/esm/icons.mjs"
     },
     "./business": {
-      "types": "./dist/esm/business.d.ts",
-      "import": "./dist/esm/business.mjs",
-      "require": "./dist/cjs/business.cjs",
-      "default": "./dist/esm/business.mjs"
+      "types": "./dist/esm/business-icons.d.ts",
+      "import": "./dist/esm/business-icons.mjs",
+      "require": "./dist/cjs/business-icons.cjs",
+      "default": "./dist/esm/business-icons.mjs"
     },
+    "./illustration": {
+      "types": "./dist/esm/illustration-icons.d.ts",
+      "import": "./dist/esm/illustration-icons.mjs",
+      "require": "./dist/cjs/illustration-icons.cjs",
+      "default": "./dist/esm/illustration-icons.mjs"
+    },
+    "./icons/*.svg": null,
+    "./icons/*/*.svg": null,
     "./icons/*": {
       "import": "./dist/esm/icons/*.mjs",
+      "require": "./dist/cjs/icons/*.cjs",
       "default": "./dist/esm/icons/*.mjs"
+    },
+    "./business-icons/*.svg": null,
+    "./business-icons/*/*.svg": null,
+    "./business-icons/*": {
+      "import": "./dist/esm/business-icons/*.mjs",
+      "require": "./dist/cjs/business-icons/*.cjs",
+      "default": "./dist/esm/business-icons/*.mjs"
+    },
+    "./illustration-icons/*.svg": null,
+    "./illustration-icons/*/*.svg": null,
+    "./illustration-icons/*": {
+      "import": "./dist/esm/illustration-icons/*.mjs",
+      "require": "./dist/cjs/illustration-icons/*.cjs",
+      "default": "./dist/esm/illustration-icons/*.mjs"
     },
     "./dynamic": {
       "types": "./dist/esm/dynamic.d.ts",
@@ -52,7 +76,8 @@
       "import": "./dist/esm/build.mjs",
       "require": "./dist/cjs/build.cjs",
       "default": "./dist/esm/build.mjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public",
@@ -61,8 +86,8 @@
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -rf ./src/business-icons && rm -f ./src/business.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --withDynamicImports --separateAliasesFile --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts data",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -f ./src/aliases/{prefixed,suffixed}.ts && rm -rf ./src/business-icons && rm -f ./src/business.ts && rm -rf ./src/illustration-icons && rm -f ./src/illustration.ts ./src/illustrationTypes.ts ./src/ycloud-icons.prefixed.ts ./src/ycloud-icons.suffixed.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --withDynamicImports --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts data && node ../../scripts/generateIllustrationsPackage.mts data",
     "build:bundle": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",

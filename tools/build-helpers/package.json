@@ -4,7 +4,7 @@
   "private": true,
   "description": "A internal used package with helpers.",
   "license": "ISC",
-  "author": "",
+  "author": "TianJianJun",
   "type": "module",
   "main": "helpers.ts",
   "types": "helpers.ts",

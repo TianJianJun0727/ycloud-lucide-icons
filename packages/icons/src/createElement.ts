@@ -1,7 +1,7 @@
 import defaultAttributes from './defaultAttributes';
-import { IconNode, SVGProps } from './types';
+import { IconData, IconNode, SVGProps } from './types';
 
-type CreateSVGElementParams = [tag: string, attrs: SVGProps, children?: IconNode];
+type CreateSVGElementParams = [tag: string, attrs: SVGProps, children?: IconNode[]];
 
 /**
  * Creates a new SVGElement
@@ -34,14 +34,15 @@ const createSVGElement = ([tag, attrs, children]: CreateSVGElementParams) => {
  * @param {object} customAttrs - Custom attributes to be added to the element
  * @returns {HTMLElement}
  */
-const createElement = (iconNode: IconNode, customAttrs: SVGProps = {}) => {
+const createElement = (icon: IconData, customAttrs: SVGProps = {}) => {
   const tag = 'svg';
   const attrs = {
     ...defaultAttributes,
+    ...icon.attrs,
     ...customAttrs,
   };
 
-  return createSVGElement([tag, attrs, iconNode]);
+  return createSVGElement([tag, attrs, icon.node]);
 };
 
 export default createElement;

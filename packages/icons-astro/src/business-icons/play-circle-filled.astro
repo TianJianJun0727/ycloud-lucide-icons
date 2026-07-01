@@ -1,13 +1,20 @@
 ---
-const dataUri = 'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2033%2033%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M16.7523%202.93945C9.39228%202.93945%203.41895%208.91279%203.41895%2016.2728C3.41895%2023.6328%209.39228%2029.6061%2016.7523%2029.6061C24.1123%2029.6061%2030.0856%2023.6328%2030.0856%2016.2728C30.0856%208.91279%2024.1123%202.93945%2016.7523%202.93945ZM14.0856%2020.9395V11.6061C14.0856%2011.0595%2014.7123%2010.7395%2015.1523%2011.0728L21.3789%2015.7395C21.7389%2016.0061%2021.7389%2016.5395%2021.3789%2016.8061L15.1523%2021.4728C14.7123%2021.8061%2014.0856%2021.4861%2014.0856%2020.9395Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
-
-const { size = 24, width, height, alt = '', ...props } = Astro.props;
+import type { BusinessIconImageProps } from '../businessTypes';
+const { size = 24, width, height, alt = '', color = 'currentColor', style, ...props }: BusinessIconImageProps = Astro.props;
 ---
 
-<img
-  src={dataUri}
-  alt={alt}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 33 33"
+  fill="currentColor"
   width={width ?? size}
   height={height ?? size}
+  role={alt ? 'img' : undefined}
+  aria-label={alt || undefined}
+  aria-hidden={alt ? undefined : true}
+  color={color}
+  style={style}
   {...props}
-/>
+>
+  <path d="M16.7523 2.93945C9.39228 2.93945 3.41895 8.91279 3.41895 16.2728C3.41895 23.6328 9.39228 29.6061 16.7523 29.6061C24.1123 29.6061 30.0856 23.6328 30.0856 16.2728C30.0856 8.91279 24.1123 2.93945 16.7523 2.93945ZM14.0856 20.9395V11.6061C14.0856 11.0595 14.7123 10.7395 15.1523 11.0728L21.3789 15.7395C21.7389 16.0061 21.7389 16.5395 21.3789 16.8061L15.1523 21.4728C14.7123 21.8061 14.0856 21.4861 14.0856 20.9395Z" />
+</svg>

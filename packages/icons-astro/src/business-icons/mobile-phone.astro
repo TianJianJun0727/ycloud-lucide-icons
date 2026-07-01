@@ -1,13 +1,20 @@
 ---
-const dataUri = 'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22currentColor%22%3E%0A%20%20%3Cpath%0A%20%20%20%20d%3D%22M10.4638%202.66675H5.63293C5.10153%202.66675%204.66675%203.10311%204.66675%203.63644V12.3637C4.66675%2012.8971%205.10153%2013.3334%205.63293%2013.3334H10.4638C10.9953%2013.3334%2011.43%2012.8971%2011.43%2012.3637V3.63644C11.43%203.10311%2010.9953%202.66675%2010.4638%202.66675ZM10.4638%2011.394H5.63293V4.60614H10.4638V11.394Z%22%0A%20%20%2F%3E%0A%3C%2Fsvg%3E%0A';
-
-const { size = 24, width, height, alt = '', ...props } = Astro.props;
+import type { BusinessIconImageProps } from '../businessTypes';
+const { size = 24, width, height, alt = '', color = 'currentColor', style, ...props }: BusinessIconImageProps = Astro.props;
 ---
 
-<img
-  src={dataUri}
-  alt={alt}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 16 16"
+  fill="currentColor"
   width={width ?? size}
   height={height ?? size}
+  role={alt ? 'img' : undefined}
+  aria-label={alt || undefined}
+  aria-hidden={alt ? undefined : true}
+  color={color}
+  style={style}
   {...props}
-/>
+>
+  <path d="M10.4638 2.66675H5.63293C5.10153 2.66675 4.66675 3.10311 4.66675 3.63644V12.3637C4.66675 12.8971 5.10153 13.3334 5.63293 13.3334H10.4638C10.9953 13.3334 11.43 12.8971 11.43 12.3637V3.63644C11.43 3.10311 10.9953 2.66675 10.4638 2.66675ZM10.4638 11.394H5.63293V4.60614H10.4638V11.394Z" />
+</svg>

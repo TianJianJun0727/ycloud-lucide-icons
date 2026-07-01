@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": ["数据库导入恢复操作", "本地到远程数据传输", "数据更新同步"],
+  "use-cases": ["向数据库导入或上传数据", "从备份中恢复数据", "本地到远程数据库的数据推送"],
   "name": "数据库箭头上",
-  "tags": ["数据库", "上传", "导入", "恢复", "推送", "数据更新"],
+  "tags": ["数据库", "存储", "服务器", "上传", "导入", "备份", "推送", "恢复", "扩容"],
   "categories": ["devices", "development"],
   "i18n": {
     "en": {
       "name": "database arrow up",
-      "tags": ["database", "upload", "import", "restore", "push", "data update"],
-      "use-cases": ["Database import and restore operations", "Local to remote data transfer", "Data update and synchronization"]
+      "tags": ["database", "storage", "server", "upload", "import", "backup", "push", "restore", "upscale"],
+      "use-cases": ["Importing or uploading data into a database", "Restoring from a backup", "Pushing local data to a remote database"]
     }
   }
 }

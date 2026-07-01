@@ -60,7 +60,7 @@ No framework peer dependency.
 
 ```html
 <!-- Development build -->
-<script src="https://unpkg.com/@ycloud-web/icons@latest/dist/umd/@ycloud-web/icons.js"></script>
+<script src="https://unpkg.com/@ycloud-web/icons@latest/dist/umd/icons.js"></script>
 
 <!-- Production build -->
 <script src="https://unpkg.com/@ycloud-web/icons@latest"></script>

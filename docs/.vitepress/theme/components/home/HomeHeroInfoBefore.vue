@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useData } from 'vitepress';
 import Badge from '../base/Badge.vue';
 import { moveRight } from '@data/iconNodes';
-import Icon from '@ycloud-web/icons-vue/src/Icon';
+import { Icon } from '@ycloud-web/icons-vue';
 import { data } from './HomeHeroInfoBefore.data';
 import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
 

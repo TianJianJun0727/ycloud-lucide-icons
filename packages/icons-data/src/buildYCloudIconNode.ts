@@ -1,15 +1,23 @@
 import { YCloudBuildParams, YCloudIconData, YCloudIconNode } from './types';
 
-const defaultAttributes = {
-  xmlns: 'http://www.w3.org/2000/svg',
-  width: '24',
-  height: '24',
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'currentColor',
-  'stroke-width': '2',
-  'stroke-linecap': 'round',
-  'stroke-linejoin': 'round',
+const toStringAttributes = (attributes: Record<string, string | number | undefined>) =>
+  Object.fromEntries(
+    Object.entries(attributes)
+      .filter(([, value]) => value !== undefined)
+      .map(([key, value]) => [key, String(value)]),
+  );
+
+const mapNode = (node: YCloudIconNode, params: YCloudBuildParams): YCloudIconNode => {
+  const [name, attrs, children] = node;
+  const mappedAttrs = toStringAttributes(
+    params['absoluteStrokeWidth'] ? { 'vector-effect': 'non-scaling-stroke', ...attrs } : attrs,
+  );
+
+  if (children) {
+    return [name, mappedAttrs, children.map((child) => mapNode(child, params))];
+  }
+
+  return [name, mappedAttrs];
 };
 
 /**
@@ -19,15 +27,13 @@ const defaultAttributes = {
  * @param params Additional build parameters.
  */
 function buildYCloudIconNode(icon: YCloudIconData, params: YCloudBuildParams = {}): YCloudIconNode {
-  const viewBoxWidth = ('size' in icon ? icon.size : icon.width) ?? defaultAttributes.width;
-  const viewBoxHeight = ('size' in icon ? icon.size : icon.height) ?? defaultAttributes.height;
   const aliasClassNames = icon.aliases?.map((alias) => `ycloud-${alias}`) ?? [];
   const classList = ['ycloud', `ycloud-${icon.name}`, ...aliasClassNames];
   if (params['className']) {
     classList.push(params['className']);
   }
   const attributes = {
-    ...defaultAttributes,
+    ...icon.attrs,
     ...('color' in params && { stroke: params['color'] }),
     ...('size' in params &&
       params['size'] && {
@@ -39,17 +45,9 @@ function buildYCloudIconNode(icon: YCloudIconData, params: YCloudBuildParams = {
     ...('strokeWidth' in params &&
       params['strokeWidth'] && { 'stroke-width': params['strokeWidth'].toString(10) }),
     class: classList.join(' '),
-    viewBox: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
     ...('attributes' in params && params.attributes),
   };
-  return [
-    'svg',
-    attributes,
-    icon.node.map(([name, attrs]) => [
-      name,
-      params['absoluteStrokeWidth'] ? { 'vector-effect': 'non-scaling-stroke', ...attrs } : attrs,
-    ]),
-  ];
+  return ['svg', toStringAttributes(attributes), icon.node.map((node) => mapNode(node, params))];
 }
 
 export default buildYCloudIconNode;
