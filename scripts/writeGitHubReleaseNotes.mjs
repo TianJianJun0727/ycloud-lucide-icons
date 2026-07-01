@@ -72,7 +72,7 @@ function readPersistedNotes() {
   return { zh: notes.zh, en: notes.en };
 }
 
-function readMarkdownNotes(filePath) {
+function readMarkdownNotes(filePath, subsectionHeading) {
   const markdown = readFileSync(path.resolve(projectRoot, filePath), 'utf8');
   const headingPattern = new RegExp(`^## ${tag.replaceAll('.', '\\\\.')} - .*$`, 'm');
   const headingMatch = headingPattern.exec(markdown);
@@ -85,13 +85,30 @@ function readMarkdownNotes(filePath) {
   const section = nextHeadingMatch
     ? markdown.slice(sectionStart, sectionStart + nextHeadingMatch.index)
     : markdown.slice(sectionStart);
+  const notesSection = subsectionHeading
+    ? extractSubsection(section, subsectionHeading)
+    : section;
 
-  return section
+  return notesSection
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line.startsWith('- '))
     .map((line) => line.slice(2).trim())
     .filter(Boolean);
+}
+
+function extractSubsection(section, subsectionHeading) {
+  const headingPattern = new RegExp(`^### ${subsectionHeading}$`, 'm');
+  const headingMatch = headingPattern.exec(section);
+  if (!headingMatch || headingMatch.index === undefined) {
+    return '';
+  }
+
+  const subsectionStart = headingMatch.index + headingMatch[0].length;
+  const nextSubsectionMatch = /^### /m.exec(section.slice(subsectionStart));
+  return nextSubsectionMatch
+    ? section.slice(subsectionStart, subsectionStart + nextSubsectionMatch.index)
+    : section.slice(subsectionStart);
 }
 
 function readCommittedNotes() {
@@ -100,7 +117,7 @@ function readCommittedNotes() {
     return persistedNotes;
   }
 
-  const zh = readMarkdownNotes('CHANGELOG.md');
+  const zh = readMarkdownNotes('CHANGELOG.md', '中文');
   const en = readMarkdownNotes('docs/.vitepress/data/CHANGELOG.en.md');
   if (!zh.length || !en.length) {
     throw new Error(

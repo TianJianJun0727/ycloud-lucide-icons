@@ -6,7 +6,7 @@
  * - 可选 `YCLOUD_AI_CHANGELOG=1`、`AI_API_KEY`、`AI_BASE_URL`、`AI_MODEL`。
  * - 可选 `YCLOUD_AI_CHANGELOG_VERSION` 指定只生成某个版本的 AI release notes。
  * 输出：
- * - 根 `CHANGELOG.md` 中文日志。
+ * - 根 `CHANGELOG.md` 双语日志。
  * - `docs/.vitepress/data/CHANGELOG.en.md` 英文日志。
  * - `docs/.vitepress/data/changelogSidebar.ts` 文档侧边栏数据。
  * - `changelogs/releases/v*.json` 持久化双语版本说明。
@@ -365,6 +365,39 @@ function toMarkdown(entries: ReleaseEntry[], locale: 'zh' | 'en') {
   return `${lines.join('\n').trim()}\n`;
 }
 
+function toBilingualMarkdown(entries: ReleaseEntry[]) {
+  const lines = [
+    '# 更新日志 / Changelog',
+    '',
+    '> 此文件会在文档构建前根据 Git tag 和版本变更自动生成。',
+    '> This file is generated before the documentation build from Git tags and release changes.',
+    '',
+  ];
+
+  for (const entry of entries) {
+    lines.push(`## ${entry.tag} - ${entry.date}`);
+    lines.push('');
+    lines.push('### 中文');
+    lines.push('');
+
+    for (const note of entry.notes.zh) {
+      lines.push(`- ${note}`);
+    }
+
+    lines.push('');
+    lines.push('### English');
+    lines.push('');
+
+    for (const note of entry.notes.en) {
+      lines.push(`- ${note}`);
+    }
+
+    lines.push('');
+  }
+
+  return `${lines.join('\n').trim()}\n`;
+}
+
 function toReleaseNotesMarkdown(entry: ReleaseEntry) {
   const lines = [
     `发布日期：${formatShanghaiDateTime(getTagDateTime(entry.tag))}`,
@@ -390,7 +423,8 @@ async function main() {
       throw new Error('Release notes cannot be generated because no version tags are available.');
     }
 
-    const fallback = '# 更新日志\n\n> 当前仓库还没有可用的版本标签。\n';
+    const fallback =
+      '# 更新日志 / Changelog\n\n> 当前仓库还没有可用的版本标签。\n> No version tags are available in this repository yet.\n';
     const englishFallback =
       '# Changelog\n\n> No version tags are available in this repository yet.\n';
     await writeFile(changelogPath, fallback, 'utf8');
@@ -404,7 +438,7 @@ async function main() {
     ? [pendingReleaseEntry, ...buildEntries(tags)]
     : buildEntries(tags);
   const entries = await applyAiGeneratedNotes(rawEntries);
-  const markdown = toMarkdown(entries, 'zh');
+  const markdown = toBilingualMarkdown(entries);
   const englishMarkdown = toMarkdown(entries, 'en');
   const targetVersion = aiChangelogVersion
     ? aiChangelogVersion.replace(/^v/, '')
