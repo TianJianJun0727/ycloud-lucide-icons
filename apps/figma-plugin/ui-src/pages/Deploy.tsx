@@ -128,6 +128,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
   const [selectedIconNames, setSelectedIconNames] = useState<string[]>([]);
   const [allowExistingIconUpdate, setAllowExistingIconUpdate] = useState(false);
   const [isRawOpen, setIsRawOpen] = useState(false);
+  const [previewDialogIconName, setPreviewDialogIconName] = useState<string | undefined>();
   const hasAutoLoadedCategories = useRef(false);
   const previousIconNamesRef = useRef<Set<string>>(new Set());
   const previousSourceTypeRef = useRef<IconSourceType>(sourceType);
@@ -180,6 +181,10 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
   );
   const skippedExistingIconCount = selectedIcons.length - deployableSelectedIcons.length;
   const blockedIconCount = icons.filter(([name]) => getIconQuality(name).issues.length > 0).length;
+  const previewDialogIcon = useMemo(
+    () => icons.find(([name]) => name === previewDialogIconName),
+    [icons, previewDialogIconName],
+  );
   const selectedIconPreview = useMemo(
     () =>
       Object.fromEntries(
@@ -231,6 +236,19 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     sourceType,
     ycloudMetadata.businessColorMode,
   ]);
+
+  useEffect(() => {
+    if (!previewDialogIconName) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setPreviewDialogIconName(undefined);
+      }
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [previewDialogIconName]);
 
   const updateMetadata = (patch: Partial<typeof ycloudMetadata>) => {
     dispatch({
@@ -748,33 +766,48 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
               sourceType === 'business'
                 ? sanitizeBusinessSvg(data.sourceSvg ?? svg, ycloudMetadata.businessColorMode)
                 : svg;
+            const previewLabel = data.ycloud?.nameEn || name;
             return (
-              <label
+              <div
                 className={styles.previewItem}
                 key={name}
                 title={tooltip}
               >
-                <input
-                  className={styles.checkbox}
-                  type="checkbox"
-                  checked={selectedIconSet.has(name)}
-                  disabled={isDisabledExistingIcon || isBlockedIcon}
-                  onChange={(event) => {
-                    const checked = event.currentTarget.checked;
-                    setSelectedIconNames((current) => {
-                      if (checked) {
-                        return Array.from(new Set([...current, name]));
-                      }
-                      return current.filter((item) => item !== name);
-                    });
+                <label
+                  className={styles.previewCheckbox}
+                  aria-label={`选择图标 ${previewLabel}`}
+                >
+                  <input
+                    className={styles.checkbox}
+                    type="checkbox"
+                    checked={selectedIconSet.has(name)}
+                    disabled={isDisabledExistingIcon || isBlockedIcon}
+                    onChange={(event) => {
+                      const checked = event.currentTarget.checked;
+                      setSelectedIconNames((current) => {
+                        if (checked) {
+                          return Array.from(new Set([...current, name]));
+                        }
+                        return current.filter((item) => item !== name);
+                      });
+                    }}
+                  />
+                  <span className={styles.checkboxBox} />
+                </label>
+                <button
+                  className={styles.previewIconButton}
+                  type="button"
+                  aria-label={`放大预览 ${previewLabel}`}
+                  onClick={() => {
+                    setPreviewDialogIconName(name);
                   }}
-                />
-                <span className={styles.checkboxBox} />
-                <span
-                  className={styles.previewIcon}
-                  dangerouslySetInnerHTML={{ __html: previewSvg }}
-                />
-              </label>
+                >
+                  <span
+                    className={styles.previewIcon}
+                    dangerouslySetInnerHTML={{ __html: previewSvg }}
+                  />
+                </button>
+              </div>
             );
           })}
           {icons.length === 0 && (
@@ -805,6 +838,60 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
           />
         )}
       </section>
+
+      {previewDialogIcon && (
+        <div
+          className={styles.dialogOverlay}
+          role="presentation"
+          onClick={() => {
+            setPreviewDialogIconName(undefined);
+          }}
+        >
+          <section
+            className={styles.previewDialog}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="preview-dialog-title"
+            onClick={(event) => {
+              event.stopPropagation();
+            }}
+          >
+            <div className={styles.dialogHeader}>
+              <div>
+                <h2
+                  id="preview-dialog-title"
+                  className={styles.dialogTitle}
+                >
+                  {previewDialogIcon[1].ycloud?.nameEn || previewDialogIcon[0]}
+                </h2>
+                <p className={styles.dialogMeta}>{toKebabCase(previewDialogIcon[0])}</p>
+              </div>
+              <button
+                className={styles.dialogCloseButton}
+                type="button"
+                aria-label="关闭预览"
+                onClick={() => {
+                  setPreviewDialogIconName(undefined);
+                }}
+              >
+                ×
+              </button>
+            </div>
+            <div
+              className={styles.dialogIcon}
+              dangerouslySetInnerHTML={{
+                __html:
+                  sourceType === 'business'
+                    ? sanitizeBusinessSvg(
+                        previewDialogIcon[1].sourceSvg ?? previewDialogIcon[1].svg,
+                        ycloudMetadata.businessColorMode,
+                      )
+                    : previewDialogIcon[1].svg,
+              }}
+            />
+          </section>
+        </div>
+      )}
 
       {deployResult && (
         <section

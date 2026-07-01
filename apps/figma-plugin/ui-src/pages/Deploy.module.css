@@ -257,12 +257,33 @@
   gap: 6px;
   border-radius: 8px;
   color: var(--yc-text);
-  cursor: pointer;
   padding: 4px;
 }
 
 .previewItem:hover {
   background: var(--yc-bg-hover);
+}
+
+.previewCheckbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.previewIconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  cursor: zoom-in;
+  padding: 0;
+}
+
+.previewIconButton:focus-visible {
+  outline: none;
+  box-shadow: var(--yc-focus);
 }
 
 .previewIcon {
@@ -279,6 +300,90 @@
 .previewIcon svg {
   width: 24px;
   height: 24px;
+}
+
+.dialogOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 38%);
+  padding: 18px;
+}
+
+.previewDialog {
+  width: min(320px, 100%);
+  border: 1px solid var(--yc-border);
+  border-radius: 10px;
+  background: var(--yc-bg);
+  box-shadow: var(--yc-shadow-floating);
+  padding: 12px;
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dialogTitle {
+  color: var(--yc-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dialogMeta {
+  color: var(--yc-text-secondary);
+  font-size: 10px;
+  line-height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dialogCloseButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  border: 1px solid var(--yc-border);
+  border-radius: 7px;
+  background: var(--yc-bg-secondary);
+  color: var(--yc-text);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.dialogCloseButton:hover {
+  background: var(--yc-bg-hover);
+}
+
+.dialogIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  margin-top: 12px;
+  border-radius: 8px;
+  background: var(--yc-bg-secondary);
+  color: var(--yc-text);
+  --business-icon-primary-color: var(--yc-text);
+  --business-icon-secondary-color: var(--yc-bg);
+}
+
+.dialogIcon svg {
+  width: 160px;
+  height: 160px;
 }
 
 .empty {
