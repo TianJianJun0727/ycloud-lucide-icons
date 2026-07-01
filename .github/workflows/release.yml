@@ -81,7 +81,10 @@ jobs:
           export RELEASE_VERSION="${version}"
 
           node <<'NODE' >> "$GITHUB_OUTPUT"
-          const { execFileSync } = require('node:child_process');
+          const { execFile } = require('node:child_process');
+          const { promisify } = require('node:util');
+
+          const execFileAsync = promisify(execFile);
 
           const version = process.env.RELEASE_VERSION;
           const packages = [
@@ -97,10 +100,10 @@ jobs:
             { package: '@ycloud-web/icons-static', hasTest: false },
           ];
 
-          const isPublished = (packageName) => {
+          const isPublished = async (packageName) => {
             try {
-              execFileSync('npm', ['view', `${packageName}@${version}`, 'version'], {
-                stdio: 'ignore',
+              await execFileAsync('npm', ['view', `${packageName}@${version}`, 'version'], {
+                timeout: 30000,
               });
               return true;
             } catch {
@@ -108,25 +111,39 @@ jobs:
             }
           };
 
-          const corePublished = isPublished('@ycloud-web/icons');
-          const unpublishedFrameworks = packages.filter((item) => !isPublished(item.package));
+          (async () => {
+            const packageStates = await Promise.all([
+              { package: '@ycloud-web/icons' },
+              ...packages,
+            ].map(async (item) => ({
+              ...item,
+              published: await isPublished(item.package),
+            })));
 
-          console.log(`core-published=${corePublished}`);
-          console.log(`frameworks-matrix=${JSON.stringify(unpublishedFrameworks)}`);
-          console.log(`has-frameworks=${unpublishedFrameworks.length > 0}`);
+            const corePublished = packageStates[0].published;
+            const frameworkStates = packageStates.slice(1);
+            const unpublishedFrameworks = frameworkStates
+              .filter((item) => !item.published)
+              .map(({ published, ...item }) => item);
 
-          if (corePublished) {
-            console.error(`@ycloud-web/icons@${version} is already published.`);
-          } else {
-            console.error(`@ycloud-web/icons@${version} is not published yet.`);
-          }
+            console.log(`core-published=${corePublished}`);
+            console.log(`frameworks-matrix=${JSON.stringify(unpublishedFrameworks)}`);
+            console.log(`has-frameworks=${unpublishedFrameworks.length > 0}`);
 
-          for (const item of packages) {
-            const state = unpublishedFrameworks.some((unpublished) => unpublished.package === item.package)
-              ? 'not published yet'
-              : 'already published';
-            console.error(`${item.package}@${version} is ${state}.`);
-          }
+            if (corePublished) {
+              console.error(`@ycloud-web/icons@${version} is already published.`);
+            } else {
+              console.error(`@ycloud-web/icons@${version} is not published yet.`);
+            }
+
+            for (const item of frameworkStates) {
+              const state = item.published ? 'already published' : 'not published yet';
+              console.error(`${item.package}@${version} is ${state}.`);
+            }
+          })().catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
           NODE
         env:
           VERSION_REF: ${{ inputs.version || github.ref }}
@@ -363,6 +380,8 @@ jobs:
           ref: ${{ needs.prepare.outputs.ref }}
 
       - uses: ./.github/actions/setup-pnpm
+        with:
+          cache-mode: restore
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
