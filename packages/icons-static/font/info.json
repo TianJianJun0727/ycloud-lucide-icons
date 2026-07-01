@@ -6929,6 +6929,12 @@
     "className": "icon-person-standing",
     "unicode": "&#57886;"
   },
+  "phi": {
+    "encodedCode": "\\e71c",
+    "prefix": "icon",
+    "className": "icon-phi",
+    "unicode": "&#59164;"
+  },
   "philippine-peso": {
     "encodedCode": "\\e604",
     "prefix": "icon",

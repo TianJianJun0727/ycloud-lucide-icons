@@ -5466,6 +5466,11 @@
     },
     {
       "type": "icon",
+      "name": "golden-ratio",
+      "path": "icons/golden-ratio.svg"
+    },
+    {
+      "type": "icon",
       "name": "gpu",
       "path": "icons/gpu.svg"
     },
@@ -7718,6 +7723,11 @@
       "type": "icon",
       "name": "person-standing",
       "path": "icons/person-standing.svg"
+    },
+    {
+      "type": "icon",
+      "name": "phi",
+      "path": "icons/phi.svg"
     },
     {
       "type": "icon",

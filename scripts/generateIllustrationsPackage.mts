@@ -37,7 +37,7 @@ const packageDirs = {
   reactNative: path.join(repoRoot, 'packages/icons-react-native/src'),
   svelte: path.join(repoRoot, 'packages/icons-svelte/src'),
   astro: path.join(repoRoot, 'packages/icons-astro/src'),
-  angular: path.join(repoRoot, 'packages/icons-angular/src'),
+  angular: path.join(repoRoot, 'packages/icons-angular/illustration/src'),
   static: path.join(repoRoot, 'packages/icons-static/illustration-icons'),
 };
 
@@ -128,13 +128,17 @@ function buildDataModule(name: string, svg: string) {
   ].join('\n');
 }
 
-function buildDataIndex(sources: IllustrationSource[]) {
+function buildDataIndex(sources: IllustrationSource[], includeAliases = true) {
   const sorted = [...sources].sort((left, right) => left.name.localeCompare(right.name));
   const imports = sorted.map(({ name }) => {
     const exportBase = getIllustrationExportBase(name);
     return `import { ${exportBase}Illustration } from './${illustrationPackageDirName}/${name}';`;
   });
   const exports = sorted.flatMap(({ name }) => {
+    if (!includeAliases) {
+      return [`export * from './${illustrationPackageDirName}/${name}';`];
+    }
+
     const componentName = getIllustrationComponentName(name);
     return [
       `export * from './${illustrationPackageDirName}/${name}';`,

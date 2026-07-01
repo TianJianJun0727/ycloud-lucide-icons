@@ -24,7 +24,7 @@ const sveltePackageSrcDir = path.join(repoRoot, 'packages/icons-svelte/src');
 const sveltePackageIconsDir = path.join(sveltePackageSrcDir, 'business-icons');
 const astroPackageSrcDir = path.join(repoRoot, 'packages/icons-astro/src');
 const astroPackageIconsDir = path.join(astroPackageSrcDir, 'business-icons');
-const angularPackageSrcDir = path.join(repoRoot, 'packages/icons-angular/src');
+const angularPackageSrcDir = path.join(repoRoot, 'packages/icons-angular/business/src');
 const angularPackageIconsDir = path.join(angularPackageSrcDir, 'business-icons');
 const allTargets = [
   'core',
@@ -422,7 +422,7 @@ export function buildBusinessIconModule(
   ].join('\n');
 }
 
-export function buildBusinessIconsIndex(sources: BusinessIconExportSource[]) {
+export function buildBusinessIconsIndex(sources: BusinessIconExportSource[], includeAliases = true) {
   const sortedSources = sources
     .map(normalizeBusinessIconSource)
     .sort((left, right) => left.name.localeCompare(right.name));
@@ -432,6 +432,10 @@ export function buildBusinessIconsIndex(sources: BusinessIconExportSource[]) {
     return `import { ${exportBase}Icon } from './business-icons/${name}';`;
   });
   const exports = sortedSources.flatMap(({ name }) => {
+    if (!includeAliases) {
+      return [`export * from './business-icons/${name}';`];
+    }
+
     const componentName = getBusinessIconComponentName(name);
     return [
       `export * from './business-icons/${name}';`,

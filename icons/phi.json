@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "aliases": [
+    {
+      "name": "golden-ratio"
+    }
+  ],
+  "use-cases": ["表示黄金比例", "标记数学公式", "标识科学变量或磁通量符号"],
+  "name": "希腊字母 Phi",
+  "tags": ["数学", "黄金比例", "符号", "希腊字母", "字母", "排版", "常量", "通量", "磁通量"],
+  "categories": ["math", "science"],
+  "i18n": {
+    "en": {
+      "name": "phi",
+      "tags": ["math", "golden ratio", "symbol", "greek", "letter", "typography", "constant", "flux", "magnetic flux"],
+      "use-cases": ["Representing the golden ratio", "Indicating mathematical formulas", "Labeling scientific variables or magnetic flux symbols"]
+    }
+  }
+}
