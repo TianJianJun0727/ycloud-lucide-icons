@@ -2,6 +2,14 @@
 
 > This file is generated before the documentation build from Git tags and release changes.
 
+## v0.2.2 - 2026-07-01
+
+- Added support for the illustration icon workflow.
+- Enlarged selected icon previews in the Figma plugin.
+- Removed some icons and restructured business icons by color mode.
+- Fixed rendering issues with duotone business icon previews.
+- Improved build processes and documentation.
+
 ## v0.2.1 - 2026-06-29
 
 - Added the business icon system with basic, chatbot, filled, filter, inbox, and menu categories, including the basic business SVG sources.

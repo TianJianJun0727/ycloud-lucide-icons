@@ -1,0 +1,18 @@
+{
+  "tag": "v0.2.2",
+  "date": "2026-07-01",
+  "zh": [
+    "新增插画图标工作流支持。",
+    "Figma 插件中放大选中图标预览。",
+    "移除部分图标并重构业务图标按颜色模式拆分。",
+    "修复双色业务图标预览渲染问题。",
+    "优化构建流程和文档。"
+  ],
+  "en": [
+    "Added support for the illustration icon workflow.",
+    "Enlarged selected icon previews in the Figma plugin.",
+    "Removed some icons and restructured business icons by color mode.",
+    "Fixed rendering issues with duotone business icon previews.",
+    "Improved build processes and documentation."
+  ]
+}

@@ -6,7 +6,7 @@
  * - 可选 `YCLOUD_AI_CHANGELOG=1`、`AI_API_KEY`、`AI_BASE_URL`、`AI_MODEL`。
  * - 可选 `YCLOUD_AI_CHANGELOG_VERSION` 指定只生成某个版本的 AI release notes。
  * 输出：
- * - 根 `CHANGELOG.md` 中文日志。
+ * - 根 `CHANGELOG.md` 双语日志。
  * - `docs/.vitepress/data/CHANGELOG.en.md` 英文日志。
  * - `docs/.vitepress/data/changelogSidebar.ts` 文档侧边栏数据。
  * - `changelogs/releases/v*.json` 持久化双语版本说明。
@@ -87,12 +87,16 @@ function getTagDateTime(tag: string) {
   return run(`git log -1 --format=%cI ${tag}`);
 }
 
-function getCommits(currentTag: string, previousTag?: string) {
+function getRefDate(ref: string) {
+  return run(`git log -1 --format=%cs ${ref}`);
+}
+
+function getCommits(currentRef: string, previousTag?: string) {
   if (!previousTag) {
     return ['首个正式版本发布。'];
   }
 
-  const output = run(`git log --no-merges --format=%s ${previousTag}..${currentTag}`);
+  const output = run(`git log --no-merges --format=%s ${previousTag}..${currentRef}`);
   const commits = output
     .split('\n')
     .map((line) => line.trim())
@@ -102,12 +106,12 @@ function getCommits(currentTag: string, previousTag?: string) {
   return commits.length ? Array.from(new Set(commits)) : ['本版本没有记录到额外提交说明。'];
 }
 
-function getChangedFiles(currentTag: string, previousTag?: string) {
+function getChangedFiles(currentRef: string, previousTag?: string) {
   if (!previousTag) {
     return [];
   }
 
-  const output = run(`git diff --name-status ${previousTag}..${currentTag}`);
+  const output = run(`git diff --name-status ${previousTag}..${currentRef}`);
 
   return output
     .split('\n')
@@ -147,6 +151,34 @@ function buildEntries(tags: string[]): ReleaseEntry[] {
       },
     };
   });
+}
+
+function buildPendingReleaseEntry(tags: string[]): ReleaseEntry | undefined {
+  const targetVersion = aiChangelogVersion?.replace(/^v/, '');
+  if (!targetVersion) {
+    return undefined;
+  }
+
+  const targetTag = `v${targetVersion}`;
+  if (tags.includes(targetTag)) {
+    return undefined;
+  }
+
+  const previousTag = tags[0];
+  const commits = getCommits('HEAD', previousTag);
+  const previousTagExists = Boolean(previousTag);
+
+  return {
+    version: targetVersion,
+    tag: targetTag,
+    date: getRefDate('HEAD'),
+    commits,
+    changedFiles: getChangedFiles('HEAD', previousTag),
+    notes: {
+      zh: commits,
+      en: getEnglishFallbackNotes(commits, previousTagExists),
+    },
+  };
 }
 
 function getChangelogAnchor(version: string, date: string) {
@@ -296,12 +328,10 @@ async function applyAiGeneratedNotes(entries: ReleaseEntry[]) {
     return entriesWithPersistedNotes;
   }
 
-  const { notes, generated } = await generateAiNotes(targetEntry);
+  const { notes } = await generateAiNotes(targetEntry);
   const updatedTargetEntry = { ...targetEntry, notes };
 
-  if (generated) {
-    await writePersistedNotes(updatedTargetEntry);
-  }
+  await writePersistedNotes(updatedTargetEntry);
 
   return entriesWithPersistedNotes.map((entry) =>
     entry.tag === targetEntry.tag ? updatedTargetEntry : entry,
@@ -335,6 +365,39 @@ function toMarkdown(entries: ReleaseEntry[], locale: 'zh' | 'en') {
   return `${lines.join('\n').trim()}\n`;
 }
 
+function toBilingualMarkdown(entries: ReleaseEntry[]) {
+  const lines = [
+    '# 更新日志 / Changelog',
+    '',
+    '> 此文件会在文档构建前根据 Git tag 和版本变更自动生成。',
+    '> This file is generated before the documentation build from Git tags and release changes.',
+    '',
+  ];
+
+  for (const entry of entries) {
+    lines.push(`## ${entry.tag} - ${entry.date}`);
+    lines.push('');
+    lines.push('### 中文');
+    lines.push('');
+
+    for (const note of entry.notes.zh) {
+      lines.push(`- ${note}`);
+    }
+
+    lines.push('');
+    lines.push('### English');
+    lines.push('');
+
+    for (const note of entry.notes.en) {
+      lines.push(`- ${note}`);
+    }
+
+    lines.push('');
+  }
+
+  return `${lines.join('\n').trim()}\n`;
+}
+
 function toReleaseNotesMarkdown(entry: ReleaseEntry) {
   const lines = [
     `发布日期：${formatShanghaiDateTime(getTagDateTime(entry.tag))}`,
@@ -356,7 +419,12 @@ async function main() {
   const tags = listTags();
 
   if (!tags.length) {
-    const fallback = '# 更新日志\n\n> 当前仓库还没有可用的版本标签。\n';
+    if (releaseNotesOutputPath) {
+      throw new Error('Release notes cannot be generated because no version tags are available.');
+    }
+
+    const fallback =
+      '# 更新日志 / Changelog\n\n> 当前仓库还没有可用的版本标签。\n> No version tags are available in this repository yet.\n';
     const englishFallback =
       '# Changelog\n\n> No version tags are available in this repository yet.\n';
     await writeFile(changelogPath, fallback, 'utf8');
@@ -365,8 +433,12 @@ async function main() {
     return;
   }
 
-  const entries = await applyAiGeneratedNotes(buildEntries(tags));
-  const markdown = toMarkdown(entries, 'zh');
+  const pendingReleaseEntry = buildPendingReleaseEntry(tags);
+  const rawEntries = pendingReleaseEntry
+    ? [pendingReleaseEntry, ...buildEntries(tags)]
+    : buildEntries(tags);
+  const entries = await applyAiGeneratedNotes(rawEntries);
+  const markdown = toBilingualMarkdown(entries);
   const englishMarkdown = toMarkdown(entries, 'en');
   const targetVersion = aiChangelogVersion
     ? aiChangelogVersion.replace(/^v/, '')
