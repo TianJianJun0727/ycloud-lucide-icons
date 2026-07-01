@@ -49,7 +49,7 @@ concurrency:
 
 jobs:
   prepare:
-    if: github.repository == 'TianJianJun0727/ycloud-icons'
+    if: github.repository == 'TianJianJun0727/ycloud-icons' && (github.event_name != 'push' || github.event.created)
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -341,13 +341,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Ensure release tag points to published ref
-        run: |
-          git tag --force "v${VERSION}" HEAD
-          git push origin "refs/tags/v${VERSION}" --force
-        env:
-          VERSION: ${{ needs.prepare.outputs.version }}
 
       - name: Generate bilingual release notes
         run: node ./scripts/writeChangelog.mts
