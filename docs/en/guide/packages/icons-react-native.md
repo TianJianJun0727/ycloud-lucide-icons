@@ -32,7 +32,7 @@ bun add @ycloud-web/icons-react-native@latest react-native-svg
 
 ## Version Requirements
 
-React `^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0`, any React Native version, and `react-native-svg` `^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0`.
+React `^17.0.0 || ^18.0.0 || ^19.0.0`, any React Native version, and `react-native-svg` `^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0`.
 
 ## Usage
 
