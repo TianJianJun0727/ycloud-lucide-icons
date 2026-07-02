@@ -40,7 +40,7 @@ import {
   tag,
   sparkles,
 } from '@data/iconNodes';
-import createElement from '@ycloud-web/icons/src/createElement';
+import { createElement } from '@ycloud-web/icons';
 import { IconNode } from '@ycloud-web/icons';
 
 const icons: Component[] = [

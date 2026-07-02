@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useData } from 'vitepress';
-import { toCamelCase } from '@ycloud-web/shared';
 import CodeGroup from '../base/CodeGroup.vue';
 import { data as illustrationData } from '../../../../illustration-icons/illustration.data';
 import { data as codeExampleData } from '../../../../illustration-icons/codeExamples.data';
@@ -27,11 +26,6 @@ const codeExample = computed(() =>
     .map((item) =>
       item.code
         .replace(/\$(?:<[^>]+>)*PascalCase/g, illustration.value.componentName)
-        .replace(
-          /\$(?:<[^>]+>)*CamelCaseDataUri/g,
-          `${toCamelCase(illustration.value.name)}DataUri`,
-        )
-        .replace(/\$(?:<[^>]+>)*CamelCase/g, toCamelCase(illustration.value.name))
         .replace(/\$(?:<[^>]+>)*Name/g, illustration.value.name)
         .replace(/\$(?:<[^>]+>)*Path/g, illustration.value.path),
     )
@@ -42,7 +36,9 @@ const codeExample = computed(() =>
 <template>
   <div class="layout">
     <div class="illustration-previews">
-      <IconDetailBackButton :fallbackHref="locale === 'en' ? '/en/illustration-icons/' : '/illustration-icons/'" />
+      <IconDetailBackButton
+        :fallbackHref="locale === 'en' ? '/en/illustration-icons/' : '/illustration-icons/'"
+      />
       <div class="preview">
         <IllustrationPreview
           id="previewer"

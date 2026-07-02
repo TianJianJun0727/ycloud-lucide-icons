@@ -9,9 +9,6 @@ const copies = [
   ['icons/metadata/index.json', 'icons.json'],
   ['business-icons/metadata/index.json', 'business-icons.json'],
   ['illustration-icons/metadata/index.json', 'illustration-icons.json'],
-  ['icons/names/index.json', 'names/icons.json'],
-  ['business-icons/names/index.json', 'names/business-icons.json'],
-  ['illustration-icons/names/index.json', 'names/illustration-icons.json'],
 ] as const;
 
 await fs.rm(docsMetadataDir, { recursive: true, force: true });

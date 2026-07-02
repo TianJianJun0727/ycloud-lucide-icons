@@ -27,12 +27,10 @@ business-icons/<color-mode>/<icon-name>.json
 business-icons/<color-mode>/index.json
 business-icons/index.json
 business-icons/metadata/index.json
-business-icons/names/index.json
 docs/public/metadata/business-icons.json
-docs/public/metadata/names/business-icons.json
 ```
 
-Business icon first-level folders now represent color modes instead of business categories. Each folder keeps its Chinese and English display title in `business-icons/<color-mode>/index.json`. Every SVG must have a same-name JSON metadata file for search, AI icon selection, and docs. The root `business-icons/index.json` is generated; `business-icons/metadata/index.json` and `business-icons/names/index.json` are the latest repository snapshots used directly by the Figma plugin, GitHub checks, and skills lookup. During docs builds, those source snapshots are copied to `docs/public/metadata/business-icons.json` and `docs/public/metadata/names/business-icons.json` as deployed URL fallbacks.
+Business icon first-level folders now represent color modes instead of business categories. Each folder keeps its Chinese and English display title in `business-icons/<color-mode>/index.json`. Every SVG must have a same-name JSON metadata file for search, AI icon selection, and docs. The root `business-icons/index.json` is generated; `business-icons/metadata/index.json` is the latest repository metadata snapshot used directly by the Figma plugin, GitHub checks, and skills lookup. During docs builds, that source snapshot is copied to `docs/public/metadata/business-icons.json` as the deployed URL fallback.
 
 The current allowed folders are:
 
@@ -42,7 +40,7 @@ duotone
 multicolor
 ```
 
-Business icons need same-name per-SVG metadata JSON, but they do not enter the generic category system. They are generated into `business` subpath entries in the existing packages instead of being mixed into the generic default entries. Package component exports are still based on the SVG file name and do not include the color mode, so SVG file names must remain unique across color-mode folders. `business-icons/metadata/index.json` and `business-icons/names/index.json` are generated from source metadata and used by the Figma plugin and local skills lookup; the docs public snapshot is used after deployment as fallback.
+Business icons need same-name per-SVG metadata JSON, but they do not enter the generic category system. They are generated into `business` subpath entries in the existing packages instead of being mixed into the generic default entries. Package component exports are still based on the SVG file name and do not include the color mode, so SVG file names must remain unique across color-mode folders. `business-icons/metadata/index.json` is generated from source metadata and used by the Figma plugin, GitHub checks, and local skills lookup; the docs public snapshot is used after deployment as fallback.
 
 ## Cleanup And Validation
 
@@ -63,7 +61,7 @@ Only baseline structure and safety checks run:
 - same-name metadata must exist at `business-icons/<color-mode>/<icon-name>.json`
 - color-mode folders must include `business-icons/<color-mode>/index.json`
 - root `business-icons/index.json` must match `node ./scripts/writeBusinessIconIndex.mts`
-- `business-icons/metadata/index.json` and `business-icons/names/index.json` must match `node ./scripts/writeAssetMetadata.mts`; `docs/public/metadata` is copied during docs builds
+- `business-icons/metadata/index.json` must match `node ./scripts/writeAssetMetadata.mts`; `docs/public/metadata` is copied during docs builds
 - file names must be lowercase kebab-case
 - the root element must be `<svg>`
 - `mono` `fill` and `stroke` may only be `currentColor` or `none`
@@ -169,7 +167,7 @@ import { Billing } from '@ycloud-web/icons-react-native/business';
 The Angular package exports business icon definitions that can be rendered as inline SVG or serialized by your application:
 
 ```ts
-import { getBusinessIcon } from '@ycloud-web/icons-angular';
+import { getBusinessIcon } from '@ycloud-web/icons-angular/business';
 
 const billing = getBusinessIcon('billing');
 ```

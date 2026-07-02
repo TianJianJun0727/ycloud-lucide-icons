@@ -30,10 +30,6 @@ const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
 
 const sortingOptions = computed(() => [
   {
-    name: isEnglish.value ? 'Popularity' : '热度',
-    value: 'popularity',
-  },
-  {
     name: isEnglish.value ? 'Release date' : '发布日期',
     value: 'release-date',
   },
@@ -46,8 +42,6 @@ const selectedSort = ref(sortingOptions.value[0]);
 
 const sortedIllustrations = computed(() => {
   switch (selectedSort.value.value) {
-    case 'popularity':
-      return [...props.illustrations].sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
     case 'release-date':
       return [...props.illustrations].sort((a, b) => {
         const aDate = a.createdRelease?.date ? new Date(a.createdRelease.date).getTime() : 0;

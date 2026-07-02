@@ -3,7 +3,7 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
 import Diff from '../../../lib/SvgPreview/Diff.tsx';
 import iconNodes from '../../../data/iconNodes';
-import createYCloudIcon from '@ycloud-web/icons-react/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-react';
 
 export default eventHandler((event) => {
   const { params } = event.context;

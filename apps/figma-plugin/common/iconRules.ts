@@ -12,6 +12,16 @@ const ICON_NAME_ALLOWED_MESSAGE = '图标名称仅允许英文字母、数字和
 
 function getRawIconNameIssues(rawName: string) {
   const normalizedRawName = rawName.trim();
+  if (
+    normalizedRawName.includes('|') ||
+    normalizedRawName.includes('｜') ||
+    normalizedRawName.includes('/')
+  ) {
+    return [];
+  }
+  if (hasCjkText(normalizedRawName)) {
+    return [];
+  }
   if (!ICON_NAME_ALLOWED_PATTERN.test(normalizedRawName)) {
     return [ICON_NAME_ALLOWED_MESSAGE];
   }

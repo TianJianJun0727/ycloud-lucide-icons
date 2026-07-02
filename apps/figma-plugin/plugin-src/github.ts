@@ -5,6 +5,7 @@ import {
   toKebabCase,
 } from '../common/iconRules';
 import type { IconSourceType, YCloudIconData, YCloudMetadataOptions } from '../common/types';
+import { Base64 } from 'js-base64';
 const GITHUB_API_VERSION = '2022-11-28';
 interface TreeItem {
   path: string;
@@ -12,10 +13,63 @@ interface TreeItem {
   type: string;
   sha: string;
 }
+interface GitHubTree {
+  tree: Array<{
+    path: string;
+    type: string;
+  }>;
+  truncated?: boolean;
+}
+interface GitHubContentFile {
+  content: string;
+  encoding: string;
+}
+type IconMetadataIndex = {
+  assets?: Array<{
+    name?: string;
+    metadata?: {
+      aliases?: Array<string | { name?: string }>;
+    };
+  }>;
+};
+
+function decodeBase64Json<T>(content: string): T {
+  return JSON.parse(Base64.decode(content.replace(/\s/g, ''))) as T;
+}
+
+function getBusinessColorMode(metadata: YCloudMetadataOptions) {
+  if (metadata.businessColorMode === 'multicolor' || metadata.businessCategory === 'multicolor') {
+    return 'multicolor';
+  }
+  if (metadata.businessColorMode === 'duotone' || metadata.businessCategory === 'duotone') {
+    return 'duotone';
+  }
+  return 'mono';
+}
 
 function uniqueList<T>(items: T[]): T[] {
   return items.filter((item, index, list) => list.indexOf(item) === index);
 }
+
+function findDuplicates(items: string[]) {
+  const counts = new Map<string, number>();
+  for (const item of items) {
+    counts.set(item, (counts.get(item) ?? 0) + 1);
+  }
+  return [...counts.entries()].filter(([, count]) => count > 1).map(([item]) => item);
+}
+
+function collectIconMetadataNames(index: IconMetadataIndex) {
+  return uniqueList(
+    (index.assets ?? []).flatMap((asset) => [
+      asset.name,
+      ...(asset.metadata?.aliases ?? []).map((alias) =>
+        typeof alias === 'string' ? alias : alias.name,
+      ),
+    ]),
+  ).filter((name): name is string => typeof name === 'string' && name.length > 0);
+}
+
 function createIconJson(metadata: YCloudMetadataOptions): Record<string, unknown> {
   return {
     $schema: '../icon.schema.json',
@@ -80,12 +134,7 @@ function buildBusinessIconFiles(
   icons: Record<string, YCloudIconData>,
   metadata: YCloudMetadataOptions,
 ) {
-  const businessColorMode =
-    metadata.businessColorMode === 'multicolor' || metadata.businessCategory === 'multicolor'
-      ? 'multicolor'
-      : metadata.businessColorMode === 'duotone' || metadata.businessCategory === 'duotone'
-        ? 'duotone'
-        : 'mono';
+  const businessColorMode = getBusinessColorMode(metadata);
   return Object.entries(icons).flatMap(([key, icon]) => {
     const name = toKebabCase(icon.name || key);
     return [
@@ -164,6 +213,12 @@ export function createGithubClient(
   }> {
     return request(`/git/commits/${sha}`);
   }
+  async function getTree(treeSha: string): Promise<GitHubTree> {
+    return request(`/git/trees/${treeSha}?recursive=1`);
+  }
+  async function getContent(path: string, ref: string): Promise<GitHubContentFile> {
+    return request(`/contents/${path}?ref=${ref}`);
+  }
   async function createBranch(name: string, sha: string) {
     return request('/git/refs', {
       method: 'POST',
@@ -222,15 +277,26 @@ export function createGithubClient(
     icons: Record<string, YCloudIconData>,
     metadata: YCloudMetadataOptions,
     sourceType: IconSourceType,
+    allowExistingIconUpdate = false,
   ) {
     const baseBranch = 'main';
     const newBranch = `figma-plugin/${Date.now()}`;
+    const businessColorMode = getBusinessColorMode(metadata);
     const files =
       sourceType === 'business'
         ? buildBusinessIconFiles(icons, metadata)
         : sourceType === 'illustration'
           ? buildIllustrationFiles(icons)
           : buildYCloudFiles(icons, metadata);
+    const duplicateTargetPaths = findDuplicates(files.map((file) => file.path));
+    if (duplicateTargetPaths.length > 0) {
+      throw new Error(
+        [
+          '本次提交包含重复的目标文件，请重命名后重试。',
+          ...duplicateTargetPaths.map((file) => `- ${file}`),
+        ].join('\n'),
+      );
+    }
     const reviewNotes: string[] = [];
     const iconCount = Object.keys(icons).length;
     const scope =
@@ -245,6 +311,63 @@ export function createGithubClient(
         : `feat(${scope}): add ${iconCount} icons`;
     const head = await getHead(baseBranch);
     const baseCommit = await getCommit(head.object.sha);
+    const [baseTree, iconMetadata] = await Promise.all([
+      getTree(baseCommit.tree.sha),
+      sourceType === 'generic'
+        ? getContent('icons/metadata/index.json', baseBranch).then((file) =>
+            decodeBase64Json<IconMetadataIndex>(file.content),
+          )
+        : Promise.resolve(undefined),
+    ]);
+    if (baseTree.truncated) {
+      throw new Error(
+        'GitHub main 分支文件树返回结果被截断，无法安全判断同名覆盖。请稍后重试或手动处理。',
+      );
+    }
+    if (!allowExistingIconUpdate) {
+      const existingPaths = new Set(
+        baseTree.tree.filter((item) => item.type === 'blob').map((item) => item.path),
+      );
+      const existingIconNames = new Set(iconMetadata ? collectIconMetadataNames(iconMetadata) : []);
+      const existingBusinessIconNames = new Set(
+        baseTree.tree
+          .filter(
+            (item) => item.type === 'blob' && /^business-icons\/[^/]+\/[^/]+\.svg$/.test(item.path),
+          )
+          .map((item) => item.path.replace(/^business-icons\/[^/]+\//, '').replace(/\.svg$/, '')),
+      );
+      const conflicts = files
+        .filter((file) => existingPaths.has(file.path))
+        .map((file) => file.path);
+      const aliasConflicts =
+        sourceType === 'generic'
+          ? files
+              .filter((file) => {
+                const name = file.path.match(/^icons\/(.+)\.svg$/)?.[1];
+                return Boolean(name && existingIconNames.has(name));
+              })
+              .map((file) => `${file.path}（命中已有图标名称或别名）`)
+          : [];
+      const businessNameConflicts =
+        sourceType === 'business'
+          ? files
+              .filter((file) => {
+                const name = file.path.match(/^business-icons\/[^/]+\/(.+)\.svg$/)?.[1];
+                return Boolean(name && existingBusinessIconNames.has(name));
+              })
+              .map((file) => `${file.path}（业务图标名称需跨颜色模式唯一）`)
+          : [];
+      conflicts.push(...aliasConflicts, ...businessNameConflicts);
+      if (conflicts.length > 0) {
+        throw new Error(
+          [
+            '目标仓库 main 分支已存在同名文件，当前未开启覆盖。',
+            '请刷新分类或开启“覆盖已存在图标”后重试。',
+            ...conflicts.map((file) => `- ${file}`),
+          ].join('\n'),
+        );
+      }
+    }
     const treeBody = await Promise.all(
       files.map(async (file) => {
         const blob = await uploadBlob(file.content);
@@ -270,7 +393,7 @@ export function createGithubClient(
         '来源：Figma 插件',
         '',
         sourceType === 'business'
-          ? `本次提交 ${iconCount} 个业务图标，颜色模式为 \`business-icons/${metadata.businessColorMode || 'mono'}/\`。SVG 已按业务规则轻量清洗。`
+          ? `本次提交 ${iconCount} 个业务图标，颜色模式为 \`business-icons/${businessColorMode}/\`。SVG 已按业务规则轻量清洗。`
           : sourceType === 'illustration'
             ? `本次提交 ${iconCount} 个插画。SVG 已做安全轻量清洗，并保留原始颜色和尺寸属性。`
             : `本次提交 ${iconCount} 个图标。SVG 已按图标库规范自动清洗。`,

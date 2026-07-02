@@ -41,22 +41,19 @@ illustration-icons/
 - `icons/*.svg`：图标图形本体
 - `icons/*.json`：图标元数据，例如分类、标签、中文信息
 - `icons/metadata/index.json`：通用图标仓库最新 metadata 快照，供 Figma/GitHub/skills 直接读取
-- `icons/names/index.json`：通用图标仓库最新名称快照，供 Figma/GitHub/skills 直接读取
-- `docs/public/metadata/icons.json`、`docs/public/metadata/names/icons.json`：文档构建时从通用图标仓库快照复制出来的部署 URL 查询快照
+- `docs/public/metadata/icons.json`：文档构建时从通用图标仓库快照复制出来的部署 URL 查询快照
 - `categories/*.json`：分类定义、分类标题和英文标题
 - `business-icons/<color-mode>/*.svg`：业务专有图标图形，一级目录只能是 `mono`、`duotone` 或 `multicolor`
 - `business-icons/<color-mode>/*.json`：业务图标同名 metadata，用于搜索、文档、Figma 和 skills 查询
 - `business-icons/<color-mode>/index.json`：业务图标颜色模式的中英文标题
 - `business-icons/index.json`：生成产物，供校验、插件、文档和包生成消费
 - `business-icons/metadata/index.json`：业务图标仓库最新 metadata 快照，供 Figma/GitHub/skills 直接读取
-- `business-icons/names/index.json`：业务图标仓库最新名称快照，供 Figma/GitHub 直接读取
-- `docs/public/metadata/business-icons.json`、`docs/public/metadata/names/business-icons.json`：文档构建时从业务图标仓库快照复制出来的部署 URL 查询快照
+- `docs/public/metadata/business-icons.json`：文档构建时从业务图标仓库快照复制出来的部署 URL 查询快照
 - `illustration-icons/*.svg`：插画资源，保留原始颜色和尺寸属性
 - `illustration-icons/*.json`：插画同名 metadata，用于搜索、文档、Figma 和 skills 查询
 - `illustration-icons/index.json`：生成产物，供校验、插件、文档和包生成消费
 - `illustration-icons/metadata/index.json`：插画仓库最新 metadata 快照，供 Figma/GitHub/skills 直接读取
-- `illustration-icons/names/index.json`：插画仓库最新名称快照，供 Figma/GitHub 直接读取
-- `docs/public/metadata/illustration-icons.json`、`docs/public/metadata/names/illustration-icons.json`：文档构建时从插画仓库快照复制出来的部署 URL 查询快照
+- `docs/public/metadata/illustration-icons.json`：文档构建时从插画仓库快照复制出来的部署 URL 查询快照
 
 这里的原则是：通用图标、业务图标和插画都把图形和语义落在源码仓库里，而不是分散写在文档或组件代码里。三类资源都使用逐 SVG metadata；业务图标额外按颜色模式维护目录元数据；业务图标与插画的包导出名都由文件名决定。
 
@@ -148,12 +145,10 @@ business-icons/<color-mode>/<name>.json
 business-icons/<color-mode>/index.json
 business-icons/index.json
 business-icons/metadata/index.json
-business-icons/names/index.json
 docs/public/metadata/business-icons.json
-docs/public/metadata/names/business-icons.json
 ```
 
-业务图标会为每个 SVG 维护同名 JSON。一级目录表达颜色模式：`mono` 会把固定颜色清洗成 `currentColor`，`duotone` 会把白色映射为 secondary token、其他颜色映射为 primary token，`multicolor` 会保留固定色。根 `business-icons/index.json` 由脚本生成，用于 Figma 插件颜色模式选择、文档展示和包生成；`business-icons/metadata/index.json` 与 `business-icons/names/index.json` 由脚本生成，用于 Figma、GitHub 校验和 skills 对当前仓库 main 的查询；`docs/public/metadata` 下的快照由文档构建从仓库快照复制，用于部署后的 URL 兜底查询。
+业务图标会为每个 SVG 维护同名 JSON。一级目录表达颜色模式：`mono` 会把固定颜色清洗成 `currentColor`，`duotone` 会把白色映射为 secondary token、其他颜色映射为 primary token，`multicolor` 会保留固定色。根 `business-icons/index.json` 由脚本生成，用于 Figma 插件颜色模式选择、文档展示和包生成；`business-icons/metadata/index.json` 由脚本生成，用于 Figma、GitHub 校验和 skills 对当前仓库 main 的查询；`docs/public/metadata` 下的快照由文档构建从仓库快照复制，用于部署后的 URL 兜底查询。
 
 ## 三、包结构怎么分
 

@@ -3,7 +3,17 @@ name: YCloud Icons Data Checks
 on:
   pull_request:
     paths:
+      - icons/**
+      - business-icons/**
+      - illustration-icons/**
+      - scripts/generateBusinessIconsPackage.mts
+      - scripts/generateIllustrationsPackage.mts
+      - scripts/writeAssetMetadata.mts
+      - scripts/writeBusinessIconIndex.mts
+      - scripts/writeIllustrationIndex.mts
+      - scripts/render/**
       - packages/icons-data/**
+      - tools/build-helpers/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
 
@@ -13,6 +23,7 @@ concurrency:
 
 jobs:
   check:
+    name: YCloud Icons Data
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

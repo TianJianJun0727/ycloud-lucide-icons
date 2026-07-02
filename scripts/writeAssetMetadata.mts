@@ -18,7 +18,7 @@ const businessIconsDir = path.join(repoRoot, 'business-icons');
 const illustrationIconsDir = path.join(repoRoot, 'illustration-icons');
 const execFileAsync = promisify(execFile);
 
-type NameEntry = {
+type MetadataEntry = {
   name: string;
   path: string;
   title?: string;
@@ -27,9 +27,6 @@ type NameEntry = {
   category?: string;
   canonicalName?: string;
   deprecated?: true;
-};
-
-type MetadataEntry = NameEntry & {
   type: 'icon' | 'business-icon' | 'illustration';
   metadata?: unknown;
   colorMode?: string;
@@ -211,8 +208,6 @@ await syncIllustrationMetadata();
 await Promise.all([
   fs.rm(path.join(businessIconsDir, 'metadata.json'), { force: true }),
   fs.rm(path.join(illustrationIconsDir, 'metadata.json'), { force: true }),
-  fs.rm(path.join(businessIconsDir, 'names.json'), { force: true }),
-  fs.rm(path.join(illustrationIconsDir, 'names.json'), { force: true }),
 ]);
 
 async function readJson<T>(file: string): Promise<T | undefined> {
@@ -221,32 +216,6 @@ async function readJson<T>(file: string): Promise<T | undefined> {
   } catch {
     return undefined;
   }
-}
-
-async function writeNamesFile(file: string, names: NameEntry[]) {
-  await fs.mkdir(path.dirname(file), { recursive: true });
-  const duplicates = [
-    ...names.reduce((map, item) => {
-      map.set(item.name, (map.get(item.name) ?? 0) + 1);
-      return map;
-    }, new Map<string, number>()),
-  ]
-    .filter(([, count]) => count > 1)
-    .map(([name]) => name)
-    .sort();
-  await fs.writeFile(
-    file,
-    `${JSON.stringify(
-      {
-        metadataVersion: 1,
-        names: names.sort((left, right) => left.name.localeCompare(right.name)),
-        duplicates,
-      },
-      null,
-      2,
-    )}\n`,
-    'utf8',
-  );
 }
 
 async function writeMetadataFile(
@@ -286,51 +255,8 @@ function getMetadataEnglishName(metadata: Record<string, unknown> | undefined) {
   return typeof english.name === 'string' ? english.name : undefined;
 }
 
-async function writeIconNames() {
+async function writeIconMetadata() {
   const entries = await fs.readdir(iconsDir, { withFileTypes: true });
-  const nestedNames = await Promise.all(
-    entries
-      .filter((entry) => entry.isFile() && entry.name.endsWith('.svg'))
-      .map(async (entry) => {
-        const name = path.basename(entry.name, '.svg');
-        const metadata = await readJson<{
-          name?: string;
-          aliases?: Array<
-            | string
-            | {
-                name: string;
-                deprecated?: true;
-              }
-          >;
-          i18n?: {
-            en?: {
-              name?: string;
-            };
-          };
-        }>(path.join(iconsDir, `${name}.json`));
-        const canonicalEntry = {
-          name,
-          path: `icons/${entry.name}`,
-          title: metadata?.name,
-          englishName: metadata?.i18n?.en?.name,
-        };
-        const aliasEntries = (metadata?.aliases ?? []).map((alias) => {
-          const aliasName = typeof alias === 'string' ? alias : alias.name;
-          return {
-            name: aliasName,
-            path: `icons/${aliasName}.svg`,
-            title: metadata?.name,
-            englishName: metadata?.i18n?.en?.name,
-            canonicalName: name,
-            deprecated: typeof alias === 'string' ? undefined : alias.deprecated,
-          };
-        });
-        return [canonicalEntry, ...aliasEntries];
-      }),
-  );
-  const names = nestedNames.flat();
-  await writeNamesFile(path.join(iconsDir, 'names/index.json'), names);
-
   const metadataAssets = await Promise.all(
     entries
       .filter((entry) => entry.isFile() && entry.name.endsWith('.svg'))
@@ -352,30 +278,8 @@ async function writeIconNames() {
   await writeMetadataFile(path.join(iconsDir, 'metadata/index.json'), 'icon', metadataAssets);
 }
 
-async function writeBusinessNames() {
+async function writeBusinessMetadata() {
   const index = await buildBusinessIconIndex();
-  const names = await Promise.all(
-    index.icons.map(async (icon) => {
-      const metadata = await readJson<{
-        name?: string;
-        i18n?: {
-          en?: {
-            name?: string;
-          };
-        };
-      }>(path.join(repoRoot, icon.path.replace(/\.svg$/, '.json')));
-      return {
-        name: icon.name,
-        path: icon.path,
-        title: metadata?.name,
-        englishName: metadata?.i18n?.en?.name,
-        componentName: icon.componentName,
-        category: icon.category,
-      };
-    }),
-  );
-  await writeNamesFile(path.join(businessIconsDir, 'names/index.json'), names);
-
   const metadataAssets = await Promise.all(
     index.icons.map(async (icon) => {
       const metadata = await readJson<Record<string, unknown>>(
@@ -401,29 +305,8 @@ async function writeBusinessNames() {
   );
 }
 
-async function writeIllustrationNames() {
+async function writeIllustrationMetadata() {
   const index = await buildIllustrationIndex();
-  const names = await Promise.all(
-    index.illustrations.map(async (illustration) => {
-      const metadata = await readJson<{
-        name?: string;
-        i18n?: {
-          en?: {
-            name?: string;
-          };
-        };
-      }>(path.join(repoRoot, illustration.path.replace(/\.svg$/, '.json')));
-      return {
-        name: illustration.name,
-        path: illustration.path,
-        title: metadata?.name,
-        englishName: metadata?.i18n?.en?.name,
-        componentName: illustration.componentName,
-      };
-    }),
-  );
-  await writeNamesFile(path.join(illustrationIconsDir, 'names/index.json'), names);
-
   const metadataAssets = await Promise.all(
     index.illustrations.map(async (illustration) => {
       const metadata = await readJson<Record<string, unknown>>(
@@ -447,16 +330,15 @@ async function writeIllustrationNames() {
   );
 }
 
-await writeIconNames();
-await writeBusinessNames();
-await writeIllustrationNames();
+await writeIconMetadata();
+await writeBusinessMetadata();
+await writeIllustrationMetadata();
 
 await execFileAsync(
   'pnpm',
   [
     'exec',
     'oxfmt',
-    'icons/names/*.json',
     'icons/metadata/*.json',
     'business-icons/**/*.json',
     'illustration-icons/**/*.json',

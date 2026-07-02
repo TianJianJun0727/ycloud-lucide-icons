@@ -92,17 +92,25 @@ export default App;
     {
       language: 'tsx',
       title: 'Angular',
-      code: `// app.module.ts
-import { YCloudAngularModule, $PascalCase } from '@ycloud-web/icons-angular';
+      code: `// app.config.ts
+import { provideYCloudIcons, $PascalCase } from '@ycloud-web/icons-angular';
 
-@NgModule({
-  imports: [
-    YCloudAngularModule.pick({ $PascalCase })
+export const appConfig = {
+  providers: [
+    provideYCloudIcons($PascalCase)
   ],
-})
+};
 
-// app.component.html
-<ycloud-icon name="$Name"></ycloud-icon>
+// app.component.ts
+import { Component } from '@angular/core';
+import { YCloudDynamicIcon } from '@ycloud-web/icons-angular';
+
+@Component({
+  standalone: true,
+  imports: [YCloudDynamicIcon],
+  template: '<ycloud-icon name="$Name" />',
+})
+export class AppComponent {}
 `,
     },
     {

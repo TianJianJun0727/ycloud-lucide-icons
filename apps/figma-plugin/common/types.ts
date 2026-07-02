@@ -26,6 +26,7 @@ export interface ExportOptions {
   png: PngOptionPayload;
   fileName: string;
   ycloud: YCloudMetadataOptions;
+  allowExistingIconUpdate?: boolean;
 }
 export interface PngOptionPayload {
   '1x': boolean;

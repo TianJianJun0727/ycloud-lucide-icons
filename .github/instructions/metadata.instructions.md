@@ -110,7 +110,7 @@ GitHub PR automation may normalize metadata:
 
 - `fix-icon-source.yml` runs on same-repository PRs that change icons or
   categories. It optimizes SVG, completes bilingual generic metadata, refreshes
-  business/illustration metadata and names indexes, formats JSON, and validates
+  business/illustration metadata indexes, formats JSON, and validates
   the result.
 - `pull-request-metadata-suggestions.yml` can be run manually with a PR number
   when reviewers want optional AI metadata suggestions. For Figma/Portal-created
@@ -120,9 +120,8 @@ GitHub PR automation may normalize metadata:
 - `checkCategoryMetadata.mts` enforces category Chinese titles and English
   `i18n.en.title`.
 - `checkAssetMetadata.mts` enforces same-name business/illustration metadata,
-  generated repository snapshots in `*/metadata/index.json` and
-  `*/names/index.json`. Docs builds copy those source snapshots into
-  `docs/public/metadata`.
+  and generated repository snapshots in `*/metadata/index.json`. Docs builds
+  copy those metadata snapshots into `docs/public/metadata`.
 
 For local bulk polishing, use `pnpm polish:tags -- --use-cases --write` with an
 OpenAI-compatible AI provider configured through `AI_API_KEY`, `AI_BASE_URL`,

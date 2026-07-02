@@ -101,11 +101,11 @@ bun add @ycloud-web/icons-static@latest
 AI 选图、远程重名判断或离线搜索使用文档站发布的 metadata 快照，而不是 `icons-static` 包：
 
 ```js
-const iconNames = await fetch('/metadata/names/icons.json').then((res) => res.json());
-const businessIconNames = await fetch('/metadata/names/business-icons.json').then((res) =>
+const iconMetadata = await fetch('/metadata/icons.json').then((res) => res.json());
+const businessIconMetadata = await fetch('/metadata/business-icons.json').then((res) =>
   res.json(),
 );
-const illustrationNames = await fetch('/metadata/names/illustration-icons.json').then((res) =>
+const illustrationMetadata = await fetch('/metadata/illustration-icons.json').then((res) =>
   res.json(),
 );
 ```
