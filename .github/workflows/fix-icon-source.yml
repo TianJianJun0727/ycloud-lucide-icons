@@ -133,6 +133,7 @@ jobs:
 
           if (( ${#business_svg_files[@]} > 0 )); then
             node ./scripts/optimizeStagedBusinessSvgs.mts "${business_svg_files[@]}"
+            pnpm exec prettier --parser html --write "${business_svg_files[@]}"
           fi
 
           if [[ "${{ steps.source-change-kind.outputs.business_changed }}" == "true" ]]; then

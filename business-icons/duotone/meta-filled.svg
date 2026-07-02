@@ -3,14 +3,7 @@
   viewBox="0 0 14 14"
   fill="var(--business-icon-primary-color)"
 >
-  <rect
-    x="0.5"
-    y="0.5"
-    width="13"
-    height="13"
-    rx="6.5"
-    fill="var(--business-icon-primary-color)"
-  />
+  <rect x="0.5" y="0.5" width="13" height="13" rx="6.5" fill="var(--business-icon-primary-color)" />
   <rect
     x="0.5"
     y="0.5"

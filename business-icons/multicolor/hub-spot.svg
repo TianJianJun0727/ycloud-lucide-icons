@@ -1,16 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-  <mask
-    id="mask0_23223_22502"
-    maskUnits="userSpaceOnUse"
-    x="2"
-    y="0"
-    width="16"
-    height="20"
-  >
-    <path
-      d="M17.7562 0.714844H2.14307V19.2863H17.7562V0.714844Z"
-      fill="white"
-    />
+  <mask id="mask0_23223_22502" maskUnits="userSpaceOnUse" x="2" y="0" width="16" height="20">
+    <path d="M17.7562 0.714844H2.14307V19.2863H17.7562V0.714844Z" fill="white" />
   </mask>
   <g mask="url(#mask0_23223_22502)">
     <path
