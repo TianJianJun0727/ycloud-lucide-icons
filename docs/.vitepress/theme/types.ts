@@ -84,6 +84,10 @@ export interface IllustrationEntity {
   path: string;
   svg: string;
   dataUri: string;
+  createdRelease?: Release;
+  changedRelease?: Release;
+  git?: IconGitMetadata;
+  popularity?: number;
 }
 
 export interface Category {

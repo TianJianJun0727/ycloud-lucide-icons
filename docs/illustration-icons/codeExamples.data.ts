@@ -2,6 +2,18 @@ import { highLightCode } from '../.vitepress/lib/codeExamples/createCodeExamples
 
 const getIllustrationCodes = () => [
   {
+    language: 'html',
+    title: 'Vanilla',
+    code: `<script type="module">
+import { $CamelCaseSvg } from '@ycloud-web/icons/illustration';
+
+document.querySelector('#$Name').innerHTML = $CamelCaseSvg;
+</script>
+
+<span id="$Name" aria-hidden="true"></span>
+`,
+  },
+  {
     language: 'tsx',
     title: 'React',
     code: `import { $PascalCase } from '@ycloud-web/icons-react/illustration';
@@ -66,12 +78,15 @@ export default App;
 `,
   },
   {
-    language: 'ts',
-    title: 'Static',
-    code: `import illustrationUrl from '@ycloud-web/icons-static/$Path';
+    language: 'html',
+    title: 'Angular',
+    code: `<!-- app.component.ts -->
+import { $CamelCaseDataUri } from '@ycloud-web/icons-angular';
 
-const emptyStateImageUrl = illustrationUrl;
-`,
+illustrationSrc = $CamelCaseDataUri;
+
+<!-- app.component.html -->
+<img [src]="illustrationSrc" alt="" width="100%">`,
   },
 ];
 

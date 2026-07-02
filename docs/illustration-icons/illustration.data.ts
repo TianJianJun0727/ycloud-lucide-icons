@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { IllustrationEntity } from '../.vitepress/theme/types';
+import illustrationIconGitMetadata from '../.vitepress/data/illustrationIconGitMetadata.json';
+import type { IllustrationEntity, Release } from '../.vitepress/theme/types';
 
 type IllustrationIndex = {
   illustrations: Array<{
@@ -24,9 +25,18 @@ type AssetMetadata = {
   };
 };
 
+type IllustrationIconGeneratedMetadata = {
+  createdRelease?: Release;
+  changedRelease?: Release;
+  git?: NonNullable<IllustrationEntity['git']>;
+};
+
+type IllustrationIconGeneratedMetadataIndex = Record<string, IllustrationIconGeneratedMetadata>;
+
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(currentDir, '../..');
 const indexPath = path.resolve(repoRoot, 'illustration-icons/index.json');
+const generatedMetadata = illustrationIconGitMetadata as IllustrationIconGeneratedMetadataIndex;
 
 function toDisplayName(name: string) {
   return name
@@ -47,6 +57,7 @@ export default {
     const illustrations: IllustrationEntity[] = index.illustrations.map((item) => {
       const svg = fs.readFileSync(path.resolve(repoRoot, item.path), 'utf8').trim();
       const metadata = readMetadata(path.resolve(repoRoot, item.path.replace(/\.svg$/, '.json')));
+      const assetGeneratedMetadata = generatedMetadata[item.path];
       return {
         name: item.name,
         displayName: metadata?.name ?? toDisplayName(item.name),
@@ -59,6 +70,9 @@ export default {
         path: item.path,
         svg,
         dataUri: `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`,
+        createdRelease: assetGeneratedMetadata?.createdRelease,
+        changedRelease: assetGeneratedMetadata?.changedRelease,
+        git: assetGeneratedMetadata?.git,
       };
     });
 

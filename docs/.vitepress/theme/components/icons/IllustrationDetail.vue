@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useData } from 'vitepress';
+import { toCamelCase } from '@ycloud-web/shared';
 import CodeGroup from '../base/CodeGroup.vue';
 import { data as illustrationData } from '../../../../illustration-icons/illustration.data';
 import { data as codeExampleData } from '../../../../illustration-icons/codeExamples.data';
+import IconDetailBackButton from './IconDetailBackButton.vue';
+import IconDetailMeta from './IconDetailMeta.vue';
+import IllustrationInfo from './IllustrationInfo.vue';
+import IllustrationPreview from './IllustrationPreview.vue';
 
 const props = defineProps<{
   locale: 'zh' | 'en';
@@ -16,28 +21,19 @@ const illustration = computed(
     illustrationData.illustrations.find((item) => item.name === params.value.name) ??
     illustrationData.illustrations[0],
 );
-const displayName = computed(() =>
-  props.locale === 'en'
-    ? illustration.value.englishName || illustration.value.displayName
-    : illustration.value.displayName,
-);
-const tags = computed(() =>
-  props.locale === 'en'
-    ? (illustration.value.englishTags ?? illustration.value.tags ?? [])
-    : (illustration.value.tags ?? []),
-);
-const useCases = computed(() =>
-  props.locale === 'en'
-    ? (illustration.value.englishUseCases ?? illustration.value.useCases ?? [])
-    : (illustration.value.useCases ?? []),
-);
 const tabs = computed(() => codeExampleData.codeExamples.map((codeExample) => codeExample.title));
 const codeExample = computed(() =>
   codeExampleData.codeExamples
     .map((item) =>
       item.code
-        .replace(/\$PascalCase/g, illustration.value.componentName)
-        .replace(/\$Path/g, illustration.value.path),
+        .replace(/\$(?:<[^>]+>)*PascalCase/g, illustration.value.componentName)
+        .replace(
+          /\$(?:<[^>]+>)*CamelCaseDataUri/g,
+          `${toCamelCase(illustration.value.name)}DataUri`,
+        )
+        .replace(/\$(?:<[^>]+>)*CamelCase/g, toCamelCase(illustration.value.name))
+        .replace(/\$(?:<[^>]+>)*Name/g, illustration.value.name)
+        .replace(/\$(?:<[^>]+>)*Path/g, illustration.value.path),
     )
     .join(''),
 );
@@ -46,55 +42,37 @@ const codeExample = computed(() =>
 <template>
   <div class="layout">
     <div class="illustration-previews">
+      <IconDetailBackButton :fallbackHref="locale === 'en' ? '/en/illustration-icons/' : '/illustration-icons/'" />
       <div class="preview">
-        <div v-html="illustration.svg" />
+        <IllustrationPreview
+          id="previewer"
+          :svg="illustration.svg"
+        />
       </div>
       <div class="small-previews">
         <div class="small-preview">
-          <div v-html="illustration.svg" />
+          <IllustrationPreview :svg="illustration.svg" />
         </div>
         <div class="small-preview">
-          <div v-html="illustration.svg" />
+          <IllustrationPreview :svg="illustration.svg" />
+        </div>
+        <div class="small-preview">
+          <IllustrationPreview :svg="illustration.svg" />
         </div>
       </div>
     </div>
 
     <div class="info">
-      <div class="metadata">
-        <p class="eyebrow">Illustration</p>
-        <h1>{{ displayName }}</h1>
-        <p class="muted">{{ illustration.path }}</p>
-
-        <div
-          v-if="tags.length > 0"
-          class="metadata-block"
-        >
-          <h2>{{ locale === 'en' ? 'Tags' : '标签' }}</h2>
-          <div class="tags">
-            <span
-              v-for="tag in tags"
-              :key="tag"
-              class="tag"
-            >
-              {{ tag }}
-            </span>
-          </div>
-        </div>
-
-        <div
-          v-if="useCases.length > 0"
-          class="metadata-block"
-        >
-          <h2>{{ locale === 'en' ? 'Use Cases' : '适用场景' }}</h2>
-          <ul>
-            <li
-              v-for="useCase in useCases"
-              :key="useCase"
-            >
-              {{ useCase }}
-            </li>
-          </ul>
-        </div>
+      <div class="info-header">
+        <IllustrationInfo
+          :illustration="illustration"
+          showMetadataDetails
+        />
+        <IconDetailMeta
+          :createdRelease="illustration.createdRelease"
+          :changedRelease="illustration.changedRelease"
+          :git="illustration.git"
+        />
       </div>
 
       <ClientOnly>
@@ -116,6 +94,9 @@ const codeExample = computed(() =>
 <style scoped>
 .layout {
   align-items: flex-start;
+  width: 100%;
+  max-width: calc(var(--vp-layout-max-width) - 64px);
+  margin: 0 auto;
 }
 
 .illustration-previews {
@@ -142,9 +123,10 @@ const codeExample = computed(() =>
 }
 
 .preview :deep(svg) {
-  max-width: 180px;
-  max-height: 180px;
+  width: min(100%, 200px);
   height: auto;
+  max-width: 200px;
+  max-height: 180px;
 }
 
 .small-previews {
@@ -165,42 +147,26 @@ const codeExample = computed(() =>
 }
 
 .small-preview :deep(svg) {
+  width: min(100%, 44px);
+  height: auto;
   max-width: 44px;
   max-height: 44px;
-  height: auto;
 }
 
-.metadata {
+.info {
   --tags-gradient-background: var(--vp-c-bg);
 }
 
-.metadata-block {
-  margin-top: 24px;
-}
-
-.eyebrow,
-.muted {
-  color: var(--vp-c-text-2);
-}
-
-.eyebrow {
-  margin: 0 0 8px;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.tags {
+.info-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.tag {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-2);
-  padding: 4px 10px;
+.info-header :deep(.illustration-info) {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .code {
@@ -216,6 +182,16 @@ const codeExample = computed(() =>
 
   .illustration-previews {
     flex-direction: column;
+  }
+
+  .small-previews {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 959px) {
+  .info-header {
+    display: block;
   }
 }
 </style>

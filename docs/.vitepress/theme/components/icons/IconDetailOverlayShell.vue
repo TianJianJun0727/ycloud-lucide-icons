@@ -3,9 +3,12 @@ import { createYCloudIcon } from '@ycloud-web/icons-vue';
 import { x } from '@data/iconNodes';
 import IconButton from '../base/IconButton.vue';
 
-defineProps<{
+withDefaults(defineProps<{
   open: boolean;
-}>();
+  layout?: 'sidebar' | 'page';
+}>(), {
+  layout: 'sidebar',
+});
 
 const emit = defineEmits<{
   close: [];
@@ -22,6 +25,7 @@ const CloseIcon = createYCloudIcon('Close', x);
     <div
       v-if="open"
       class="overlay-container"
+      :class="`overlay-container-${layout}`"
     >
       <div class="overlay-panel">
         <nav class="overlay-menu">
@@ -42,6 +46,7 @@ const CloseIcon = createYCloudIcon('Close', x);
   left: var(--left, 0);
   right: var(--right, 0);
   bottom: 0;
+  z-index: 40;
   pointer-events: none;
   height: 100%;
   width: 100%;
@@ -51,16 +56,21 @@ const CloseIcon = createYCloudIcon('Close', x);
 }
 
 @media (min-width: 960px) {
-  .overlay-container {
+  .overlay-container-sidebar {
     --left: calc(var(--vp-sidebar-width) + 32px);
     --right: 32px;
   }
 }
 
 @media (min-width: 1440px) {
-  .overlay-container {
+  .overlay-container-sidebar {
     --left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width));
     --right: calc((100% - var(--vp-layout-max-width)) / 2 + 32px);
+  }
+
+  .overlay-container-page {
+    --left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2);
+    --right: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2);
   }
 
   .overlay-panel {
@@ -80,6 +90,7 @@ const CloseIcon = createYCloudIcon('Close', x);
   box-shadow: var(--vp-shadow-5);
   will-change: transform;
   pointer-events: all;
+  overflow: hidden;
 }
 
 .overlay-menu {
@@ -92,7 +103,8 @@ const CloseIcon = createYCloudIcon('Close', x);
 }
 
 :deep(.icon-info),
-:deep(.business-icon-info) {
+:deep(.business-icon-info),
+:deep(.illustration-info) {
   height: 100%;
   flex: 1 1 auto;
   min-width: 0;
@@ -124,7 +136,8 @@ const CloseIcon = createYCloudIcon('Close', x);
   }
 
   :deep(.icon-info),
-  :deep(.business-icon-info) {
+  :deep(.business-icon-info),
+  :deep(.illustration-info) {
     padding-right: 0;
   }
 }

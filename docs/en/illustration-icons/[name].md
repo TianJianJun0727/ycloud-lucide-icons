@@ -12,7 +12,7 @@ import IllustrationDetail from '~/.vitepress/theme/components/icons/Illustration
 import PageContainer from '~/.vitepress/theme/components/PageContainer.vue'
 </script>
 
-<div class="VPDoc content">
+<div class="VPDoc vp-doc content">
   <PageContainer>
     <IllustrationDetail locale="en" />
   </PageContainer>
