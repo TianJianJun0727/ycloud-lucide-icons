@@ -167,7 +167,7 @@ import { Billing } from '@ycloud-web/icons-react-native/business';
 The Angular package exports business icon definitions that can be rendered as inline SVG or serialized by your application:
 
 ```ts
-import { getBusinessIcon } from '@ycloud-web/icons-angular';
+import { getBusinessIcon } from '@ycloud-web/icons-angular/business';
 
 const billing = getBusinessIcon('billing');
 ```

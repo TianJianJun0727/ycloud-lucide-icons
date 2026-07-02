@@ -5,12 +5,12 @@ const getIllustrationCodes = () => [
     language: 'html',
     title: 'Vanilla',
     code: `<script type="module">
-import { $CamelCaseSvg } from '@ycloud-web/icons/illustration';
+import illustrationUrl from '@ycloud-web/icons-static/illustration-icons/$Name.svg';
 
-document.querySelector('#$Name').innerHTML = $CamelCaseSvg;
+document.querySelector('#$Name').src = illustrationUrl;
 </script>
 
-<span id="$Name" aria-hidden="true"></span>
+<img id="$Name" alt="" width="100%">
 `,
   },
   {

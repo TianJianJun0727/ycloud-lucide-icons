@@ -169,7 +169,7 @@ import { Billing } from '@ycloud-web/icons-react-native/business';
 Angular 包导出业务图标定义，可按 `attrs + node` 渲染为内联 SVG 或自行序列化：
 
 ```ts
-import { getBusinessIcon } from '@ycloud-web/icons-angular';
+import { getBusinessIcon } from '@ycloud-web/icons-angular/business';
 
 const billing = getBusinessIcon('billing');
 ```

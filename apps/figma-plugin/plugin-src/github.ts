@@ -51,6 +51,14 @@ function uniqueList<T>(items: T[]): T[] {
   return items.filter((item, index, list) => list.indexOf(item) === index);
 }
 
+function findDuplicates(items: string[]) {
+  const counts = new Map<string, number>();
+  for (const item of items) {
+    counts.set(item, (counts.get(item) ?? 0) + 1);
+  }
+  return [...counts.entries()].filter(([, count]) => count > 1).map(([item]) => item);
+}
+
 function collectIconMetadataNames(index: IconMetadataIndex) {
   return uniqueList(
     (index.assets ?? []).flatMap((asset) => [
@@ -280,6 +288,15 @@ export function createGithubClient(
         : sourceType === 'illustration'
           ? buildIllustrationFiles(icons)
           : buildYCloudFiles(icons, metadata);
+    const duplicateTargetPaths = findDuplicates(files.map((file) => file.path));
+    if (duplicateTargetPaths.length > 0) {
+      throw new Error(
+        [
+          '本次提交包含重复的目标文件，请重命名后重试。',
+          ...duplicateTargetPaths.map((file) => `- ${file}`),
+        ].join('\n'),
+      );
+    }
     const reviewNotes: string[] = [];
     const iconCount = Object.keys(icons).length;
     const scope =
@@ -312,6 +329,13 @@ export function createGithubClient(
         baseTree.tree.filter((item) => item.type === 'blob').map((item) => item.path),
       );
       const existingIconNames = new Set(iconMetadata ? collectIconMetadataNames(iconMetadata) : []);
+      const existingBusinessIconNames = new Set(
+        baseTree.tree
+          .filter(
+            (item) => item.type === 'blob' && /^business-icons\/[^/]+\/[^/]+\.svg$/.test(item.path),
+          )
+          .map((item) => item.path.replace(/^business-icons\/[^/]+\//, '').replace(/\.svg$/, '')),
+      );
       const conflicts = files
         .filter((file) => existingPaths.has(file.path))
         .map((file) => file.path);
@@ -324,7 +348,16 @@ export function createGithubClient(
               })
               .map((file) => `${file.path}（命中已有图标名称或别名）`)
           : [];
-      conflicts.push(...aliasConflicts);
+      const businessNameConflicts =
+        sourceType === 'business'
+          ? files
+              .filter((file) => {
+                const name = file.path.match(/^business-icons\/[^/]+\/(.+)\.svg$/)?.[1];
+                return Boolean(name && existingBusinessIconNames.has(name));
+              })
+              .map((file) => `${file.path}（业务图标名称需跨颜色模式唯一）`)
+          : [];
+      conflicts.push(...aliasConflicts, ...businessNameConflicts);
       if (conflicts.length > 0) {
         throw new Error(
           [

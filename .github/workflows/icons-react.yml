@@ -20,6 +20,7 @@ on:
       - packages/icons-shared/**
       - pnpm-workspace.yaml
       - scripts/generateNextJSAliases.mjs
+      - tools/build-helpers/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
   pull_request:
@@ -35,6 +36,7 @@ on:
       - scripts/render/**
       - packages/icons-react/**
       - packages/icons-shared/**
+      - tools/build-helpers/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - scripts/generateNextJSAliases.mjs

@@ -19,6 +19,7 @@ on:
       - packages/icons-astro/**
       - packages/icons-shared/**
       - pnpm-workspace.yaml
+      - tools/build-helpers/**
       - tools/build-icons/**
   pull_request:
     paths:
@@ -33,6 +34,7 @@ on:
       - scripts/render/**
       - packages/icons-astro/**
       - packages/icons-shared/**
+      - tools/build-helpers/**
       - tools/build-icons/**
 
 concurrency:

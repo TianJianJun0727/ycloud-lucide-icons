@@ -63,12 +63,12 @@ export default App;
     language: 'html',
     title: 'Angular',
     code: `<!-- app.component.ts -->
-import { $CamelCaseDataUri } from '@ycloud-web/icons/business';
+import iconUrl from '@ycloud-web/icons-static/business-icons/$ColorMode/$Name.svg';
 
-iconUrl = $CamelCaseDataUri;
+businessIconUrl = iconUrl;
 
 <!-- app.component.html -->
-<img [src]="iconUrl" alt="" />`,
+<img [src]="businessIconUrl" alt="" width="24" height="24" />`,
   },
 ];
 
@@ -77,14 +77,13 @@ const getMonoBusinessIconCodes = (): CodeExampleType => [
     language: 'html',
     title: 'Vanilla',
     code: `<script type="module">
-import { $CamelCaseSvg } from '@ycloud-web/icons/business';
+import iconUrl from '@ycloud-web/icons-static/business-icons/$ColorMode/$Name.svg';
 
 const icon = document.querySelector('#$Name');
-icon.innerHTML = $CamelCaseSvg;
-icon.style.color = '#128C7E';
+icon.src = iconUrl;
 </script>
 
-<span id="$Name" aria-hidden="true"></span>`,
+<img id="$Name" alt="" width="24" height="24">`,
   },
   {
     language: 'tsx',
@@ -108,15 +107,13 @@ const getDuotoneBusinessIconCodes = (): CodeExampleType => [
     language: 'html',
     title: 'Vanilla',
     code: `<script type="module">
-import { $CamelCaseSvg } from '@ycloud-web/icons/business';
+import iconUrl from '@ycloud-web/icons-static/business-icons/$ColorMode/$Name.svg';
 
 const icon = document.querySelector('#$Name');
-icon.innerHTML = $CamelCaseSvg;
-icon.style.setProperty('--business-icon-primary-color', '#128C7E');
-icon.style.setProperty('--business-icon-secondary-color', '#FFFFFF');
+icon.src = iconUrl;
 </script>
 
-<span id="$Name" aria-hidden="true"></span>`,
+<img id="$Name" alt="" width="24" height="24">`,
   },
   {
     language: 'tsx',
@@ -144,9 +141,9 @@ const getMulticolorBusinessIconCodes = (): CodeExampleType => [
     language: 'html',
     title: 'Vanilla',
     code: `<script type="module">
-import { $CamelCaseDataUri } from '@ycloud-web/icons/business';
+import iconUrl from '@ycloud-web/icons-static/business-icons/$ColorMode/$Name.svg';
 
-document.querySelector('#$Name').src = $CamelCaseDataUri;
+document.querySelector('#$Name').src = iconUrl;
 </script>
 
 <img id="$Name" alt="" width="24" height="24">`,

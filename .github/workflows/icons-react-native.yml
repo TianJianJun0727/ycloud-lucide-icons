@@ -19,6 +19,7 @@ on:
       - packages/icons-react-native/**
       - packages/icons-shared/**
       - pnpm-workspace.yaml
+      - tools/build-helpers/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
   pull_request:
@@ -34,6 +35,7 @@ on:
       - scripts/render/**
       - packages/icons-react-native/**
       - packages/icons-shared/**
+      - tools/build-helpers/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
 

@@ -154,6 +154,14 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       : categoryMessage;
   const existingIconSet = useMemo(() => new Set(existingIconNames), [existingIconNames]);
   const getTargetIconKey = (name: string, data?: YCloudIconData) => toKebabCase(data?.name || name);
+  const targetIconNameCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const [name, data] of icons) {
+      const targetName = getTargetIconKey(name, data);
+      counts.set(targetName, (counts.get(targetName) ?? 0) + 1);
+    }
+    return counts;
+  }, [icons]);
   const selectedIconSet = useMemo(() => new Set(selectedIconNames), [selectedIconNames]);
   const selectedIcons = useMemo(
     () => icons.filter(([name]) => selectedIconSet.has(name)),
@@ -165,12 +173,16 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         const sourceName = getSourceIconName(name, data);
         const svg = data.svg;
         const cleanedSvg = sanitizeSvg(svg);
+        const targetName = getTargetIconKey(name, data);
         const issues =
           sourceType === 'business'
             ? [...getBusinessIconNameIssues(sourceName), ...getBusinessSvgIssues(svg)]
             : sourceType === 'illustration'
               ? [...getBusinessIconNameIssues(sourceName), ...getIllustrationSvgIssues(svg)]
               : [...getIconNameIssues(sourceName), ...getSvgIssues(cleanedSvg)];
+        if ((targetIconNameCounts.get(targetName) ?? 0) > 1) {
+          issues.push(`本次预览中存在重复目标名：${targetName}`);
+        }
         const warnings = [
           ...(sourceType === 'business' || sourceType === 'illustration'
             ? []
@@ -199,6 +211,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       selectedIcons,
       sourceType,
       ycloudMetadata.businessColorMode,
+      targetIconNameCounts,
     ],
   );
   const skippedExistingIconCount = selectedIcons.length - deployableSelectedIcons.length;
@@ -793,7 +806,8 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         <div className={styles.preview}>
           {icons.map(([name, data]) => {
             const { svg } = data;
-            const isExistingIcon = existingIconSet.has(getTargetIconKey(name, data));
+            const targetIconName = getTargetIconKey(name, data);
+            const isExistingIcon = existingIconSet.has(targetIconName);
             const isDisabledExistingIcon = isExistingIcon && !allowExistingIconUpdate;
             const quality = getIconQuality(name);
             const isBlockedIcon = quality.issues.length > 0;
@@ -874,9 +888,9 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
                 </p>
                 <p
                   className={isDisabledIcon ? styles.previewInlineError : styles.previewTargetName}
-                  title={isDisabledIcon ? disabledReasons.join('；') : name}
+                  title={isDisabledIcon ? disabledReasons.join('；') : targetIconName}
                 >
-                  {isDisabledIcon ? disabledReasons[0] : name}
+                  {isDisabledIcon ? disabledReasons[0] : targetIconName}
                 </p>
               </div>
             );
@@ -935,7 +949,9 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
                 >
                   {getSourceIconName(previewDialogIcon[0], previewDialogIcon[1])}
                 </h2>
-                <p className={styles.dialogMeta}>目标名：{toKebabCase(previewDialogIcon[0])}</p>
+                <p className={styles.dialogMeta}>
+                  目标名：{getTargetIconKey(previewDialogIcon[0], previewDialogIcon[1])}
+                </p>
               </div>
               <button
                 className={styles.dialogCloseButton}

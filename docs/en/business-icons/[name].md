@@ -39,6 +39,7 @@ const codeExample = computed(() => codeExamples.value.map(
         .replace(/\$PascalCase/g, pascalCaseName)
         .replace(/\$CamelCase/g, camelCaseName)
         .replace(/\$Category/g, params.value.category)
+        .replace(/\$ColorMode/g, params.value.colorMode ?? 'mono')
         .replace(/\$Name/g, params.value.name)
     }
   ).join('') ?? []
