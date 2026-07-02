@@ -1,7 +1,7 @@
 import { For, splitProps, useContext } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import defaultAttributes from './defaultAttributes';
-import { IconNode, YCloudIconsProps } from './types';
+import type { IconNode, YCloudIconsProps } from './types';
 import { YCloudContext } from './context';
 import { hasA11yProp, mergeClasses, toKebabCase, toPascalCase } from '@ycloud-web/shared';
 

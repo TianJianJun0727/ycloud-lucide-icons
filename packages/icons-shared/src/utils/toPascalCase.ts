@@ -1,4 +1,4 @@
-import { CamelToPascal } from '../utility-types';
+import type { CamelToPascal } from '../utility-types';
 import { toCamelCase } from './toCamelCase';
 
 /**
