@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "空列表",
+  "tags": ["空列表", "暂无数据", "列表为空", "无内容"],
+  "use-cases": ["列表或表格无数据", "筛选后没有可展示内容"],
+  "i18n": {
+    "en": {
+      "name": "Empty List",
+      "tags": ["empty list", "empty", "list"],
+      "use-cases": ["Empty list or table", "No content after filtering"]
+    }
+  }
+}

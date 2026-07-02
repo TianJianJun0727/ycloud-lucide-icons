@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "Shopify",
+  "tags": ["Shopify", "双色业务图标", "业务图标"],
+  "use-cases": ["Shopify相关入口或状态展示", "需要兼容历史业务视觉的 Shopify 场景"],
+  "i18n": {
+    "en": {
+      "name": "shopify",
+      "tags": ["shopify", "duotone", "business icon"],
+      "use-cases": ["shopify entry or status", "Legacy business visual for shopify scenarios"]
+    }
+  }
+}

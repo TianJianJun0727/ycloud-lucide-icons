@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "加载失败",
+  "tags": ["加载失败", "请求失败", "重试"],
+  "use-cases": ["页面或模块加载失败", "提示用户重试"],
+  "i18n": {
+    "en": {
+      "name": "Load Failed",
+      "tags": ["load failed", "load", "failed"],
+      "use-cases": ["Page or module failed to load", "Prompt users to retry"]
+    }
+  }
+}

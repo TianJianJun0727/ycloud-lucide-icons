@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "代码描边",
+  "tags": ["代码描边", "代码", "描边", "单色业务图标", "业务图标"],
+  "use-cases": ["代码描边相关入口或状态展示", "需要兼容历史业务视觉的 代码描边 场景"],
+  "i18n": {
+    "en": {
+      "name": "code outlined",
+      "tags": ["code outlined", "code", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "code outlined entry or status",
+        "Legacy business visual for code outlined scenarios"
+      ]
+    }
+  }
+}

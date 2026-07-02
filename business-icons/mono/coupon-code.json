@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "优惠券代码",
+  "tags": ["优惠券代码", "优惠券", "代码", "单色业务图标", "业务图标"],
+  "use-cases": ["优惠券代码相关入口或状态展示", "需要兼容历史业务视觉的 优惠券代码 场景"],
+  "i18n": {
+    "en": {
+      "name": "coupon code",
+      "tags": ["coupon code", "coupon", "code", "mono", "business icon"],
+      "use-cases": [
+        "coupon code entry or status",
+        "Legacy business visual for coupon code scenarios"
+      ]
+    }
+  }
+}

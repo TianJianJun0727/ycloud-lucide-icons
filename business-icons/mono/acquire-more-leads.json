@@ -1,0 +1,28 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "获取获客更多线索潜客",
+  "tags": [
+    "获取获客更多线索潜客",
+    "获取",
+    "获客",
+    "更多",
+    "线索",
+    "潜客",
+    "单色业务图标",
+    "业务图标"
+  ],
+  "use-cases": [
+    "获取获客更多线索潜客相关入口或状态展示",
+    "需要兼容历史业务视觉的 获取获客更多线索潜客 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "acquire more leads",
+      "tags": ["acquire more leads", "acquire", "more", "leads", "mono", "business icon"],
+      "use-cases": [
+        "acquire more leads entry or status",
+        "Legacy business visual for acquire more leads scenarios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "未找到",
+  "tags": ["404", "未找到", "页面不存在"],
+  "use-cases": ["404 页面", "资源不存在或链接失效"],
+  "i18n": {
+    "en": {
+      "name": "Not Found",
+      "tags": ["not found", "not", "found"],
+      "use-cases": ["404 page", "Missing resource or invalid link"]
+    }
+  }
+}

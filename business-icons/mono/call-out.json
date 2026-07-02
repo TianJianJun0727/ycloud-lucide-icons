@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "通话呼叫呼出",
+  "tags": ["通话呼叫呼出", "通话", "呼叫", "呼出", "单色业务图标", "业务图标"],
+  "use-cases": ["通话呼叫呼出相关入口或状态展示", "需要兼容历史业务视觉的 通话呼叫呼出 场景"],
+  "i18n": {
+    "en": {
+      "name": "call out",
+      "tags": ["call out", "call", "out", "mono", "business icon"],
+      "use-cases": ["call out entry or status", "Legacy business visual for call out scenarios"]
+    }
+  }
+}

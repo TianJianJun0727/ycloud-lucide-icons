@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "工具填充",
+  "tags": ["工具填充", "工具", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["工具填充相关入口或状态展示", "需要兼容历史业务视觉的 工具填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "tool filled",
+      "tags": ["tool filled", "tool", "filled", "mono", "business icon"],
+      "use-cases": [
+        "tool filled entry or status",
+        "Legacy business visual for tool filled scenarios"
+      ]
+    }
+  }
+}

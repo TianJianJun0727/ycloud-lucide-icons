@@ -2,7 +2,7 @@
 import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity } from '@theme/types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
-import { useData, useRoute, withBase } from 'vitepress';
+import { useData, useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
 import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
@@ -162,15 +162,6 @@ watch(searchQueryDebounced, () => {
 
 function handleCloseDrawer() {
   activeIcon.value = null;
-
-  const url = new URL(window.location);
-  url.pathname = withBase(isEnglish.value ? '/en/icons/' : '/icons/');
-
-  if (searchQueryDebounced.value) {
-    url.searchParams.set('search', searchQueryDebounced.value);
-  }
-
-  window.history.pushState({}, '', url);
 }
 </script>
 

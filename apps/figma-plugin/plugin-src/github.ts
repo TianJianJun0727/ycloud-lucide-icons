@@ -32,6 +32,34 @@ function createIconJson(metadata: YCloudMetadataOptions): Record<string, unknown
     },
   };
 }
+
+function toEnglishName(name: string) {
+  return name
+    .split(/[^a-zA-Z0-9]+/)
+    .filter(Boolean)
+    .join(' ');
+}
+
+function createAssetJson(icon: YCloudIconData, fallbackName: string, kind: IconSourceType) {
+  const englishName = icon.ycloud?.nameEn || toEnglishName(fallbackName);
+  const displayName = icon.ycloud?.nameZh || englishName || fallbackName;
+  const typeTag = kind === 'business' ? '业务图标' : '插画';
+  const englishTypeTag = kind === 'business' ? 'business icon' : 'illustration';
+  return {
+    $schema:
+      kind === 'business' ? '../../asset-metadata.schema.json' : '../asset-metadata.schema.json',
+    name: displayName,
+    tags: [displayName, typeTag],
+    'use-cases': [`${displayName}相关入口或状态展示`],
+    i18n: {
+      en: {
+        name: englishName,
+        tags: [englishName, englishTypeTag],
+        'use-cases': [`${englishName} entry or status`],
+      },
+    },
+  };
+}
 function buildYCloudFiles(icons: Record<string, YCloudIconData>, metadata: YCloudMetadataOptions) {
   const iconFiles = Object.entries(icons).flatMap(([key, icon]) => {
     const name = toKebabCase(icon.name || key);
@@ -58,21 +86,33 @@ function buildBusinessIconFiles(
       : metadata.businessColorMode === 'duotone' || metadata.businessCategory === 'duotone'
         ? 'duotone'
         : 'mono';
-  return Object.entries(icons).map(([key, icon]) => {
+  return Object.entries(icons).flatMap(([key, icon]) => {
     const name = toKebabCase(icon.name || key);
-    return {
-      path: `business-icons/${businessColorMode}/${name}.svg`,
-      content: sanitizeBusinessSvg(icon.svg, businessColorMode),
-    };
+    return [
+      {
+        path: `business-icons/${businessColorMode}/${name}.svg`,
+        content: sanitizeBusinessSvg(icon.svg, businessColorMode),
+      },
+      {
+        path: `business-icons/${businessColorMode}/${name}.json`,
+        content: `${JSON.stringify(createAssetJson(icon, name, 'business'), null, 2)}\n`,
+      },
+    ];
   });
 }
 function buildIllustrationFiles(icons: Record<string, YCloudIconData>) {
-  return Object.entries(icons).map(([key, icon]) => {
+  return Object.entries(icons).flatMap(([key, icon]) => {
     const name = toKebabCase(icon.name || key);
-    return {
-      path: `illustration-icons/${name}.svg`,
-      content: sanitizeIllustrationSvg(icon.svg),
-    };
+    return [
+      {
+        path: `illustration-icons/${name}.svg`,
+        content: sanitizeIllustrationSvg(icon.svg),
+      },
+      {
+        path: `illustration-icons/${name}.json`,
+        content: `${JSON.stringify(createAssetJson(icon, name, 'illustration'), null, 2)}\n`,
+      },
+    ];
   });
 }
 

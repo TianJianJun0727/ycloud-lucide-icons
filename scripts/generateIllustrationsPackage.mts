@@ -94,8 +94,14 @@ const toReactAttributeName = (name: string) => {
   return name.replace(/-([a-z])/g, (_, letter: string) => letter.toUpperCase());
 };
 
-function buildSvgAssetNode(node: INode): [string, Record<string, string>] | [string, Record<string, string>, ReturnType<typeof buildSvgAssetNode>[]] {
-  const attrs = Object.fromEntries(Object.entries(node.attributes).map(([key, value]) => [key, String(value)]));
+function buildSvgAssetNode(
+  node: INode,
+):
+  | [string, Record<string, string>]
+  | [string, Record<string, string>, ReturnType<typeof buildSvgAssetNode>[]] {
+  const attrs = Object.fromEntries(
+    Object.entries(node.attributes).map(([key, value]) => [key, String(value)]),
+  );
   const children = node.children.filter((child) => child.type === 'element').map(buildSvgAssetNode);
 
   if (children.length > 0) {
@@ -108,7 +114,9 @@ function buildSvgAssetNode(node: INode): [string, Record<string, string>] | [str
 function parseSvgAsset(svg: string) {
   const root = parseSync(svg);
   return {
-    attrs: Object.fromEntries(Object.entries(root.attributes).map(([key, value]) => [key, String(value)])),
+    attrs: Object.fromEntries(
+      Object.entries(root.attributes).map(([key, value]) => [key, String(value)]),
+    ),
     node: root.children.filter((child) => child.type === 'element').map(buildSvgAssetNode),
   };
 }
@@ -431,7 +439,9 @@ async function reset(targets: Target[]) {
   await Promise.all(
     dirs
       .filter(([target]) => targets.includes(target))
-      .map(([, dir]) => fs.rm(dir, { recursive: true, force: true }).then(() => fs.mkdir(dir, { recursive: true }))),
+      .map(([, dir]) =>
+        fs.rm(dir, { recursive: true, force: true }).then(() => fs.mkdir(dir, { recursive: true })),
+      ),
   );
 }
 
@@ -446,37 +456,58 @@ export async function generateIllustrationsPackage(targets: Target[] = [...allTa
       const writes: Promise<unknown>[] = [];
       if (targets.includes('core')) {
         writes.push(
-          fs.writeFile(path.join(packageDirs.core, illustrationPackageDirName, `${source.name}.ts`), buildDataModule(source.name, source.svg)),
+          fs.writeFile(
+            path.join(packageDirs.core, illustrationPackageDirName, `${source.name}.ts`),
+            buildDataModule(source.name, source.svg),
+          ),
         );
       }
       if (targets.includes('data')) {
         writes.push(
-          fs.writeFile(path.join(packageDirs.data, illustrationPackageDirName, `${source.name}.ts`), buildDataModule(source.name, source.svg)),
+          fs.writeFile(
+            path.join(packageDirs.data, illustrationPackageDirName, `${source.name}.ts`),
+            buildDataModule(source.name, source.svg),
+          ),
         );
       }
       if (targets.includes('angular')) {
         writes.push(
-          fs.writeFile(path.join(packageDirs.angular, illustrationPackageDirName, `${source.name}.ts`), buildDataModule(source.name, source.svg)),
+          fs.writeFile(
+            path.join(packageDirs.angular, illustrationPackageDirName, `${source.name}.ts`),
+            buildDataModule(source.name, source.svg),
+          ),
         );
       }
       if (targets.includes('react')) {
         writes.push(
-          fs.writeFile(path.join(packageDirs.react, illustrationPackageDirName, `${source.name}.tsx`), buildReactModule(source.name, source.svg)),
+          fs.writeFile(
+            path.join(packageDirs.react, illustrationPackageDirName, `${source.name}.tsx`),
+            buildReactModule(source.name, source.svg),
+          ),
         );
       }
       if (targets.includes('preact')) {
         writes.push(
-          fs.writeFile(path.join(packageDirs.preact, illustrationPackageDirName, `${source.name}.ts`), buildImgModule(source.name, dataUri, 'preact')),
+          fs.writeFile(
+            path.join(packageDirs.preact, illustrationPackageDirName, `${source.name}.ts`),
+            buildImgModule(source.name, dataUri, 'preact'),
+          ),
         );
       }
       if (targets.includes('vue')) {
         writes.push(
-          fs.writeFile(path.join(packageDirs.vue, illustrationPackageDirName, `${source.name}.ts`), buildImgModule(source.name, dataUri, 'vue')),
+          fs.writeFile(
+            path.join(packageDirs.vue, illustrationPackageDirName, `${source.name}.ts`),
+            buildImgModule(source.name, dataUri, 'vue'),
+          ),
         );
       }
       if (targets.includes('solid')) {
         writes.push(
-          fs.writeFile(path.join(packageDirs.solid, illustrationPackageDirName, `${source.name}.tsx`), buildSolidModule(source.name, dataUri)),
+          fs.writeFile(
+            path.join(packageDirs.solid, illustrationPackageDirName, `${source.name}.tsx`),
+            buildSolidModule(source.name, dataUri),
+          ),
         );
       }
       if (targets.includes('react-native')) {
@@ -488,27 +519,48 @@ export async function generateIllustrationsPackage(targets: Target[] = [...allTa
         );
       }
       if (targets.includes('svelte')) {
-        writes.push(fs.writeFile(path.join(packageDirs.svelte, illustrationPackageDirName, `${source.name}.svelte`), buildSvelteModule(dataUri)));
+        writes.push(
+          fs.writeFile(
+            path.join(packageDirs.svelte, illustrationPackageDirName, `${source.name}.svelte`),
+            buildSvelteModule(dataUri),
+          ),
+        );
       }
       if (targets.includes('astro')) {
-        writes.push(fs.writeFile(path.join(packageDirs.astro, illustrationPackageDirName, `${source.name}.astro`), buildAstroModule(dataUri)));
+        writes.push(
+          fs.writeFile(
+            path.join(packageDirs.astro, illustrationPackageDirName, `${source.name}.astro`),
+            buildAstroModule(dataUri),
+          ),
+        );
       }
       if (targets.includes('static')) {
-        writes.push(fs.copyFile(path.join(illustrationsDir, source.sourcePath), path.join(packageDirs.static, source.sourcePath)));
+        writes.push(
+          fs.copyFile(
+            path.join(illustrationsDir, source.sourcePath),
+            path.join(packageDirs.static, source.sourcePath),
+          ),
+        );
       }
       await Promise.all(writes);
     }),
   );
 
-  if (targets.includes('core')) await fs.writeFile(path.join(packageDirs.core, 'illustration.ts'), buildDataIndex(sources));
-  if (targets.includes('data')) await fs.writeFile(path.join(packageDirs.data, 'illustration.ts'), buildDataIndex(sources));
-  if (targets.includes('angular')) await fs.writeFile(path.join(packageDirs.angular, 'illustration.ts'), buildDataIndex(sources));
+  if (targets.includes('core'))
+    await fs.writeFile(path.join(packageDirs.core, 'illustration.ts'), buildDataIndex(sources));
+  if (targets.includes('data'))
+    await fs.writeFile(path.join(packageDirs.data, 'illustration.ts'), buildDataIndex(sources));
+  if (targets.includes('angular'))
+    await fs.writeFile(path.join(packageDirs.angular, 'illustration.ts'), buildDataIndex(sources));
   if (targets.includes('react')) {
     await fs.writeFile(path.join(packageDirs.react, 'illustration.ts'), buildComponentIndex(names));
     await fs.writeFile(path.join(packageDirs.react, 'illustrationTypes.ts'), buildReactTypes());
   }
   if (targets.includes('preact')) {
-    await fs.writeFile(path.join(packageDirs.preact, 'illustration.ts'), buildComponentIndex(names));
+    await fs.writeFile(
+      path.join(packageDirs.preact, 'illustration.ts'),
+      buildComponentIndex(names),
+    );
     await fs.writeFile(path.join(packageDirs.preact, 'illustrationTypes.ts'), buildHtmlTypes());
   }
   if (targets.includes('vue')) {
@@ -520,15 +572,27 @@ export async function generateIllustrationsPackage(targets: Target[] = [...allTa
     await fs.writeFile(path.join(packageDirs.solid, 'illustrationTypes.ts'), buildSolidTypes());
   }
   if (targets.includes('react-native')) {
-    await fs.writeFile(path.join(packageDirs.reactNative, 'illustration.ts'), buildComponentIndex(names));
-    await fs.writeFile(path.join(packageDirs.reactNative, 'illustrationTypes.ts'), buildReactNativeTypes());
+    await fs.writeFile(
+      path.join(packageDirs.reactNative, 'illustration.ts'),
+      buildComponentIndex(names),
+    );
+    await fs.writeFile(
+      path.join(packageDirs.reactNative, 'illustrationTypes.ts'),
+      buildReactNativeTypes(),
+    );
   }
   if (targets.includes('svelte')) {
-    await fs.writeFile(path.join(packageDirs.svelte, 'illustration-icons.ts'), buildComponentIndex(names, '.svelte', '.js'));
+    await fs.writeFile(
+      path.join(packageDirs.svelte, 'illustration-icons.ts'),
+      buildComponentIndex(names, '.svelte', '.js'),
+    );
     await fs.writeFile(path.join(packageDirs.svelte, 'illustrationTypes.ts'), buildHtmlTypes());
   }
   if (targets.includes('astro')) {
-    await fs.writeFile(path.join(packageDirs.astro, 'illustration-icons.ts'), buildComponentIndex(names, '.astro'));
+    await fs.writeFile(
+      path.join(packageDirs.astro, 'illustration-icons.ts'),
+      buildComponentIndex(names, '.astro'),
+    );
     await fs.writeFile(path.join(packageDirs.astro, 'illustrationTypes.ts'), buildHtmlTypes());
   }
 }
@@ -537,7 +601,8 @@ function parseTargets(args: string[]): Target[] {
   if (args.length === 0) return [...allTargets];
   return args.flatMap((arg) =>
     arg.split(',').map((target) => {
-      if (!allTargets.includes(target as Target)) throw new Error(`Unknown illustration package target: ${target}`);
+      if (!allTargets.includes(target as Target))
+        throw new Error(`Unknown illustration package target: ${target}`);
       return target as Target;
     }),
   );

@@ -60,6 +60,12 @@ type BusinessIconIndex = {
   }>;
 };
 
+type IconNamesIndex = {
+  names?: Array<{
+    name?: string;
+  }>;
+};
+
 const GITHUB_API_VERSION = '2022-11-28';
 const businessColorModes = [
   { value: 'mono', label: '单色', description: 'business-icons/mono' },
@@ -313,7 +319,14 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         Accept: 'application/vnd.github+json',
       };
       const apiUrl = `https://api.github.com/repos/${githubData.owner}/${githubData.name}`;
-      const [listResponse, treeResponse, businessIndexResponse] = await Promise.all([
+      const [
+        listResponse,
+        treeResponse,
+        businessIndexResponse,
+        genericNamesResponse,
+        businessNamesResponse,
+        illustrationNamesResponse,
+      ] = await Promise.all([
         fetch(`${apiUrl}/contents/categories?ref=main`, {
           headers,
         }),
@@ -321,6 +334,15 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
           headers,
         }),
         fetch(`${apiUrl}/contents/business-icons/index.json?ref=main`, {
+          headers,
+        }),
+        fetch(`${apiUrl}/contents/icons/names/index.json?ref=main`, {
+          headers,
+        }),
+        fetch(`${apiUrl}/contents/business-icons/names/index.json?ref=main`, {
+          headers,
+        }),
+        fetch(`${apiUrl}/contents/illustration-icons/names/index.json?ref=main`, {
           headers,
         }),
       ]);
@@ -346,6 +368,21 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
           (item) => item.type === 'blob' && /^illustration-icons\/[^/]+\.svg$/.test(item.path),
         )
         .map((item) => item.path.replace(/^illustration-icons\//, '').replace(/\.svg$/, ''));
+      const decodeNames = async (response: Response) => {
+        if (!response.ok) return [];
+        const index = decodeBase64Json<IconNamesIndex>(
+          ((await response.json()) as GitHubContentFile).content,
+        );
+        return (index.names ?? [])
+          .map((item) => item.name)
+          .filter((name): name is string => typeof name === 'string' && name.length > 0);
+      };
+      const [indexGenericIconNames, indexedBusinessIconNames, indexedIllustrationNames] =
+        await Promise.all([
+          decodeNames(genericNamesResponse),
+          decodeNames(businessNamesResponse),
+          decodeNames(illustrationNamesResponse),
+        ]);
       const businessIndex = businessIndexResponse.ok
         ? decodeBase64Json<BusinessIconIndex>(
             ((await businessIndexResponse.json()) as GitHubContentFile).content,
@@ -357,7 +394,13 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         .map((icon) => icon.name)
         .filter((name): name is string => typeof name === 'string' && name.length > 0);
       const nextExistingBusinessIconNames = Array.from(
-        new Set([...indexBusinessIconNames, ...treeBusinessIconNames]),
+        new Set([...indexedBusinessIconNames, ...indexBusinessIconNames, ...treeBusinessIconNames]),
+      );
+      const nextExistingGenericIconNamesWithIndex = Array.from(
+        new Set([...indexGenericIconNames, ...nextExistingIconNames]),
+      );
+      const nextExistingIllustrationNamesWithIndex = Array.from(
+        new Set([...indexedIllustrationNames, ...nextExistingIllustrationNames]),
       );
       const nextCategories = await Promise.all(
         jsonFiles.map(async (item) => {
@@ -386,9 +429,9 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       setCategories(
         nextCategories.sort((left, right) => left.title.localeCompare(right.title, 'zh-Hans-CN')),
       );
-      setExistingGenericIconNames(nextExistingIconNames);
+      setExistingGenericIconNames(nextExistingGenericIconNamesWithIndex);
       setExistingBusinessIconNames(nextExistingBusinessIconNames);
-      setExistingIllustrationNames(nextExistingIllustrationNames);
+      setExistingIllustrationNames(nextExistingIllustrationNamesWithIndex);
       setCategoryMessage('synced');
     } catch (error) {
       setCategoryMessage(

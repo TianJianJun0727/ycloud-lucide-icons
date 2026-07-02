@@ -1,0 +1,19 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "WhatsApp缺口描边",
+  "tags": ["WhatsApp缺口描边", "WhatsApp", "缺口", "描边", "单色业务图标", "业务图标"],
+  "use-cases": [
+    "WhatsApp缺口描边相关入口或状态展示",
+    "需要兼容历史业务视觉的 WhatsApp缺口描边 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "whatsapp notch outlined",
+      "tags": ["whatsapp notch outlined", "whatsapp", "notch", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "whatsapp notch outlined entry or status",
+        "Legacy business visual for whatsapp notch outlined scenarios"
+      ]
+    }
+  }
+}

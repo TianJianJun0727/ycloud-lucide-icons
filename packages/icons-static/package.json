@@ -94,7 +94,7 @@
     "build:tags": "node ./scripts/migrateIconsToTags.mts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasesFileExtension=.ts --exportFileName=index.ts && node ../../scripts/generateBusinessIconsPackage.mts static && node ../../scripts/generateIllustrationsPackage.mts static && node ./scripts/writeStaticSvgStringModules.mts",
     "build:assets": "node ./scripts/buildStaticAssets.mts",
-    "build:manifest": "node ./scripts/writeStaticAssetsManifest.mts",
+    "build:manifest": "node ./scripts/writeStaticAssetsManifest.mts && pnpm --dir ../.. exec oxfmt packages/icons-static/assets.json",
     "build:bundles": "NODE_OPTIONS='--require=../../scripts/useTypeScript6Register.cjs --experimental-loader=../../scripts/useTypeScript6Loader.mjs --no-warnings' rollup -c rollup.config.mjs",
     "clean": "rm -rf dist && rm -rf build && rm -rf icons && rm -rf business-icons && rm -rf illustration && rm -rf illustrations && rm -rf illustration-icons && rm -rf ./src/business-icons ./src/illustration-icons && rm -f ./src/business-static.ts ./src/illustration-static.ts ./src/business-icons.ts ./src/illustration-icons.ts sprite.svg assets.json"
   },

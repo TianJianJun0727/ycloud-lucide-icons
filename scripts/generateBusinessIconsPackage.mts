@@ -103,8 +103,14 @@ function buildBusinessIconDataUri(svg: string) {
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
-function buildSvgAssetNode(node: INode): [string, Record<string, string>] | [string, Record<string, string>, ReturnType<typeof buildSvgAssetNode>[]] {
-  const attrs = Object.fromEntries(Object.entries(node.attributes).map(([key, value]) => [key, String(value)]));
+function buildSvgAssetNode(
+  node: INode,
+):
+  | [string, Record<string, string>]
+  | [string, Record<string, string>, ReturnType<typeof buildSvgAssetNode>[]] {
+  const attrs = Object.fromEntries(
+    Object.entries(node.attributes).map(([key, value]) => [key, String(value)]),
+  );
   const children = node.children.filter((child) => child.type === 'element').map(buildSvgAssetNode);
 
   if (children.length > 0) {
@@ -117,7 +123,9 @@ function buildSvgAssetNode(node: INode): [string, Record<string, string>] | [str
 function parseSvgAsset(svg: string) {
   const root = parseSync(svg);
   return {
-    attrs: Object.fromEntries(Object.entries(root.attributes).map(([key, value]) => [key, String(value)])),
+    attrs: Object.fromEntries(
+      Object.entries(root.attributes).map(([key, value]) => [key, String(value)]),
+    ),
     node: root.children.filter((child) => child.type === 'element').map(buildSvgAssetNode),
   };
 }
@@ -275,8 +283,7 @@ function buildHSvgElement(svg: string, colorMode: BusinessIconColorMode) {
     .filter(([name]) => name !== 'width' && name !== 'height')
     .map(([name, value]) => buildObjectProperty(name, String(value), 4));
   const children = (root.children ?? []).filter((child) => typeof child !== 'string') as INode[];
-  const colorProperties =
-    colorMode === 'multicolor' ? [] : ['    color,'];
+  const colorProperties = colorMode === 'multicolor' ? [] : ['    color,'];
 
   return [
     '  h(',
@@ -340,7 +347,9 @@ function buildMarkupSvgElement(
   const root = parseSync(svg);
   const rootAttributes = Object.entries(root.attributes ?? {})
     .filter(([name]) => name !== 'width' && name !== 'height')
-    .map(([name, value]) => `  ${buildMarkupAttribute(attributeNameFormatter(name), String(value))}`);
+    .map(
+      ([name, value]) => `  ${buildMarkupAttribute(attributeNameFormatter(name), String(value))}`,
+    );
   const children = (root.children ?? []).filter((child) => typeof child !== 'string') as INode[];
 
   return [
@@ -422,7 +431,10 @@ export function buildBusinessIconModule(
   ].join('\n');
 }
 
-export function buildBusinessIconsIndex(sources: BusinessIconExportSource[], includeAliases = true) {
+export function buildBusinessIconsIndex(
+  sources: BusinessIconExportSource[],
+  includeAliases = true,
+) {
   const sortedSources = sources
     .map(normalizeBusinessIconSource)
     .sort((left, right) => left.name.localeCompare(right.name));
@@ -567,10 +579,7 @@ export function buildBusinessPreactIconModule(
 ) {
   const componentName = getBusinessIconComponentName(name);
   const propsType = getBusinessSvgPropsType(componentName, colorMode);
-  const propsPattern = getBusinessSvgPropsPattern(
-    colorMode,
-    svg.includes(secondaryColorToken),
-  );
+  const propsPattern = getBusinessSvgPropsPattern(colorMode, svg.includes(secondaryColorToken));
 
   return [
     "import { h } from 'preact';",
@@ -592,10 +601,7 @@ export function buildBusinessVueIconModule(
 ) {
   const componentName = getBusinessIconComponentName(name);
   const propsType = getBusinessSvgPropsType(componentName, colorMode);
-  const propsPattern = getBusinessSvgPropsPattern(
-    colorMode,
-    svg.includes(secondaryColorToken),
-  );
+  const propsPattern = getBusinessSvgPropsPattern(colorMode, svg.includes(secondaryColorToken));
 
   return [
     "import { h, type FunctionalComponent } from 'vue';",
@@ -617,10 +623,7 @@ export function buildBusinessSolidIconModule(
 ) {
   const componentName = getBusinessIconComponentName(name);
   const propsType = getBusinessSvgPropsType(componentName, colorMode);
-  const propsPattern = getBusinessSvgPropsPattern(
-    colorMode,
-    svg.includes(secondaryColorToken),
-  );
+  const propsPattern = getBusinessSvgPropsPattern(colorMode, svg.includes(secondaryColorToken));
 
   return [
     "import type { BusinessIconImageProps } from '../businessTypes';",
@@ -664,10 +667,7 @@ export function buildBusinessSvelteIconModule(
 ) {
   const componentName = getBusinessIconComponentName(name);
   const propsType = getBusinessSvgPropsType(componentName, colorMode);
-  const propsPattern = getBusinessSvgPropsPattern(
-    colorMode,
-    svg.includes(secondaryColorToken),
-  );
+  const propsPattern = getBusinessSvgPropsPattern(colorMode, svg.includes(secondaryColorToken));
 
   return [
     '<script lang="ts">',
@@ -690,10 +690,7 @@ export function buildBusinessAstroIconModule(
 ) {
   const componentName = getBusinessIconComponentName(name);
   const propsType = getBusinessSvgPropsType(componentName, colorMode);
-  const propsPattern = getBusinessSvgPropsPattern(
-    colorMode,
-    svg.includes(secondaryColorToken),
-  );
+  const propsPattern = getBusinessSvgPropsPattern(colorMode, svg.includes(secondaryColorToken));
 
   return [
     '---',

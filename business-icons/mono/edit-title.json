@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "编辑标题",
+  "tags": ["编辑标题", "编辑", "标题", "单色业务图标", "业务图标"],
+  "use-cases": ["编辑标题相关入口或状态展示", "需要兼容历史业务视觉的 编辑标题 场景"],
+  "i18n": {
+    "en": {
+      "name": "edit title",
+      "tags": ["edit title", "edit", "title", "mono", "business icon"],
+      "use-cases": ["edit title entry or status", "Legacy business visual for edit title scenarios"]
+    }
+  }
+}

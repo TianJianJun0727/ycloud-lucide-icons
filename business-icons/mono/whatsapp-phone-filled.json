@@ -1,0 +1,19 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "WhatsApp电话填充",
+  "tags": ["WhatsApp电话填充", "WhatsApp", "电话", "填充", "单色业务图标", "业务图标"],
+  "use-cases": [
+    "WhatsApp电话填充相关入口或状态展示",
+    "需要兼容历史业务视觉的 WhatsApp电话填充 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "whatsapp phone filled",
+      "tags": ["whatsapp phone filled", "whatsapp", "phone", "filled", "mono", "business icon"],
+      "use-cases": [
+        "whatsapp phone filled entry or status",
+        "Legacy business visual for whatsapp phone filled scenarios"
+      ]
+    }
+  }
+}

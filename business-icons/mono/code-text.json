@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "代码文本",
+  "tags": ["代码文本", "代码", "文本", "单色业务图标", "业务图标"],
+  "use-cases": ["代码文本相关入口或状态展示", "需要兼容历史业务视觉的 代码文本 场景"],
+  "i18n": {
+    "en": {
+      "name": "code text",
+      "tags": ["code text", "code", "text", "mono", "business icon"],
+      "use-cases": ["code text entry or status", "Legacy business visual for code text scenarios"]
+    }
+  }
+}

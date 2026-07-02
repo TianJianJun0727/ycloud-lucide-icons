@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "提问问题",
+  "tags": ["提问问题", "提问", "问题", "单色业务图标", "业务图标"],
+  "use-cases": ["提问问题相关入口或状态展示", "需要兼容历史业务视觉的 提问问题 场景"],
+  "i18n": {
+    "en": {
+      "name": "ask question",
+      "tags": ["ask question", "ask", "question", "mono", "business icon"],
+      "use-cases": [
+        "ask question entry or status",
+        "Legacy business visual for ask question scenarios"
+      ]
+    }
+  }
+}

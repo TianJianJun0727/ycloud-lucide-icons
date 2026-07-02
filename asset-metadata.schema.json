@@ -1,0 +1,71 @@
+{
+  "$id": "https://tianjianjun0727.github.io/ycloud-icons/asset-metadata.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "YCloud Icons asset metadata schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "name", "tags", "i18n", "use-cases"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "use-cases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "i18n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en"],
+      "properties": {
+        "en": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "tags", "use-cases"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "use-cases": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

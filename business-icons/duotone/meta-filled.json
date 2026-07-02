@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "Meta填充",
+  "tags": ["Meta填充", "Meta", "填充", "双色业务图标", "业务图标"],
+  "use-cases": ["Meta填充相关入口或状态展示", "需要兼容历史业务视觉的 Meta填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "meta filled",
+      "tags": ["meta filled", "meta", "filled", "duotone", "business icon"],
+      "use-cases": [
+        "meta filled entry or status",
+        "Legacy business visual for meta filled scenarios"
+      ]
+    }
+  }
+}

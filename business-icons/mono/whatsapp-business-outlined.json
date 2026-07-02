@@ -1,0 +1,26 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "WhatsApp业务描边",
+  "tags": ["WhatsApp业务描边", "WhatsApp", "业务", "描边", "单色业务图标", "业务图标"],
+  "use-cases": [
+    "WhatsApp业务描边相关入口或状态展示",
+    "需要兼容历史业务视觉的 WhatsApp业务描边 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "whatsapp business outlined",
+      "tags": [
+        "whatsapp business outlined",
+        "whatsapp",
+        "business",
+        "outlined",
+        "mono",
+        "business icon"
+      ],
+      "use-cases": [
+        "whatsapp business outlined entry or status",
+        "Legacy business visual for whatsapp business outlined scenarios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "权益优势分析数据",
+  "tags": ["权益优势分析数据", "权益", "优势", "分析", "数据", "单色业务图标", "业务图标"],
+  "use-cases": [
+    "权益优势分析数据相关入口或状态展示",
+    "需要兼容历史业务视觉的 权益优势分析数据 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "benefit analytics",
+      "tags": ["benefit analytics", "benefit", "analytics", "mono", "business icon"],
+      "use-cases": [
+        "benefit analytics entry or status",
+        "Legacy business visual for benefit analytics scenarios"
+      ]
+    }
+  }
+}

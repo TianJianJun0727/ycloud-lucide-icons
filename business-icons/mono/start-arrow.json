@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "开始箭头",
+  "tags": ["开始箭头", "开始", "箭头", "单色业务图标", "业务图标"],
+  "use-cases": ["开始箭头相关入口或状态展示", "需要兼容历史业务视觉的 开始箭头 场景"],
+  "i18n": {
+    "en": {
+      "name": "start arrow",
+      "tags": ["start arrow", "start", "arrow", "mono", "business icon"],
+      "use-cases": [
+        "start arrow entry or status",
+        "Legacy business visual for start arrow scenarios"
+      ]
+    }
+  }
+}

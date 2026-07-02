@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "更多横向",
+  "tags": ["更多横向", "更多", "横向", "单色业务图标", "业务图标"],
+  "use-cases": ["更多横向相关入口或状态展示", "需要兼容历史业务视觉的 更多横向 场景"],
+  "i18n": {
+    "en": {
+      "name": "more horiz",
+      "tags": ["more horiz", "more", "horiz", "mono", "business icon"],
+      "use-cases": ["more horiz entry or status", "Legacy business visual for more horiz scenarios"]
+    }
+  }
+}

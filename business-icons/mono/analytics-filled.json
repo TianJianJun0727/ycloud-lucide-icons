@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "分析数据填充",
+  "tags": ["分析数据填充", "分析", "数据", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["分析数据填充相关入口或状态展示", "需要兼容历史业务视觉的 分析数据填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "analytics filled",
+      "tags": ["analytics filled", "analytics", "filled", "mono", "business icon"],
+      "use-cases": [
+        "analytics filled entry or status",
+        "Legacy business visual for analytics filled scenarios"
+      ]
+    }
+  }
+}

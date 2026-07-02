@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "表格设置",
+  "tags": ["表格设置", "表格", "设置", "单色业务图标", "业务图标"],
+  "use-cases": ["表格设置相关入口或状态展示", "需要兼容历史业务视觉的 表格设置 场景"],
+  "i18n": {
+    "en": {
+      "name": "table setting",
+      "tags": ["table setting", "table", "setting", "mono", "business icon"],
+      "use-cases": [
+        "table setting entry or status",
+        "Legacy business visual for table setting scenarios"
+      ]
+    }
+  }
+}

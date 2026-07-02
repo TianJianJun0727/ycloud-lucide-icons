@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "权益优势全球",
+  "tags": ["权益优势全球", "权益", "优势", "全球", "单色业务图标", "业务图标"],
+  "use-cases": ["权益优势全球相关入口或状态展示", "需要兼容历史业务视觉的 权益优势全球 场景"],
+  "i18n": {
+    "en": {
+      "name": "benefit global",
+      "tags": ["benefit global", "benefit", "global", "mono", "business icon"],
+      "use-cases": [
+        "benefit global entry or status",
+        "Legacy business visual for benefit global scenarios"
+      ]
+    }
+  }
+}

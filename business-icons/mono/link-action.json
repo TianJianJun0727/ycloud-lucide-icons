@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "链接动作",
+  "tags": ["链接动作", "链接", "动作", "单色业务图标", "业务图标"],
+  "use-cases": ["链接动作相关入口或状态展示", "需要兼容历史业务视觉的 链接动作 场景"],
+  "i18n": {
+    "en": {
+      "name": "link action",
+      "tags": ["link action", "link", "action", "mono", "business icon"],
+      "use-cases": [
+        "link action entry or status",
+        "Legacy business visual for link action scenarios"
+      ]
+    }
+  }
+}

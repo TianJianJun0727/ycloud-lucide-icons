@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "分类填充",
+  "tags": ["分类填充", "分类", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["分类填充相关入口或状态展示", "需要兼容历史业务视觉的 分类填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "category filled",
+      "tags": ["category filled", "category", "filled", "mono", "business icon"],
+      "use-cases": [
+        "category filled entry or status",
+        "Legacy business visual for category filled scenarios"
+      ]
+    }
+  }
+}

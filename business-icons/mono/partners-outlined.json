@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "合作伙伴描边",
+  "tags": ["合作伙伴描边", "合作伙伴", "描边", "单色业务图标", "业务图标"],
+  "use-cases": ["合作伙伴描边相关入口或状态展示", "需要兼容历史业务视觉的 合作伙伴描边 场景"],
+  "i18n": {
+    "en": {
+      "name": "partners outlined",
+      "tags": ["partners outlined", "partners", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "partners outlined entry or status",
+        "Legacy business visual for partners outlined scenarios"
+      ]
+    }
+  }
+}

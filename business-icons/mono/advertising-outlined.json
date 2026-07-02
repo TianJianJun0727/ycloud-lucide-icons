@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "广告投放描边",
+  "tags": ["广告投放描边", "广告", "投放", "描边", "单色业务图标", "业务图标"],
+  "use-cases": ["广告投放描边相关入口或状态展示", "需要兼容历史业务视觉的 广告投放描边 场景"],
+  "i18n": {
+    "en": {
+      "name": "advertising outlined",
+      "tags": ["advertising outlined", "advertising", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "advertising outlined entry or status",
+        "Legacy business visual for advertising outlined scenarios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "任务菜单填充",
+  "tags": ["任务菜单填充", "任务", "菜单", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["任务菜单填充相关入口或状态展示", "需要兼容历史业务视觉的 任务菜单填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "task menu filled",
+      "tags": ["task menu filled", "task", "menu", "filled", "mono", "business icon"],
+      "use-cases": [
+        "task menu filled entry or status",
+        "Legacy business visual for task menu filled scenarios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "已送达图标",
+  "tags": ["已送达图标", "已送达", "图标", "单色业务图标", "业务图标"],
+  "use-cases": ["已送达图标相关入口或状态展示", "需要兼容历史业务视觉的 已送达图标 场景"],
+  "i18n": {
+    "en": {
+      "name": "delivered icon",
+      "tags": ["delivered icon", "delivered", "icon", "mono", "business icon"],
+      "use-cases": [
+        "delivered icon entry or status",
+        "Legacy business visual for delivered icon scenarios"
+      ]
+    }
+  }
+}

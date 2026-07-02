@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "模板填充",
+  "tags": ["模板填充", "模板", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["模板填充相关入口或状态展示", "需要兼容历史业务视觉的 模板填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "template filled",
+      "tags": ["template filled", "template", "filled", "mono", "business icon"],
+      "use-cases": [
+        "template filled entry or status",
+        "Legacy business visual for template filled scenarios"
+      ]
+    }
+  }
+}

@@ -10,6 +10,12 @@ on:
       - 'business-icons/**/*.json'
       - 'illustration-icons/**/*.svg'
       - 'illustration-icons/**/*.json'
+      - 'icons/names/*.json'
+      - 'icons/metadata/*.json'
+      - 'business-icons/names/*.json'
+      - 'business-icons/metadata/*.json'
+      - 'illustration-icons/names/*.json'
+      - 'illustration-icons/metadata/*.json'
       - 'scripts/data/allowedNonChineseTerms.json'
 
 concurrency:
@@ -55,6 +61,12 @@ jobs:
             business-icons/**/*.json
             illustration-icons/**/*.svg
             illustration-icons/**/*.json
+            icons/names/*.json
+            icons/metadata/*.json
+            business-icons/names/*.json
+            business-icons/metadata/*.json
+            illustration-icons/names/*.json
+            illustration-icons/metadata/*.json
             icons/*.json
             categories/*.json
 
@@ -79,7 +91,9 @@ jobs:
           done
 
           for file in ${{ steps.changed-files.outputs.added_files }} ${{ steps.changed-files.outputs.modified_files }} ${{ steps.changed-files.outputs.renamed_files }}; do
-            if [[ "$file" == icons/* || "$file" == categories/* ]]; then
+            if [[ ( "$file" == icons/*.svg || "$file" == icons/*.json ) && "$file" != icons/*/* && "$file" != icons/package.json ]]; then
+              generic_source_changed=true
+            elif [[ "$file" == categories/*.json && "$file" != categories/*/* ]]; then
               generic_source_changed=true
             elif [[ "$file" == business-icons/* ]]; then
               business_source_changed=true
@@ -119,6 +133,7 @@ jobs:
 
           if (( ${#business_svg_files[@]} > 0 )); then
             node ./scripts/optimizeStagedBusinessSvgs.mts "${business_svg_files[@]}"
+            pnpm exec prettier --parser html --write "${business_svg_files[@]}"
           fi
 
           if [[ "${{ steps.source-change-kind.outputs.business_changed }}" == "true" ]]; then
@@ -140,7 +155,9 @@ jobs:
         run: |
           json_files=()
           for file in ${{ steps.changed-files.outputs.added_files }} ${{ steps.changed-files.outputs.modified_files }} ${{ steps.changed-files.outputs.renamed_files }}; do
-            if [[ ( "$file" == icons/*.json || "$file" == categories/*.json ) && -f "$file" ]]; then
+            if [[ "$file" == icons/*.json && "$file" != icons/*/*.json && "$file" != icons/package.json && -f "$file" ]]; then
+              json_files+=("$file")
+            elif [[ "$file" == categories/*.json && "$file" != categories/*/*.json && -f "$file" ]]; then
               json_files+=("$file")
             fi
           done
@@ -148,6 +165,12 @@ jobs:
           if (( ${#json_files[@]} > 0 )); then
             node ./scripts/fixMetadata.mts "${json_files[@]}"
           fi
+
+      - name: Refresh asset metadata and names
+        if: steps.source-change-kind.outputs.generic_changed == 'true' || steps.source-change-kind.outputs.business_changed == 'true' || steps.source-change-kind.outputs.illustration_changed == 'true'
+        run: |
+          node ./scripts/writeAssetMetadata.mts
+          pnpm exec oxfmt icons/names/*.json icons/metadata/*.json business-icons/**/*.json illustration-icons/*.json illustration-icons/names/*.json illustration-icons/metadata/*.json
 
       - name: Format changed metadata
         if: steps.source-change-kind.outputs.generic_source_changed == 'true' || steps.source-change-kind.outputs.business_source_changed == 'true' || steps.source-change-kind.outputs.illustration_source_changed == 'true'
@@ -168,13 +191,21 @@ jobs:
           generic_svg_files=()
           icon_json_files=()
           category_json_files=()
+          added_generic_source_files=()
           for file in ${{ steps.changed-files.outputs.added_files }} ${{ steps.changed-files.outputs.modified_files }} ${{ steps.changed-files.outputs.renamed_files }}; do
-            if [[ "$file" == icons/*.svg && -f "$file" ]]; then
+            if [[ "$file" == icons/*.svg && "$file" != icons/*/*.svg && -f "$file" ]]; then
               generic_svg_files+=("$file")
-            elif [[ "$file" == icons/*.json && -f "$file" ]]; then
+            elif [[ "$file" == icons/*.json && "$file" != icons/*/*.json && "$file" != icons/package.json && -f "$file" ]]; then
               icon_json_files+=("$file")
-            elif [[ "$file" == categories/*.json && -f "$file" ]]; then
+            elif [[ "$file" == categories/*.json && "$file" != categories/*/*.json && -f "$file" ]]; then
               category_json_files+=("$file")
+            fi
+          done
+          for file in ${{ steps.changed-files.outputs.added_files }}; do
+            if [[ "$file" == icons/*.svg && "$file" != icons/*/*.svg && -f "$file" ]]; then
+              added_generic_source_files+=("$file")
+            elif [[ "$file" == icons/*.json && "$file" != icons/*/*.json && "$file" != icons/package.json && -f "$file" ]]; then
+              added_generic_source_files+=("$file")
             fi
           done
 
@@ -184,8 +215,7 @@ jobs:
               pnpm exec prettier --parser html --check "${generic_svg_files[@]}"
             fi
 
-            pnpm lint:json
-            ADDED_FILES="${{ steps.changed-files.outputs.added_files }}" pnpm checkIcons
+            ADDED_FILES="${added_generic_source_files[*]}" pnpm checkIcons
           fi
 
           if (( ${#icon_json_files[@]} > 0 )); then
@@ -202,6 +232,10 @@ jobs:
 
           if [[ "${{ steps.source-change-kind.outputs.illustration_changed }}" == "true" ]]; then
             node ./scripts/checkIllustrationSvgSource.mts
+          fi
+
+          if [[ "${{ steps.source-change-kind.outputs.generic_changed }}" == "true" || "${{ steps.source-change-kind.outputs.business_changed }}" == "true" || "${{ steps.source-change-kind.outputs.illustration_changed }}" == "true" ]]; then
+            pnpm lint:json
           fi
 
       - name: Commit fixes

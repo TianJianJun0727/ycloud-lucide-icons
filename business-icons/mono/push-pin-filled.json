@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "置顶图钉填充",
+  "tags": ["置顶图钉填充", "置顶", "图钉", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["置顶图钉填充相关入口或状态展示", "需要兼容历史业务视觉的 置顶图钉填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "push pin filled",
+      "tags": ["push pin filled", "push", "pin", "filled", "mono", "business icon"],
+      "use-cases": [
+        "push pin filled entry or status",
+        "Legacy business visual for push pin filled scenarios"
+      ]
+    }
+  }
+}

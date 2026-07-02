@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "更多发送方name",
+  "tags": ["更多发送方name", "更多", "发送方", "单色业务图标", "业务图标"],
+  "use-cases": ["更多发送方name相关入口或状态展示", "需要兼容历史业务视觉的 更多发送方name 场景"],
+  "i18n": {
+    "en": {
+      "name": "more sender name",
+      "tags": ["more sender name", "more", "sender", "name", "mono", "business icon"],
+      "use-cases": [
+        "more sender name entry or status",
+        "Legacy business visual for more sender name scenarios"
+      ]
+    }
+  }
+}

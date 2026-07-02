@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "信用卡片图标",
+  "tags": ["信用卡片图标", "信用", "卡片", "图标", "单色业务图标", "业务图标"],
+  "use-cases": ["信用卡片图标相关入口或状态展示", "需要兼容历史业务视觉的 信用卡片图标 场景"],
+  "i18n": {
+    "en": {
+      "name": "credit card icon",
+      "tags": ["credit card icon", "credit", "card", "icon", "mono", "business icon"],
+      "use-cases": [
+        "credit card icon entry or status",
+        "Legacy business visual for credit card icon scenarios"
+      ]
+    }
+  }
+}

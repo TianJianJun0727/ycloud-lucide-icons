@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { BusinessIconCategory, BusinessIconEntity } from '../.vitepress/theme/types';
+import businessIconGitMetadata from '../.vitepress/data/businessIconGitMetadata.json';
+import type { BusinessIconCategory, BusinessIconEntity, Release } from '../.vitepress/theme/types';
 
 type BusinessIconIndex = {
   categories: Array<{
@@ -21,6 +22,27 @@ type BusinessIconIndex = {
   }[];
 };
 
+type AssetMetadata = {
+  name?: string;
+  tags?: string[];
+  'use-cases'?: string[];
+  i18n?: {
+    en?: {
+      name?: string;
+      tags?: string[];
+      'use-cases'?: string[];
+    };
+  };
+};
+
+type BusinessIconGeneratedMetadata = {
+  createdRelease?: Release;
+  changedRelease?: Release;
+  git?: NonNullable<BusinessIconEntity['git']>;
+};
+
+type BusinessIconGeneratedMetadataIndex = Record<string, BusinessIconGeneratedMetadata>;
+
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(currentDir, '../..');
 const indexPath = path.resolve(repoRoot, 'business-icons/index.json');
@@ -33,6 +55,13 @@ function toDisplayName(name: string) {
     .map((part) => `${part.charAt(0).toUpperCase()}${part.slice(1)}`)
     .join(' ');
 }
+
+function readMetadata(file: string): AssetMetadata | undefined {
+  if (!fs.existsSync(file)) return undefined;
+  return JSON.parse(fs.readFileSync(file, 'utf8')) as AssetMetadata;
+}
+
+const generatedMetadata = businessIconGitMetadata as BusinessIconGeneratedMetadataIndex;
 
 export default {
   async load() {
@@ -70,6 +99,10 @@ export default {
               (icon) => icon.category === category && icon.name === name,
             );
             const svg = fs.readFileSync(path.resolve(repoRoot, svgPath), 'utf8').trim();
+            const metadata = readMetadata(
+              path.resolve(repoRoot, svgPath.replace(/\.svg$/, '.json')),
+            );
+            const assetGeneratedMetadata = generatedMetadata[svgPath];
 
             return {
               category,
@@ -79,9 +112,17 @@ export default {
               name,
               path: svgPath,
               componentName: indexedIcon?.componentName ?? toDisplayName(name).replace(/\s+/g, ''),
-              displayName: toDisplayName(name),
+              displayName: metadata?.name ?? toDisplayName(name),
+              tags: metadata?.tags ?? [],
+              useCases: metadata?.['use-cases'] ?? [],
+              englishName: metadata?.i18n?.en?.name,
+              englishTags: metadata?.i18n?.en?.tags ?? [],
+              englishUseCases: metadata?.i18n?.en?.['use-cases'] ?? [],
               svg,
               dataUri: `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`,
+              createdRelease: assetGeneratedMetadata?.createdRelease,
+              changedRelease: assetGeneratedMetadata?.changedRelease,
+              git: assetGeneratedMetadata?.git,
             };
           });
       })

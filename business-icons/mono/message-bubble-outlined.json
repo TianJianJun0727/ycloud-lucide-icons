@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "消息气泡描边",
+  "tags": ["消息气泡描边", "消息", "气泡", "描边", "单色业务图标", "业务图标"],
+  "use-cases": ["消息气泡描边相关入口或状态展示", "需要兼容历史业务视觉的 消息气泡描边 场景"],
+  "i18n": {
+    "en": {
+      "name": "message bubble outlined",
+      "tags": ["message bubble outlined", "message", "bubble", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "message bubble outlined entry or status",
+        "Legacy business visual for message bubble outlined scenarios"
+      ]
+    }
+  }
+}

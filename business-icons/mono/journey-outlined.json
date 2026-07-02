@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "旅程描边",
+  "tags": ["旅程描边", "旅程", "描边", "单色业务图标", "业务图标"],
+  "use-cases": ["旅程描边相关入口或状态展示", "需要兼容历史业务视觉的 旅程描边 场景"],
+  "i18n": {
+    "en": {
+      "name": "journey outlined",
+      "tags": ["journey outlined", "journey", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "journey outlined entry or status",
+        "Legacy business visual for journey outlined scenarios"
+      ]
+    }
+  }
+}

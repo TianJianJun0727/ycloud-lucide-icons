@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "时间时钟",
+  "tags": ["时间时钟", "时间", "时钟", "单色业务图标", "业务图标"],
+  "use-cases": ["时间时钟相关入口或状态展示", "需要兼容历史业务视觉的 时间时钟 场景"],
+  "i18n": {
+    "en": {
+      "name": "time clock",
+      "tags": ["time clock", "time", "clock", "mono", "business icon"],
+      "use-cases": ["time clock entry or status", "Legacy business visual for time clock scenarios"]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "账单计费",
+  "tags": ["账单计费", "账单", "计费", "单色业务图标", "业务图标"],
+  "use-cases": ["账单计费相关入口或状态展示", "需要兼容历史业务视觉的 账单计费 场景"],
+  "i18n": {
+    "en": {
+      "name": "billing",
+      "tags": ["billing", "mono", "business icon"],
+      "use-cases": ["billing entry or status", "Legacy business visual for billing scenarios"]
+    }
+  }
+}

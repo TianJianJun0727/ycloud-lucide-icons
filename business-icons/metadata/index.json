@@ -1,0 +1,4482 @@
+{
+  "metadataVersion": 1,
+  "type": "business-icon",
+  "assets": [
+    {
+      "type": "business-icon",
+      "name": "acquire-more-leads",
+      "path": "business-icons/mono/acquire-more-leads.svg",
+      "title": "获取获客更多线索潜客",
+      "englishName": "acquire more leads",
+      "componentName": "AcquireMoreLeads",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "获取获客更多线索潜客",
+        "tags": [
+          "获取获客更多线索潜客",
+          "获取",
+          "获客",
+          "更多",
+          "线索",
+          "潜客",
+          "单色业务图标",
+          "业务图标"
+        ],
+        "use-cases": [
+          "获取获客更多线索潜客相关入口或状态展示",
+          "需要兼容历史业务视觉的 获取获客更多线索潜客 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "acquire more leads",
+            "tags": ["acquire more leads", "acquire", "more", "leads", "mono", "business icon"],
+            "use-cases": [
+              "acquire more leads entry or status",
+              "Legacy business visual for acquire more leads scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "add-nick",
+      "path": "business-icons/mono/add-nick.svg",
+      "title": "添加昵称",
+      "englishName": "add nick",
+      "componentName": "AddNick",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "添加昵称",
+        "tags": ["添加昵称", "添加", "昵称", "单色业务图标", "业务图标"],
+        "use-cases": ["添加昵称相关入口或状态展示", "需要兼容历史业务视觉的 添加昵称 场景"],
+        "i18n": {
+          "en": {
+            "name": "add nick",
+            "tags": ["add nick", "add", "nick", "mono", "business icon"],
+            "use-cases": [
+              "add nick entry or status",
+              "Legacy business visual for add nick scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "add-tags",
+      "path": "business-icons/mono/add-tags.svg",
+      "title": "添加标签",
+      "englishName": "add tags",
+      "componentName": "AddTags",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "添加标签",
+        "tags": ["添加标签", "添加", "标签", "单色业务图标", "业务图标"],
+        "use-cases": ["添加标签相关入口或状态展示", "需要兼容历史业务视觉的 添加标签 场景"],
+        "i18n": {
+          "en": {
+            "name": "add tags",
+            "tags": ["add tags", "add", "tags", "mono", "business icon"],
+            "use-cases": [
+              "add tags entry or status",
+              "Legacy business visual for add tags scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "advertising-filled",
+      "path": "business-icons/mono/advertising-filled.svg",
+      "title": "广告投放填充",
+      "englishName": "advertising filled",
+      "componentName": "AdvertisingFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "广告投放填充",
+        "tags": ["广告投放填充", "广告", "投放", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["广告投放填充相关入口或状态展示", "需要兼容历史业务视觉的 广告投放填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "advertising filled",
+            "tags": ["advertising filled", "advertising", "filled", "mono", "business icon"],
+            "use-cases": [
+              "advertising filled entry or status",
+              "Legacy business visual for advertising filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "advertising-outlined",
+      "path": "business-icons/mono/advertising-outlined.svg",
+      "title": "广告投放描边",
+      "englishName": "advertising outlined",
+      "componentName": "AdvertisingOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "广告投放描边",
+        "tags": ["广告投放描边", "广告", "投放", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["广告投放描边相关入口或状态展示", "需要兼容历史业务视觉的 广告投放描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "advertising outlined",
+            "tags": ["advertising outlined", "advertising", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "advertising outlined entry or status",
+              "Legacy business visual for advertising outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "agent",
+      "path": "business-icons/mono/agent.svg",
+      "title": "客服坐席",
+      "englishName": "agent",
+      "componentName": "Agent",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "客服坐席",
+        "tags": ["客服坐席", "客服", "坐席", "单色业务图标", "业务图标"],
+        "use-cases": ["客服坐席相关入口或状态展示", "需要兼容历史业务视觉的 客服坐席 场景"],
+        "i18n": {
+          "en": {
+            "name": "agent",
+            "tags": ["agent", "mono", "business icon"],
+            "use-cases": ["agent entry or status", "Legacy business visual for agent scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "agent-guide-filled",
+      "path": "business-icons/mono/agent-guide-filled.svg",
+      "title": "客服坐席引导指南填充",
+      "englishName": "agent guide filled",
+      "componentName": "AgentGuideFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "客服坐席引导指南填充",
+        "tags": [
+          "客服坐席引导指南填充",
+          "客服",
+          "坐席",
+          "引导",
+          "指南",
+          "填充",
+          "单色业务图标",
+          "业务图标"
+        ],
+        "use-cases": [
+          "客服坐席引导指南填充相关入口或状态展示",
+          "需要兼容历史业务视觉的 客服坐席引导指南填充 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "agent guide filled",
+            "tags": ["agent guide filled", "agent", "guide", "filled", "mono", "business icon"],
+            "use-cases": [
+              "agent guide filled entry or status",
+              "Legacy business visual for agent guide filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "agent-permission-filled",
+      "path": "business-icons/mono/agent-permission-filled.svg",
+      "title": "客服坐席权限填充",
+      "englishName": "agent permission filled",
+      "componentName": "AgentPermissionFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "客服坐席权限填充",
+        "tags": ["客服坐席权限填充", "客服", "坐席", "权限", "填充", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "客服坐席权限填充相关入口或状态展示",
+          "需要兼容历史业务视觉的 客服坐席权限填充 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "agent permission filled",
+            "tags": [
+              "agent permission filled",
+              "agent",
+              "permission",
+              "filled",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "agent permission filled entry or status",
+              "Legacy business visual for agent permission filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "agent-with-time",
+      "path": "business-icons/mono/agent-with-time.svg",
+      "title": "客服坐席带有时间",
+      "englishName": "agent with time",
+      "componentName": "AgentWithTime",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "客服坐席带有时间",
+        "tags": ["客服坐席带有时间", "客服", "坐席", "带有", "时间", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "客服坐席带有时间相关入口或状态展示",
+          "需要兼容历史业务视觉的 客服坐席带有时间 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "agent with time",
+            "tags": ["agent with time", "agent", "with", "time", "mono", "business icon"],
+            "use-cases": [
+              "agent with time entry or status",
+              "Legacy business visual for agent with time scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "alipay",
+      "path": "business-icons/mono/alipay.svg",
+      "title": "支付宝",
+      "englishName": "alipay",
+      "componentName": "Alipay",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "支付宝",
+        "tags": ["支付宝", "单色业务图标", "业务图标"],
+        "use-cases": ["支付宝相关入口或状态展示", "需要兼容历史业务视觉的 支付宝 场景"],
+        "i18n": {
+          "en": {
+            "name": "alipay",
+            "tags": ["alipay", "mono", "business icon"],
+            "use-cases": ["alipay entry or status", "Legacy business visual for alipay scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "analytics-filled",
+      "path": "business-icons/mono/analytics-filled.svg",
+      "title": "分析数据填充",
+      "englishName": "analytics filled",
+      "componentName": "AnalyticsFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "分析数据填充",
+        "tags": ["分析数据填充", "分析", "数据", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["分析数据填充相关入口或状态展示", "需要兼容历史业务视觉的 分析数据填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "analytics filled",
+            "tags": ["analytics filled", "analytics", "filled", "mono", "business icon"],
+            "use-cases": [
+              "analytics filled entry or status",
+              "Legacy business visual for analytics filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "api-docs",
+      "path": "business-icons/mono/api-docs.svg",
+      "title": "接口API文档",
+      "englishName": "api docs",
+      "componentName": "ApiDocs",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "接口API文档",
+        "tags": ["接口API文档", "接口", "API", "文档", "单色业务图标", "业务图标"],
+        "use-cases": ["接口API文档相关入口或状态展示", "需要兼容历史业务视觉的 接口API文档 场景"],
+        "i18n": {
+          "en": {
+            "name": "api docs",
+            "tags": ["api docs", "api", "docs", "mono", "business icon"],
+            "use-cases": [
+              "api docs entry or status",
+              "Legacy business visual for api docs scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "ask-question",
+      "path": "business-icons/mono/ask-question.svg",
+      "title": "提问问题",
+      "englishName": "ask question",
+      "componentName": "AskQuestion",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "提问问题",
+        "tags": ["提问问题", "提问", "问题", "单色业务图标", "业务图标"],
+        "use-cases": ["提问问题相关入口或状态展示", "需要兼容历史业务视觉的 提问问题 场景"],
+        "i18n": {
+          "en": {
+            "name": "ask question",
+            "tags": ["ask question", "ask", "question", "mono", "business icon"],
+            "use-cases": [
+              "ask question entry or status",
+              "Legacy business visual for ask question scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "assign",
+      "path": "business-icons/mono/assign.svg",
+      "title": "分配",
+      "englishName": "assign",
+      "componentName": "Assign",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "分配",
+        "tags": ["分配", "单色业务图标", "业务图标"],
+        "use-cases": ["分配相关入口或状态展示", "需要兼容历史业务视觉的 分配 场景"],
+        "i18n": {
+          "en": {
+            "name": "assign",
+            "tags": ["assign", "mono", "business icon"],
+            "use-cases": ["assign entry or status", "Legacy business visual for assign scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "authentication-filled",
+      "path": "business-icons/mono/authentication-filled.svg",
+      "title": "认证验证填充",
+      "englishName": "authentication filled",
+      "componentName": "AuthenticationFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "认证验证填充",
+        "tags": ["认证验证填充", "认证", "验证", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["认证验证填充相关入口或状态展示", "需要兼容历史业务视觉的 认证验证填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "authentication filled",
+            "tags": ["authentication filled", "authentication", "filled", "mono", "business icon"],
+            "use-cases": [
+              "authentication filled entry or status",
+              "Legacy business visual for authentication filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "balance",
+      "path": "business-icons/mono/balance.svg",
+      "title": "余额",
+      "englishName": "balance",
+      "componentName": "Balance",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "余额",
+        "tags": ["余额", "单色业务图标", "业务图标"],
+        "use-cases": ["余额相关入口或状态展示", "需要兼容历史业务视觉的 余额 场景"],
+        "i18n": {
+          "en": {
+            "name": "balance",
+            "tags": ["balance", "mono", "business icon"],
+            "use-cases": ["balance entry or status", "Legacy business visual for balance scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-analytics",
+      "path": "business-icons/mono/benefit-analytics.svg",
+      "title": "权益优势分析数据",
+      "englishName": "benefit analytics",
+      "componentName": "BenefitAnalytics",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势分析数据",
+        "tags": ["权益优势分析数据", "权益", "优势", "分析", "数据", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "权益优势分析数据相关入口或状态展示",
+          "需要兼容历史业务视觉的 权益优势分析数据 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "benefit analytics",
+            "tags": ["benefit analytics", "benefit", "analytics", "mono", "business icon"],
+            "use-cases": [
+              "benefit analytics entry or status",
+              "Legacy business visual for benefit analytics scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-global",
+      "path": "business-icons/mono/benefit-global.svg",
+      "title": "权益优势全球",
+      "englishName": "benefit global",
+      "componentName": "BenefitGlobal",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势全球",
+        "tags": ["权益优势全球", "权益", "优势", "全球", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势全球相关入口或状态展示", "需要兼容历史业务视觉的 权益优势全球 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit global",
+            "tags": ["benefit global", "benefit", "global", "mono", "business icon"],
+            "use-cases": [
+              "benefit global entry or status",
+              "Legacy business visual for benefit global scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-languages",
+      "path": "business-icons/mono/benefit-languages.svg",
+      "title": "权益优势语言",
+      "englishName": "benefit languages",
+      "componentName": "BenefitLanguages",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势语言",
+        "tags": ["权益优势语言", "权益", "优势", "语言", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势语言相关入口或状态展示", "需要兼容历史业务视觉的 权益优势语言 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit languages",
+            "tags": ["benefit languages", "benefit", "languages", "mono", "business icon"],
+            "use-cases": [
+              "benefit languages entry or status",
+              "Legacy business visual for benefit languages scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-payments",
+      "path": "business-icons/mono/benefit-payments.svg",
+      "title": "权益优势支付",
+      "englishName": "benefit payments",
+      "componentName": "BenefitPayments",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势支付",
+        "tags": ["权益优势支付", "权益", "优势", "支付", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势支付相关入口或状态展示", "需要兼容历史业务视觉的 权益优势支付 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit payments",
+            "tags": ["benefit payments", "benefit", "payments", "mono", "business icon"],
+            "use-cases": [
+              "benefit payments entry or status",
+              "Legacy business visual for benefit payments scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-restriction",
+      "path": "business-icons/mono/benefit-restriction.svg",
+      "title": "权益优势限制",
+      "englishName": "benefit restriction",
+      "componentName": "BenefitRestriction",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势限制",
+        "tags": ["权益优势限制", "权益", "优势", "限制", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势限制相关入口或状态展示", "需要兼容历史业务视觉的 权益优势限制 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit restriction",
+            "tags": ["benefit restriction", "benefit", "restriction", "mono", "business icon"],
+            "use-cases": [
+              "benefit restriction entry or status",
+              "Legacy business visual for benefit restriction scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-security",
+      "path": "business-icons/mono/benefit-security.svg",
+      "title": "权益优势安全",
+      "englishName": "benefit security",
+      "componentName": "BenefitSecurity",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势安全",
+        "tags": ["权益优势安全", "权益", "优势", "安全", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势安全相关入口或状态展示", "需要兼容历史业务视觉的 权益优势安全 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit security",
+            "tags": ["benefit security", "benefit", "security", "mono", "business icon"],
+            "use-cases": [
+              "benefit security entry or status",
+              "Legacy business visual for benefit security scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-sender",
+      "path": "business-icons/mono/benefit-sender.svg",
+      "title": "权益优势发送方",
+      "englishName": "benefit sender",
+      "componentName": "BenefitSender",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势发送方",
+        "tags": ["权益优势发送方", "权益", "优势", "发送方", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "权益优势发送方相关入口或状态展示",
+          "需要兼容历史业务视觉的 权益优势发送方 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "benefit sender",
+            "tags": ["benefit sender", "benefit", "sender", "mono", "business icon"],
+            "use-cases": [
+              "benefit sender entry or status",
+              "Legacy business visual for benefit sender scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-simple",
+      "path": "business-icons/mono/benefit-simple.svg",
+      "title": "权益优势简单",
+      "englishName": "benefit simple",
+      "componentName": "BenefitSimple",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势简单",
+        "tags": ["权益优势简单", "权益", "优势", "简单", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势简单相关入口或状态展示", "需要兼容历史业务视觉的 权益优势简单 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit simple",
+            "tags": ["benefit simple", "benefit", "simple", "mono", "business icon"],
+            "use-cases": [
+              "benefit simple entry or status",
+              "Legacy business visual for benefit simple scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-smile",
+      "path": "business-icons/mono/benefit-smile.svg",
+      "title": "权益优势微笑",
+      "englishName": "benefit smile",
+      "componentName": "BenefitSmile",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势微笑",
+        "tags": ["权益优势微笑", "权益", "优势", "微笑", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势微笑相关入口或状态展示", "需要兼容历史业务视觉的 权益优势微笑 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit smile",
+            "tags": ["benefit smile", "benefit", "smile", "mono", "business icon"],
+            "use-cases": [
+              "benefit smile entry or status",
+              "Legacy business visual for benefit smile scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-statistical",
+      "path": "business-icons/mono/benefit-statistical.svg",
+      "title": "权益优势统计",
+      "englishName": "benefit statistical",
+      "componentName": "BenefitStatistical",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势统计",
+        "tags": ["权益优势统计", "权益", "优势", "统计", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势统计相关入口或状态展示", "需要兼容历史业务视觉的 权益优势统计 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit statistical",
+            "tags": ["benefit statistical", "benefit", "statistical", "mono", "business icon"],
+            "use-cases": [
+              "benefit statistical entry or status",
+              "Legacy business visual for benefit statistical scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "benefit-template",
+      "path": "business-icons/mono/benefit-template.svg",
+      "title": "权益优势模板",
+      "englishName": "benefit template",
+      "componentName": "BenefitTemplate",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "权益优势模板",
+        "tags": ["权益优势模板", "权益", "优势", "模板", "单色业务图标", "业务图标"],
+        "use-cases": ["权益优势模板相关入口或状态展示", "需要兼容历史业务视觉的 权益优势模板 场景"],
+        "i18n": {
+          "en": {
+            "name": "benefit template",
+            "tags": ["benefit template", "benefit", "template", "mono", "business icon"],
+            "use-cases": [
+              "benefit template entry or status",
+              "Legacy business visual for benefit template scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "billing",
+      "path": "business-icons/mono/billing.svg",
+      "title": "账单计费",
+      "englishName": "billing",
+      "componentName": "Billing",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "账单计费",
+        "tags": ["账单计费", "账单", "计费", "单色业务图标", "业务图标"],
+        "use-cases": ["账单计费相关入口或状态展示", "需要兼容历史业务视觉的 账单计费 场景"],
+        "i18n": {
+          "en": {
+            "name": "billing",
+            "tags": ["billing", "mono", "business icon"],
+            "use-cases": ["billing entry or status", "Legacy business visual for billing scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "billing-filled",
+      "path": "business-icons/mono/billing-filled.svg",
+      "title": "账单计费填充",
+      "englishName": "billing filled",
+      "componentName": "BillingFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "账单计费填充",
+        "tags": ["账单计费填充", "账单", "计费", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["账单计费填充相关入口或状态展示", "需要兼容历史业务视觉的 账单计费填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "billing filled",
+            "tags": ["billing filled", "billing", "filled", "mono", "business icon"],
+            "use-cases": [
+              "billing filled entry or status",
+              "Legacy business visual for billing filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "block",
+      "path": "business-icons/mono/block.svg",
+      "title": "屏蔽阻止",
+      "englishName": "block",
+      "componentName": "Block",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "屏蔽阻止",
+        "tags": ["屏蔽阻止", "屏蔽", "阻止", "单色业务图标", "业务图标"],
+        "use-cases": ["屏蔽阻止相关入口或状态展示", "需要兼容历史业务视觉的 屏蔽阻止 场景"],
+        "i18n": {
+          "en": {
+            "name": "block",
+            "tags": ["block", "mono", "business icon"],
+            "use-cases": ["block entry or status", "Legacy business visual for block scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "blog",
+      "path": "business-icons/mono/blog.svg",
+      "title": "博客",
+      "englishName": "blog",
+      "componentName": "Blog",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "博客",
+        "tags": ["博客", "单色业务图标", "业务图标"],
+        "use-cases": ["博客相关入口或状态展示", "需要兼容历史业务视觉的 博客 场景"],
+        "i18n": {
+          "en": {
+            "name": "blog",
+            "tags": ["blog", "mono", "business icon"],
+            "use-cases": ["blog entry or status", "Legacy business visual for blog scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "bot-outlined",
+      "path": "business-icons/mono/bot-outlined.svg",
+      "title": "机器人描边",
+      "englishName": "bot outlined",
+      "componentName": "BotOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "机器人描边",
+        "tags": ["机器人描边", "机器人", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["机器人描边相关入口或状态展示", "需要兼容历史业务视觉的 机器人描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "bot outlined",
+            "tags": ["bot outlined", "bot", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "bot outlined entry or status",
+              "Legacy business visual for bot outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "botfilled",
+      "path": "business-icons/duotone/botfilled.svg",
+      "title": "机器人",
+      "englishName": "bot filled",
+      "componentName": "Botfilled",
+      "category": "duotone",
+      "colorMode": "duotone",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "机器人",
+        "tags": ["机器人", "双色业务图标", "业务图标"],
+        "use-cases": ["机器人相关入口或状态展示", "需要兼容历史业务视觉的 机器人 场景"],
+        "i18n": {
+          "en": {
+            "name": "bot filled",
+            "tags": ["bot filled", "botfilled", "duotone", "business icon"],
+            "use-cases": [
+              "bot filled entry or status",
+              "Legacy business visual for bot filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "branch",
+      "path": "business-icons/mono/branch.svg",
+      "title": "分支",
+      "englishName": "branch",
+      "componentName": "Branch",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "分支",
+        "tags": ["分支", "单色业务图标", "业务图标"],
+        "use-cases": ["分支相关入口或状态展示", "需要兼容历史业务视觉的 分支 场景"],
+        "i18n": {
+          "en": {
+            "name": "branch",
+            "tags": ["branch", "mono", "business icon"],
+            "use-cases": ["branch entry or status", "Legacy business visual for branch scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "business-icon",
+      "path": "business-icons/mono/business-icon.svg",
+      "title": "业务图标",
+      "englishName": "business icon",
+      "componentName": "BusinessIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "业务图标",
+        "tags": ["业务图标", "业务", "图标", "单色业务图标"],
+        "use-cases": ["业务图标相关入口或状态展示", "需要兼容历史业务视觉的 业务图标 场景"],
+        "i18n": {
+          "en": {
+            "name": "business icon",
+            "tags": ["business icon", "business", "icon", "mono"],
+            "use-cases": [
+              "business icon entry or status",
+              "Legacy business visual for business icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "call-api",
+      "path": "business-icons/mono/call-api.svg",
+      "title": "通话呼叫接口API",
+      "englishName": "call api",
+      "componentName": "CallApi",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "通话呼叫接口API",
+        "tags": ["通话呼叫接口API", "通话", "呼叫", "接口", "API", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "通话呼叫接口API相关入口或状态展示",
+          "需要兼容历史业务视觉的 通话呼叫接口API 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "call api",
+            "tags": ["call api", "call", "api", "mono", "business icon"],
+            "use-cases": [
+              "call api entry or status",
+              "Legacy business visual for call api scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "call-in",
+      "path": "business-icons/mono/call-in.svg",
+      "title": "通话呼叫呼入",
+      "englishName": "call in",
+      "componentName": "CallIn",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "通话呼叫呼入",
+        "tags": ["通话呼叫呼入", "通话", "呼叫", "呼入", "单色业务图标", "业务图标"],
+        "use-cases": ["通话呼叫呼入相关入口或状态展示", "需要兼容历史业务视觉的 通话呼叫呼入 场景"],
+        "i18n": {
+          "en": {
+            "name": "call in",
+            "tags": ["call in", "call", "in", "mono", "business icon"],
+            "use-cases": ["call in entry or status", "Legacy business visual for call in scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "call-out",
+      "path": "business-icons/mono/call-out.svg",
+      "title": "通话呼叫呼出",
+      "englishName": "call out",
+      "componentName": "CallOut",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "通话呼叫呼出",
+        "tags": ["通话呼叫呼出", "通话", "呼叫", "呼出", "单色业务图标", "业务图标"],
+        "use-cases": ["通话呼叫呼出相关入口或状态展示", "需要兼容历史业务视觉的 通话呼叫呼出 场景"],
+        "i18n": {
+          "en": {
+            "name": "call out",
+            "tags": ["call out", "call", "out", "mono", "business icon"],
+            "use-cases": [
+              "call out entry or status",
+              "Legacy business visual for call out scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "calling-filled",
+      "path": "business-icons/mono/calling-filled.svg",
+      "title": "通话填充",
+      "englishName": "calling filled",
+      "componentName": "CallingFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "通话填充",
+        "tags": ["通话填充", "通话", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["通话填充相关入口或状态展示", "需要兼容历史业务视觉的 通话填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "calling filled",
+            "tags": ["calling filled", "calling", "filled", "mono", "business icon"],
+            "use-cases": [
+              "calling filled entry or status",
+              "Legacy business visual for calling filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "calling-outlined",
+      "path": "business-icons/mono/calling-outlined.svg",
+      "title": "通话描边",
+      "englishName": "calling outlined",
+      "componentName": "CallingOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "通话描边",
+        "tags": ["通话描边", "通话", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["通话描边相关入口或状态展示", "需要兼容历史业务视觉的 通话描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "calling outlined",
+            "tags": ["calling outlined", "calling", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "calling outlined entry or status",
+              "Legacy business visual for calling outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "campaign-filled",
+      "path": "business-icons/mono/campaign-filled.svg",
+      "title": "营销活动填充",
+      "englishName": "campaign filled",
+      "componentName": "CampaignFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "营销活动填充",
+        "tags": ["营销活动填充", "营销活动", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["营销活动填充相关入口或状态展示", "需要兼容历史业务视觉的 营销活动填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "campaign filled",
+            "tags": ["campaign filled", "campaign", "filled", "mono", "business icon"],
+            "use-cases": [
+              "campaign filled entry or status",
+              "Legacy business visual for campaign filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "campaign-outlined",
+      "path": "business-icons/mono/campaign-outlined.svg",
+      "title": "营销活动描边",
+      "englishName": "campaign outlined",
+      "componentName": "CampaignOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "营销活动描边",
+        "tags": ["营销活动描边", "营销活动", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["营销活动描边相关入口或状态展示", "需要兼容历史业务视觉的 营销活动描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "campaign outlined",
+            "tags": ["campaign outlined", "campaign", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "campaign outlined entry or status",
+              "Legacy business visual for campaign outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "canned-response-check",
+      "path": "business-icons/mono/canned-response-check.svg",
+      "title": "快捷回复检查",
+      "englishName": "canned response check",
+      "componentName": "CannedResponseCheck",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "快捷回复检查",
+        "tags": ["快捷回复检查", "快捷回复", "回复", "检查", "确认", "单色业务图标", "业务图标"],
+        "use-cases": ["快捷回复检查确认", "需要兼容历史业务视觉的快捷回复检查场景"],
+        "i18n": {
+          "en": {
+            "name": "canned response check",
+            "tags": [
+              "canned response check",
+              "canned",
+              "response",
+              "check",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "canned response check entry or status",
+              "Legacy business visual for canned response check scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "category-filled",
+      "path": "business-icons/mono/category-filled.svg",
+      "title": "分类填充",
+      "englishName": "category filled",
+      "componentName": "CategoryFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "分类填充",
+        "tags": ["分类填充", "分类", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["分类填充相关入口或状态展示", "需要兼容历史业务视觉的 分类填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "category filled",
+            "tags": ["category filled", "category", "filled", "mono", "business icon"],
+            "use-cases": [
+              "category filled entry or status",
+              "Legacy business visual for category filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "chat-loading-icon",
+      "path": "business-icons/mono/chat-loading-icon.svg",
+      "title": "聊天加载图标",
+      "englishName": "chat loading icon",
+      "componentName": "ChatLoadingIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "聊天加载图标",
+        "tags": ["聊天加载图标", "聊天", "加载", "图标", "单色业务图标", "业务图标"],
+        "use-cases": ["聊天加载图标相关入口或状态展示", "需要兼容历史业务视觉的 聊天加载图标 场景"],
+        "i18n": {
+          "en": {
+            "name": "chat loading icon",
+            "tags": ["chat loading icon", "chat", "loading", "icon", "mono", "business icon"],
+            "use-cases": [
+              "chat loading icon entry or status",
+              "Legacy business visual for chat loading icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "check",
+      "path": "business-icons/mono/check.svg",
+      "title": "检查确认",
+      "englishName": "check",
+      "componentName": "Check",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "检查确认",
+        "tags": ["检查确认", "检查", "确认", "单色业务图标", "业务图标"],
+        "use-cases": ["检查确认相关入口或状态展示", "需要兼容历史业务视觉的 检查确认 场景"],
+        "i18n": {
+          "en": {
+            "name": "check",
+            "tags": ["check", "mono", "business icon"],
+            "use-cases": ["check entry or status", "Legacy business visual for check scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "check-cancel-filled",
+      "path": "business-icons/mono/check-cancel-filled.svg",
+      "title": "检查确认取消填充",
+      "englishName": "check cancel filled",
+      "componentName": "CheckCancelFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "检查确认取消填充",
+        "tags": ["检查确认取消填充", "检查", "确认", "取消", "填充", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "检查确认取消填充相关入口或状态展示",
+          "需要兼容历史业务视觉的 检查确认取消填充 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "check cancel filled",
+            "tags": ["check cancel filled", "check", "cancel", "filled", "mono", "business icon"],
+            "use-cases": [
+              "check cancel filled entry or status",
+              "Legacy business visual for check cancel filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "circular-right-arrow",
+      "path": "business-icons/mono/circular-right-arrow.svg",
+      "title": "环形向右箭头",
+      "englishName": "circular right arrow",
+      "componentName": "CircularRightArrow",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "环形向右箭头",
+        "tags": ["环形向右箭头", "环形", "向右", "箭头", "单色业务图标", "业务图标"],
+        "use-cases": ["环形向右箭头相关入口或状态展示", "需要兼容历史业务视觉的 环形向右箭头 场景"],
+        "i18n": {
+          "en": {
+            "name": "circular right arrow",
+            "tags": ["circular right arrow", "circular", "right", "arrow", "mono", "business icon"],
+            "use-cases": [
+              "circular right arrow entry or status",
+              "Legacy business visual for circular right arrow scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "clock-outlined",
+      "path": "business-icons/mono/clock-outlined.svg",
+      "title": "时钟描边",
+      "englishName": "clock outlined",
+      "componentName": "ClockOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "时钟描边",
+        "tags": ["时钟描边", "时钟", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["时钟描边相关入口或状态展示", "需要兼容历史业务视觉的 时钟描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "clock outlined",
+            "tags": ["clock outlined", "clock", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "clock outlined entry or status",
+              "Legacy business visual for clock outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "code-filled",
+      "path": "business-icons/mono/code-filled.svg",
+      "title": "代码填充",
+      "englishName": "code filled",
+      "componentName": "CodeFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "代码填充",
+        "tags": ["代码填充", "代码", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["代码填充相关入口或状态展示", "需要兼容历史业务视觉的 代码填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "code filled",
+            "tags": ["code filled", "code", "filled", "mono", "business icon"],
+            "use-cases": [
+              "code filled entry or status",
+              "Legacy business visual for code filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "code-mark",
+      "path": "business-icons/mono/code-mark.svg",
+      "title": "代码标记",
+      "englishName": "code mark",
+      "componentName": "CodeMark",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "代码标记",
+        "tags": ["代码标记", "代码", "标记", "单色业务图标", "业务图标"],
+        "use-cases": ["代码标记相关入口或状态展示", "需要兼容历史业务视觉的 代码标记 场景"],
+        "i18n": {
+          "en": {
+            "name": "code mark",
+            "tags": ["code mark", "code", "mark", "mono", "business icon"],
+            "use-cases": [
+              "code mark entry or status",
+              "Legacy business visual for code mark scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "code-outlined",
+      "path": "business-icons/mono/code-outlined.svg",
+      "title": "代码描边",
+      "englishName": "code outlined",
+      "componentName": "CodeOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "代码描边",
+        "tags": ["代码描边", "代码", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["代码描边相关入口或状态展示", "需要兼容历史业务视觉的 代码描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "code outlined",
+            "tags": ["code outlined", "code", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "code outlined entry or status",
+              "Legacy business visual for code outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "code-text",
+      "path": "business-icons/mono/code-text.svg",
+      "title": "代码文本",
+      "englishName": "code text",
+      "componentName": "CodeText",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "代码文本",
+        "tags": ["代码文本", "代码", "文本", "单色业务图标", "业务图标"],
+        "use-cases": ["代码文本相关入口或状态展示", "需要兼容历史业务视觉的 代码文本 场景"],
+        "i18n": {
+          "en": {
+            "name": "code text",
+            "tags": ["code text", "code", "text", "mono", "business icon"],
+            "use-cases": [
+              "code text entry or status",
+              "Legacy business visual for code text scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "coding-filled",
+      "path": "business-icons/mono/coding-filled.svg",
+      "title": "编码填充",
+      "englishName": "coding filled",
+      "componentName": "CodingFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "编码填充",
+        "tags": ["编码填充", "编码", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["编码填充相关入口或状态展示", "需要兼容历史业务视觉的 编码填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "coding filled",
+            "tags": ["coding filled", "coding", "filled", "mono", "business icon"],
+            "use-cases": [
+              "coding filled entry or status",
+              "Legacy business visual for coding filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "coming-soon",
+      "path": "business-icons/duotone/coming-soon.svg",
+      "title": "即将上线",
+      "englishName": "coming soon",
+      "componentName": "ComingSoon",
+      "category": "duotone",
+      "colorMode": "duotone",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "即将上线",
+        "tags": ["即将上线", "即将", "上线", "双色业务图标", "业务图标"],
+        "use-cases": ["即将上线相关入口或状态展示", "需要兼容历史业务视觉的 即将上线 场景"],
+        "i18n": {
+          "en": {
+            "name": "coming soon",
+            "tags": ["coming soon", "coming", "soon", "duotone", "business icon"],
+            "use-cases": [
+              "coming soon entry or status",
+              "Legacy business visual for coming soon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "company",
+      "path": "business-icons/mono/company.svg",
+      "title": "公司",
+      "englishName": "company",
+      "componentName": "Company",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "公司",
+        "tags": ["公司", "单色业务图标", "业务图标"],
+        "use-cases": ["公司相关入口或状态展示", "需要兼容历史业务视觉的 公司 场景"],
+        "i18n": {
+          "en": {
+            "name": "company",
+            "tags": ["company", "mono", "business icon"],
+            "use-cases": ["company entry or status", "Legacy business visual for company scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "compass-filled",
+      "path": "business-icons/mono/compass-filled.svg",
+      "title": "指南针填充",
+      "englishName": "compass filled",
+      "componentName": "CompassFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "指南针填充",
+        "tags": ["指南针填充", "指南针", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["指南针填充相关入口或状态展示", "需要兼容历史业务视觉的 指南针填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "compass filled",
+            "tags": ["compass filled", "compass", "filled", "mono", "business icon"],
+            "use-cases": [
+              "compass filled entry or status",
+              "Legacy business visual for compass filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "composite-trigger-icon",
+      "path": "business-icons/mono/composite-trigger-icon.svg",
+      "title": "组合触发器图标",
+      "englishName": "composite trigger icon",
+      "componentName": "CompositeTriggerIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "组合触发器图标",
+        "tags": ["组合触发器图标", "组合", "触发器", "图标", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "组合触发器图标相关入口或状态展示",
+          "需要兼容历史业务视觉的 组合触发器图标 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "composite trigger icon",
+            "tags": [
+              "composite trigger icon",
+              "composite",
+              "trigger",
+              "icon",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "composite trigger icon entry or status",
+              "Legacy business visual for composite trigger icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "contact-filled",
+      "path": "business-icons/mono/contact-filled.svg",
+      "title": "联系人填充",
+      "englishName": "contact filled",
+      "componentName": "ContactFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "联系人填充",
+        "tags": ["联系人填充", "联系人", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["联系人填充相关入口或状态展示", "需要兼容历史业务视觉的 联系人填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "contact filled",
+            "tags": ["contact filled", "contact", "filled", "mono", "business icon"],
+            "use-cases": [
+              "contact filled entry or status",
+              "Legacy business visual for contact filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "contact-outlined",
+      "path": "business-icons/mono/contact-outlined.svg",
+      "title": "联系人描边",
+      "englishName": "contact outlined",
+      "componentName": "ContactOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "联系人描边",
+        "tags": ["联系人描边", "联系人", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["联系人描边相关入口或状态展示", "需要兼容历史业务视觉的 联系人描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "contact outlined",
+            "tags": ["contact outlined", "contact", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "contact outlined entry or status",
+              "Legacy business visual for contact outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "conversation-unsubscribe",
+      "path": "business-icons/mono/conversation-unsubscribe.svg",
+      "title": "会话退订",
+      "englishName": "conversation unsubscribe",
+      "componentName": "ConversationUnsubscribe",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "会话退订",
+        "tags": ["会话退订", "会话", "退订", "单色业务图标", "业务图标"],
+        "use-cases": ["会话退订相关入口或状态展示", "需要兼容历史业务视觉的 会话退订 场景"],
+        "i18n": {
+          "en": {
+            "name": "conversation unsubscribe",
+            "tags": [
+              "conversation unsubscribe",
+              "conversation",
+              "unsubscribe",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "conversation unsubscribe entry or status",
+              "Legacy business visual for conversation unsubscribe scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "coupon-code",
+      "path": "business-icons/mono/coupon-code.svg",
+      "title": "优惠券代码",
+      "englishName": "coupon code",
+      "componentName": "CouponCode",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "优惠券代码",
+        "tags": ["优惠券代码", "优惠券", "代码", "单色业务图标", "业务图标"],
+        "use-cases": ["优惠券代码相关入口或状态展示", "需要兼容历史业务视觉的 优惠券代码 场景"],
+        "i18n": {
+          "en": {
+            "name": "coupon code",
+            "tags": ["coupon code", "coupon", "code", "mono", "business icon"],
+            "use-cases": [
+              "coupon code entry or status",
+              "Legacy business visual for coupon code scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "coupon-filled",
+      "path": "business-icons/mono/coupon-filled.svg",
+      "title": "优惠券填充",
+      "englishName": "coupon filled",
+      "componentName": "CouponFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "优惠券填充",
+        "tags": ["优惠券填充", "优惠券", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["优惠券填充相关入口或状态展示", "需要兼容历史业务视觉的 优惠券填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "coupon filled",
+            "tags": ["coupon filled", "coupon", "filled", "mono", "business icon"],
+            "use-cases": [
+              "coupon filled entry or status",
+              "Legacy business visual for coupon filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "create-tickets-icon",
+      "path": "business-icons/mono/create-tickets-icon.svg",
+      "title": "创建工单图标",
+      "englishName": "create tickets icon",
+      "componentName": "CreateTicketsIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "创建工单图标",
+        "tags": ["创建工单图标", "创建", "工单", "图标", "单色业务图标", "业务图标"],
+        "use-cases": ["创建工单图标相关入口或状态展示", "需要兼容历史业务视觉的 创建工单图标 场景"],
+        "i18n": {
+          "en": {
+            "name": "create tickets icon",
+            "tags": ["create tickets icon", "create", "tickets", "icon", "mono", "business icon"],
+            "use-cases": [
+              "create tickets icon entry or status",
+              "Legacy business visual for create tickets icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "credit-card-icon",
+      "path": "business-icons/mono/credit-card-icon.svg",
+      "title": "信用卡片图标",
+      "englishName": "credit card icon",
+      "componentName": "CreditCardIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "信用卡片图标",
+        "tags": ["信用卡片图标", "信用", "卡片", "图标", "单色业务图标", "业务图标"],
+        "use-cases": ["信用卡片图标相关入口或状态展示", "需要兼容历史业务视觉的 信用卡片图标 场景"],
+        "i18n": {
+          "en": {
+            "name": "credit card icon",
+            "tags": ["credit card icon", "credit", "card", "icon", "mono", "business icon"],
+            "use-cases": [
+              "credit card icon entry or status",
+              "Legacy business visual for credit card icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "ctwa-system-keyword-event",
+      "path": "business-icons/mono/ctwa-system-keyword-event.svg",
+      "title": "CTWA系统关键词事件",
+      "englishName": "ctwa system keyword event",
+      "componentName": "CtwaSystemKeywordEvent",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "CTWA系统关键词事件",
+        "tags": [
+          "CTWA系统关键词事件",
+          "CTWA",
+          "系统",
+          "关键词",
+          "事件",
+          "单色业务图标",
+          "业务图标"
+        ],
+        "use-cases": [
+          "CTWA系统关键词事件相关入口或状态展示",
+          "需要兼容历史业务视觉的 CTWA系统关键词事件 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "ctwa system keyword event",
+            "tags": [
+              "ctwa system keyword event",
+              "ctwa",
+              "system",
+              "keyword",
+              "event",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "ctwa system keyword event entry or status",
+              "Legacy business visual for ctwa system keyword event scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "date-time",
+      "path": "business-icons/mono/date-time.svg",
+      "title": "日期时间",
+      "englishName": "date time",
+      "componentName": "DateTime",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "日期时间",
+        "tags": ["日期时间", "日期", "时间", "单色业务图标", "业务图标"],
+        "use-cases": ["日期时间相关入口或状态展示", "需要兼容历史业务视觉的 日期时间 场景"],
+        "i18n": {
+          "en": {
+            "name": "date time",
+            "tags": ["date time", "date", "time", "mono", "business icon"],
+            "use-cases": [
+              "date time entry or status",
+              "Legacy business visual for date time scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "delivered-icon",
+      "path": "business-icons/mono/delivered-icon.svg",
+      "title": "已送达图标",
+      "englishName": "delivered icon",
+      "componentName": "DeliveredIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "已送达图标",
+        "tags": ["已送达图标", "已送达", "图标", "单色业务图标", "业务图标"],
+        "use-cases": ["已送达图标相关入口或状态展示", "需要兼容历史业务视觉的 已送达图标 场景"],
+        "i18n": {
+          "en": {
+            "name": "delivered icon",
+            "tags": ["delivered icon", "delivered", "icon", "mono", "business icon"],
+            "use-cases": [
+              "delivered icon entry or status",
+              "Legacy business visual for delivered icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "direction-filled",
+      "path": "business-icons/mono/direction-filled.svg",
+      "title": "方向填充",
+      "englishName": "direction filled",
+      "componentName": "DirectionFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "方向填充",
+        "tags": ["方向填充", "方向", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["方向填充相关入口或状态展示", "需要兼容历史业务视觉的 方向填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "direction filled",
+            "tags": ["direction filled", "direction", "filled", "mono", "business icon"],
+            "use-cases": [
+              "direction filled entry or status",
+              "Legacy business visual for direction filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "discount",
+      "path": "business-icons/mono/discount.svg",
+      "title": "折扣",
+      "englishName": "discount",
+      "componentName": "Discount",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "折扣",
+        "tags": ["折扣", "单色业务图标", "业务图标"],
+        "use-cases": ["折扣相关入口或状态展示", "需要兼容历史业务视觉的 折扣 场景"],
+        "i18n": {
+          "en": {
+            "name": "discount",
+            "tags": ["discount", "mono", "business icon"],
+            "use-cases": [
+              "discount entry or status",
+              "Legacy business visual for discount scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "doc-csv-filled",
+      "path": "business-icons/mono/doc-csv-filled.svg",
+      "title": "文件CSV填充",
+      "englishName": "doc csv filled",
+      "componentName": "DocCsvFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "文件CSV填充",
+        "tags": ["文件CSV填充", "文件", "CSV", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["文件CSV填充相关入口或状态展示", "需要兼容历史业务视觉的 文件CSV填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "doc csv filled",
+            "tags": ["doc csv filled", "doc", "csv", "filled", "mono", "business icon"],
+            "use-cases": [
+              "doc csv filled entry or status",
+              "Legacy business visual for doc csv filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "document-filled",
+      "path": "business-icons/mono/document-filled.svg",
+      "title": "文档填充",
+      "englishName": "document filled",
+      "componentName": "DocumentFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "文档填充",
+        "tags": ["文档填充", "文档", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["文档填充相关入口或状态展示", "需要兼容历史业务视觉的 文档填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "document filled",
+            "tags": ["document filled", "document", "filled", "mono", "business icon"],
+            "use-cases": [
+              "document filled entry or status",
+              "Legacy business visual for document filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "double-check",
+      "path": "business-icons/mono/double-check.svg",
+      "title": "双检查确认",
+      "englishName": "double check",
+      "componentName": "DoubleCheck",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "双检查确认",
+        "tags": ["双检查确认", "双", "检查", "确认", "单色业务图标", "业务图标"],
+        "use-cases": ["双检查确认相关入口或状态展示", "需要兼容历史业务视觉的 双检查确认 场景"],
+        "i18n": {
+          "en": {
+            "name": "double check",
+            "tags": ["double check", "double", "check", "mono", "business icon"],
+            "use-cases": [
+              "double check entry or status",
+              "Legacy business visual for double check scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "edit-title",
+      "path": "business-icons/mono/edit-title.svg",
+      "title": "编辑标题",
+      "englishName": "edit title",
+      "componentName": "EditTitle",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "编辑标题",
+        "tags": ["编辑标题", "编辑", "标题", "单色业务图标", "业务图标"],
+        "use-cases": ["编辑标题相关入口或状态展示", "需要兼容历史业务视觉的 编辑标题 场景"],
+        "i18n": {
+          "en": {
+            "name": "edit title",
+            "tags": ["edit title", "edit", "title", "mono", "business icon"],
+            "use-cases": [
+              "edit title entry or status",
+              "Legacy business visual for edit title scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "exchange",
+      "path": "business-icons/mono/exchange.svg",
+      "title": "交换",
+      "englishName": "exchange",
+      "componentName": "Exchange",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "交换",
+        "tags": ["交换", "单色业务图标", "业务图标"],
+        "use-cases": ["交换相关入口或状态展示", "需要兼容历史业务视觉的 交换 场景"],
+        "i18n": {
+          "en": {
+            "name": "exchange",
+            "tags": ["exchange", "mono", "business icon"],
+            "use-cases": [
+              "exchange entry or status",
+              "Legacy business visual for exchange scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "expand-icon",
+      "path": "business-icons/mono/expand-icon.svg",
+      "title": "展开图标",
+      "englishName": "expand icon",
+      "componentName": "ExpandIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "展开图标",
+        "tags": ["展开图标", "展开", "图标", "单色业务图标", "业务图标"],
+        "use-cases": ["展开图标相关入口或状态展示", "需要兼容历史业务视觉的 展开图标 场景"],
+        "i18n": {
+          "en": {
+            "name": "expand icon",
+            "tags": ["expand icon", "expand", "icon", "mono", "business icon"],
+            "use-cases": [
+              "expand icon entry or status",
+              "Legacy business visual for expand icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "export-filled",
+      "path": "business-icons/mono/export-filled.svg",
+      "title": "导出填充",
+      "englishName": "export filled",
+      "componentName": "ExportFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "导出填充",
+        "tags": ["导出填充", "导出", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["导出填充相关入口或状态展示", "需要兼容历史业务视觉的 导出填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "export filled",
+            "tags": ["export filled", "export", "filled", "mono", "business icon"],
+            "use-cases": [
+              "export filled entry or status",
+              "Legacy business visual for export filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "file-attach",
+      "path": "business-icons/mono/file-attach.svg",
+      "title": "文件附件",
+      "englishName": "file attach",
+      "componentName": "FileAttach",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "文件附件",
+        "tags": ["文件附件", "文件", "附件", "单色业务图标", "业务图标"],
+        "use-cases": ["文件附件相关入口或状态展示", "需要兼容历史业务视觉的 文件附件 场景"],
+        "i18n": {
+          "en": {
+            "name": "file attach",
+            "tags": ["file attach", "file", "attach", "mono", "business icon"],
+            "use-cases": [
+              "file attach entry or status",
+              "Legacy business visual for file attach scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "filter-event",
+      "path": "business-icons/mono/filter-event.svg",
+      "title": "筛选事件",
+      "englishName": "filter event",
+      "componentName": "FilterEvent",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "筛选事件",
+        "tags": ["筛选事件", "筛选", "事件", "单色业务图标", "业务图标"],
+        "use-cases": ["筛选事件相关入口或状态展示", "需要兼容历史业务视觉的 筛选事件 场景"],
+        "i18n": {
+          "en": {
+            "name": "filter event",
+            "tags": ["filter event", "filter", "event", "mono", "business icon"],
+            "use-cases": [
+              "filter event entry or status",
+              "Legacy business visual for filter event scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "flow",
+      "path": "business-icons/mono/flow.svg",
+      "title": "流程",
+      "englishName": "flow",
+      "componentName": "Flow",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "流程",
+        "tags": ["流程", "单色业务图标", "业务图标"],
+        "use-cases": ["流程相关入口或状态展示", "需要兼容历史业务视觉的 流程 场景"],
+        "i18n": {
+          "en": {
+            "name": "flow",
+            "tags": ["flow", "mono", "business icon"],
+            "use-cases": ["flow entry or status", "Legacy business visual for flow scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "gift",
+      "path": "business-icons/mono/gift.svg",
+      "title": "礼物",
+      "englishName": "gift",
+      "componentName": "Gift",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "礼物",
+        "tags": ["礼物", "单色业务图标", "业务图标"],
+        "use-cases": ["礼物相关入口或状态展示", "需要兼容历史业务视觉的 礼物 场景"],
+        "i18n": {
+          "en": {
+            "name": "gift",
+            "tags": ["gift", "mono", "business icon"],
+            "use-cases": ["gift entry or status", "Legacy business visual for gift scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "global",
+      "path": "business-icons/mono/global.svg",
+      "title": "全球",
+      "englishName": "global",
+      "componentName": "Global",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "全球",
+        "tags": ["全球", "单色业务图标", "业务图标"],
+        "use-cases": ["全球相关入口或状态展示", "需要兼容历史业务视觉的 全球 场景"],
+        "i18n": {
+          "en": {
+            "name": "global",
+            "tags": ["global", "mono", "business icon"],
+            "use-cases": ["global entry or status", "Legacy business visual for global scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "handle",
+      "path": "business-icons/mono/handle.svg",
+      "title": "拖拽手柄",
+      "englishName": "handle",
+      "componentName": "Handle",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "拖拽手柄",
+        "tags": ["拖拽手柄", "拖拽", "手柄", "单色业务图标", "业务图标"],
+        "use-cases": ["拖拽手柄相关入口或状态展示", "需要兼容历史业务视觉的 拖拽手柄 场景"],
+        "i18n": {
+          "en": {
+            "name": "handle",
+            "tags": ["handle", "mono", "business icon"],
+            "use-cases": ["handle entry or status", "Legacy business visual for handle scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "hub-spot",
+      "path": "business-icons/multicolor/hub-spot.svg",
+      "title": "HubSpot",
+      "englishName": "HubSpot",
+      "componentName": "HubSpot",
+      "category": "multicolor",
+      "colorMode": "multicolor",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "HubSpot",
+        "tags": ["HubSpot", "集成", "客户关系管理", "多色业务图标", "业务图标"],
+        "use-cases": ["HubSpot 集成入口或状态展示", "需要兼容历史业务视觉的 HubSpot 场景"],
+        "i18n": {
+          "en": {
+            "name": "HubSpot",
+            "tags": ["HubSpot", "hub", "spot", "multicolor", "business icon"],
+            "use-cases": ["HubSpot entry or status", "Legacy business visual for HubSpot scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "journey-filled",
+      "path": "business-icons/mono/journey-filled.svg",
+      "title": "旅程填充",
+      "englishName": "journey filled",
+      "componentName": "JourneyFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "旅程填充",
+        "tags": ["旅程填充", "旅程", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["旅程填充相关入口或状态展示", "需要兼容历史业务视觉的 旅程填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "journey filled",
+            "tags": ["journey filled", "journey", "filled", "mono", "business icon"],
+            "use-cases": [
+              "journey filled entry or status",
+              "Legacy business visual for journey filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "journey-outlined",
+      "path": "business-icons/mono/journey-outlined.svg",
+      "title": "旅程描边",
+      "englishName": "journey outlined",
+      "componentName": "JourneyOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "旅程描边",
+        "tags": ["旅程描边", "旅程", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["旅程描边相关入口或状态展示", "需要兼容历史业务视觉的 旅程描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "journey outlined",
+            "tags": ["journey outlined", "journey", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "journey outlined entry or status",
+              "Legacy business visual for journey outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "language",
+      "path": "business-icons/mono/language.svg",
+      "title": "语言",
+      "englishName": "language",
+      "componentName": "Language",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "语言",
+        "tags": ["语言", "单色业务图标", "业务图标"],
+        "use-cases": ["语言相关入口或状态展示", "需要兼容历史业务视觉的 语言 场景"],
+        "i18n": {
+          "en": {
+            "name": "language",
+            "tags": ["language", "mono", "business icon"],
+            "use-cases": [
+              "language entry or status",
+              "Legacy business visual for language scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "lightning-filled",
+      "path": "business-icons/mono/lightning-filled.svg",
+      "title": "闪电填充",
+      "englishName": "lightning filled",
+      "componentName": "LightningFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "闪电填充",
+        "tags": ["闪电填充", "闪电", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["闪电填充相关入口或状态展示", "需要兼容历史业务视觉的 闪电填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "lightning filled",
+            "tags": ["lightning filled", "lightning", "filled", "mono", "business icon"],
+            "use-cases": [
+              "lightning filled entry or status",
+              "Legacy business visual for lightning filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "line-simple",
+      "path": "business-icons/mono/line-simple.svg",
+      "title": "线条简单",
+      "englishName": "line simple",
+      "componentName": "LineSimple",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "线条简单",
+        "tags": ["线条简单", "线条", "简单", "单色业务图标", "业务图标"],
+        "use-cases": ["线条简单相关入口或状态展示", "需要兼容历史业务视觉的 线条简单 场景"],
+        "i18n": {
+          "en": {
+            "name": "line simple",
+            "tags": ["line simple", "line", "simple", "mono", "business icon"],
+            "use-cases": [
+              "line simple entry or status",
+              "Legacy business visual for line simple scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "link",
+      "path": "business-icons/mono/link.svg",
+      "title": "链接",
+      "englishName": "link",
+      "componentName": "Link",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "链接",
+        "tags": ["链接", "单色业务图标", "业务图标"],
+        "use-cases": ["链接相关入口或状态展示", "需要兼容历史业务视觉的 链接 场景"],
+        "i18n": {
+          "en": {
+            "name": "link",
+            "tags": ["link", "mono", "business icon"],
+            "use-cases": ["link entry or status", "Legacy business visual for link scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "link-action",
+      "path": "business-icons/mono/link-action.svg",
+      "title": "链接动作",
+      "englishName": "link action",
+      "componentName": "LinkAction",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "链接动作",
+        "tags": ["链接动作", "链接", "动作", "单色业务图标", "业务图标"],
+        "use-cases": ["链接动作相关入口或状态展示", "需要兼容历史业务视觉的 链接动作 场景"],
+        "i18n": {
+          "en": {
+            "name": "link action",
+            "tags": ["link action", "link", "action", "mono", "business icon"],
+            "use-cases": [
+              "link action entry or status",
+              "Legacy business visual for link action scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "link-circle-filled",
+      "path": "business-icons/mono/link-circle-filled.svg",
+      "title": "链接圆形填充",
+      "englishName": "link circle filled",
+      "componentName": "LinkCircleFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "链接圆形填充",
+        "tags": ["链接圆形填充", "链接", "圆形", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["链接圆形填充相关入口或状态展示", "需要兼容历史业务视觉的 链接圆形填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "link circle filled",
+            "tags": ["link circle filled", "link", "circle", "filled", "mono", "business icon"],
+            "use-cases": [
+              "link circle filled entry or status",
+              "Legacy business visual for link circle filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "location",
+      "path": "business-icons/mono/location.svg",
+      "title": "位置",
+      "englishName": "location",
+      "componentName": "Location",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "位置",
+        "tags": ["位置", "单色业务图标", "业务图标"],
+        "use-cases": ["位置相关入口或状态展示", "需要兼容历史业务视觉的 位置 场景"],
+        "i18n": {
+          "en": {
+            "name": "location",
+            "tags": ["location", "mono", "business icon"],
+            "use-cases": [
+              "location entry or status",
+              "Legacy business visual for location scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "logout",
+      "path": "business-icons/mono/logout.svg",
+      "title": "退出登录",
+      "englishName": "logout",
+      "componentName": "Logout",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "退出登录",
+        "tags": ["退出登录", "单色业务图标", "业务图标"],
+        "use-cases": ["退出登录相关入口或状态展示", "需要兼容历史业务视觉的 退出登录 场景"],
+        "i18n": {
+          "en": {
+            "name": "logout",
+            "tags": ["logout", "mono", "business icon"],
+            "use-cases": ["logout entry or status", "Legacy business visual for logout scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "map-outlined",
+      "path": "business-icons/mono/map-outlined.svg",
+      "title": "地图描边",
+      "englishName": "map outlined",
+      "componentName": "MapOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "地图描边",
+        "tags": ["地图描边", "地图", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["地图描边相关入口或状态展示", "需要兼容历史业务视觉的 地图描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "map outlined",
+            "tags": ["map outlined", "map", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "map outlined entry or status",
+              "Legacy business visual for map outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "menu-open",
+      "path": "business-icons/mono/menu-open.svg",
+      "title": "菜单打开",
+      "englishName": "menu open",
+      "componentName": "MenuOpen",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "菜单打开",
+        "tags": ["菜单打开", "菜单", "打开", "单色业务图标", "业务图标"],
+        "use-cases": ["菜单打开相关入口或状态展示", "需要兼容历史业务视觉的 菜单打开 场景"],
+        "i18n": {
+          "en": {
+            "name": "menu open",
+            "tags": ["menu open", "menu", "open", "mono", "business icon"],
+            "use-cases": [
+              "menu open entry or status",
+              "Legacy business visual for menu open scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "message-bubble-filled",
+      "path": "business-icons/mono/message-bubble-filled.svg",
+      "title": "消息气泡填充",
+      "englishName": "message bubble filled",
+      "componentName": "MessageBubbleFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "消息气泡填充",
+        "tags": ["消息气泡填充", "消息", "气泡", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["消息气泡填充相关入口或状态展示", "需要兼容历史业务视觉的 消息气泡填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "message bubble filled",
+            "tags": [
+              "message bubble filled",
+              "message",
+              "bubble",
+              "filled",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "message bubble filled entry or status",
+              "Legacy business visual for message bubble filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "message-bubble-outlined",
+      "path": "business-icons/mono/message-bubble-outlined.svg",
+      "title": "消息气泡描边",
+      "englishName": "message bubble outlined",
+      "componentName": "MessageBubbleOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "消息气泡描边",
+        "tags": ["消息气泡描边", "消息", "气泡", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["消息气泡描边相关入口或状态展示", "需要兼容历史业务视觉的 消息气泡描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "message bubble outlined",
+            "tags": [
+              "message bubble outlined",
+              "message",
+              "bubble",
+              "outlined",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "message bubble outlined entry or status",
+              "Legacy business visual for message bubble outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "message-filled",
+      "path": "business-icons/mono/message-filled.svg",
+      "title": "消息填充",
+      "englishName": "message filled",
+      "componentName": "MessageFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "消息填充",
+        "tags": ["消息填充", "消息", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["消息填充相关入口或状态展示", "需要兼容历史业务视觉的 消息填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "message filled",
+            "tags": ["message filled", "message", "filled", "mono", "business icon"],
+            "use-cases": [
+              "message filled entry or status",
+              "Legacy business visual for message filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "meta-filled",
+      "path": "business-icons/duotone/meta-filled.svg",
+      "title": "Meta填充",
+      "englishName": "meta filled",
+      "componentName": "MetaFilled",
+      "category": "duotone",
+      "colorMode": "duotone",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "Meta填充",
+        "tags": ["Meta填充", "Meta", "填充", "双色业务图标", "业务图标"],
+        "use-cases": ["Meta填充相关入口或状态展示", "需要兼容历史业务视觉的 Meta填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "meta filled",
+            "tags": ["meta filled", "meta", "filled", "duotone", "business icon"],
+            "use-cases": [
+              "meta filled entry or status",
+              "Legacy business visual for meta filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "migrate-outlined",
+      "path": "business-icons/mono/migrate-outlined.svg",
+      "title": "迁移描边",
+      "englishName": "migrate outlined",
+      "componentName": "MigrateOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "迁移描边",
+        "tags": ["迁移描边", "迁移", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["迁移描边相关入口或状态展示", "需要兼容历史业务视觉的 迁移描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "migrate outlined",
+            "tags": ["migrate outlined", "migrate", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "migrate outlined entry or status",
+              "Legacy business visual for migrate outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "mobile-phone",
+      "path": "business-icons/mono/mobile-phone.svg",
+      "title": "移动电话",
+      "englishName": "mobile phone",
+      "componentName": "MobilePhone",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "移动电话",
+        "tags": ["移动电话", "移动", "电话", "单色业务图标", "业务图标"],
+        "use-cases": ["移动电话相关入口或状态展示", "需要兼容历史业务视觉的 移动电话 场景"],
+        "i18n": {
+          "en": {
+            "name": "mobile phone",
+            "tags": ["mobile phone", "mobile", "phone", "mono", "business icon"],
+            "use-cases": [
+              "mobile phone entry or status",
+              "Legacy business visual for mobile phone scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "more-horiz",
+      "path": "business-icons/mono/more-horiz.svg",
+      "title": "更多横向",
+      "englishName": "more horiz",
+      "componentName": "MoreHoriz",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "更多横向",
+        "tags": ["更多横向", "更多", "横向", "单色业务图标", "业务图标"],
+        "use-cases": ["更多横向相关入口或状态展示", "需要兼容历史业务视觉的 更多横向 场景"],
+        "i18n": {
+          "en": {
+            "name": "more horiz",
+            "tags": ["more horiz", "more", "horiz", "mono", "business icon"],
+            "use-cases": [
+              "more horiz entry or status",
+              "Legacy business visual for more horiz scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "more-price",
+      "path": "business-icons/mono/more-price.svg",
+      "title": "更多价格",
+      "englishName": "more price",
+      "componentName": "MorePrice",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "更多价格",
+        "tags": ["更多价格", "更多", "价格", "单色业务图标", "业务图标"],
+        "use-cases": ["更多价格相关入口或状态展示", "需要兼容历史业务视觉的 更多价格 场景"],
+        "i18n": {
+          "en": {
+            "name": "more price",
+            "tags": ["more price", "more", "price", "mono", "business icon"],
+            "use-cases": [
+              "more price entry or status",
+              "Legacy business visual for more price scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "more-restriction",
+      "path": "business-icons/mono/more-restriction.svg",
+      "title": "更多限制",
+      "englishName": "more restriction",
+      "componentName": "MoreRestriction",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "更多限制",
+        "tags": ["更多限制", "更多", "限制", "单色业务图标", "业务图标"],
+        "use-cases": ["更多限制相关入口或状态展示", "需要兼容历史业务视觉的 更多限制 场景"],
+        "i18n": {
+          "en": {
+            "name": "more restriction",
+            "tags": ["more restriction", "more", "restriction", "mono", "business icon"],
+            "use-cases": [
+              "more restriction entry or status",
+              "Legacy business visual for more restriction scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "more-sender",
+      "path": "business-icons/mono/more-sender.svg",
+      "title": "更多发送方",
+      "englishName": "more sender",
+      "componentName": "MoreSender",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "更多发送方",
+        "tags": ["更多发送方", "更多", "发送方", "单色业务图标", "业务图标"],
+        "use-cases": ["更多发送方相关入口或状态展示", "需要兼容历史业务视觉的 更多发送方 场景"],
+        "i18n": {
+          "en": {
+            "name": "more sender",
+            "tags": ["more sender", "more", "sender", "mono", "business icon"],
+            "use-cases": [
+              "more sender entry or status",
+              "Legacy business visual for more sender scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "more-sender-name",
+      "path": "business-icons/mono/more-sender-name.svg",
+      "title": "更多发送方name",
+      "englishName": "more sender name",
+      "componentName": "MoreSenderName",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "更多发送方name",
+        "tags": ["更多发送方name", "更多", "发送方", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "更多发送方name相关入口或状态展示",
+          "需要兼容历史业务视觉的 更多发送方name 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "more sender name",
+            "tags": ["more sender name", "more", "sender", "name", "mono", "business icon"],
+            "use-cases": [
+              "more sender name entry or status",
+              "Legacy business visual for more sender name scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "more-vert",
+      "path": "business-icons/mono/more-vert.svg",
+      "title": "更多纵向",
+      "englishName": "more vert",
+      "componentName": "MoreVert",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "更多纵向",
+        "tags": ["更多纵向", "更多", "纵向", "单色业务图标", "业务图标"],
+        "use-cases": ["更多纵向相关入口或状态展示", "需要兼容历史业务视觉的 更多纵向 场景"],
+        "i18n": {
+          "en": {
+            "name": "more vert",
+            "tags": ["more vert", "more", "vert", "mono", "business icon"],
+            "use-cases": [
+              "more vert entry or status",
+              "Legacy business visual for more vert scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "mouse-filled",
+      "path": "business-icons/mono/mouse-filled.svg",
+      "title": "鼠标填充",
+      "englishName": "mouse filled",
+      "componentName": "MouseFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "鼠标填充",
+        "tags": ["鼠标填充", "鼠标", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["鼠标填充相关入口或状态展示", "需要兼容历史业务视觉的 鼠标填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "mouse filled",
+            "tags": ["mouse filled", "mouse", "filled", "mono", "business icon"],
+            "use-cases": [
+              "mouse filled entry or status",
+              "Legacy business visual for mouse filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "music",
+      "path": "business-icons/mono/music.svg",
+      "title": "音乐",
+      "englishName": "music",
+      "componentName": "Music",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "音乐",
+        "tags": ["音乐", "单色业务图标", "业务图标"],
+        "use-cases": ["音乐相关入口或状态展示", "需要兼容历史业务视觉的 音乐 场景"],
+        "i18n": {
+          "en": {
+            "name": "music",
+            "tags": ["music", "mono", "business icon"],
+            "use-cases": ["music entry or status", "Legacy business visual for music scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "new-tag-filled",
+      "path": "business-icons/mono/new-tag-filled.svg",
+      "title": "新建tag填充",
+      "englishName": "new tag filled",
+      "componentName": "NewTagFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "新建tag填充",
+        "tags": ["新建tag填充", "新建", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["新建tag填充相关入口或状态展示", "需要兼容历史业务视觉的 新建tag填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "new tag filled",
+            "tags": ["new tag filled", "new", "tag", "filled", "mono", "business icon"],
+            "use-cases": [
+              "new tag filled entry or status",
+              "Legacy business visual for new tag filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "note-filled",
+      "path": "business-icons/mono/note-filled.svg",
+      "title": "笔记填充",
+      "englishName": "note filled",
+      "componentName": "NoteFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "笔记填充",
+        "tags": ["笔记填充", "笔记", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["笔记填充相关入口或状态展示", "需要兼容历史业务视觉的 笔记填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "note filled",
+            "tags": ["note filled", "note", "filled", "mono", "business icon"],
+            "use-cases": [
+              "note filled entry or status",
+              "Legacy business visual for note filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "online-chat-outline",
+      "path": "business-icons/mono/online-chat-outline.svg",
+      "title": "在线聊天outline",
+      "englishName": "online chat outline",
+      "componentName": "OnlineChatOutline",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "在线聊天outline",
+        "tags": ["在线聊天outline", "在线", "聊天", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "在线聊天outline相关入口或状态展示",
+          "需要兼容历史业务视觉的 在线聊天outline 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "online chat outline",
+            "tags": ["online chat outline", "online", "chat", "outline", "mono", "business icon"],
+            "use-cases": [
+              "online chat outline entry or status",
+              "Legacy business visual for online chat outline scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "order-event-filled",
+      "path": "business-icons/mono/order-event-filled.svg",
+      "title": "订单事件填充",
+      "englishName": "order event filled",
+      "componentName": "OrderEventFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "订单事件填充",
+        "tags": ["订单事件填充", "订单", "事件", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["订单事件填充相关入口或状态展示", "需要兼容历史业务视觉的 订单事件填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "order event filled",
+            "tags": ["order event filled", "order", "event", "filled", "mono", "business icon"],
+            "use-cases": [
+              "order event filled entry or status",
+              "Legacy business visual for order event filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "order-outlined",
+      "path": "business-icons/mono/order-outlined.svg",
+      "title": "订单描边",
+      "englishName": "order outlined",
+      "componentName": "OrderOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "订单描边",
+        "tags": ["订单描边", "订单", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["订单描边相关入口或状态展示", "需要兼容历史业务视觉的 订单描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "order outlined",
+            "tags": ["order outlined", "order", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "order outlined entry or status",
+              "Legacy business visual for order outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "partners-outlined",
+      "path": "business-icons/mono/partners-outlined.svg",
+      "title": "合作伙伴描边",
+      "englishName": "partners outlined",
+      "componentName": "PartnersOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "合作伙伴描边",
+        "tags": ["合作伙伴描边", "合作伙伴", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["合作伙伴描边相关入口或状态展示", "需要兼容历史业务视觉的 合作伙伴描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "partners outlined",
+            "tags": ["partners outlined", "partners", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "partners outlined entry or status",
+              "Legacy business visual for partners outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "payments-filled",
+      "path": "business-icons/mono/payments-filled.svg",
+      "title": "支付填充",
+      "englishName": "payments filled",
+      "componentName": "PaymentsFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "支付填充",
+        "tags": ["支付填充", "支付", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["支付填充相关入口或状态展示", "需要兼容历史业务视觉的 支付填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "payments filled",
+            "tags": ["payments filled", "payments", "filled", "mono", "business icon"],
+            "use-cases": [
+              "payments filled entry or status",
+              "Legacy business visual for payments filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "play-circle-filled",
+      "path": "business-icons/mono/play-circle-filled.svg",
+      "title": "播放圆形填充",
+      "englishName": "play circle filled",
+      "componentName": "PlayCircleFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "播放圆形填充",
+        "tags": ["播放圆形填充", "播放", "圆形", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["播放圆形填充相关入口或状态展示", "需要兼容历史业务视觉的 播放圆形填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "play circle filled",
+            "tags": ["play circle filled", "play", "circle", "filled", "mono", "business icon"],
+            "use-cases": [
+              "play circle filled entry or status",
+              "Legacy business visual for play circle filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "progressomg",
+      "path": "business-icons/mono/progressomg.svg",
+      "title": "进度",
+      "englishName": "progress",
+      "componentName": "Progressomg",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "进度",
+        "tags": ["进度", "单色业务图标", "业务图标"],
+        "use-cases": ["进度相关入口或状态展示", "需要兼容历史业务视觉的 进度 场景"],
+        "i18n": {
+          "en": {
+            "name": "progress",
+            "tags": ["progress", "progressomg", "mono", "business icon"],
+            "use-cases": [
+              "progress entry or status",
+              "Legacy business visual for progress scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "push-pin-filled",
+      "path": "business-icons/mono/push-pin-filled.svg",
+      "title": "置顶图钉填充",
+      "englishName": "push pin filled",
+      "componentName": "PushPinFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "置顶图钉填充",
+        "tags": ["置顶图钉填充", "置顶", "图钉", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["置顶图钉填充相关入口或状态展示", "需要兼容历史业务视觉的 置顶图钉填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "push pin filled",
+            "tags": ["push pin filled", "push", "pin", "filled", "mono", "business icon"],
+            "use-cases": [
+              "push pin filled entry or status",
+              "Legacy business visual for push pin filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "push-pin-outlined",
+      "path": "business-icons/mono/push-pin-outlined.svg",
+      "title": "置顶图钉描边",
+      "englishName": "push pin outlined",
+      "componentName": "PushPinOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "置顶图钉描边",
+        "tags": ["置顶图钉描边", "置顶", "图钉", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["置顶图钉描边相关入口或状态展示", "需要兼容历史业务视觉的 置顶图钉描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "push pin outlined",
+            "tags": ["push pin outlined", "push", "pin", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "push pin outlined entry or status",
+              "Legacy business visual for push pin outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "qmai-event",
+      "path": "business-icons/mono/qmai-event.svg",
+      "title": "Qmai事件",
+      "englishName": "qmai event",
+      "componentName": "QmaiEvent",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "Qmai事件",
+        "tags": ["Qmai事件", "Qmai", "事件", "单色业务图标", "业务图标"],
+        "use-cases": ["Qmai事件相关入口或状态展示", "需要兼容历史业务视觉的 Qmai事件 场景"],
+        "i18n": {
+          "en": {
+            "name": "qmai event",
+            "tags": ["qmai event", "qmai", "event", "mono", "business icon"],
+            "use-cases": [
+              "qmai event entry or status",
+              "Legacy business visual for qmai event scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "qr-code",
+      "path": "business-icons/mono/qr-code.svg",
+      "title": "二维码代码",
+      "englishName": "qr code",
+      "componentName": "QrCode",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "二维码代码",
+        "tags": ["二维码代码", "二维码", "代码", "单色业务图标", "业务图标"],
+        "use-cases": ["二维码代码相关入口或状态展示", "需要兼容历史业务视觉的 二维码代码 场景"],
+        "i18n": {
+          "en": {
+            "name": "qr code",
+            "tags": ["qr code", "qr", "code", "mono", "business icon"],
+            "use-cases": ["qr code entry or status", "Legacy business visual for qr code scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "record-filled",
+      "path": "business-icons/mono/record-filled.svg",
+      "title": "记录填充",
+      "englishName": "record filled",
+      "componentName": "RecordFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "记录填充",
+        "tags": ["记录填充", "记录", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["记录填充相关入口或状态展示", "需要兼容历史业务视觉的 记录填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "record filled",
+            "tags": ["record filled", "record", "filled", "mono", "business icon"],
+            "use-cases": [
+              "record filled entry or status",
+              "Legacy business visual for record filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "redo",
+      "path": "business-icons/mono/redo.svg",
+      "title": "重做",
+      "englishName": "redo",
+      "componentName": "Redo",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "重做",
+        "tags": ["重做", "单色业务图标", "业务图标"],
+        "use-cases": ["重做相关入口或状态展示", "需要兼容历史业务视觉的 重做 场景"],
+        "i18n": {
+          "en": {
+            "name": "redo",
+            "tags": ["redo", "mono", "business icon"],
+            "use-cases": ["redo entry or status", "Legacy business visual for redo scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "route",
+      "path": "business-icons/mono/route.svg",
+      "title": "路线",
+      "englishName": "route",
+      "componentName": "Route",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "路线",
+        "tags": ["路线", "单色业务图标", "业务图标"],
+        "use-cases": ["路线相关入口或状态展示", "需要兼容历史业务视觉的 路线 场景"],
+        "i18n": {
+          "en": {
+            "name": "route",
+            "tags": ["route", "mono", "business icon"],
+            "use-cases": ["route entry or status", "Legacy business visual for route scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "sand-clock",
+      "path": "business-icons/mono/sand-clock.svg",
+      "title": "沙漏时钟",
+      "englishName": "sand clock",
+      "componentName": "SandClock",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "沙漏时钟",
+        "tags": ["沙漏时钟", "沙漏", "时钟", "单色业务图标", "业务图标"],
+        "use-cases": ["沙漏时钟相关入口或状态展示", "需要兼容历史业务视觉的 沙漏时钟 场景"],
+        "i18n": {
+          "en": {
+            "name": "sand clock",
+            "tags": ["sand clock", "sand", "clock", "mono", "business icon"],
+            "use-cases": [
+              "sand clock entry or status",
+              "Legacy business visual for sand clock scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "scroll-to-bottom",
+      "path": "business-icons/mono/scroll-to-bottom.svg",
+      "title": "滚动to底部",
+      "englishName": "scroll to bottom",
+      "componentName": "ScrollToBottom",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "滚动to底部",
+        "tags": ["滚动to底部", "滚动", "底部", "单色业务图标", "业务图标"],
+        "use-cases": ["滚动to底部相关入口或状态展示", "需要兼容历史业务视觉的 滚动to底部 场景"],
+        "i18n": {
+          "en": {
+            "name": "scroll to bottom",
+            "tags": ["scroll to bottom", "scroll", "to", "bottom", "mono", "business icon"],
+            "use-cases": [
+              "scroll to bottom entry or status",
+              "Legacy business visual for scroll to bottom scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "security-filled",
+      "path": "business-icons/mono/security-filled.svg",
+      "title": "安全填充",
+      "englishName": "security filled",
+      "componentName": "SecurityFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "安全填充",
+        "tags": ["安全填充", "安全", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["安全填充相关入口或状态展示", "需要兼容历史业务视觉的 安全填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "security filled",
+            "tags": ["security filled", "security", "filled", "mono", "business icon"],
+            "use-cases": [
+              "security filled entry or status",
+              "Legacy business visual for security filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "segment",
+      "path": "business-icons/mono/segment.svg",
+      "title": "分群",
+      "englishName": "segment",
+      "componentName": "Segment",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "分群",
+        "tags": ["分群", "单色业务图标", "业务图标"],
+        "use-cases": ["分群相关入口或状态展示", "需要兼容历史业务视觉的 分群 场景"],
+        "i18n": {
+          "en": {
+            "name": "segment",
+            "tags": ["segment", "mono", "business icon"],
+            "use-cases": ["segment entry or status", "Legacy business visual for segment scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "send-message",
+      "path": "business-icons/mono/send-message.svg",
+      "title": "发送消息",
+      "englishName": "send message",
+      "componentName": "SendMessage",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "发送消息",
+        "tags": ["发送消息", "发送", "消息", "单色业务图标", "业务图标"],
+        "use-cases": ["发送消息相关入口或状态展示", "需要兼容历史业务视觉的 发送消息 场景"],
+        "i18n": {
+          "en": {
+            "name": "send message",
+            "tags": ["send message", "send", "message", "mono", "business icon"],
+            "use-cases": [
+              "send message entry or status",
+              "Legacy business visual for send message scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "send-message-mark",
+      "path": "business-icons/mono/send-message-mark.svg",
+      "title": "发送消息标记",
+      "englishName": "send message mark",
+      "componentName": "SendMessageMark",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "发送消息标记",
+        "tags": ["发送消息标记", "发送", "消息", "标记", "单色业务图标", "业务图标"],
+        "use-cases": ["发送消息标记相关入口或状态展示", "需要兼容历史业务视觉的 发送消息标记 场景"],
+        "i18n": {
+          "en": {
+            "name": "send message mark",
+            "tags": ["send message mark", "send", "message", "mark", "mono", "business icon"],
+            "use-cases": [
+              "send message mark entry or status",
+              "Legacy business visual for send message mark scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "setting-filled",
+      "path": "business-icons/mono/setting-filled.svg",
+      "title": "设置填充",
+      "englishName": "setting filled",
+      "componentName": "SettingFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "设置填充",
+        "tags": ["设置填充", "设置", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["设置填充相关入口或状态展示", "需要兼容历史业务视觉的 设置填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "setting filled",
+            "tags": ["setting filled", "setting", "filled", "mono", "business icon"],
+            "use-cases": [
+              "setting filled entry or status",
+              "Legacy business visual for setting filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "setting-outlined",
+      "path": "business-icons/mono/setting-outlined.svg",
+      "title": "设置描边",
+      "englishName": "setting outlined",
+      "componentName": "SettingOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "设置描边",
+        "tags": ["设置描边", "设置", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["设置描边相关入口或状态展示", "需要兼容历史业务视觉的 设置描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "setting outlined",
+            "tags": ["setting outlined", "setting", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "setting outlined entry or status",
+              "Legacy business visual for setting outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "share",
+      "path": "business-icons/mono/share.svg",
+      "title": "分享",
+      "englishName": "share",
+      "componentName": "Share",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "分享",
+        "tags": ["分享", "单色业务图标", "业务图标"],
+        "use-cases": ["分享相关入口或状态展示", "需要兼容历史业务视觉的 分享 场景"],
+        "i18n": {
+          "en": {
+            "name": "share",
+            "tags": ["share", "mono", "business icon"],
+            "use-cases": ["share entry or status", "Legacy business visual for share scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "shop-assistant",
+      "path": "business-icons/mono/shop-assistant.svg",
+      "title": "店铺助手",
+      "englishName": "shop assistant",
+      "componentName": "ShopAssistant",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "店铺助手",
+        "tags": ["店铺助手", "店铺", "助手", "单色业务图标", "业务图标"],
+        "use-cases": ["店铺助手相关入口或状态展示", "需要兼容历史业务视觉的 店铺助手 场景"],
+        "i18n": {
+          "en": {
+            "name": "shop assistant",
+            "tags": ["shop assistant", "shop", "assistant", "mono", "business icon"],
+            "use-cases": [
+              "shop assistant entry or status",
+              "Legacy business visual for shop assistant scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "shop-check-bag-filled",
+      "path": "business-icons/mono/shop-check-bag-filled.svg",
+      "title": "店铺检查确认购物袋填充",
+      "englishName": "shop check bag filled",
+      "componentName": "ShopCheckBagFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "店铺检查确认购物袋填充",
+        "tags": [
+          "店铺检查确认购物袋填充",
+          "店铺",
+          "检查",
+          "确认",
+          "购物袋",
+          "填充",
+          "单色业务图标",
+          "业务图标"
+        ],
+        "use-cases": [
+          "店铺检查确认购物袋填充相关入口或状态展示",
+          "需要兼容历史业务视觉的 店铺检查确认购物袋填充 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "shop check bag filled",
+            "tags": [
+              "shop check bag filled",
+              "shop",
+              "check",
+              "bag",
+              "filled",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "shop check bag filled entry or status",
+              "Legacy business visual for shop check bag filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "shop-menu-filled",
+      "path": "business-icons/mono/shop-menu-filled.svg",
+      "title": "店铺菜单填充",
+      "englishName": "shop menu filled",
+      "componentName": "ShopMenuFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "店铺菜单填充",
+        "tags": ["店铺菜单填充", "店铺", "菜单", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["店铺菜单填充相关入口或状态展示", "需要兼容历史业务视觉的 店铺菜单填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "shop menu filled",
+            "tags": ["shop menu filled", "shop", "menu", "filled", "mono", "business icon"],
+            "use-cases": [
+              "shop menu filled entry or status",
+              "Legacy business visual for shop menu filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "shop-menu-outlined",
+      "path": "business-icons/mono/shop-menu-outlined.svg",
+      "title": "店铺菜单描边",
+      "englishName": "shop menu outlined",
+      "componentName": "ShopMenuOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "店铺菜单描边",
+        "tags": ["店铺菜单描边", "店铺", "菜单", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["店铺菜单描边相关入口或状态展示", "需要兼容历史业务视觉的 店铺菜单描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "shop menu outlined",
+            "tags": ["shop menu outlined", "shop", "menu", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "shop menu outlined entry or status",
+              "Legacy business visual for shop menu outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "shopify",
+      "path": "business-icons/duotone/shopify.svg",
+      "title": "Shopify",
+      "englishName": "shopify",
+      "componentName": "Shopify",
+      "category": "duotone",
+      "colorMode": "duotone",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "Shopify",
+        "tags": ["Shopify", "双色业务图标", "业务图标"],
+        "use-cases": ["Shopify相关入口或状态展示", "需要兼容历史业务视觉的 Shopify 场景"],
+        "i18n": {
+          "en": {
+            "name": "shopify",
+            "tags": ["shopify", "duotone", "business icon"],
+            "use-cases": ["shopify entry or status", "Legacy business visual for shopify scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "show-side-bar",
+      "path": "business-icons/mono/show-side-bar.svg",
+      "title": "显示侧边栏",
+      "englishName": "show side bar",
+      "componentName": "ShowSideBar",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "显示侧边栏",
+        "tags": ["显示侧边栏", "显示", "侧边", "栏", "单色业务图标", "业务图标"],
+        "use-cases": ["显示侧边栏相关入口或状态展示", "需要兼容历史业务视觉的 显示侧边栏 场景"],
+        "i18n": {
+          "en": {
+            "name": "show side bar",
+            "tags": ["show side bar", "show", "side", "bar", "mono", "business icon"],
+            "use-cases": [
+              "show side bar entry or status",
+              "Legacy business visual for show side bar scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "side-bar",
+      "path": "business-icons/mono/side-bar.svg",
+      "title": "侧边栏",
+      "englishName": "side bar",
+      "componentName": "SideBar",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "侧边栏",
+        "tags": ["侧边栏", "侧边", "栏", "单色业务图标", "业务图标"],
+        "use-cases": ["侧边栏相关入口或状态展示", "需要兼容历史业务视觉的 侧边栏 场景"],
+        "i18n": {
+          "en": {
+            "name": "side bar",
+            "tags": ["side bar", "side", "bar", "mono", "business icon"],
+            "use-cases": [
+              "side bar entry or status",
+              "Legacy business visual for side bar scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "star",
+      "path": "business-icons/mono/star.svg",
+      "title": "星标",
+      "englishName": "star",
+      "componentName": "Star",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "星标",
+        "tags": ["星标", "单色业务图标", "业务图标"],
+        "use-cases": ["星标相关入口或状态展示", "需要兼容历史业务视觉的 星标 场景"],
+        "i18n": {
+          "en": {
+            "name": "star",
+            "tags": ["star", "mono", "business icon"],
+            "use-cases": ["star entry or status", "Legacy business visual for star scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "start-arrow",
+      "path": "business-icons/mono/start-arrow.svg",
+      "title": "开始箭头",
+      "englishName": "start arrow",
+      "componentName": "StartArrow",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "开始箭头",
+        "tags": ["开始箭头", "开始", "箭头", "单色业务图标", "业务图标"],
+        "use-cases": ["开始箭头相关入口或状态展示", "需要兼容历史业务视觉的 开始箭头 场景"],
+        "i18n": {
+          "en": {
+            "name": "start arrow",
+            "tags": ["start arrow", "start", "arrow", "mono", "business icon"],
+            "use-cases": [
+              "start arrow entry or status",
+              "Legacy business visual for start arrow scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "status-filled",
+      "path": "business-icons/mono/status-filled.svg",
+      "title": "状态填充",
+      "englishName": "status filled",
+      "componentName": "StatusFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "状态填充",
+        "tags": ["状态填充", "状态", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["状态填充相关入口或状态展示", "需要兼容历史业务视觉的 状态填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "status filled",
+            "tags": ["status filled", "status", "filled", "mono", "business icon"],
+            "use-cases": [
+              "status filled entry or status",
+              "Legacy business visual for status filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "sync",
+      "path": "business-icons/mono/sync.svg",
+      "title": "同步",
+      "englishName": "sync",
+      "componentName": "Sync",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "同步",
+        "tags": ["同步", "单色业务图标", "业务图标"],
+        "use-cases": ["同步相关入口或状态展示", "需要兼容历史业务视觉的 同步 场景"],
+        "i18n": {
+          "en": {
+            "name": "sync",
+            "tags": ["sync", "mono", "business icon"],
+            "use-cases": ["sync entry or status", "Legacy business visual for sync scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "table-setting",
+      "path": "business-icons/mono/table-setting.svg",
+      "title": "表格设置",
+      "englishName": "table setting",
+      "componentName": "TableSetting",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "表格设置",
+        "tags": ["表格设置", "表格", "设置", "单色业务图标", "业务图标"],
+        "use-cases": ["表格设置相关入口或状态展示", "需要兼容历史业务视觉的 表格设置 场景"],
+        "i18n": {
+          "en": {
+            "name": "table setting",
+            "tags": ["table setting", "table", "setting", "mono", "business icon"],
+            "use-cases": [
+              "table setting entry or status",
+              "Legacy business visual for table setting scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "tag",
+      "path": "business-icons/mono/tag.svg",
+      "title": "tag",
+      "englishName": "tag",
+      "componentName": "Tag",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "tag",
+        "tags": ["tag", "单色业务图标", "业务图标"],
+        "use-cases": ["tag相关入口或状态展示", "需要兼容历史业务视觉的 tag 场景"],
+        "i18n": {
+          "en": {
+            "name": "tag",
+            "tags": ["tag", "mono", "business icon"],
+            "use-cases": ["tag entry or status", "Legacy business visual for tag scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "task-complete",
+      "path": "business-icons/mono/task-complete.svg",
+      "title": "任务完成",
+      "englishName": "task complete",
+      "componentName": "TaskComplete",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "任务完成",
+        "tags": ["任务完成", "任务", "完成", "单色业务图标", "业务图标"],
+        "use-cases": ["任务完成相关入口或状态展示", "需要兼容历史业务视觉的 任务完成 场景"],
+        "i18n": {
+          "en": {
+            "name": "task complete",
+            "tags": ["task complete", "task", "complete", "mono", "business icon"],
+            "use-cases": [
+              "task complete entry or status",
+              "Legacy business visual for task complete scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "task-menu-filled",
+      "path": "business-icons/mono/task-menu-filled.svg",
+      "title": "任务菜单填充",
+      "englishName": "task menu filled",
+      "componentName": "TaskMenuFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "任务菜单填充",
+        "tags": ["任务菜单填充", "任务", "菜单", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["任务菜单填充相关入口或状态展示", "需要兼容历史业务视觉的 任务菜单填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "task menu filled",
+            "tags": ["task menu filled", "task", "menu", "filled", "mono", "business icon"],
+            "use-cases": [
+              "task menu filled entry or status",
+              "Legacy business visual for task menu filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "team",
+      "path": "business-icons/mono/team.svg",
+      "title": "团队",
+      "englishName": "team",
+      "componentName": "Team",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "团队",
+        "tags": ["团队", "单色业务图标", "业务图标"],
+        "use-cases": ["团队相关入口或状态展示", "需要兼容历史业务视觉的 团队 场景"],
+        "i18n": {
+          "en": {
+            "name": "team",
+            "tags": ["team", "mono", "business icon"],
+            "use-cases": ["team entry or status", "Legacy business visual for team scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "template-filled",
+      "path": "business-icons/mono/template-filled.svg",
+      "title": "模板填充",
+      "englishName": "template filled",
+      "componentName": "TemplateFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "模板填充",
+        "tags": ["模板填充", "模板", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["模板填充相关入口或状态展示", "需要兼容历史业务视觉的 模板填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "template filled",
+            "tags": ["template filled", "template", "filled", "mono", "business icon"],
+            "use-cases": [
+              "template filled entry or status",
+              "Legacy business visual for template filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "time-clock",
+      "path": "business-icons/mono/time-clock.svg",
+      "title": "时间时钟",
+      "englishName": "time clock",
+      "componentName": "TimeClock",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "时间时钟",
+        "tags": ["时间时钟", "时间", "时钟", "单色业务图标", "业务图标"],
+        "use-cases": ["时间时钟相关入口或状态展示", "需要兼容历史业务视觉的 时间时钟 场景"],
+        "i18n": {
+          "en": {
+            "name": "time clock",
+            "tags": ["time clock", "time", "clock", "mono", "business icon"],
+            "use-cases": [
+              "time clock entry or status",
+              "Legacy business visual for time clock scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "title-edit-icon",
+      "path": "business-icons/mono/title-edit-icon.svg",
+      "title": "标题编辑图标",
+      "englishName": "title edit icon",
+      "componentName": "TitleEditIcon",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "标题编辑图标",
+        "tags": ["标题编辑图标", "标题", "编辑", "图标", "单色业务图标", "业务图标"],
+        "use-cases": ["标题编辑图标相关入口或状态展示", "需要兼容历史业务视觉的 标题编辑图标 场景"],
+        "i18n": {
+          "en": {
+            "name": "title edit icon",
+            "tags": ["title edit icon", "title", "edit", "icon", "mono", "business icon"],
+            "use-cases": [
+              "title edit icon entry or status",
+              "Legacy business visual for title edit icon scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "tool-filled",
+      "path": "business-icons/mono/tool-filled.svg",
+      "title": "工具填充",
+      "englishName": "tool filled",
+      "componentName": "ToolFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "工具填充",
+        "tags": ["工具填充", "工具", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["工具填充相关入口或状态展示", "需要兼容历史业务视觉的 工具填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "tool filled",
+            "tags": ["tool filled", "tool", "filled", "mono", "business icon"],
+            "use-cases": [
+              "tool filled entry or status",
+              "Legacy business visual for tool filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "trigger",
+      "path": "business-icons/mono/trigger.svg",
+      "title": "触发器",
+      "englishName": "trigger",
+      "componentName": "Trigger",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "触发器",
+        "tags": ["触发器", "单色业务图标", "业务图标"],
+        "use-cases": ["触发器相关入口或状态展示", "需要兼容历史业务视觉的 触发器 场景"],
+        "i18n": {
+          "en": {
+            "name": "trigger",
+            "tags": ["trigger", "mono", "business icon"],
+            "use-cases": ["trigger entry or status", "Legacy business visual for trigger scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "trophy",
+      "path": "business-icons/multicolor/trophy.svg",
+      "title": "奖杯",
+      "englishName": "trophy",
+      "componentName": "Trophy",
+      "category": "multicolor",
+      "colorMode": "multicolor",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "奖杯",
+        "tags": ["奖杯", "多色业务图标", "业务图标"],
+        "use-cases": ["奖杯相关入口或状态展示", "需要兼容历史业务视觉的 奖杯 场景"],
+        "i18n": {
+          "en": {
+            "name": "trophy",
+            "tags": ["trophy", "multicolor", "business icon"],
+            "use-cases": ["trophy entry or status", "Legacy business visual for trophy scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "undo",
+      "path": "business-icons/mono/undo.svg",
+      "title": "撤销",
+      "englishName": "undo",
+      "componentName": "Undo",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "撤销",
+        "tags": ["撤销", "单色业务图标", "业务图标"],
+        "use-cases": ["撤销相关入口或状态展示", "需要兼容历史业务视觉的 撤销 场景"],
+        "i18n": {
+          "en": {
+            "name": "undo",
+            "tags": ["undo", "mono", "business icon"],
+            "use-cases": ["undo entry or status", "Legacy business visual for undo scenarios"]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "unsubscribe",
+      "path": "business-icons/mono/unsubscribe.svg",
+      "title": "退订",
+      "englishName": "unsubscribe",
+      "componentName": "Unsubscribe",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "退订",
+        "tags": ["退订", "单色业务图标", "业务图标"],
+        "use-cases": ["退订相关入口或状态展示", "需要兼容历史业务视觉的 退订 场景"],
+        "i18n": {
+          "en": {
+            "name": "unsubscribe",
+            "tags": ["unsubscribe", "mono", "business icon"],
+            "use-cases": [
+              "unsubscribe entry or status",
+              "Legacy business visual for unsubscribe scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "upgrade-diamond-filled",
+      "path": "business-icons/mono/upgrade-diamond-filled.svg",
+      "title": "升级钻石填充",
+      "englishName": "upgrade diamond filled",
+      "componentName": "UpgradeDiamondFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "升级钻石填充",
+        "tags": ["升级钻石填充", "升级", "钻石", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["升级钻石填充相关入口或状态展示", "需要兼容历史业务视觉的 升级钻石填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "upgrade diamond filled",
+            "tags": [
+              "upgrade diamond filled",
+              "upgrade",
+              "diamond",
+              "filled",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "upgrade diamond filled entry or status",
+              "Legacy business visual for upgrade diamond filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "upload-file",
+      "path": "business-icons/mono/upload-file.svg",
+      "title": "上传文件",
+      "englishName": "upload file",
+      "componentName": "UploadFile",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "上传文件",
+        "tags": ["上传文件", "上传", "文件", "单色业务图标", "业务图标"],
+        "use-cases": ["上传文件相关入口或状态展示", "需要兼容历史业务视觉的 上传文件 场景"],
+        "i18n": {
+          "en": {
+            "name": "upload file",
+            "tags": ["upload file", "upload", "file", "mono", "business icon"],
+            "use-cases": [
+              "upload file entry or status",
+              "Legacy business visual for upload file scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "user-filled",
+      "path": "business-icons/mono/user-filled.svg",
+      "title": "用户填充",
+      "englishName": "user filled",
+      "componentName": "UserFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "用户填充",
+        "tags": ["用户填充", "用户", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["用户填充相关入口或状态展示", "需要兼容历史业务视觉的 用户填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "user filled",
+            "tags": ["user filled", "user", "filled", "mono", "business icon"],
+            "use-cases": [
+              "user filled entry or status",
+              "Legacy business visual for user filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "wechat-filled",
+      "path": "business-icons/mono/wechat-filled.svg",
+      "title": "微信填充",
+      "englishName": "wechat filled",
+      "componentName": "WechatFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "微信填充",
+        "tags": ["微信填充", "微信", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["微信填充相关入口或状态展示", "需要兼容历史业务视觉的 微信填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "wechat filled",
+            "tags": ["wechat filled", "wechat", "filled", "mono", "business icon"],
+            "use-cases": [
+              "wechat filled entry or status",
+              "Legacy business visual for wechat filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "whatsapp-business-outlined",
+      "path": "business-icons/mono/whatsapp-business-outlined.svg",
+      "title": "WhatsApp业务描边",
+      "englishName": "whatsapp business outlined",
+      "componentName": "WhatsappBusinessOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "WhatsApp业务描边",
+        "tags": ["WhatsApp业务描边", "WhatsApp", "业务", "描边", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "WhatsApp业务描边相关入口或状态展示",
+          "需要兼容历史业务视觉的 WhatsApp业务描边 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "whatsapp business outlined",
+            "tags": [
+              "whatsapp business outlined",
+              "whatsapp",
+              "business",
+              "outlined",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "whatsapp business outlined entry or status",
+              "Legacy business visual for whatsapp business outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "whatsapp-notch-outlined",
+      "path": "business-icons/mono/whatsapp-notch-outlined.svg",
+      "title": "WhatsApp缺口描边",
+      "englishName": "whatsapp notch outlined",
+      "componentName": "WhatsappNotchOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "WhatsApp缺口描边",
+        "tags": ["WhatsApp缺口描边", "WhatsApp", "缺口", "描边", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "WhatsApp缺口描边相关入口或状态展示",
+          "需要兼容历史业务视觉的 WhatsApp缺口描边 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "whatsapp notch outlined",
+            "tags": [
+              "whatsapp notch outlined",
+              "whatsapp",
+              "notch",
+              "outlined",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "whatsapp notch outlined entry or status",
+              "Legacy business visual for whatsapp notch outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "whatsapp-phone-filled",
+      "path": "business-icons/mono/whatsapp-phone-filled.svg",
+      "title": "WhatsApp电话填充",
+      "englishName": "whatsapp phone filled",
+      "componentName": "WhatsappPhoneFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "WhatsApp电话填充",
+        "tags": ["WhatsApp电话填充", "WhatsApp", "电话", "填充", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "WhatsApp电话填充相关入口或状态展示",
+          "需要兼容历史业务视觉的 WhatsApp电话填充 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "whatsapp phone filled",
+            "tags": [
+              "whatsapp phone filled",
+              "whatsapp",
+              "phone",
+              "filled",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "whatsapp phone filled entry or status",
+              "Legacy business visual for whatsapp phone filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "whatsapp-phone-outlined",
+      "path": "business-icons/mono/whatsapp-phone-outlined.svg",
+      "title": "WhatsApp电话描边",
+      "englishName": "whatsapp phone outlined",
+      "componentName": "WhatsappPhoneOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "WhatsApp电话描边",
+        "tags": ["WhatsApp电话描边", "WhatsApp", "电话", "描边", "单色业务图标", "业务图标"],
+        "use-cases": [
+          "WhatsApp电话描边相关入口或状态展示",
+          "需要兼容历史业务视觉的 WhatsApp电话描边 场景"
+        ],
+        "i18n": {
+          "en": {
+            "name": "whatsapp phone outlined",
+            "tags": [
+              "whatsapp phone outlined",
+              "whatsapp",
+              "phone",
+              "outlined",
+              "mono",
+              "business icon"
+            ],
+            "use-cases": [
+              "whatsapp phone outlined entry or status",
+              "Legacy business visual for whatsapp phone outlined scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "widgets-filled",
+      "path": "business-icons/mono/widgets-filled.svg",
+      "title": "组件填充",
+      "englishName": "widgets filled",
+      "componentName": "WidgetsFilled",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "组件填充",
+        "tags": ["组件填充", "组件", "填充", "单色业务图标", "业务图标"],
+        "use-cases": ["组件填充相关入口或状态展示", "需要兼容历史业务视觉的 组件填充 场景"],
+        "i18n": {
+          "en": {
+            "name": "widgets filled",
+            "tags": ["widgets filled", "widgets", "filled", "mono", "business icon"],
+            "use-cases": [
+              "widgets filled entry or status",
+              "Legacy business visual for widgets filled scenarios"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "business-icon",
+      "name": "widgets-outlined",
+      "path": "business-icons/mono/widgets-outlined.svg",
+      "title": "组件描边",
+      "englishName": "widgets outlined",
+      "componentName": "WidgetsOutlined",
+      "category": "mono",
+      "colorMode": "mono",
+      "metadata": {
+        "$schema": "../../asset-metadata.schema.json",
+        "name": "组件描边",
+        "tags": ["组件描边", "组件", "描边", "单色业务图标", "业务图标"],
+        "use-cases": ["组件描边相关入口或状态展示", "需要兼容历史业务视觉的 组件描边 场景"],
+        "i18n": {
+          "en": {
+            "name": "widgets outlined",
+            "tags": ["widgets outlined", "widgets", "outlined", "mono", "business icon"],
+            "use-cases": [
+              "widgets outlined entry or status",
+              "Legacy business visual for widgets outlined scenarios"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

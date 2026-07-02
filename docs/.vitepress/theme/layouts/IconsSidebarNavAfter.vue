@@ -21,6 +21,7 @@ const isBusinessIconsPage = computed(() => {
     relativePath.startsWith('business-icons/') || relativePath.startsWith('en/business-icons/')
   );
 });
+
 </script>
 
 <template>

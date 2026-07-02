@@ -247,7 +247,6 @@ function getBaseSidebar(locale: DocsLocale): Sidebar {
     '/changelog': getChangelogSidebar(locale),
     '/icons/': [{ text: '', link: '/icons/' }],
     '/business-icons/': [{ text: '', link: '/business-icons/' }],
-    '/illustration-icons/': [{ text: '', link: '/illustration-icons/' }],
   });
 }
 
