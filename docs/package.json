@@ -67,7 +67,7 @@
     "@ycloud-web/build-icons": "workspace:*",
     "@ycloud-web/helpers": "workspace:*",
     "@ycloud-web/shared": "workspace:*",
-    "h3": "^1.15.9",
+    "h3": "2.0.1-rc.22",
     "markdown-it": "^14.2.0",
     "markdown-it-container": "^4.0.0",
     "nitropack": "^2.13.4",
