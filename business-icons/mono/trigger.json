@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "触发器",
+  "tags": ["触发器", "单色业务图标", "业务图标"],
+  "use-cases": ["触发器相关入口或状态展示", "需要兼容历史业务视觉的 触发器 场景"],
+  "i18n": {
+    "en": {
+      "name": "trigger",
+      "tags": ["trigger", "mono", "business icon"],
+      "use-cases": ["trigger entry or status", "Legacy business visual for trigger scenarios"]
+    }
+  }
+}

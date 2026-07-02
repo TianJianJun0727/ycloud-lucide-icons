@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "优惠券填充",
+  "tags": ["优惠券填充", "优惠券", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["优惠券填充相关入口或状态展示", "需要兼容历史业务视觉的 优惠券填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "coupon filled",
+      "tags": ["coupon filled", "coupon", "filled", "mono", "business icon"],
+      "use-cases": [
+        "coupon filled entry or status",
+        "Legacy business visual for coupon filled scenarios"
+      ]
+    }
+  }
+}

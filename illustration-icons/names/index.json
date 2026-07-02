@@ -1,0 +1,90 @@
+{
+  "metadataVersion": 1,
+  "names": [
+    {
+      "name": "account-unbound",
+      "path": "illustration-icons/account-unbound.svg",
+      "title": "账号未绑定",
+      "englishName": "Account Unbound",
+      "componentName": "AccountUnbound"
+    },
+    {
+      "name": "data-importing",
+      "path": "illustration-icons/data-importing.svg",
+      "title": "数据导入中",
+      "englishName": "Data Importing",
+      "componentName": "DataImporting"
+    },
+    {
+      "name": "empty-list",
+      "path": "illustration-icons/empty-list.svg",
+      "title": "空列表",
+      "englishName": "Empty List",
+      "componentName": "EmptyList"
+    },
+    {
+      "name": "empty-orders",
+      "path": "illustration-icons/empty-orders.svg",
+      "title": "空订单",
+      "englishName": "Empty Orders",
+      "componentName": "EmptyOrders"
+    },
+    {
+      "name": "empty-page",
+      "path": "illustration-icons/empty-page.svg",
+      "title": "空页面",
+      "englishName": "Empty Page",
+      "componentName": "EmptyPage"
+    },
+    {
+      "name": "empty-search",
+      "path": "illustration-icons/empty-search.svg",
+      "title": "搜索无结果",
+      "englishName": "Empty Search",
+      "componentName": "EmptySearch"
+    },
+    {
+      "name": "load-failed",
+      "path": "illustration-icons/load-failed.svg",
+      "title": "加载失败",
+      "englishName": "Load Failed",
+      "componentName": "LoadFailed"
+    },
+    {
+      "name": "network-disconnected",
+      "path": "illustration-icons/network-disconnected.svg",
+      "title": "网络断开",
+      "englishName": "Network Disconnected",
+      "componentName": "NetworkDisconnected"
+    },
+    {
+      "name": "no-permission",
+      "path": "illustration-icons/no-permission.svg",
+      "title": "无权限",
+      "englishName": "No Permission",
+      "componentName": "NoPermission"
+    },
+    {
+      "name": "not-found",
+      "path": "illustration-icons/not-found.svg",
+      "title": "未找到",
+      "englishName": "Not Found",
+      "componentName": "NotFound"
+    },
+    {
+      "name": "payment-method-disabled",
+      "path": "illustration-icons/payment-method-disabled.svg",
+      "title": "支付方式不可用",
+      "englishName": "Payment Method Disabled",
+      "componentName": "PaymentMethodDisabled"
+    },
+    {
+      "name": "waiting-status",
+      "path": "illustration-icons/waiting-status.svg",
+      "title": "等待状态",
+      "englishName": "Waiting Status",
+      "componentName": "WaitingStatus"
+    }
+  ],
+  "duplicates": []
+}

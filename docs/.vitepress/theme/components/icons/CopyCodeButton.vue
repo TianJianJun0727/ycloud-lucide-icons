@@ -39,13 +39,15 @@ function copyJSX() {
 
   const code = `<${componentName.value}${attrs.join(' ')} />`;
 
-  navigator.clipboard.writeText(code);
+  confetti();
+  void navigator.clipboard.writeText(code).catch(() => {});
 }
 
 function copyComponentName() {
   const code = componentName.value;
 
-  navigator.clipboard.writeText(code);
+  confetti();
+  void navigator.clipboard.writeText(code).catch(() => {});
 }
 
 function copyVue() {
@@ -69,7 +71,8 @@ function copyVue() {
 
   const code = `<${componentName.value}${attrs.join(' ')} />`;
 
-  navigator.clipboard.writeText(code);
+  confetti();
+  void navigator.clipboard.writeText(code).catch(() => {});
 }
 
 function copyAngular() {
@@ -95,7 +98,8 @@ function copyAngular() {
 
   const code = `<ycloud-icon${attrs.join(' ')}></ycloud-icon>`;
 
-  navigator.clipboard.writeText(code);
+  confetti();
+  void navigator.clipboard.writeText(code).catch(() => {});
 }
 </script>
 
@@ -104,8 +108,6 @@ function copyAngular() {
     :buttonClass="`confetti-button ${animate ? 'animate' : ''}`"
     id="copy-code-button"
     callOptionOnClick
-    @click="confetti"
-    @optionClick="confetti"
     :data-confetti-text="isEnglish ? 'Copied' : '已复制'"
     :popoverPosition="popoverPosition"
     :options="[

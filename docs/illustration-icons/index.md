@@ -3,7 +3,7 @@ title: 插画
 description: 浏览全部 YCloud Icons 插画。
 layout: page
 outline: 2
-sidebar: true
+sidebar: false
 head:
   - - link
     - rel: canonical
@@ -23,12 +23,17 @@ const filteredIllustrations = computed(() => {
 
   if (!query) return data.illustrations
 
-  return data.illustrations.filter((item) =>
-    item.name.includes(query) ||
-    item.displayName.toLowerCase().includes(query) ||
-    item.componentName.toLowerCase().includes(query) ||
-    item.path.toLowerCase().includes(query)
-  )
+  return data.illustrations.filter((item) => [
+    item.name,
+    item.displayName,
+    item.componentName,
+    item.path,
+    item.englishName,
+    ...(item.tags ?? []),
+    ...(item.useCases ?? []),
+    ...(item.englishTags ?? []),
+    ...(item.englishUseCases ?? [])
+  ].filter(Boolean).join(' ').toLowerCase().includes(query))
 })
 </script>
 

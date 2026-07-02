@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "博客",
+  "tags": ["博客", "单色业务图标", "业务图标"],
+  "use-cases": ["博客相关入口或状态展示", "需要兼容历史业务视觉的 博客 场景"],
+  "i18n": {
+    "en": {
+      "name": "blog",
+      "tags": ["blog", "mono", "business icon"],
+      "use-cases": ["blog entry or status", "Legacy business visual for blog scenarios"]
+    }
+  }
+}

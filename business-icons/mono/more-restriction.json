@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "更多限制",
+  "tags": ["更多限制", "更多", "限制", "单色业务图标", "业务图标"],
+  "use-cases": ["更多限制相关入口或状态展示", "需要兼容历史业务视觉的 更多限制 场景"],
+  "i18n": {
+    "en": {
+      "name": "more restriction",
+      "tags": ["more restriction", "more", "restriction", "mono", "business icon"],
+      "use-cases": [
+        "more restriction entry or status",
+        "Legacy business visual for more restriction scenarios"
+      ]
+    }
+  }
+}

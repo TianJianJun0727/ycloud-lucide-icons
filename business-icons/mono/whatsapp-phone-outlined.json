@@ -1,0 +1,19 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "WhatsApp电话描边",
+  "tags": ["WhatsApp电话描边", "WhatsApp", "电话", "描边", "单色业务图标", "业务图标"],
+  "use-cases": [
+    "WhatsApp电话描边相关入口或状态展示",
+    "需要兼容历史业务视觉的 WhatsApp电话描边 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "whatsapp phone outlined",
+      "tags": ["whatsapp phone outlined", "whatsapp", "phone", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "whatsapp phone outlined entry or status",
+        "Legacy business visual for whatsapp phone outlined scenarios"
+      ]
+    }
+  }
+}

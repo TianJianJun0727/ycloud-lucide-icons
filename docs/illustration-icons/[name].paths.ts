@@ -6,8 +6,10 @@ export default {
     const { illustrations } = (await illustrationData.load()) as {
       illustrations: IllustrationEntity[];
     };
-    return illustrations.map((illustration) => ({
-      params: illustration,
+    return illustrations.map(({ name }) => ({
+      params: {
+        name,
+      },
     }));
   },
 };

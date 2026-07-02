@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "分配",
+  "tags": ["分配", "单色业务图标", "业务图标"],
+  "use-cases": ["分配相关入口或状态展示", "需要兼容历史业务视觉的 分配 场景"],
+  "i18n": {
+    "en": {
+      "name": "assign",
+      "tags": ["assign", "mono", "business icon"],
+      "use-cases": ["assign entry or status", "Legacy business visual for assign scenarios"]
+    }
+  }
+}

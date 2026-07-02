@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "tag",
+  "tags": ["tag", "单色业务图标", "业务图标"],
+  "use-cases": ["tag相关入口或状态展示", "需要兼容历史业务视觉的 tag 场景"],
+  "i18n": {
+    "en": {
+      "name": "tag",
+      "tags": ["tag", "mono", "business icon"],
+      "use-cases": ["tag entry or status", "Legacy business visual for tag scenarios"]
+    }
+  }
+}

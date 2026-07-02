@@ -24,10 +24,15 @@ description: 插画 SVG 资产的存放、校验和使用规则。
 
 ```text
 illustration-icons/<illustration-name>.svg
+illustration-icons/<illustration-name>.json
 illustration-icons/index.json
+illustration-icons/metadata/index.json
+illustration-icons/names/index.json
+docs/public/metadata/illustration-icons.json
+docs/public/metadata/names/illustration-icons.json
 ```
 
-插画不需要每个 SVG 配一份同名 JSON 元数据。根 `illustration-icons/index.json` 是生成产物，用于校验、Figma 插件、文档站和包生成流程消费。
+插画需要每个 SVG 配一份同名 JSON metadata，用于搜索、AI 选图和文档展示。根 `illustration-icons/index.json` 是生成产物；`illustration-icons/metadata/index.json` 和 `illustration-icons/names/index.json` 是仓库最新快照，供 Figma 插件、GitHub 检测和 skills 查询优先读取。文档构建时会把这两份仓库快照复制到 `docs/public/metadata/illustration-icons.json` 和 `docs/public/metadata/names/illustration-icons.json`，作为部署后的 URL 兜底。
 
 文件名必须使用小写 kebab-case，并且会直接决定包内导出名：
 
@@ -42,17 +47,20 @@ illustration-icons/empty-page.svg -> EmptyPage
 基础校验会检查：
 
 - 文件路径必须是 `illustration-icons/<illustration-name>.svg`
+- 同名 metadata 必须存在于 `illustration-icons/<illustration-name>.json`
 - 文件名必须是小写 kebab-case
 - 根节点必须是 `<svg>`
 - 禁止 `<script>` 和 `<foreignObject>`
 - 禁止 `onclick` 等事件属性
 - 禁止 `javascript:` URL
 - 根 `illustration-icons/index.json` 必须由 `node ./scripts/writeIllustrationIndex.mts` 生成并保持同步
+- `illustration-icons/metadata/index.json` 和 `illustration-icons/names/index.json` 必须由 `node ./scripts/writeAssetMetadata.mts` 生成并保持同步；`docs/public/metadata` 由文档构建直接复制
 
 本地可以运行：
 
 ```sh
 node ./scripts/writeIllustrationIndex.mts
+node ./scripts/writeAssetMetadata.mts
 node ./scripts/checkIllustrationSvgSource.mts
 ```
 
@@ -61,15 +69,16 @@ node ./scripts/checkIllustrationSvgSource.mts
 在 Figma 插件中选择“插画”后，插件会：
 
 - 提交到 `illustration-icons/*.svg`
+- 同时提交 `illustration-icons/*.json`
 - 不做颜色转换
 - 不做大小清洗
-- 不生成 `icons/*.json`
+- 不生成 `icons/*.json`，但会生成插画自己的同名 metadata JSON
 - 不要求通用图标的多选分类、标签或使用场景
 - 只按插画 SVG 基础安全规则拦截明显不安全的 SVG
 
 插件提交生成 PR 后，GitHub 工作流会和通用图标、业务图标一样处理插画：
 
-- `fix-icon-source` 会自动刷新并格式化 `illustration-icons/index.json`
+- `fix-icon-source` 会自动刷新并格式化 `illustration-icons/index.json`、同名 metadata JSON 和仓库快照；`docs/public/metadata` 在文档构建时复制
 - PR lint 会运行 `pnpm lint:svg:illustration`
 - 允许同仓库 Figma 插画 PR 进入自动合并流程
 - 合并到 `main` 后，如果 PR 来自 Figma 且包含 `illustration-icons/*.svg`，会触发图标 release 流程并发布新的 npm 版本
@@ -142,10 +151,7 @@ pnpm add @ycloud-web/icons-data
 ```
 
 ```ts
-import {
-  getIllustration,
-  illustrations,
-} from '@ycloud-web/icons-data/illustration';
+import { getIllustration, illustrations } from '@ycloud-web/icons-data/illustration';
 
 const emptyPage = getIllustration('empty-page');
 const sameIllustration = illustrations['empty-page'];

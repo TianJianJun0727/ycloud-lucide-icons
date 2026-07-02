@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "联系人填充",
+  "tags": ["联系人填充", "联系人", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["联系人填充相关入口或状态展示", "需要兼容历史业务视觉的 联系人填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "contact filled",
+      "tags": ["contact filled", "contact", "filled", "mono", "business icon"],
+      "use-cases": [
+        "contact filled entry or status",
+        "Legacy business visual for contact filled scenarios"
+      ]
+    }
+  }
+}

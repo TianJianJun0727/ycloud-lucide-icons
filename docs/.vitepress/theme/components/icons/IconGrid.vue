@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { IconEntity } from '@theme/types';
+import IconAssetGrid from './IconAssetGrid.vue';
 import IconItem from './IconItem.vue';
 
 const emit = defineEmits(['setActiveIcon']);
@@ -17,12 +18,11 @@ function setActiveIcon(icon: IconEntity) {
 </script>
 
 <template>
-  <div class="icons">
-    <div
-      class="icon"
-      v-for="icon in icons"
-      :key="icon.name"
-    >
+  <IconAssetGrid
+    class="icons"
+    :icons="icons"
+  >
+    <template #default="{ icon }">
       <IconItem
         :iconNode="icon.iconNode"
         :name="icon.name"
@@ -33,20 +33,12 @@ function setActiveIcon(icon: IconEntity) {
         :overlayMode="overlayMode"
         :hideIcon="hideIcons"
       />
-    </div>
-  </div>
+    </template>
+  </IconAssetGrid>
 </template>
 
 <style>
-.icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  gap: 8px;
-  width: 100%;
-}
-
 .icon {
   aspect-ratio: 1/1;
-  position: relative;
 }
 </style>

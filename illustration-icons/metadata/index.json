@@ -1,0 +1,261 @@
+{
+  "metadataVersion": 1,
+  "type": "illustration",
+  "assets": [
+    {
+      "type": "illustration",
+      "name": "account-unbound",
+      "path": "illustration-icons/account-unbound.svg",
+      "title": "账号未绑定",
+      "englishName": "Account Unbound",
+      "componentName": "AccountUnbound",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "账号未绑定",
+        "tags": ["账号未绑定", "解绑", "未连接", "账户异常"],
+        "use-cases": ["账号绑定状态为空或失效", "引导用户绑定账号"],
+        "i18n": {
+          "en": {
+            "name": "Account Unbound",
+            "tags": ["account unbound", "account", "unbound"],
+            "use-cases": ["Account binding is missing or invalid", "Guide users to bind an account"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "data-importing",
+      "path": "illustration-icons/data-importing.svg",
+      "title": "数据导入中",
+      "englishName": "Data Importing",
+      "componentName": "DataImporting",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "数据导入中",
+        "tags": ["数据导入", "导入中", "处理中", "同步中"],
+        "use-cases": ["数据正在导入时的页面占位", "导入流程等待状态"],
+        "i18n": {
+          "en": {
+            "name": "Data Importing",
+            "tags": ["data importing", "data", "importing"],
+            "use-cases": [
+              "Page placeholder while data is importing",
+              "Waiting state during import flow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "empty-list",
+      "path": "illustration-icons/empty-list.svg",
+      "title": "空列表",
+      "englishName": "Empty List",
+      "componentName": "EmptyList",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "空列表",
+        "tags": ["空列表", "暂无数据", "列表为空", "无内容"],
+        "use-cases": ["列表或表格无数据", "筛选后没有可展示内容"],
+        "i18n": {
+          "en": {
+            "name": "Empty List",
+            "tags": ["empty list", "empty", "list"],
+            "use-cases": ["Empty list or table", "No content after filtering"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "empty-orders",
+      "path": "illustration-icons/empty-orders.svg",
+      "title": "空订单",
+      "englishName": "Empty Orders",
+      "componentName": "EmptyOrders",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "空订单",
+        "tags": ["空订单", "暂无订单", "订单为空"],
+        "use-cases": ["订单列表为空", "商店还没有订单数据"],
+        "i18n": {
+          "en": {
+            "name": "Empty Orders",
+            "tags": ["empty orders", "empty", "orders"],
+            "use-cases": ["Empty order list", "Store has no order data"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "empty-page",
+      "path": "illustration-icons/empty-page.svg",
+      "title": "空页面",
+      "englishName": "Empty Page",
+      "componentName": "EmptyPage",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "空页面",
+        "tags": ["空页面", "占位页", "暂无内容"],
+        "use-cases": ["页面内容为空", "模块暂未配置内容"],
+        "i18n": {
+          "en": {
+            "name": "Empty Page",
+            "tags": ["empty page", "empty", "page"],
+            "use-cases": ["Empty page content", "Module has no configured content"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "empty-search",
+      "path": "illustration-icons/empty-search.svg",
+      "title": "搜索无结果",
+      "englishName": "Empty Search",
+      "componentName": "EmptySearch",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "搜索无结果",
+        "tags": ["搜索无结果", "未找到", "空搜索"],
+        "use-cases": ["搜索或筛选没有结果", "提示用户调整搜索条件"],
+        "i18n": {
+          "en": {
+            "name": "Empty Search",
+            "tags": ["empty search", "empty", "search"],
+            "use-cases": ["No search or filter results", "Prompt users to adjust search criteria"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "load-failed",
+      "path": "illustration-icons/load-failed.svg",
+      "title": "加载失败",
+      "englishName": "Load Failed",
+      "componentName": "LoadFailed",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "加载失败",
+        "tags": ["加载失败", "请求失败", "重试"],
+        "use-cases": ["页面或模块加载失败", "提示用户重试"],
+        "i18n": {
+          "en": {
+            "name": "Load Failed",
+            "tags": ["load failed", "load", "failed"],
+            "use-cases": ["Page or module failed to load", "Prompt users to retry"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "network-disconnected",
+      "path": "illustration-icons/network-disconnected.svg",
+      "title": "网络断开",
+      "englishName": "Network Disconnected",
+      "componentName": "NetworkDisconnected",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "网络断开",
+        "tags": ["网络断开", "离线", "连接失败"],
+        "use-cases": ["网络异常页面", "离线或连接中断提示"],
+        "i18n": {
+          "en": {
+            "name": "Network Disconnected",
+            "tags": ["network disconnected", "network", "disconnected"],
+            "use-cases": ["Network error page", "Offline or disconnected state"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "no-permission",
+      "path": "illustration-icons/no-permission.svg",
+      "title": "无权限",
+      "englishName": "No Permission",
+      "componentName": "NoPermission",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "无权限",
+        "tags": ["无权限", "权限不足", "访问受限"],
+        "use-cases": ["无权限访问页面", "权限不足的功能入口"],
+        "i18n": {
+          "en": {
+            "name": "No Permission",
+            "tags": ["no permission", "no", "permission"],
+            "use-cases": ["No permission page", "Feature entry with insufficient permission"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "not-found",
+      "path": "illustration-icons/not-found.svg",
+      "title": "未找到",
+      "englishName": "Not Found",
+      "componentName": "NotFound",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "未找到",
+        "tags": ["404", "未找到", "页面不存在"],
+        "use-cases": ["404 页面", "资源不存在或链接失效"],
+        "i18n": {
+          "en": {
+            "name": "Not Found",
+            "tags": ["not found", "not", "found"],
+            "use-cases": ["404 page", "Missing resource or invalid link"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "payment-method-disabled",
+      "path": "illustration-icons/payment-method-disabled.svg",
+      "title": "支付方式不可用",
+      "englishName": "Payment Method Disabled",
+      "componentName": "PaymentMethodDisabled",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "支付方式不可用",
+        "tags": ["支付方式不可用", "支付禁用", "付款方式"],
+        "use-cases": ["支付方式被禁用", "付款配置不可用"],
+        "i18n": {
+          "en": {
+            "name": "Payment Method Disabled",
+            "tags": ["payment method disabled", "payment", "method", "disabled"],
+            "use-cases": ["Payment method is disabled", "Payment configuration is unavailable"]
+          }
+        }
+      }
+    },
+    {
+      "type": "illustration",
+      "name": "waiting-status",
+      "path": "illustration-icons/waiting-status.svg",
+      "title": "等待状态",
+      "englishName": "Waiting Status",
+      "componentName": "WaitingStatus",
+      "metadata": {
+        "$schema": "../asset-metadata.schema.json",
+        "name": "等待状态",
+        "tags": ["等待", "排队中", "处理中"],
+        "use-cases": ["任务等待处理", "异步流程等待状态"],
+        "i18n": {
+          "en": {
+            "name": "Waiting Status",
+            "tags": ["waiting status", "waiting", "status"],
+            "use-cases": ["Task waiting for processing", "Waiting state for async flow"]
+          }
+        }
+      }
+    }
+  ]
+}

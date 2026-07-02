@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "等待状态",
+  "tags": ["等待", "排队中", "处理中"],
+  "use-cases": ["任务等待处理", "异步流程等待状态"],
+  "i18n": {
+    "en": {
+      "name": "Waiting Status",
+      "tags": ["waiting status", "waiting", "status"],
+      "use-cases": ["Task waiting for processing", "Waiting state for async flow"]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "空订单",
+  "tags": ["空订单", "暂无订单", "订单为空"],
+  "use-cases": ["订单列表为空", "商店还没有订单数据"],
+  "i18n": {
+    "en": {
+      "name": "Empty Orders",
+      "tags": ["empty orders", "empty", "orders"],
+      "use-cases": ["Empty order list", "Store has no order data"]
+    }
+  }
+}

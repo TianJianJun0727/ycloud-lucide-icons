@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "地图描边",
+  "tags": ["地图描边", "地图", "描边", "单色业务图标", "业务图标"],
+  "use-cases": ["地图描边相关入口或状态展示", "需要兼容历史业务视觉的 地图描边 场景"],
+  "i18n": {
+    "en": {
+      "name": "map outlined",
+      "tags": ["map outlined", "map", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "map outlined entry or status",
+        "Legacy business visual for map outlined scenarios"
+      ]
+    }
+  }
+}

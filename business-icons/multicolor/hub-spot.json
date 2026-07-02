@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "HubSpot",
+  "tags": ["HubSpot", "集成", "客户关系管理", "多色业务图标", "业务图标"],
+  "use-cases": ["HubSpot 集成入口或状态展示", "需要兼容历史业务视觉的 HubSpot 场景"],
+  "i18n": {
+    "en": {
+      "name": "HubSpot",
+      "tags": ["HubSpot", "hub", "spot", "multicolor", "business icon"],
+      "use-cases": ["HubSpot entry or status", "Legacy business visual for HubSpot scenarios"]
+    }
+  }
+}

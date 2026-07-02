@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "分享",
+  "tags": ["分享", "单色业务图标", "业务图标"],
+  "use-cases": ["分享相关入口或状态展示", "需要兼容历史业务视觉的 分享 场景"],
+  "i18n": {
+    "en": {
+      "name": "share",
+      "tags": ["share", "mono", "business icon"],
+      "use-cases": ["share entry or status", "Legacy business visual for share scenarios"]
+    }
+  }
+}

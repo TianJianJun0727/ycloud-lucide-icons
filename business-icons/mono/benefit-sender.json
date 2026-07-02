@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "权益优势发送方",
+  "tags": ["权益优势发送方", "权益", "优势", "发送方", "单色业务图标", "业务图标"],
+  "use-cases": ["权益优势发送方相关入口或状态展示", "需要兼容历史业务视觉的 权益优势发送方 场景"],
+  "i18n": {
+    "en": {
+      "name": "benefit sender",
+      "tags": ["benefit sender", "benefit", "sender", "mono", "business icon"],
+      "use-cases": [
+        "benefit sender entry or status",
+        "Legacy business visual for benefit sender scenarios"
+      ]
+    }
+  }
+}

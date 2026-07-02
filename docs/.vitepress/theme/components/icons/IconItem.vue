@@ -60,7 +60,6 @@ async function navigateToIcon(event) {
   if (props.overlayMode && showOverlay.value) {
     event.preventDefault();
 
-    window.history.pushState({}, '', browserHref.value);
     emit('setActiveIcon', props.name);
   } else {
     event.preventDefault();

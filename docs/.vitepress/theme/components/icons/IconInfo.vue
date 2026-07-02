@@ -2,28 +2,32 @@
 import { IconEntity } from '@theme/types';
 import IconDetailName from './IconDetailName.vue';
 import Badge from '../base/Badge.vue';
-import CopySVGButton from './CopySVGButton.vue';
-import CopyCodeButton from './CopyCodeButton.vue';
-import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { useData } from 'vitepress';
 import { computed } from 'vue';
 import deprecationReasonTemplate from '@tools/build-icons/utils/deprecationReasonTemplate.ts';
-import { resolveBrowserHref } from '@theme/utils/navigation';
+import IconInfoActions from './IconInfoActions.vue';
 
 const props = defineProps<{
   icon: IconEntity;
   popoverPosition?: 'top' | 'bottom';
+  showMetadataDetails?: boolean;
 }>();
 
 const { page } = useData();
 const isEnglish = computed(() => page.value.relativePath?.startsWith?.('en/') ?? false);
 
-const tags = computed(() => {
-  if (!props.icon) return '';
-  const displayTags = isEnglish.value
-    ? props.icon.englishTags
+const displayTags = computed(() => {
+  if (!props.icon) return [];
+  return isEnglish.value
+    ? (props.icon.englishTags ?? props.icon.displayTags ?? props.icon.tags)
     : (props.icon.displayTags ?? props.icon.tags);
-  return displayTags?.join(' • ') ?? '';
+});
+
+const displayUseCases = computed(() => {
+  if (!props.icon) return [];
+  return isEnglish.value
+    ? (props.icon.englishUseCases ?? props.icon.displayUseCases ?? props.icon.useCases ?? [])
+    : (props.icon.displayUseCases ?? props.icon.useCases ?? []);
 });
 
 const displayName = computed(() =>
@@ -34,9 +38,11 @@ const displayName = computed(() =>
 
 const displayCategories = computed(() =>
   isEnglish.value
-    ? (props.icon.englishCategories ?? props.icon.categories)
+    ? (props.icon.englishCategories ?? props.icon.displayCategories ?? props.icon.categories)
     : (props.icon.displayCategories ?? props.icon.categories),
 );
+
+const tags = computed(() => displayTags.value.join(' • '));
 
 const deprecatedTitle = computed(() => {
   if (!props.icon.deprecationReason) return '';
@@ -57,20 +63,6 @@ const isCurrentDetail = computed(() => {
   );
 });
 
-function openDetail(event: MouseEvent) {
-  event.preventDefault();
-
-  const targetHref = resolveBrowserHref(detailPath.value);
-  const currentUrl = new URL(window.location.href);
-  const targetUrl = new URL(targetHref, currentUrl.origin);
-
-  if (currentUrl.pathname === targetUrl.pathname) {
-    window.location.reload();
-    return;
-  }
-
-  window.location.assign(targetHref);
-}
 </script>
 
 <template>
@@ -87,45 +79,93 @@ function openDetail(event: MouseEvent) {
         {{ isEnglish ? 'Deprecated' : '已弃用' }}
       </Badge>
     </div>
-    <div
-      class="tags-scroller"
-      v-if="tags.length"
-    >
-      <p class="icon-tags horizontal-scroller">
-        {{ tags }}
-      </p>
-    </div>
-    <div class="group">
-      <Badge
-        v-for="category in icon.categories"
-        class="category"
-        :href="`${isEnglish ? '/en' : ''}/icons/categories#${category}`"
+    <template v-if="showMetadataDetails">
+      <div
+        v-if="icon.categories.length > 0"
+        class="metadata-section"
       >
-        {{ displayCategories[icon.categories.indexOf(category)] || category }}
-      </Badge>
-    </div>
+        <div class="metadata-title">{{ isEnglish ? 'Categories' : '分类' }}</div>
+        <div class="group metadata-badges">
+          <Badge
+            v-for="category in icon.categories"
+            :key="category"
+            class="category"
+            :href="`${isEnglish ? '/en' : ''}/icons/categories#${category}`"
+          >
+            {{ displayCategories[icon.categories.indexOf(category)] || category }}
+          </Badge>
+        </div>
+      </div>
+      <div
+        v-if="displayTags.length > 0"
+        class="metadata-section"
+      >
+        <div class="metadata-title">{{ isEnglish ? 'Tags' : '标签' }}</div>
+        <div class="group metadata-badges">
+          <Badge
+            v-for="tag in displayTags"
+            :key="tag"
+          >
+            {{ tag }}
+          </Badge>
+        </div>
+      </div>
+      <div
+        v-if="displayUseCases.length > 0"
+        class="metadata-section"
+      >
+        <div class="metadata-title">{{ isEnglish ? 'Use cases' : '使用场景' }}</div>
+        <ul class="metadata-list">
+          <li
+            v-for="useCase in displayUseCases"
+            :key="useCase"
+          >
+            {{ useCase }}
+          </li>
+        </ul>
+      </div>
+    </template>
+    <template v-else>
+      <div
+        class="tags-scroller"
+        v-if="tags.length"
+      >
+        <p class="icon-tags horizontal-scroller">
+          {{ tags }}
+        </p>
+      </div>
+      <div class="group">
+        <Badge
+          v-for="category in icon.categories"
+          :key="category"
+          class="category"
+          :href="`${isEnglish ? '/en' : ''}/icons/categories#${category}`"
+        >
+          {{ displayCategories[icon.categories.indexOf(category)] || category }}
+        </Badge>
+      </div>
+    </template>
 
-    <div class="group buttons">
-      <VPButton
-        v-if="!isCurrentDetail"
-        :href="detailPath"
-        :text="isEnglish ? 'See details' : '查看详情'"
-        @click="openDetail"
-      />
-      <CopySVGButton
-        :name="icon.name"
-        :popoverPosition="popoverPosition"
-      />
-      <CopyCodeButton
-        :name="icon.name"
-        :popoverPosition="popoverPosition"
-      />
-    </div>
+    <IconInfoActions
+      :name="icon.name"
+      :detailPath="detailPath"
+      :detailText="isEnglish ? 'See details' : '查看详情'"
+      :isCurrentDetail="isCurrentDetail"
+      :popoverPosition="popoverPosition"
+    />
     <slot name="footer" />
   </div>
 </template>
 
 <style scoped>
+.icon-info {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+}
+
 .group {
   display: flex;
   flex-wrap: wrap;
@@ -193,14 +233,15 @@ function openDetail(event: MouseEvent) {
 
   --gradient-background: var(--tags-gradient-background, var(--vp-c-bg-elv));
 }
+
 .horizontal-scroller {
   overflow-x: scroll;
-  /* Hide Scrollbar */
   -ms-overflow-style: none;
   scrollbar-width: none;
-  scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
-  scrollbar-color: var(--vp-c-text-4) transparent; /* foreground background */
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-c-text-4) transparent;
 }
+
 .horizontal-scroller::-webkit-scrollbar {
   width: 0;
   display: none;
@@ -221,13 +262,40 @@ function openDetail(event: MouseEvent) {
   bottom: 0;
   width: 32px;
   height: 100%;
-  /* Background Gradient left to right */
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--gradient-background) 100%);
   right: 0;
   pointer-events: none;
 }
 
+.metadata-section {
+  margin: 12px 0 0;
+}
+
+.metadata-title {
+  margin-bottom: 8px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.metadata-badges {
+  margin-bottom: 0;
+}
+
+.metadata-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  color: var(--vp-c-text-2);
+  line-height: 1.7;
+}
+
+.metadata-list li {
+  list-style: disc;
+}
+
 .buttons {
+  flex: 0 0 auto;
   margin-top: 24px;
 }
 </style>

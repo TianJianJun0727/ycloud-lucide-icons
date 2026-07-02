@@ -1,0 +1,28 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "店铺检查确认购物袋填充",
+  "tags": [
+    "店铺检查确认购物袋填充",
+    "店铺",
+    "检查",
+    "确认",
+    "购物袋",
+    "填充",
+    "单色业务图标",
+    "业务图标"
+  ],
+  "use-cases": [
+    "店铺检查确认购物袋填充相关入口或状态展示",
+    "需要兼容历史业务视觉的 店铺检查确认购物袋填充 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "shop check bag filled",
+      "tags": ["shop check bag filled", "shop", "check", "bag", "filled", "mono", "business icon"],
+      "use-cases": [
+        "shop check bag filled entry or status",
+        "Legacy business visual for shop check bag filled scenarios"
+      ]
+    }
+  }
+}

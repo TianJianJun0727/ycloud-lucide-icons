@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "在线聊天outline",
+  "tags": ["在线聊天outline", "在线", "聊天", "单色业务图标", "业务图标"],
+  "use-cases": ["在线聊天outline相关入口或状态展示", "需要兼容历史业务视觉的 在线聊天outline 场景"],
+  "i18n": {
+    "en": {
+      "name": "online chat outline",
+      "tags": ["online chat outline", "online", "chat", "outline", "mono", "business icon"],
+      "use-cases": [
+        "online chat outline entry or status",
+        "Legacy business visual for online chat outline scenarios"
+      ]
+    }
+  }
+}

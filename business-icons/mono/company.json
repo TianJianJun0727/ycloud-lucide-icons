@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "公司",
+  "tags": ["公司", "单色业务图标", "业务图标"],
+  "use-cases": ["公司相关入口或状态展示", "需要兼容历史业务视觉的 公司 场景"],
+  "i18n": {
+    "en": {
+      "name": "company",
+      "tags": ["company", "mono", "business icon"],
+      "use-cases": ["company entry or status", "Legacy business visual for company scenarios"]
+    }
+  }
+}

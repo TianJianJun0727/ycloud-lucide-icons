@@ -26,12 +26,14 @@ const writeIconFiles = icons.map(async (iconFileName) => {
 import iconNode from '../iconNodes/${iconName}.node.json'
 import metaData from '../../../../icons/${iconName}.json'
 import releaseData from '../releaseMetadata/${iconName}.json'
+import gitData from '../iconGitMetadata/${iconName}.json'
 import popularity from '../iconPopularity/${iconName}.json'
 import categoriesData from '../categoriesData.json'
 
 type IconMetaJson = {
   name: string
   tags: string[]
+  'use-cases'?: string[]
   categories: string[]
   aliases?: {
     name: string
@@ -46,6 +48,7 @@ type IconMetaJson = {
     en: {
       name: string
       tags: string[]
+      'use-cases'?: string[]
     }
   }
 }
@@ -60,6 +63,8 @@ const typedMetaData = metaData as IconMetaJson
 const typedCategoriesData = categoriesData as CategoryMetaJson[]
 const { name: displayName, tags, categories, aliases, deprecated, deprecationReason, toBeRemovedInVersion, i18n } = typedMetaData
 const displayTags = tags
+const useCases = typedMetaData['use-cases'] ?? []
+const displayUseCases = useCases
 const categoryDetails = categories.map((categoryName) => {
   return typedCategoriesData.find((category) => category.name === categoryName)
 })
@@ -68,6 +73,7 @@ const displayCategories = categories.map((categoryName, index) => {
 })
 const englishName = i18n.en.name
 const englishTags = i18n.en.tags
+const englishUseCases = i18n.en['use-cases'] ?? useCases
 const englishCategories = categories.map((categoryName, index) => {
   return categoryDetails[index]?.englishTitle ?? categoryName
 })
@@ -79,8 +85,11 @@ const iconDetails = {
   iconNode,
   i18n,
   tags,
+  useCases,
   displayTags,
+  displayUseCases,
   englishTags,
+  englishUseCases,
   categories,
   displayCategories,
   englishCategories,
@@ -89,6 +98,7 @@ const iconDetails = {
   popularity,
   deprecationReason,
   toBeRemovedInVersion,
+  git: gitData,
   ...releaseData,
 }
 

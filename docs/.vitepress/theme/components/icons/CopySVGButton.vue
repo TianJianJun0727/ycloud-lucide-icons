@@ -25,9 +25,8 @@ function copySVG() {
   confettiText.value = copiedText.value;
   const svgString = getSVGIcon();
 
-  navigator.clipboard.writeText(svgString);
-
   confetti();
+  void navigator.clipboard.writeText(svgString).catch(() => {});
 }
 
 function copyDataUrl() {
@@ -36,9 +35,8 @@ function copyDataUrl() {
 
   // Create SVG data url
   const dataUrl = `data:image/svg+xml;base64,${btoa(svgString)}`;
-  navigator.clipboard.writeText(dataUrl);
-
   confetti();
+  void navigator.clipboard.writeText(dataUrl).catch(() => {});
 }
 
 function downloadSVG() {

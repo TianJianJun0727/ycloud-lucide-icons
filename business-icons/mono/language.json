@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "语言",
+  "tags": ["语言", "单色业务图标", "业务图标"],
+  "use-cases": ["语言相关入口或状态展示", "需要兼容历史业务视觉的 语言 场景"],
+  "i18n": {
+    "en": {
+      "name": "language",
+      "tags": ["language", "mono", "business icon"],
+      "use-cases": ["language entry or status", "Legacy business visual for language scenarios"]
+    }
+  }
+}

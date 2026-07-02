@@ -17,6 +17,8 @@ import IconInfo from '~/.vitepress/theme/components/icons/IconInfo.vue'
 import IconShowcase from '~/.vitepress/theme/components/icons/IconShowcase.vue'
 import RelatedIcons from '~/.vitepress/theme/components/icons/RelatedIcons.vue'
 import CodeGroup from '~/.vitepress/theme/components/base/CodeGroup.vue'
+import IconDetailBackButton from '~/.vitepress/theme/components/icons/IconDetailBackButton.vue'
+import IconDetailMeta from '~/.vitepress/theme/components/icons/IconDetailMeta.vue'
 import { data } from './codeExamples.data'
 import { toCamelCase, toPascalCase } from '@ycloud-web/shared'
 
@@ -38,10 +40,12 @@ const codeExample = computed(() => data.codeExamples?.map(
     }
   ).join('') ?? []
 )
+
 </script>
 
 <div :class="$style.layout">
   <div :class="$style.iconPreviews">
+    <IconDetailBackButton fallbackHref="/icons/" />
     <IconPreview
       id="previewer"
       :name="params.name"
@@ -56,7 +60,15 @@ const codeExample = computed(() => data.codeExamples?.map(
   </div>
   <div >
     <div :class="$style.info">
-      <IconInfo :icon="params" />
+      <IconInfo
+        :icon="params"
+        showMetadataDetails
+      />
+      <IconDetailMeta
+        :createdRelease="params.createdRelease"
+        :changedRelease="params.changedRelease"
+        :git="params.git"
+      />
     </div>
     <ClientOnly>
       <CodeGroup
@@ -105,6 +117,11 @@ const codeExample = computed(() => data.codeExamples?.map(
     --tags-gradient-background: var(--vp-c-bg);
   }
 
+  .info :global(.icon-info) {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
   .iconPreviews {
     display: flex;
     justify-content: flex-start;
@@ -145,6 +162,7 @@ const codeExample = computed(() => data.codeExamples?.map(
       justify-content: space-between;
       align-items: flex-start;
     }
+
   }
 
   @media (min-width: 960px) {
@@ -153,6 +171,7 @@ const codeExample = computed(() => data.codeExamples?.map(
       justify-content: space-between;
       align-items: flex-start;
     }
+
   }
 
   @media (min-width: 1152px) {
@@ -161,6 +180,7 @@ const codeExample = computed(() => data.codeExamples?.map(
       justify-content: space-between;
       align-items: flex-start;
     }
+
   }
 </style>
 

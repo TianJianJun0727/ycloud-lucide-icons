@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "账号未绑定",
+  "tags": ["账号未绑定", "解绑", "未连接", "账户异常"],
+  "use-cases": ["账号绑定状态为空或失效", "引导用户绑定账号"],
+  "i18n": {
+    "en": {
+      "name": "Account Unbound",
+      "tags": ["account unbound", "account", "unbound"],
+      "use-cases": ["Account binding is missing or invalid", "Guide users to bind an account"]
+    }
+  }
+}

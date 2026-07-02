@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "余额",
+  "tags": ["余额", "单色业务图标", "业务图标"],
+  "use-cases": ["余额相关入口或状态展示", "需要兼容历史业务视觉的 余额 场景"],
+  "i18n": {
+    "en": {
+      "name": "balance",
+      "tags": ["balance", "mono", "business icon"],
+      "use-cases": ["balance entry or status", "Legacy business visual for balance scenarios"]
+    }
+  }
+}

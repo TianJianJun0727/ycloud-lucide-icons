@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "Qmai事件",
+  "tags": ["Qmai事件", "Qmai", "事件", "单色业务图标", "业务图标"],
+  "use-cases": ["Qmai事件相关入口或状态展示", "需要兼容历史业务视觉的 Qmai事件 场景"],
+  "i18n": {
+    "en": {
+      "name": "qmai event",
+      "tags": ["qmai event", "qmai", "event", "mono", "business icon"],
+      "use-cases": ["qmai event entry or status", "Legacy business visual for qmai event scenarios"]
+    }
+  }
+}

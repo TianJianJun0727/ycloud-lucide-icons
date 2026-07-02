@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "网络断开",
+  "tags": ["网络断开", "离线", "连接失败"],
+  "use-cases": ["网络异常页面", "离线或连接中断提示"],
+  "i18n": {
+    "en": {
+      "name": "Network Disconnected",
+      "tags": ["network disconnected", "network", "disconnected"],
+      "use-cases": ["Network error page", "Offline or disconnected state"]
+    }
+  }
+}

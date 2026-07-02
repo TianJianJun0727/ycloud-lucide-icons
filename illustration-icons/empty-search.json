@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "搜索无结果",
+  "tags": ["搜索无结果", "未找到", "空搜索"],
+  "use-cases": ["搜索或筛选没有结果", "提示用户调整搜索条件"],
+  "i18n": {
+    "en": {
+      "name": "Empty Search",
+      "tags": ["empty search", "empty", "search"],
+      "use-cases": ["No search or filter results", "Prompt users to adjust search criteria"]
+    }
+  }
+}

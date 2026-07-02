@@ -4,11 +4,13 @@ export type IconNodeWithKeys = [elementName: string, attrs: Record<string, strin
 export interface IconMetaData {
   name: string;
   tags: string[];
+  useCases?: string[];
   categories: string[];
   i18n: {
     en: {
       name: string;
       tags: string[];
+      useCases?: string[];
     };
   };
   aliases?: string[];
@@ -21,19 +23,35 @@ export interface IconEntity extends IconMetaData {
   name: string;
   displayName?: string;
   displayTags?: string[];
+  displayUseCases?: string[];
   displayCategories?: string[];
   englishName?: string;
   englishTags?: string[];
+  englishUseCases?: string[];
   englishCategories?: string[];
   iconNode: IconNode;
   createdRelease?: Release;
   changedRelease?: Release;
+  git?: IconGitMetadata;
   popularity?: number;
+}
+
+export interface IconGitMetadata {
+  createdAt?: string;
+  changedAt?: string;
+  createdBy?: string;
+  changedBy?: string;
+  contributors?: string[];
 }
 
 export interface BusinessIconEntity {
   name: string;
   displayName: string;
+  tags?: string[];
+  useCases?: string[];
+  englishName?: string;
+  englishTags?: string[];
+  englishUseCases?: string[];
   category: string;
   colorMode: string;
   categoryTitle: string;
@@ -42,6 +60,9 @@ export interface BusinessIconEntity {
   path: string;
   svg: string;
   dataUri: string;
+  createdRelease?: Release;
+  changedRelease?: Release;
+  git?: IconGitMetadata;
 }
 
 export interface BusinessIconCategory {
@@ -54,6 +75,11 @@ export interface BusinessIconCategory {
 export interface IllustrationEntity {
   name: string;
   displayName: string;
+  tags?: string[];
+  useCases?: string[];
+  englishName?: string;
+  englishTags?: string[];
+  englishUseCases?: string[];
   componentName: string;
   path: string;
   svg: string;

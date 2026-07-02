@@ -1,0 +1,13 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "添加昵称",
+  "tags": ["添加昵称", "添加", "昵称", "单色业务图标", "业务图标"],
+  "use-cases": ["添加昵称相关入口或状态展示", "需要兼容历史业务视觉的 添加昵称 场景"],
+  "i18n": {
+    "en": {
+      "name": "add nick",
+      "tags": ["add nick", "add", "nick", "mono", "business icon"],
+      "use-cases": ["add nick entry or status", "Legacy business visual for add nick scenarios"]
+    }
+  }
+}

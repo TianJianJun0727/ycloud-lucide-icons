@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useData } from 'vitepress';
 import type { BusinessIconEntity } from '@theme/types';
 import Tooltip from '../base/Tooltip.vue';
 import BusinessIconPreview from './BusinessIconPreview.vue';
 
-defineProps<{
+const props = defineProps<{
   icon: BusinessIconEntity;
   active?: boolean;
 }>();
@@ -11,15 +13,21 @@ defineProps<{
 const emit = defineEmits<{
   select: [icon: BusinessIconEntity];
 }>();
+
+const { page } = useData();
+const isEnglish = computed(() => page.value.relativePath?.startsWith?.('en/') ?? false);
+const displayName = computed(() =>
+  isEnglish.value ? (props.icon.englishName ?? props.icon.displayName) : props.icon.displayName,
+);
 </script>
 
 <template>
-  <Tooltip :title="icon.displayName">
+  <Tooltip :title="displayName">
     <button
       type="button"
       class="business-icon-button"
       :class="{ active }"
-      :aria-label="icon.displayName"
+      :aria-label="displayName"
       @click="emit('select', icon)"
     >
       <BusinessIconPreview :svg="icon.svg" />

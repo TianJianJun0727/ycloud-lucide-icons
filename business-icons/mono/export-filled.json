@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "导出填充",
+  "tags": ["导出填充", "导出", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["导出填充相关入口或状态展示", "需要兼容历史业务视觉的 导出填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "export filled",
+      "tags": ["export filled", "export", "filled", "mono", "business icon"],
+      "use-cases": [
+        "export filled entry or status",
+        "Legacy business visual for export filled scenarios"
+      ]
+    }
+  }
+}

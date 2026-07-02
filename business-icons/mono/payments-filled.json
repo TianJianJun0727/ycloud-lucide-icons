@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "支付填充",
+  "tags": ["支付填充", "支付", "填充", "单色业务图标", "业务图标"],
+  "use-cases": ["支付填充相关入口或状态展示", "需要兼容历史业务视觉的 支付填充 场景"],
+  "i18n": {
+    "en": {
+      "name": "payments filled",
+      "tags": ["payments filled", "payments", "filled", "mono", "business icon"],
+      "use-cases": [
+        "payments filled entry or status",
+        "Legacy business visual for payments filled scenarios"
+      ]
+    }
+  }
+}

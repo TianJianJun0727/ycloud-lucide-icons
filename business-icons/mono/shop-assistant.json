@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "店铺助手",
+  "tags": ["店铺助手", "店铺", "助手", "单色业务图标", "业务图标"],
+  "use-cases": ["店铺助手相关入口或状态展示", "需要兼容历史业务视觉的 店铺助手 场景"],
+  "i18n": {
+    "en": {
+      "name": "shop assistant",
+      "tags": ["shop assistant", "shop", "assistant", "mono", "business icon"],
+      "use-cases": [
+        "shop assistant entry or status",
+        "Legacy business visual for shop assistant scenarios"
+      ]
+    }
+  }
+}

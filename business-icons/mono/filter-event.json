@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "筛选事件",
+  "tags": ["筛选事件", "筛选", "事件", "单色业务图标", "业务图标"],
+  "use-cases": ["筛选事件相关入口或状态展示", "需要兼容历史业务视觉的 筛选事件 场景"],
+  "i18n": {
+    "en": {
+      "name": "filter event",
+      "tags": ["filter event", "filter", "event", "mono", "business icon"],
+      "use-cases": [
+        "filter event entry or status",
+        "Legacy business visual for filter event scenarios"
+      ]
+    }
+  }
+}

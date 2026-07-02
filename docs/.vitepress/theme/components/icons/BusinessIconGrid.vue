@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { BusinessIconEntity } from '@theme/types';
+import IconAssetGrid from './IconAssetGrid.vue';
 import BusinessIconItem from './BusinessIconItem.vue';
 
 defineProps<{
@@ -13,31 +14,17 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="business-icons">
-    <div
-      v-for="icon in icons"
-      :key="`${icon.category}/${icon.name}`"
-      class="business-icon"
-    >
+  <IconAssetGrid
+    class="business-icons"
+    :icons="icons"
+    :itemKey="(icon) => `${icon.category}/${icon.name}`"
+  >
+    <template #default="{ icon }">
       <BusinessIconItem
         :icon="icon"
         :active="activeIcon === icon.name"
         @select="emit('select', icon)"
       />
-    </div>
-  </div>
+    </template>
+  </IconAssetGrid>
 </template>
-
-<style scoped>
-.business-icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  gap: 8px;
-  width: 100%;
-}
-
-.business-icon {
-  aspect-ratio: 1 / 1;
-  position: relative;
-}
-</style>

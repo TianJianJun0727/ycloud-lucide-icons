@@ -1,0 +1,19 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "检查确认取消填充",
+  "tags": ["检查确认取消填充", "检查", "确认", "取消", "填充", "单色业务图标", "业务图标"],
+  "use-cases": [
+    "检查确认取消填充相关入口或状态展示",
+    "需要兼容历史业务视觉的 检查确认取消填充 场景"
+  ],
+  "i18n": {
+    "en": {
+      "name": "check cancel filled",
+      "tags": ["check cancel filled", "check", "cancel", "filled", "mono", "business icon"],
+      "use-cases": [
+        "check cancel filled entry or status",
+        "Legacy business visual for check cancel filled scenarios"
+      ]
+    }
+  }
+}

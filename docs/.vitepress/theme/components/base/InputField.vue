@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { useSlots } from 'vue';
+
 defineProps<{
-  label: string
-  id: string
-}>()
+  label: string;
+  id: string;
+}>();
+
+const slots = useSlots();
 </script>
 
 <template>
@@ -11,8 +15,11 @@ defineProps<{
       <label :for="id" class="customize-label">
         {{ label }}
       </label>
-      <div class="display-value" >
-        <slot name="display"/>
+      <div
+        v-if="slots.display"
+        class="display-value"
+      >
+        <slot name="display" />
       </div>
     </div>
     <slot />

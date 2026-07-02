@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "无权限",
+  "tags": ["无权限", "权限不足", "访问受限"],
+  "use-cases": ["无权限访问页面", "权限不足的功能入口"],
+  "i18n": {
+    "en": {
+      "name": "No Permission",
+      "tags": ["no permission", "no", "permission"],
+      "use-cases": ["No permission page", "Feature entry with insufficient permission"]
+    }
+  }
+}

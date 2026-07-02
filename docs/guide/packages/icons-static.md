@@ -96,6 +96,20 @@ bun add @ycloud-web/icons-static@latest
 <img src="~@ycloud-web/icons-static/illustration-icons/empty-page.svg" />
 ```
 
+### 远程 metadata
+
+AI 选图、远程重名判断或离线搜索使用文档站发布的 metadata 快照，而不是 `icons-static` 包：
+
+```js
+const iconNames = await fetch('/metadata/names/icons.json').then((res) => res.json());
+const businessIconNames = await fetch('/metadata/names/business-icons.json').then((res) =>
+  res.json(),
+);
+const illustrationNames = await fetch('/metadata/names/illustration-icons.json').then((res) =>
+  res.json(),
+);
+```
+
 #### 在 CSS 中使用:
 
 ::: code-group

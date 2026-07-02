@@ -13,6 +13,8 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import BusinessIconPreview from '~/.vitepress/theme/components/icons/BusinessIconPreview.vue'
 import BusinessIconInfo from '~/.vitepress/theme/components/icons/BusinessIconInfo.vue'
+import IconDetailBackButton from '~/.vitepress/theme/components/icons/IconDetailBackButton.vue'
+import IconDetailMeta from '~/.vitepress/theme/components/icons/IconDetailMeta.vue'
 import CodeGroup from '~/.vitepress/theme/components/base/CodeGroup.vue'
 import { data } from './codeExamples.data'
 
@@ -41,12 +43,17 @@ const codeExample = computed(() => codeExamples.value.map(
     }
   ).join('') ?? []
 )
+
 </script>
 
 <div :class="$style.layout">
   <div :class="$style.iconPreviews">
+    <IconDetailBackButton fallbackHref="/en/business-icons/" />
     <div :class="$style.preview">
-      <BusinessIconPreview :svg="params.svg" />
+      <BusinessIconPreview
+        id="previewer"
+        :svg="params.svg"
+      />
     </div>
     <div :class="$style.smallPreviews">
       <div :class="$style.smallPreview">
@@ -70,7 +77,17 @@ const codeExample = computed(() => codeExamples.value.map(
     </div>
   </div>
   <div :class="$style.info">
-    <BusinessIconInfo :icon="params" />
+    <div :class="$style.infoHeader">
+      <BusinessIconInfo
+        :icon="params"
+        showMetadataDetails
+      />
+      <IconDetailMeta
+        :createdRelease="params.createdRelease"
+        :changedRelease="params.changedRelease"
+        :git="params.git"
+      />
+    </div>
     <ClientOnly>
       <CodeGroup
         :groups="tabs"
@@ -142,6 +159,18 @@ const codeExample = computed(() => codeExamples.value.map(
     --tags-gradient-background: var(--vp-c-bg);
   }
 
+  .infoHeader {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .infoHeader :global(.business-icon-info) {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
   .code {
     margin-top: 24px;
   }
@@ -156,5 +185,12 @@ const codeExample = computed(() => codeExamples.value.map(
     .iconPreviews {
       flex-direction: column;
     }
+  }
+
+  @media (max-width: 959px) {
+    .infoHeader {
+      display: block;
+    }
+
   }
 </style>

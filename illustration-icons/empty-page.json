@@ -1,0 +1,13 @@
+{
+  "$schema": "../asset-metadata.schema.json",
+  "name": "空页面",
+  "tags": ["空页面", "占位页", "暂无内容"],
+  "use-cases": ["页面内容为空", "模块暂未配置内容"],
+  "i18n": {
+    "en": {
+      "name": "Empty Page",
+      "tags": ["empty page", "empty", "page"],
+      "use-cases": ["Empty page content", "Module has no configured content"]
+    }
+  }
+}

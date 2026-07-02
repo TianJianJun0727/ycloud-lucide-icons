@@ -3,7 +3,7 @@ title: Illustrations
 description: Browse all YCloud Icons illustrations.
 layout: page
 outline: 2
-sidebar: true
+sidebar: false
 head:
   - - link
     - rel: canonical
@@ -18,17 +18,23 @@ import InputSearch from '~/.vitepress/theme/components/base/InputSearch.vue'
 import NoResults from '~/.vitepress/theme/components/icons/NoResults.vue'
 
 const searchQuery = ref('')
+const getDisplayName = (item) => item.englishName || item.displayName
 const filteredIllustrations = computed(() => {
   const query = searchQuery.value.trim().toLowerCase()
 
   if (!query) return data.illustrations
 
-  return data.illustrations.filter((item) =>
-    item.name.includes(query) ||
-    item.displayName.toLowerCase().includes(query) ||
-    item.componentName.toLowerCase().includes(query) ||
-    item.path.toLowerCase().includes(query)
-  )
+  return data.illustrations.filter((item) => [
+    item.name,
+    item.displayName,
+    item.componentName,
+    item.path,
+    item.englishName,
+    ...(item.tags ?? []),
+    ...(item.useCases ?? []),
+    ...(item.englishTags ?? []),
+    ...(item.englishUseCases ?? [])
+  ].filter(Boolean).join(' ').toLowerCase().includes(query))
 })
 </script>
 
@@ -55,7 +61,7 @@ const filteredIllustrations = computed(() => {
           :href="`/en/illustration-icons/${item.name}`"
         >
           <span class="illustration-preview" v-html="item.svg" />
-          <span class="illustration-name">{{ item.displayName }}</span>
+          <span class="illustration-name">{{ getDisplayName(item) }}</span>
           <span class="illustration-path">{{ item.path }}</span>
         </a>
       </div>

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "设置描边",
+  "tags": ["设置描边", "设置", "描边", "单色业务图标", "业务图标"],
+  "use-cases": ["设置描边相关入口或状态展示", "需要兼容历史业务视觉的 设置描边 场景"],
+  "i18n": {
+    "en": {
+      "name": "setting outlined",
+      "tags": ["setting outlined", "setting", "outlined", "mono", "business icon"],
+      "use-cases": [
+        "setting outlined entry or status",
+        "Legacy business visual for setting outlined scenarios"
+      ]
+    }
+  }
+}

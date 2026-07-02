@@ -57,6 +57,20 @@ No framework peer dependency.
 />
 ```
 
+## Remote Metadata
+
+AI icon selection, remote duplicate checks, and offline search use metadata snapshots published by the docs site instead of the `icons-static` package:
+
+```js
+const iconNames = await fetch('/metadata/names/icons.json').then((res) => res.json());
+const businessIconNames = await fetch('/metadata/names/business-icons.json').then((res) =>
+  res.json(),
+);
+const illustrationNames = await fetch('/metadata/names/illustration-icons.json').then((res) =>
+  res.json(),
+);
+```
+
 ## Documentation
 
 Read the full guide: [YCloud Icons Static](/en/guide/static/).

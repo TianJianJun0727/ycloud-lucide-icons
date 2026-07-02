@@ -24,10 +24,15 @@ If the artwork should be reused as a 24px UI icon, put it in `icons/` or `busine
 
 ```text
 illustration-icons/<illustration-name>.svg
+illustration-icons/<illustration-name>.json
 illustration-icons/index.json
+illustration-icons/metadata/index.json
+illustration-icons/names/index.json
+docs/public/metadata/illustration-icons.json
+docs/public/metadata/names/illustration-icons.json
 ```
 
-Illustrations do not need per-SVG metadata JSON. The root `illustration-icons/index.json` is generated for validation, the Figma plugin, docs, package generation, and duplicate-name checks.
+Illustrations need same-name per-SVG metadata JSON for search, AI illustration selection, and docs. The root `illustration-icons/index.json` is generated; `illustration-icons/metadata/index.json` and `illustration-icons/names/index.json` are the latest repository snapshots used directly by the Figma plugin, GitHub checks, and skills lookup. During docs builds, those source snapshots are copied to `docs/public/metadata/illustration-icons.json` and `docs/public/metadata/names/illustration-icons.json` as deployed URL fallbacks.
 
 File names must be lowercase kebab-case and directly determine package export names:
 
@@ -42,17 +47,20 @@ Illustrations do not run color conversion or size cleanup. Fixed colors, gradien
 Baseline validation checks:
 
 - paths must use `illustration-icons/<illustration-name>.svg`
+- same-name metadata must exist at `illustration-icons/<illustration-name>.json`
 - file names must be lowercase kebab-case
 - the root element must be `<svg>`
 - `<script>` and `<foreignObject>` are not allowed
 - event attributes such as `onclick` are not allowed
 - `javascript:` URLs are not allowed
 - root `illustration-icons/index.json` must match `node ./scripts/writeIllustrationIndex.mts`
+- `illustration-icons/metadata/index.json` and `illustration-icons/names/index.json` must match `node ./scripts/writeAssetMetadata.mts`; `docs/public/metadata` is copied during docs builds
 
 Run locally:
 
 ```sh
 node ./scripts/writeIllustrationIndex.mts
+node ./scripts/writeAssetMetadata.mts
 node ./scripts/checkIllustrationSvgSource.mts
 ```
 
@@ -61,15 +69,16 @@ node ./scripts/checkIllustrationSvgSource.mts
 When “Illustrations” is selected in the Figma plugin, the plugin will:
 
 - submit files to `illustration-icons/*.svg`
+- submit matching `illustration-icons/*.json`
 - skip color conversion
 - skip size cleanup
-- skip `icons/*.json` generation
+- skip `icons/*.json` generation, but create illustration same-name metadata JSON
 - skip generic multi-category, tag, and use-case requirements
 - only block SVGs that fail the illustration SVG baseline safety checks
 
 After the plugin opens a PR, GitHub workflows handle illustrations like generic icons and business icons:
 
-- `fix-icon-source` refreshes and formats `illustration-icons/index.json`
+- `fix-icon-source` refreshes and formats `illustration-icons/index.json`, same-name metadata JSON, and repository snapshots; `docs/public/metadata` is copied during docs builds
 - PR lint runs `pnpm lint:svg:illustration`
 - same-repository Figma illustration PRs can enter the auto-merge flow
 - after merging to `main`, a Figma PR that includes `illustration-icons/*.svg` triggers the icon release flow and publishes a new npm version
@@ -142,10 +151,7 @@ pnpm add @ycloud-web/icons-data
 ```
 
 ```ts
-import {
-  getIllustration,
-  illustrations,
-} from '@ycloud-web/icons-data/illustration';
+import { getIllustration, illustrations } from '@ycloud-web/icons-data/illustration';
 
 const emptyPage = getIllustration('empty-page');
 const sameIllustration = illustrations['empty-page'];

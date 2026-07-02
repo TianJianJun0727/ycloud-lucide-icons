@@ -1,0 +1,16 @@
+{
+  "$schema": "../../asset-metadata.schema.json",
+  "name": "会话退订",
+  "tags": ["会话退订", "会话", "退订", "单色业务图标", "业务图标"],
+  "use-cases": ["会话退订相关入口或状态展示", "需要兼容历史业务视觉的 会话退订 场景"],
+  "i18n": {
+    "en": {
+      "name": "conversation unsubscribe",
+      "tags": ["conversation unsubscribe", "conversation", "unsubscribe", "mono", "business icon"],
+      "use-cases": [
+        "conversation unsubscribe entry or status",
+        "Legacy business visual for conversation unsubscribe scenarios"
+      ]
+    }
+  }
+}
