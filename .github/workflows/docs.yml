@@ -117,7 +117,7 @@ jobs:
 
       - name: Restore GitHub Pages build output
         id: pages-build-cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: docs/.vercel/output/static
           key: pages-static-${{ runner.os }}-${{ steps.pages-cache-key.outputs.release-tags }}-${{ steps.pages-cache-key.outputs.icon-packages }}-${{ hashFiles('docs/*.md', 'docs/*.ts', 'docs/*.json', 'docs/en/**', 'docs/guide/**', 'docs/icons/**', 'docs/images/**', 'docs/public/**', 'docs/.vitepress/**/*.ts', 'docs/.vitepress/**/*.vue', 'docs/.vitepress/**/*.css', 'docs/.vitepress/**/*.json', 'docs/.vitepress/**/*.svg', 'docs/scripts/**', 'icons/**', 'categories/**', 'changelogs/releases/**', 'scripts/writeChangelog.mts', 'scripts/writeGitHubReleaseNotes.mjs', 'docs/package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml') }}

@@ -51,7 +51,7 @@ jobs:
         id: pr-number
 
       - name: Find Comment
-        uses: peter-evans/find-comment@v2
+        uses: peter-evans/find-comment@v4
         id: pr-comment
         with:
           issue-number: ${{ steps.pr-number.outputs.number }}
@@ -59,7 +59,7 @@ jobs:
           body-includes: Added or changed icons
 
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v5
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ steps.pr-number.outputs.number }}
