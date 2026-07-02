@@ -91,7 +91,9 @@ jobs:
           done
 
           for file in ${{ steps.changed-files.outputs.added_files }} ${{ steps.changed-files.outputs.modified_files }} ${{ steps.changed-files.outputs.renamed_files }}; do
-            if [[ "$file" == icons/* || "$file" == categories/* ]]; then
+            if [[ ( "$file" == icons/*.svg || "$file" == icons/*.json ) && "$file" != icons/*/* && "$file" != icons/package.json ]]; then
+              generic_source_changed=true
+            elif [[ "$file" == categories/*.json && "$file" != categories/*/* ]]; then
               generic_source_changed=true
             elif [[ "$file" == business-icons/* ]]; then
               business_source_changed=true
@@ -188,13 +190,21 @@ jobs:
           generic_svg_files=()
           icon_json_files=()
           category_json_files=()
+          added_generic_source_files=()
           for file in ${{ steps.changed-files.outputs.added_files }} ${{ steps.changed-files.outputs.modified_files }} ${{ steps.changed-files.outputs.renamed_files }}; do
-            if [[ "$file" == icons/*.svg && -f "$file" ]]; then
+            if [[ "$file" == icons/*.svg && "$file" != icons/*/*.svg && -f "$file" ]]; then
               generic_svg_files+=("$file")
-            elif [[ "$file" == icons/*.json && -f "$file" ]]; then
+            elif [[ "$file" == icons/*.json && "$file" != icons/*/*.json && "$file" != icons/package.json && -f "$file" ]]; then
               icon_json_files+=("$file")
-            elif [[ "$file" == categories/*.json && -f "$file" ]]; then
+            elif [[ "$file" == categories/*.json && "$file" != categories/*/*.json && -f "$file" ]]; then
               category_json_files+=("$file")
+            fi
+          done
+          for file in ${{ steps.changed-files.outputs.added_files }}; do
+            if [[ "$file" == icons/*.svg && "$file" != icons/*/*.svg && -f "$file" ]]; then
+              added_generic_source_files+=("$file")
+            elif [[ "$file" == icons/*.json && "$file" != icons/*/*.json && "$file" != icons/package.json && -f "$file" ]]; then
+              added_generic_source_files+=("$file")
             fi
           done
 
@@ -204,7 +214,7 @@ jobs:
               pnpm exec prettier --parser html --check "${generic_svg_files[@]}"
             fi
 
-            ADDED_FILES="${{ steps.changed-files.outputs.added_files }}" pnpm checkIcons
+            ADDED_FILES="${added_generic_source_files[*]}" pnpm checkIcons
           fi
 
           if (( ${#icon_json_files[@]} > 0 )); then
