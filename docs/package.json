@@ -44,7 +44,7 @@
     "preview": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "@floating-ui/vue": "^1.1.9",
+    "@floating-ui/vue": "^2.0.0",
     "@headlessui/vue": "^1.7.23",
     "@vueuse/components": "^14.0.0",
     "@vueuse/core": "^14.0.0",
