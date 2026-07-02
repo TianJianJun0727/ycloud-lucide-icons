@@ -91,7 +91,7 @@
     "svgson": "^5.3.1",
     "typescript": "7.0.1-rc",
     "vitest": "4.1.9",
-    "yargs": "^17.7.3",
+    "yargs": "^18.0.0",
     "zod": "^4.4.3"
   },
   "engines": {
