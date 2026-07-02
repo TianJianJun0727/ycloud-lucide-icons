@@ -81,12 +81,12 @@ export default App;
     language: 'html',
     title: 'Angular',
     code: `<!-- app.component.ts -->
-import { $CamelCaseDataUri } from '@ycloud-web/icons-angular';
+import illustrationUrl from '@ycloud-web/icons-static/illustration-icons/$Name.svg';
 
-illustrationSrc = $CamelCaseDataUri;
+iconUrl = illustrationUrl;
 
 <!-- app.component.html -->
-<img [src]="illustrationSrc" alt="" width="100%">`,
+<img [src]="iconUrl" alt="" />`,
   },
 ];
 

@@ -1,8 +1,7 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
-import Icon from '@ycloud-web/icons-react/src/Icon';
-import type { IconNode } from '@ycloud-web/icons-react/src/types';
+import { Icon, type IconNode } from '@ycloud-web/icons-react';
 import { parseSync } from 'svgson';
 
 export default eventHandler((event) => {

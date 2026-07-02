@@ -1,6 +1,5 @@
 import React from 'react';
-import { createYCloudIcon } from '@ycloud-web/icons-react/src/ycloud-react';
-import { type YCloudIconsProps, type IconNode } from '@ycloud-web/icons-react/src/types';
+import { createYCloudIcon, type YCloudIconsProps, type IconNode } from '@ycloud-web/icons-react';
 import { IconEntity } from '../theme/types';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { IconContent } from './generateZip';

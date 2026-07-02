@@ -18,9 +18,9 @@
 
 把通用图标的 `icons/*.svg` 和 `icons/*.json` 视为同一个实体的两部分。任何通用图标增删改都先检查它们是否仍然成对存在。
 
-业务图标不维护逐图标 JSON；它的元数据来自目录级 `business-icons/<color-mode>/index.json` 和生成产物 `business-icons/index.json`。业务图标数据同时需要进入各包的 `business` 子入口。
+业务图标必须维护逐图标 JSON；它的颜色模式来自目录级 `business-icons/<color-mode>/index.json` 和生成产物 `business-icons/index.json`。业务图标数据同时需要进入各包的 `business` 子入口。
 
-插画不维护逐图标 JSON；它的索引来自生成产物 `illustration-icons/index.json`。插画数据同时需要进入各包的 `illustration` 子入口。
+插画必须维护逐图标 JSON；它的索引来自生成产物 `illustration-icons/index.json`。插画数据同时需要进入各包的 `illustration` 子入口。
 
 ## 目录约定
 
@@ -478,7 +478,7 @@ business-icons/mono/billing.svg -> Billing
 illustration-icons/empty-page.svg
 ```
 
-插画不需要逐图标 JSON，不进入通用图标分类，也不按业务图标颜色模式归类。
+插画需要同名逐图标 JSON，不进入通用图标分类，也不按业务图标颜色模式归类。
 
 ### 2. 保留源 SVG 视觉
 

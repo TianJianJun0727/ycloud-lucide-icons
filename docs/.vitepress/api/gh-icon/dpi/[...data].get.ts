@@ -2,7 +2,7 @@ import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import iconNodes from '../../../data/iconNodes';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import createYCloudIcon from '@ycloud-web/icons-react/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-react';
 import sharp from 'sharp';
 
 export default eventHandler(async (event) => {

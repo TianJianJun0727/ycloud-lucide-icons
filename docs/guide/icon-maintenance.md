@@ -24,9 +24,9 @@ icons/<icon-name>.json
 - `categories/*.json`：定义分类名称、中文分类标题和英文分类标题
 - `docs/`：文档站点，图标详情页、搜索和分类页都由构建脚本自动生成
 
-业务专有图标放在 `business-icons/<color-mode>/*.svg`，一级目录只能是 `mono`、`duotone`、`multicolor`，用于区分单色、双色和多色清洗/打包规则。每个 SVG 需要同名 metadata JSON。颜色模式显示名维护在 `business-icons/<color-mode>/index.json`，根 `business-icons/index.json`、`business-icons/metadata/index.json` 和 `business-icons/names/index.json` 由脚本生成；远程 URL 查询快照由文档构建复制到 `docs/public/metadata`。详细规则见 [业务图标](/guide/business-icons)。
+业务专有图标放在 `business-icons/<color-mode>/*.svg`，一级目录只能是 `mono`、`duotone`、`multicolor`，用于区分单色、双色和多色清洗/打包规则。每个 SVG 需要同名 metadata JSON。颜色模式显示名维护在 `business-icons/<color-mode>/index.json`，根 `business-icons/index.json`、`business-icons/metadata/index.json` 由脚本生成；远程 URL 查询快照由文档构建复制到 `docs/public/metadata`。详细规则见 [业务图标](/guide/business-icons)。
 
-插画资源放在 `illustration-icons/*.svg`，不做颜色转换、不做尺寸清洗，组件默认 `width="100%"`、`height="auto"`。每个 SVG 需要同名 metadata JSON，根 `illustration-icons/index.json`、`illustration-icons/metadata/index.json` 和 `illustration-icons/names/index.json` 由脚本生成；远程 URL 查询快照由文档构建复制到 `docs/public/metadata`。包入口使用 `@ycloud-web/icons-*/illustration`，静态资源路径使用 `@ycloud-web/icons-static/illustration-icons/<name>.svg`。
+插画资源放在 `illustration-icons/*.svg`，不做颜色转换、不做尺寸清洗，组件默认 `width="100%"`、`height="auto"`。每个 SVG 需要同名 metadata JSON，根 `illustration-icons/index.json`、`illustration-icons/metadata/index.json` 由脚本生成；远程 URL 查询快照由文档构建复制到 `docs/public/metadata`。包入口使用 `@ycloud-web/icons-*/illustration`，静态资源路径使用 `@ycloud-web/icons-static/illustration-icons/<name>.svg`。
 
 ## 图标规范
 

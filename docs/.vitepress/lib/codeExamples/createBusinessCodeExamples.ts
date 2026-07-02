@@ -63,12 +63,12 @@ export default App;
     language: 'html',
     title: 'Angular',
     code: `<!-- app.component.ts -->
-import { $CamelCaseDataUri } from '@ycloud-web/icons-angular';
+import { $CamelCaseDataUri } from '@ycloud-web/icons/business';
 
-iconSrc = $CamelCaseDataUri;
+iconUrl = $CamelCaseDataUri;
 
 <!-- app.component.html -->
-<img [src]="iconSrc" alt="" width="24" height="24">`,
+<img [src]="iconUrl" alt="" />`,
   },
 ];
 
@@ -101,11 +101,6 @@ export default App;
 `,
   },
   ...getSharedImageComponentCodes(),
-  {
-    language: 'html',
-    title: 'Icon font',
-    code: `<i class="business-icon-$Name" style="color: #128C7E;"></i>`,
-  },
 ];
 
 const getDuotoneBusinessIconCodes = (): CodeExampleType => [

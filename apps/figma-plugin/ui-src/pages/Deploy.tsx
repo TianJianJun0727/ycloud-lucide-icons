@@ -40,6 +40,7 @@ type GitHubTree = {
     path: string;
     type: string;
   }>;
+  truncated?: boolean;
 };
 
 type BusinessIconIndex = {
@@ -60,9 +61,12 @@ type BusinessIconIndex = {
   }>;
 };
 
-type IconNamesIndex = {
-  names?: Array<{
+type IconMetadataIndex = {
+  assets?: Array<{
     name?: string;
+    metadata?: {
+      aliases?: Array<string | { name?: string }>;
+    };
   }>;
 };
 
@@ -84,6 +88,21 @@ const getCategoryLabel = (category: Category | undefined, fallback: string) => {
 function decodeBase64Json<T>(content: string): T {
   return JSON.parse(Base64.decode(content.replace(/\s/g, ''))) as T;
 }
+
+const uniqueList = (items: string[]) =>
+  items.filter((item, index, list) => list.indexOf(item) === index);
+
+const collectIconMetadataNames = (index: IconMetadataIndex) =>
+  uniqueList(
+    (index.assets ?? [])
+      .flatMap((asset) => [
+        asset.name,
+        ...(asset.metadata?.aliases ?? []).map((alias) =>
+          typeof alias === 'string' ? alias : alias.name,
+        ),
+      ])
+      .filter((name): name is string => typeof name === 'string' && name.length > 0),
+  );
 
 interface DeployProps {
   sourceType: IconSourceType;
@@ -134,7 +153,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
           : `已同步 ${categories.length} 个已有分类、${existingGenericIconNames.length} 个通用图标。`
       : categoryMessage;
   const existingIconSet = useMemo(() => new Set(existingIconNames), [existingIconNames]);
-  const getTargetIconKey = (name: string) => toKebabCase(name);
+  const getTargetIconKey = (name: string, data?: YCloudIconData) => toKebabCase(data?.name || name);
   const selectedIconSet = useMemo(() => new Set(selectedIconNames), [selectedIconNames]);
   const selectedIcons = useMemo(
     () => icons.filter(([name]) => selectedIconSet.has(name)),
@@ -168,9 +187,9 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     iconQualityByName.get(name) ?? { issues: [], warnings: [] };
   const deployableSelectedIcons = useMemo(
     () =>
-      selectedIcons.filter(([name]) => {
+      selectedIcons.filter(([name, data]) => {
         const quality = getIconQuality(name);
-        const isExistingIcon = existingIconSet.has(getTargetIconKey(name));
+        const isExistingIcon = existingIconSet.has(getTargetIconKey(name, data));
         return quality.issues.length === 0 && (allowExistingIconUpdate || !isExistingIcon);
       }),
     [
@@ -189,8 +208,8 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
   );
   const previewDialogIssues = useMemo(() => {
     if (!previewDialogIcon) return [];
-    const [name] = previewDialogIcon;
-    const isExistingIcon = existingIconSet.has(getTargetIconKey(name));
+    const [name, data] = previewDialogIcon;
+    const isExistingIcon = existingIconSet.has(getTargetIconKey(name, data));
     return [
       ...(isExistingIcon && !allowExistingIconUpdate ? ['已存在同名图标，当前未开启覆盖。'] : []),
       ...getIconQuality(name).issues,
@@ -223,7 +242,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
     setSelectedIconNames((current) => {
       const currentSet = new Set(current);
       const isSelectable = (name: string) => {
-        const normalizedName = getTargetIconKey(name);
+        const normalizedName = getTargetIconKey(name, iconPreview[name]);
         const quality = getIconQuality(name);
         return (
           quality.issues.length === 0 &&
@@ -291,6 +310,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
                 ? 'illustration'
                 : 'icons',
           ycloud: ycloudMetadata,
+          allowExistingIconUpdate,
         },
       },
     });
@@ -319,33 +339,21 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         Accept: 'application/vnd.github+json',
       };
       const apiUrl = `https://api.github.com/repos/${githubData.owner}/${githubData.name}`;
-      const [
-        listResponse,
-        treeResponse,
-        businessIndexResponse,
-        genericNamesResponse,
-        businessNamesResponse,
-        illustrationNamesResponse,
-      ] = await Promise.all([
-        fetch(`${apiUrl}/contents/categories?ref=main`, {
-          headers,
-        }),
-        fetch(`${apiUrl}/git/trees/main?recursive=1`, {
-          headers,
-        }),
-        fetch(`${apiUrl}/contents/business-icons/index.json?ref=main`, {
-          headers,
-        }),
-        fetch(`${apiUrl}/contents/icons/names/index.json?ref=main`, {
-          headers,
-        }),
-        fetch(`${apiUrl}/contents/business-icons/names/index.json?ref=main`, {
-          headers,
-        }),
-        fetch(`${apiUrl}/contents/illustration-icons/names/index.json?ref=main`, {
-          headers,
-        }),
-      ]);
+      const [listResponse, treeResponse, businessIndexResponse, iconMetadataResponse] =
+        await Promise.all([
+          fetch(`${apiUrl}/contents/categories?ref=main`, {
+            headers,
+          }),
+          fetch(`${apiUrl}/git/trees/main?recursive=1`, {
+            headers,
+          }),
+          fetch(`${apiUrl}/contents/business-icons/index.json?ref=main`, {
+            headers,
+          }),
+          fetch(`${apiUrl}/contents/icons/metadata/index.json?ref=main`, {
+            headers,
+          }),
+        ]);
       if (!listResponse.ok) {
         throw new Error(`${listResponse.status} ${listResponse.statusText}`);
       }
@@ -354,10 +362,22 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       }
       const items = (await listResponse.json()) as GitHubContentItem[];
       const tree = (await treeResponse.json()) as GitHubTree;
+      if (tree.truncated) {
+        throw new Error('GitHub main 分支文件树返回结果被截断，无法安全判断同名覆盖。');
+      }
       const jsonFiles = items.filter((item) => item.type === 'file' && item.name.endsWith('.json'));
-      const nextExistingIconNames = tree.tree
+      const treeGenericIconNames = tree.tree
         .filter((item) => item.type === 'blob' && /^icons\/[^/]+\.svg$/.test(item.path))
         .map((item) => item.path.replace(/^icons\//, '').replace(/\.svg$/, ''));
+      const iconMetadata = iconMetadataResponse.ok
+        ? decodeBase64Json<IconMetadataIndex>(
+            ((await iconMetadataResponse.json()) as GitHubContentFile).content,
+          )
+        : undefined;
+      const metadataGenericIconNames = iconMetadata ? collectIconMetadataNames(iconMetadata) : [];
+      const nextExistingIconNames = Array.from(
+        new Set([...treeGenericIconNames, ...metadataGenericIconNames]),
+      );
       const treeBusinessIconNames = tree.tree
         .filter(
           (item) => item.type === 'blob' && /^business-icons\/[^/]+\/[^/]+\.svg$/.test(item.path),
@@ -368,21 +388,6 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
           (item) => item.type === 'blob' && /^illustration-icons\/[^/]+\.svg$/.test(item.path),
         )
         .map((item) => item.path.replace(/^illustration-icons\//, '').replace(/\.svg$/, ''));
-      const decodeNames = async (response: Response) => {
-        if (!response.ok) return [];
-        const index = decodeBase64Json<IconNamesIndex>(
-          ((await response.json()) as GitHubContentFile).content,
-        );
-        return (index.names ?? [])
-          .map((item) => item.name)
-          .filter((name): name is string => typeof name === 'string' && name.length > 0);
-      };
-      const [indexGenericIconNames, indexedBusinessIconNames, indexedIllustrationNames] =
-        await Promise.all([
-          decodeNames(genericNamesResponse),
-          decodeNames(businessNamesResponse),
-          decodeNames(illustrationNamesResponse),
-        ]);
       const businessIndex = businessIndexResponse.ok
         ? decodeBase64Json<BusinessIconIndex>(
             ((await businessIndexResponse.json()) as GitHubContentFile).content,
@@ -394,13 +399,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         .map((icon) => icon.name)
         .filter((name): name is string => typeof name === 'string' && name.length > 0);
       const nextExistingBusinessIconNames = Array.from(
-        new Set([...indexedBusinessIconNames, ...indexBusinessIconNames, ...treeBusinessIconNames]),
-      );
-      const nextExistingGenericIconNamesWithIndex = Array.from(
-        new Set([...indexGenericIconNames, ...nextExistingIconNames]),
-      );
-      const nextExistingIllustrationNamesWithIndex = Array.from(
-        new Set([...indexedIllustrationNames, ...nextExistingIllustrationNames]),
+        new Set([...indexBusinessIconNames, ...treeBusinessIconNames]),
       );
       const nextCategories = await Promise.all(
         jsonFiles.map(async (item) => {
@@ -429,9 +428,9 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
       setCategories(
         nextCategories.sort((left, right) => left.title.localeCompare(right.title, 'zh-Hans-CN')),
       );
-      setExistingGenericIconNames(nextExistingGenericIconNamesWithIndex);
+      setExistingGenericIconNames(nextExistingIconNames);
       setExistingBusinessIconNames(nextExistingBusinessIconNames);
-      setExistingIllustrationNames(nextExistingIllustrationNamesWithIndex);
+      setExistingIllustrationNames(nextExistingIllustrationNames);
       setCategoryMessage('synced');
     } catch (error) {
       setCategoryMessage(
@@ -766,11 +765,12 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
               onClick={() => {
                 setSelectedIconNames(
                   icons
-                    .filter(([name]) => {
+                    .filter(([name, data]) => {
                       const quality = getIconQuality(name);
                       return (
                         quality.issues.length === 0 &&
-                        (allowExistingIconUpdate || !existingIconSet.has(getTargetIconKey(name)))
+                        (allowExistingIconUpdate ||
+                          !existingIconSet.has(getTargetIconKey(name, data)))
                       );
                     })
                     .map(([name]) => name),
@@ -793,7 +793,7 @@ const Deploy = ({ sourceType, setSourceType }: DeployProps) => {
         <div className={styles.preview}>
           {icons.map(([name, data]) => {
             const { svg } = data;
-            const isExistingIcon = existingIconSet.has(getTargetIconKey(name));
+            const isExistingIcon = existingIconSet.has(getTargetIconKey(name, data));
             const isDisabledExistingIcon = isExistingIcon && !allowExistingIconUpdate;
             const quality = getIconQuality(name);
             const isBlockedIcon = quality.issues.length > 0;

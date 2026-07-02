@@ -3,6 +3,15 @@ name: YCloud Icons Static Checks
 on:
   pull_request:
     paths:
+      - icons/**
+      - business-icons/**
+      - illustration-icons/**
+      - scripts/generateBusinessIconsPackage.mts
+      - scripts/generateIllustrationsPackage.mts
+      - scripts/writeAssetMetadata.mts
+      - scripts/writeBusinessIconIndex.mts
+      - scripts/writeIllustrationIndex.mts
+      - scripts/render/**
       - packages/icons-static/**
       - tools/build-icons/**
 
@@ -12,6 +21,7 @@ concurrency:
 
 jobs:
   icons-static:
+    name: YCloud Icons Static
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

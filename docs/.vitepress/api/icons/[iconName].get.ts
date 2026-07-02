@@ -1,6 +1,6 @@
 import { eventHandler, getQuery, setResponseHeader, createError } from 'h3';
 import iconNodes from '../../data/iconNodes';
-import createYCloudIcon from '@ycloud-web/icons-react/src/createYCloudIcon';
+import { createYCloudIcon } from '@ycloud-web/icons-react';
 import { renderToString } from 'react-dom/server';
 import { createElement } from 'react';
 

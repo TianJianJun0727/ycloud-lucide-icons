@@ -56,11 +56,11 @@ function setAttrs(svg: string) {
   const contents = parseSync(svg);
 
   contents.attributes = {
+    ...contents.attributes,
     ...DEFAULT_ATTRS,
     width: String(DEFAULT_ATTRS.width),
     height: String(DEFAULT_ATTRS.height),
     "stroke-width": String(DEFAULT_ATTRS['stroke-width']),
-    ...contents.attributes,
   };
 
   return stringify(contents);

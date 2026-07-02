@@ -27,12 +27,10 @@ illustration-icons/<illustration-name>.svg
 illustration-icons/<illustration-name>.json
 illustration-icons/index.json
 illustration-icons/metadata/index.json
-illustration-icons/names/index.json
 docs/public/metadata/illustration-icons.json
-docs/public/metadata/names/illustration-icons.json
 ```
 
-Illustrations need same-name per-SVG metadata JSON for search, AI illustration selection, and docs. The root `illustration-icons/index.json` is generated; `illustration-icons/metadata/index.json` and `illustration-icons/names/index.json` are the latest repository snapshots used directly by the Figma plugin, GitHub checks, and skills lookup. During docs builds, those source snapshots are copied to `docs/public/metadata/illustration-icons.json` and `docs/public/metadata/names/illustration-icons.json` as deployed URL fallbacks.
+Illustrations need same-name per-SVG metadata JSON for search, AI illustration selection, and docs. The root `illustration-icons/index.json` is generated; `illustration-icons/metadata/index.json` is the latest repository metadata snapshot used directly by the Figma plugin, GitHub checks, and skills lookup. During docs builds, that source snapshot is copied to `docs/public/metadata/illustration-icons.json` as the deployed URL fallback.
 
 File names must be lowercase kebab-case and directly determine package export names:
 
@@ -54,7 +52,7 @@ Baseline validation checks:
 - event attributes such as `onclick` are not allowed
 - `javascript:` URLs are not allowed
 - root `illustration-icons/index.json` must match `node ./scripts/writeIllustrationIndex.mts`
-- `illustration-icons/metadata/index.json` and `illustration-icons/names/index.json` must match `node ./scripts/writeAssetMetadata.mts`; `docs/public/metadata` is copied during docs builds
+- `illustration-icons/metadata/index.json` must match `node ./scripts/writeAssetMetadata.mts`; `docs/public/metadata` is copied during docs builds
 
 Run locally:
 

@@ -16,11 +16,19 @@ function getAbsoluteUrl(path: string) {
   return `${siteUrl}${path}`;
 }
 
+function getAssetKind(path: string) {
+  if (path.startsWith('icons/')) return 'icon';
+  if (path.startsWith('business-icons/')) return 'business-icon';
+  if (path.startsWith('illustration-icons/')) return 'illustration';
+  return undefined;
+}
+
 export async function transformPageData(pageData: PageData) {
   pageData.frontmatter.head ??= [];
   const { isEnglish, path } = getLocalePath(pageData.relativePath);
 
-  if (path.startsWith('icons/') && pageData.params?.name) {
+  const assetKind = getAssetKind(path);
+  if (assetKind && pageData.params?.name) {
     const iconName = pageData.params.name;
     const displayName = isEnglish
       ? pageData.params.englishName || iconName
@@ -31,7 +39,21 @@ export async function transformPageData(pageData: PageData) {
     const displayCategories = isEnglish
       ? pageData.params.englishCategories || pageData.params.categories
       : pageData.params.displayCategories || pageData.params.categories;
-    pageData.title = isEnglish ? `${displayName} icon details` : `${displayName} 图标详情`;
+    const assetLabel =
+      assetKind === 'business-icon'
+        ? isEnglish
+          ? 'business icon'
+          : '业务图标'
+        : assetKind === 'illustration'
+          ? isEnglish
+            ? 'illustration'
+            : '插画'
+          : isEnglish
+            ? 'icon'
+            : '图标';
+    pageData.title = isEnglish
+      ? `${displayName} ${assetLabel} details`
+      : `${displayName} ${assetLabel}详情`;
 
     const taggedAs = displayTags?.length
       ? isEnglish
@@ -45,15 +67,21 @@ export async function transformPageData(pageData: PageData) {
       : '';
 
     pageData.description = isEnglish
-      ? `Details and related icons for ${displayName} icon. ${taggedAs} ${categorizedIn}`.trim()
-      : `${displayName} 图标详情、相关图标和使用示例。${taggedAs} ${categorizedIn}`.trim();
+      ? `Details and usage examples for ${displayName} ${assetLabel}. ${taggedAs} ${categorizedIn}`.trim()
+      : `${displayName} ${assetLabel}详情和使用示例。${taggedAs} ${categorizedIn}`.trim();
 
-    const structuredData = await getStructuredData(iconName, pageData, {
-      locale: isEnglish ? 'en' : 'zh',
-      siteUrl,
-    });
+    const structuredData =
+      assetKind === 'icon'
+        ? await getStructuredData(iconName, pageData, {
+            locale: isEnglish ? 'en' : 'zh',
+            siteUrl,
+          })
+        : undefined;
 
-    const ogPath = isOGEnabled ? await createIconOGImage(iconName, displayTags || []) : undefined;
+    const ogPath =
+      assetKind === 'icon' && isOGEnabled
+        ? await createIconOGImage(iconName, displayTags || [])
+        : undefined;
 
     if (ogPath) {
       const content = getAbsoluteUrl(ogPath);
@@ -75,11 +103,13 @@ export async function transformPageData(pageData: PageData) {
       );
     }
 
-    pageData.frontmatter.head.push([
-      'script',
-      { type: 'application/ld+json' },
-      JSON.stringify(structuredData),
-    ]);
+    if (structuredData) {
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(structuredData),
+      ]);
+    }
   }
 
   if (path.startsWith('guide/')) {

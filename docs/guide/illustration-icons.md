@@ -27,12 +27,10 @@ illustration-icons/<illustration-name>.svg
 illustration-icons/<illustration-name>.json
 illustration-icons/index.json
 illustration-icons/metadata/index.json
-illustration-icons/names/index.json
 docs/public/metadata/illustration-icons.json
-docs/public/metadata/names/illustration-icons.json
 ```
 
-插画需要每个 SVG 配一份同名 JSON metadata，用于搜索、AI 选图和文档展示。根 `illustration-icons/index.json` 是生成产物；`illustration-icons/metadata/index.json` 和 `illustration-icons/names/index.json` 是仓库最新快照，供 Figma 插件、GitHub 检测和 skills 查询优先读取。文档构建时会把这两份仓库快照复制到 `docs/public/metadata/illustration-icons.json` 和 `docs/public/metadata/names/illustration-icons.json`，作为部署后的 URL 兜底。
+插画需要每个 SVG 配一份同名 JSON metadata，用于搜索、AI 选图和文档展示。根 `illustration-icons/index.json` 是生成产物；`illustration-icons/metadata/index.json` 是仓库最新 metadata 快照，供 Figma 插件、GitHub 检测和 skills 查询优先读取。文档构建时会把这份仓库快照复制到 `docs/public/metadata/illustration-icons.json`，作为部署后的 URL 兜底。
 
 文件名必须使用小写 kebab-case，并且会直接决定包内导出名：
 
@@ -54,7 +52,7 @@ illustration-icons/empty-page.svg -> EmptyPage
 - 禁止 `onclick` 等事件属性
 - 禁止 `javascript:` URL
 - 根 `illustration-icons/index.json` 必须由 `node ./scripts/writeIllustrationIndex.mts` 生成并保持同步
-- `illustration-icons/metadata/index.json` 和 `illustration-icons/names/index.json` 必须由 `node ./scripts/writeAssetMetadata.mts` 生成并保持同步；`docs/public/metadata` 由文档构建直接复制
+- `illustration-icons/metadata/index.json` 必须由 `node ./scripts/writeAssetMetadata.mts` 生成并保持同步；`docs/public/metadata` 由文档构建直接复制
 
 本地可以运行：
 

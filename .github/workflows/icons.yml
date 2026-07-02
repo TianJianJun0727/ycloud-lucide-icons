@@ -5,6 +5,15 @@ on:
     branches:
       - next
     paths:
+      - icons/**
+      - business-icons/**
+      - illustration-icons/**
+      - scripts/generateBusinessIconsPackage.mts
+      - scripts/generateIllustrationsPackage.mts
+      - scripts/writeAssetMetadata.mts
+      - scripts/writeBusinessIconIndex.mts
+      - scripts/writeIllustrationIndex.mts
+      - scripts/render/**
       - .github/actions/setup-pnpm/**
       - package.json
       - packages/icons/**
@@ -13,6 +22,15 @@ on:
       - tools/rollup-plugins/**
   pull_request:
     paths:
+      - icons/**
+      - business-icons/**
+      - illustration-icons/**
+      - scripts/generateBusinessIconsPackage.mts
+      - scripts/generateIllustrationsPackage.mts
+      - scripts/writeAssetMetadata.mts
+      - scripts/writeBusinessIconIndex.mts
+      - scripts/writeIllustrationIndex.mts
+      - scripts/render/**
       - packages/icons/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
@@ -23,6 +41,7 @@ concurrency:
 
 jobs:
   check:
+    name: YCloud Icons
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

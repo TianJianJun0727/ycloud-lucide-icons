@@ -60,22 +60,22 @@
       "require": "./dist/cjs/illustration-icons.js",
       "default": "./dist/esm/illustration-icons.mjs"
     },
-    "./icons/*.svg": null,
-    "./icons/*/*.svg": null,
+    "./icons/*.svg": "./icons/*.svg",
+    "./icons/*/*.svg": "./icons/*/*.svg",
     "./icons/*": {
       "import": "./dist/esm/icons/*.mjs",
       "require": "./dist/cjs/icons/*.js",
       "default": "./dist/esm/icons/*.mjs"
     },
-    "./business-icons/*.svg": null,
-    "./business-icons/*/*.svg": null,
+    "./business-icons/*.svg": "./business-icons/*.svg",
+    "./business-icons/*/*.svg": "./business-icons/*/*.svg",
     "./business-icons/*": {
       "import": "./dist/esm/business-icons/*.mjs",
       "require": "./dist/cjs/business-icons/*.js",
       "default": "./dist/esm/business-icons/*.mjs"
     },
-    "./illustration-icons/*.svg": null,
-    "./illustration-icons/*/*.svg": null,
+    "./illustration-icons/*.svg": "./illustration-icons/*.svg",
+    "./illustration-icons/*/*.svg": "./illustration-icons/*/*.svg",
     "./illustration-icons/*": {
       "import": "./dist/esm/illustration-icons/*.mjs",
       "require": "./dist/cjs/illustration-icons/*.js",

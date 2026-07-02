@@ -5,6 +5,15 @@ on:
     branches:
       - next
     paths:
+      - icons/**
+      - business-icons/**
+      - illustration-icons/**
+      - scripts/generateBusinessIconsPackage.mts
+      - scripts/generateIllustrationsPackage.mts
+      - scripts/writeAssetMetadata.mts
+      - scripts/writeBusinessIconIndex.mts
+      - scripts/writeIllustrationIndex.mts
+      - scripts/render/**
       - .github/actions/setup-pnpm/**
       - package.json
       - packages/icons-shared/**
@@ -14,6 +23,15 @@ on:
       - tools/rollup-plugins/**
   pull_request:
     paths:
+      - icons/**
+      - business-icons/**
+      - illustration-icons/**
+      - scripts/generateBusinessIconsPackage.mts
+      - scripts/generateIllustrationsPackage.mts
+      - scripts/writeAssetMetadata.mts
+      - scripts/writeBusinessIconIndex.mts
+      - scripts/writeIllustrationIndex.mts
+      - scripts/render/**
       - packages/icons-vue/**
       - packages/icons-shared/**
       - tools/build-icons/**
@@ -25,6 +43,7 @@ concurrency:
 
 jobs:
   check:
+    name: YCloud Icons Vue
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

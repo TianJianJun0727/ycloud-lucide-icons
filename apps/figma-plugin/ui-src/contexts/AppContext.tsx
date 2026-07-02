@@ -9,10 +9,13 @@ function uniqueList<T>(items: T[] = []): T[] {
   return items.filter((item, index, list) => list.indexOf(item) === index);
 }
 function normalizeYCloudMetadata(options?: Partial<YCloudMetadataOptions>): YCloudMetadataOptions {
+  const legacyBusinessColorMode =
+    options?.businessCategory === 'duotone' || options?.businessCategory === 'multicolor'
+      ? options.businessCategory
+      : 'mono';
   return {
     categories: uniqueList(options?.categories),
-    businessColorMode:
-      options?.businessColorMode ?? (options?.businessCategory === 'duotone' ? 'duotone' : 'mono'),
+    businessColorMode: options?.businessColorMode ?? legacyBusinessColorMode,
     businessCategory: options?.businessCategory ?? '',
     tagsZh: uniqueList(options?.tagsZh),
     useCasesZh: uniqueList(options?.useCasesZh),

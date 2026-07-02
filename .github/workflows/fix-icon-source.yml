@@ -10,11 +10,8 @@ on:
       - 'business-icons/**/*.json'
       - 'illustration-icons/**/*.svg'
       - 'illustration-icons/**/*.json'
-      - 'icons/names/*.json'
       - 'icons/metadata/*.json'
-      - 'business-icons/names/*.json'
       - 'business-icons/metadata/*.json'
-      - 'illustration-icons/names/*.json'
       - 'illustration-icons/metadata/*.json'
       - 'scripts/data/allowedNonChineseTerms.json'
 
@@ -61,11 +58,8 @@ jobs:
             business-icons/**/*.json
             illustration-icons/**/*.svg
             illustration-icons/**/*.json
-            icons/names/*.json
             icons/metadata/*.json
-            business-icons/names/*.json
             business-icons/metadata/*.json
-            illustration-icons/names/*.json
             illustration-icons/metadata/*.json
             icons/*.json
             categories/*.json
@@ -142,6 +136,17 @@ jobs:
           fi
 
           if [[ "${{ steps.source-change-kind.outputs.illustration_changed }}" == "true" ]]; then
+            illustration_svg_files=()
+            for file in ${{ steps.changed-files.outputs.added_files }} ${{ steps.changed-files.outputs.modified_files }} ${{ steps.changed-files.outputs.renamed_files }}; do
+              if [[ "$file" == illustration-icons/*.svg && -f "$file" ]]; then
+                illustration_svg_files+=("$file")
+              fi
+            done
+
+            if (( ${#illustration_svg_files[@]} > 0 )); then
+              pnpm exec prettier --parser html --write "${illustration_svg_files[@]}"
+            fi
+
             node ./scripts/writeIllustrationIndex.mts
             pnpm exec oxfmt illustration-icons/index.json
           fi
@@ -166,11 +171,11 @@ jobs:
             node ./scripts/fixMetadata.mts "${json_files[@]}"
           fi
 
-      - name: Refresh asset metadata and names
+      - name: Refresh asset metadata
         if: steps.source-change-kind.outputs.generic_changed == 'true' || steps.source-change-kind.outputs.business_changed == 'true' || steps.source-change-kind.outputs.illustration_changed == 'true'
         run: |
           node ./scripts/writeAssetMetadata.mts
-          pnpm exec oxfmt icons/names/*.json icons/metadata/*.json business-icons/**/*.json illustration-icons/*.json illustration-icons/names/*.json illustration-icons/metadata/*.json
+          pnpm exec oxfmt icons/metadata/*.json business-icons/**/*.json illustration-icons/*.json illustration-icons/metadata/*.json
 
       - name: Format changed metadata
         if: steps.source-change-kind.outputs.generic_source_changed == 'true' || steps.source-change-kind.outputs.business_source_changed == 'true' || steps.source-change-kind.outputs.illustration_source_changed == 'true'

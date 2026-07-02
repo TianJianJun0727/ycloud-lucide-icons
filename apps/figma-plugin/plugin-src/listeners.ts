@@ -33,7 +33,12 @@ export function listenDeployIcon() {
       }
       const iconData =
         sourceType === 'generic' ? await exportFromYCloudIconData(assetFrames, icons, png) : icons;
-      const pullRequest = await createDeployPR(iconData, ycloud, sourceType);
+      const pullRequest = await createDeployPR(
+        iconData,
+        ycloud,
+        sourceType,
+        options.allowExistingIconUpdate === true,
+      );
       emit('DEPLOY_DONE', {
         status: 'success',
         message:

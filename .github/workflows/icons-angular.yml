@@ -3,6 +3,15 @@ name: YCloud Icons Angular Checks
 on:
   pull_request:
     paths:
+      - icons/**
+      - business-icons/**
+      - illustration-icons/**
+      - scripts/generateBusinessIconsPackage.mts
+      - scripts/generateIllustrationsPackage.mts
+      - scripts/writeAssetMetadata.mts
+      - scripts/writeBusinessIconIndex.mts
+      - scripts/writeIllustrationIndex.mts
+      - scripts/render/**
       - packages/icons-angular/**
       - tools/build-icons/**
 
@@ -12,6 +21,7 @@ concurrency:
 
 jobs:
   check:
+    name: YCloud Icons Angular
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

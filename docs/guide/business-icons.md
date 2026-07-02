@@ -27,12 +27,10 @@ business-icons/<color-mode>/<icon-name>.json
 business-icons/<color-mode>/index.json
 business-icons/index.json
 business-icons/metadata/index.json
-business-icons/names/index.json
 docs/public/metadata/business-icons.json
-docs/public/metadata/names/business-icons.json
 ```
 
-业务图标的一级目录是颜色模式，不再表达业务分类。目录的中文名、英文名维护在 `business-icons/<color-mode>/index.json`。每个 SVG 必须有同名 JSON metadata，用于搜索、AI 选图和文档展示。根 `business-icons/index.json` 是生成产物；`business-icons/metadata/index.json` 和 `business-icons/names/index.json` 是仓库最新快照，供 Figma 插件、GitHub 检测和 skills 查询优先读取。文档构建时会把这两份仓库快照复制到 `docs/public/metadata/business-icons.json` 和 `docs/public/metadata/names/business-icons.json`，作为部署后的 URL 兜底。
+业务图标的一级目录是颜色模式，不再表达业务分类。目录的中文名、英文名维护在 `business-icons/<color-mode>/index.json`。每个 SVG 必须有同名 JSON metadata，用于搜索、AI 选图和文档展示。根 `business-icons/index.json` 是生成产物；`business-icons/metadata/index.json` 是仓库最新 metadata 快照，供 Figma 插件、GitHub 检测和 skills 查询优先读取。文档构建时会把这份仓库快照复制到 `docs/public/metadata/business-icons.json`，作为部署后的 URL 兜底。
 
 当前允许目录：
 
@@ -42,7 +40,7 @@ duotone
 multicolor
 ```
 
-业务图标需要每个 SVG 配一份同名 JSON 元数据，但不进入通用图标分类体系。`business-icons/<color-mode>/index.json` 只维护颜色模式显示配置；根 `business-icons/index.json` 由脚本生成颜色模式、多语言显示名和图标索引；`business-icons/metadata/index.json` 和 `business-icons/names/index.json` 由脚本生成查询快照，用于 Figma 远程重名判断和 skills 本地查询。docs public 下的同形态快照用于部署后的 URL 兜底查询。
+业务图标需要每个 SVG 配一份同名 JSON 元数据，但不进入通用图标分类体系。`business-icons/<color-mode>/index.json` 只维护颜色模式显示配置；根 `business-icons/index.json` 由脚本生成颜色模式、多语言显示名和图标索引；`business-icons/metadata/index.json` 由脚本生成查询快照，用于 Figma、GitHub 检测和 skills 本地查询。docs public 下的同形态快照用于部署后的 URL 兜底查询。
 
 它会生成到现有包的 `business` 子入口，不混入通用图标默认入口。包内组件导出名仍按文件名生成，不拼接颜色模式名，因此不同颜色模式目录下也不能出现同名 SVG。
 
@@ -65,7 +63,7 @@ multicolor
 - 同名 metadata 必须存在于 `business-icons/<color-mode>/<icon-name>.json`
 - 颜色模式目录必须有 `business-icons/<color-mode>/index.json`
 - 根 `business-icons/index.json` 必须由 `node ./scripts/writeBusinessIconIndex.mts` 生成并保持同步
-- `business-icons/metadata/index.json` 和 `business-icons/names/index.json` 必须由 `node ./scripts/writeAssetMetadata.mts` 生成并保持同步；`docs/public/metadata` 由文档构建直接复制
+- `business-icons/metadata/index.json` 必须由 `node ./scripts/writeAssetMetadata.mts` 生成并保持同步；`docs/public/metadata` 由文档构建直接复制
 - 文件名必须是小写 kebab-case
 - 根节点必须是 `<svg>`
 - `mono` 的 `fill`、`stroke` 只能是 `currentColor` 或 `none`

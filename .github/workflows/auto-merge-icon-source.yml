@@ -76,7 +76,7 @@ jobs:
 
           invalid_files="$(
             jq -r '.files[].path' <<< "$pr_json" |
-              grep -Ev '^(icons/[^/]+\.(svg|json)|icons/names/[^/]+\.json|icons/metadata/[^/]+\.json|business-icons/[^/]+/[^/]+\.(svg|json)|business-icons/[^/]+/index\.json|business-icons/index\.json|business-icons/names/[^/]+\.json|business-icons/metadata/[^/]+\.json|illustration-icons/[^/]+\.(svg|json)|illustration-icons/index\.json|illustration-icons/names/[^/]+\.json|illustration-icons/metadata/[^/]+\.json|categories/[^/]+\.json|scripts/data/allowedNonChineseTerms\.json)$' || true
+              grep -Ev '^(icons/[^/]+\.(svg|json)|icons/metadata/[^/]+\.json|business-icons/[^/]+/[^/]+\.(svg|json)|business-icons/[^/]+/index\.json|business-icons/index\.json|business-icons/metadata/[^/]+\.json|illustration-icons/[^/]+\.(svg|json)|illustration-icons/index\.json|illustration-icons/metadata/[^/]+\.json|categories/[^/]+\.json|scripts/data/allowedNonChineseTerms\.json)$' || true
           )"
           if [[ -n "$invalid_files" ]]; then
             echo "Auto-merge blocked because this PR changes files outside icon source scope:"
@@ -84,7 +84,70 @@ jobs:
             exit 0
           fi
 
+          icon_source_files="$(
+            jq -r '.files[].path' <<< "$pr_json" |
+              grep -E '^(icons/|business-icons/|illustration-icons/)' || true
+          )"
+          if [[ -n "$icon_source_files" ]]; then
+            echo "REQUIRE_PACKAGE_CHECKS=true" >> "$GITHUB_ENV"
+          fi
+
           echo "AUTO_MERGE_ALLOWED=true" >> "$GITHUB_ENV"
+
+      - name: Wait for source checks
+        if: env.AUTO_MERGE_ALLOWED == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          head_sha="$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid --jq '.headRefOid')"
+          required_checks="$(jq -c -n --arg requirePackages "${REQUIRE_PACKAGE_CHECKS:-false}" '
+            ["Fix Icon Source", "lint-code"] +
+            (
+              if $requirePackages == "true" then
+                [
+                  "YCloud Icons",
+                  "YCloud Icons Angular",
+                  "YCloud Icons Astro",
+                  "YCloud Icons Data",
+                  "YCloud Icons Preact",
+                  "YCloud Icons React",
+                  "YCloud Icons React Native",
+                  "YCloud Icons Solid",
+                  "YCloud Icons Static",
+                  "YCloud Icons Svelte",
+                  "YCloud Icons Vue"
+                ]
+              else
+                []
+              end
+            )
+          ')"
+
+          for attempt in {1..60}; do
+            check_runs="$(gh api "repos/$GITHUB_REPOSITORY/commits/$head_sha/check-runs" --jq '.check_runs')"
+            missing_or_pending="$(
+              jq -r --argjson required "$required_checks" '
+                . as $runs
+                |
+                $required[]
+                | . as $name
+                | ($name + ":" + (($runs | map(select(.name == $name))[0].conclusion // map(select(.name == $name))[0].status // "missing")))
+              ' <<< "$check_runs" |
+              grep -Ev ':(success|skipped)$' || true
+            )"
+
+            if [[ -z "$missing_or_pending" ]]; then
+              exit 0
+            fi
+
+            echo "Waiting for required checks on $head_sha:"
+            echo "$missing_or_pending"
+            sleep 10
+          done
+
+          echo "Required source checks did not pass before timeout." >&2
+          exit 1
 
       - name: Enable native auto-merge
         if: env.AUTO_MERGE_ALLOWED == 'true'
