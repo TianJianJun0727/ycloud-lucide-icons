@@ -152,7 +152,9 @@ jobs:
         run: |
           json_files=()
           for file in ${{ steps.changed-files.outputs.added_files }} ${{ steps.changed-files.outputs.modified_files }} ${{ steps.changed-files.outputs.renamed_files }}; do
-            if [[ ( "$file" == icons/*.json || "$file" == categories/*.json ) && -f "$file" ]]; then
+            if [[ "$file" == icons/*.json && "$file" != icons/*/*.json && "$file" != icons/package.json && -f "$file" ]]; then
+              json_files+=("$file")
+            elif [[ "$file" == categories/*.json && "$file" != categories/*/*.json && -f "$file" ]]; then
               json_files+=("$file")
             fi
           done
